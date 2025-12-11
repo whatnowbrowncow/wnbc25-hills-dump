@@ -1,0 +1,2 @@
+interface GigabitEthernet0/1.170
+ip access-group 102 in

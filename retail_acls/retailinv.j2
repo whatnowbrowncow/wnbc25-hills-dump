@@ -1,0 +1,20 @@
+---
+
+{% for line in file %}
+{{ line[0].lower() | replace(" ","") }}_router:
+  hostname: {{ line[5] }}
+  lbo_number: N/A
+  groups:
+    - {{ 'routers' }}
+    - {{ 'dmvpn_site' }}
+  data:
+    site_type: {{line[1].lower()}}
+    {% if line[1].lower() == "lbo" %}
+    device_hostname: wh-r_lbo-{{ line[0].lower() | replace(" ","") }}
+    {% elif line[1].lower() == "racecourse" %}
+    device_hostname: wh-r_rc-{{ line[0].lower() | replace(" ","") }}
+    {% elif line[1].lower() == "stadium" %}
+    device_hostname: wh-r_sta-{{ line[0].lower() | replace(" ","") }}
+    {% endif %}
+
+{% endfor %}

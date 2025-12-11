@@ -1,0 +1,2110 @@
+---
+
+brislington_router:
+  hostname: 10.94.208.225
+  lbo_number: 407961
+  groups:
+    - routers
+    - bt_site
+
+brixton_router:
+  hostname: 10.93.108.65
+  lbo_number: 501266
+  groups:
+    - routers
+    - bt_site
+
+broadlane_router:
+  hostname: 10.94.227.161
+  lbo_number: 442223
+  groups:
+    - routers
+    - bt_site
+
+broadgate_router:
+  hostname: 10.94.25.225
+  lbo_number: 331023
+  groups:
+    - routers
+    - bt_site
+
+broadstone_router:
+  hostname: 10.93.66.97
+  lbo_number: 566399
+  groups:
+    - routers
+    - bt_site
+
+broadwater_router:
+  hostname: 10.93.43.225
+  lbo_number: 316519
+  groups:
+    - routers
+    - bt_site
+
+brockleyrise_router:
+  hostname: 10.94.26.129
+  lbo_number: 293873
+  groups:
+    - routers
+    - bt_site
+
+bromley_router:
+  hostname: 10.94.26.193
+  lbo_number: 510902
+  groups:
+    - routers
+    - bt_site
+
+bromwich_router:
+  hostname: 10.94.27.33
+  lbo_number: 321435
+  groups:
+    - routers
+    - bt_site
+
+brondesbury_router:
+  hostname: 10.94.27.65
+  lbo_number: 524801
+  groups:
+    - routers
+    - bt_site
+
+bronte_router:
+  hostname: 10.93.62.97
+  lbo_number: 354877
+  groups:
+    - routers
+    - bt_site
+
+brooklyns_router:
+  hostname: 10.94.27.97
+  lbo_number: 337609
+  groups:
+    - routers
+    - bt_site
+
+broomfieldroad_router:
+  hostname: 10.93.29.161
+  lbo_number: 341703
+  groups:
+    - routers
+    - bt_site
+
+broomhill_router:
+  hostname: 10.94.27.161
+  lbo_number: 216909
+  groups:
+    - routers
+    - bt_site
+
+broomlands_router:
+  hostname: 10.94.27.193
+  lbo_number: 536737
+  groups:
+    - routers
+    - bt_site
+
+broompark_router:
+  hostname: 10.93.46.33
+  lbo_number: 334945
+  groups:
+    - routers
+    - bt_site
+
+broughtyferry_router:
+  hostname: 10.94.27.225
+  lbo_number: 211850
+  groups:
+    - routers
+    - bt_site
+
+brownmoor_router:
+  hostname: 10.93.23.161
+  lbo_number: 306891
+  groups:
+    - routers
+    - bt_site
+
+broxholmelane_router:
+  hostname: 10.94.216.225
+  lbo_number: 436169
+  groups:
+    - routers
+    - bt_site
+
+brunswickavenue_router:
+  hostname: 10.94.28.97
+  lbo_number: 019801
+  groups:
+    - routers
+    - bt_site
+
+bude_router:
+  hostname: 10.94.220.225
+  lbo_number: 409744
+  groups:
+    - routers
+    - bt_site
+
+bulkington_router:
+  hostname: 10.94.211.161
+  lbo_number: 416876
+  groups:
+    - routers
+    - bt_site
+
+bullshead_router:
+  hostname: 10.93.116.193
+  lbo_number: 412562
+  groups:
+    - routers
+    - bt_site
+
+burgesshill_router:
+  hostname: 10.94.28.193
+  lbo_number: 332712
+  groups:
+    - routers
+    - bt_site
+
+burleighstreet_router:
+  hostname: 10.93.131.1
+  lbo_number: 392128
+  groups:
+    - routers
+    - bt_site
+
+burlington_router:
+  hostname: 10.93.87.193
+  lbo_number: 369278
+  groups:
+    - routers
+    - bt_site
+
+burnage_router:
+  hostname: 10.94.29.1
+  lbo_number: 566492
+  groups:
+    - routers
+    - bt_site
+
+burnbank_router:
+  hostname: 10.94.29.33
+  lbo_number: 219029
+  groups:
+    - routers
+    - bt_site
+
+burnden_router:
+  hostname: 10.93.60.161
+  lbo_number: 354195
+  groups:
+    - routers
+    - bt_site
+
+burnleyroad_router:
+  hostname: 10.94.206.193
+  lbo_number: 451528
+  groups:
+    - routers
+    - bt_site
+
+burrardstreet_router:
+  hostname: 10.96.6.225
+  lbo_number: 457797
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-burrardstreet
+
+burylane_router:
+  hostname: 10.94.29.161
+  lbo_number: 243604
+  groups:
+    - routers
+    - bt_site
+
+bushhillpark_router:
+  hostname: 10.94.29.225
+  lbo_number: 317543
+  groups:
+    - routers
+    - bt_site
+
+bushey_router:
+  hostname: 10.94.30.1
+  lbo_number: 521510
+  groups:
+    - routers
+    - bt_site
+
+buttarsloan_router:
+  hostname: 10.94.213.97
+  lbo_number: 423996
+  groups:
+    - routers
+    - bt_site
+
+butts_router:
+  hostname: 10.94.30.33
+  lbo_number: 502419
+  groups:
+    - routers
+    - bt_site
+
+byfleet_router:
+  hostname: 10.94.30.97
+  lbo_number: 339601
+  groups:
+    - routers
+    - bt_site
+
+byron_router:
+  hostname: 10.94.30.193
+  lbo_number: 538688
+  groups:
+    - routers
+    - bt_site
+
+cadoxton_router:
+  hostname: 10.94.30.225
+  lbo_number: 584156
+  groups:
+    - routers
+    - bt_site
+
+caledoniastreet_router:
+  hostname: 10.94.249.97
+  lbo_number: 425271
+  groups:
+    - routers
+    - bt_site
+
+camberwellrd_router:
+  hostname: 10.94.31.129
+  lbo_number: 290211
+  groups:
+    - routers
+    - bt_site
+
+camborne_router:
+  hostname: 10.93.5.129
+  lbo_number: 409884
+  groups:
+    - routers
+    - bt_site
+
+cambuslang_router:
+  hostname: 10.93.39.33
+  lbo_number: 217301
+  groups:
+    - routers
+    - bt_site
+
+camelon_router:
+  hostname: 10.93.46.65
+  lbo_number: 339466
+  groups:
+    - routers
+    - bt_site
+
+canningtown_router:
+  hostname: 10.94.31.225
+  lbo_number: 030805
+  groups:
+    - routers
+    - bt_site
+
+cantley_router:
+  hostname: 10.93.69.225
+  lbo_number: 358828
+  groups:
+    - routers
+    - bt_site
+
+capehill_router:
+  hostname: 10.93.57.65
+  lbo_number: 350480
+  groups:
+    - routers
+    - bt_site
+
+carlisle_router:
+  hostname: 10.94.32.193
+  lbo_number: 330027
+  groups:
+    - routers
+    - bt_site
+
+carluke_router:
+  hostname: 10.93.113.193
+  lbo_number: 380430
+  groups:
+    - routers
+    - bt_site
+
+carntyne_router:
+  hostname: 10.93.59.1
+  lbo_number: 353638
+  groups:
+    - routers
+    - bt_site
+
+carreg_router:
+  hostname: 10.93.83.97
+  lbo_number: 366079
+  groups:
+    - routers
+    - bt_site
+
+carrfieldroad_router:
+  hostname: 10.94.246.97
+  lbo_number: 426869
+  groups:
+    - routers
+    - bt_site
+
+carrickstreet_router:
+  hostname: 10.94.32.225
+  lbo_number: 317330
+  groups:
+    - routers
+    - bt_site
+
+carrigans_router:
+  hostname: 10.93.132.225
+  lbo_number: 392658
+  groups:
+    - routers
+    - bt_site
+
+carringtonroad_router:
+  hostname: 10.93.23.97
+  lbo_number: 308177
+  groups:
+    - routers
+    - bt_site
+
+castlestreet_router:
+  hostname: 10.94.33.1
+  lbo_number: 280968
+  groups:
+    - routers
+    - bt_site
+
+castlevale_router:
+  hostname: 10.94.33.97
+  lbo_number: 336769
+  groups:
+    - routers
+    - bt_site
+
+castleford_router:
+  hostname: 10.94.33.33
+  lbo_number: 554354
+  groups:
+    - routers
+    - bt_site
+
+castlemilk_router:
+  hostname: 10.94.223.193
+  lbo_number: 426403
+  groups:
+    - routers
+    - bt_site
+
+castleview_router:
+  hostname: 10.93.49.129
+  lbo_number: 349040
+  groups:
+    - routers
+    - bt_site
+
+cathedralcity_router:
+  hostname: 10.93.10.1
+  lbo_number: 415698
+  groups:
+    - routers
+    - bt_site
+
+cathkin_router:
+  hostname: 10.94.33.193
+  lbo_number: 532004
+  groups:
+    - routers
+    - bt_site
+
+catterick_router:
+  hostname: 10.93.59.129
+  lbo_number: 353927
+  groups:
+    - routers
+    - bt_site
+
+cattongroverd_router:
+  hostname: 10.93.60.225
+  lbo_number: 297828
+  groups:
+    - routers
+    - bt_site
+
+cauldlad_router:
+  hostname: 10.93.2.1
+  lbo_number: 430205
+  groups:
+    - routers
+    - bt_site
+
+cavalier_router:
+  hostname: 10.94.34.33
+  lbo_number: 231150
+  groups:
+    - routers
+    - bt_site
+
+cavendish_router:
+  hostname: 10.93.52.225
+  lbo_number: 579148
+  groups:
+    - routers
+    - bt_site
+
+cavern_router:
+  hostname: 10.93.69.97
+  lbo_number: 358540
+  groups:
+    - routers
+    - bt_site
+
+centralst_router:
+  hostname: 10.94.34.161
+  lbo_number: 118508
+  groups:
+    - routers
+    - bt_site
+
+centurion_router:
+  hostname: 10.94.34.193
+  lbo_number: 541571
+  groups:
+    - routers
+    - bt_site
+
+cester_router:
+  hostname: 10.93.87.97
+  lbo_number: 300543
+  groups:
+    - routers
+    - bt_site
+
+chapel_router:
+  hostname: 10.94.35.193
+  lbo_number: 524669
+  groups:
+    - routers
+    - bt_site
+
+chapelstreet_router:
+  hostname: 10.93.29.129
+  lbo_number: 347108
+  groups:
+    - routers
+    - bt_site
+
+chapel-en-le-frith_router:
+  hostname: 10.94.253.97
+  lbo_number: 440384
+  groups:
+    - routers
+    - bt_site
+
+chapeltown_router:
+  hostname: 10.94.251.97
+  lbo_number: 435221
+  groups:
+    - routers
+    - bt_site
+
+chard_router:
+  hostname: 10.94.36.1
+  lbo_number: 575445
+  groups:
+    - routers
+    - bt_site
+
+charlesstreet_router:
+  hostname: 10.94.36.65
+  lbo_number: 213209
+  groups:
+    - routers
+    - bt_site
+
+charleville_router:
+  hostname: 10.93.61.33
+  lbo_number: 244201
+  groups:
+    - routers
+    - bt_site
+
+chaseside_router:
+  hostname: 10.94.36.161
+  lbo_number: 317675
+  groups:
+    - routers
+    - bt_site
+
+cheadle_router:
+  hostname: 10.94.254.1
+  lbo_number: 422489
+  groups:
+    - routers
+    - bt_site
+
+cheam_router:
+  hostname: 10.94.37.1
+  lbo_number: 506612
+  groups:
+    - routers
+    - bt_site
+
+cheltenham_router:
+  hostname: 10.93.101.33
+  lbo_number: 581615
+  groups:
+    - routers
+    - bt_site
+
+cherry_router:
+  hostname: 10.94.38.33
+  lbo_number: 507408
+  groups:
+    - routers
+    - bt_site
+
+chertsey_router:
+  hostname: 10.94.38.65
+  lbo_number: 508231
+  groups:
+    - routers
+    - bt_site
+
+cheshunt_router:
+  hostname: 10.94.38.97
+  lbo_number: 346004
+  groups:
+    - routers
+    - bt_site
+
+chessington_router:
+  hostname: 10.94.38.129
+  lbo_number: 505891
+  groups:
+    - routers
+    - bt_site
+
+cheylesmore_router:
+  hostname: 10.94.38.225
+  lbo_number: 288438
+  groups:
+    - routers
+    - bt_site
+
+chichele_router:
+  hostname: 10.94.39.1
+  lbo_number: 524010
+  groups:
+    - routers
+    - bt_site
+
+childshill_router:
+  hostname: 10.94.39.33
+  lbo_number: 244406
+  groups:
+    - routers
+    - bt_site
+
+childwall_router:
+  hostname: 10.93.54.97
+  lbo_number: 572231
+  groups:
+    - routers
+    - bt_site
+
+chillingham_router:
+  hostname: 10.94.39.97
+  lbo_number: 551229
+  groups:
+    - routers
+    - bt_site
+
+chingford_router:
+  hostname: 10.94.39.129
+  lbo_number: 343005
+  groups:
+    - routers
+    - bt_site
+
+chirton_router:
+  hostname: 10.94.246.33
+  lbo_number: 427605
+  groups:
+    - routers
+    - bt_site
+
+chorleyroad_router:
+  hostname: 10.93.58.193
+  lbo_number: 419594
+  groups:
+    - routers
+    - bt_site
+
+churchlane_router:
+  hostname: 10.93.116.129
+  lbo_number: 388671
+  groups:
+    - routers
+    - bt_site
+
+churton_router:
+  hostname: 10.94.40.65
+  lbo_number: 244708
+  groups:
+    - routers
+    - bt_site
+
+citypark_router:
+  hostname: 10.93.51.225
+  lbo_number: 349550
+  groups:
+    - routers
+    - bt_site
+
+clair_router:
+  hostname: 10.93.63.193
+  lbo_number: 355558
+  groups:
+    - routers
+    - bt_site
+
+clarence_router:
+  hostname: 10.94.236.225
+  lbo_number: 441984
+  groups:
+    - routers
+    - bt_site
+
+clarets_router:
+  hostname: 10.93.126.193
+  lbo_number: 388181
+  groups:
+    - routers
+    - bt_site
+
+clarkston_router:
+  hostname: 10.93.123.65
+  lbo_number: 535514
+  groups:
+    - routers
+    - bt_site
+
+claylane_router:
+  hostname: 10.93.61.225
+  lbo_number: 415833
+  groups:
+    - routers
+    - bt_site
+
+clayhall_router:
+  hostname: 10.94.41.97
+  lbo_number: 340804
+  groups:
+    - routers
+    - bt_site
+
+clayton_router:
+  hostname: 10.94.41.129
+  lbo_number: 562813
+  groups:
+    - routers
+    - bt_site
+
+cleckheaton_router:
+  hostname: 10.93.86.225
+  lbo_number: 369081
+  groups:
+    - routers
+    - bt_site
+
+clements_router:
+  hostname: 10.94.41.193
+  lbo_number: 245003
+  groups:
+    - routers
+    - bt_site
+
+clevedon_router:
+  hostname: 10.94.208.129
+  lbo_number: 408290
+  groups:
+    - routers
+    - bt_site
+
+clewerhill_router:
+  hostname: 10.93.128.193
+  lbo_number: 389098
+  groups:
+    - routers
+    - bt_site
+
+cliftonroad_router:
+  hostname: 10.94.248.65
+  lbo_number: 404913
+  groups:
+    - routers
+    - bt_site
+
+clitheroe_router:
+  hostname: 10.94.42.97
+  lbo_number: 573735
+  groups:
+    - routers
+    - bt_site
+
+coalcloughlane_router:
+  hostname: 10.94.206.129
+  lbo_number: 450361
+  groups:
+    - routers
+    - bt_site
+
+coalway_router:
+  hostname: 10.94.43.1
+  lbo_number: 591218
+  groups:
+    - routers
+    - bt_site
+
+coatbridge_router:
+  hostname: 10.94.43.33
+  lbo_number: 336114
+  groups:
+    - routers
+    - bt_site
+
+coatdyke_router:
+  hostname: 10.94.43.65
+  lbo_number: 535411
+  groups:
+    - routers
+    - bt_site
+
+cobbles_router:
+  hostname: 10.94.215.225
+  lbo_number: 433074
+  groups:
+    - routers
+    - bt_site
+
+cockfosters_router:
+  hostname: 10.94.43.129
+  lbo_number: 327549
+  groups:
+    - routers
+    - bt_site
+
+colchester_router:
+  hostname: 10.94.43.161
+  lbo_number: 277177
+  groups:
+    - routers
+    - bt_site
+
+coldcotes_router:
+  hostname: 10.94.43.193
+  lbo_number: 546811
+  groups:
+    - routers
+    - bt_site
+
+coleford_router:
+  hostname: 10.94.224.161
+  lbo_number: 408337
+  groups:
+    - routers
+    - bt_site
+
+colindale_router:
+  hostname: 10.94.44.33
+  lbo_number: 522217
+  groups:
+    - routers
+    - bt_site
+
+collierrow_router:
+  hostname: 10.94.44.129
+  lbo_number: 340200
+  groups:
+    - routers
+    - bt_site
+
+colne_router:
+  hostname: 10.93.37.161
+  lbo_number: 304019
+  groups:
+    - routers
+    - bt_site
+
+colwynbay_router:
+  hostname: 10.94.44.225
+  lbo_number: 160407
+  groups:
+    - routers
+    - bt_site
+
+combertonhill_router:
+  hostname: 10.93.67.1
+  lbo_number: 416441
+  groups:
+    - routers
+    - bt_site
+
+concourse_router:
+  hostname: 10.94.45.33
+  lbo_number: 337501
+  groups:
+    - routers
+    - bt_site
+
+condorrat_router:
+  hostname: 10.94.45.65
+  lbo_number: 533217
+  groups:
+    - routers
+    - bt_site
+
+coneyhill_router:
+  hostname: 10.94.45.97
+  lbo_number: 063401
+  groups:
+    - routers
+    - bt_site
+
+connahsquay_router:
+  hostname: 10.93.94.193
+  lbo_number: 373964
+  groups:
+    - routers
+    - bt_site
+
+connaught_router:
+  hostname: 10.94.45.129
+  lbo_number: 325902
+  groups:
+    - routers
+    - bt_site
+
+connoproad_router:
+  hostname: 10.93.66.65
+  lbo_number: 317969
+  groups:
+    - routers
+    - bt_site
+
+continental_router:
+  hostname: 10.93.113.97
+  lbo_number: 380039
+  groups:
+    - routers
+    - bt_site
+
+conwaystreet_router:
+  hostname: 10.96.7.33
+  lbo_number: 458149
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-conwaystreet
+
+cooksroad_router:
+  hostname: 10.94.231.65
+  lbo_number: 446791
+  groups:
+    - routers
+    - bt_site
+
+cooperative_router:
+  hostname: 10.94.235.33
+  lbo_number: 440927
+  groups:
+    - routers
+    - bt_site
+
+copland_router:
+  hostname: 10.94.46.1
+  lbo_number: 533561
+  groups:
+    - routers
+    - bt_site
+
+copplehouse_router:
+  hostname: 10.94.226.161
+  lbo_number: 449318
+  groups:
+    - routers
+    - bt_site
+
+copson_router:
+  hostname: 10.93.73.161
+  lbo_number: 360950
+  groups:
+    - routers
+    - bt_site
+
+corner_router:
+  hostname: 10.94.46.33
+  lbo_number: 080918
+  groups:
+    - routers
+    - bt_site
+
+coseley_router:
+  hostname: 10.94.46.161
+  lbo_number: 591121
+  groups:
+    - routers
+    - bt_site
+
+cotteridge_router:
+  hostname: 10.94.46.193
+  lbo_number: 302562
+  groups:
+    - routers
+    - bt_site
+
+coulbynewham_router:
+  hostname: 10.93.73.65
+  lbo_number: 361289
+  groups:
+    - routers
+    - bt_site
+
+councillorlane_router:
+  hostname: 10.94.254.33
+  lbo_number: 421439
+  groups:
+    - routers
+    - bt_site
+
+coundon_router:
+  hostname: 10.94.47.1
+  lbo_number: 585902
+  groups:
+    - routers
+    - bt_site
+
+courtwick_router:
+  hostname: 10.93.43.161
+  lbo_number: 318036
+  groups:
+    - routers
+    - bt_site
+
+covingham_router:
+  hostname: 10.94.47.129
+  lbo_number: 579285
+  groups:
+    - routers
+    - bt_site
+
+cowanestreet_router:
+  hostname: 10.93.23.225
+  lbo_number: 307208
+  groups:
+    - routers
+    - bt_site
+
+cramlington_router:
+  hostname: 10.94.48.33
+  lbo_number: 331627
+  groups:
+    - routers
+    - bt_site
+
+cranham_router:
+  hostname: 10.94.48.129
+  lbo_number: 233803
+  groups:
+    - routers
+    - bt_site
+
+cravenpark_router:
+  hostname: 10.93.83.161
+  lbo_number: 019003
+  groups:
+    - routers
+    - bt_site
+
+crewe_router:
+  hostname: 10.94.212.193
+  lbo_number: 439377
+  groups:
+    - routers
+    - bt_site
+
+cricklade_router:
+  hostname: 10.93.75.1
+  lbo_number: 579353
+  groups:
+    - routers
+    - bt_site
+
+criterion_router:
+  hostname: 10.94.49.161
+  lbo_number: 323012
+  groups:
+    - routers
+    - bt_site
+
+cromwell_router:
+  hostname: 10.95.134.129
+  lbo_number: 546587
+  groups:
+    - routers
+    - bt_site
+
+crookes_router:
+  hostname: 10.94.50.1
+  lbo_number: 557291
+  groups:
+    - routers
+    - bt_site
+
+crosby_router:
+  hostname: 10.94.50.33
+  lbo_number: 575217
+  groups:
+    - routers
+    - bt_site
+
+crosshill_router:
+  hostname: 10.94.50.65
+  lbo_number: 211206
+  groups:
+    - routers
+    - bt_site
+
+crossways_router:
+  hostname: 10.94.50.129
+  lbo_number: 587521
+  groups:
+    - routers
+    - bt_site
+
+crowlane_router:
+  hostname: 10.94.50.193
+  lbo_number: 061018
+  groups:
+    - routers
+    - bt_site
+
+crown_router:
+  hostname: 10.94.227.129
+  lbo_number: 448740
+  groups:
+    - routers
+    - bt_site
+
+crownbridge_router:
+  hostname: 10.93.3.129
+  lbo_number: 415575
+  groups:
+    - routers
+    - bt_site
+
+crownstores_router:
+  hostname: 10.96.7.65
+  lbo_number: 458221
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-crownstores
+
+crownstreet_router:
+  hostname: 10.94.51.1
+  lbo_number: 329517
+  groups:
+    - routers
+    - bt_site
+
+croxteth_router:
+  hostname: 10.94.51.65
+  lbo_number: 570909
+  groups:
+    - routers
+    - bt_site
+
+croydonroad_router:
+  hostname: 10.94.210.193
+  lbo_number: 402425
+  groups:
+    - routers
+    - bt_site
+
+crumpsall_router:
+  hostname: 10.93.61.65
+  lbo_number: 419696
+  groups:
+    - routers
+    - bt_site
+
+cullen_router:
+  hostname: 10.94.51.161
+  lbo_number: 534369
+  groups:
+    - routers
+    - bt_site
+
+cumbernauld_router:
+  hostname: 10.94.51.193
+  lbo_number: 533011
+  groups:
+    - routers
+    - bt_site
+
+cumnock_router:
+  hostname: 10.93.107.33
+  lbo_number: 378875
+  groups:
+    - routers
+    - bt_site
+
+cupar_router:
+  hostname: 10.93.38.161
+  lbo_number: 312975
+  groups:
+    - routers
+    - bt_site
+
+dalepool_router:
+  hostname: 10.94.52.65
+  lbo_number: 571097
+  groups:
+    - routers
+    - bt_site
+
+dalkeith_router:
+  hostname: 10.94.52.97
+  lbo_number: 283762
+  groups:
+    - routers
+    - bt_site
+
+dalmarnock_router:
+  hostname: 10.94.52.161
+  lbo_number: 213802
+  groups:
+    - routers
+    - bt_site
+
+dalmeny_router:
+  hostname: 10.94.52.193
+  lbo_number: 568981
+  groups:
+    - routers
+    - bt_site
+
+dalmilling_router:
+  hostname: 10.93.50.33
+  lbo_number: 343609
+  groups:
+    - routers
+    - bt_site
+
+dalmuir_router:
+  hostname: 10.94.53.1
+  lbo_number: 532481
+  groups:
+    - routers
+    - bt_site
+
+darlaston_router:
+  hostname: 10.94.53.97
+  lbo_number: 591883
+  groups:
+    - routers
+    - bt_site
+
+darlington_router:
+  hostname: 10.93.61.1
+  lbo_number: 551419
+  groups:
+    - routers
+    - bt_site
+
+darnall_router:
+  hostname: 10.94.53.161
+  lbo_number: 556219
+  groups:
+    - routers
+    - bt_site
+
+dartmouthrd_router:
+  hostname: 10.94.54.1
+  lbo_number: 292761
+  groups:
+    - routers
+    - bt_site
+
+dawleyparade_router:
+  hostname: 10.94.54.65
+  lbo_number: 339806
+  groups:
+    - routers
+    - bt_site
+
+deansbrook_router:
+  hostname: 10.94.54.129
+  lbo_number: 246204
+  groups:
+    - routers
+    - bt_site
+
+deansgate_router:
+  hostname: 10.93.107.129
+  lbo_number: 563639
+  groups:
+    - routers
+    - bt_site
+
+debden_router:
+  hostname: 10.94.54.193
+  lbo_number: 340901
+  groups:
+    - routers
+    - bt_site
+
+delamere_router:
+  hostname: 10.93.71.129
+  lbo_number: 359854
+  groups:
+    - routers
+    - bt_site
+
+delco_router:
+  hostname: 10.93.48.65
+  lbo_number: 521271
+  groups:
+    - routers
+    - bt_site
+
+dennistoun_router:
+  hostname: 10.94.55.33
+  lbo_number: 537264
+  groups:
+    - routers
+    - bt_site
+
+denton_router:
+  hostname: 10.93.45.161
+  lbo_number: 561511
+  groups:
+    - routers
+    - bt_site
+
+derby_router:
+  hostname: 10.93.102.161
+  lbo_number: 590511
+  groups:
+    - routers
+    - bt_site
+
+derbyshirelane_router:
+  hostname: 10.94.242.225
+  lbo_number: 421872
+  groups:
+    - routers
+    - bt_site
+
+derwentparade_router:
+  hostname: 10.94.55.193
+  lbo_number: 275131
+  groups:
+    - routers
+    - bt_site
+
+deva_router:
+  hostname: 10.93.85.65
+  lbo_number: 367222
+  groups:
+    - routers
+    - bt_site
+
+dewsbury_router:
+  hostname: 10.93.70.1
+  lbo_number: 359457
+  groups:
+    - routers
+    - bt_site
+
+deysbrooklane_router:
+  hostname: 10.94.227.193
+  lbo_number: 442083
+  groups:
+    - routers
+    - bt_site
+
+digmoorparade_router:
+  hostname: 10.93.9.225
+  lbo_number: 452363
+  groups:
+    - routers
+    - bt_site
+
+dinaslane_router:
+  hostname: 10.94.234.193
+  lbo_number: 441765
+  groups:
+    - routers
+    - bt_site
+
+dinnington_router:
+  hostname: 10.94.56.33
+  lbo_number: 555261
+  groups:
+    - routers
+    - bt_site
+
+ditherington_router:
+  hostname: 10.94.56.65
+  lbo_number: 592040
+  groups:
+    - routers
+    - bt_site
+
+dougriedrive_router:
+  hostname: 10.93.72.161
+  lbo_number: 358654
+  groups:
+    - routers
+    - bt_site
+
+downfield_router:
+  hostname: 10.94.56.193
+  lbo_number: 538960
+  groups:
+    - routers
+    - bt_site
+
+downhamway_router:
+  hostname: 10.94.56.225
+  lbo_number: 290637
+  groups:
+    - routers
+    - bt_site
+
+downhills_router:
+  hostname: 10.94.57.1
+  lbo_number: 118702
+  groups:
+    - routers
+    - bt_site
+
+doxford_router:
+  hostname: 10.93.0.193
+  lbo_number: 431409
+  groups:
+    - routers
+    - bt_site
+
+draytongreen_router:
+  hostname: 10.94.57.65
+  lbo_number: 528473
+  groups:
+    - routers
+    - bt_site
+
+driffield_router:
+  hostname: 10.94.57.97
+  lbo_number: 545365
+  groups:
+    - routers
+    - bt_site
+
+droitwich_router:
+  hostname: 10.93.38.65
+  lbo_number: 313012
+  groups:
+    - routers
+    - bt_site
+
+droylsden_router:
+  hostname: 10.94.57.161
+  lbo_number: 561451
+  groups:
+    - routers
+    - bt_site
+
+drummondst_router:
+  hostname: 10.94.57.193
+  lbo_number: 021407
+  groups:
+    - routers
+    - bt_site
+
+duddeston_router:
+  hostname: 10.94.57.225
+  lbo_number: 588608
+  groups:
+    - routers
+    - bt_site
+
+duddingston_router:
+  hostname: 10.94.58.1
+  lbo_number: 540884
+  groups:
+    - routers
+    - bt_site
+
+dukinfield_router:
+  hostname: 10.94.58.97
+  lbo_number: 561138
+  groups:
+    - routers
+    - bt_site
+
+dunearn_router:
+  hostname: 10.94.58.193
+  lbo_number: 344907
+  groups:
+    - routers
+    - bt_site
+
+dunfermline_router:
+  hostname: 10.93.50.97
+  lbo_number: 422837
+  groups:
+    - routers
+    - bt_site
+
+dunmow_router:
+  hostname: 10.93.96.161
+  lbo_number: 342009
+  groups:
+    - routers
+    - bt_site
+
+durants_router:
+  hostname: 10.94.59.97
+  lbo_number: 318108
+  groups:
+    - routers
+    - bt_site
+
+durban_router:
+  hostname: 10.93.107.65
+  lbo_number: 314627
+  groups:
+    - routers
+    - bt_site
+
+durham_router:
+  hostname: 10.94.59.129
+  lbo_number: 333042
+  groups:
+    - routers
+    - bt_site
+
+durningroad_router:
+  hostname: 10.94.238.1
+  lbo_number: 443407
+  groups:
+    - routers
+    - bt_site
+
+dyas_router:
+  hostname: 10.94.59.161
+  lbo_number: 302694
+  groups:
+    - routers
+    - bt_site
+
+dykes_router:
+  hostname: 10.94.59.193
+  lbo_number: 557416
+  groups:
+    - routers
+    - bt_site
+
+earlstreet_router:
+  hostname: 10.94.250.193
+  lbo_number: 437090
+  groups:
+    - routers
+    - bt_site
+
+eastacton_router:
+  hostname: 10.94.60.33
+  lbo_number: 528681
+  groups:
+    - routers
+    - bt_site
+
+eastcalder_router:
+  hostname: 10.94.220.1
+  lbo_number: 423675
+  groups:
+    - routers
+    - bt_site
+
+eastkilbride_router:
+  hostname: 10.93.86.65
+  lbo_number: 368249
+  groups:
+    - routers
+    - bt_site
+
+eastmains_router:
+  hostname: 10.94.60.97
+  lbo_number: 336017
+  groups:
+    - routers
+    - bt_site
+
+eastbourne_router:
+  hostname: 10.93.33.1
+  lbo_number: 304779
+  groups:
+    - routers
+    - bt_site
+
+eastcross_router:
+  hostname: 10.94.60.161
+  lbo_number: 535046
+  groups:
+    - routers
+    - bt_site
+
+easterhouse_router:
+  hostname: 10.93.54.1
+  lbo_number: 426138
+  groups:
+    - routers
+    - bt_site
+
+easterly_router:
+  hostname: 10.94.60.193
+  lbo_number: 546917
+  groups:
+    - routers
+    - bt_site
+
+eastgate_router:
+  hostname: 10.93.149.225
+  lbo_number: 389701
+  groups:
+    - routers
+    - bt_site
+
+eastway_router:
+  hostname: 10.93.112.33
+  lbo_number: 379727
+  groups:
+    - routers
+    - bt_site
+
+eastwood_router:
+  hostname: 10.93.74.161
+  lbo_number: 033502
+  groups:
+    - routers
+    - bt_site
+
+eaveslane_router:
+  hostname: 10.94.249.225
+  lbo_number: 451457
+  groups:
+    - routers
+    - bt_site
+
+ebor_router:
+  hostname: 10.94.61.1
+  lbo_number: 551142
+  groups:
+    - routers
+    - bt_site
+
+eckington_router:
+  hostname: 10.94.251.33
+  lbo_number: 436737
+  groups:
+    - routers
+    - bt_site
+
+edgeley_router:
+  hostname: 10.94.61.97
+  lbo_number: 565961
+  groups:
+    - routers
+    - bt_site
+
+edinburgh_router:
+  hostname: 10.94.231.97
+  lbo_number: 446252
+  groups:
+    - routers
+    - bt_site
+
+edward_router:
+  hostname: 10.94.61.193
+  lbo_number: 540448
+  groups:
+    - routers
+    - bt_site
+
+eldonians_router:
+  hostname: 10.94.232.161
+  lbo_number: 438401
+  groups:
+    - routers
+    - bt_site
+
+eldred_router:
+  hostname: 10.94.62.33
+  lbo_number: 234206
+  groups:
+    - routers
+    - bt_site
+
+electricavenue_router:
+  hostname: 10.93.84.65
+  lbo_number: 293318
+  groups:
+    - routers
+    - bt_site
+
+elmpark_router:
+  hostname: 10.94.62.161
+  lbo_number: 340405
+  groups:
+    - routers
+    - bt_site
+
+elmrow_router:
+  hostname: 10.93.79.193
+  lbo_number: 364553
+  groups:
+    - routers
+    - bt_site
+
+eltham_router:
+  hostname: 10.94.63.1
+  lbo_number: 509449
+  groups:
+    - routers
+    - bt_site
+
+elvincourt_router:
+  hostname: 10.94.63.33
+  lbo_number: 344605
+  groups:
+    - routers
+    - bt_site
+
+empire_router:
+  hostname: 10.94.63.97
+  lbo_number: 571571
+  groups:
+    - routers
+    - bt_site
+
+enfieldtown_router:
+  hostname: 10.93.42.129
+  lbo_number: 313718
+  groups:
+    - routers
+    - bt_site
+
+englefield_router:
+  hostname: 10.94.63.161
+  lbo_number: 112003
+  groups:
+    - routers
+    - bt_site
+
+englishstreet_router:
+  hostname: 10.94.63.193
+  lbo_number: 330469
+  groups:
+    - routers
+    - bt_site
+
+epsom_router:
+  hostname: 10.94.64.1
+  lbo_number: 050210
+  groups:
+    - routers
+    - bt_site
+
+erdington_router:
+  hostname: 10.94.64.33
+  lbo_number: 589274
+  groups:
+    - routers
+    - bt_site
+
+esksidewest_router:
+  hostname: 10.94.219.1
+  lbo_number: 423157
+  groups:
+    - routers
+    - bt_site
+
+essex_router:
+  hostname: 10.94.64.65
+  lbo_number: 516664
+  groups:
+    - routers
+    - bt_site
+
+ewellrd_router:
+  hostname: 10.94.64.193
+  lbo_number: 247650
+  groups:
+    - routers
+    - bt_site
+
+exchequer_router:
+  hostname: 10.93.32.161
+  lbo_number: 539473
+  groups:
+    - routers
+    - bt_site
+
+exeter_router:
+  hostname: 10.93.118.97
+  lbo_number: 385640
+  groups:
+    - routers
+    - bt_site
+
+failsworth_router:
+  hostname: 10.93.80.129
+  lbo_number: 418501
+  groups:
+    - routers
+    - bt_site
+
+fairfield_router:
+  hostname: 10.93.28.129
+  lbo_number: 304288
+  groups:
+    - routers
+    - bt_site
+
+fairgreen_router:
+  hostname: 10.94.211.1
+  lbo_number: 400009
+  groups:
+    - routers
+    - bt_site
+
+falkirk_router:
+  hostname: 10.94.65.65
+  lbo_number: 338109
+  groups:
+    - routers
+    - bt_site
+
+fantail_router:
+  hostname: 10.94.233.193
+  lbo_number: 447557
+  groups:
+    - routers
+    - bt_site
+
+fellgateavenue_router:
+  hostname: 10.94.246.161
+  lbo_number: 426927
+  groups:
+    - routers
+    - bt_site
+
+feltham_router:
+  hostname: 10.94.65.193
+  lbo_number: 247804
+  groups:
+    - routers
+    - bt_site
+
+fenchurch_router:
+  hostname: 10.93.114.193
+  lbo_number: 381635
+  groups:
+    - routers
+    - bt_site
+
+fenham_router:
+  hostname: 10.94.247.65
+  lbo_number: 428239
+  groups:
+    - routers
+    - bt_site
+
+fenlands_router:
+  hostname: 10.93.96.65
+  lbo_number: 373500
+  groups:
+    - routers
+    - bt_site
+
+fenny_router:
+  hostname: 10.94.65.225
+  lbo_number: 520805
+  groups:
+    - routers
+    - bt_site
+
+fernslea_router:
+  hostname: 10.94.66.33
+  lbo_number: 218308
+  groups:
+    - routers
+    - bt_site
+
+ferryroad_router:
+  hostname: 10.94.66.65
+  lbo_number: 284068
+  groups:
+    - routers
+    - bt_site
+
+fieldendrd_router:
+  hostname: 10.94.66.161
+  lbo_number: 041300
+  groups:
+    - routers
+    - bt_site
+
+fifthavenue_router:
+  hostname: 10.93.79.97
+  lbo_number: 448480
+  groups:
+    - routers
+    - bt_site
+
+filtonavenue_router:
+  hostname: 10.94.66.193
+  lbo_number: 064009
+  groups:
+    - routers
+    - bt_site
+
+finch_router:
+  hostname: 10.94.66.225
+  lbo_number: 570408
+  groups:
+    - routers
+    - bt_site
+
+finchley_router:
+  hostname: 10.94.67.1
+  lbo_number: 523190
+  groups:
+    - routers
+    - bt_site
+
+finkle_router:
+  hostname: 10.94.67.33
+  lbo_number: 554550
+  groups:
+    - routers
+    - bt_site
+
+fishpondsroad_router:
+  hostname: 10.93.69.1
+  lbo_number: 406920
+  groups:
+    - routers
+    - bt_site
+
+flamstead_router:
+  hostname: 10.93.42.1
+  lbo_number: 313854
+  groups:
+    - routers
+    - bt_site
+
+fleetwood_router:
+  hostname: 10.94.68.65
+  lbo_number: 567853
+  groups:
+    - routers
+    - bt_site
+
+flint_router:
+  hostname: 10.94.68.97
+  lbo_number: 295264
+  groups:
+    - routers
+    - bt_site
+
+foleystreet_router:
+  hostname: 10.93.83.193
+  lbo_number: 437419
+  groups:
+    - routers
+    - bt_site
+
+fordhouses_router:
+  hostname: 10.93.10.33
+  lbo_number: 414922
+  groups:
+    - routers
+    - bt_site
+
+foregate_router:
+  hostname: 10.94.69.1
+  lbo_number: 286028
+  groups:
+    - routers
+    - bt_site
+
+formby_router:
+  hostname: 10.94.69.129
+  lbo_number: 574939
+  groups:
+    - routers
+    - bt_site
+
+fortwilliam_router:
+  hostname: 10.93.79.161
+  lbo_number: 364488
+  groups:
+    - routers
+    - bt_site
+
+fountainbridge_router:
+  hostname: 10.93.44.97
+  lbo_number: 541961
+  groups:
+    - routers
+    - bt_site
+
+framwellgate_router:
+  hostname: 10.93.60.193
+  lbo_number: 432606
+  groups:
+    - routers
+    - bt_site
+
+frankley_router:
+  hostname: 10.94.70.97
+  lbo_number: 300918
+  groups:
+    - routers
+    - bt_site
+
+franklyn_router:
+  hostname: 10.94.70.129
+  lbo_number: 219649
+  groups:
+    - routers
+    - bt_site
+
+fraserburgh_router:
+  hostname: 10.93.115.33
+  lbo_number: 381519
+  groups:
+    - routers
+    - bt_site
+
+freckleton_router:
+  hostname: 10.94.70.161
+  lbo_number: 333859
+  groups:
+    - routers
+    - bt_site
+
+freeman_router:
+  hostname: 10.94.70.193
+  lbo_number: 553871
+  groups:
+    - routers
+    - bt_site
+
+frimleygreen_router:
+  hostname: 10.94.71.1
+  lbo_number: 248304
+  groups:
+    - routers
+    - bt_site
+
+frodingham_router:
+  hostname: 10.93.82.193
+  lbo_number: 365515
+  groups:
+    - routers
+    - bt_site
+
+frog_router:
+  hostname: 10.94.250.1
+  lbo_number: 446620
+  groups:
+    - routers
+    - bt_site
+
+frontierland_router:
+  hostname: 10.94.71.65
+  lbo_number: 331317
+  groups:
+    - routers
+    - bt_site
+
+gables_router:
+  hostname: 10.93.36.1
+  lbo_number: 311616
+  groups:
+    - routers
+    - bt_site
+
+gainsborough_router:
+  hostname: 10.93.64.1
+  lbo_number: 354543
+  groups:
+    - routers
+    - bt_site
+
+galashiels_router:
+  hostname: 10.93.18.65
+  lbo_number: 319600
+  groups:
+    - routers
+    - bt_site
+
+galleries_router:
+  hostname: 10.93.150.129
+  lbo_number: 393626
+  groups:
+    - routers
+    - bt_site
+
+gamecock_router:
+  hostname: 10.94.71.225
+  lbo_number: 548728
+  groups:
+    - routers
+    - bt_site
+
+gants_router:
+  hostname: 10.94.72.1
+  lbo_number: 515910
+  groups:
+    - routers
+    - bt_site

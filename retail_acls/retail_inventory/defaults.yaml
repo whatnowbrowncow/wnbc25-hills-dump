@@ -1,0 +1,15 @@
+---
+#username: wh_dburton
+#password: horse2race
+##secret: horse2race
+### Add scrapli details
+#connection_options:
+#  netmiko:
+#    extras:
+#      secret: horse2race
+#  scrapli:
+#    port: 22
+#    extras:
+#      ssh_config_file: True
+#      auth_strict_key: False
+...

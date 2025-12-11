@@ -1,0 +1,50 @@
+access-list 102 remark Allow ICMP
+access-list 102 permit icmp any any
+access-list 102 remark Remote Store Subnets
+access-list 102 deny   ip any 10.160.0.0 0.7.255.255
+access-list 102 deny   ip any 10.93.0.0 0.0.255.255
+access-list 102 deny   ip any 10.94.0.0 0.0.255.255
+access-list 102 deny   ip any 10.95.0.0 0.0.255.255
+access-list 102 deny   ip any 10.96.0.0 0.0.255.255
+access-list 102 permit ip any any
+access-list 121 remark Allow ICMP
+access-list 121 permit icmp any any
+access-list 121 remark Allow Local 120 and 130 Subnets
+access-list 121 permit ip 10.161.98.160 0.0.0.31 10.162.98.160 0.0.0.31
+access-list 121 permit ip 10.162.98.160 0.0.0.31 10.161.98.160 0.0.0.31
+access-list 121 remark Remote Store Subnets
+access-list 121 deny   ip any 10.160.0.0 0.7.255.255
+access-list 121 deny   ip any 10.93.0.0 0.0.255.255
+access-list 121 deny   ip any 10.94.0.0 0.0.255.255
+access-list 121 deny   ip any 10.95.0.0 0.0.255.255
+access-list 121 deny   ip any 10.96.0.0 0.0.255.255
+access-list 121 permit ip any any
+access-list 141 remark Allow ICMP
+access-list 141 permit icmp any any
+access-list 141 remark Store to Store Voip Calls
+access-list 141 permit udp any 10.163.0.0 0.0.255.255 range 16384 32767
+access-list 141 remark Remote Store Subnets
+access-list 141 deny   ip any 10.160.0.0 0.7.255.255
+access-list 141 deny   ip any 10.93.0.0 0.0.255.255
+access-list 141 deny   ip any 10.94.0.0 0.0.255.255
+access-list 141 deny   ip any 10.95.0.0 0.0.255.255
+access-list 141 deny   ip any 10.96.0.0 0.0.255.255
+access-list 141 permit ip any any
+interface GigabitEthernet0/0.10
+ip access-group 102 in
+interface GigabitEthernet0/0.110
+ip access-group 102 in
+interface GigabitEthernet0/0.120
+ip access-group 121 in
+interface GigabitEthernet0/0.130
+ip access-group 121 in
+interface GigabitEthernet0/0.140
+ip access-group 141 in
+interface GigabitEthernet0/0.150
+ip access-group 102 in
+interface GigabitEthernet0/0.160
+ip access-group 102 in
+interface GigabitEthernet0/0.170
+ip access-group 102 in
+interface GigabitEthernet0/0.180
+ip access-group 102 in

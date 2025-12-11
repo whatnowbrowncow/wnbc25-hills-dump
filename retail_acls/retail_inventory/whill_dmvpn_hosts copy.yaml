@@ -1,0 +1,55 @@
+---
+
+Chanterlands LBO :
+  hostname: 10.96.129.15
+  groups:
+    - routers
+    - dmvpn_site
+    - lbo
+    data:
+      device_hostname: TBD
+
+Charing Cross LBO :
+  hostname: 10.96.129.42
+  groups:
+    - routers
+    - dmvpn_site
+    - lbo
+    data:
+      device_hostname: TBD
+
+Five Oaks LBO :
+  hostname: 10.96.129.43
+  groups:
+    - routers
+    - dmvpn_site
+    - lbo
+    data:
+      device_hostname: TBD
+
+Hessle Road LBO :
+  hostname: 10.96.129.17
+  groups:
+    - routers
+    - dmvpn_site
+    - lbo
+    data:
+      device_hostname: TBD
+
+Hudsons LBO :
+  hostname: 10.96.129.13
+  groups:
+    - routers
+    - dmvpn_site
+    - lbo
+    data:
+      device_hostname: TBD
+
+Poonah Road LBO :
+  hostname: 10.96.129.41
+  groups:
+    - routers
+    - dmvpn_site
+    - lbo
+    data:
+      device_hostname: TBD

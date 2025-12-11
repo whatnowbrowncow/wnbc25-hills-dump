@@ -1,0 +1,183 @@
+---
+
+anlaby_router:
+  hostname: 10.96.0.33
+  lbo_number: 351751
+  groups:
+    - routers
+    - dmvpn_site
+
+bathstreet_router:
+  hostname: 10.96.6.193
+  lbo_number: 457624
+  groups:
+    - routers
+    - dmvpn_site
+
+boothferry_router:
+  hostname: 10.96.5.193
+  lbo_number: 371574
+  groups:
+    - routers
+    - dmvpn_site
+
+burrardstreet_router:
+  hostname: 10.96.6.225
+  lbo_number: 457797
+  groups:
+    - routers
+    - dmvpn_site
+
+conwaystreet_router:
+  hostname: 10.96.7.33
+  lbo_number: 458149
+  groups:
+    - routers
+    - dmvpn_site
+
+crownstores_router:
+  hostname: 10.96.7.65
+  lbo_number: 458221
+  groups:
+    - routers
+    - dmvpn_site
+
+greenwood_router:
+  hostname: 10.96.0.225
+  lbo_number: 543143
+  groups:
+    - routers
+    - dmvpn_site
+
+halkettplace_router:
+  hostname: 10.96.7.129
+  lbo_number: 380682
+  groups:
+    - routers
+    - dmvpn_site
+
+holderness_router:
+  hostname: 10.96.1.225
+  lbo_number: 543964
+  groups:
+    - routers
+    - dmvpn_site
+
+marfleet_router:
+  hostname: 10.96.6.65
+  lbo_number: 544187
+  groups:
+    - routers
+    - dmvpn_site
+
+mollison_router:
+  hostname: 10.96.1.33
+  lbo_number: 543360
+  groups:
+    - routers
+    - dmvpn_site
+
+newstreet_router:
+  hostname: 10.96.7.97
+  lbo_number: 457805
+  groups:
+    - routers
+    - dmvpn_site
+
+newland_router:
+  hostname: 10.96.3.1
+  lbo_number: 593274
+  groups:
+    - routers
+    - dmvpn_site
+
+nightjar_router:
+  hostname: 10.96.1.193
+  lbo_number: 543806
+  groups:
+    - routers
+    - dmvpn_site
+
+orchard_router:
+  hostname: 10.96.1.65
+  lbo_number: 543409
+  groups:
+    - routers
+    - dmvpn_site
+
+paragon_router:
+  hostname: 10.96.2.97
+  lbo_number: 544439
+  groups:
+    - routers
+    - dmvpn_site
+
+redhouses_router:
+  hostname: 10.96.7.193
+  lbo_number: 458479
+  groups:
+    - routers
+    - dmvpn_site
+
+samman_router:
+  hostname: 10.96.1.97
+  lbo_number: 543597
+  groups:
+    - routers
+    - dmvpn_site
+
+sandstreet_router:
+  hostname: 10.96.7.1
+  lbo_number: 458051
+  groups:
+    - routers
+    - dmvpn_site
+
+shannon_router:
+  hostname: 10.96.5.97
+  lbo_number: 373240
+  groups:
+    - routers
+    - dmvpn_site
+
+springbank_router:
+  hostname: 10.96.1.129
+  lbo_number: 543674
+  groups:
+    - routers
+    - dmvpn_site
+
+st.aubins_router:
+  hostname: 10.96.7.161
+  lbo_number: 458384
+  groups:
+    - routers
+    - dmvpn_site
+
+statue_router:
+  hostname: 10.96.0.97
+  lbo_number: 436378
+  groups:
+    - routers
+    - dmvpn_site
+
+sutton_router:
+  hostname: 10.96.2.161
+  lbo_number: 544756
+  groups:
+    - routers
+    - dmvpn_site
+
+westhull_router:
+  hostname: 10.96.1.161
+  lbo_number: 543740
+  groups:
+    - routers
+    - dmvpn_site
+
+westpark_router:
+  hostname: 10.96.2.225
+  lbo_number: 545854
+  groups:
+    - routers
+    - dmvpn_site

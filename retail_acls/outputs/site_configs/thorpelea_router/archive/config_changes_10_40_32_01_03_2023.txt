@@ -1,0 +1,40 @@
+access-list 103 remark Allow ICMP
+access-list 103 permit icmp any any
+access-list 103 remark Allow Local 120 Subnet
+access-list 103 permit ip 10.94.176.96 0.0.0.31 10.161.169.128 0.0.0.31
+access-list 103 remark Remote Store Subnets
+access-list 103 deny   ip any 10.160.0.0 0.7.255.255
+access-list 103 deny   ip any 10.93.0.0 0.0.255.255
+access-list 103 deny   ip any 10.94.0.0 0.0.255.255
+access-list 103 deny   ip any 10.95.0.0 0.0.255.255
+access-list 103 deny   ip any 10.96.0.0 0.0.255.255
+access-list 103 permit ip any any
+access-list 122 remark Allow ICMP
+access-list 122 permit icmp any any
+access-list 122 remark Allow Local 1 and 130 Subnets
+access-list 122 permit ip 10.161.169.128 0.0.0.31 10.94.176.96 0.0.0.31
+access-list 122 permit ip 10.161.169.128 0.0.0.31 10.162.169.128 0.0.0.31
+access-list 122 remark Remote Store Subnets
+access-list 122 deny   ip any 10.160.0.0 0.7.255.255
+access-list 122 deny   ip any 10.93.0.0 0.0.255.255
+access-list 122 deny   ip any 10.94.0.0 0.0.255.255
+access-list 122 deny   ip any 10.95.0.0 0.0.255.255
+access-list 122 deny   ip any 10.96.0.0 0.0.255.255
+access-list 122 permit ip any any
+access-list 123 remark Allow ICMP
+access-list 123 permit icmp any any
+access-list 123 remark Allow Local 120 Subnet
+access-list 123 permit ip 10.162.169.128 0.0.0.31 10.161.169.128 0.0.0.31
+access-list 123 remark Remote Store Subnets
+access-list 123 deny   ip any 10.160.0.0 0.7.255.255
+access-list 123 deny   ip any 10.93.0.0 0.0.255.255
+access-list 123 deny   ip any 10.94.0.0 0.0.255.255
+access-list 123 deny   ip any 10.95.0.0 0.0.255.255
+access-list 123 deny   ip any 10.96.0.0 0.0.255.255
+access-list 123 permit ip any any
+interface GigabitEthernet0/0/0.10
+ip access-group 103 in
+interface GigabitEthernet0/0/0.120
+ip access-group 122 in
+interface GigabitEthernet0/0/0.130
+ip access-group 123 in

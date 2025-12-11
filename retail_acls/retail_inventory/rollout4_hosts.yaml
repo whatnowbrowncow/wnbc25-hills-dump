@@ -1,0 +1,2131 @@
+---
+
+maxwellton_router:
+  hostname: 10.93.67.97
+  lbo_number: 357948
+  groups:
+    - routers
+    - bt_site
+
+meadowbank_router:
+  hostname: 10.94.220.65
+  lbo_number: 423777
+  groups:
+    - routers
+    - bt_site
+
+meadows_router:
+  hostname: 10.93.29.225
+  lbo_number: 306938
+  groups:
+    - routers
+    - bt_site
+
+mealmarket_router:
+  hostname: 10.93.116.225
+  lbo_number: 383783
+  groups:
+    - routers
+    - bt_site
+
+meanwood_router:
+  hostname: 10.94.118.97
+  lbo_number: 547956
+  groups:
+    - routers
+    - bt_site
+
+medway_router:
+  hostname: 10.94.118.129
+  lbo_number: 511512
+  groups:
+    - routers
+    - bt_site
+
+meltonroad_router:
+  hostname: 10.93.49.225
+  lbo_number: 299642
+  groups:
+    - routers
+    - bt_site
+
+merchantcity_router:
+  hostname: 10.94.119.1
+  lbo_number: 212709
+  groups:
+    - routers
+    - bt_site
+
+meregreen_router:
+  hostname: 10.93.34.193
+  lbo_number: 310689
+  groups:
+    - routers
+    - bt_site
+
+merrow_router:
+  hostname: 10.94.119.97
+  lbo_number: 347299
+  groups:
+    - routers
+    - bt_site
+
+merrylee_router:
+  hostname: 10.94.119.129
+  lbo_number: 339504
+  groups:
+    - routers
+    - bt_site
+
+mersey_router:
+  hostname: 10.94.119.161
+  lbo_number: 322318
+  groups:
+    - routers
+    - bt_site
+
+merseyway_router:
+  hostname: 10.94.119.193
+  lbo_number: 561805
+  groups:
+    - routers
+    - bt_site
+
+middlesbrough_router:
+  hostname: 10.94.120.33
+  lbo_number: 551663
+  groups:
+    - routers
+    - bt_site
+
+milkwood_router:
+  hostname: 10.94.120.161
+  lbo_number: 253006
+  groups:
+    - routers
+    - bt_site
+
+mitchamroad_router:
+  hostname: 10.94.210.65
+  lbo_number: 401308
+  groups:
+    - routers
+    - bt_site
+
+molineaux_router:
+  hostname: 10.94.121.129
+  lbo_number: 591448
+  groups:
+    - routers
+    - bt_site
+
+mollison_router:
+  hostname: 10.96.1.33
+  lbo_number: 543360
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-mollison
+
+monkseaton_router:
+  hostname: 10.94.245.161
+  lbo_number: 427391
+  groups:
+    - routers
+    - bt_site
+
+monkspath_router:
+  hostname: 10.94.204.193
+  lbo_number: 417189
+  groups:
+    - routers
+    - bt_site
+
+monmouth_router:
+  hostname: 10.94.121.225
+  lbo_number: 578044
+  groups:
+    - routers
+    - bt_site
+
+montgomery_router:
+  hostname: 10.94.122.1
+  lbo_number: 533932
+  groups:
+    - routers
+    - bt_site
+
+montrose_router:
+  hostname: 10.93.71.1
+  lbo_number: 360137
+  groups:
+    - routers
+    - bt_site
+
+monumentplace_router:
+  hostname: 10.94.232.225
+  lbo_number: 438678
+  groups:
+    - routers
+    - bt_site
+
+moodiesburn_router:
+  hostname: 10.94.122.33
+  lbo_number: 533374
+  groups:
+    - routers
+    - bt_site
+
+moorends_router:
+  hostname: 10.93.135.161
+  lbo_number: 392729
+  groups:
+    - routers
+    - bt_site
+
+moorlandswalk_router:
+  hostname: 10.93.85.193
+  lbo_number: 368038
+  groups:
+    - routers
+    - bt_site
+
+moortown_router:
+  hostname: 10.93.123.225
+  lbo_number: 548068
+  groups:
+    - routers
+    - bt_site
+
+morcilla_router:
+  hostname: 10.93.81.193
+  lbo_number: 365224
+  groups:
+    - routers
+    - bt_site
+
+morden_router:
+  hostname: 10.94.122.161
+  lbo_number: 253308
+  groups:
+    - routers
+    - bt_site
+
+morningside_router:
+  hostname: 10.93.73.129
+  lbo_number: 284548
+  groups:
+    - routers
+    - bt_site
+
+mornington_router:
+  hostname: 10.94.123.33
+  lbo_number: 526688
+  groups:
+    - routers
+    - bt_site
+
+moseley_router:
+  hostname: 10.93.44.33
+  lbo_number: 305623
+  groups:
+    - routers
+    - bt_site
+
+mosslane_router:
+  hostname: 10.94.239.97
+  lbo_number: 448359
+  groups:
+    - routers
+    - bt_site
+
+mosspark_router:
+  hostname: 10.93.74.129
+  lbo_number: 361437
+  groups:
+    - routers
+    - bt_site
+
+mostonlane_router:
+  hostname: 10.93.92.129
+  lbo_number: 419895
+  groups:
+    - routers
+    - bt_site
+
+motspur_router:
+  hostname: 10.94.123.161
+  lbo_number: 285463
+  groups:
+    - routers
+    - bt_site
+
+mottingham_router:
+  hostname: 10.94.123.193
+  lbo_number: 509324
+  groups:
+    - routers
+    - bt_site
+
+mountoliphant_router:
+  hostname: 10.94.123.225
+  lbo_number: 335215
+  groups:
+    - routers
+    - bt_site
+
+mowbray_router:
+  hostname: 10.94.124.65
+  lbo_number: 320587
+  groups:
+    - routers
+    - bt_site
+
+muirhead_router:
+  hostname: 10.94.124.97
+  lbo_number: 532711
+  groups:
+    - routers
+    - bt_site
+
+mulgrave_router:
+  hostname: 10.94.124.129
+  lbo_number: 506360
+  groups:
+    - routers
+    - bt_site
+
+mungopark_router:
+  hostname: 10.94.124.193
+  lbo_number: 340502
+  groups:
+    - routers
+    - bt_site
+
+muswellhill_router:
+  hostname: 10.94.125.97
+  lbo_number: 330612
+  groups:
+    - routers
+    - bt_site
+
+muttonlane_router:
+  hostname: 10.94.125.161
+  lbo_number: 298646
+  groups:
+    - routers
+    - bt_site
+
+nantwich_router:
+  hostname: 10.93.131.97
+  lbo_number: 390929
+  groups:
+    - routers
+    - bt_site
+
+narboroughroad_router:
+  hostname: 10.93.117.193
+  lbo_number: 385008
+  groups:
+    - routers
+    - bt_site
+
+neath_router:
+  hostname: 10.94.126.1
+  lbo_number: 583619
+  groups:
+    - routers
+    - bt_site
+
+neilslandroad_router:
+  hostname: 10.93.20.129
+  lbo_number: 309649
+  groups:
+    - routers
+    - bt_site
+
+nelson_router:
+  hostname: 10.94.126.65
+  lbo_number: 062200
+  groups:
+    - routers
+    - bt_site
+
+nescott_router:
+  hostname: 10.93.54.65
+  lbo_number: 353189
+  groups:
+    - routers
+    - bt_site
+
+netherton_router:
+  hostname: 10.94.233.65
+  lbo_number: 447192
+  groups:
+    - routers
+    - bt_site
+
+netherwood_router:
+  hostname: 10.94.126.97
+  lbo_number: 253650
+  groups:
+    - routers
+    - bt_site
+
+newcross_router:
+  hostname: 10.94.126.161
+  lbo_number: 253707
+  groups:
+    - routers
+    - bt_site
+
+newollerton_router:
+  hostname: 10.93.30.65
+  lbo_number: 304645
+  groups:
+    - routers
+    - bt_site
+
+newprospect_router:
+  hostname: 10.93.1.1
+  lbo_number: 430076
+  groups:
+    - routers
+    - bt_site
+
+newstreet_router:
+  hostname: 10.96.7.97
+  lbo_number: 457805
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-newstreet
+
+newarthill_router:
+  hostname: 10.93.35.1
+  lbo_number: 311233
+  groups:
+    - routers
+    - bt_site
+
+newborough_router:
+  hostname: 10.94.127.1
+  lbo_number: 545458
+  groups:
+    - routers
+    - bt_site
+
+newbridge_router:
+  hostname: 10.94.127.33
+  lbo_number: 581051
+  groups:
+    - routers
+    - bt_site
+
+newhaven_router:
+  hostname: 10.94.127.97
+  lbo_number: 284718
+  groups:
+    - routers
+    - bt_site
+
+newhaw_router:
+  hostname: 10.93.56.193
+  lbo_number: 289817
+  groups:
+    - routers
+    - bt_site
+
+newland_router:
+  hostname: 10.96.3.1
+  lbo_number: 593274
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-newland
+
+newmains_router:
+  hostname: 10.93.49.161
+  lbo_number: 349364
+  groups:
+    - routers
+    - bt_site
+
+newmarket_router:
+  hostname: 10.93.82.65
+  lbo_number: 364867
+  groups:
+    - routers
+    - bt_site
+
+newquay_router:
+  hostname: 10.94.128.1
+  lbo_number: 576917
+  groups:
+    - routers
+    - bt_site
+
+newtoft_router:
+  hostname: 10.94.128.33
+  lbo_number: 540708
+  groups:
+    - routers
+    - bt_site
+
+newtonheath_router:
+  hostname: 10.94.128.65
+  lbo_number: 336203
+  groups:
+    - routers
+    - bt_site
+
+newtonscourt_router:
+  hostname: 10.93.55.97
+  lbo_number: 352209
+  groups:
+    - routers
+    - bt_site
+
+newtown_router:
+  hostname: 10.94.128.97
+  lbo_number: 318914
+  groups:
+    - routers
+    - bt_site
+
+niddrie_router:
+  hostname: 10.94.128.129
+  lbo_number: 541707
+  groups:
+    - routers
+    - bt_site
+
+nightingale_router:
+  hostname: 10.94.128.161
+  lbo_number: 318450
+  groups:
+    - routers
+    - bt_site
+
+nightjar_router:
+  hostname: 10.96.1.193
+  lbo_number: 543806
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-nightjar
+
+nithsdale_router:
+  hostname: 10.94.128.225
+  lbo_number: 210803
+  groups:
+    - routers
+    - bt_site
+
+nook_router:
+  hostname: 10.94.129.33
+  lbo_number: 327018
+  groups:
+    - routers
+    - bt_site
+
+norbury_router:
+  hostname: 10.94.129.65
+  lbo_number: 291951
+  groups:
+    - routers
+    - bt_site
+
+norman_router:
+  hostname: 10.94.129.129
+  lbo_number: 560175
+  groups:
+    - routers
+    - bt_site
+
+northormesby_router:
+  hostname: 10.93.6.129
+  lbo_number: 434251
+  groups:
+    - routers
+    - bt_site
+
+northrow_router:
+  hostname: 10.94.130.1
+  lbo_number: 022802
+  groups:
+    - routers
+    - bt_site
+
+northwembley_router:
+  hostname: 10.94.130.33
+  lbo_number: 043206
+  groups:
+    - routers
+    - bt_site
+
+northcant_router:
+  hostname: 10.94.130.97
+  lbo_number: 510514
+  groups:
+    - routers
+    - bt_site
+
+northenden_router:
+  hostname: 10.94.130.129
+  lbo_number: 564724
+  groups:
+    - routers
+    - bt_site
+
+northfield_router:
+  hostname: 10.94.130.193
+  lbo_number: 301213
+  groups:
+    - routers
+    - bt_site
+
+northgate_router:
+  hostname: 10.94.130.225
+  lbo_number: 578143
+  groups:
+    - routers
+    - bt_site
+
+northwich_router:
+  hostname: 10.93.88.193
+  lbo_number: 440267
+  groups:
+    - routers
+    - bt_site
+
+northwick_router:
+  hostname: 10.93.151.65
+  lbo_number: 521949
+  groups:
+    - routers
+    - bt_site
+
+northwoodhills_router:
+  hostname: 10.94.131.33
+  lbo_number: 043109
+  groups:
+    - routers
+    - bt_site
+
+norton_router:
+  hostname: 10.93.52.193
+  lbo_number: 413265
+  groups:
+    - routers
+    - bt_site
+
+nottinghill_router:
+  hostname: 10.94.131.97
+  lbo_number: 512727
+  groups:
+    - routers
+    - bt_site
+
+nottingham_router:
+  hostname: 10.93.127.161
+  lbo_number: 388581
+  groups:
+    - routers
+    - bt_site
+
+nunhead_router:
+  hostname: 10.94.131.129
+  lbo_number: 508801
+  groups:
+    - routers
+    - bt_site
+
+nurseryparade_router:
+  hostname: 10.93.86.33
+  lbo_number: 367568
+  groups:
+    - routers
+    - bt_site
+
+nutwell_router:
+  hostname: 10.93.34.97
+  lbo_number: 312014
+  groups:
+    - routers
+    - bt_site
+
+oakhills_router:
+  hostname: 10.93.32.225
+  lbo_number: 311739
+  groups:
+    - routers
+    - bt_site
+
+oakwood_router:
+  hostname: 10.94.131.225
+  lbo_number: 285846
+  groups:
+    - routers
+    - bt_site
+
+oldcock_router:
+  hostname: 10.94.241.193
+  lbo_number: 418672
+  groups:
+    - routers
+    - bt_site
+
+oldkentroad_router:
+  hostname: 10.94.252.161
+  lbo_number: 403814
+  groups:
+    - routers
+    - bt_site
+
+oldnewton_router:
+  hostname: 10.93.37.97
+  lbo_number: 311313
+  groups:
+    - routers
+    - bt_site
+
+oldroan_router:
+  hostname: 10.94.226.193
+  lbo_number: 445325
+  groups:
+    - routers
+    - bt_site
+
+oldswan_router:
+  hostname: 10.93.61.129
+  lbo_number: 354629
+  groups:
+    - routers
+    - bt_site
+
+oldvic_router:
+  hostname: 10.93.103.97
+  lbo_number: 376284
+  groups:
+    - routers
+    - bt_site
+
+oldwalsallroad_router:
+  hostname: 10.94.203.129
+  lbo_number: 413631
+  groups:
+    - routers
+    - bt_site
+
+oldbury_router:
+  hostname: 10.93.32.97
+  lbo_number: 411854
+  groups:
+    - routers
+    - bt_site
+
+oldfieldlane_router:
+  hostname: 10.94.132.193
+  lbo_number: 235024
+  groups:
+    - routers
+    - bt_site
+
+oldham_router:
+  hostname: 10.94.132.225
+  lbo_number: 562375
+  groups:
+    - routers
+    - bt_site
+
+ongar_router:
+  hostname: 10.94.133.65
+  lbo_number: 341509
+  groups:
+    - routers
+    - bt_site
+
+openshaw_router:
+  hostname: 10.93.105.1
+  lbo_number: 563017
+  groups:
+    - routers
+    - bt_site
+
+orchard_router:
+  hostname: 10.96.1.65
+  lbo_number: 543409
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-orchard
+
+orfordlane_router:
+  hostname: 10.94.133.161
+  lbo_number: 319473
+  groups:
+    - routers
+    - bt_site
+
+orient_router:
+  hostname: 10.94.133.193
+  lbo_number: 516003
+  groups:
+    - routers
+    - bt_site
+
+ormesbyroad_router:
+  hostname: 10.93.6.97
+  lbo_number: 434483
+  groups:
+    - routers
+    - bt_site
+
+ormskirkroad_router:
+  hostname: 10.93.9.161
+  lbo_number: 453758
+  groups:
+    - routers
+    - bt_site
+
+osbourne_router:
+  hostname: 10.94.133.225
+  lbo_number: 118907
+  groups:
+    - routers
+    - bt_site
+
+osidge_router:
+  hostname: 10.94.134.1
+  lbo_number: 232750
+  groups:
+    - routers
+    - bt_site
+
+ossett_router:
+  hostname: 10.93.32.1
+  lbo_number: 324558
+  groups:
+    - routers
+    - bt_site
+
+otley_router:
+  hostname: 10.94.240.1
+  lbo_number: 420110
+  groups:
+    - routers
+    - bt_site
+
+outram_router:
+  hostname: 10.93.17.65
+  lbo_number: 310262
+  groups:
+    - routers
+    - bt_site
+
+outwood_router:
+  hostname: 10.94.134.97
+  lbo_number: 560411
+  groups:
+    - routers
+    - bt_site
+
+pacific_router:
+  hostname: 10.94.230.225
+  lbo_number: 446431
+  groups:
+    - routers
+    - bt_site
+
+pagemoss_router:
+  hostname: 10.94.235.1
+  lbo_number: 441263
+  groups:
+    - routers
+    - bt_site
+
+pagehall_router:
+  hostname: 10.94.134.193
+  lbo_number: 556111
+  groups:
+    - routers
+    - bt_site
+
+paisleyroadwest_router:
+  hostname: 10.94.135.33
+  lbo_number: 346918
+  groups:
+    - routers
+    - bt_site
+
+palatine_router:
+  hostname: 10.94.135.97
+  lbo_number: 568326
+  groups:
+    - routers
+    - bt_site
+
+pallion_router:
+  hostname: 10.93.1.65
+  lbo_number: 431096
+  groups:
+    - routers
+    - bt_site
+
+palmerston_router:
+  hostname: 10.94.135.161
+  lbo_number: 254606
+  groups:
+    - routers
+    - bt_site
+
+papagills_router:
+  hostname: 10.94.225.161
+  lbo_number: 424646
+  groups:
+    - routers
+    - bt_site
+
+paradise_router:
+  hostname: 10.94.136.1
+  lbo_number: 214906
+  groups:
+    - routers
+    - bt_site
+
+paragon_router:
+  hostname: 10.96.2.97
+  lbo_number: 544439
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-paragon
+
+parchmore_router:
+  hostname: 10.94.136.65
+  lbo_number: 261408
+  groups:
+    - routers
+    - bt_site
+
+parkbrow_router:
+  hostname: 10.94.234.1
+  lbo_number: 447932
+  groups:
+    - routers
+    - bt_site
+
+parklane_router:
+  hostname: 10.93.22.1
+  lbo_number: 517792
+  groups:
+    - routers
+    - bt_site
+
+parker_router:
+  hostname: 10.93.129.161
+  lbo_number: 569950
+  groups:
+    - routers
+    - bt_site
+
+parkheadgardens_router:
+  hostname: 10.94.136.193
+  lbo_number: 285048
+  groups:
+    - routers
+    - bt_site
+
+parklands_router:
+  hostname: 10.94.234.129
+  lbo_number: 447727
+  groups:
+    - routers
+    - bt_site
+
+partick_router:
+  hostname: 10.94.137.1
+  lbo_number: 531372
+  groups:
+    - routers
+    - bt_site
+
+pastureroad_router:
+  hostname: 10.94.137.33
+  lbo_number: 276162
+  groups:
+    - routers
+    - bt_site
+
+patchway_router:
+  hostname: 10.93.50.1
+  lbo_number: 349989
+  groups:
+    - routers
+    - bt_site
+
+peacocks_router:
+  hostname: 10.93.24.33
+  lbo_number: 344001
+  groups:
+    - routers
+    - bt_site
+
+peaks_router:
+  hostname: 10.94.137.161
+  lbo_number: 593085
+  groups:
+    - routers
+    - bt_site
+
+peatmoor_router:
+  hostname: 10.94.137.193
+  lbo_number: 319155
+  groups:
+    - routers
+    - bt_site
+
+peckham_router:
+  hostname: 10.94.137.225
+  lbo_number: 509056
+  groups:
+    - routers
+    - bt_site
+
+peebles_router:
+  hostname: 10.94.138.1
+  lbo_number: 284866
+  groups:
+    - routers
+    - bt_site
+
+penge_router:
+  hostname: 10.94.138.97
+  lbo_number: 190101
+  groups:
+    - routers
+    - bt_site
+
+penicuik_router:
+  hostname: 10.94.138.129
+  lbo_number: 541097
+  groups:
+    - routers
+    - bt_site
+
+pennylane_router:
+  hostname: 10.93.63.1
+  lbo_number: 355013
+  groups:
+    - routers
+    - bt_site
+
+penrhyn_router:
+  hostname: 10.93.79.1
+  lbo_number: 314531
+  groups:
+    - routers
+    - bt_site
+
+penwortham_router:
+  hostname: 10.93.112.1
+  lbo_number: 379853
+  groups:
+    - routers
+    - bt_site
+
+penylan_router:
+  hostname: 10.93.46.193
+  lbo_number: 585105
+  groups:
+    - routers
+    - bt_site
+
+penywern_router:
+  hostname: 10.94.139.65
+  lbo_number: 511981
+  groups:
+    - routers
+    - bt_site
+
+perrybarr_router:
+  hostname: 10.94.139.97
+  lbo_number: 298352
+  groups:
+    - routers
+    - bt_site
+
+perryvale_router:
+  hostname: 10.94.139.129
+  lbo_number: 509166
+  groups:
+    - routers
+    - bt_site
+
+peterhead_router:
+  hostname: 10.93.94.225
+  lbo_number: 331147
+  groups:
+    - routers
+    - bt_site
+
+peveril_router:
+  hostname: 10.93.96.1
+  lbo_number: 372841
+  groups:
+    - routers
+    - bt_site
+
+phoenix_router:
+  hostname: 10.93.95.97
+  lbo_number: 372718
+  groups:
+    - routers
+    - bt_site
+
+pilchlane_router:
+  hostname: 10.93.110.33
+  lbo_number: 441618
+  groups:
+    - routers
+    - bt_site
+
+pilrig_router:
+  hostname: 10.93.68.193
+  lbo_number: 325813
+  groups:
+    - routers
+    - bt_site
+
+plainmoor_router:
+  hostname: 10.93.45.33
+  lbo_number: 410355
+  groups:
+    - routers
+    - bt_site
+
+plaistow_router:
+  hostname: 10.94.140.225
+  lbo_number: 031909
+  groups:
+    - routers
+    - bt_site
+
+plungington_router:
+  hostname: 10.94.141.97
+  lbo_number: 573346
+  groups:
+    - routers
+    - bt_site
+
+pondersend_router:
+  hostname: 10.94.142.1
+  lbo_number: 318701
+  groups:
+    - routers
+    - bt_site
+
+pontingstreet_router:
+  hostname: 10.94.255.33
+  lbo_number: 407339
+  groups:
+    - routers
+    - bt_site
+
+poole_router:
+  hostname: 10.94.142.65
+  lbo_number: 344109
+  groups:
+    - routers
+    - bt_site
+
+poolside_router:
+  hostname: 10.94.142.97
+  lbo_number: 571610
+  groups:
+    - routers
+    - bt_site
+
+poolstocklane_router:
+  hostname: 10.93.9.129
+  lbo_number: 451955
+  groups:
+    - routers
+    - bt_site
+
+potters_router:
+  hostname: 10.94.143.33
+  lbo_number: 256609
+  groups:
+    - routers
+    - bt_site
+
+poulton_router:
+  hostname: 10.94.143.65
+  lbo_number: 567365
+  groups:
+    - routers
+    - bt_site
+
+powerscroftrd_router:
+  hostname: 10.94.143.161
+  lbo_number: 239798
+  groups:
+    - routers
+    - bt_site
+
+prentis_router:
+  hostname: 10.94.144.33
+  lbo_number: 335630
+  groups:
+    - routers
+    - bt_site
+
+prescot_router:
+  hostname: 10.94.237.161
+  lbo_number: 442746
+  groups:
+    - routers
+    - bt_site
+
+prestatyn_router:
+  hostname: 10.94.144.65
+  lbo_number: 160806
+  groups:
+    - routers
+    - bt_site
+
+preston_router:
+  hostname: 10.94.144.97
+  lbo_number: 573176
+  groups:
+    - routers
+    - bt_site
+
+prestwick_router:
+  hostname: 10.94.144.129
+  lbo_number: 317209
+  groups:
+    - routers
+    - bt_site
+
+primett_router:
+  hostname: 10.93.42.65
+  lbo_number: 315642
+  groups:
+    - routers
+    - bt_site
+
+princesmall_router:
+  hostname: 10.93.122.97
+  lbo_number: 384460
+  groups:
+    - routers
+    - bt_site
+
+princessstreet_router:
+  hostname: 10.93.8.65
+  lbo_number: 439097
+  groups:
+    - routers
+    - bt_site
+
+pudsey_router:
+  hostname: 10.94.240.33
+  lbo_number: 420206
+  groups:
+    - routers
+    - bt_site
+
+pumplane_router:
+  hostname: 10.93.99.129
+  lbo_number: 374257
+  groups:
+    - routers
+    - bt_site
+
+pumpherston_router:
+  hostname: 10.94.145.1
+  lbo_number: 541876
+  groups:
+    - routers
+    - bt_site
+
+purleycross_router:
+  hostname: 10.93.117.1
+  lbo_number: 384888
+  groups:
+    - routers
+    - bt_site
+
+purleyway_router:
+  hostname: 10.94.255.1
+  lbo_number: 403005
+  groups:
+    - routers
+    - bt_site
+
+pymmespark_router:
+  hostname: 10.94.145.33
+  lbo_number: 070718
+  groups:
+    - routers
+    - bt_site
+
+quadrant_router:
+  hostname: 10.94.145.97
+  lbo_number: 523621
+  groups:
+    - routers
+    - bt_site
+
+quarrystreet_router:
+  hostname: 10.94.145.129
+  lbo_number: 211303
+  groups:
+    - routers
+    - bt_site
+
+quedgeley_router:
+  hostname: 10.94.145.161
+  lbo_number: 337404
+  groups:
+    - routers
+    - bt_site
+
+queensroad_router:
+  hostname: 10.94.203.193
+  lbo_number: 412070
+  groups:
+    - routers
+    - bt_site
+
+queensbury_router:
+  hostname: 10.93.101.193
+  lbo_number: 375608
+  groups:
+    - routers
+    - bt_site
+
+queensway_router:
+  hostname: 10.93.96.97
+  lbo_number: 115908
+  groups:
+    - routers
+    - bt_site
+
+quietman_router:
+  hostname: 10.93.59.193
+  lbo_number: 441182
+  groups:
+    - routers
+    - bt_site
+
+quinton_router:
+  hostname: 10.94.145.225
+  lbo_number: 281263
+  groups:
+    - routers
+    - bt_site
+
+quovadis_router:
+  hostname: 10.93.124.161
+  lbo_number: 386293
+  groups:
+    - routers
+    - bt_site
+
+raby_router:
+  hostname: 10.94.247.129
+  lbo_number: 427990
+  groups:
+    - routers
+    - bt_site
+
+racecommon_router:
+  hostname: 10.94.146.1
+  lbo_number: 553513
+  groups:
+    - routers
+    - bt_site
+
+radcliffe_router:
+  hostname: 10.94.146.33
+  lbo_number: 563861
+  groups:
+    - routers
+    - bt_site
+
+radleys_router:
+  hostname: 10.93.117.129
+  lbo_number: 383582
+  groups:
+    - routers
+    - bt_site
+
+randlesdownroad_router:
+  hostname: 10.94.252.225
+  lbo_number: 400121
+  groups:
+    - routers
+    - bt_site
+
+range_router:
+  hostname: 10.94.241.33
+  lbo_number: 418218
+  groups:
+    - routers
+    - bt_site
+
+raploch_router:
+  hostname: 10.93.61.193
+  lbo_number: 354210
+  groups:
+    - routers
+    - bt_site
+
+rawmarsh_router:
+  hostname: 10.94.146.225
+  lbo_number: 556528
+  groups:
+    - routers
+    - bt_site
+
+rayleigh_router:
+  hostname: 10.93.116.161
+  lbo_number: 341908
+  groups:
+    - routers
+    - bt_site
+
+raynerslane_router:
+  hostname: 10.94.147.33
+  lbo_number: 140104
+  groups:
+    - routers
+    - bt_site
+
+raynes_router:
+  hostname: 10.94.147.65
+  lbo_number: 506891
+  groups:
+    - routers
+    - bt_site
+
+raynorparade_router:
+  hostname: 10.93.10.97
+  lbo_number: 415185
+  groups:
+    - routers
+    - bt_site
+
+reach_router:
+  hostname: 10.94.147.97
+  lbo_number: 575606
+  groups:
+    - routers
+    - bt_site
+
+redlion_router:
+  hostname: 10.94.147.193
+  lbo_number: 588232
+  groups:
+    - routers
+    - bt_site
+
+redcap_router:
+  hostname: 10.94.147.225
+  lbo_number: 110809
+  groups:
+    - routers
+    - bt_site
+
+reddish_router:
+  hostname: 10.94.148.1
+  lbo_number: 564217
+  groups:
+    - routers
+    - bt_site
+
+redditch_router:
+  hostname: 10.94.148.33
+  lbo_number: 321214
+  groups:
+    - routers
+    - bt_site
+
+redfield_router:
+  hostname: 10.94.148.65
+  lbo_number: 297232
+  groups:
+    - routers
+    - bt_site
+
+redhouses_router:
+  hostname: 10.96.7.193
+  lbo_number: 458479
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-redhouses
+
+redruth_router:
+  hostname: 10.93.5.161
+  lbo_number: 411616
+  groups:
+    - routers
+    - bt_site
+
+reepham_router:
+  hostname: 10.93.22.161
+  lbo_number: 308816
+  groups:
+    - routers
+    - bt_site
+
+reids_router:
+  hostname: 10.93.55.225
+  lbo_number: 545587
+  groups:
+    - routers
+    - bt_site
+
+renfrew_router:
+  hostname: 10.94.148.161
+  lbo_number: 321974
+  groups:
+    - routers
+    - bt_site
+
+restalrig_router:
+  hostname: 10.94.148.225
+  lbo_number: 284998
+  groups:
+    - routers
+    - bt_site
+
+retford_router:
+  hostname: 10.94.149.1
+  lbo_number: 555951
+  groups:
+    - routers
+    - bt_site
+
+rhosonsea_router:
+  hostname: 10.94.149.65
+  lbo_number: 161004
+  groups:
+    - routers
+    - bt_site
+
+rhyl_router:
+  hostname: 10.94.149.97
+  lbo_number: 573057
+  groups:
+    - routers
+    - bt_site
+
+ribbleton_router:
+  hostname: 10.94.149.129
+  lbo_number: 573463
+  groups:
+    - routers
+    - bt_site
+
+ricelane_router:
+  hostname: 10.94.239.1
+  lbo_number: 447813
+  groups:
+    - routers
+    - bt_site
+
+richmond_router:
+  hostname: 10.94.149.161
+  lbo_number: 528981
+  groups:
+    - routers
+    - bt_site
+
+riddrie_router:
+  hostname: 10.94.149.225
+  lbo_number: 216402
+  groups:
+    - routers
+    - bt_site
+
+ridgeavenue_router:
+  hostname: 10.94.150.1
+  lbo_number: 326852
+  groups:
+    - routers
+    - bt_site
+
+ridgeway_router:
+  hostname: 10.94.150.33
+  lbo_number: 236527
+  groups:
+    - routers
+    - bt_site
+
+rishton_router:
+  hostname: 10.93.59.33
+  lbo_number: 451282
+  groups:
+    - routers
+    - bt_site
+
+risingbrook_router:
+  hostname: 10.94.150.193
+  lbo_number: 590891
+  groups:
+    - routers
+    - bt_site
+
+riverside_router:
+  hostname: 10.94.151.1
+  lbo_number: 329452
+  groups:
+    - routers
+    - bt_site
+
+rivingtonroad_router:
+  hostname: 10.94.209.225
+  lbo_number: 439254
+  groups:
+    - routers
+    - bt_site
+
+robinhood_router:
+  hostname: 10.94.202.225
+  lbo_number: 411762
+  groups:
+    - routers
+    - bt_site
+
+rochdale_router:
+  hostname: 10.94.151.97
+  lbo_number: 562459
+  groups:
+    - routers
+    - bt_site
+
+roelee_router:
+  hostname: 10.93.81.33
+  lbo_number: 364647
+  groups:
+    - routers
+    - bt_site
+
+roffey_router:
+  hostname: 10.94.250.97
+  lbo_number: 402141
+  groups:
+    - routers
+    - bt_site
+
+rosegrove_router:
+  hostname: 10.94.206.161
+  lbo_number: 450237
+  groups:
+    - routers
+    - bt_site
+
+rosestreet_router:
+  hostname: 10.93.20.65
+  lbo_number: 308290
+  groups:
+    - routers
+    - bt_site
+
+ross_router:
+  hostname: 10.93.92.97
+  lbo_number: 580915
+  groups:
+    - routers
+    - bt_site
+
+rossall_router:
+  hostname: 10.94.152.65
+  lbo_number: 567705
+  groups:
+    - routers
+    - bt_site
+
+rothwell_router:
+  hostname: 10.93.56.129
+  lbo_number: 554881
+  groups:
+    - routers
+    - bt_site
+
+roundhay_router:
+  hostname: 10.94.152.161
+  lbo_number: 547371
+  groups:
+    - routers
+    - bt_site
+
+rowan_router:
+  hostname: 10.94.152.193
+  lbo_number: 256501
+  groups:
+    - routers
+    - bt_site
+
+rowsonstreet_router:
+  hostname: 10.94.209.97
+  lbo_number: 440486
+  groups:
+    - routers
+    - bt_site
+
+royal_router:
+  hostname: 10.94.152.225
+  lbo_number: 118001
+  groups:
+    - routers
+    - bt_site
+
+royalpriors_router:
+  hostname: 10.93.78.225
+  lbo_number: 363699
+  groups:
+    - routers
+    - bt_site
+
+royston_router:
+  hostname: 10.94.223.97
+  lbo_number: 426027
+  groups:
+    - routers
+    - bt_site
+
+royton_router:
+  hostname: 10.94.153.1
+  lbo_number: 562011
+  groups:
+    - routers
+    - bt_site
+
+rubery_router:
+  hostname: 10.94.153.33
+  lbo_number: 302767
+  groups:
+    - routers
+    - bt_site
+
+ruchill_router:
+  hostname: 10.94.153.65
+  lbo_number: 214302
+  groups:
+    - routers
+    - bt_site
+
+rumford_router:
+  hostname: 10.93.98.1
+  lbo_number: 337706
+  groups:
+    - routers
+    - bt_site
+
+runnymede_router:
+  hostname: 10.94.153.129
+  lbo_number: 329126
+  groups:
+    - routers
+    - bt_site
+
+rushgreen_router:
+  hostname: 10.94.153.193
+  lbo_number: 033103
+  groups:
+    - routers
+    - bt_site
+
+russell_router:
+  hostname: 10.94.154.1
+  lbo_number: 073806
+  groups:
+    - routers
+    - bt_site
+
+rutherglen_router:
+  hostname: 10.94.154.65
+  lbo_number: 531863
+  groups:
+    - routers
+    - bt_site
+
+sacriston_router:
+  hostname: 10.94.215.65
+  lbo_number: 429129
+  groups:
+    - routers
+    - bt_site
+
+saddlers_router:
+  hostname: 10.93.86.129
+  lbo_number: 366721
+  groups:
+    - routers
+    - bt_site
+
+safari_router:
+  hostname: 10.93.70.65
+  lbo_number: 359980
+  groups:
+    - routers
+    - bt_site
+
+saffron_router:
+  hostname: 10.94.154.129
+  lbo_number: 592769
+  groups:
+    - routers
+    - bt_site
+
+saintedmunds_router:
+  hostname: 10.93.66.225
+  lbo_number: 282138
+  groups:
+    - routers
+    - bt_site
+
+saints_router:
+  hostname: 10.93.136.1
+  lbo_number: 393243
+  groups:
+    - routers
+    - bt_site
+
+sale_router:
+  hostname: 10.94.155.65
+  lbo_number: 564841
+  groups:
+    - routers
+    - bt_site
+
+salisbury_router:
+  hostname: 10.94.155.129
+  lbo_number: 579591
+  groups:
+    - routers
+    - bt_site
+
+saltergate_router:
+  hostname: 10.93.86.161
+  lbo_number: 367465
+  groups:
+    - routers
+    - bt_site
+
+saltley_router:
+  hostname: 10.94.155.193
+  lbo_number: 300845
+  groups:
+    - routers
+    - bt_site
+
+saltwell_router:
+  hostname: 10.93.53.129
+  lbo_number: 351554
+  groups:
+    - routers
+    - bt_site
+
+salvington_router:
+  hostname: 10.93.42.225
+  lbo_number: 317735
+  groups:
+    - routers
+    - bt_site
+
+samman_router:
+  hostname: 10.96.1.97
+  lbo_number: 543597
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-samman
+
+sandstreet_router:
+  hostname: 10.96.7.1
+  lbo_number: 458051
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-sandstreet
+
+sandbach_router:
+  hostname: 10.93.111.65
+  lbo_number: 379981
+  groups:
+    - routers
+    - bt_site
+
+saracen_router:
+  hostname: 10.93.54.161
+  lbo_number: 219452
+  groups:
+    - routers
+    - bt_site
+
+sauchiehall_router:
+  hostname: 10.94.156.129
+  lbo_number: 214507
+  groups:
+    - routers
+    - bt_site
+
+saughtonroad_router:
+  hostname: 10.94.156.161
+  lbo_number: 283614
+  groups:
+    - routers
+    - bt_site
+
+school_router:
+  hostname: 10.94.156.225
+  lbo_number: 539981
+  groups:
+    - routers
+    - bt_site
+
+scotstounhill_router:
+  hostname: 10.94.157.1
+  lbo_number: 287520
+  groups:
+    - routers
+    - bt_site
+
+scottarms_router:
+  hostname: 10.94.157.33
+  lbo_number: 319023
+  groups:
+    - routers
+    - bt_site
+
+scotthall_router:
+  hostname: 10.94.157.65
+  lbo_number: 548236
+  groups:
+    - routers
+    - bt_site
+
+scunthorpe_router:
+  hostname: 10.93.110.65
+  lbo_number: 435093
+  groups:
+    - routers
+    - bt_site
+
+searoad_router:
+  hostname: 10.93.2.97
+  lbo_number: 430464
+  groups:
+    - routers
+    - bt_site
+
+seacombe_router:
+  hostname: 10.93.76.1
+  lbo_number: 361822
+  groups:
+    - routers
+    - bt_site
+
+seafield_router:
+  hostname: 10.93.32.193
+  lbo_number: 312679
+  groups:
+    - routers
+    - bt_site
+
+seagate_router:
+  hostname: 10.94.157.129
+  lbo_number: 539005
+  groups:
+    - routers
+    - bt_site
+
+seahamharbour_router:
+  hostname: 10.93.135.33
+  lbo_number: 432064
+  groups:
+    - routers
+    - bt_site
+
+seawardst_router:
+  hostname: 10.93.115.129
+  lbo_number: 382734
+  groups:
+    - routers
+    - bt_site
+
+seftonroad_router:
+  hostname: 10.94.230.193
+  lbo_number: 445405
+  groups:
+    - routers
+    - bt_site
+
+selby_router:
+  hostname: 10.94.157.225
+  lbo_number: 555073
+  groups:
+    - routers
+    - bt_site
+
+selly_router:
+  hostname: 10.94.158.1
+  lbo_number: 588570
+  groups:
+    - routers
+    - bt_site
+
+sepham_router:
+  hostname: 10.93.31.129
+  lbo_number: 305335
+  groups:
+    - routers
+    - bt_site
+
+sevensistersrd_router:
+  hostname: 10.94.158.65
+  lbo_number: 023108
+  groups:
+    - routers
+    - bt_site
+
+sewall_router:
+  hostname: 10.94.158.97
+  lbo_number: 586473
+  groups:
+    - routers
+    - bt_site
+
+shakespeare_router:
+  hostname: 10.94.158.225
+  lbo_number: 323691
+  groups:
+    - routers
+    - bt_site
+
+shannon_router:
+  hostname: 10.96.5.97
+  lbo_number: 373240
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-shannon
+
+shardlowroad_router:
+  hostname: 10.94.213.193
+  lbo_number: 414017
+  groups:
+    - routers
+    - bt_site
+
+shaw_router:
+  hostname: 10.93.81.1
+  lbo_number: 365052
+  groups:
+    - routers
+    - bt_site
+
+shawbridge_router:
+  hostname: 10.94.159.1
+  lbo_number: 533446
+  groups:
+    - routers
+    - bt_site
+
+shawlands_router:
+  hostname: 10.94.159.33
+  lbo_number: 282456
+  groups:
+    - routers
+    - bt_site
+
+shawsdaleroad_router:
+  hostname: 10.93.33.161
+  lbo_number: 413382
+  groups:
+    - routers
+    - bt_site
+
+shay_router:
+  hostname: 10.94.159.65
+  lbo_number: 328413
+  groups:
+    - routers
+    - bt_site
+
+sheerness_router:
+  hostname: 10.94.159.129
+  lbo_number: 275395
+  groups:
+    - routers
+    - bt_site
+
+sheldon_router:
+  hostname: 10.94.205.1
+  lbo_number: 412952
+  groups:
+    - routers
+    - bt_site
+
+shenfield_router:
+  hostname: 10.94.159.161
+  lbo_number: 347809
+  groups:
+    - routers
+    - bt_site
+
+sherborne_router:
+  hostname: 10.94.159.193
+  lbo_number: 289027
+  groups:
+    - routers
+    - bt_site
+
+sheriffshighway_router:
+  hostname: 10.94.247.193
+  lbo_number: 429405
+  groups:
+    - routers
+    - bt_site
+
+sheringham_router:
+  hostname: 10.93.127.1
+  lbo_number: 387983
+  groups:
+    - routers
+    - bt_site
+
+shettlestonrd_router:
+  hostname: 10.93.102.225
+  lbo_number: 377441
+  groups:
+    - routers
+    - bt_site

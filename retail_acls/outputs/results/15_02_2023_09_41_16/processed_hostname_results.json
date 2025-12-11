@@ -1,0 +1,1 @@
+{"anlaby_router": {"netmiko_send_config": {"result": "passed", "log": "configure terminal\nEnter configuration commands, one per line.  End with CNTL/Z.\nwh-r_anlaby(config)#hostname wh-r_lbo-anlaby\nwh-r_lbo-anlaby(config)#end\nwh-r_lbo-anlaby#", "changed": true}}}

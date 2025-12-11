@@ -1,0 +1,1 @@
+{"anlaby_router": {"netmiko_save_config": {"result": "passed", "log": "write mem\nBuilding configuration...\n\n[OK]\nwh-r_lbo-anlaby#", "changed": true}}}

@@ -1,0 +1,18 @@
+interface GigabitEthernet0/0/1.10
+ip access-group 101 in
+interface GigabitEthernet0/0/1.110
+no ip access-group 102 in
+interface GigabitEthernet0/0/1.120
+no ip access-group 121 in
+interface GigabitEthernet0/0/1.130
+no ip access-group 121 in
+interface GigabitEthernet0/0/1.140
+ip access-group 140 in
+interface GigabitEthernet0/0/1.150
+no ip access-group 102 in
+interface GigabitEthernet0/0/1.160
+no ip access-group 102 in
+interface GigabitEthernet0/0/1.170
+no ip access-group 102 in
+interface GigabitEthernet0/0/1.180
+ip access-group 180 in

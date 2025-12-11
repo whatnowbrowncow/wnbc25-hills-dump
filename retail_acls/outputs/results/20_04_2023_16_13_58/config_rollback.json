@@ -1,0 +1,1 @@
+{"newtoft_router": ["ip access-list extended 122", " remark Allow ICMP"]}
