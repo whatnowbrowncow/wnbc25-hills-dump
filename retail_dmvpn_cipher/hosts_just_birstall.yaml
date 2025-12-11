@@ -1,0 +1,11 @@
+---
+
+wh-r_lbo-birstall_01:
+  hostname: 10.96.129.240
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: uk-brs-lab--cr02

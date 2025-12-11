@@ -1,0 +1,1487 @@
+---
+
+birstall_router:
+  hostname: 10.96.129.240
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lab
+    device_hostname: 10.96.129.240
+
+4gtest_router:
+  hostname: 10.96.129.239
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: poc
+    device_hostname: 10.96.129.239
+
+anlaby_router:
+  hostname: 10.96.129.31
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.31
+
+bathstreet_router:
+  hostname: 10.96.129.38
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.38
+
+boothferry_router:
+  hostname: 10.96.129.17
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.17
+
+burrardstreet_router:
+  hostname: 10.96.129.39
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.39
+
+charingcross(akasandstreet)_router:
+  hostname: 10.96.129.42
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.42
+
+conwaystreet_router:
+  hostname: 10.96.129.51
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.51
+
+fiveoaks(akacrownstores)_router:
+  hostname: 10.96.129.43
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.43
+
+greenwood_router:
+  hostname: 10.96.129.16
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.16
+
+holderness_router:
+  hostname: 10.96.129.21
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.21
+
+hudsons_router:
+  hostname: 10.96.129.13
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.13
+
+marfleet_router:
+  hostname: 10.96.129.34
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.34
+
+mollison_router:
+  hostname: 10.96.129.35
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.35
+
+newstreet_router:
+  hostname: 10.96.129.40
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.40
+
+newlands_router:
+  hostname: 10.96.129.29
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.29
+
+nightjar_router:
+  hostname: 10.96.129.20
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.20
+
+orchard_router:
+  hostname: 10.96.129.36
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.36
+
+paragon_router:
+  hostname: 10.96.129.23
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.23
+
+poonahroad(akahalkettplace)_router:
+  hostname: 10.96.129.41
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.41
+
+redhouses_router:
+  hostname: 10.96.129.45
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.45
+
+samman_router:
+  hostname: 10.96.129.37
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.37
+
+shannonst(usedtobestillorganireland)_router:
+  hostname: 10.96.129.26
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.26
+
+springbank_router:
+  hostname: 10.96.129.18
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.18
+
+staubin_router:
+  hostname: 10.96.129.44
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.44
+
+statue_router:
+  hostname: 10.96.129.12
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.12
+
+sutton_router:
+  hostname: 10.96.129.24
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.24
+
+westhull_router:
+  hostname: 10.96.129.19
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.19
+
+westpark_router:
+  hostname: 10.96.129.27
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.27
+
+aintreealdanitibar_router:
+  hostname: 10.96.129.6
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.6
+
+aintreeirishbar_router:
+  hostname: 10.96.129.7
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.7
+
+aintreeequestriancentre1_router:
+  hostname: 10.96.129.145
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.145
+
+ayrmainstand(unit1)groundfloor_router:
+  hostname: 10.96.129.32
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.32
+
+ayrmainstand(unit2)1stfloor_router:
+  hostname: 10.96.129.33
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.33
+
+beverley_router:
+  hostname: 10.96.129.58
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.58
+
+carlisle_router:
+  hostname: 10.96.129.14
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.14
+
+cartmel1_router:
+  hostname: 10.96.129.22
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.22
+
+catterickbridge_router:
+  hostname: 10.96.129.25
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.25
+
+cheltenhamunit1membersbar_router:
+  hostname: 10.96.129.105
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.105
+
+cheltenhamunit2queenmotherstand_router:
+  hostname: 10.96.129.106
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.106
+
+cheltenhamunit3suncentrecourse_router:
+  hostname: 10.96.129.107
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.107
+
+cheltenhamunit4paddock_router:
+  hostname: 10.96.129.108
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.108
+
+cheltenhamunit5lowerbettinghall_router:
+  hostname: 10.96.129.109
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.109
+
+cheltenhamunit6grandstand_router:
+  hostname: 10.96.129.110
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.110
+
+epsomdownsunit1grandstand_router:
+  hostname: 10.96.129.140
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.140
+
+epsomdownsunit2qestand_router:
+  hostname: 10.96.129.141
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.141
+
+exeter_router:
+  hostname: 10.96.129.28
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.28
+
+goodwoodunit1lennox_router:
+  hostname: 10.96.129.52
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.52
+
+goodwoodunit2_router:
+  hostname: 10.96.129.53
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.53
+
+goodwoodunit3gordons_router:
+  hostname: 10.96.129.54
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.54
+
+hamiltonpark_router:
+  hostname: 10.96.129.30
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.30
+
+haydockmainbettingshop_router:
+  hostname: 10.96.129.55
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.55
+
+haydocksportsbar_router:
+  hostname: 10.96.129.56
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.56
+
+haydockbefriendly_router:
+  hostname: 10.96.129.57
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.57
+
+huntingdon_router:
+  hostname: 10.96.129.59
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.59
+
+kelso_router:
+  hostname: 10.96.129.60
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.60
+
+kemptonparkunit1grandstand_router:
+  hostname: 10.96.129.67
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.67
+
+kemptonparkunit2annex_router:
+  hostname: 10.96.129.68
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.68
+
+#kemptonparkunit3_router:
+#  hostname: 10.96.129.69
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: racecourse
+#    device_hostname: 10.96.129.69
+
+leicester_router:
+  hostname: 10.96.129.100
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.100
+
+marketrasen_router:
+  hostname: 10.96.129.101
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.101
+
+musselburgh_router:
+  hostname: 10.96.129.102
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.102
+
+newburyunit1berkshire_router:
+  hostname: 10.96.129.103
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.103
+
+newburyunit2grandstand_router:
+  hostname: 10.96.129.104
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.104
+
+#newmarketunit1rowleykingcharlesstatue_router:
+#  hostname: 10.96.129.111
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: racecourse
+#    device_hostname: 10.96.129.111
+
+#newmarketunit2rowleygrandstand_router:
+#  hostname: 10.96.129.112
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: racecourse
+#    device_hostname: 10.96.129.112
+
+#newmarketunit3rowleygrandstand_router:
+#  hostname: 10.96.129.113
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: racecourse
+#    device_hostname: 10.96.129.113
+
+newmarketunit4julysharpobar_router:
+  hostname: 10.96.129.114
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.114
+
+newmarketunit5julypaddock_router:
+  hostname: 10.96.129.115
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.115
+
+newmarketunit6julymarwellbar_router:
+  hostname: 10.96.129.116
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.116
+
+#newtonabbotunit1bar_router:
+#  hostname: 10.96.129.117
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: racecourse
+#    device_hostname: 10.96.129.117
+
+newtonabbotunit2_router:
+  hostname: 10.96.129.118
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.118
+
+nottingham_router:
+  hostname: 10.96.129.119
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.119
+
+perth_router:
+  hostname: 10.96.129.120
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.120
+
+plumpton_router:
+  hostname: 10.96.129.121
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.121
+
+plumpton2_router:
+  hostname: 10.96.129.146
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.146
+
+pontefractunit1_router:
+  hostname: 10.96.129.122
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.122
+
+pontefractunit2_router:
+  hostname: 10.96.129.123
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.123
+
+redcar_router:
+  hostname: 10.96.129.124
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.124
+
+ripon1_router:
+  hostname: 10.96.129.48
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.48
+
+ripon2_router:
+  hostname: 10.96.129.49
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.49
+
+ripon4_router:
+  hostname: 10.96.129.50
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.50
+
+salisbury_router:
+  hostname: 10.96.129.125
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.125
+
+sandownparkunit1_router:
+  hostname: 10.96.129.126
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.126
+
+sandownparkunit2_router:
+  hostname: 10.96.129.127
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.127
+
+stratford-on-avonunit1_router:
+  hostname: 10.96.129.128
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.128
+
+stratford-on-avonunit2_router:
+  hostname: 10.96.129.129
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.129
+
+taunton_router:
+  hostname: 10.96.129.130
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.130
+
+thirskunit1(shrimp&stirrup)_router:
+  hostname: 10.96.129.10
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.10
+
+thirskunit2_router:
+  hostname: 10.96.129.11
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.11
+
+warwick_router:
+  hostname: 10.96.129.131
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.131
+
+wetherbyunit1bettingshop_router:
+  hostname: 10.96.129.8
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.8
+
+wincanton_router:
+  hostname: 10.96.129.132
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.132
+
+yorkunit1centrecourse_router:
+  hostname: 10.96.129.133
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.133
+
+yorkunit2ebor_router:
+  hostname: 10.96.129.134
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.134
+
+yorkunit3champagnelawn_router:
+  hostname: 10.96.129.135
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.135
+
+yorkunit4members_router:
+  hostname: 10.96.129.136
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.136
+
+yorkunit5mainhall_router:
+  hostname: 10.96.129.137
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.137
+
+yorkunit6melrose_router:
+  hostname: 10.96.129.138
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.138
+
+yorkunit7theakstonsbar_router:
+  hostname: 10.96.129.139
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.139
+
+yorkunit8voltiguer_router:
+  hostname: 10.96.129.174
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.174
+
+astonvillaparkunit1_router:
+  hostname: 10.96.129.83
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.83
+
+astonvillaparkunit2_router:
+  hostname: 10.96.129.84
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.84
+
+astonvillaparkunit3_router:
+  hostname: 10.96.129.85
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.85
+
+astonvillaparkunit4_router:
+  hostname: 10.96.129.86
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.86
+
+astonvillaparkunit5_router:
+  hostname: 10.96.129.87
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.87
+
+astonvillaparkunit6_router:
+  hostname: 10.96.129.88
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.88
+
+astonvillaparkunit7_router:
+  hostname: 10.96.129.89
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.89
+
+astonvillaparkunit8_router:
+  hostname: 10.96.129.90
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.90
+
+astonvillaparkunit9_router:
+  hostname: 10.96.129.91
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.91
+
+astonvillaparkunit10_router:
+  hostname: 10.96.129.92
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.92
+
+astonvillaparkunit11_router:
+  hostname: 10.96.129.93
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.93
+
+astonvillaparkunit12_router:
+  hostname: 10.96.129.94
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.94
+
+celticparkunit1_router:
+  hostname: 10.96.129.73
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.73
+
+celticparkunit2_router:
+  hostname: 10.96.129.74
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.74
+
+celticparkunit3_router:
+  hostname: 10.96.129.75
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.75
+
+celticparkunit4_router:
+  hostname: 10.96.129.76
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.76
+
+celticparkunit5_router:
+  hostname: 10.96.129.77
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.77
+
+celticparkunit6_router:
+  hostname: 10.96.129.78
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.78
+
+celticparkunit7_router:
+  hostname: 10.96.129.79
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.79
+
+celticparkunit8_router:
+  hostname: 10.96.129.80
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.80
+
+celticparkunit9_router:
+  hostname: 10.96.129.81
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.81
+
+celticparkunit10_router:
+  hostname: 10.96.129.82
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.82
+
+celticparkhospitalitybettingareaunit1_router:
+  hostname: 10.96.129.96
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.96
+
+celticparkhospitalitybettingareaunit2_router:
+  hostname: 10.96.129.97
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.97
+
+celticparkhospitalitybettingareaunit3_router:
+  hostname: 10.96.129.98
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.98
+
+celticparkhospitalitybettingareaunit4_router:
+  hostname: 10.96.129.99
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.99
+
+sheffieldwednesdayunit1_router:
+  hostname: 10.96.129.62
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.62
+
+sheffieldwednesdayunit2_router:
+  hostname: 10.96.129.63
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.63
+
+sheffieldwednesdayunit3_router:
+  hostname: 10.96.129.64
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.64
+
+sheffieldwednesdayunit4_router:
+  hostname: 10.96.129.65
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.65
+
+sheffieldwednesdayunit5_router:
+  hostname: 10.96.129.66
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.66
+
+sheffieldwednesdayunit6_router:
+  hostname: 10.96.129.142
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.142
+
+sheffieldwednesdayunit7_router:
+  hostname: 10.96.129.143
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.143
+
+scientificgames(oldham)_router:
+  hostname: 10.96.129.70
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: third party
+    device_hostname: 10.96.129.70
+

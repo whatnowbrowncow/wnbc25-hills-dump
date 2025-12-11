@@ -1,0 +1,11 @@
+
+ip ssh version 2
+ip ssh dh min size 2048
+
+ip ssh server algorithm mac hmac-sha1
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+
+ip ssh client algorithm mac hmac-sha1
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+
+end

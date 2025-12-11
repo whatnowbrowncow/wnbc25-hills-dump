@@ -1,0 +1,1 @@
+{"4gtest_router": {"tunnel 11 state": "UP", "tunnel 12 state": "IKE", "tunnel 11 nbr": "10.92.26.1", "tunnel 12 nbr": "not found", "tu11state": "[green]\u2713[/green]", "tu12state": "[red]\u2717[/red]", "tu11nbr": "[green]10.92.26.1[/green]", "tu12nbr": "[red]not found[/red]"}}

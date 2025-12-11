@@ -1,0 +1,40 @@
+---
+
+{% for line in file %}
+{% if line[4] != "" %}
+{% if line[1] == "Y" %}
+{{ line[0].lower() | replace(" ","") }}_router:
+  hostname: {{ line[9] }}
+  lbo_number: N/A
+  groups:
+    - {{ 'routers' }}
+    - {{ 'dmvpn_site' }}
+    - spokes
+  data:
+    site_type: {{line[2].lower()}}
+    device_hostname: {{ line[9] }}
+{%  if line[11] == "CISCO1941" %}
+    device_type: CISCO1941/K9
+{%  elif line[11] == "Cisco 4321 ISR" %}
+    device_type: ISR4321/K9
+{%  endif %}
+{% elif line[1] == "N" %}
+#{{ line[0].lower() | replace(" ","") }}_router:
+#  hostname: {{ line[9] }}
+#  lbo_number: N/A
+#  groups:
+#    - {{ 'routers' }}
+#    - {{ 'dmvpn_site' }}
+#    - spokes
+#  data:
+#    site_type: {{line[2].lower()}}
+#    device_hostname: {{ line[9] }}
+{%   if line[11] == "CISCO1941" %}
+#    device_type: CISCO1941/K9
+{%   elif line[11] == "Cisco 4321 ISR" %}
+#    device_type: ISR4321/K9
+{%   endif %}
+{% endif %}
+
+{% endif %}
+{% endfor %}

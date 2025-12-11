@@ -1,0 +1,32 @@
+---
+hubs:
+  platform: ios
+  data:
+    role: hubs
+spokes:
+  platform: ios
+  data:
+    role: spokes
+stadium_concentrator:
+  platform: ios
+
+routers:
+  platform: ios
+  data:
+    role: router
+
+switches:
+  platform: ios
+  data:
+    #role: switches
+
+dmvpn_site:
+  username: dburton
+  password: Daveybdaveyb141
+  data:
+    network_type: dmvpn
+  connection_options:
+    netmiko:
+      extras:
+        secret: Daveybdaveyb141
+        timeout: 15

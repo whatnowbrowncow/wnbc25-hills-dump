@@ -1,0 +1,5 @@
+interface Virtual-Template1
+ip pim sparse-mode
+
+
+end

@@ -1,0 +1,11 @@
+
+crypto isakmp aggressive-mode disable
+
+ip ssh version 2
+ip ssh dh min size 2048
+
+ip ssh server algorithm mac hmac-sha1
+
+ip ssh client algorithm mac hmac-sha1
+
+end

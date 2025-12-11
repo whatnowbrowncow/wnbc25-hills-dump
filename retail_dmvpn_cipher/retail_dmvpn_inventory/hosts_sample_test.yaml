@@ -1,0 +1,133 @@
+---
+
+birstall_router:
+  hostname: 10.96.129.240
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lab
+    device_hostname: 10.96.129.240
+    device_type: ISR4321/K9
+
+birstall_switch:
+  hostname: 10.96.239.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lab
+    device_hostname: 10.96.239.226
+    device_type: WS-C2960X-24PS-L
+
+anlaby_router:
+  hostname: 10.96.129.31
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.31
+    device_type: ISR4321/K9
+
+anlaby_switch:
+  hostname: 10.96.0.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.0.34
+    device_type: WS-C2960X-24PS-L
+
+bathstreet_router:
+  hostname: 10.96.129.38
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.38
+    device_type: ISR4321/K9
+
+bathstreet_switch:
+  hostname: 10.96.6.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.6.194
+    device_type: WS-C2960X-24PS-L
+
+boothferry_router:
+  hostname: 10.96.129.17
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.17
+    device_type: ISR4321/K9
+
+boothferry_switch:
+  hostname: 10.96.5.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.5.194
+    device_type: WS-C2960X-24PS-L
+
+burrardstreet_router:
+  hostname: 10.96.129.39
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.39
+    device_type: ISR4321/K9
+
+burrardstreet_switch:
+  hostname: 10.96.6.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.6.226
+    device_type: WS-C2960X-24PS-L
+
+cardiffcitystadiumunit2_router:
+  hostname: 10.96.129.176
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.176
+    device_type: CISCO1941/K9

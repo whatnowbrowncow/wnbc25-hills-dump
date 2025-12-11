@@ -1,0 +1,82 @@
+---
+
+{% for line in file %}
+{% if line[4] != "" %}
+{% if line[1] == "Y" %}
+{{ line[0].lower() | replace(" ","") }}_router:
+  hostname: {{ line[9] }}
+  lbo_number: N/A
+  groups:
+    - {{ 'routers' }}
+    - {{ 'dmvpn_site' }}
+    - spokes
+{% if line[13] == "N/A Concentrator" %}
+    - stadium_concentrator
+{% endif %}
+  data:
+    site_type: {{line[2].lower()}}
+    device_hostname: {{ line[9] }}
+{%  if line[11] == "CISCO1941" %}
+    device_type: CISCO1941/K9
+{%  elif line[11] == "Cisco 4321 ISR" %}
+    device_type: ISR4321/K9
+{%  endif %}
+{% if "wh-s" in line[13] %}
+
+{{ line[0].lower() | replace(" ","") }}_switch:
+  hostname: {{ line[14] }}
+  lbo_number: N/A
+  groups:
+    - {{ 'switches' }}
+    - {{ 'dmvpn_site' }}
+    - spokes
+  data:
+    site_type: {{line[2].lower()}}
+    device_hostname: {{ line[14] }}
+{%  if line[15] == "WS-C2960X-24PS-L" %}
+    device_type: WS-C2960X-24PS-L
+{%  elif line[15] == "WS-C2960+24LC-L" %}
+    device_type: WS-C2960+24LC-L
+{%  elif line[15] == "WS-C2960-24-S" %}
+    device_type: WS-C2960-24-S
+{%  endif %}
+{%  endif %}
+
+{% elif line[1] == "N" %}
+#{{ line[0].lower() | replace(" ","") }}_router:
+#  hostname: {{ line[9] }}
+#  lbo_number: N/A
+#  groups:
+#    - {{ 'routers' }}
+#    - {{ 'dmvpn_site' }}
+#    - spokes
+#  data:
+#    site_type: {{line[2].lower()}}
+#    device_hostname: {{ line[9] }}
+{%   if line[11] == "CISCO1941" %}
+#    device_type: CISCO1941/K9
+{%   elif line[11] == "Cisco 4321 ISR" %}
+#    device_type: ISR4321/K9
+{%   endif %}
+{% if "wh-s" in line[13] %}
+
+#{{ line[0].lower() | replace(" ","") }}_switch:
+#  hostname: {{ line[14] }}
+#  lbo_number: N/A
+#  groups:
+#    - {{ 'switches' }}
+#    - {{ 'dmvpn_site' }}
+#    - spokes
+#  data:
+#    site_type: {{line[2].lower()}}
+#    device_hostname: {{ line[14] }}
+{%  if line[15] == "WS-C2960X-24PS-L" %}
+#    device_type: CISCO2960
+{%  elif line[15] == "WS-C2960-24-S" %}
+#    device_type: CISCO2960
+{% endif %}
+{% endif %}
+
+{% endif %}
+{% endif %}
+{% endfor %}

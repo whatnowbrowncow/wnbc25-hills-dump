@@ -1,0 +1,3770 @@
+---
+
+birstall_router:
+  hostname: 10.96.129.240
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lab
+    device_hostname: 10.96.129.240
+    device_type: ISR4321/K9
+
+birstall_switch:
+  hostname: 10.96.239.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lab
+    device_hostname: 10.96.239.226
+    device_type: WS-C2960X-24PS-L
+
+anlaby_router:
+  hostname: 10.96.129.31
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.31
+    device_type: ISR4321/K9
+
+anlaby_switch:
+  hostname: 10.96.0.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.0.34
+    device_type: WS-C2960X-24PS-L
+
+bathstreet_router:
+  hostname: 10.96.129.38
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.38
+    device_type: ISR4321/K9
+
+bathstreet_switch:
+  hostname: 10.96.6.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.6.194
+    device_type: WS-C2960X-24PS-L
+
+boothferry_router:
+  hostname: 10.96.129.17
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.17
+    device_type: ISR4321/K9
+
+boothferry_switch:
+  hostname: 10.96.5.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.5.194
+    device_type: WS-C2960X-24PS-L
+
+burrardstreet_router:
+  hostname: 10.96.129.39
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.39
+    device_type: ISR4321/K9
+
+burrardstreet_switch:
+  hostname: 10.96.6.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.6.226
+    device_type: WS-C2960X-24PS-L
+
+charingcross(akasandstreet)_router:
+  hostname: 10.96.129.42
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.42
+    device_type: ISR4321/K9
+
+charingcross(akasandstreet)_switch:
+  hostname: 10.96.7.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.7.2
+    device_type: WS-C2960+24LC-L
+
+conwaystreet_router:
+  hostname: 10.96.129.51
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.51
+    device_type: ISR4321/K9
+
+conwaystreet_switch:
+  hostname: 10.96.7.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.7.34
+    device_type: WS-C2960X-24PS-L
+
+fiveoaks(akacrownstores)_router:
+  hostname: 10.96.129.43
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.43
+    device_type: ISR4321/K9
+
+fiveoaks(akacrownstores)_switch:
+  hostname: 10.96.7.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.7.66
+    device_type: WS-C2960X-24PS-L
+
+greenwood_router:
+  hostname: 10.96.129.16
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.16
+    device_type: ISR4321/K9
+
+greenwood_switch:
+  hostname: 10.96.0.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.0.226
+    device_type: WS-C2960X-24PS-L
+
+holderness_router:
+  hostname: 10.96.129.21
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.21
+    device_type: ISR4321/K9
+
+holderness_switch:
+  hostname: 10.96.1.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.1.226
+    device_type: WS-C2960X-24PS-L
+
+hudsons_router:
+  hostname: 10.96.129.13
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.13
+    device_type: ISR4321/K9
+
+hudsons_switch:
+  hostname: 10.96.0.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.0.130
+    device_type: WS-C2960X-24PS-L
+
+marfleet_router:
+  hostname: 10.96.129.34
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.34
+    device_type: ISR4321/K9
+
+marfleet_switch:
+  hostname: 10.96.6.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.6.66
+    device_type: WS-C2960X-24PS-L
+
+mollison_router:
+  hostname: 10.96.129.35
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.35
+    device_type: ISR4321/K9
+
+mollison_switch:
+  hostname: 10.96.1.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.1.34
+    device_type: WS-C2960X-24PS-L
+
+newstreet_router:
+  hostname: 10.96.129.40
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.40
+    device_type: ISR4321/K9
+
+newstreet_switch:
+  hostname: 10.96.7.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.7.98
+    device_type: WS-C2960X-24PS-L
+
+newlands_router:
+  hostname: 10.96.129.29
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.29
+    device_type: ISR4321/K9
+
+newlands_switch:
+  hostname: 10.96.3.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.3.2
+    device_type: WS-C2960X-24PS-L
+
+nightjar_router:
+  hostname: 10.96.129.20
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.20
+    device_type: ISR4321/K9
+
+nightjar_switch:
+  hostname: 10.96.1.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.1.194
+    device_type: WS-C2960X-24PS-L
+
+orchard_router:
+  hostname: 10.96.129.36
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.36
+    device_type: ISR4321/K9
+
+orchard_switch:
+  hostname: 10.96.1.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.1.66
+    device_type: WS-C2960X-24PS-L
+
+paragon_router:
+  hostname: 10.96.129.23
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.23
+    device_type: ISR4321/K9
+
+paragon_switch:
+  hostname: 10.96.2.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.2.98
+    device_type: WS-C2960X-24PS-L
+
+poonahroad(akahalkettplace)_router:
+  hostname: 10.96.129.41
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.41
+    device_type: ISR4321/K9
+
+poonahroad(akahalkettplace)_switch:
+  hostname: 10.96.7.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.7.130
+    device_type: WS-C2960X-24PS-L
+
+redhouses_router:
+  hostname: 10.96.129.45
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.45
+    device_type: ISR4321/K9
+
+redhouses_switch:
+  hostname: 10.96.7.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.7.194
+    device_type: WS-C2960X-24PS-L
+
+samman_router:
+  hostname: 10.96.129.37
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.37
+    device_type: ISR4321/K9
+
+samman_switch:
+  hostname: 10.96.1.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.1.98
+    device_type: WS-C2960X-24PS-L
+
+shannonst(usedtobestillorganireland)_router:
+  hostname: 10.96.129.26
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.26
+    device_type: ISR4321/K9
+
+shannonst(usedtobestillorganireland)_switch:
+  hostname: 10.96.5.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.5.98
+    device_type: WS-C2960X-24PS-L
+
+springbank_router:
+  hostname: 10.96.129.18
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.18
+    device_type: ISR4321/K9
+
+springbank_switch:
+  hostname: 10.96.1.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.1.130
+    device_type: WS-C2960X-24PS-L
+
+staubin_router:
+  hostname: 10.96.129.44
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.44
+    device_type: ISR4321/K9
+
+staubin_switch:
+  hostname: 10.96.7.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.7.162
+    device_type: WS-C2960X-24PS-L
+
+statue_router:
+  hostname: 10.96.129.12
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.12
+    device_type: ISR4321/K9
+
+statue_switch:
+  hostname: 10.96.0.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.0.98
+    device_type: WS-C2960X-24PS-L
+
+sutton_router:
+  hostname: 10.96.129.24
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.24
+    device_type: ISR4321/K9
+
+sutton_switch:
+  hostname: 10.96.2.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.2.162
+    device_type: WS-C2960X-24PS-L
+
+westhull_router:
+  hostname: 10.96.129.19
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.19
+    device_type: ISR4321/K9
+
+westhull_switch:
+  hostname: 10.96.1.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.1.162
+    device_type: WS-C2960X-24PS-L
+
+westpark_router:
+  hostname: 10.96.129.27
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.129.27
+    device_type: ISR4321/K9
+
+westpark_switch:
+  hostname: 10.96.2.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: lbo
+    device_hostname: 10.96.2.226
+    device_type: WS-C2960X-24PS-L
+
+aintreeunit1aldanitibar_router:
+  hostname: 10.96.129.6
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.6
+    device_type: ISR4321/K9
+
+aintreeunit1aldanitibar_switch:
+  hostname: 10.96.14.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.14.194
+    device_type: WS-C2960X-24PS-L
+
+aintreeunit2irishbar_router:
+  hostname: 10.96.129.7
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.7
+    device_type: ISR4321/K9
+
+aintreeunit2irishbar_switch:
+  hostname: 10.96.14.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.14.226
+    device_type: WS-C2960X-24PS-L
+
+aintreeequestriancentre1(main)_router:
+  hostname: 10.96.129.145
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.145
+    device_type: ISR4321/K9
+
+aintreeequestriancentre1(main)_switch:
+  hostname: 10.96.22.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.22.130
+    device_type: WS-C2960X-24PS-L
+
+ayrmainstand(unit1)groundfloor_router:
+  hostname: 10.96.129.32
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.32
+    device_type: ISR4321/K9
+
+ayrmainstand(unit1)groundfloor_switch:
+  hostname: 10.96.15.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.2
+    device_type: WS-C2960X-24PS-L
+
+ayrmainstand(unit2)1stfloor_router:
+  hostname: 10.96.129.33
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.33
+    device_type: ISR4321/K9
+
+ayrmainstand(unit2)1stfloor_switch:
+  hostname: 10.96.15.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.34
+    device_type: WS-C2960X-24PS-L
+
+bathmainshop_router:
+  hostname: 10.96.129.148
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.148
+    device_type: ISR4321/K9
+
+bathmainshop_switch:
+  hostname: 10.96.23.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.23.162
+    device_type: WS-C2960X-24PS-L
+
+beverley_router:
+  hostname: 10.96.129.58
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.58
+    device_type: ISR4321/K9
+
+beverley_switch:
+  hostname: 10.96.2.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.2.34
+    device_type: WS-C2960X-24PS-L
+
+brightonunit1grandstand_router:
+  hostname: 10.96.129.170
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.170
+    device_type: ISR4321/K9
+
+brightonunit1grandstand_switch:
+  hostname: 10.96.26.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.26.98
+    device_type: WS-C2960X-24PS-L
+
+brightonunit2premier_router:
+  hostname: 10.96.129.171
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.171
+    device_type: ISR4321/K9
+
+brightonunit2premier_switch:
+  hostname: 10.96.26.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.26.130
+    device_type: WS-C2960X-24PS-L
+
+carlisle_router:
+  hostname: 10.96.129.14
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.14
+    device_type: ISR4321/K9
+
+carlisle_switch:
+  hostname: 10.96.15.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.66
+    device_type: WS-C2960X-24PS-L
+
+cartmel1_router:
+  hostname: 10.96.129.22
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.22
+    device_type: ISR4321/K9
+
+cartmel1_switch:
+  hostname: 10.96.15.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.98
+    device_type: WS-C2960X-24PS-L
+
+catterickbridge_router:
+  hostname: 10.96.129.25
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.25
+    device_type: ISR4321/K9
+
+catterickbridge_switch:
+  hostname: 10.96.15.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.130
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit1membersbar_router:
+  hostname: 10.96.129.105
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.105
+    device_type: ISR4321/K9
+
+cheltenhamunit1membersbar_switch:
+  hostname: 10.96.15.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.162
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit2queenmotherstand_router:
+  hostname: 10.96.129.106
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.106
+    device_type: ISR4321/K9
+
+cheltenhamunit2queenmotherstand_switch:
+  hostname: 10.96.15.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.194
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit3suncentrecourse_router:
+  hostname: 10.96.129.107
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.107
+    device_type: ISR4321/K9
+
+cheltenhamunit3suncentrecourse_switch:
+  hostname: 10.96.15.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.15.226
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit4trophyroom_router:
+  hostname: 10.96.129.108
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.108
+    device_type: ISR4321/K9
+
+cheltenhamunit4trophyroom_switch:
+  hostname: 10.96.16.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.2
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit5lowerbettinghall_router:
+  hostname: 10.96.129.109
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.109
+    device_type: ISR4321/K9
+
+cheltenhamunit5lowerbettinghall_switch:
+  hostname: 10.96.16.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.34
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit6grandstand_router:
+  hostname: 10.96.129.110
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.110
+    device_type: ISR4321/K9
+
+cheltenhamunit6grandstand_switch:
+  hostname: 10.96.16.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.66
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit7thevenue_router:
+  hostname: 10.96.129.194
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.194
+    device_type: ISR4321/K9
+
+cheltenhamunit7thevenue_switch:
+  hostname: 10.96.29.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.29.66
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit8bestmate_router:
+  hostname: 10.96.129.155
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.155
+    device_type: ISR4321/K9
+
+cheltenhamunit8bestmate_switch:
+  hostname: 10.96.24.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.24.98
+    device_type: WS-C2960X-24PS-L
+
+cheltenhamunit9guinness_router:
+  hostname: 10.96.129.156
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.156
+    device_type: ISR4321/K9
+
+cheltenhamunit9guinness_switch:
+  hostname: 10.96.24.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.24.130
+    device_type: WS-C2960X-24PS-L
+
+chepstow_router:
+  hostname: 10.96.129.150
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.150
+    device_type: ISR4321/K9
+
+chepstow_switch:
+  hostname: 10.96.23.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.23.226
+    device_type: WS-C2960X-24PS-L
+
+doncasterunit1mainshop_router:
+  hostname: 10.96.129.151
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.151
+    device_type: ISR4321/K9
+
+doncasterunit1mainshop_switch:
+  hostname: 10.96.24.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.24.2
+    device_type: WS-C2960X-24PS-L
+
+doncasterunit2bar_router:
+  hostname: 10.96.129.152
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.152
+    device_type: ISR4321/K9
+
+doncasterunit2bar_switch:
+  hostname: 10.96.24.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.24.34
+    device_type: WS-C2960X-24PS-L
+
+epsomdownsunit1grandstand_router:
+  hostname: 10.96.129.140
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.140
+    device_type: ISR4321/K9
+
+epsomdownsunit1grandstand_switch:
+  hostname: 10.96.16.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.98
+    device_type: WS-C2960X-24PS-L
+
+epsomdownsunit2qestand_router:
+  hostname: 10.96.129.141
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.141
+    device_type: ISR4321/K9
+
+epsomdownsunit2qestand_switch:
+  hostname: 10.96.16.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.130
+    device_type: WS-C2960X-24PS-L
+
+exeter_router:
+  hostname: 10.96.129.28
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.28
+    device_type: ISR4321/K9
+
+exeter_switch:
+  hostname: 10.96.16.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.162
+    device_type: WS-C2960X-24PS-L
+
+ffoslas_router:
+  hostname: 10.96.129.157
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.157
+    device_type: ISR4321/K9
+
+ffoslas_switch:
+  hostname: 10.96.24.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.24.194
+    device_type: WS-C2960X-24PS-L
+
+fontwellparkunit1paradering_router:
+  hostname: 10.96.129.158
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.158
+    device_type: ISR4321/K9
+
+fontwellparkunit1paradering_switch:
+  hostname: 10.96.24.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.24.226
+    device_type: WS-C2960X-24PS-L
+
+fontwellparkunit2premier_router:
+  hostname: 10.96.129.159
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.159
+    device_type: ISR4321/K9
+
+fontwellparkunit2premier_switch:
+  hostname: 10.96.25.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.25.2
+    device_type: WS-C2960X-24PS-L
+
+goodwoodunit1lennox_router:
+  hostname: 10.96.129.52
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.52
+    device_type: ISR4321/K9
+
+goodwoodunit1lennox_switch:
+  hostname: 10.96.8.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.8.66
+    device_type: WS-C2960X-24PS-L
+
+goodwoodunit2_router:
+  hostname: 10.96.129.53
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.53
+    device_type: ISR4321/K9
+
+goodwoodunit2_switch:
+  hostname: 10.96.8.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.8.98
+    device_type: WS-C2960X-24PS-L
+
+goodwoodunit3gordons_router:
+  hostname: 10.96.129.54
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.54
+    device_type: ISR4321/K9
+
+goodwoodunit3gordons_switch:
+  hostname: 10.96.8.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.8.130
+    device_type: WS-C2960X-24PS-L
+
+hamiltonpark_router:
+  hostname: 10.96.129.30
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.30
+    device_type: ISR4321/K9
+
+hamiltonpark_switch:
+  hostname: 10.96.16.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.194
+    device_type: WS-C2960X-24PS-L
+
+haydockunit1mainbettingshop_router:
+  hostname: 10.96.129.55
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.55
+    device_type: ISR4321/K9
+
+haydockunit1mainbettingshop_switch:
+  hostname: 10.96.16.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.16.226
+    device_type: WS-C2960X-24PS-L
+
+haydockunit2sportsbar_router:
+  hostname: 10.96.129.56
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.56
+    device_type: ISR4321/K9
+
+haydockunit2sportsbar_switch:
+  hostname: 10.96.17.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.2
+    device_type: WS-C2960X-24PS-L
+
+haydockunit3befriendly_router:
+  hostname: 10.96.129.57
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.57
+    device_type: ISR4321/K9
+
+haydockunit3befriendly_switch:
+  hostname: 10.96.17.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.34
+    device_type: WS-C2960X-24PS-L
+
+hereford_router:
+  hostname: 10.96.129.160
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.160
+    device_type: ISR4321/K9
+
+hereford_switch:
+  hostname: 10.96.25.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.25.34
+    device_type: WS-C2960X-24PS-L
+
+hexham_router:
+  hostname: 10.96.129.153
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.153
+    device_type: ISR4321/K9
+
+hexham_switch:
+  hostname: 10.96.24.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.24.162
+    device_type: WS-C2960X-24PS-L
+
+huntingdon_router:
+  hostname: 10.96.129.59
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.59
+    device_type: ISR4321/K9
+
+huntingdon_switch:
+  hostname: 10.96.17.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.66
+    device_type: WS-C2960X-24PS-L
+
+kelso_router:
+  hostname: 10.96.129.60
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.60
+    device_type: ISR4321/K9
+
+kelso_switch:
+  hostname: 10.96.17.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.98
+    device_type: WS-C2960X-24PS-L
+
+kemptonparkunit1grandstand_router:
+  hostname: 10.96.129.67
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.67
+    device_type: ISR4321/K9
+
+kemptonparkunit1grandstand_switch:
+  hostname: 10.96.17.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.130
+    device_type: WS-C2960X-24PS-L
+
+kemptonparkunit2annex_router:
+  hostname: 10.96.129.68
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.68
+    device_type: ISR4321/K9
+
+kemptonparkunit2annex_switch:
+  hostname: 10.96.17.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.162
+    device_type: WS-C2960X-24PS-L
+
+kemptonparkunit3_router:
+  hostname: 10.96.129.69
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.69
+    device_type: ISR4321/K9
+
+kemptonparkunit3_switch:
+  hostname: 10.96.17.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.194
+    device_type: WS-C2960X-24PS-L
+
+leicester_router:
+  hostname: 10.96.129.100
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.100
+    device_type: ISR4321/K9
+
+leicester_switch:
+  hostname: 10.96.17.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.17.226
+    device_type: WS-C2960X-24PS-L
+
+lingfield_router:
+  hostname: 10.96.129.161
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.161
+    device_type: ISR4321/K9
+
+lingfield_switch:
+  hostname: 10.96.25.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.25.66
+    device_type: WS-C2960X-24PS-L
+
+marketrasen_router:
+  hostname: 10.96.129.101
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.101
+    device_type: ISR4321/K9
+
+marketrasen_switch:
+  hostname: 10.96.18.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.2
+    device_type: WS-C2960X-24PS-L
+
+musselburgh_router:
+  hostname: 10.96.129.102
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.102
+    device_type: ISR4321/K9
+
+musselburgh_switch:
+  hostname: 10.96.18.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.34
+    device_type: WS-C2960X-24PS-L
+
+newburyunit1berkshire_router:
+  hostname: 10.96.129.103
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.103
+    device_type: ISR4321/K9
+
+newburyunit1berkshire_switch:
+  hostname: 10.96.18.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.66
+    device_type: WS-C2960X-24PS-L
+
+newburyunit2grandstand_router:
+  hostname: 10.96.129.104
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.104
+    device_type: ISR4321/K9
+
+newburyunit2grandstand_switch:
+  hostname: 10.96.18.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.98
+    device_type: WS-C2960X-24PS-L
+
+newcastleunit1grandstand_router:
+  hostname: 10.96.129.163
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.163
+    device_type: ISR4321/K9
+
+newcastleunit1grandstand_switch:
+  hostname: 10.96.25.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.25.130
+    device_type: WS-C2960X-24PS-L
+
+newcastleunit2members_router:
+  hostname: 10.96.129.164
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.164
+    device_type: ISR4321/K9
+
+newcastleunit2members_switch:
+  hostname: 10.96.25.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.25.162
+    device_type: WS-C2960X-24PS-L
+
+newmarketunit1rowleykingcharlesstatue_router:
+  hostname: 10.96.129.111
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.111
+    device_type: ISR4321/K9
+
+newmarketunit1rowleykingcharlesstatue_switch:
+  hostname: 10.96.18.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.130
+    device_type: WS-C2960X-24PS-L
+
+newmarketunit2rowleygrandstand_router:
+  hostname: 10.96.129.112
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.112
+    device_type: ISR4321/K9
+
+newmarketunit2rowleygrandstand_switch:
+  hostname: 10.96.18.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.162
+    device_type: WS-C2960X-24PS-L
+
+newmarketunit3rowleygrandstand_router:
+  hostname: 10.96.129.113
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.113
+    device_type: ISR4321/K9
+
+newmarketunit3rowleygrandstand_switch:
+  hostname: 10.96.18.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.194
+    device_type: WS-C2960X-24PS-L
+
+newmarketunit4julysharpobar_router:
+  hostname: 10.96.129.114
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.114
+    device_type: ISR4321/K9
+
+newmarketunit4julysharpobar_switch:
+  hostname: 10.96.18.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.18.226
+    device_type: WS-C2960X-24PS-L
+
+newmarketunit5julypaddock_router:
+  hostname: 10.96.129.115
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.115
+    device_type: ISR4321/K9
+
+newmarketunit5julypaddock_switch:
+  hostname: 10.96.19.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.2
+    device_type: WS-C2960X-24PS-L
+
+newmarketunit6julymarwellbar_router:
+  hostname: 10.96.129.116
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.116
+    device_type: ISR4321/K9
+
+newmarketunit6julymarwellbar_switch:
+  hostname: 10.96.19.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.34
+    device_type: WS-C2960X-24PS-L
+
+newtonabbotunit1bar_router:
+  hostname: 10.96.129.117
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.117
+    device_type: ISR4321/K9
+
+newtonabbotunit1bar_switch:
+  hostname: 10.96.19.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.66
+    device_type: WS-C2960X-24PS-L
+
+newtonabbotunit2_router:
+  hostname: 10.96.129.118
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.118
+    device_type: ISR4321/K9
+
+newtonabbotunit2_switch:
+  hostname: 10.96.19.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.98
+    device_type: WS-C2960X-24PS-L
+
+nottingham_router:
+  hostname: 10.96.129.119
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.119
+    device_type: ISR4321/K9
+
+nottingham_switch:
+  hostname: 10.96.19.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.130
+    device_type: WS-C2960X-24PS-L
+
+perth_router:
+  hostname: 10.96.129.120
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.120
+    device_type: ISR4321/K9
+
+perth_switch:
+  hostname: 10.96.19.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.162
+    device_type: WS-C2960X-24PS-L
+
+plumpton_router:
+  hostname: 10.96.129.121
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.121
+    device_type: ISR4321/K9
+
+plumpton_switch:
+  hostname: 10.96.19.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.194
+    device_type: WS-C2960X-24PS-L
+
+plumpton2_router:
+  hostname: 10.96.129.146
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.146
+    device_type: ISR4321/K9
+
+plumpton2_switch:
+  hostname: 10.96.23.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.23.2
+    device_type: WS-C2960X-24PS-L
+
+pontefractunit1_router:
+  hostname: 10.96.129.122
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.122
+    device_type: ISR4321/K9
+
+pontefractunit1_switch:
+  hostname: 10.96.19.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.19.226
+    device_type: WS-C2960X-24PS-L
+
+pontefractunit2_router:
+  hostname: 10.96.129.123
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.123
+    device_type: ISR4321/K9
+
+pontefractunit2_switch:
+  hostname: 10.96.20.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.2
+    device_type: WS-C2960X-24PS-L
+
+redcar_router:
+  hostname: 10.96.129.124
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.124
+    device_type: ISR4321/K9
+
+redcar_switch:
+  hostname: 10.96.20.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.34
+    device_type: WS-C2960X-24PS-L
+
+riponunit1_router:
+  hostname: 10.96.129.48
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.48
+    device_type: ISR4321/K9
+
+riponunit1_switch:
+  hostname: 10.96.7.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.7.226
+    device_type: WS-C2960X-24PS-L
+
+riponunit2_router:
+  hostname: 10.96.129.49
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.49
+    device_type: ISR4321/K9
+
+riponunit2_switch:
+  hostname: 10.96.8.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.8.2
+    device_type: WS-C2960X-24PS-L
+
+riponunit4_router:
+  hostname: 10.96.129.50
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.50
+    device_type: ISR4321/K9
+
+riponunit4_switch:
+  hostname: 10.96.8.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.8.34
+    device_type: WS-C2960X-24PS-L
+
+salisbury_router:
+  hostname: 10.96.129.125
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.125
+    device_type: ISR4321/K9
+
+salisbury_switch:
+  hostname: 10.96.20.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.66
+    device_type: WS-C2960X-24PS-L
+
+sandownparkunit1_router:
+  hostname: 10.96.129.126
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.126
+    device_type: ISR4321/K9
+
+sandownparkunit1_switch:
+  hostname: 10.96.20.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.98
+    device_type: WS-C2960X-24PS-L
+
+sandownparkunit2_router:
+  hostname: 10.96.129.127
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.127
+    device_type: ISR4321/K9
+
+sandownparkunit2_switch:
+  hostname: 10.96.20.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.130
+    device_type: WS-C2960X-24PS-L
+
+sedgefield_router:
+  hostname: 10.96.129.166
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.166
+    device_type: ISR4321/K9
+
+sedgefield_switch:
+  hostname: 10.96.25.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.25.226
+    device_type: WS-C2960X-24PS-L
+
+southwell_router:
+  hostname: 10.96.129.167
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.167
+    device_type: ISR4321/K9
+
+southwell_switch:
+  hostname: 10.96.26.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.26.2
+    device_type: WS-C2960X-24PS-L
+
+stratford-on-avonunit1_router:
+  hostname: 10.96.129.128
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.128
+    device_type: ISR4321/K9
+
+stratford-on-avonunit1_switch:
+  hostname: 10.96.20.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.162
+    device_type: WS-C2960X-24PS-L
+
+stratford-on-avonunit2_router:
+  hostname: 10.96.129.129
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.129
+    device_type: ISR4321/K9
+
+stratford-on-avonunit2_switch:
+  hostname: 10.96.20.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.194
+    device_type: WS-C2960X-24PS-L
+
+taunton_router:
+  hostname: 10.96.129.130
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.130
+    device_type: ISR4321/K9
+
+taunton_switch:
+  hostname: 10.96.20.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.20.226
+    device_type: WS-C2960X-24PS-L
+
+thirskunit1shrimp&stirrup_router:
+  hostname: 10.96.129.10
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.10
+    device_type: ISR4321/K9
+
+thirskunit1shrimp&stirrup_switch:
+  hostname:  10.96.8.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname:  10.96.8.226
+    device_type: WS-C2960X-24PS-L
+
+thirskunit2_router:
+  hostname: 10.96.129.11
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.11
+    device_type: ISR4321/K9
+
+thirskunit2_switch:
+  hostname:  10.96.9.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname:  10.96.9.2
+    device_type: WS-C2960X-24PS-L
+
+uttoxeterunit1paddock_router:
+  hostname: 10.96.129.168
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.168
+    device_type: ISR4321/K9
+
+uttoxeterunit1paddock_switch:
+  hostname: 10.96.26.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.26.34
+    device_type: WS-C2960X-24PS-L
+
+uttoxeterunit2premier_router:
+  hostname: 10.96.129.169
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.169
+    device_type: ISR4321/K9
+
+uttoxeterunit2premier_switch:
+  hostname: 10.96.26.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.26.66
+    device_type: WS-C2960X-24PS-L
+
+warwick_router:
+  hostname: 10.96.129.131
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.131
+    device_type: ISR4321/K9
+
+warwick_switch:
+  hostname: 10.96.21.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.21.2
+    device_type: WS-C2960X-24PS-L
+
+wetherbyunit1bettingshop_router:
+  hostname: 10.96.129.8
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.8
+    device_type: ISR4321/K9
+
+wetherbyunit1bettingshop_switch:
+  hostname:  10.96.8.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname:  10.96.8.162
+    device_type: WS-C2960X-24PS-L
+
+wetherbyunit2_router:
+  hostname: 10.96.129.9
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.9
+    device_type: ISR4321/K9
+
+wetherbyunit2_switch:
+  hostname:  10.96.8.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname:  10.96.8.194
+    device_type: WS-C2960X-24PS-L
+
+wincanton_router:
+  hostname: 10.96.129.132
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.132
+    device_type: ISR4321/K9
+
+wincanton_switch:
+  hostname: 10.96.21.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.21.34
+    device_type: WS-C2960X-24PS-L
+
+windsor_router:
+  hostname: 10.96.129.149
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.149
+    device_type: ISR4321/K9
+
+windsor_switch:
+  hostname: 10.96.23.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.23.194
+    device_type: WS-C2960X-24PS-L
+
+wolverhamptonunit1groundfloor_router:
+  hostname: 10.96.129.200
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.200
+    device_type: ISR4321/K9
+
+wolverhamptonunit1groundfloor_switch:
+  hostname: 10.96.29.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.29.130
+    device_type: WS-C2960X-24PS-L
+
+wolverhamptonunit3horizons_router:
+  hostname: 10.96.129.202
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.202
+    device_type: ISR4321/K9
+
+wolverhamptonunit3horizons_switch:
+  hostname: 10.96.29.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.29.194
+    device_type: WS-C2960X-24PS-L
+
+worcester_router:
+  hostname: 10.96.129.173
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.173
+    device_type: ISR4321/K9
+
+worcester_switch:
+  hostname: 10.96.26.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.26.194
+    device_type: WS-C2960X-24PS-L
+
+yarmouth_router:
+  hostname: 10.96.129.162
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.162
+    device_type: ISR4321/K9
+
+yarmouth_switch:
+  hostname: 10.96.26.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.26.162
+    device_type: WS-C2960X-24PS-L
+
+yorkunit1centrecourse_router:
+  hostname: 10.96.129.133
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.133
+    device_type: ISR4321/K9
+
+yorkunit1centrecourse_switch:
+  hostname: 10.96.21.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.21.66
+    device_type: WS-C2960X-24PS-L
+
+yorkunit2ebor_router:
+  hostname: 10.96.129.134
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.134
+    device_type: ISR4321/K9
+
+yorkunit2ebor_switch:
+  hostname: 10.96.21.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.21.98
+    device_type: WS-C2960X-24PS-L
+
+yorkunit3champagnelawn_router:
+  hostname: 10.96.129.135
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.135
+    device_type: ISR4321/K9
+
+yorkunit3champagnelawn_switch:
+  hostname: 10.96.21.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.21.130
+    device_type: WS-C2960X-24PS-L
+
+yorkunit4members_router:
+  hostname: 10.96.129.136
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.136
+    device_type: ISR4321/K9
+
+yorkunit4members_switch:
+  hostname: 10.96.21.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.21.162
+    device_type: WS-C2960X-24PS-L
+
+yorkunit5mainhall_router:
+  hostname: 10.96.129.137
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.137
+    device_type: ISR4321/K9
+
+yorkunit5mainhall_switch:
+  hostname: 10.96.23.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.23.66
+    device_type: WS-C2960X-24PS-L
+
+yorkunit6melrose_router:
+  hostname: 10.96.129.138
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.138
+    device_type: ISR4321/K9
+
+yorkunit6melrose_switch:
+  hostname: 10.96.21.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.21.226
+    device_type: WS-C2960X-24PS-L
+
+yorkunit7theakstonsbar_router:
+  hostname: 10.96.129.139
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.139
+    device_type: ISR4321/K9
+
+yorkunit7theakstonsbar_switch:
+  hostname: 10.96.22.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.22.2
+    device_type: WS-C2960X-24PS-L
+
+yorkunit8voltiguer_router:
+  hostname: 10.96.129.174
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.174
+    device_type: ISR4321/K9
+
+yorkunit8voltiguer_switch:
+  hostname: 10.96.23.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.23.130
+    device_type: WS-C2960X-24PS-L
+
+yorkunit9roberto_router:
+  hostname: 10.96.129.199
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.129.199
+    device_type: ISR4321/K9
+
+yorkunit9roberto_switch:
+  hostname: 10.96.29.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: racecourse
+    device_hostname: 10.96.29.98
+    device_type: WS-C2960X-24PS-L
+
+cardiffcityconcentrator1_router:
+  hostname: 10.96.129.197
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.197
+    device_type: ISR4321/K9
+
+cardiffcityconcentrator2_router:
+  hostname: 10.96.129.198
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.198
+    device_type: ISR4321/K9
+
+cardiffcitystadiumunit1_router:
+  hostname: 10.96.129.175
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.175
+    device_type: CISCO1941/K9
+
+cardiffcitystadiumunit1_switch:
+  hostname: 10.96.26.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.26.226
+    device_type: WS-C2960X-24PS-L
+
+cardiffcitystadiumunit2_router:
+  hostname: 10.96.129.176
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.176
+    device_type: CISCO1941/K9
+
+cardiffcitystadiumunit2_switch:
+  hostname: 10.96.27.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.27.2
+    device_type: WS-C2960X-24PS-L
+
+cardiffcitystadiumunit3_router:
+  hostname: 10.96.129.177
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.177
+    device_type: CISCO1941/K9
+
+cardiffcitystadiumunit3_switch:
+  hostname: 10.96.27.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.27.34
+    device_type: WS-C2960X-24PS-L
+
+cardiffcitystadiumunit4_router:
+  hostname: 10.96.129.178
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.178
+    device_type: CISCO1941/K9
+
+cardiffcitystadiumunit4_switch:
+  hostname: 10.96.27.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.27.66
+    device_type: WS-C2960X-24PS-L
+
+cardiffcitystadiumunit5_router:
+  hostname: 10.96.129.179
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.179
+    device_type: CISCO1941/K9
+
+cardiffcitystadiumunit5_switch:
+  hostname: 10.96.27.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.27.98
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit1_router:
+  hostname: 10.96.129.73
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.73
+    device_type: ISR4321/K9
+
+celticparkunit1_switch:
+  hostname: 10.96.10.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.10.194
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit2_router:
+  hostname: 10.96.129.74
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.74
+    device_type: ISR4321/K9
+
+celticparkunit2_switch:
+  hostname: 10.96.10.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.10.226
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit3_router:
+  hostname: 10.96.129.75
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.75
+    device_type: CISCO1941/K9
+
+celticparkunit3_switch:
+  hostname:  10.96.11.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.11.2
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit4_router:
+  hostname: 10.96.129.76
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.76
+    device_type: CISCO1941/K9
+
+celticparkunit4_switch:
+  hostname: 10.96.11.34
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.11.34
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit5_router:
+  hostname: 10.96.129.77
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.77
+    device_type: CISCO1941/K9
+
+celticparkunit5_switch:
+  hostname:  10.96.11.66
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.11.66
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit6_router:
+  hostname: 10.96.129.78
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.78
+    device_type: CISCO1941/K9
+
+celticparkunit6_switch:
+  hostname: 10.96.11.98
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.11.98
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit7_router:
+  hostname: 10.96.129.79
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.79
+    device_type: CISCO1941/K9
+
+celticparkunit7_switch:
+  hostname:  10.96.11.130
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.11.130
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit8_router:
+  hostname: 10.96.129.80
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.80
+    device_type: ISR4321/K9
+
+celticparkunit8_switch:
+  hostname: 10.96.11.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.11.162
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit9_router:
+  hostname: 10.96.129.81
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.81
+    device_type: ISR4321/K9
+
+celticparkunit9_switch:
+  hostname:  10.96.11.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.11.194
+    device_type: WS-C2960X-24PS-L
+
+celticparkunit10_router:
+  hostname: 10.96.129.82
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.82
+    device_type: CISCO1941/K9
+
+celticparkunit10_switch:
+  hostname: 10.96.11.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.11.226
+    device_type: WS-C2960X-24PS-L
+
+celticparkhospitalitybettingareaunit1_router:
+  hostname: 10.96.129.96
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.96
+    device_type: CISCO1941/K9
+
+celticparkhospitalitybettingareaunit1_switch:
+  hostname:  10.96.13.162
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.13.162
+    device_type: WS-C2960X-24PS-L
+
+celticparkhospitalitybettingareaunit2_router:
+  hostname: 10.96.129.97
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.97
+    device_type: CISCO1941/K9
+
+celticparkhospitalitybettingareaunit2_switch:
+  hostname:  10.96.13.194
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.13.194
+    device_type: WS-C2960X-24PS-L
+
+celticparkhospitalitybettingareaunit3_router:
+  hostname: 10.96.129.98
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.98
+    device_type: CISCO1941/K9
+
+celticparkhospitalitybettingareaunit3_switch:
+  hostname:  10.96.13.226
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.13.226
+    device_type: WS-C2960X-24PS-L
+
+celticparkhospitalitybettingareaunit4_router:
+  hostname: 10.96.129.99
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname: 10.96.129.99
+    device_type: CISCO1941/K9
+
+celticparkhospitalitybettingareaunit4_switch:
+  hostname:  10.96.14.2
+  lbo_number: N/A
+  groups:
+    - switches
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: stadium
+    device_hostname:  10.96.14.2
+    device_type: WS-C2960X-24PS-L
+
+lightandwonder(oldham)(wasscientificgames)_router:
+  hostname: 10.96.129.70
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: third party
+    device_hostname: 10.96.129.70
+    device_type: ISR4321/K9
+
+4gtestconnection1_router:
+  hostname: 10.99.129.11
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: 4g
+    device_hostname: 10.99.129.11
+    device_type: CISCO1941/K9
+
+4gtestconnection2_router:
+  hostname: 10.99.129.12
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: 4g
+    device_hostname: 10.99.129.12
+    device_type: CISCO1941/K9
+
+4gtestconnection3_router:
+  hostname: 10.99.129.13
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: 4g
+    device_hostname: 10.99.129.13
+    device_type: CISCO1941/K9
+
+4gtestconnection4_router:
+  hostname: 10.99.129.14
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: 4g
+    device_hostname: 10.99.129.14
+    device_type: CISCO1941/K9
+
+4gtestconnection5_router:
+  hostname: 10.99.129.15
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: 4g
+    device_hostname: 10.99.129.15
+    device_type: CISCO1941/K9
+
+4gtestconnection6_router:
+  hostname: 10.99.129.16
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: 4g
+    device_hostname: 10.99.129.16
+    device_type: CISCO1941/K9
+
+4gtestconnection7_router:
+  hostname: 10.99.129.17
+  lbo_number: N/A
+  groups:
+    - routers
+    - dmvpn_site
+    - spokes
+  data:
+    site_type: 4g
+    device_hostname: 10.99.129.17
+    device_type: CISCO1941/K9
+
+#starlinkunit1(wasaintreeunit5)_router:
+#  hostname: 10.96.129.172
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.129.172
+#    device_type: ISR4321/K9
+
+#starlinkunit1(wasaintreeunit5)_switch:
+#  hostname: 10.96.24.66
+#  lbo_number: N/A
+#  groups:
+#    - switches
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.24.66
+#    device_type: CISCO2960
+
+#starlinkunit2(wasaintreewesttip)_router:
+#  hostname: 10.96.129.165
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.129.165
+#    device_type: ISR4321/K9
+
+#starlinkunit2(wasaintreewesttip)_switch:
+#  hostname: 10.96.25.194
+#  lbo_number: N/A
+#  groups:
+#    - switches
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.25.194
+#    device_type: CISCO2960
+
+#starlinkunit4_router:
+#  hostname: 10.96.129.184
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.129.184
+#    device_type: ISR4321/K9
+
+#starlinkunit4_switch:
+#  hostname: 10.96.28.98
+#  lbo_number: N/A
+#  groups:
+#    - switches
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.28.98
+#    device_type: CISCO2960
+
+#starlinkunit5_router:
+#  hostname: 10.96.129.185
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.129.185
+#    device_type: ISR4321/K9
+
+#starlinkunit5_switch:
+#  hostname: 10.96.28.130
+#  lbo_number: N/A
+#  groups:
+#    - switches
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.28.130
+#    device_type: CISCO2960
+
+#starlinkunit6_router:
+#  hostname: 10.96.129.186
+#  lbo_number: N/A
+#  groups:
+#    - routers
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.129.186
+#    device_type: ISR4321/K9
+
+#starlinkunit6_switch:
+#  hostname: 10.96.28.162
+#  lbo_number: N/A
+#  groups:
+#    - switches
+#    - dmvpn_site
+#    - spokes
+#  data:
+#    site_type: sl
+#    device_hostname: 10.96.28.162
+#    device_type: CISCO2960
+
