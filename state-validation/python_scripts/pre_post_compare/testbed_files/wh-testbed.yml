@@ -1,0 +1,1989 @@
+testbed:
+  name: wh-devices
+  credentials:
+      default:
+          username: svcnetworkauto
+          password: "%ENC{gAAAAABgbX_U6EJqIX23BCR57nLBrcCvFKMAFQvzTq8Q8SnlnsltBw2azQ_rUCI5F77Np_mw9IVH9QK2aeLBbNtSza28arRHbg==}"
+      enable:
+          password: "%ENC{gAAAAABgbX_U6EJqIX23BCR57nLBrcCvFKMAFQvzTq8Q8SnlnsltBw2azQ_rUCI5F77Np_mw9IVH9QK2aeLBbNtSza28arRHbg==}"
+
+devices:
+
+  uk-sc1-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.1
+        port: 22
+
+  uk-sc1-cs01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.1
+        port: 22
+
+  uk-sc1-cs02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.2
+        port: 22
+
+  uk-wak-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.51
+        port: 22
+
+  uk-brs-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.23
+        port: 22
+        settings:
+          EXEC_TIMEOUT: 240
+
+
+  uk-brs-cr02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.24
+        port: 22
+
+devices:
+  bg-dat-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.54.99.4
+        port: 22
+
+  bg-sof-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.34
+        port: 22
+
+  bg-sof-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.35
+        port: 22
+
+  bg-sof-as01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.53.99.2
+        port: 22
+
+  bg-sof-as02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.53.99.3
+        port: 22
+
+  bg-sof-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.53.99.1
+        port: 22
+
+  bg-sof-es01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.53.113.3
+        port: 22
+
+  bg-sof-es02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.53.113.4
+        port: 22
+
+  de-fr7-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.66
+        port: 22
+
+  gib-vcore1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.1
+        port: 22
+
+  gib-wp3-vacc1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.195
+        port: 22
+
+  gib-wp5-vacc1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.197
+        port: 22
+
+  gib-wp5-vacc2:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.198
+        port: 22
+
+  gib-wp6-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.206
+        port: 22
+
+  gib-wp6-vacc1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.193
+        port: 22
+
+  gib-wp6-vacc2:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.199
+        port: 22
+
+  gib-wpg-vacc1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.194
+        port: 22
+
+  gib-wpg-vacc2:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.196
+        port: 22
+
+  gi-mpl-es01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.159.4
+        port: 22
+
+  gi-mpl-es02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.159.5
+        port: 22
+
+  it-ml2-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.67
+        port: 22
+
+  it-rom-ar01-sogei:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.28
+        port: 22
+
+  it-rom-ar02-sogei:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.29
+        port: 22
+
+  lsj_f2c1_sw1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.9
+        port: 22
+
+  lsj_f2c1_sw2:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.19
+        port: 22
+
+  lsj_f3al_pod:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.31
+        port: 22
+
+  lsj_f3al_retail:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.32
+        port: 22
+
+  lsj_f3al_sw1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.30
+        port: 22
+
+  lsj_f3c1_sw1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.10
+        port: 22
+
+  lsj_f3c1_sw2:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.74
+        port: 22
+
+  lsj_f4al_sw1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.36
+        port: 22
+
+  uk-stj-as01-f04:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.26
+        port: 22
+
+  lsj_f5c1_sw1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.24
+        port: 22
+
+  lsj_f6al_sw1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.20
+        port: 22
+
+  mt-msc-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.64
+        port: 22
+
+  mt-msc-cr02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.65
+        port: 22
+
+  mlt-slm-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.68
+        port: 22
+
+  mlt-slm-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.69
+        port: 22
+
+  ph-mak-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.53
+        port: 22
+
+  ph-mak-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.142.2
+        port: 22
+
+  ph-mak-cs02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.142.3
+        port: 22
+
+  ph-mnl-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.48
+        port: 22
+
+  ph-mnl-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.49
+        port: 22
+
+  ph-mnl-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.14.1
+        port: 22
+
+  ph-mnl-vacc01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.14.11
+        port: 22
+
+  ph-mnl-vacc02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.14.12
+        port: 22
+
+  ph-mnl-vacc03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.14.13
+        port: 22
+
+  ph-vit-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.54
+        port: 22
+
+  ph-vit-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.55
+        port: 22
+
+  ph-vit-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.206.2
+        port: 22
+
+  ph-vit-cs02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.123.206.3
+        port: 22
+
+  pl-krk-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.22
+        port: 22
+
+  pl-krk-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.23
+        port: 22
+
+  pl-krk-as01-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.3
+        port: 22
+
+  pl-krk-as01-f03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.5
+        port: 22
+
+  pl-krk-as01-f05:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.7
+        port: 22
+
+  pl-krk-as02-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.4
+        port: 22
+
+  pl-krk-as02-f03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.6
+        port: 22
+
+  pl-krk-as03-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.10
+        port: 22
+
+  pl-krk-as03-f03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.14
+        port: 22
+
+  pl-krk-as04-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.13
+        port: 22
+
+  pl-krk-as04-f03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.15
+        port: 22
+
+  pl-krk-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.1
+        port: 22
+
+  pl-krk-vacc01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.8
+        port: 22
+
+  pl-krk-vacc02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.55.99.9
+        port: 22
+
+  uk-bfa-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.62
+        port: 22
+
+  uk-bfa-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.63
+        port: 22
+
+  uk-bfa-as01-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.56.99.2
+        port: 22
+
+  uk-bfa-as01-f02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.56.99.5
+        port: 22
+
+  uk-bfa-as02-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.56.99.3
+        port: 22
+
+  uk-bfa-as02-f02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.56.99.6
+        port: 22
+
+  uk-bfa-as03-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.56.99.4
+        port: 22
+
+  uk-bfa-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.56.99.1
+        port: 22
+
+  uk-brs-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.4
+        port: 22
+
+  uk-brs-cr02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.5
+        port: 22
+
+  uk-brs-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.1
+        port: 22
+
+  uk-brs-er01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.159.6
+        port: 22
+
+  uk-brs-er02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.159.7
+        port: 22
+
+  uk-brs-es01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.159.4
+        port: 22
+
+  uk-brs-es02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.159.5
+        port: 22
+
+  uk-brs-sbc:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.42
+        port: 22
+
+  uk-brs-vacc1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.10.202
+        port: 22
+
+  uk-cwk-as01-f03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.31
+        port: 22
+
+  uk-cwk-as02-f03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.32
+        port: 22
+
+  uk-cwk4-as01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.15
+        port: 22
+
+  uk-cwk4-as02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.16
+        port: 22
+
+  uk-cwk4-studio:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.23
+        port: 22
+
+  uk-cwk-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.27
+        port: 22
+
+  uk-cwk-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.28
+        port: 22
+
+  uk-cwk-as03:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.28
+        port: 22
+
+  uk-cwk-as04:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.29
+        port: 22
+
+  uk-cwk-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.1
+        port: 22
+
+  uk-cwk-oob-spoke01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.17
+        port: 22
+
+  uk-cwk-vacc01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.98.20
+        port: 22
+
+  uk-dum-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.56
+        port: 22
+        settings:
+          EXEC_TIMEOUT: 240
+
+  uk-gs2-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.60
+        port: 22
+
+  uk-gs2-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.61
+        port: 22
+
+  uk-gsh-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.29
+        port: 22
+
+  uk-gsh-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.30
+        port: 22
+
+  uk-gsh-as01-f00:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.3.99.4
+        port: 22
+
+  uk-gsh-as01-f01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.3.99.5
+        port: 22
+
+  uk-gsh-fs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.3.99.2
+        port: 22
+
+  uk-gsh-fs02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.3.99.3
+        port: 22
+
+  uk-gsh-ss01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.3.99.13
+        port: 22
+
+  uk-ixh-ar01-pa:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.45
+        port: 22
+
+  uk-ld6-dm01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.80
+        port: 22
+
+  uk-ld6-dmvpn01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.54
+        port: 22
+
+  uk-ld6-es01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.159.5
+        port: 22
+
+  uk-ld6-es02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.159.5
+        port: 22
+
+  uk-ld6-or01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.11
+        port: 22
+
+  uk-ld6-rr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.47
+        port: 22
+
+  uk-man-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.41
+        port: 22
+
+  uk-man-rr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.49
+        port: 22
+
+  uk-mdc-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.34
+        port: 22
+
+  uk-mdc-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.35
+        port: 22
+
+  uk-mdc-vacc01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.38
+        port: 22
+
+  uk-mtk-acc01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.39
+        port: 22
+
+  uk-mtk-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.36
+        port: 22
+
+  uk-old-sg-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.96.253.1
+        port: 22
+
+  uk-sc1-ar01-as400:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.90
+        port: 22
+
+  uk-sc1-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.1
+        port: 22
+
+  uk-ld6-cs01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.6
+        port: 22
+
+  uk-ld6-cs02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.7
+        port: 22
+
+  uk-sc1-dm01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.54
+        port: 22
+
+  uk-sc1-dmvpn01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.54
+        port: 22
+
+  uk-sc1-er01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.159.8
+        port: 22
+
+  uk-sc1-er02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.159.7
+        port: 22
+
+  uk-sc1-es01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.159.4
+        port: 22
+
+  uk-sc1-es02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.159.5
+        port: 22
+
+  uk-sc1-rr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.46
+        port: 22
+
+  uk-scc-sbc:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.42
+        port: 22
+
+  uk-sov-ms01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.239.226
+        port: 22
+
+  uk-stj-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.25
+        port: 22
+
+  uk-stj-ar02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.26
+        port: 22
+
+  uk-stj-as01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.71
+        port: 22
+
+  uk-stj-as02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.72
+        port: 22
+
+  uk-stj-cs01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.1
+        port: 22
+
+  uk-stj-f1c1-sw1:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.7
+        port: 22
+
+  uk-stj-f1c1-sw4:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.54
+        port: 22
+
+  uk-stj-vacc01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.12
+        port: 22
+
+  uk-stj-vacc02:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.11
+        port: 22
+
+  uk-thn-ar01-pa:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.44
+        port: 22
+
+  uk-thn-ar02-pa:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.43
+        port: 22
+
+  uk-thw-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.31
+        port: 22
+
+  uk-thw-rr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.48
+        port: 22
+
+  uk-ttb-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.62
+        port: 22
+
+  uk-wak-ar01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.51
+        port: 22
+
+  uk-wak-as01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.152.2
+        port: 22
+
+  uk-wig-ar01-tote:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.46
+        port: 22
+
+  uk-wig-ar02-tote:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.254.47
+        port: 22
+
+  us-da1-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.131
+        port: 22
+
+  us-da1-rr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.132
+        port: 22
+
+  us-ny1-cr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.129
+        port: 22
+
+  us-ny1-rr01:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.253.130
+        port: 22
+
+  wh-brs-core-sw3:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.10.172
+        port: 22
+
+  wh-brs-core-sw4:
+    type: cisco_device
+    os: ios
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.10.173
+        port: 22
+
+  uk-sov-cr01:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.99.239.227
+        port: 22
+
+  uk-sc1-cr01:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.186
+        port: 22
+
+  uk-sc1-cr02:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.187
+        port: 22
+
+  uk-ld6-cr01:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.210
+        port: 22
+        settings:
+          EXEC_TIMEOUT: 300
+
+  uk-ld6-cr02:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.211
+        port: 22
+
+  gi-mpl-cr01:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.253
+        port: 22
+
+  gi-mpl-cr02:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.254
+        port: 22
+
+  uk-ld6-er01:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.159.3
+        port: 22
+
+  uk-ld6-er02:
+    type: cisco_device
+    os: iosxr
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.159.4
+        port: 22
+
+  uk-brs-ds01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.111
+        port: 22
+
+  uk-brs-ds02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.112
+        port: 22
+
+  uk-brs-pp-ds01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.113
+        port: 22
+
+  uk-brs-pp-ds02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.114
+        port: 22
+
+  gib-mpl-ds01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.81
+        port: 22
+
+  gib-mpl-ds02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.82
+        port: 22
+
+  gib-mpl-ds03:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.213
+        port: 22
+
+  gib-mpl-ds04:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.214
+        port: 22
+
+  uk-sc1-ds03:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.83
+        port: 22
+
+  uk-sc1-ds04:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.84
+        port: 22
+
+  mt-msc-cs01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.128.129.1
+        port: 22
+
+  mt-msc-cs02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.128.129.2
+        port: 22
+
+  uk-ld6-os01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.61
+        port: 22
+
+  uk-ld6-os02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.62
+        port: 22
+
+  bg-dat-fw01:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.130.36
+        port: 22
+
+  bg-sof-fw01-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.53.99.220
+        port: 22
+
+  bg-sof-fw01-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.53.99.221
+        port: 22
+
+  gi-mpl-fw01:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.220
+        port: 22
+
+  gi-mpl-fw02:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.221
+        port: 22
+
+  gib-fw-vpn-asa-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.52
+        port: 22
+
+  gib-fw-vpn-asa-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.180.129.53
+        port: 22
+
+  uk-brs-asa-01-admin-act:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.220
+        port: 22
+
+  uk-brs-asa-01-admin-stby:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.221
+        port: 22
+
+  uk-brs-pp-fw-asa01-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.70
+        port: 22
+
+  uk-brs-pp-fw-asa01-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.71
+        port: 22
+
+  uk-brs-vpn-fw01-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.52
+        port: 22
+
+  uk-brs-vpn-fw01-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.53
+        port: 22
+
+  uk-ld6-fw01:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.220
+        port: 22
+
+  uk-ld6-fw02-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.69
+        port: 22
+
+  uk-ld6-fw02-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.70
+        port: 22
+
+  uk-ld6-fw03-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.215.220
+        port: 22
+
+  uk-ld6-fw03-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.215.221
+        port: 22
+
+  uk-ld6-fw04-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.19
+        port: 22
+
+  uk-ld6-fw04-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.112.129.20
+        port: 22
+
+  uk-sc1-fw01-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.220
+        port: 22
+
+  uk-sc1-fw01-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.221
+        port: 22
+
+  uk-sc1-fw04-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.19
+        port: 22
+
+  uk-sc1-fw04-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.20
+        port: 22
+
+  uk-sc1-vpn-asa-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.52
+        port: 22
+
+  uk-sc1-vpn-asa-sec:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.53
+        port: 22
+
+  uk-stj-fw01-pri:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.220
+        port: 22
+
+  uk-stj-fw01-stby:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.1.99.221
+        port: 22
+
+  mt-msc-fw01:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.128.129.220
+        port: 22
+
+  mt-msc-fw02:
+    type: cisco_device
+    os: asa
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.128.129.221
+        port: 22
+  
+  uk-sc1-cs01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.1
+        port: 22
+
+  uk-sc1-cs02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.120.129.2
+        port: 22
+
+  gi-mpl-cs01-01:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.105
+        port: 22
+
+  gi-mpl-cs01-02:
+    type: cisco_device
+    os: nxos
+    connections:
+      cli:
+        protocol: ssh
+        ip: 10.210.129.106
+        port: 22
