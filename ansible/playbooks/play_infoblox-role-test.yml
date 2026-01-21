@@ -1,0 +1,20 @@
+---
+
+- name: Test roles for Infoblox
+  hosts: asa
+  connection: local
+  gather_facts: no
+
+  vars_prompt:
+    - name: "user_username"
+      prompt: "Please enter your username"
+      private: no
+    - name: "user_password"
+      prompt: "Please enter your password"
+      private: yes  
+  
+  roles:
+    - slack-message-start
+    - infoblox-host-add
+    - slack-message-end
+

@@ -1,0 +1,6 @@
+icmp unreachable rate-limit 1 burst-size 1
+{% for interface in item.vlans%}
+icmp permit any echo {{ interface.nameif }}
+icmp permit any echo-reply {{ interface.nameif }}
+icmp permit any unreachable {{ interface.nameif }}
+{% endfor %}

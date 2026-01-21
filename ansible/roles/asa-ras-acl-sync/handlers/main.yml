@@ -1,0 +1,118 @@
+---
+# Define Fact as time stamp
+- name: Creating Timestamp
+  set_fact:
+    timestamp_acl: "{{ time }}"
+  listen:
+    - "updates_exist_acl"
+
+# Locate all files older that 28 days on local machine
+- name: Find all files older that 28 days in changes directory
+  find:
+    paths: "{{ backup_dir }}"
+    age: 28d
+    recurse: yes
+  register: filesOlderThan28d
+  listen:
+    - "updates_exist_acl"
+
+# Remove all files in the change directory older than 28 days
+- name: Remove all files found that are older than 28 days in changes directory
+  file:
+    path: "{{ filename.path }}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: "Removing old change file {{ filename.path }}"
+  listen:
+    - "updates_exist_acl"
+
+# Remove all directories than contained the files older than 28 days
+- name: Remove all associated directories in changes directory
+  file:
+    path: "{{ filename.path | dirname}}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: "Removing old directory {{ filename.path | dirname }}"
+  listen:
+    - "updates_exist_acl"
+
+# Save the configuration
+- name: ASA-RAS - Saving the post-change configuration
+  asa_config:
+    save: yes
+  listen:
+    - "updates_exist_acl"
+
+# Retrieve post change configuration of access list and group-policy
+- name: ASA-RAS - Retrieving the post-change ACL configuration
+  asa_command:
+    commands:
+      - "show running-config access-list"
+      - "show running-config group-policy"
+  listen:
+      - "updates_exist_acl"
+  register: activeACL
+
+# Create change directories
+- name: ASA-RAS - Creating a changes directory for ACL configuration 'diff' files
+  file:
+    path: "{{ changes_dir }}"
+    state: directory
+  listen:
+    - "updates_exist_acl"
+
+# Output post change configuration to file
+- name: ASA-RAS - Taking a snapshot of the post-change, committed ACL configuration (for diff)
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ post_conf_file }}"
+  listen:
+    - "updates_exist_acl"
+  register: config_results
+
+# Compare and produce change difference file
+- name: ASA-RAS - Saving a 'diff' of the pre_change snapshot and the new committed ACL configuration
+  shell: diff {{ pre_conf_file }} {{ post_conf_file }} > {{ changes_dir }}/acl_changes.conf
+  register: diff_result
+  failed_when: diff_result.rc > 1
+  listen:
+    - "updates_exist_acl"
+
+# Delete all temporary files (post and pre config files)
+- name: Delete Temporary Files for ACLs
+  file:
+    state: absent
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+    - "{{ pre_conf_file }}"
+    - "{{ post_conf_file }}"
+  loop_control:
+    loop_var: foldernames
+    label: "Removing Directory and contents of {{ foldernames }}"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "updates_exist_acl"
+
+# Re-create data folder for next run
+- name: Recreate empty Processed Files Directory
+  file:
+    state: directory
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+  loop_control:
+    loop_var: foldernames
+    label: "Creating Directory {{ foldernames }}"
+  check_mode: no
+  run_once: true
+  delegate_to: localhost
+  listen:
+    - "updates_exist_acl"
+
+

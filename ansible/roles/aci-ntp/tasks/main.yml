@@ -1,0 +1,5 @@
+---
+
+- name: Configure NTP
+  include_tasks: ./aci-ntp.yml
+  when: ansible_network_os == "aci"

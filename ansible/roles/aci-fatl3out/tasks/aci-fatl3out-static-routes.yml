@@ -1,0 +1,38 @@
+--- 
+
+- name: (Optional) Add Static Route(s) to Selected Nodes (fatl3out task 6)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}]/rt-[{{ item.1.sr_subnet }}].json"
+    content:
+      {
+        "ipRouteP": {
+          "attributes": {
+            "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}]/rt-[{{ item.1.sr_subnet }}]",
+            "ip": "{{ item.1.sr_subnet }}",
+            "rn": "rt-[{{ item.1.sr_subnet }}]",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "ipNexthopP": {
+                "attributes": {
+                  "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}]/rt-[{{ item.1.sr_subnet }}]/nh-[{{ item.1.sr_nexthop }}]",
+                  "nhAddr": "{{ item.1.sr_nexthop }}",
+                  "pref": "1",
+                  "rn": "nh-[{{ item.1.sr_nexthop }}]",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ node_profiles }}"
+    - nodes
+  when: item.1.sr_subnet is defined

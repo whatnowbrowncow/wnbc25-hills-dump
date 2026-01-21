@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: gi-mpl-fw01-pr-c-backend @ 20200722T102922 ---!
+!
+logging host internal-vrf 10.180.163.54
+!
+!--- END UPDATES: gi-mpl-fw01-pr-c-backend @ 20200722T102922 ---!
+}

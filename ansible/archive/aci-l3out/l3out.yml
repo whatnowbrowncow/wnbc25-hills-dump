@@ -1,0 +1,41 @@
+---
+
+  - name: PLAY - L3out build
+    hosts: localhost
+    connection: local
+    gather_facts: no
+    
+    vars:
+      tenant: "ant-tenant"
+      context: "ant-vrf"
+      l3out_name: "fatl3out"
+      l3_domain: "phys"
+      
+    
+  
+    tasks:
+    
+      - name: build L3out template
+        template:
+          src: "l3out.j2"
+          dest: "l3out_complete.json"
+        
+      - name: L3out build
+        aci_rest:
+          hostname: '10.112.129.173'
+          username: '{{ provider_cli.username }}'
+          password: '{{ provider_cli.password }}'
+          method: post
+          path: "/api/node/mo/uni/tn-{{tenant}}/out-{{l3out_name}}.json"
+          src: ./l3out_complete.json
+          validate_certs: no
+        #The below register grabs the contents of the returned imdata from the get request
+        register: imdata
+        delegate_to: localhost
+        
+#      - name: Output tenant response
+#        debug: var=imdata.imdata
+      
+      - name: Check response status code
+        debug: var=imdata.status
+      

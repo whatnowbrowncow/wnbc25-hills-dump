@@ -1,0 +1,50 @@
+---
+
+- hosts: asa
+# Use new network_cli login method for ansible 2.5+
+  connection: network_cli
+# End of network_cli method
+  gather_facts: false
+  
+  vars_prompt:
+    - name: "show_command"
+      prompt: "Provide show command (e.g. show hostname)"
+      default: "show hostname"
+      private: no
+    - name: "context_var"
+      prompt: "Provide the context name or just press enter to run against all contexts"
+#      default: "contexts"
+      private: no
+
+ 
+  tasks:
+    - name: "Run show command for {{ context_var }}"
+      asa_command:
+        commands:
+          - "{{ show_command }}"
+        context: "{{ context_var }}"
+      register: reg_show_output
+      when: context_var != ""
+
+    - name: Run show command for all contexts
+      asa_command:
+        commands:
+          - "{{ show_command }}"
+        context: "{{ item.context }}"
+      register: reg_show_output_all
+      with_items:
+        - "{{ contexts }}"
+      when: context_var == ""
+ 
+    - debug:
+#        msg: "The output of the command is: {{ item.stdout }}"
+        msg: "The output of the command is: {{ reg_show_output.stdout }}"
+#      with_items:
+#        - "{{ reg_show_output }}"
+      when: context_var != ""
+
+    - debug:
+        msg: "The output of the command is: {{ item.stdout }}"
+      with_items:
+        - "{{ reg_show_output_all.results }}"
+      when: context_var == ""

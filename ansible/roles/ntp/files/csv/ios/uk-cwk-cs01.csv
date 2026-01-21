@@ -1,0 +1,4 @@
+hostname,ip address,vrf,preferred,source interface
+uk-cwk-cs01,10.120.193.235,,yes,
+uk-cwk-cs01,10.210.193.235,,no,
+uk-cwk-cs01,10.120.193.236,,no,

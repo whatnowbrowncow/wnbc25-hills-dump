@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-sc1-dmvpn02,10.120.163.19,mgmt-vrf,no,
+uk-sc1-dmvpn02,10.120.163.20,mgmt-vrf,no,

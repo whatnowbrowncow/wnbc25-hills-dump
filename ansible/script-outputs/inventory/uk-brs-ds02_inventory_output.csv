@@ -1,0 +1,24 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-brs-ds02,O2 48X10GE/Modular Supervisor,Module 1,N5K-C5596UP,FOC17365YA3,V01
+uk-brs-ds02,Fabric Extender Module,FEX 102 Module 1,N2K-C2248TP-E-1GE,FOC173772XR,V02
+uk-brs-ds02,Fabric Extender Module,FEX 106 Module 1,N2K-C2248TP-E-1GE,FOC19356H4G,V02
+uk-brs-ds02,Fabric Extender Module,FEX 104 Module 1,N2K-C2248TP-E-1GE,FOC19356HKF,V02
+uk-brs-ds02,Nexus 5596 Chassis,Chassis,N5K-C5596UP,FOX1735GJZQ,V01
+uk-brs-ds02,N2K-C2248TP-E-1GE  CHASSIS,FEX 106 CHASSIS,N2K-C2248TP-E-1GE,FOX1936GDDY,V02
+uk-brs-ds02,N2K-C2248TP-E-1GE  CHASSIS,FEX 104 CHASSIS,N2K-C2248TP-E-1GE,FOX1936GDE5,V02
+uk-brs-ds02,Fabric Extender AC power supply,FEX 102 Power Supply 1,N2200-PAC-400W-B,LIT17191P6B,V02
+uk-brs-ds02,Fabric Extender AC power supply,FEX 102 Power Supply 2,N2200-PAC-400W-B,LIT17191P6H,V02
+uk-brs-ds02,Fabric Extender AC power supply,FEX 106 Power Supply 2,N2200-PAC-400W,LIT193401YZ,V05
+uk-brs-ds02,Fabric Extender AC power supply,FEX 106 Power Supply 1,N2200-PAC-400W,LIT1934022K,V05
+uk-brs-ds02,Fabric Extender AC power supply,FEX 104 Power Supply 2,N2200-PAC-400W,LIT19340242,V05
+uk-brs-ds02,Fabric Extender AC power supply,FEX 104 Power Supply 1,N2200-PAC-400W,LIT1934024B,V05
+uk-brs-ds02,Fabric Extender Fan module,FEX 102 Fan 1,N2K-C2248-FAN-B,N/A,N/A
+uk-brs-ds02,Fabric Extender Fan module,FEX 104 Fan 1,N2K-C2248-FAN,N/A,N/A
+uk-brs-ds02,Fabric Extender Fan module,FEX 106 Fan 1,N2K-C2248-FAN,N/A,N/A
+uk-brs-ds02,Chassis fan module,Fan 1,N5596UP-FAN-B,N/A,N/A
+uk-brs-ds02,Chassis fan module,Fan 2,N5596UP-FAN-B,N/A,N/A
+uk-brs-ds02,Chassis fan module,Fan 3,N5596UP-FAN-B,N/A,N/A
+uk-brs-ds02,Chassis fan module,Fan 4,N5596UP-FAN-B,N/A,N/A
+uk-brs-ds02,AC power supply,Power supply 1,N55-PAC-1100W-B,POG17516L6Y,V03
+uk-brs-ds02,AC power supply,Power supply 2,N55-PAC-1100W-B,POG17536L4U,V03
+uk-brs-ds02,N2K-C2248TP-E-1GE  CHASSIS,FEX 102 CHASSIS,N2K-C2248TP-E-1GE,SSI17290E22,V02

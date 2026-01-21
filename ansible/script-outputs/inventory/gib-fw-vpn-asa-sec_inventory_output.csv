@@ -1,0 +1,4 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-fw-vpn-asa-sec,ASA 5545-X/5555-X AC Power Supply,power supply 0,ASA-PWR-AC,48M1A8,N/A
+gib-fw-vpn-asa-sec,ASA 5545-X/5555-X AC Power Supply,power supply 1,ASA-PWR-AC,48M1CS,N/A
+gib-fw-vpn-asa-sec,ASA 5555-X with SW,Chassis,ASA5555,FGL183740KX,V02

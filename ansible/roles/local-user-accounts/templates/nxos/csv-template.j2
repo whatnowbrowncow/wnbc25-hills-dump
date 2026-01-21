@@ -1,0 +1,4 @@
+hostname,username,password,encryption,role
+{% for item in nxos_local_accounts_facts %}
+{{ inventory_hostname }},{{ item.user_account.username }},{{ item.user_account.password }},{{ item.user_account.encryption }},{{ item.user_account.role }}
+{% endfor %}

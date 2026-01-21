@@ -1,0 +1,942 @@
+---
+
+tenants:
+#  - tenant: "ant-tenant"
+#    contexts:
+#      - context: "ant-vrf"
+  - tenant: "production"
+    contexts:
+      - context: "production"
+      - context: "retail"
+      - context: "corp"
+      - context: "whc"
+  - tenant: "common"
+    contexts:
+      - context: "internal-vrf"
+      - context: "retail-vrf"
+      - context: "sis-vrf"
+      - context: "tote-vrf"
+      - context: "cde-mgmt-vrf"
+
+domains:
+  network_devices:
+    domain: "network-devices"
+    domain_type: "phys"
+  enclosures:
+    domain: "enclosures"
+    domain_type: "phys"
+  vmware:
+    domain: "vmware"
+    domain_type: "vmm"
+
+    
+alt_domains:
+  - domain: "network-devices"
+    domain_type: "phys"
+  - domain: "enclosures"
+    domain_type: "phys"
+  - domain: "vmware"
+    domain_type: "vmm"
+
+    
+vmm_domain: "LD6LABDvSRES01"
+
+pod_id: "1"
+
+static_interfaces:
+  - description: "Data connection to uk-ld6-pp-fw05 firewalls"
+    connected_device: "firewall"
+    aep: "network-devices"
+    cdp_policy: "cdp-disabled"
+    #The below variable (lag_type) sets this as a VPC
+    lag_type: "node"
+    link_level_policy: "10Gbps"
+    lldp_policy: "lldp-disable"
+    policy_group: "uk-ld6-fw05-data_polgrp"
+    port_channel_policy: "lacp-active"
+    leafs: "101,102"
+    interfaces:
+      - interface: "1/5"
+        description: "Connection to primary firewall"
+      - interface: "1/15"
+        description: "Connection to secondary firewall"
+  - description: "Connection to uk-ld6-labenc-01 module 1"
+    connected_device: "enclosure"
+    aep: "enclosures_attentp"
+    cdp_policy: "cdp-disabled"
+    #The below variable (lag_type) sets this as a VPC
+    lag_type: "node"
+    link_level_policy: "1Gbps"
+    lldp_policy: "lldp-enabled"
+    policy_group: "uk-ld6-labenc-01-mod1_polgrp"
+    port_channel_policy: "lacp-active-nosuspend"
+    leafs: "101,102"
+    interfaces:
+      - interface: "1/9"
+        description: "Connection to module 1"
+  - description: "Connection to uk-ld6-labenc-01 module 2"
+    connected_device: "enclosure"
+    aep: "enclosures_attentp"
+    cdp_policy: "cdp-disabled"
+    #The below variable (lag_type) sets this as a VPC
+    lag_type: "node"
+    link_level_policy: "1Gbps"
+    lldp_policy: "lldp-enabled"
+    policy_group: "uk-ld6-labenc-01-mod2_polgrp"
+    port_channel_policy: "lacp-active-nosuspend"
+    leafs: "101,102"
+    interfaces:
+      - interface: "1/10"
+        description: "Connection to module 2" 
+  - description: "Connection to uk-ld6-labenc-03 module 1"
+    connected_device: "enclosure"
+    aep: "enclosures_attentp"
+    cdp_policy: "cdp-disabled"
+    #The below variable (lag_type) sets this as a VPC
+    lag_type: "node"
+    link_level_policy: "10Gbps"
+    lldp_policy: "lldp-enabled"
+    policy_group: "uk-ld6-labenc-03-mod1_polgrp"
+    port_channel_policy: "lacp-active-nosuspend"
+    leafs: "101,102"
+    interfaces:
+      - interface: "1/40"
+        description: "Connection to module 1"
+  - description: "Connection to uk-ld6-labenc-03 module 2"
+    connected_device: "enclosure"
+    aep: "enclosures_attentp"
+    cdp_policy: "cdp-disabled"
+    #The below variable (lag_type) sets this as a VPC
+    lag_type: "node"
+    link_level_policy: "10Gbps"
+    lldp_policy: "lldp-enabled"
+    policy_group: "uk-ld6-labenc-03-mod2_polgrp"
+    port_channel_policy: "lacp-active-nosuspend"
+    leafs: "101,102"
+    interfaces:
+      - interface: "1/41"
+        description: "Connection to module 2" 
+ 
+app_profs:
+  - app_prof: "prod-cde"
+    tenant: "production"
+    context: "production"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "cde_ext-web"
+        network: "10.62.64.0"
+        gateway: "10.62.64.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_ext-web"
+            encap_id: "1610"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_int-web"
+        network: "10.62.72.0"
+        gateway: "10.62.72.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_int-web"
+            encap_id: "1611"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_int-lb"
+        network: "10.62.80.0"
+        gateway: "10.62.80.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_int-lb"
+            encap_id: "1612"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_app"
+        network: "10.62.88.0"
+        gateway: "10.62.88.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_app"
+            encap_id: "1613"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_db"
+        network: "10.62.96.0"
+        gateway: "10.62.96.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_db"
+            encap_id: "1614"
+            vcenter_dynamic_vlan: true
+  - app_prof: "prod-ncde"
+    tenant: "production"
+    context: "production"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "ncde_ext-web"
+        network: "10.62.128.0"
+        gateway: "10.62.128.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_ext-web"
+            encap_id: "1615"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_int-web"
+        network: "10.62.136.0"
+        gateway: "10.62.136.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_int-web"
+            encap_id: "1616"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_int-lb"
+        network: "10.62.144.0"
+        gateway: "10.62.144.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_int-lb"
+            encap_id: "1617"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_app"
+        network: "10.62.152.0"
+        gateway: "10.62.152.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_app"
+            encap_id: "1618"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_db"
+        network: "10.62.160.0"
+        gateway: "10.62.160.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_db"
+            encap_id: "1619"
+            vcenter_dynamic_vlan: true
+  - app_prof: "retail"
+    tenant: "production"
+    context: "retail"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "retail_ext-web"
+        network: "10.62.192.0"
+        gateway: "10.62.192.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "retail_ext-web"
+            encap_id: "1631"
+            vcenter_dynamic_vlan: true
+      - bd: "retail_int-web"
+        network: "10.62.194.0"
+        gateway: "10.62.194.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "retail_int-web"
+            encap_id: "1632"
+            vcenter_dynamic_vlan: true
+      - bd: "retail_int-lb"
+        network: "10.62.196.0"
+        gateway: "10.62.196.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "retail_int-lb"
+            encap_id: "1633"
+            vcenter_dynamic_vlan: true
+      - bd: "retail_prod"
+        network: "10.62.200.0"
+        gateway: "10.62.200.1"
+        mask: "255.255.252.0"
+        cidr_mask: "22"
+        scope: "shared"
+        epgs:
+          - epg: "retail_prod"
+            encap_id: "1634"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "corp"
+    tenant: "production"
+    context: "corp"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "corp_ext-web"
+        network: "10.62.208.0"
+        gateway: "10.62.208.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_ext-web"
+            encap_id: "1641"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_int-web"
+        network: "10.62.210.0"
+        gateway: "10.62.210.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_int-web"
+            encap_id: "1642"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_int-lb"
+        network: "10.62.212.0"
+        gateway: "10.62.212.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_int-lb"
+            encap_id: "1643"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_app"
+        network: "10.62.214.0"
+        gateway: "10.62.214.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_app"
+            encap_id: "1644"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_db"
+        network: "10.62.216.0"
+        gateway: "10.62.216.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_db"
+            encap_id: "1645"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "internal"
+    tenant: "common"
+    context: "internal-vrf"
+    firewall_connected: false
+    bds:
+      - bd: "infoblox"
+        network: "10.61.208.0"
+        gateway: "10.61.208.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        epgs:
+          - epg: "infoblox"
+            vcenter_dynamic_vlan: true
+      - bd: "ext-pres"
+        network: "10.61.216.0"
+        gateway: "10.61.216.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ext-pres"
+            vcenter_dynamic_vlan: true
+      - bd: "build"
+        network: "10.61.209.0"
+        gateway: "10.61.209.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "build"
+            encap_id: "34"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_jumphosts"
+        network: "10.112.210.0"
+        gateway: "10.112.210.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "public"
+        epgs:
+          - epg: "ncde_jumphosts"
+            vcenter_dynamic_vlan: true
+            
+  - app_prof: "cde-mgmt"
+    tenant: "common"
+    context: "cde-mgmt-vrf"
+    firewall_connected: true
+    bds:
+      - bd: "vsphere"
+        network: "10.61.8.0"
+        gateway: "10.61.8.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "private"
+        epgs:
+          - epg: "vsphere"
+            encap_id: "30"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1105"
+      - bd: "server-mgmt"
+        network: "10.61.10.0"
+        gateway: "10.61.10.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "private"
+        epgs:
+          - epg: "server-mgmt"
+            encap_id: "2122"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1106"
+      - bd: "mano"
+        network: "10.61.13.0"
+        gateway: "10.61.13.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "private"
+        epgs:
+          - epg: "mano"
+            encap_id: "2123"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1107"
+      - bd: "core-services"
+        network: "10.61.12.0"
+        gateway: "10.61.12.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "private"
+        epgs:
+          - epg: "core-services"
+            encap_id: "2124"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1108"
+      - bd: "jumphosts"
+        network: "10.61.15.0"
+        gateway: "10.61.15.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "private"
+        epgs:
+          - epg: "jumphosts"
+            encap_id: "2125"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1109"
+      - bd: "storage-data"
+        network: "10.61.46.0"
+        gateway: "10.61.46.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "private"
+        epgs:
+          - epg: "storage-data"
+            encap_id: "140"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "140"
+      
+#  - app_prof: "comm-fw"
+#    tenant: "common"
+#    context: "default"
+#    firewall_connected: true
+#    l2_unknown_unicast: "flood"
+#    arp_flooding: "True"
+#    bds:
+#      - bd: "fw04-ha-fail"
+#        network: "10.61.254.224"
+#        gateway: "10.61.254.225"
+#        mask: "255.255.255.252"
+#        cidr_mask: "30"
+#        scope: "private"
+#        epgs:
+#          - epg: "fw04-ha-fail"
+#            encap_id: "995"
+#            vcenter_dynamic_vlan: true
+#      - bd: "fw04-ha-state"
+#        network: "10.61.254.0"
+#        gateway: "10.61.254.0"
+#        mask: "255.255.255.252"
+#        cidr_mask: "30"
+#        scope: "private"
+#        epgs:
+#          - epg: "fw04-ha-state"
+#            encap_id: "996"
+#            vcenter_dynamic_vlan: true
+#            
+#  - app_prof: "ant-test-1_appprof"
+#    tenant: "ant-tenant"
+#    context: "ant-vrf"
+#    firewall_connected: false
+#    bds:
+#      - bd: "ant-test-a-bd1"
+#        network: "10.199.6.0"
+#        gateway: "10.199.6.1"
+#        mask: "255.255.255.0"
+#        cidr_mask: "24"
+#        scope: "private"
+#        ip_learning: "False"
+#        epgs:
+#          - epg: "ant-test-1-epg1"
+#          - epg: "jumphost"
+#          - epg: "ob-web"
+#          - epg: "ob-web-2"
+#      - bd: "ant-test-a-bd2"
+#        network: "10.199.7.0"
+#        gateway: "10.199.7.1"
+#        mask: "255.255.255.0"
+#        cidr_mask: "24"
+#        scope: "private"
+#        ip_learning: "False"
+#        epgs:
+#          - epg: "ant-test-1-epg2"
+#          - epg: "ob-app"
+#          - epg: "ob-app2"
+#      - bd: "ant-test-a-bd3"
+#        network: "10.199.8.0"
+#        gateway: "10.199.8.1"
+#        mask: "255.255.255.0"
+#        cidr_mask: "24"
+#        scope: "private"
+#        ip_learning: "False"
+#        epgs:
+#          - epg: "ant-test-1-epg3"
+#          - epg: "ob-db"
+#          - epg: "ob-db2"
+#
+#contracts:
+#  - contract: "ob-web-2_to_ob-app-2"
+#    description: "Test contract"
+#    provider:
+#      provider: "ob-app-2"
+#      app_prof: "ant-test-1_appprof"
+#    consumer: 
+#      consumer: "ob-web-2"
+#      app_prof: "ant-test-1_appprof"
+#    tenant: "ant-tenant"
+#    scope: "tenant"
+#    subjects:
+#      - subject: "fabric_routed"
+#        description: "fabric routed subject"
+#        filters:
+#          - filter: "fab-filter"
+#            log: "log"
+#            entries:
+#              - entry: "Web"
+#                protocol: "tcp"
+#                dst_port_start: "80"
+#                stateful: "yes"
+#              - entry: "My_app"
+#                dst_port_start: "15000"
+#                dst_port_end: "15010"
+#                stateful: "yes"
+#      - subject: "firewall_routed"
+#        description: "Firewall routed subject"
+#        filters:
+#          - filter: "fw-filter"
+#            log: "log"
+#            entries:
+#              - entry: "Web"
+#                protocol: "tcp"
+#                dst_port_start: "80"
+#                stateful: "yes"
+#              - entry: "My_app"
+#                dst_port_start: "15000"
+#                dst_port_end: "15010"
+#                stateful: "yes"
+#  - contract: "ob-web_to_ob-app"
+#    description: "Test contract"
+#    provider:
+#      provider: "ob-app"
+#      app_prof: "ant-test-1_appprof"
+#    consumer: 
+#      consumer: "ob-web"
+#      app_prof: "ant-test-1_appprof"
+#    tenant: "ant-tenant"
+#    scope: "tenant"
+#    subjects:
+#      - subject: "fabric_routed"
+#        description: "fabric routed subject"
+#        filters:
+#          - filter: "absent-filter"
+#            log: "log"
+#            description: "absent filter description"
+#            entries:
+#              - entry: "Web"
+#                protocol: "tcp"
+#                dst_port_start: "80"
+#                stateful: "yes"
+#              - entry: "My_app"
+#                dst_port_start: "15000"
+#                dst_port_end: "15010"
+#                stateful: "yes"
+#      - subject: "firewall_routed"
+#        description: "Firewall routed subject"
+#        filters:
+#          - filter: "fw-filter"
+#            log: "log"
+#            entries:
+#              - entry: "Web"
+#                protocol: "tcp"
+#                dst_port_start: "80"
+#                stateful: "yes"
+#              - entry: "My_app"
+#                dst_port_start: "15000"
+#                dst_port_end: "15010"
+#                stateful: "yes"
+#  - contract: "ob-app_to_ob-db"
+#    description: "Test ob-app to ob-db access"
+#    provider:
+#      provider: "ob-db"
+#      app_prof: "ant-test-1_appprof"
+#    consumer: 
+#      consumer: "ob-app"
+#      app_prof: "ant-test-1_appprof"
+#    tenant: "ant-tenant"
+#    scope: "tenant"
+#    subjects:
+#      - subject: "firewall_routed"
+#        description: "Firewalled access"
+#        filters:
+#          - filter: "db_access"
+#            log: "log"
+#            entries:
+#              - entry: "db"
+#                protocol: "tcp"
+#                dst_port_start: "3106"
+#                stateful: "yes"
+#              - entry: "alt-db"
+#                dst_port_start: "15000"
+#                dst_port_end: "15010"
+#                stateful: "yes"
+#  - contract: "jumphost_to_ob-db"
+#    description: "Test jumphost to ob-db access"
+#    provider:
+#      provider: "jumphost"
+#      app_prof: "ant-test-1_appprof"
+#    consumer: 
+#      consumer: "ob-db"
+#      app_prof: "ant-test-1_appprof"
+#    tenant: "ant-tenant"
+#    scope: "tenant"
+#    subjects:
+#      - subject: "firewall_routed"
+#        description: "Firewalled access"
+#        filters:
+#          - filter: "Mgmt_access"
+#            log: "log"
+#            entries:
+#              - entry: "ssh"
+#                protocol: "tcp"
+#                dst_port_start: "22"
+#                stateful: "yes"
+#              - entry: "https"
+#                dst_port_start: "443"
+#                stateful: "yes"
+                
+l3outs:
+#  - l3out_name: "fatl3out"
+#    l3_domain: "core-router"
+#    tenant: "ant-tenant"
+#    context: "ant-vrf"
+#    extsubs:
+#      - extsub: "1.1.1.1/32"
+#        scope: "export-rtctrl,import-security,shared-rtctrl,shared-security"
+#        aggregate: ""
+#    node_profile:
+#      - node_id: "101"
+#        rtr_id: "101.101.101.101"
+#        rtr_loopback: "no"
+#      - node_id: "102"
+#        rtr_id: "102.102.102.102"
+#        rtr_loopback: "no"
+#    interface_profile:
+#      - name: "ant-test"
+#        svi:
+#          encapvl: "101"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.114.160.65"
+#          node_b_ip: "10.114.160.66"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.114.160.69"
+#          bgp:
+#            peer_ip: "10.114.160.67"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "dr-c-frontend"
+#        svi:
+#          encapvl: "371"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.114.160.33"
+#          node_b_ip: "10.114.160.34"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.114.160.37"
+#          bgp:
+#            peer_ip: "10.114.160.35"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "dr-n-frontend"
+#        svi:
+#          encapvl: "422"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.114.224.1"
+#          node_b_ip: "10.114.224.2"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.114.224.6"
+#          bgp:
+#            peer_ip: "10.114.224.4"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "pte-c-frontend"
+#        svi:
+#          encapvl: "1671"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.115.160.33"
+#          node_b_ip: "10.115.160.34"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.115.160.37"
+#          bgp:
+#            peer_ip: "10.115.160.35"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "pte-n-frontend"
+#        svi:
+#          encapvl: "1677"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.115.160.225"
+#          node_b_ip: "10.115.160.226"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.115.160.229"
+#          bgp:
+#            peer_ip: "10.115.160.227"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "dr-c-mgmt"
+#        svi:
+#          encapvl: "375"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.114.160.161"
+#          node_b_ip: "10.114.160.162"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.114.160.165"
+#          bgp:
+#            peer_ip: "10.114.160.163"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "dr-n-mgmt"
+#        svi:
+#          encapvl: "376"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.114.160.193"
+#          node_b_ip: "10.114.160.194"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.114.160.197"
+#          bgp:
+#            peer_ip: "10.114.160.195"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "pte-c-mgmt"
+#        svi:
+#          encapvl: "1675"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.115.160.161"
+#          node_b_ip: "10.115.160.162"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.115.160.165"
+#          bgp:
+#            peer_ip: "10.115.160.163"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "pte-n-mgmt"
+#        svi:
+#          encapvl: "1676"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.115.160.193"
+#          node_b_ip: "10.115.160.194"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.115.160.198"
+#          bgp:
+#            peer_ip: "10.115.160.196"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "pr-c-fr-cx"
+#        svi:
+#          encapvl: "384"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW01-Data_PolGrp"
+#          node_a_ip: "10.114.161.193"
+#          node_b_ip: "10.114.161.194"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.115.160.197"
+#          bgp:
+#            peer_ip: "10.114.161.195"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "pte-external"
+#        svi:
+#          encapvl: "370"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "FW02-PRI-DATA_PolGrp"
+#          node_a_ip: "10.114.160.1"
+#          node_b_ip: "10.114.160.2"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.114.160.3"
+#          bgp:
+#            peer_ip: "10.114.160.4"
+#            remote_as: "64603"
+#            local_as: "64570"
+#      - name: "uk-ld6-cr01"
+#        svi:
+#          encapvl: "528"
+#          vpc_path:
+#            vpc_switches: "103-104"
+#            policy_group: "uk-ld6-cr01-po1_PolGrp"
+#          node_a_ip: "10.89.0.2"
+#          node_b_ip: "10.89.0.3"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.89.0.4"
+#          bgp:
+#            peer_ip: "10.89.0.1"
+#            remote_as: "57002"
+#            local_as: "64606"
+#      - name: "uk-ld6-cr02"
+#        svi:
+#          encapvl: "529"
+#          vpc_path:
+#            vpc_switches: "103-104"
+#            policy_group: "uk-ld6-cr02-po1_PolGrp"
+#          node_a_ip: "10.89.0.34"
+#          node_b_ip: "10.89.0.35"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.89.0.36"
+#          bgp:
+#            peer_ip: "10.89.0.33"
+#            remote_as: "57002"
+#            local_as: "64606"
+#      
+#  - l3out_name: "default_fatl3out"
+#    l3_domain: "network-devices"
+#    tenant: "common"
+#    context: "default"
+#    extsubs:
+#      - extsub: "0.0.0.0/0"
+#        scope: "export-rtctrl,import-security"
+#        aggregate: "export-rtctrl"
+#    node_profile:
+#      - node_id: "101"
+#        rtr_id: "101.101.101.101"
+#        rtr_loopback: "no"
+#      - node_id: "102"
+#        rtr_id: "102.102.102.102"
+#        rtr_loopback: "no"
+#    interface_profile:
+#      - name: "default_lab-wan"
+#        svi:
+#          encapvl: "1620"
+#          vpc_path:
+#            vpc_switches: "101-102"
+#            policy_group: "uk-ld6-fw05-data_polgrp"
+#          node_a_ip: "10.61.160.65"
+#          node_b_ip: "10.61.160.66"
+#          node_cidr_mask: "27"
+#          node_sec_ip: "10.61.160.67"
+##          bgp:
+##            peer_ip: "10.61.160.68"
+##            remote_as: "64603"
+##            local_as: "64570"
+
+  - l3out_name: "ant-vrf_fatl3out"
+    l3_domain: "network-devices"
+    tenant: "ant-tenant"
+    context: "ant-vrf"
+    extsubs:
+      - extsub: "0.0.0.0/0"
+        scope: "export-rtctrl,import-security"
+        aggregate: "export-rtctrl"
+#    node_profile:
+#      - node_id: "101"
+#        rtr_id: "101.101.101.101"
+#        rtr_loopback: "no"
+#      - node_id: "102"
+#        rtr_id: "102.102.102.102"
+#        rtr_loopback: "no"
+    interface_profile:
+      - name: "default_lab-wan"
+        peer_device: "ant-fw"
+        svi:
+          encapvl: "2620"
+          vpc_path:
+            vpc_switches: "101-102"
+            policy_group: "uk-ld6-fw05-data_polgrp"
+          node_a_ip: "10.61.160.65"
+          node_b_ip: "10.61.160.66"
+          node_cidr_mask: "27"
+          node_sec_ip: "10.61.160.67"
+        node_profile:
+          - node_id: "101"
+            rtr_id: "101.101.101.101"
+            rtr_loopback: "no"
+          - node_id: "102"
+            rtr_id: "102.102.102.102"
+            rtr_loopback: "no"
+      - name: "another_lab-wan"
+        peer_device: "dave-fw"
+        svi:
+          encapvl: "3620"
+          vpc_path:
+            vpc_switches: "101-102"
+            policy_group: "uk-ld6-fw05-data_polgrp"
+          node_a_ip: "10.61.161.65"
+          node_b_ip: "10.61.161.66"
+          node_cidr_mask: "27"
+          node_sec_ip: "10.61.161.67"
+        node_profile:
+          - node_id: "101"
+            rtr_id: "101.101.101.101"
+            rtr_loopback: "no"
+          - node_id: "102"
+            rtr_id: "102.102.102.102"
+            rtr_loopback: "no"

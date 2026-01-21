@@ -1,0 +1,26 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show running-config | include access-group"
+    network_os: asa
+
+- name: ACL access-group configuration match pattern
+  pattern_match:
+    regex: "^access-group +(\\S+) +(global|\\S+)?(?: +interface +(\\S+))?"
+    match_all: yes
+  register: access_groups
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: access_list
+        value: "{{ item.matches.0 }}"
+      - key: direction
+        value: "{{ item.matches.1 }}"    
+      - key: interface
+        value: "{{ item.matches.2 }}"            
+  loop: "{{ access_groups }}"
+  export: yes
+  register: access_group_facts

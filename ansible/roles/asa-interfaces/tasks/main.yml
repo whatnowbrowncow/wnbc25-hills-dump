@@ -1,0 +1,14 @@
+---
+
+- name: Setup interfaces on context firewalls using lines method
+  include_tasks: ./asa-interfaces_gather_vlans.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context_item
+    
+    
+## Original template based task  
+#- name: Setup interfaces on Context firewalls
+#  import_tasks: ./asa-interfaces.yml
+

@@ -1,0 +1,3 @@
+hostname,tacacs-style,svr-grp name,svr-grp source int,svr-grp vrf,svr name,svr ip address,svr encryption key,authn-login,authn-enable,auths-exec,auths-commands,acc-exec,acc-connection,acc-commands,acc-system
+gib-mpl-ar02,legacy,WH-ACS-TACACS,GigabitEthernet0,Mgmt-intf,,10.180.163.26,110B480E461C5A0E082B282F,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS
+gib-mpl-ar02,legacy,WH-ACS-TACACS,GigabitEthernet0,Mgmt-intf,,10.120.163.26,04595A0D5E2F1D4C0518061C,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS

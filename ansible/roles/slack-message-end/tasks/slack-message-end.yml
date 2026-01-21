@@ -1,0 +1,7 @@
+- name: Slack end messaging
+  slack:
+    token: "{{ slack_token }}"
+    msg: 'Successfully completed change: {{ snapshot_description }}. The target of this play was {{ inventory_hostname }}'
+    channel: '#ansible-playbook-log'
+    color: good
+    username: 'Ansible@LD6'

@@ -1,0 +1,31 @@
+---
+  - name: PLAY 1 - COLLECT FACTS FOR IOS
+    hosts: ios
+    connection: network_cli
+    gather_facts: no
+   
+    tasks:
+      - name: COLLECT FACTS FOR IOS
+        ios_facts:
+
+# Originally used to test and confirm output
+#      - name: Debug interfaces
+#        debug:
+#          var: ansible_net_interfaces
+# 
+#      - name: Debug Hostname
+#        debug:
+#          var: ansible_net_hostname
+#       
+# 
+      - name: GENERATE DEVICE SPECIFIC INTERFACE REPORTS
+        template:
+          src: ./reports/interface_facts.j2
+          dest: ./reports/interface_facts/{{ inventory_hostname }}.md
+          
+#      - name: CREATE MASTER REPORT
+#        assemble:
+#          src: ./reports/interface_facts/
+#          dest: ./reports/interface_facts/master-report.md
+#          delimiter: "---"
+#        run_once: true

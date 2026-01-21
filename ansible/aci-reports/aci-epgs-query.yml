@@ -1,0 +1,34 @@
+---
+
+  - name: PLAY - EPG query
+    hosts: aci
+    connection: local
+    gather_facts: no
+
+
+    tasks:
+    
+    - name: Query EPGs
+      aci_epg:
+        hostname: '{{ ansible_host }}'
+        username: '{{ aci_user }}'
+        private_key: '{{ aci_key }}'
+        state: query
+        validate_certs: no
+        
+      register: imdata_epgs
+
+      
+    - debug:
+        msg:
+          - "{{ item.fvAEPg }}"
+      with_items:
+        - "{{ imdata_epgs.current }}"
+
+#    - debug:
+#        msg:
+#          - "EPG name: {{ item.fvAEPg.attributes.name }}"
+#          - "BD name: {{ item.fvAEPg.children.0.fvRsBd.attributes.tRn }}"
+#      with_items:
+#        - "{{ imdata_epgs.current }} "
+

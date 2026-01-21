@@ -1,0 +1,22 @@
+---
+
+- name: NXOS - collect local user account info
+  nxos_command:
+    commands:
+      - show run | i username
+  register: nxos_local_accounts_output
+
+- name: NXOS - parse command output
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/nxos/parser_nxos_local_user_accounts.yml"
+    content: "{{ nxos_local_accounts_output.stdout.0 }}"
+
+- name: NXOS - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: NXOS - Generate YAML file
+  template:
+    src: "{{ role_path }}/templates/nxos/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/local-user-accounts.yml"

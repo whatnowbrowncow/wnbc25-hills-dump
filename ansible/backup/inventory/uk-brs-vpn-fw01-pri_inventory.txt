@@ -1,0 +1,5 @@
+Name: "Chassis", DESCR: "ASA 5525-X with SW, 8 GE Data, 1 GE Mgmt, AC"
+PID: ASA5525           , VID: V04     , SN: FGL1922402B
+
+Name: "Storage Device 1", DESCR: "Model Number: Micron_M550_MTFDDAK128MAY"
+PID: N/A               , VID: N/A     , SN: MXA190801UW

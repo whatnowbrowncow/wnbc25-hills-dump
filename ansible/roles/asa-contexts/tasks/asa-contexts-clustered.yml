@@ -1,0 +1,21 @@
+---
+
+- name: ASA MULTIPLE - Collecting the contexts info
+  asa_command:
+    commands:
+      - "show context detail | in has been created"
+    context: system
+  register: contexts_output
+
+- name: ASA MULTIPLE - Setting the active context fact
+  set_fact:
+    active_contexts: "{{ contexts_output.stdout[0] | regex_findall('^Context \"(?P<active_context>\\S+)\"','\\g<active_contexts>') }}"
+ 
+- name: ASA MULTIPLE - Generating the 'contexts.yml' host variable file
+  template:
+    src: "{{ role_path }}/templates/contexts-list-yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts.yml"
+
+- name: ASA-MULTIPLE - Refreshing the 'contexts.yml' list
+  include_vars:
+    file: "{{ inventory_dir}}/host_vars/{{ inventory_hostname }}/contexts.yml"

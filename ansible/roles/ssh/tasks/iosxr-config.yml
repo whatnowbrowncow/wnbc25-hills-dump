@@ -1,0 +1,19 @@
+---
+
+- name: IOS-XR - Configure SSH (Default) (without a linked ACL)
+  iosxr_config:
+    lines:
+      - ssh server v2
+      - ssh server vrf {{ item.vrf }}
+  with_items:
+    - "{{ ssh }}"
+  when: item.acl is not defined
+
+- name: IOS-XR - Configure SSH (with a linked ACL)
+  iosxr_config:
+    lines:
+      - ssh server v2
+      - ssh server vrf {{ item.vrf }} ipv4 access-list {{ item.acl }}
+  with_items:
+    - "{{ ssh }}"
+  when: item.acl is defined

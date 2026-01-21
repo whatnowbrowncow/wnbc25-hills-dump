@@ -1,0 +1,47 @@
+---
+
+- name: Generate core config files
+  template:
+    src=core_router.j2
+    dest="/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}.cfg"
+
+- name: Generate services config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/services.yml
+
+- name: Generate boot config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/boot.yml
+
+- name: Generate AAA config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/aaa.yml
+
+- name: Generate VRFs config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/vrfs.yml
+
+- name: Generate netflow config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/netflow.yml
+
+- name: Generate qos config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/qos.yml
+
+- name: Generate Mgmt ACL config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/mgmt_acl.yml
+
+- name: Generate SNMP ACL config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/snmp_acl.yml
+
+- name: Generate SNMP config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/snmp.yml
+
+- name: Generate banner config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/banner.yml
+
+- name: Generate Line VTY config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/roles/core/tasks/line_vty.yml
+
+
+- name: Combine config parts to whole
+  assemble:
+    src="/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/"
+    dest="/home/ubuntu/vagrant_data/ansible/roles/core/configs/full-config/{{ inventory_hostname }}.cfg"
+  tags:
+    - cfg_build

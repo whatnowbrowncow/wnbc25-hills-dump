@@ -1,0 +1,5 @@
+{% for dst in changed_dst %}
+{% for dstgroups in dst['dst_data'].values() -%}
+anyconnect-custom-data dynamic-split-include-domains {{ dst.name }}_v{{ dst.version }} {% if not loop.first %},{% endif -%} {{ dstgroups | join(",") }} 
+{% endfor %}
+{% endfor %}

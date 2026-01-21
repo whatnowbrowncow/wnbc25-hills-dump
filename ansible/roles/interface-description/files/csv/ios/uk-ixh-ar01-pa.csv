@@ -1,0 +1,4 @@
+hostname,local_interface,remote_device_description
+uk-ixh-ar01-pa,Loopback1,no_data_in_cdp
+uk-ixh-ar01-pa,Loopback21,no_data_in_cdp
+uk-ixh-ar01-pa,NV0,no_data_in_cdp

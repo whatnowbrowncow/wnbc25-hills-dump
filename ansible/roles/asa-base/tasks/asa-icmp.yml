@@ -1,0 +1,15 @@
+---
+
+- name: Build context icmp template
+  template:
+    src: icmp.j2
+    dest: ./roles/asa-base/configs/{{ item.context }}_icmp.cfg
+  with_items:
+    - "{{ contexts }}"
+    
+- name: Build icmp on a context
+  asa_config:
+    src: ./roles/asa-base/configs/{{ item.context }}_icmp.cfg
+    context: "{{ item.context }}"
+  with_items:
+    - "{{ contexts }}"

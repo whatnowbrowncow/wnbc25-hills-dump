@@ -1,0 +1,3 @@
+hostname,username,password,encryption,role
+uk-sc1-ds03,admin,$1$KPdNcjxQ$IISHXsrv.9UmLyLy50s9N/,5,network-admin
+uk-sc1-ds03,netadmin,$1$Qjrwo/hf$R3//jCfC/Y6hp6STEEgCh1,5,network-admin

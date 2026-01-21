@@ -1,0 +1,51 @@
+---
+
+###############################################################################
+##DO NOT use - This approach doesn't work, as it doesn't remove ACEs.
+###############################################################################
+
+
+#- name: "Remove Mgmt ACL on {{ inventory_hostname }}"
+#  ios_config:
+#    lines:
+#      - no ip access-list standard 1
+#    match: none
+  
+- name: "Check for description on Mgmt ACL to {{ inventory_hostname }} - lines version"
+  ios_config:
+    lines:
+      - access-list 1 remark Permit SSH from these addresses
+    match: line
+#    replace: block
+  with_items:
+    - "{{ mgmt_acl }}"
+  register: acl_output
+  
+- name: "Deploy Mgmt ACL to {{ inventory_hostname }} - lines version"
+  ios_config:
+    lines:
+      - access-list 1 permit {{ item }}
+    match: line
+#    replace: block
+  with_items:
+    - "{{ mgmt_acl }}"
+  register: acl_output
+
+## The registered output is used below to see if a change was made during the last task.
+## If there was a change it removes the "deny any" statement, as additions to the ACL 
+## will be placed after it and therefore not be hit.
+- name: "Remove deny from Mgmt ACL on {{ inventory_hostname }} if ACL was updated"
+  ios_config:
+    lines:
+      - ip access-list standard 1
+      - no deny any log
+    match: none
+  when: acl_output.changed == true
+
+## The below adds the "deny any" back in
+- name: "Add logged deny to Mgmt ACL on {{ inventory_hostname }}"
+  ios_config:
+    lines:
+      - ip access-list standard 1
+      - deny any log
+   when: acl_output.changed == true

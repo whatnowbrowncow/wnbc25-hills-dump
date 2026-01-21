@@ -1,0 +1,35 @@
+---
+
+  - name: PLAY - Static Bindings query
+    hosts: aci
+    connection: local
+    gather_facts: no
+
+
+    tasks:
+    
+    - name: Query Interface Policy Leaf Profile
+      aci_interface_policy_leaf_profile:
+        hostname: '{{ ansible_host }}'
+        username: '{{ aci_user }}'
+        private_key: '{{ aci_key }}'
+        state: query
+        validate_certs: no
+        
+      register: imdata_intpol
+
+      
+    - debug:
+        msg:
+          - "{{ item }}"
+      with_items:
+        - "{{ imdata_intpol.current }}"
+
+    - debug:
+        msg:
+          - "Name: {{ item.infraAccPortP.attributes.name }}"
+          - "Switches: {{ item.infraAccPortP.attributes.name.split('_').0.split('Switch').1 }}"
+#          - "BD name: {{ item.fvAEPg.children.0.fvRsBd.attributes.tRn }}"
+      with_items:
+        - "{{ imdata_intpol.current }} "
+

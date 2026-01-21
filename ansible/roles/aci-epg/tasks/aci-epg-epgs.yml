@@ -1,0 +1,9 @@
+---
+
+#This is loop step three. Don't run on its own
+
+- include_tasks: aci-build-epgs.yml
+  with_items:
+    - "{{ bd_item.epgs }}"
+  loop_control:
+    loop_var: epg_item

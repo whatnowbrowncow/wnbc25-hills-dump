@@ -1,0 +1,4 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-wig-ar02-tote,CISCO2921/K9 chassis,CISCO2921/K9,CISCO2921/K9,FGL1907110Y,V08
+uk-wig-ar02-tote,WAN Interface Card - HWIC Serial 1T,WAN Interface Card - HWIC Serial 1T on Slot 0 SubSlot 0,HWIC-1T,FOC19022RVK,V05
+uk-wig-ar02-tote,C2921/C2951 AC Power Supply,C2921/C2951 AC Power Supply,PWR-2921-51-AC,QCS18520SPM,V03

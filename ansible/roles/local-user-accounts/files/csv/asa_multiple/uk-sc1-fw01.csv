@@ -1,0 +1,3 @@
+hostname,username,privilege,encryption,password_string
+uk-sc1-fw01,svcnetworkauto,15,pbkdf2,$sha512$5000$PKgoGek1lUvDOjwz3OhatQ==$70NqFzdp3h+rzXqazPLUUg==
+uk-sc1-fw01,netadmin,15,pbkdf2,$sha512$5000$lZYn5x6jjRCverWJKxOj8A==$XQ3bF23loBxeyyzBdKQ6lQ==

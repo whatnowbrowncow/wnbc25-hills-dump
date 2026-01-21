@@ -1,0 +1,50 @@
+---
+
+local_admin:
+  name: "netadmin"
+  secret_5: "$1$0z2p$jbtbcHYIh7rq7MdERPNjp/"
+
+aaa:
+  group:
+    - name: "WH-ACS-TACACS"
+      type: "tacacs+"
+      vrf: "group-vrf"
+      source_int: "Loopback20"
+      server_list:
+        - name: SCC-ACS
+          type: tacacs
+          addr: "10.120.163.26"
+          key_7 : "023F014A2A282519646602183C27015806"
+        - name: BRS-ACS
+          type: tacacs
+          addr: "10.210.163.26"
+          key_7 : "04620E172E0F667621310E162B3B1F5720"
+
+snmp:
+  contact: "Network Services"
+  communities:
+    - community: "m0squ1t0"
+      snmp_svr: "10.120.163.59"
+      type: "ro"
+      acl: "10"
+    - community: "wh1LLc0rp"
+      snmp_svr: "10.120.163.59"
+      type: "rw"
+      acl: "11"
+    - community: "n1m50ft"
+      snmp_svr: "10.120.163.59"
+      type: "ro"
+      acl: "12"
+
+line_vty:
+  line_num:
+    - "0 4"
+    - "5 15"
+  vty_acl: "1"
+  timeout_mins: "15"
+  transport_input: "ssh"
+
+ssh:
+  ssh_timeout: "5"
+  ssh_ver: "2"
+

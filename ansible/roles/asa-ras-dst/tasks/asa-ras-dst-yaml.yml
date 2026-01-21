@@ -1,0 +1,26 @@
+---
+# Retrive the DST entries currently deployed to the devices
+- name: Retrive all DST Data
+  asa_command:
+    commands:
+      - "show run anyconnect-custom-data" 
+  register: activeDST
+
+#Loops through a list of DST names and extract the relevent data from the varible created above
+- name: Retriving All DST Entries Per ACL
+  set_fact:
+    "{{ loop_dst_name.name | replace('-','_') }}": "{{ (loop_dst_details | default([])) + activeDST.stdout[0] | regex_findall('anyconnect-custom-data dynamic-split-include-domains ' + loop_dst_name.name  + ' (?:,)?(.+)(?:,)?') | unique}}"
+  loop: "{{ ra_dst  }}"
+  loop_control:
+    loop_var: loop_dst_name
+    label: "Retriving DST details of {{ loop_dst_name.name }}"
+
+# Outputs all the data collected above and formats it into a YAML file, placeing it in {{ inventory_dir }}/group_vars/ras
+- name: ASA-RAS - Producing YAML for of DST
+  template:
+    src: "{{role_path}}/templates/yaml_template.j2"
+    dest: "{{ inventory_dir }}/group_vars/ras/dst-{{ loop_dst_output.name | replace('-include','') }}.yml"
+  loop: "{{ ra_dst }}"
+  loop_control:
+    loop_var: loop_dst_output
+    label: "Display Data for {{ loop_dst_output.name }}"

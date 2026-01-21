@@ -1,0 +1,7 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.379,10.180.161.4,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.456,10.180.172.1,,external-web-bottom-new,255.255.255.128,100
+up,,Port-channel1.457,10.180.172.129,,int-web-bottom,255.255.255.224,100
+ shutdown,,Port-channel1.470,10.180.176.1,,external-web-bottom,255.255.255.224,100
+up,,Port-channel1.471,10.180.176.33,,internal-web-bottom,255.255.255.224,100
+up,,Port-channel1.478,10.180.177.1,,trading-app,255.255.255.0,100

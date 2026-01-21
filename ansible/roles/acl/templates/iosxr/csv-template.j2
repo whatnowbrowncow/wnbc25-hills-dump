@@ -1,0 +1,6 @@
+hostname,acl-name,seq number,action
+{% for item in access_lists %}
+{% for line in item.rules %}
+{{ inventory_hostname }},{{ item.name }},{{ line.line_no }},{{ line.rule }}
+{% endfor %}
+{% endfor %}

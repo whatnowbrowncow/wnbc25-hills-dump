@@ -1,0 +1,105 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+pl-krk-as01-f01,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+pl-krk-as01-f01,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+pl-krk-as01-f01,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+pl-krk-as01-f01,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+pl-krk-as01-f01,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+pl-krk-as01-f01,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+pl-krk-as01-f01,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+pl-krk-as01-f01,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+pl-krk-as01-f01,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+pl-krk-as01-f01,solarwinds-new,Standard,100,deny,,any log,,,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,10,permit,tcp,any,any,22
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,20,permit,tcp,any,any,465
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,30,permit,tcp,any,any,143
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,40,permit,tcp,any,any,993
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,50,permit,tcp,any,any,995
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,60,permit,tcp,any,any,1914
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,70,permit,tcp,any,any,ftp
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,80,permit,tcp,any,any,ftp-data
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,90,permit,tcp,any,any,smtp
+pl-krk-as01-f01,AutoQos-4.0-Acl-Bulk-Data,Extended,100,permit,tcp,any,any,pop3
+pl-krk-as01-f01,AutoQos-4.0-Acl-Default,Extended,10,permit,ip,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-MultiEnhanced-Conf,Extended,10,permit,udp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,10,permit,tcp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,20,permit,udp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,30,permit,tcp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,40,permit,tcp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,50,permit,tcp,any,any,1214
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,60,permit,udp,any,any,1214
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,70,permit,tcp,any,any,3689
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,80,permit,udp,any,any,3689
+pl-krk-as01-f01,AutoQos-4.0-Acl-Scavanger,Extended,90,permit,tcp,any,any,11999
+pl-krk-as01-f01,AutoQos-4.0-Acl-Signaling,Extended,10,permit,tcp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Signaling,Extended,20,permit,tcp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Signaling,Extended,30,permit,udp,any,any,
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,10,permit,tcp,any,any,443
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,20,permit,tcp,any,any,1521
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,30,permit,udp,any,any,1521
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,40,permit,tcp,any,any,1526
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,50,permit,udp,any,any,1526
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,60,permit,tcp,any,any,1575
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,70,permit,udp,any,any,1575
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,80,permit,tcp,any,any,1630
+pl-krk-as01-f01,AutoQos-4.0-Acl-Transactional-Data,Extended,90,permit,udp,any,any,1630
+pl-krk-as01-f01,1,Standard,10,permit,,10.120.163.210,,,
+pl-krk-as01-f01,1,Standard,20,permit,,10.1.74.66,,,
+pl-krk-as01-f01,1,Standard,30,permit,,10.112.12.126,,,
+pl-krk-as01-f01,1,Standard,40,permit,,10.112.12.125,,,
+pl-krk-as01-f01,1,Standard,50,permit,,10.180.163.18,,,
+pl-krk-as01-f01,1,Standard,60,permit,,10.120.163.151,,,
+pl-krk-as01-f01,1,Standard,70,permit,,10.210.163.60,,,
+pl-krk-as01-f01,1,Standard,80,permit,,10.120.163.152,,,
+pl-krk-as01-f01,1,Standard,90,permit,,10.1.74.29,,,
+pl-krk-as01-f01,1,Standard,100,permit,,10.120.163.143,,,
+pl-krk-as01-f01,1,Standard,110,permit,,10.120.163.142,,,
+pl-krk-as01-f01,1,Standard,120,permit,,10.112.13.17,,,
+pl-krk-as01-f01,1,Standard,130,permit,,10.1.74.48,,,
+pl-krk-as01-f01,1,Standard,140,permit,,10.1.74.57,,,
+pl-krk-as01-f01,1,Standard,150,permit,,10.1.74.61,,,
+pl-krk-as01-f01,1,Standard,160,permit,,10.120.163.123,,,
+pl-krk-as01-f01,1,Standard,170,permit,,10.120.163.122,,,
+pl-krk-as01-f01,1,Standard,180,permit,,10.120.195.31,,,
+pl-krk-as01-f01,1,Standard,190,permit,,10.120.143.70,,,
+pl-krk-as01-f01,1,Standard,200,permit,,10.1.74.128,,,
+pl-krk-as01-f01,1,Standard,210,permit,,10.180.142.230,,,
+pl-krk-as01-f01,1,Standard,220,permit,,10.112.12.144,,,
+pl-krk-as01-f01,1,Standard,230,permit,,10.120.163.37,,,
+pl-krk-as01-f01,1,Standard,240,permit,,10.112.12.142,,,
+pl-krk-as01-f01,1,Standard,250,permit,,10.112.12.143,,,
+pl-krk-as01-f01,1,Standard,260,permit,,10.1.82.64 0.0.0.31,,,
+pl-krk-as01-f01,1,Standard,270,permit,,10.1.22.0 0.0.0.255,,,
+pl-krk-as01-f01,1,Standard,280,permit,,192.168.2.0 0.0.1.255,,,
+pl-krk-as01-f01,1,Standard,290,permit,,10.210.141.40 0.0.0.7,,,
+pl-krk-as01-f01,1,Standard,300,permit,,10.180.141.40 0.0.0.7,,,
+pl-krk-as01-f01,1,Standard,310,permit,,10.120.141.40 0.0.0.7,,,
+pl-krk-as01-f01,1,Standard,320,permit,,100.79.0.0 0.0.127.255,,,
+pl-krk-as01-f01,1,Standard,330,deny,,any log,,,
+pl-krk-as01-f01,10,Standard,10,permit,,10.120.163.210,,,
+pl-krk-as01-f01,10,Standard,70,permit,,10.112.12.126,,,
+pl-krk-as01-f01,10,Standard,60,permit,,10.112.12.125,,,
+pl-krk-as01-f01,10,Standard,50,permit,,10.120.163.123,,,
+pl-krk-as01-f01,10,Standard,40,permit,,10.120.163.122,,,
+pl-krk-as01-f01,10,Standard,20,permit,,10.120.163.59,,,
+pl-krk-as01-f01,10,Standard,30,permit,,10.110.163.59,,,
+pl-krk-as01-f01,11,Standard,14,permit,,10.112.12.126,,,
+pl-krk-as01-f01,11,Standard,13,permit,,10.112.12.125,,,
+pl-krk-as01-f01,11,Standard,10,permit,,10.120.136.140,,,
+pl-krk-as01-f01,11,Standard,12,permit,,10.120.163.123,,,
+pl-krk-as01-f01,11,Standard,11,permit,,10.120.163.122,,,
+pl-krk-as01-f01,11,Standard,20,permit,,10.50.3.140,,,
+pl-krk-as01-f01,11,Standard,30,deny,,any log,,,
+pl-krk-as01-f01,12,Standard,10,permit,,10.220.163.112,,,
+pl-krk-as01-f01,12,Standard,20,permit,,10.220.163.111,,,
+pl-krk-as01-f01,12,Standard,30,permit,,10.180.163.112,,,
+pl-krk-as01-f01,12,Standard,40,permit,,10.180.163.111,,,
+pl-krk-as01-f01,12,Standard,50,permit,,10.120.163.112,,,
+pl-krk-as01-f01,12,Standard,60,permit,,10.110.163.111,,,
+pl-krk-as01-f01,12,Standard,70,permit,,10.110.163.112,,,
+pl-krk-as01-f01,12,Standard,80,permit,,10.120.163.111,,,
+pl-krk-as01-f01,12,Standard,90,deny,,any log,,,
+pl-krk-as01-f01,16,Standard,10,permit,,10.120.163.206,,,
+pl-krk-as01-f01,22,Standard,10,permit,,10.112.12.119,,,
+pl-krk-as01-f01,22,Standard,20,permit,,10.210.143.80,,,
+pl-krk-as01-f01,22,Standard,30,permit,,10.120.143.80,,,
+pl-krk-as01-f01,22,Standard,40,permit,,10.180.142.232,,,

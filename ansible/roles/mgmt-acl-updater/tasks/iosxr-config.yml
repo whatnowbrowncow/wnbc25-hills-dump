@@ -1,0 +1,44 @@
+---
+
+- name: IOS-XR - Setting the terminal length to 0
+  iosxr_command:   
+    commands:  
+      - "terminal length 0"
+
+- name: IOS-XR  - Retrieving the management ACL
+  iosxr_command:   
+    commands:  
+      - "show access-lists acl-management"
+  register: mgmtACL
+
+- name: IOS-XR - Ending the play for devices with no management ACL configured
+  meta: end_host
+  when: mgmtACL == ""
+
+- name: IOS-XR - Registering the sequence number of the explicit Deny statement
+  set_fact:
+    expDENYseqnum: "{{ mgmtACL.stdout[0] | regex_search('(?P<seqnum>\\d+)\\s+deny.*','\\g<seqnum>') }}"
+
+#- name: IOS-XR - Building configuration for testing purposes
+#  template:
+#    src: /gitnet/ansible/roles/mgmt-acl-updater/templates/config-template-iosxr.j2
+#    dest: /gitnet/ansible/roles/mgmt-acl-updater/files/configs/iosxr/{{ inventory_hostname }}.cfg
+
+- name: IOS-XR - Applying configuration
+  iosxr_config:
+    src: /gitnet/ansible/roles/mgmt-acl-updater/templates/config-template-iosxr.j2
+    before: 
+      - ipv4 access-list acl-management
+      - no {{ expDENYseqnum[0] }}
+    after:
+      - deny ipv4 any any log
+  register: aclUPDATED
+  notify: "updates exist"
+
+- name: IOS-XR - Resequencing the management ACL
+  iosxr_command:
+    commands:
+      - resequence access-list ipv4 acl-management 10 10
+  register: aclRESEQUENCED
+  notify: "updates exist"
+  when: aclUPDATED.changed

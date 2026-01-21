@@ -1,0 +1,79 @@
+---
+# Apply standard configuration to individual device
+
+# Collecting Facts for IOS Devices
+- name: "IOS - Gathering IOS Facts"
+  ios_facts:
+    gather_subset:
+      - config
+
+# Check for DHCP configuration and if not remove DHCP service
+- name: "IOS - Removing DHCP Service Config on relevent devices"
+  ios_config:
+    lines:
+      - no service dhcp
+  when: ("ip helper-address" not in ansible_net_config) and ("ip dhcp relay" not in ansible_net_config) and ("dhcp pool" not in ansible_net_config)
+  register: iosconfig
+  
+- name: Record Config
+  include_tasks: ./ios-report-output.yml
+
+# Check for Identd configuration and if not remove DHCP service
+- name: "IOS - Perfoming Service Hardening on for Router Specific Commands (identd)"
+  ios_config:
+    defaults: yes
+    lines:
+      - no ip identd
+  when: ("ip identd" in ansible_net_config)
+  register: iosconfig
+
+- name: Record Config
+  include_tasks: ./ios-report-output.yml
+
+# Check for IP Domain Lookup for diffrent deployments
+- name: "IOS - Removing IP Domain Lookup Service on relevent devices"
+  ios_config:
+    defaults: yes
+    lines:
+      - no ip domain lookup
+  when: ("no ip domain-lookup" not in ansible_net_config) and ("no ip domain lookup" not in ansible_net_config)
+  register: iosconfig
+
+- name: Record Config
+  include_tasks: ./ios-report-output.yml
+
+  # Check for IP bootp Lookup for diffrent deployments
+- name: "IOS - Removing IP Bootp Server on relevent devices"
+  ios_config:
+    defaults: yes
+    lines:
+      - no ip bootp server
+  when: ("ip bootp server" in ansible_net_config) and ("no ip bootp server" not in ansible_net_config)
+  register: iosconfig
+
+- name: Record Config
+  include_tasks: ./ios-report-output.yml
+
+- name: "IOS - Adding IP classless on relevent devices"
+  ios_config:
+    defaults: yes
+    lines:
+      - ip classless
+  when: ("no ip classless" in ansible_net_config)
+  register: iosconfig
+
+- name: Record Config
+  include_tasks: ./ios-report-output.yml
+
+  # Check for IP finger Lookup for diffrent deployments
+- name: "IOS - Removing IP finger Server on relevent devices"
+  ios_config:
+    defaults: yes
+    lines:
+      - no ip finger
+  when: ("ip finger" in ansible_net_config) and ("no ip finger" not in ansible_net_config)
+  register: iosconfig
+
+- name: Record Config
+  include_tasks: ./ios-report-output.yml
+

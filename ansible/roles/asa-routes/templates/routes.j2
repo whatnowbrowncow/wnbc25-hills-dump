@@ -1,0 +1,3 @@
+{% for route in item.routes %}
+route {{ route.next_hop_int }} {{ route.addr }} {{ route.netmask }} {{ route.next_hop_addr }} 1
+{% endfor %}

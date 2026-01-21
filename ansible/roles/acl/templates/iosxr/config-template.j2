@@ -1,0 +1,6 @@
+{% for item in access_lists %}
+ipv4 access-list {{ item.name }}
+{% for line in item.rules %}
+ {{ line.line_no }} {{ line.rule }}
+{% endfor %}
+{% endfor %}

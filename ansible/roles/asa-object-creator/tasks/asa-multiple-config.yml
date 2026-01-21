@@ -1,0 +1,55 @@
+---
+
+## Import the network_objects.yml file data and place in a varible called context_network_objects
+- name: Incude Context Network Vars - "{{ item.context }}"
+  include_vars:
+    file: "{{inventory_dir}}/host_vars/{{ inventory_hostname }}/contexts/{{ item.context }}/network_objects.yml"
+    name: context_network_objects
+
+## Import the svc_objects.yml file data and place in a varible called context_service_objects
+- name: Incude Context Service Vars - "{{ item.context }}"
+  include_vars:
+    file: "{{inventory_dir}}/host_vars/{{ inventory_hostname }}/contexts/{{ item.context }}/svc_objects.yml"
+    name: context_service_objects
+
+## Import the protocol_objects.yml file data and place in a varible called context_protocol_objects
+- name: Incude Context Service Vars - "{{ item.context }}"
+  include_vars:
+    file: "{{inventory_dir}}/host_vars/{{ inventory_hostname }}/contexts/{{ item.context }}/protocol_objects.yml"
+    name: context_protocol_objects
+  
+## Check the config directory exists in <role path>/files/<device name>/context/<context name>
+- name: ASA-MULTIPLE - "{{ item.context }}" - Create directory for config files if not present
+  file:
+    path: "{{ role_path }}/files/configs/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}"
+    state: directory
+
+## Create the ASA config for network objects and place in a file called network_objects.cfg in the relevent directory using the template
+- name: Build configuration network objects - "{{ item.context }}"
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/network-object-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}/network_objects.cfg"
+
+## Create the ASA config network object groups and place in a file called network_objects_groups.cfg in the relevent directory using the template
+- name: Build configuration network objects groups - "{{ item.context }}"
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/network-object-group-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}/network_objects_groups.cfg"
+
+## Create the ASA config for service objects and place in a file called service_objects.cfg in the relevent directory using the template
+- name: Build configuration service objects - "{{ item.context }}"
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/service-object-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}/service_objects.cfg"
+
+## Create the ASA config for service groups and place in a file called service_objects_groups.cfg in the relevent directory using the template    
+- name: Build configuration service objects - "{{ item.context }}"
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/service-object-group-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}/service_objects_groups.cfg"
+ 
+## Create the ASA config for protocol groups and place in a file called protocol_object_groups.cfg in the relevent directory using the template 
+- name: Build configuration protocol object groups - "{{ item.context }}"
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/protocol-object-group-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}/protocol-object-groups.cfg"

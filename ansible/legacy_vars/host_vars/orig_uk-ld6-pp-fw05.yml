@@ -1,0 +1,1125 @@
+---
+
+ansible_network_os: asa
+
+#Local version of syslog servers for testing
+syslog_svrs:
+  - 10.61.12.111
+  - 10.61.13.17
+
+
+interfaces:
+  - vlan: "30"
+  - vlan: "31"
+  - vlan: "140"
+  - vlan: "1105"
+  - vlan: "1106"
+  - vlan: "1107"
+  - vlan: "1108"
+  - vlan: "1609"
+  - vlan: "1610"
+  - vlan: "1611"
+  - vlan: "1612"
+  - vlan: "1613"
+  - vlan: "1614"
+  - vlan: "1615"
+  - vlan: "1616"
+  - vlan: "1617"
+  - vlan: "1618"
+  - vlan: "1619"
+  - vlan: "1630"
+  - vlan: "1631"
+  - vlan: "1632"
+  - vlan: "1633"
+  - vlan: "1634"
+  - vlan: "1635"
+  - vlan: "1640"
+  - vlan: "1641"
+  - vlan: "1642"
+  - vlan: "1643"
+  - vlan: "1644"
+  - vlan: "1645"
+  - vlan: "1646"
+  - vlan: "1647"
+  - vlan: "1648"
+  - vlan: "1649"
+  - vlan: "1650"
+ 
+contexts:
+  - context: "lab-production"
+    syslog_id: "internal-vrf"
+    syslog_interface: "internal-vrf"
+    vlans:
+      - vlan: "1609"
+        addr: "10.61.215.172"
+        netmask: "255.255.255.248"
+        cidr_mask: "29"
+        nameif: "internal-vrf"
+        sec_level: "100"
+      - vlan: "1610"
+        addr: "10.62.64.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "cde_ext-web"
+        sec_level: "100"
+      - vlan: "1611"
+        addr: "10.62.72.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "cde_int-web"
+        sec_level: "100"
+      - vlan: "1612"
+        addr: "10.62.80.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "cde_int-lb"
+        sec_level: "100"
+      - vlan: "1613"
+        addr: "10.62.88.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "cde_app"
+        sec_level: "100"
+      - vlan: "1614"
+        addr: "10.62.96.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "cde_db"
+        sec_level: "100"
+      - vlan: "1615"
+        addr: "10.62.128.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "ncde_ext-web"
+        sec_level: "100"
+      - vlan: "1616"
+        addr: "10.62.136.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "ncde_int-web"
+        sec_level: "100"
+      - vlan: "1617"
+        addr: "10.62.144.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "ncde_int-lb"
+        sec_level: "100"
+      - vlan: "1618"
+        addr: "10.62.152.1"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "ncde_app"
+        sec_level: "100"
+      - vlan: "1619"
+        addr: "10.62.160.2"
+        netmask: "255.255.248.0"
+        cidr_mask: "21"
+        nameif: "ncde_db"
+        sec_level: "100"
+    routes:
+      - addr: "0.0.0.0"
+        netmask: "0.0.0.0"
+        next_hop_addr: "10.61.215.171"
+        next_hop_int: "internal-vrf"
+        
+  - context: "lab-corp"
+    syslog_id: "internal-vrf"
+    syslog_interface: "internal-vrf"
+    vlans:
+      - vlan: "1640"
+        addr: "10.61.215.180"
+        netmask: "255.255.255.248"
+        cidr_mask: "29"
+        nameif: "internal-vrf"
+        sec_level: "100"
+      - vlan: "1641"
+        addr: "10.62.208.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "corp_ext-web"
+        sec_level: "100"
+      - vlan: "1642"
+        addr: "10.62.210.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "corp_int-web"
+        sec_level: "100"
+      - vlan: "1643"
+        addr: "10.62.212.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "corp_int-lb"
+        sec_level: "100"
+      - vlan: "1644"
+        addr: "10.62.214.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "corp_app"
+        sec_level: "100"
+      - vlan: "1645"
+        addr: "10.62.216.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "corp_db"
+        sec_level: "100"
+    routes:
+      - addr: "0.0.0.0"
+        netmask: "0.0.0.0"
+        next_hop_addr: "10.61.215.179"
+        next_hop_int: "internal-vrf"
+ 
+  - context: "lab-retail"
+    syslog_id: "internal-vrf"
+    syslog_interface: "internal-vrf"
+    vlans: 
+      - vlan: "1630"
+        addr: "10.61.215.164"
+        netmask: "255.255.255.248"
+        cidr_mask: "29"
+        nameif: "internal-vrf"
+        sec_level: "100"
+      - vlan: "1631"
+        addr: "10.62.192.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "retail_ext-web"
+        sec_level: "100"
+      - vlan: "1632"
+        addr: "10.62.194.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "retail_int-web"
+        sec_level: "100"
+      - vlan: "1633"
+        addr: "10.62.196.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "retail_int-lb"
+        sec_level: "100"
+      - vlan: "1634"
+        addr: "10.62.200.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "retail_production"
+        sec_level: "100"
+    routes:
+      - addr: "0.0.0.0"
+        netmask: "0.0.0.0"
+        next_hop_addr: "10.61.215.163"
+        next_hop_int: "internal-vrf"
+    
+  - context: "lab-cde-mgmt"
+    syslog_id: "internal-vrf"
+    syslog_interface: "core-services"
+    vlans:
+      - vlan: "1650"
+        addr: "10.61.215.196"
+        netmask: "255.255.255.248"
+        cidr_mask: "29"
+        nameif: "internal-vrf"
+        sec_level: "100"
+      - vlan: "30"
+        addr: "10.61.8.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "24"
+        nameif: "vsphere"
+        sec_level: "100"
+      - vlan: "2122"
+        addr: "10.61.10.1"
+        netmask: "255.255.254.0"
+        cidr_mask: "23"
+        nameif: "server-mgmt"
+        sec_level: "100"
+      - vlan: "2123"
+        addr: "10.61.13.1"
+        netmask: "255.255.255.0"
+        cidr_mask: "24"
+        nameif: "mano"
+        sec_level: "100"
+      - vlan: "2124"
+        addr: "10.61.12.1"
+        netmask: "255.255.255.0"
+        cidr_mask: "24"
+        nameif: "core-services"
+        sec_level: "100"
+      - vlan: "2125"
+        addr: "10.61.15.1"
+        netmask: "255.255.255.0"
+        cidr_mask: "24"
+        nameif: "jumphosts"
+        sec_level: "100"
+
+      
+    routes:
+      - addr: "0.0.0.0"
+        netmask: "0.0.0.0"
+        next_hop_addr: "10.61.215.195"
+        next_hop_int: "internal-vrf"
+        
+
+objects:
+#CDE network objects
+  - nameif: "cde_ext-web"
+    object_groups:
+      - name: "ob-ws"
+        type: network
+        ip_addr: "10.62.64.0"
+        netmask: "255.255.255.224"
+      - name: "cms-ws"
+        type: network
+        ip_addr: "10.62.64.32"
+        netmask: "255.255.255.224"
+      - name: "layer7"
+        type: network
+        ip_addr: "10.62.64.64"
+        netmask: "255.255.255.224"
+      - name: "cde-ext-proxy"
+        type: network
+        ip_addr: "10.62.64.96"
+        netmask: "255.255.255.224"
+      - name: "cde-sftp"
+        type: network
+        ip_addr: "10.62.64.128"
+        netmask: "255.255.255.224"
+  - nameif: "cde_int-web"
+    object_groups:
+      - name: "cde-backoffice"
+        type: network
+        ip_addr: "10.62.72.0"
+        netmask: "255.255.255.224"
+      - name: "international-backoffice"
+        type: network
+        ip_addr: "10.62.64.0"
+        netmask: "255.255.255.224"
+      - name: "ob-crypto-proxy"
+        type: network
+        ip_addr: "10.62.72.32"
+        netmask: "255.255.255.224"
+      - name: "ob-oxi-proxy"
+        type: network
+        ip_addr: "10.62.72.96"
+        netmask: "255.255.255.224"
+      - name: "ob-cde-proxy"
+        type: network
+        ip_addr: "10.62.72.128"
+        netmask: "255.255.255.224"
+      - name: "mobile-cde-proxy"
+        type: network
+        ip_addr: "10.62.72.160"
+        netmask: "255.255.255.224"
+  - nameif: "cde_int-lb"
+    object_groups:
+      - name: "cde-int-lb"
+        type: network
+        ip_addr: "10.62.80.0"
+        netmask: "255.255.255.224"
+  - nameif: "cde_app"
+    object_groups:
+      - name: "mobenga-app"
+        type: network
+        ip_addr: "10.62.88.0"
+        netmask: "255.255.255.224"
+      - name: "ob-app"
+        type: network
+        ip_addr: "10.62.92.0"
+        netmask: "255.255.255.0"
+  - nameif: "cde_db"
+    object_groups:
+      - name: "ob-db"
+        type: network
+        ip_addr: "10.62.96.0"
+        netmask: "255.255.255.224"
+      - name: "cms-db"
+        type: network
+        ip_addr: "10.62.96.32"
+        netmask: "255.255.255.224"
+##NCDE network objects
+  - nameif: "ncde_ext-web"
+    object_groups:
+      - name: "ob-push"
+        type: network
+        ip_addr: "10.62.128.0"
+        netmask: "255.255.255.224"
+      - name: "sportsbook-wdc"
+        type: network
+        ip_addr: "10.62.128.32"
+        netmask: "255.255.255.224"
+      - name: "sportsbook-ws"
+        type: network
+        ip_addr: "10.62.128.64"
+        netmask: "255.255.255.224"
+      - name: "ncde-ext-proxy"
+        type: network
+        ip_addr: "10.62.128.96"
+        netmask: "255.255.255.224"
+      - name: "sportsbook-push"
+        type: network
+        ip_addr: "10.62.128.128"
+        netmask: "255.255.255.224"
+      - name: "mgs-ext-ws"
+        type: network
+        ip_addr: "10.62.128.160"
+        netmask: "255.255.255.224"
+      - name: "vegas-gameservers"
+        type: network
+        ip_addr: "10.62.128.192"
+        netmask: "255.255.255.224"
+      - name: "ncde-sftp"
+        type: network
+        ip_addr: "10.62.128.224"
+        netmask: "255.255.255.224"
+      - name: "php-ws"
+        type: network
+        ip_addr: "10.62.129.0"
+        netmask: "255.255.255.224"
+      - name: "mobenga-push"
+        type: network
+        ip_addr: "10.62.129.32"
+        netmask: "255.255.255.224"
+      - name: "gaming-ws"
+        type: network
+        ip_addr: "10.62.129.64"
+        netmask: "255.255.255.224"
+  - nameif: "ncde_int-web"
+    object_groups:
+      - name: "ncde-backoffice"
+        type: network
+        ip_addr: "10.62.136.0"
+        netmask: "255.255.255.224"
+      - name: "ncde-ob-oxi-proxy"
+        type: network
+        ip_addr: "10.62.136.32"
+        netmask: "255.255.255.224"
+      - name: "sportsbook-ob-proxy"
+        type: network
+        ip_addr: "10.62.136.64"
+        netmask: "255.255.255.224"
+      - name: "gaming-ob-proxy"
+        type: network
+        ip_addr: "10.62.136.96"
+        netmask: "255.255.255.224"
+      - name: "trading-ob-proxy"
+        type: network
+        ip_addr: "10.62.136.128"
+        netmask: "255.255.255.224"
+      - name: "retail-ob-proxy"
+        type: network
+        ip_addr: "10.62.136.160"
+        netmask: "255.255.255.224"
+      - name: "payments-ob-proxy"
+        type: network
+        ip_addr: "10.62.136.192"
+        netmask: "255.255.255.224"
+      - name: "international-ob-proxy"
+        type: network
+        ip_addr: "10.62.136.224"
+        netmask: "255.255.255.224"
+      - name: "sportsbook-acc-payments-proxy"
+        type: network
+        ip_addr: "10.62.137.0"
+        netmask: "255.255.255.224"
+      - name: "sportsbook-acc-sso-proxy"
+        type: network
+        ip_addr: "10.62.137.32"
+        netmask: "255.255.255.224"
+      - name: "mgs-backoffice"
+        type: network
+        ip_addr: "10.62.137.64"
+        netmask: "255.255.255.224"
+      - name: "marketing-ob-proxy"
+        type: network
+        ip_addr: "10.62.137.96"
+        netmask: "255.255.255.224"
+      - name: "datamgmt-ob-proxy"
+        type: network
+        ip_addr: "10.62.137.128"
+        netmask: "255.255.255.224"
+      - name: "crm-php-ws"
+        type: network
+        ip_addr: "10.62.137.160"
+        netmask: "255.255.255.224"
+      - name: "mars-backoffice"
+        type: network
+        ip_addr: "10.62.137.192"
+        netmask: "255.255.255.224"
+  - nameif: "ncde_int-lb"
+    object_groups:
+      - name: "ncde-int-lb"
+        type: network
+        ip_addr: "10.62.144.0"
+        netmask: "255.255.255.224"
+  - nameif: "ncde_app"
+    object_groups:
+      - name: "sportsbook-activemq"
+        type: network
+        ip_addr: "10.62.152.0"
+        netmask: "255.255.255.224"
+      - name: "gaming-activemq"
+        type: network
+        ip_addr: "10.62.152.32"
+        netmask: "255.255.255.224"
+      - name: "service-layer"
+        type: network
+        ip_addr: "10.62.152.64"
+        netmask: "255.255.255.224"
+      - name: "sportsbook-api"
+        type: network
+        ip_addr: "10.62.152.96"
+        netmask: "255.255.255.224"
+      - name: "gaming-api"
+        type: network
+        ip_addr: "10.62.152.128"
+        netmask: "255.255.255.224"
+      - name: "international-memcache"
+        type: network
+        ip_addr: "10.62.152.160"
+        netmask: "255.255.255.224"
+      - name: "international-terracotta"
+        type: network
+        ip_addr: "10.62.152.192"
+        netmask: "255.255.255.224"
+      - name: "archive-log-servers"
+        type: network
+        ip_addr: "10.62.152.224"
+        netmask: "255.255.255.224"
+      - name: "vegas-rng"
+        type: network
+        ip_addr: "10.62.153.0"
+        netmask: "255.255.255.224"
+      - name: "virtual-sports-rng"
+        type: network
+        ip_addr: "10.62.153.32"
+        netmask: "255.255.255.224"
+      - name: "authpro"
+        type: network
+        ip_addr: "10.62.153.64"
+        netmask: "255.255.255.224"
+      - name: "crd"
+        type: network
+        ip_addr: "10.62.153.96"
+        netmask: "255.255.255.224"
+      - name: "mgs-app"
+        type: network
+        ip_addr: "10.62.153.128"
+        netmask: "255.255.255.224"
+      - name: "datamgmt-app"
+        type: network
+        ip_addr: "10.62.153.160"
+        netmask: "255.255.255.224"
+      - name: "ob-app"
+        type: network
+        ip_addr: "10.62.156.0"
+        netmask: "255.255.255.0"
+      - name: "featurespace"
+        type: network
+        ip_addr: "10.62.157.0"
+        netmask: "255.255.255.0"
+  - nameif: "ncde_db"
+    object_groups:
+      - name: "vegas-db"
+        type: network
+        ip_addr: "10.62.160.0"
+        netmask: "255.255.255.224"
+      - name: "bonuswallet-db"
+        type: network
+        ip_addr: "10.62.160.32"
+        netmask: "255.255.255.224"
+      - name: "cas-db"
+        type: network
+        ip_addr: "10.62.160.64"
+        netmask: "255.255.255.224"
+      - name: "trading-db"
+        type: network
+        ip_addr: "10.62.160.96"
+        netmask: "255.255.255.224"
+      - name: "general-db"
+        type: network
+        ip_addr: "10.62.160.128"
+        netmask: "255.255.255.224"
+      - name: "uno-db"
+        type: network
+        ip_addr: "10.62.160.160"
+        netmask: "255.255.255.224"
+
+## Retail network objects:
+  - nameif: "retail_ext-web"
+    object_groups:
+      - name: "tote-collectors"
+        type: network
+        ip_addr: "10.62.192.0"
+        netmask: "255.255.255.224"
+      - name: "sis-collectors"
+        type: network
+        ip_addr: "10.62.192.32"
+        netmask: "255.255.255.224"
+      - name: "pa-collectors"
+        type: network
+        ip_addr: "10.62.192.64"
+        netmask: "255.255.255.224"
+      - name: "vr_admin"
+        type: network
+        ip_addr: "10.62.192.96"
+        netmask: "255.255.255.224"
+      - name: "broadcast-data"
+        type: network
+        ip_addr: "10.62.192.128"
+        netmask: "255.255.255.224"
+  - nameif: "retail_int-web"
+    object_groups:
+      - name: "polling-servers"
+        type: network
+        ip_addr: "10.62.194.0"
+        netmask: "255.255.255.224"
+      - name: "rdb-servers"
+        type: network
+        ip_addr: "10.62.194.32"
+        netmask: "255.255.255.224"
+      - name: "active-directory"
+        type: network
+        ip_addr: "10.62.194.64"
+        netmask: "255.255.255.224"
+      - name: "liability-web"
+        type: network
+        ip_addr: "10.62.194.96"
+        netmask: "255.255.255.224"
+      - name: "backoffice"
+        type: network
+        ip_addr: "10.62.194.128"
+        netmask: "255.255.255.224"
+      - name: "symantec-web"
+        type: network
+        ip_addr: "10.62.194.160"
+        netmask: "255.255.255.224"
+      - name: "altiris"
+        type: network
+        ip_addr: "10.62.194.192"
+        netmask: "255.255.255.224"
+      - name: "till_jumphosts"
+        type: network
+        ip_addr: "10.62.194.224"
+        netmask: "255.255.255.224"
+      - name: "tda-web"
+        type: network
+        ip_addr: "10.62.195.0"
+        netmask: "255.255.255.224"
+      - name: "rtp-servers"
+        type: network
+        ip_addr: "10.62.195.32"
+        netmask: "255.255.255.224"
+  - nameif: "retail_int-lb"
+    object_groups:
+      - name: "r_int-lb"
+        type: network
+        ip_addr: "10.62.196.0"
+        netmask: "255.255.255.0"
+  - nameif: "retail_production"
+    object_groups:
+      - name: "ces"
+        type: network
+        ip_addr: "10.62.200.0"
+        netmask: "255.255.255.224"
+      - name: "serial-repeaters"
+        type: network
+        ip_addr: "10.62.200.32"
+        netmask: "255.255.255.224"
+      - name: "virtual-epos"
+        type: network
+        ip_addr: "10.62.200.64"
+        netmask: "255.255.255.224"
+      - name: "liability"
+        type: network
+        ip_addr: "10.62.200.96"
+        netmask: "255.255.255.224"
+      - name: "tps"
+        type: network
+        ip_addr: "10.62.200.128"
+        netmask: "255.255.255.224"
+      - name: "symantec"
+        type: network
+        ip_addr: "10.62.200.160"
+        netmask: "255.255.255.224"
+      - name: "virtual-racing"
+        type: network
+        ip_addr: "10.62.200.192"
+        netmask: "255.255.255.224"
+      - name: "tda"
+        type: network
+        ip_addr: "10.62.200.224"
+        netmask: "255.255.255.224"
+      - name: "retail-sftp"
+        type: network
+        ip_addr: "10.62.201.0"
+        netmask: "255.255.255.224"
+      - name: "retail-elk"
+        type: network
+        ip_addr: "10.62.201.32"
+        netmask: "255.255.255.224"
+      - name: "omni-services"
+        type: network
+        ip_addr: "10.62.201.64"
+        netmask: "255.255.255.224"
+    
+## Corporate network objects:
+  - nameif: "corp_int-lb"
+    object_groups:
+      - name: "corp_int-lb"
+        type: network
+        ip_addr: "10.62.212.0"
+        netmask: "255.255.255.0"
+
+## CDE mgmt network objects:
+  - nameif: "cde-mgmt"
+    object_groups:
+      - name: "vsphere"
+        type: network
+        ip_addr: "10.112.8.0"
+        netmask: "255.255.254.0"
+      - name: "server-mgmt"
+        type: network
+        ip_addr: "10.112.10.0"
+        netmask: "255.255.254.0"
+      - name: "core-services"
+        type: network
+        ip_addr: "10.112.12.0"
+        netmask: "255.255.255.0"
+      - name: "mano"
+        type: network
+        ip_addr: "10.112.13.0"
+        netmask: "255.255.255.0"
+      - name: "jumphosts"
+        type: network
+        ip_addr: "10.112.15.0"
+        netmask: "255.255.255.0"
+      - name: "cde_storage-data"
+        type: network
+        ip_addr: "10.112.46.0"
+        netmask: "255.255.255.128"
+
+## Internal-vrf network objects:
+  - nameif: "internal-vrf"
+    object_groups:
+      - name: "infoblox"
+        type: network
+        ip_addr: "10.112.208.0"
+        netmask: "255.255.255.224"
+      - name: "build"
+        type: network
+        ip_addr: "10.112.209.0"
+        netmask: "255.255.255.0"
+      - name: "ext-pres"
+        type: network
+        ip_addr: "10.112.216.0"
+        netmask: "255.255.248.0"
+      - name: "ncde_jumphosts"
+        type: network
+        ip_addr: "10.112.210.0"
+        netmask: "255.255.255.0"
+      - name: "ncde_storage-data"
+        type: network
+        ip_addr: "10.112.214.0"
+        netmask: "255.255.255.128"
+      
+      
+remove_objects:
+#CDE network objects
+  - name: "ob-ws"
+    type: network
+    ip_addr: "10.62.64.0"
+    netmask: "255.255.255.224"
+  - name: "cms-ws"
+    type: network
+    ip_addr: "10.62.64.32"
+    netmask: "255.255.255.224"
+  - name: "layer7"
+    type: network
+    ip_addr: "10.62.64.64"
+    netmask: "255.255.255.224"
+  - name: "cde-ext-proxy"
+    type: network
+    ip_addr: "10.62.64.96"
+    netmask: "255.255.255.224"
+  - name: "cde-sftp"
+    type: network
+    ip_addr: "10.62.64.128"
+    netmask: "255.255.255.224"
+  - name: "cde-backoffice"
+    type: network
+    ip_addr: "10.62.72.0"
+    netmask: "255.255.255.224"
+  - name: "international-backoffice"
+    type: network
+    ip_addr: "10.62.64.0"
+    netmask: "255.255.255.224"
+  - name: "ob-crypto-proxy"
+    type: network
+    ip_addr: "10.62.72.32"
+    netmask: "255.255.255.224"
+  - name: "ob-oxi-proxy"
+    type: network
+    ip_addr: "10.62.72.96"
+    netmask: "255.255.255.224"
+  - name: "ob-cde-proxy"
+    type: network
+    ip_addr: "10.62.72.128"
+    netmask: "255.255.255.224"
+  - name: "mobile-cde-proxy"
+    type: network
+    ip_addr: "10.62.72.160"
+    netmask: "255.255.255.224"
+  - name: "cde-int-lb"
+    type: network
+    ip_addr: "10.62.80.0"
+    netmask: "255.255.255.224"
+  - name: "mobenga-app"
+    type: network
+    ip_addr: "10.62.88.0"
+    netmask: "255.255.255.224"
+  - name: "ob-app"
+    type: network
+    ip_addr: "10.62.92.0"
+    netmask: "255.255.255.0"
+  - name: "ob-db"
+    type: network
+    ip_addr: "10.62.96.0"
+    netmask: "255.255.255.224"
+  - name: "cms-db"
+    type: network
+    ip_addr: "10.62.96.32"
+    netmask: "255.255.255.224"
+#NCDE network objects
+  - name: "ob-push"
+    type: network
+    ip_addr: "10.62.128.0"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-wdc"
+    type: network
+    ip_addr: "10.62.128.32"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-ws"
+    type: network
+    ip_addr: "10.62.128.64"
+    netmask: "255.255.255.224"
+  - name: "ncde-ext-proxy"
+    type: network
+    ip_addr: "10.62.128.96"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-push"
+    type: network
+    ip_addr: "10.62.128.128"
+    netmask: "255.255.255.224"
+  - name: "mgs-ext-ws"
+    type: network
+    ip_addr: "10.62.128.160"
+    netmask: "255.255.255.224"
+  - name: "vegas-gameservers"
+    type: network
+    ip_addr: "10.62.128.192"
+    netmask: "255.255.255.224"
+  - name: "ncde-sftp"
+    type: network
+    ip_addr: "10.62.128.224"
+    netmask: "255.255.255.224"
+  - name: "php-ws"
+    type: network
+    ip_addr: "10.62.129.0"
+    netmask: "255.255.255.224"
+  - name: "mobenga-push"
+    type: network
+    ip_addr: "10.62.129.32"
+    netmask: "255.255.255.224"
+  - name: "gaming-ws"
+    type: network
+    ip_addr: "10.62.129.64"
+    netmask: "255.255.255.224"
+  - name: "ncde-backoffice"
+    type: network
+    ip_addr: "10.62.136.0"
+    netmask: "255.255.255.224"
+  - name: "ncde-ob-oxi-proxy"
+    type: network
+    ip_addr: "10.62.136.32"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-ob-proxy"
+    type: network
+    ip_addr: "10.62.136.64"
+    netmask: "255.255.255.224"
+  - name: "gaming-ob-proxy"
+    type: network
+    ip_addr: "10.62.136.96"
+    netmask: "255.255.255.224"
+  - name: "trading-ob-proxy"
+    type: network
+    ip_addr: "10.62.136.128"
+    netmask: "255.255.255.224"
+  - name: "retail-ob-proxy"
+    type: network
+    ip_addr: "10.62.136.160"
+    netmask: "255.255.255.224"
+  - name: "payments-ob-proxy"
+    type: network
+    ip_addr: "10.62.136.192"
+    netmask: "255.255.255.224"
+  - name: "international-ob-proxy"
+    type: network
+    ip_addr: "10.62.136.224"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-acc-payments-proxy"
+    type: network
+    ip_addr: "10.62.137.0"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-acc-sso-proxy"
+    type: network
+    ip_addr: "10.62.137.32"
+    netmask: "255.255.255.224"
+  - name: "mgs-backoffice"
+    type: network
+    ip_addr: "10.62.137.64"
+    netmask: "255.255.255.224"
+  - name: "marketing-ob-proxy"
+    type: network
+    ip_addr: "10.62.137.96"
+    netmask: "255.255.255.224"
+  - name: "datamgmt-ob-proxy"
+    type: network
+    ip_addr: "10.62.137.128"
+    netmask: "255.255.255.224"
+  - name: "crm-php-ws"
+    type: network
+    ip_addr: "10.62.137.160"
+    netmask: "255.255.255.224"
+  - name: "mars-backoffice"
+    type: network
+    ip_addr: "10.62.137.192"
+    netmask: "255.255.255.224"
+  - name: "ncde-int-lb"
+    type: network
+    ip_addr: "10.62.144.0"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-activemq"
+    type: network
+    ip_addr: "10.62.152.0"
+    netmask: "255.255.255.224"
+  - name: "gaming-activemq"
+    type: network
+    ip_addr: "10.62.152.32"
+    netmask: "255.255.255.224"
+  - name: "service-layer"
+    type: network
+    ip_addr: "10.62.152.64"
+    netmask: "255.255.255.224"
+  - name: "sportsbook-api"
+    type: network
+    ip_addr: "10.62.152.96"
+    netmask: "255.255.255.224"
+  - name: "gaming-api"
+    type: network
+    ip_addr: "10.62.152.128"
+    netmask: "255.255.255.224"
+  - name: "international-memcache"
+    type: network
+    ip_addr: "10.62.152.160"
+    netmask: "255.255.255.224"
+  - name: "international-terracotta"
+    type: network
+    ip_addr: "10.62.152.192"
+    netmask: "255.255.255.224"
+  - name: "archive-log-servers"
+    type: network
+    ip_addr: "10.62.152.224"
+    netmask: "255.255.255.224"
+  - name: "vegas-rng"
+    type: network
+    ip_addr: "10.62.153.0"
+    netmask: "255.255.255.224"
+  - name: "virtual-sports-rng"
+    type: network
+    ip_addr: "10.62.153.32"
+    netmask: "255.255.255.224"
+  - name: "authpro"
+    type: network
+    ip_addr: "10.62.153.64"
+    netmask: "255.255.255.224"
+  - name: "crd"
+    type: network
+    ip_addr: "10.62.153.96"
+    netmask: "255.255.255.224"
+  - name: "mgs-app"
+    type: network
+    ip_addr: "10.62.153.128"
+    netmask: "255.255.255.224"
+  - name: "datamgmt-app"
+    type: network
+    ip_addr: "10.62.153.160"
+    netmask: "255.255.255.224"
+  - name: "featurespace"
+    type: network
+    ip_addr: "10.62.157.0"
+    netmask: "255.255.255.0"
+  - name: "vegas-db"
+    type: network
+    ip_addr: "10.62.160.0"
+    netmask: "255.255.255.224"
+  - name: "bonuswallet-db"
+    type: network
+    ip_addr: "10.62.160.32"
+    netmask: "255.255.255.224"
+  - name: "cas-db"
+    type: network
+    ip_addr: "10.62.160.64"
+    netmask: "255.255.255.224"
+  - name: "trading-db"
+    type: network
+    ip_addr: "10.62.160.96"
+    netmask: "255.255.255.224"
+  - name: "general-db"
+    type: network
+    ip_addr: "10.62.160.128"
+    netmask: "255.255.255.224"
+  - name: "uno-db"
+    type: network
+    ip_addr: "10.62.160.160"
+    netmask: "255.255.255.224"
+# Retail network objects:
+  - name: "tote-collectors"
+    type: network
+    ip_addr: "10.62.192.0"
+    netmask: "255.255.255.224"
+  - name: "sis-collectors"
+    type: network
+    ip_addr: "10.62.192.32"
+    netmask: "255.255.255.224"
+  - name: "pa-collectors"
+    type: network
+    ip_addr: "10.62.192.64"
+    netmask: "255.255.255.224"
+  - name: "vr_admin"
+    type: network
+    ip_addr: "10.62.192.96"
+    netmask: "255.255.255.224"
+  - name: "broadcast-data"
+    type: network
+    ip_addr: "10.62.192.128"
+    netmask: "255.255.255.224"
+  - name: "polling-servers"
+    type: network
+    ip_addr: "10.62.194.0"
+    netmask: "255.255.255.224"
+  - name: "rdb-servers"
+    type: network
+    ip_addr: "10.62.194.32"
+    netmask: "255.255.255.224"
+  - name: "active-directory"
+    type: network
+    ip_addr: "10.62.194.64"
+    netmask: "255.255.255.224"
+  - name: "liability"
+    type: network
+    ip_addr: "10.62.194.96"
+    netmask: "255.255.255.224"
+  - name: "backoffice"
+    type: network
+    ip_addr: "10.62.194.128"
+    netmask: "255.255.255.224"
+  - name: "symantec"
+    type: network
+    ip_addr: "10.62.194.160"
+    netmask: "255.255.255.224"
+  - name: "altiris"
+    type: network
+    ip_addr: "10.62.194.192"
+    netmask: "255.255.255.224"
+  - name: "till_jumphosts"
+    type: network
+    ip_addr: "10.62.194.224"
+    netmask: "255.255.255.224"
+  - name: "tda"
+    type: network
+    ip_addr: "10.62.195.0"
+    netmask: "255.255.255.224"
+  - name: "rtp-servers"
+    type: network
+    ip_addr: "10.62.195.32"
+    netmask: "255.255.255.224"
+  - name: "r_int-lb"
+    type: network
+    ip_addr: "10.62.195.0"
+    netmask: "255.255.255.0"
+  - name: "ces"
+    type: network
+    ip_addr: "10.62.200.0"
+    netmask: "255.255.255.224"
+  - name: "serial-repeaters"
+    type: network
+    ip_addr: "10.62.200.32"
+    netmask: "255.255.255.224"
+  - name: "virtual-epos"
+    type: network
+    ip_addr: "10.62.200.64"
+    netmask: "255.255.255.224"
+  - name: "tps"
+    type: network
+    ip_addr: "10.62.200.128"
+    netmask: "255.255.255.224"
+  - name: "virtual-racing"
+    type: network
+    ip_addr: "10.62.200.192"
+    netmask: "255.255.255.224"
+  - name: "retail-sftp"
+    type: network
+    ip_addr: "10.62.201.0"
+    netmask: "255.255.255.224"
+  - name: "retail-elk"
+    type: network
+    ip_addr: "10.62.201.32"
+    netmask: "255.255.255.224"
+  - name: "omni-services"
+    type: network
+    ip_addr: "10.62.201.64"
+    netmask: "255.255.255.224"
+    
+# Corporate network objects:
+  - name: "corp_int-lb"
+    type: network
+    ip_addr: "10.62.212.0"
+    netmask: "255.255.255.0"
+
+# CDE mgmt network objects:
+  - name: "vsphere"
+    type: network
+    ip_addr: "10.112.8.0"
+    netmask: "255.255.254.0"
+  - name: "server-mgmt"
+    type: network
+    ip_addr: "10.112.10.0"
+    netmask: "255.255.254.0"
+  - name: "core-services"
+    type: network
+    ip_addr: "10.112.12.0"
+    netmask: "255.255.255.0"
+  - name: "mano"
+    type: network
+    ip_addr: "10.112.13.0"
+    netmask: "255.255.255.0"
+  - name: "citrix-netscaler"
+    type: network
+    ip_addr: "10.112.14.0"
+    netmask: "255.255.255.0"
+  - name: "jumphosts"
+    type: network
+    ip_addr: "10.112.15.0"
+    netmask: "255.255.255.0"
+  - name: "storage-data"
+    type: network
+    ip_addr: "10.112.46.0"
+    netmask: "255.255.255.128"
+  
+## Core system objects
+##  - name: "ld6dc01"
+##    type: host
+##    ip_addr: "10.19.2.21"
+#
+#object_groups:
+#  - name: "test1"
+#    network_objects:
+#      - "ob-push"
+#      - "sportsbook-wdc"

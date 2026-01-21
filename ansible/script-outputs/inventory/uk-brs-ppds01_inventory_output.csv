@@ -1,0 +1,13 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-brs-ppds01,AC power supply,Power supply 1,N55-PAC-750W,ART184410XY,V02
+uk-brs-ppds01,AC power supply,Power supply 2,N55-PAC-750W,ART18451048,V02
+uk-brs-ppds01,Fabric Extender Module,FEX 103 Module 1,N2K-C2248TP-1GE,FOC18475MW7,V04
+uk-brs-ppds01,O2 Non L3 Daughter Card,Module 3,N55-DL2,FOC18479NQX,V02
+uk-brs-ppds01,O2 32X10GE/Modular Universal Platform Supervisor,Module 1,N5K-C5548UP,FOC18483GPF,V01
+uk-brs-ppds01,N2K-C2248TP-1GE  CHASSIS,FEX 103 CHASSIS,N2K-C2248TP-1GE,FOX1847G00B,V04
+uk-brs-ppds01,Fabric Extender AC power supply,FEX 103 Power Supply 1,N2200-PAC-400W,LIT18411B9A,V05
+uk-brs-ppds01,Fabric Extender AC power supply,FEX 103 Power Supply 2,N2200-PAC-400W,LIT18420F86,V05
+uk-brs-ppds01,Fabric Extender Fan module,FEX 103 Fan 1,N2K-C2248-FAN,N/A,N/A
+uk-brs-ppds01,Chassis fan module,Fan 1,N5548P-FAN,N/A,N/A
+uk-brs-ppds01,Chassis fan module,Fan 2,N5548P-FAN,N/A,N/A
+uk-brs-ppds01,Nexus5548 Chassis,Chassis,N5K-C5548UP,SSI183706JS,V01

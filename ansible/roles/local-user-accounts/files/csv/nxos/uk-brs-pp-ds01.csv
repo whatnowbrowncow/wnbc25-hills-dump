@@ -1,0 +1,4 @@
+hostname,username,password,encryption,role
+uk-brs-pp-ds01,admin,$1$VjMLu9qq$J5tI8M9QFsl7PVkjwRWZx0,5,network-admin
+uk-brs-pp-ds01,netsec,$1$SVAWWepy$VD1UZ7Kz.hPwVBpIps5IM/,5,network-admin
+uk-brs-pp-ds01,netadmin,$1$OGyeDZSN$.JsrMHVL.LKUGMDjkBAh4/,5,network-admin

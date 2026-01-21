@@ -1,0 +1,4 @@
+ip access-list {{ aclNAME[0] }}
+{% for item in aclMATCH %}
+ no {{ item[1] }}
+{% endfor %}

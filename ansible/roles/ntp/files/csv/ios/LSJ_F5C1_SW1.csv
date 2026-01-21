@@ -1,0 +1,4 @@
+hostname,ip address,vrf,preferred,source interface
+LSJ_F5C1_SW1,10.1.28.100,,no,Vlan99
+LSJ_F5C1_SW1,10.100.9.109,,no,Vlan99
+LSJ_F5C1_SW1,10.1.6.175,,yes,Vlan99

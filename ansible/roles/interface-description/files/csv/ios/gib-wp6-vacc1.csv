@@ -1,0 +1,9 @@
+hostname,local_interface,remote_device_description
+gib-wp6-vacc1,FastEthernet1/0/10,no_data_in_cdp
+gib-wp6-vacc1,FastEthernet5/0/1,no_data_in_cdp
+gib-wp6-vacc1,FastEthernet5/0/3,no_data_in_cdp
+gib-wp6-vacc1,FastEthernet5/0/19,no_data_in_cdp
+gib-wp6-vacc1,FastEthernet5/0/21,no_data_in_cdp
+gib-wp6-vacc1,FastEthernet5/0/44,no_data_in_cdp
+gib-wp6-vacc1,FastEthernet5/0/46,no_data_in_cdp
+gib-wp6-vacc1,FastEthernet5/0/48,no_data_in_cdp

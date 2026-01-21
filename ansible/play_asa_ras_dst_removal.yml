@@ -1,0 +1,7 @@
+- name: PLAY - RAS DST Unused Removal
+  hosts: ras
+  connection: network_cli
+  gather_facts: yes
+
+  roles:
+    - asa-ras-dst-removal

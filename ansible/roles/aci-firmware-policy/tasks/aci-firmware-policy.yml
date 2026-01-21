@@ -1,0 +1,65 @@
+---
+
+- name: "(1/6) Creates the firmware policy and assigns the firmware version"
+  aci_firmware_policy:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}" 
+    name: "{{ firmware_group }}"
+    version: "{{ firmware_version }}"
+    state: present    
+    validate_certs: no
+
+- name: "(2/6) Creates the firmware group and associates the firmware policy"
+  aci_firmware_group:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    group: "{{ firmware_group }}"
+    firmwarepol: "{{ firmware_group }}"
+    state: present    
+    validate_certs: no
+
+- name: "(3/6) Associates fabric nodes with the firmware group"
+  aci_firmware_group_node:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    group: "{{ firmware_group }}"
+    node: "{{ item.node_id }}"
+    state: present    
+    validate_certs: no
+  with_items: "{{ fabric_nodes }}"  
+
+- name: "(4/6) Creates the maintenance policy"
+  aci_maintenance_policy:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    name: "{{ item.name }}"
+    scheduler: "{{ item.sched }}"
+    state: present
+    validate_certs: no
+  with_items: "{{ maint_groups }}" 
+
+- name: "(5/6) Creates the maintenance groups"
+  aci_maintenance_group:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    group: "{{ item.name }}"
+    policy: "{{ item.name }}"
+    state: present    
+    validate_certs: no
+  with_items: "{{ maint_groups }}" 
+
+- name: "(6/6) Associates fabric nodes with each maintenance group"
+  aci_maintenance_group_node:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    group: "{{ item.maint_group }}"
+    node: "{{ item.node_id }}"
+    state: present    
+    validate_certs: no
+  with_items: "{{ fabric_nodes }}" 

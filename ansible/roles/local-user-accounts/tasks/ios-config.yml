@@ -1,0 +1,19 @@
+---
+
+- name: IOS - Configure local user accounts with privilege defined
+  ios_config:
+    lines:
+      - username {{ item.username }} privilege {{ item.privilege }} secret {{ item.encryption }} {{ item.password_string }}  
+  with_items:
+    - "{{ local_user_accounts }}"
+  when: 
+    - "item.privilege != ''"
+
+- name: IOS - Configure local user accounts with privilege undefined
+  ios_config:
+    lines:
+      - username {{ item.username }} secret {{ item.encryption }} {{ item.password_string }}  
+  with_items:
+    - "{{ local_user_accounts }}"
+  when: 
+    - "item.privilege == ''"

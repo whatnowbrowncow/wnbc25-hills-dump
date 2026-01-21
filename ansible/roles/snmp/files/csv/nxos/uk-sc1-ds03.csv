@@ -1,0 +1,7 @@
+hostname,community,role,access-list
+uk-sc1-ds03,5&prU$pAtu!H,network-operator,acl-solarwinds
+uk-sc1-ds03,$n0Wd5c4nN3r,network-operator,servicenow-discovery
+uk-sc1-ds03,whM0n1T0r,network-operator,SNMP-CACTI-ACCESS
+uk-sc1-ds03,5wUxlDGU,network-operator,solarwinds-new
+uk-sc1-ds03,wh1LLc0rp,network-admin,SNMP-NCS-ACCESS
+uk-sc1-ds03,md9IGovWFs,network-admin,hp-oneview

@@ -1,0 +1,109 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/4,Chassis 1 Transceiver Te1/4/4,X2-10GB-SR,AGA1444XVFD,V04
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/2,Chassis 1 Transceiver Te1/4/2,X2-10GB-SR,AGA1444XVFJ,V04
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/1,Chassis 1 Transceiver Te1/4/1,X2-10GB-SR,AGA1444XZWX,V04
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/3,Chassis 2 Transceiver Te2/4/3,X2-10GB-SR,AGA1444XZXX,V04
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/8,Chassis 1 Transceiver Te1/4/8,X2-10GB-SR,AGA1444XZYF,V04
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/1,Chassis 2 Transceiver Te2/4/1,X2-10GB-SR,AGA1445X02Z,V04
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/7,Chassis 1 Transceiver Te1/4/7,X2-10GB-SR,AGA1445X0B5,V04
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/6,Chassis 1 Transceiver Te1/4/6,X2-10GB-SR,AGA1445X0B6,V04
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/3,Chassis 1 Transceiver Te1/4/3,X2-10GB-SR,AGA1445X0B9,V04
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/4,Chassis 2 Transceiver Te2/4/4,X2-10GB-SR,AGA1445X0CE,V04
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/5,Chassis 1 Transceiver Te1/4/5,X2-10GB-SR,AGA1445X0CF,V04
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/2,Chassis 2 Transceiver Te2/4/2,X2-10GB-SR,AGA1445X0CG,V04
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/5,Chassis 2 Transceiver Te2/4/5,X2-10GB-SR,AGA1628X01B,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/7,Chassis 2 Transceiver Te2/4/7,X2-10GB-SR,AGA1628X03F,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/8,Chassis 2 Transceiver Te2/4/8,X2-10GB-SR,AGA1628X1JZ,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/6,Chassis 2 Transceiver Te2/4/6,X2-10GB-SR,AGA1629X1YK,V06
+uk-brs-cs01,Chassis 1 AC power supply,Chassis 1 PS 1 WS-CAC-6000W,WS-CAC-6000W,ART1924F077,V06
+uk-brs-cs01,Chassis 1 AC power supply,Chassis 1 PS 2 WS-CAC-6000W,WS-CAC-6000W,ART1924F07G,V06
+uk-brs-cs01,Chassis 2 AC power supply,Chassis 2 PS 2 WS-CAC-6000W,WS-CAC-6000W,ART1924F07J,V06
+uk-brs-cs01,Chassis 2 AC power supply,Chassis 2 PS 1 WS-CAC-6000W,WS-CAC-6000W,ART1924F07V,V06
+uk-brs-cs01,Chassis 2 Enhanced 9-slot Fan Tray 1,Chassis 2 WS-C6509-E-FAN 1,WS-C6509-E-FAN,DCH11271642,V03
+uk-brs-cs01,Chassis 1 Enhanced 9-slot Fan Tray 1,Chassis 1 WS-C6509-E-FAN 1,WS-C6509-E-FAN,DCH11453820,V03
+uk-brs-cs01,Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/1,Chassis 2 Transceiver Te2/1/1,XENPAK-10GB-SR,FNS14450C8R,none
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/1,Chassis 1 Transceiver Te1/3/1,X2-10GB-SR,FNS19100T09,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/2,Chassis 1 Transceiver Te1/3/2,X2-10GB-SR,FNS19100T0L,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/3,Chassis 1 Transceiver Te1/3/3,X2-10GB-SR,FNS19100T0P,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/4,Chassis 1 Transceiver Te1/3/4,X2-10GB-SR,FNS19100T0S,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/7,Chassis 1 Transceiver Te1/3/7,X2-10GB-SR,FNS19100Y47,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/8,Chassis 1 Transceiver Te1/3/8,X2-10GB-SR,FNS19100Y4J,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/6,Chassis 1 Transceiver Te1/3/6,X2-10GB-SR,FNS19100Y8P,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/5,Chassis 1 Transceiver Te1/3/5,X2-10GB-SR,FNS19100Y8Z,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/4,Chassis 2 Transceiver Te2/3/4,X2-10GB-SR,FNS19101GZH,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/2,Chassis 2 Transceiver Te2/3/2,X2-10GB-SR,FNS19101H57,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/3,Chassis 2 Transceiver Te2/3/3,X2-10GB-SR,FNS19101H58,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/1,Chassis 2 Transceiver Te2/3/1,X2-10GB-SR,FNS19101H5A,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/6,Chassis 2 Transceiver Te2/3/6,X2-10GB-SR,FNS19111F1F,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/5,Chassis 2 Transceiver Te2/3/5,X2-10GB-SR,FNS19111F1W,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/7,Chassis 2 Transceiver Te2/3/7,X2-10GB-SR,FNS19111F5S,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/8,Chassis 2 Transceiver Te2/3/8,X2-10GB-SR,FNS19111F64,V06
+uk-brs-cs01,Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/1,Chassis 1 Transceiver Te1/1/1,XENPAK-10GB-SR,ONT114800BX,V01
+uk-brs-cs01,Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/4,Chassis 2 Transceiver Te2/1/4,XENPAK-10GB-SR,ONT114800JL,V01
+uk-brs-cs01,Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/2,Chassis 1 Transceiver Te1/1/2,XENPAK-10GB-SR,ONT114800JW,V01
+uk-brs-cs01,Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/3,Chassis 1 Transceiver Te1/1/3,XENPAK-10GB-SR,ONT114800K1,V01
+uk-brs-cs01,Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/3,Chassis 2 Transceiver Te2/1/3,XENPAK-10GB-SR,ONT114800MU,V01
+uk-brs-cs01,Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/2,Chassis 2 Transceiver Te2/1/2,XENPAK-10GB-SR,ONT114800P1,V01
+uk-brs-cs01,Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/4,Chassis 1 Transceiver Te1/1/4,XENPAK-10GB-SR,ONT114800U8,V01
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/4,Chassis 2 Transceiver Te2/5/4,X2-10GB-SR,ONT1635039D,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/5,Chassis 1 Transceiver Te1/5/5,X2-10GB-SR,ONT1635041G,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/4,Chassis 1 Transceiver Te1/5/4,X2-10GB-SR,ONT163504QE,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/5,Chassis 2 Transceiver Te2/5/5,X2-10GB-SR,ONT16350643,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/3,Chassis 2 Transceiver Te2/7/3,X2-10GB-SR,ONT19190087,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/6,Chassis 1 Transceiver Te1/7/6,X2-10GB-SR,ONT1919008R,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/2,Chassis 1 Transceiver Te1/7/2,X2-10GB-SR,ONT191900XF,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/1,Chassis 2 Transceiver Te2/7/1,X2-10GB-SR,ONT19190142,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/1,Chassis 1 Transceiver Te1/7/1,X2-10GB-SR,ONT1919014H,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/8,Chassis 2 Transceiver Te2/7/8,X2-10GB-SR,ONT191901NJ,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/4,Chassis 1 Transceiver Te1/7/4,X2-10GB-SR,ONT192000PC,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/5,Chassis 2 Transceiver Te2/7/5,X2-10GB-SR,ONT1920011F,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/3,Chassis 1 Transceiver Te1/7/3,X2-10GB-SR,ONT1920017A,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/7,Chassis 1 Transceiver Te1/7/7,X2-10GB-SR,ONT1920017B,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/2,Chassis 2 Transceiver Te2/7/2,X2-10GB-SR,ONT192001L6,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/5,Chassis 1 Transceiver Te1/7/5,X2-10GB-SR,ONT19210015,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/6,Chassis 2 Transceiver Te2/7/6,X2-10GB-SR,ONT1921002F,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/4,Chassis 2 Transceiver Te2/7/4,X2-10GB-SR,ONT1921002G,V06
+uk-brs-cs01,Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/8,Chassis 1 Transceiver Te1/7/8,X2-10GB-SR,ONT1921004L,V06
+uk-brs-cs01,Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/7,Chassis 2 Transceiver Te2/7/7,X2-10GB-SR,ONT1921004W,V06
+uk-brs-cs01,Chassis 2 ACE20-MOD-K9 1 ports Application Control Engine Module Rev. 2.3,Chassis 2 2,ACE20-MOD-K9,SAD1202074Y,V02
+uk-brs-cs01,Chassis 1 ACE20-MOD-K9 1 ports Application Control Engine Module Rev. 2.3,Chassis 1 2,ACE20-MOD-K9,SAD1202078F,V02
+uk-brs-cs01,Chassis 2 WS-F6700-CFC Centralized Forwarding Card Rev. 3.1,Chassis 2 WS-F6700-CFC Centralized Forwarding Card sub-module of 9,WS-F6700-CFC,SAL1125S02H,V04
+uk-brs-cs01,Chassis 2 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 2.6,Chassis 2 9,WS-X6748-GE-TX,SAL1126SEMM,V02
+uk-brs-cs01,Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.0,Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 1,WS-F6700-CFC,SAL1201BQEF,V05
+uk-brs-cs01,Chassis 1 WS-X6704-10GE CEF720 4 port 10-Gigabit Ethernet Rev. 2.6,Chassis 1 1,WS-X6704-10GE,SAL1201BTYY,V02
+uk-brs-cs01,Chassis 2 WS-X6704-10GE CEF720 4 port 10-Gigabit Ethernet Rev. 2.6,Chassis 2 1,WS-X6704-10GE,SAL1201BTZW,V02
+uk-brs-cs01,Chassis 1 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 2.7,Chassis 1 9,WS-X6748-GE-TX,SAL1201C5FL,V02
+uk-brs-cs01,Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.0,Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 9,WS-F6700-CFC,SAL1201C5V9,V05
+uk-brs-cs01,Chassis 2 WS-F6700-CFC Centralized Forwarding Card Rev. 4.0,Chassis 2 WS-F6700-CFC Centralized Forwarding Card sub-module of 1,WS-F6700-CFC,SAL1201C85P,V05
+uk-brs-cs01,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.4,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 4,WS-F6700-DFC3C,SAL1445ZALN,V03
+uk-brs-cs01,Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 2.2,Chassis 2 4,WS-X6708-10GE,SAL14470H3Z,V08
+uk-brs-cs01,Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 2.2,Chassis 1 4,WS-X6708-10GE,SAL14470KT9,V08
+uk-brs-cs01,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.4,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 4,WS-F6700-DFC3C,SAL14480RBS,V03
+uk-brs-cs01,Chassis 1 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 4.5,Chassis 1 8,WS-X6748-GE-TX,SAL15013ZL6,V06
+uk-brs-cs01,Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.1,Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 8,WS-F6700-CFC,SAL15014953,V06
+uk-brs-cs01,Chassis 1 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 5.1,Chassis 1 msfc sub-module of 5,VS-F6K-MSFC3,SAL1547W6C9,V06
+uk-brs-cs01,Chassis 2 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 5.1,Chassis 2 msfc sub-module of 5,VS-F6K-MSFC3,SAL1549X032,V06
+uk-brs-cs01,Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.1,Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5,VS-F6K-PFC3C,SAL1549X9RU,V01
+uk-brs-cs01,Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.1,Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5,VS-F6K-PFC3C,SAL1549XBG6,V01
+uk-brs-cs01,Chassis 1 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 4.1,Chassis 1 5,VS-S720-10G,SAL1550XPAP,V06
+uk-brs-cs01,Chassis 2 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 4.1,Chassis 2 5,VS-S720-10G,SAL1550XPAY,V06
+uk-brs-cs01,Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9,Chassis 1 3,WS-X6708-10GE,SAL18464815,V12
+uk-brs-cs01,Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9,Chassis 2 3,WS-X6708-10GE,SAL1911B3E9,V12
+uk-brs-cs01,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 3,WS-F6700-DFC3C,SAL1911B8RW,V04
+uk-brs-cs01,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 3,WS-F6700-DFC3C,SAL1918EBUJ,V04
+uk-brs-cs01,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 7,WS-F6700-DFC3C,SAL1948TRDE,V04
+uk-brs-cs01,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 7,WS-F6700-DFC3C,SAL1948TRFG,V04
+uk-brs-cs01,Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9,Chassis 2 7,WS-X6708-10GE,SAL1948TW1P,V12
+uk-brs-cs01,Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9,Chassis 1 7,WS-X6708-10GE,SAL1948TW3P,V12
+uk-brs-cs01,Chassis 1 Cisco Systems Catalyst 6500 9-slot Chassis System,Chassis 1 WS-C6509-E,WS-C6509-E,SMC1148003R,V04
+uk-brs-cs01,Chassis 2 Cisco Systems Catalyst 6500 9-slot Chassis System,Chassis 2 WS-C6509-E,WS-C6509-E,SMG1128N2KQ,V04
+uk-brs-cs01,Chassis 2 OSR-7600 Clock FRU 1,Chassis 2 CLK-7600 1,CLK-7600,SMT1118E827,none
+uk-brs-cs01,Chassis 2 OSR-7600 Clock FRU 2,Chassis 2 CLK-7600 2,CLK-7600,SMT1118E827,none
+uk-brs-cs01,Chassis 2 VTT-E FRU 2,Chassis 2 WS-C6K-VTT-E 2,WS-C6K-VTT-E,SMT1120F234,none
+uk-brs-cs01,Chassis 2 VTT-E FRU 1,Chassis 2 WS-C6K-VTT-E 1,WS-C6K-VTT-E,SMT1120F236,none
+uk-brs-cs01,Chassis 2 VTT-E FRU 3,Chassis 2 WS-C6K-VTT-E 3,WS-C6K-VTT-E,SMT1120F250,none
+uk-brs-cs01,Chassis 1 OSR-7600 Clock FRU 1,Chassis 1 CLK-7600 1,CLK-7600,SMT1136F704,none
+uk-brs-cs01,Chassis 1 OSR-7600 Clock FRU 2,Chassis 1 CLK-7600 2,CLK-7600,SMT1136F704,none
+uk-brs-cs01,Chassis 1 VTT-E FRU 2,Chassis 1 WS-C6K-VTT-E 2,WS-C6K-VTT-E,SMT1140A977,none
+uk-brs-cs01,Chassis 1 VTT-E FRU 3,Chassis 1 WS-C6K-VTT-E 3,WS-C6K-VTT-E,SMT1140B133,none
+uk-brs-cs01,Chassis 1 VTT-E FRU 1,Chassis 1 WS-C6K-VTT-E 1,WS-C6K-VTT-E,SMT1140B148,none

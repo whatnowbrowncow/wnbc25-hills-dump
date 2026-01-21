@@ -1,0 +1,5 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+ shutdown,,Port-channel1.382,10.180.161.129,,monitoring-int,255.255.255.224,100
+up,,Port-channel1.383,10.180.161.164,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.398,10.180.162.1,,build-network,255.255.255.0,100
+up,,Port-channel1.399,10.180.163.1,,monitoring,255.255.255.0,100

@@ -1,0 +1,96 @@
+---
+
+- name: Configure time and date settings
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/format-default.json"
+    content:
+      {
+        "datetimeFormat": {
+          "attributes": {
+            "dn": "uni/fabric/format-default",
+            "displayFormat": "local",
+            "tz": "{{ timezone }}",
+            "showOffset": "enabled"
+          },
+          "children": []
+        }
+      }
+    validate_certs: no
+
+- name: Create NTP pod policy
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/time-POD{{ pod_id }}.json"
+    content:
+      {
+        "datetimePol": {
+          "attributes": {
+            "dn": "uni/fabric/time-POD{{ pod_id }}",
+            "name": "POD{{ pod_id }}",
+            "rn": "time-POD{{ pod_id }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }
+    validate_certs: no
+
+- name: Add NTP servers to pod policy
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/time-POD{{ pod_id }}/ntpprov-{{ item.ip_addr }}.json"
+    content:
+      {
+        "datetimeNtpProv": {
+          "attributes": {
+            "dn": "uni/fabric/time-POD{{ pod_id }}/ntpprov-{{ item.ip_addr }}",
+            "name": "{{ item.ip_addr }}",
+            "descr": "{{ item.description }}",
+            "preferred": "{{ item.preferred }}",
+            "rn": "ntpprov-{{ item.ip_addr }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "datetimeRsNtpProvToEpg": {
+                "attributes": {
+                  "tDn": "uni/tn-mgmt/mgmtp-default/oob-default",
+                  "status": "created,modified"
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ ntp_servers }}"
+
+- name: Apply NTP pod policy to pod policy group
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/funcprof/podpgrp-POD{{ pod_id }}/rsTimePol.json"
+    content:
+      {
+        "fabricRsTimePol": {
+          "attributes": {
+            "tnDatetimePolName": "POD{{ pod_id }}"
+          },
+          "children": []
+        }
+      }
+    validate_certs: no

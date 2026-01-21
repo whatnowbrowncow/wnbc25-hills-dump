@@ -1,0 +1,26 @@
+---
+
+#- name: debug loop list
+#  debug:
+#    msg: "The context is {{ item.context }}"
+#  with_items:
+#    - "{{ contexts }}"
+    
+    
+#- name: debug loop list
+#  debug:
+#    msg: "The output is {{ context_item.context }} and {{ item.name }}"
+#  with_items:
+#    - "{{ objects }}"
+
+
+- name: "Build objects on context {{ context_item.context }}"
+  asa_config:
+    lines:
+      #- "object network ld6-{{ item.name }}"
+      - "subnet {{ item.ip_addr }} {{ item.netmask }}"
+    parents: ["object network ld6-{{ item.name }}"]
+    match: line
+    context: "{{ context_item.context }}"
+  with_items:
+    - "{{ objects }}"

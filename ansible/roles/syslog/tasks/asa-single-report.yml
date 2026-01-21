@@ -1,0 +1,25 @@
+---
+
+- name: ASA-SINGLE - collect syslog info
+  asa_command:
+    commands:
+      - show run | inc logging
+  register: asa_single_syslog_output
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=iosxr_syslog_output
+
+- name: ASA-SINGLE - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_syslog.yml
+    content: "{{ asa_single_syslog_output.stdout.0 }}"
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=syslog_server_facts
+
+- name: ASA-SINGLE - Generate csv report
+  template:
+    src: /gitnet/ansible/roles/syslog/templates/asa_single/csv-template.j2
+    dest: /gitnet/ansible/roles/syslog/files/csv/asa_single/{{ inventory_hostname }}.csv

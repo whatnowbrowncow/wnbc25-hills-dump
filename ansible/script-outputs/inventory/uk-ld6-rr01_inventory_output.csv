@@ -1,0 +1,11 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-ld6-rr01,GE SX,subslot 0/1 transceiver 0,N/A,FNS1026H4KW,0000
+uk-ld6-rr01,GE SX,subslot 0/0 transceiver 0,GLC-SX-MMD,FNS21340V3J,A
+uk-ld6-rr01,Cisco ASR1001 Route Processor,module R0,ASR1001,JAE182006D9,V03
+uk-ld6-rr01,Cisco ASR1001 AC Power Supply,Power Supply Module 1,ASR1001-PWR-AC,MP51732032L,V02
+uk-ld6-rr01,Cisco ASR1001 AC Power Supply,Power Supply Module 0,ASR1001-PWR-AC,MP517320381,V02
+uk-ld6-rr01,2-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/1,SPA-2X1GE-V2,SAL1646SLXY,V01
+uk-ld6-rr01,Cisco ASR1001 Chassis w/o IDC,Chassis,ASR1001,SSI181008CR,V03
+uk-ld6-rr01,4-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/0,ASR1001,none,none
+uk-ld6-rr01,Cisco ASR1001 SPA Interface Processor,module 0,ASR1001,none,none
+uk-ld6-rr01,Cisco ASR1001 Embedded Services Processor,module F0,ASR1001,none,none

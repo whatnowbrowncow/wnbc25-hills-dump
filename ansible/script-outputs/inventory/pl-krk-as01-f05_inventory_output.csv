@@ -1,0 +1,10 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+pl-krk-as01-f05,SFP-10GBase-SR,TenGigabitEthernet3/1/3,SFP-10G-SR,AVD212490BC,V03
+pl-krk-as01-f05,SFP-10GBase-SR,TenGigabitEthernet1/1/3,SFP-10G-SR,AVD212490CH,V03
+pl-krk-as01-f05,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,DCB2050BFVL,V03
+pl-krk-as01-f05,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,DCB2050BFVZ,V03
+pl-krk-as01-f05,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,DCB2050BFW1,V03
+pl-krk-as01-f05,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2046E1Q2,V04
+pl-krk-as01-f05,c36xx Stack,c36xx Stack,WS-C3650-48PD,FDO2046E1Q2,V04
+pl-krk-as01-f05,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2046E1QF,V04
+pl-krk-as01-f05,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2046Q0NY,V04

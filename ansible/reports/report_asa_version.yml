@@ -1,0 +1,59 @@
+---
+
+  - name: Play 1 - Collect ASA version information
+    hosts: asa
+    connection: network_cli
+    gather_facts: no
+    
+    tasks:
+    
+      - name: Collect version info for multiple mode ASA devices
+        asa_command:
+          commands:
+            - "show version | in Adaptive"
+          context: system
+        register: multi_asa_versions
+        when: context_mode == "multiple"
+          
+      - name: Collect version info for single mode ASA devices
+        asa_command:
+          commands:
+            - "show version | in Adaptive"
+        register: single_asa_versions
+        when: context_mode == "single"
+
+      - name: Set multiple mode facts
+        set_fact:
+          version: "{{ multi_asa_versions.stdout[0].split()[-2] }}"
+        when: context_mode == "multiple"
+
+      - name: Set single mode facts
+        set_fact:
+          version: "{{ single_asa_versions.stdout[0].split()[-1] }}"
+        when: context_mode == "single"
+
+#      - name: Output version fact
+#        debug:
+#          msg: "Device: {{ inventory_hostname }}, ASA version: {{ version }}"
+
+#      - name: Output ASA version info to files
+#        template:
+#          src: ./templates/asa_versions.j2
+#          dest: ./reports/asa/version_info/{{ inventory_hostname }}_versions.md
+
+#      - name: Generate ASA version report
+#        assemble:
+#          src: ./reports/asa/version_info/
+#          dest: ./reports/asa_versions.md
+#        run_once: true
+
+      - name: Write info to report
+        copy:
+          content: |
+            | Device | ASA Version |
+            |-----|-----|
+            {% for device in groups['asa'] %}
+            | {{ device }} | {{ hostvars[device].version }} |
+            {% endfor %}
+          dest: ./reports/asa_versions.md
+        run_once: true

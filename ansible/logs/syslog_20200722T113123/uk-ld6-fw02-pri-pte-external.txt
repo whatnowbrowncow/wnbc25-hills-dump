@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: uk-ld6-fw02-pri-pte-external @ 20200722T113123 ---!
+!
+logging host outside 10.112.12.111
+!
+!--- END UPDATES: uk-ld6-fw02-pri-pte-external @ 20200722T113123 ---!
+}

@@ -1,0 +1,65 @@
+---
+
+- name: Import Network Parser role
+  include_role:
+    name: ansible-network.network-engine
+
+#- name: IOS - ACL CSV reporting task
+#  include_tasks: ./ios-report.yml
+#  when: ansible_network_os == "ios"
+#
+#- name: IOS - ACL YAML creation task
+#  include_tasks: ./ios-yaml.yml
+#  when: ansible_network_os == "ios"
+
+#- name: IOS - ACL configuration task
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios"
+
+#- name: IOS-XR - ACL CSV reporting task
+#  include_tasks: ./iosxr-report.yml
+#  when: ansible_network_os == "iosxr"  
+#
+#- name: IOS-XR - ACL YAML creation task
+#  include_tasks: ./iosxr-yaml.yml
+#  when: ansible_network_os == "iosxr"
+
+#- name: IOS-XR - ACL configuration task
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"
+
+#- name: NX-OS - ACL CSV reporting task
+#  include_tasks: ./nxos-report.yml
+#  when: ansible_network_os == "nxos"
+#
+#- name: NX-OS - ACL YAML creation task
+#  include_tasks: ./nxos-yaml.yml
+#  when: ansible_network_os == "nxos"
+
+#- name: NX-OS - ACL configuration task
+#  include_tasks: ./nxos-config.yml
+#  when: ansible_network_os == "nxos"
+
+#- name: ASA-SINGLE - ACL CSV reporting task
+#  include_tasks: ./asa-single-report.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+#
+#- name: ASA-SINGLE - ACL YAML creation task
+#  include_tasks: ./asa-single-yaml.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+#- name: ASA-SINGLE - ACL configuration task
+#  include_tasks: ./asa-single-config.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+#- name: ASA-MULTIPLE -  ACL CSV reporting task
+#  include_tasks: ./asa-multiple-report.yml
+#  with_items:
+#    - "{{ contexts }}"
+#  when: ansible_network_os == "asa" and context_mode == "multiple"
+#
+#- name: ASA-MULTIPLE -  ACL YAML creation task
+#  include_tasks: ./asa-multiple-yaml.yml
+#  with_items:
+#    - "{{ contexts }}"
+#  when: ansible_network_os == "asa" and context_mode == "multiple"

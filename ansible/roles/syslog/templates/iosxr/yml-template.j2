@@ -1,0 +1,5 @@
+---
+
+syslog_vrf: "{{ syslog_server_facts[0].syslog_servers.vrf }}"
+syslog_src_int: "{{ syslog_source_facts[0].syslog_source.interface }}"
+syslog_src_int_vrf: "{{ syslog_source_facts[0].syslog_source.vrf }}"

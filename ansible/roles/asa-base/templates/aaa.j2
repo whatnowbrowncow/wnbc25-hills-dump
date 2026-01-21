@@ -1,0 +1,15 @@
+aaa-server WH-ACS-TACACS protocol tacacs+
+{% for svr in acs_svrs %}
+aaa-server WH-ACS-TACACS (management) host {{ svr }}
+{% endfor %}
+aaa authentication ssh console WH-ACS-TACACS LOCAL
+aaa authentication enable console WH-ACS-TACACS LOCAL
+aaa authentication http console WH-ACS-TACACS LOCAL
+aaa authentication serial console WH-ACS-TACACS LOCAL
+aaa authentication telnet console WH-ACS-TACACS LOCAL
+aaa accounting enable console WH-ACS-TACACS
+aaa accounting serial console WH-ACS-TACACS
+aaa accounting ssh console WH-ACS-TACACS
+aaa accounting command WH-ACS-TACACS
+aaa accounting telnet console WH-ACS-TACACS
+aaa authorization exec authentication-server auto-enable

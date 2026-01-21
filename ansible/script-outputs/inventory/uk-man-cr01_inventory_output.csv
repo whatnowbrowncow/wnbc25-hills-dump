@@ -1,0 +1,14 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-man-cr01,GE T,subslot 0/2 transceiver 3,N/A,AGM16432046,B2
+uk-man-cr01,GE T,subslot 0/0 transceiver 0,N/A,AGM1840258T,B2
+uk-man-cr01,GE T,subslot 0/2 transceiver 2,N/A,AGM1840259L,B2
+uk-man-cr01,Cisco ASR1002 AC Power Supply,Power Supply Module 0,ASR1002-PWR-AC,ART1633U03Z,V03
+uk-man-cr01,Cisco ASR1002 AC Power Supply,Power Supply Module 1,ASR1002-PWR-AC,ART1633U04M,V03
+uk-man-cr01,GE SX,subslot 0/2 transceiver 0,SFP-GE-S,FNS16311LBP,B
+uk-man-cr01,Cisco ASR1002 Chassis,Chassis,ASR1002,FOX1629GYLS,V05
+uk-man-cr01,5-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/2,SPA-5X1GE-V2,JAE15270GVQ,V02
+uk-man-cr01,Cisco ASR1002 Route Processor 1,module R0,ASR1002-RP1,JAE163701NA,V05
+uk-man-cr01,Cisco ASR1000 Embedded Services Processor,module F0,ASR1000-ESP10,JAE163706JQ,V05
+uk-man-cr01,GE T,subslot 0/0 transceiver 1,N/A,MTC161801SA,E
+uk-man-cr01,4-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/0,4XGE-BUILT-IN,none,none
+uk-man-cr01,Cisco ASR1002 SPA Interface Processor 10,module 0,ASR1002-SIP10,none,none

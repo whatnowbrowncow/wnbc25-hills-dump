@@ -1,0 +1,14 @@
+Port-channel21.3041: {admin-state: up, interface: Port-channel21.3041, ip-add: 10.214.145.1,
+  nameif: proxy-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3042: {admin-state: up, interface: Port-channel21.3042, ip-add: 10.214.146.1,
+  nameif: applications-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3043: {admin-state: up, interface: Port-channel21.3043, ip-add: 10.214.147.1,
+  nameif: applications2-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3044: {admin-state: up, interface: Port-channel21.3044, ip-add: 10.214.148.1,
+  nameif: backoffice-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3045: {admin-state: up, interface: Port-channel21.3045, ip-add: 10.214.149.1,
+  nameif: ODS-mgmt-servers, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3066: {admin-state: up, interface: Port-channel21.3066, ip-add: 10.214.159.129,
+  nameif: ODS-mgmt, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3076: {admin-state: up, interface: Port-channel21.3076, ip-add: 10.214.160.196,
+  nameif: pp2on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

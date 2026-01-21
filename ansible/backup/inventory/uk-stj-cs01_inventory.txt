@@ -1,0 +1,182 @@
+NAME: "Switch1 System", DESCR: "Cisco Systems, Inc. WS-C4500X-32 2 slot switch "
+PID:                   , VID:      , SN: JAE21460301
+
+NAME: "Switch1 Supervisor 1 (virtual slot 1)", DESCR: "4500X-32 10GE (SFP+)"
+PID: WS-C4500X-32      , VID: V06  , SN: JAE21460301
+
+NAME: "TenGigabitEthernet1/1/1", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD21249PBS
+
+NAME: "TenGigabitEthernet1/1/2", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: JUR1925G8L5
+
+NAME: "TenGigabitEthernet1/1/3", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS19480050
+
+NAME: "TenGigabitEthernet1/1/4", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: AGJ1808R5YB
+
+NAME: "TenGigabitEthernet1/1/5", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22309EAV
+
+NAME: "TenGigabitEthernet1/1/6", DESCR: "10GBase-CU-5M"
+PID: SFP-H10GB-CU5M    , VID: V03  , SN: LRM213991RF
+
+NAME: "TenGigabitEthernet1/1/7", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD223399XK
+
+NAME: "TenGigabitEthernet1/1/8", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: AGJ1808R52L
+
+NAME: "TenGigabitEthernet1/1/9", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS164201JC
+
+NAME: "TenGigabitEthernet1/1/10", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS16431L6D
+
+NAME: "TenGigabitEthernet1/1/11", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS16441KQR
+
+NAME: "TenGigabitEthernet1/1/12", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD1932ABFH
+
+NAME: "TenGigabitEthernet1/1/13", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD223399X3
+
+NAME: "TenGigabitEthernet1/1/14", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V04  , SN: FNS17031L4L
+
+NAME: "TenGigabitEthernet1/1/15", DESCR: "1000BaseT"
+PID: GLC-T             , VID:      , SN: 00000MTC162501HE
+
+NAME: "TenGigabitEthernet1/1/16", DESCR: "1000BaseT"
+PID: GLC-T             , VID: V03  , SN: AGM170121NZ
+
+NAME: "TenGigabitEthernet1/1/17", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS19480676
+
+NAME: "TenGigabitEthernet1/1/18", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: MTC2121023Z
+
+NAME: "TenGigabitEthernet1/1/19", DESCR: "10GBase-CU-5M"
+PID: SFP-H10GB-CU5M    , VID: V03  , SN: LRM21399243
+
+NAME: "TenGigabitEthernet1/1/20", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: MTC212101D4
+
+NAME: "TenGigabitEthernet1/1/21", DESCR: "10GBase-CU-5M"
+PID: SFP-H10GB-CU5M    , VID: V03  , SN: LRM2139923Y
+
+NAME: "TenGigabitEthernet1/1/22", DESCR: "1000BaseSX"
+PID: Unspecified       , VID:      , SN: AGM1532L38Y
+
+NAME: "TenGigabitEthernet1/1/23", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: MTC2121027T
+
+NAME: "TenGigabitEthernet1/1/25", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2027A5MD
+
+NAME: "TenGigabitEthernet1/1/26", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: ACW22290HRE
+
+NAME: "TenGigabitEthernet1/1/30", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: OPM22380SB5
+
+NAME: "Switch1 Power Supply 1", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: QCS21383E7S
+
+NAME: "Switch1 Power Supply 2", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: QCS21383EHH
+
+NAME: "Switch2 System", DESCR: "Cisco Systems, Inc. WS-C4500X-32 2 slot switch "
+PID:                   , VID:      , SN: JAE214602ZS
+
+NAME: "Switch2 Supervisor 1 (virtual slot 11)", DESCR: "4500X-32 10GE (SFP+)"
+PID: WS-C4500X-32      , VID: V06  , SN: JAE214602ZS
+
+NAME: "TenGigabitEthernet2/1/1", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2125993D
+
+NAME: "TenGigabitEthernet2/1/2", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD21249PD2
+
+NAME: "TenGigabitEthernet2/1/3", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS19480059
+
+NAME: "TenGigabitEthernet2/1/4", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS1920059Z
+
+NAME: "TenGigabitEthernet2/1/5", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22309EA8
+
+NAME: "TenGigabitEthernet2/1/6", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS16441KTE
+
+NAME: "TenGigabitEthernet2/1/7", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD223399WP
+
+NAME: "TenGigabitEthernet2/1/8", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS16431L07
+
+NAME: "TenGigabitEthernet2/1/9", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS19090387
+
+NAME: "TenGigabitEthernet2/1/10", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS16431KXQ
+
+NAME: "TenGigabitEthernet2/1/11", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS16440MPN
+
+NAME: "TenGigabitEthernet2/1/12", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: JUR1925G8LC
+
+NAME: "TenGigabitEthernet2/1/13", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD223399X5
+
+NAME: "TenGigabitEthernet2/1/14", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS16210Z3H
+
+NAME: "TenGigabitEthernet2/1/15", DESCR: "1000BaseT"
+PID: GLC-T             , VID: V03  , SN: AGM19054E3W
+
+NAME: "TenGigabitEthernet2/1/16", DESCR: "1000BaseT"
+PID: GLC-T             , VID: V03  , SN: MTC180706ND
+
+NAME: "TenGigabitEthernet2/1/17", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS19480071
+
+NAME: "TenGigabitEthernet2/1/18", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: MTC212101CH
+
+NAME: "TenGigabitEthernet2/1/19", DESCR: "10GBase-CU-2M"
+PID: SFP-H10GB-CU2M    , VID: V02  , SN: JPC213600UR
+
+NAME: "TenGigabitEthernet2/1/20", DESCR: "10GBase-CU-2M"
+PID: SFP-H10GB-CU2M    , VID: V02  , SN: LRM213860FE
+
+NAME: "TenGigabitEthernet2/1/21", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS20031582
+
+NAME: "TenGigabitEthernet2/1/22", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: FNS16431PHH
+
+NAME: "TenGigabitEthernet2/1/23", DESCR: "10GBase-CU-2M"
+PID: SFP-H10GB-CU2M    , VID: V02  , SN: LRM2138608E
+
+NAME: "TenGigabitEthernet2/1/25", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2027A5M1
+
+NAME: "TenGigabitEthernet2/1/26", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: ACW22280F9G
+
+NAME: "TenGigabitEthernet2/1/30", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: OPM22380SAQ
+
+NAME: "TenGigabitEthernet2/1/31", DESCR: "1000BaseSX"
+PID: GLC-SX-MMD        , VID: V01  , SN: OPM22380S82
+
+NAME: "Switch2 Power Supply 1", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: QCS21383EKK
+
+NAME: "Switch2 Power Supply 2", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: QCS21383E64

@@ -1,0 +1,5 @@
+---
+
+- name: Apply mgmt IPs to fabric switches. 
+  import_tasks: ./aci-fabric-mgmt-ips.yml
+  when: ansible_network_os == "aci"

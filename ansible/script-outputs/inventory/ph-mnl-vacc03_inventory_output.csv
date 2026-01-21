@@ -1,0 +1,39 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+ph-mnl-vacc03,SFP-10GBase-SR,Te1/1/3,SFP-10G-SR,AVD212590YB,V03
+ph-mnl-vacc03,SFP-10GBase-SR,Te5/1/3,SFP-10G-SR,AVD212594JL,V03
+ph-mnl-vacc03,Switch 5 - Power Supply B,Switch 5 - Power Supply B,PWR-C2-640WAC,DCB2139B1Y6,V03
+ph-mnl-vacc03,Switch 5 - Power Supply A,Switch 5 - Power Supply A,PWR-C2-640WAC,DCB2139B1YJ,V03
+ph-mnl-vacc03,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-640WAC,DCB2139B1ZT,V03
+ph-mnl-vacc03,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,DCB2139B1ZX,V03
+ph-mnl-vacc03,Switch 4 - Power Supply A,Switch 4 - Power Supply A,PWR-C2-640WAC,DCB2139B20B,V03
+ph-mnl-vacc03,Switch 4 - Power Supply B,Switch 4 - Power Supply B,PWR-C2-640WAC,DCB2139B20F,V03
+ph-mnl-vacc03,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-640WAC,DCB2139B2HF,V03
+ph-mnl-vacc03,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,DCB2139B2HL,V03
+ph-mnl-vacc03,Switch 3 - Power Supply B,Switch 3 - Power Supply B,PWR-C2-640WAC,DCB2139B2JG,V03
+ph-mnl-vacc03,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,DCB2139B2UG,V03
+ph-mnl-vacc03,StackAdapter3/2,StackAdapter3/2,C3650-STACK,FDO213827H9,V01
+ph-mnl-vacc03,StackAdapter4/1,StackAdapter4/1,C3650-STACK,FDO213827HD,V01
+ph-mnl-vacc03,StackAdapter4/2,StackAdapter4/2,C3650-STACK,FDO213827HF,V01
+ph-mnl-vacc03,StackAdapter2/2,StackAdapter2/2,C3650-STACK,FDO2138289Z,V01
+ph-mnl-vacc03,StackAdapter3/1,StackAdapter3/1,C3650-STACK,FDO213828AX,V01
+ph-mnl-vacc03,StackAdapter2/1,StackAdapter2/1,C3650-STACK,FDO213830QN,V01
+ph-mnl-vacc03,StackAdapter1/2,StackAdapter1/2,C3650-STACK,FDO213831FQ,V01
+ph-mnl-vacc03,StackAdapter1/1,StackAdapter1/1,C3650-STACK,FDO213832FM,V01
+ph-mnl-vacc03,StackAdapter5/1,StackAdapter5/1,C3650-STACK,FDO21411NEN,V01
+ph-mnl-vacc03,StackAdapter5/2,StackAdapter5/2,C3650-STACK,FDO21411NFS,V01
+ph-mnl-vacc03,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2142E12L,V05
+ph-mnl-vacc03,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2142E12Q,V05
+ph-mnl-vacc03,WS-C3650-48PD-S,Switch 5,WS-C3650-48PD-S,FDO2142Q1XZ,V05
+ph-mnl-vacc03,c36xx Stack,c36xx Stack,WS-C3650-48PD-S,FDO2142Q1XZ,V05
+ph-mnl-vacc03,WS-C3650-48PD-S,Switch 4,WS-C3650-48PD-S,FDO2142V0VY,V05
+ph-mnl-vacc03,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2142V0WH,V05
+ph-mnl-vacc03,StackPort3/1,StackPort3/1,STACK-T2-50CM,LCC2131GDX8,V03
+ph-mnl-vacc03,StackPort4/2,StackPort4/2,STACK-T2-50CM,LCC2131GDX8,V03
+ph-mnl-vacc03,StackPort1/1,StackPort1/1,STACK-T2-50CM,LCC2131GE08,V03
+ph-mnl-vacc03,StackPort2/2,StackPort2/2,STACK-T2-50CM,LCC2131GE08,V03
+ph-mnl-vacc03,StackPort2/1,StackPort2/1,STACK-T2-50CM,LCC2131GE3C,V03
+ph-mnl-vacc03,StackPort3/2,StackPort3/2,STACK-T2-50CM,LCC2131GE3C,V03
+ph-mnl-vacc03,StackPort4/1,StackPort4/1,STACK-T2-50CM,LCC2131GE91,V03
+ph-mnl-vacc03,StackPort5/2,StackPort5/2,STACK-T2-50CM,LCC2131GE91,V03
+ph-mnl-vacc03,StackPort1/2,StackPort1/2,STACK-T2-3M,LRM2133302D,V03
+ph-mnl-vacc03,StackPort5/1,StackPort5/1,STACK-T2-3M,LRM2133302D,V03

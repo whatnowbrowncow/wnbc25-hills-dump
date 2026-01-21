@@ -1,0 +1,2 @@
+Ethernet1/8: {admin-state: up, interface: Ethernet1/8, ip-add: 10.112.129.220, management-only: individual,
+  nameif: management, netmask: 255.255.255.0, security-level: '0'}

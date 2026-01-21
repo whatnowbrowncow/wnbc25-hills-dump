@@ -1,0 +1,5 @@
+---
+
+ssh_info:
+  ssh_timeout: "15"
+  ssh_ver: "2"

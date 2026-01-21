@@ -1,0 +1,17 @@
+network_add_list:
+- { dns_network: [10,119,77,0], dns_network_mask_len: '24', dns_environment: 'Disaster Recovery', dns_site: 'UK-LD6 - Equinix LD6, Slough', dns_vlan: '1723', dns_comment: 'CX' }
+#- { dns_network: [10,191,17,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1724', dns_comment: 'CX' }
+#- { dns_network: [10,191,18,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1725', dns_comment: 'CX' }
+#- { dns_network: [10,191,19,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1726', dns_comment: 'CX' }
+#- { dns_network: [10,191,20,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1727', dns_comment: 'CX' }
+#- { dns_network: [10,191,21,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1728', dns_comment: 'CX' }
+#- { dns_network: [10,191,22,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1729', dns_comment: 'CX' }
+#- { dns_network: [10,191,23,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1730', dns_comment: 'CX' }
+#- { dns_network: [10,191,80,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1773', dns_comment: 'CX' }
+#- { dns_network: [10,191,81,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1774', dns_comment: 'CX' }
+#- { dns_network: [10,191,82,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1775', dns_comment: 'CX' }
+#- { dns_network: [10,191,83,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1776', dns_comment: 'CX' }
+#- { dns_network: [10,191,84,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1777', dns_comment: 'CX' }
+#- { dns_network: [10,191,85,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1778', dns_comment: 'CX' }
+#- { dns_network: [10,191,86,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1779', dns_comment: 'CX' }
+#- { dns_network: [10,191,87,0], dns_network_mask_len: '24', dns_environment: 'Pre-Prod1', dns_site: 'Birstall', dns_vlan: '1780', dns_comment: 'CX' }

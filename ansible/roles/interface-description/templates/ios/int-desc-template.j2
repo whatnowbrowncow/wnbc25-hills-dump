@@ -1,0 +1,14 @@
+---
+
+interface_description_state:
+{% for key,value in pyats_version.items() %}
+{% 	if key == "interfaces" %}
+{%     for interface in value %}
+{%         if value[interface].protocol == "up" and value[interface].description == "" %}
+  - interface: "{{ interface }}"
+    protocol_state: "{{ value[interface].protocol }}"
+    interface_description: "{{ value[interface].description | regex_replace("\*","") | trim }}"
+{%          endif %}
+{%      endfor %}
+{% 	endif %}
+{% endfor %}

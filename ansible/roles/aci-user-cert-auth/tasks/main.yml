@@ -1,0 +1,5 @@
+---
+
+- name: Configure Local User Account 'svcnetworkauto' and Certificate
+  include_tasks: ./aci-user-cert-auth.yml
+  when: ansible_network_os == "aci"

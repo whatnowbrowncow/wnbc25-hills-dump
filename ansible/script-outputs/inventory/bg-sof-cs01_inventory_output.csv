@@ -1,0 +1,8 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+bg-sof-cs01,WS-C3650-24TS,Switch 2,WS-C3650-24TS,FDO2011E208,V03
+bg-sof-cs01,WS-C3650-24TS,Switch 1,WS-C3650-24TS,FDO2012Q02M,V03
+bg-sof-cs01,c36xx Stack,c36xx Stack,WS-C3650-24TS,FDO2012Q02M,V03
+bg-sof-cs01,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-250WAC,LIT2006026J,V02
+bg-sof-cs01,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-250WAC,LIT2006026Z,V02
+bg-sof-cs01,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-250WAC,LIT2006061Y,V02
+bg-sof-cs01,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-250WAC,LIT20060640,V02

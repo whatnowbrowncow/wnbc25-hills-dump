@@ -1,0 +1,9 @@
+{% for line in item.value %}
+line vty {{ line }}
+ access-class {{ line.vty_acl }} in vrf-also
+ exec-timeout {{ line.timeout_mins }} 0
+ privilege level 15
+ logging synchronous
+ transport input {{ line.transport_input }}
+{% endfor %}
+ 

@@ -1,0 +1,5 @@
+---
+
+- name: Add vlan interfaces to the system context
+  import_tasks: ./asa-system-interfaces.yml
+

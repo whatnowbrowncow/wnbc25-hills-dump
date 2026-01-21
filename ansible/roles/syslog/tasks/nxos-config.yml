@@ -1,0 +1,29 @@
+---
+
+## This is still in development because a standard SYSLOG config for NX-OS devices has yet to be defined.
+
+#- name: Build syslog configuration template for testing purposes
+#  template:
+#    src: /gitnet/ansible/roles/syslog/templates/nxos/config-template.j2
+#    dest: /gitnet/ansible/roles/syslog/files/configs/nxos/{{ inventory_hostname }}.cfg
+
+- name: Apply syslog configuration template
+  nxos_config:
+    src: /gitnet/ansible/roles/syslog/templates/nxos/config-template.j2
+    save_when: changed
+
+
+#- name: Enter syslog commands for NX-OS devices
+#  nxos_config:
+#      lines:
+#        - no logging console
+#        - logging level feature-mgr 0 #only on uk-sc1-ds01/02/03 & uk-brs-pp-ds01/02
+#        - logging level xmlma 6 #only on uk-sc1-ds03/04 & gib-mpl-ds03/04 & uk-brs-pp-ds01/02
+#        - logging level fex 6 #only on uk-sc1-ds04
+#        - logging logfile messages 5 size 4096 #only on uk-brs-pp-ds01
+#        - logging server {{ item.ip_addr }} 6 #use-vrf management < additional VRF config on uk-brs-ds01/02
+#      save_when: changed
+#  with_items:
+#    - "{{ syslog }}"
+
+

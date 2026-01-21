@@ -1,0 +1,2 @@
+hostname,local_interface,remote_device_description
+uk-cwk-lab-cr01,GigabitEthernet0/0,uk-cwk-vacc01.network.williamhill.plc-GigabitEthernet2/0/2

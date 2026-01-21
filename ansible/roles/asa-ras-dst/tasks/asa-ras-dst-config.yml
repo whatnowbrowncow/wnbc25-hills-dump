@@ -1,0 +1,40 @@
+---
+- name: ASA-RAS - Creating a changes directory for DST configuration 'diff' files
+  file:
+    path: "{{ config_dir }}"
+    state: directory
+  check_mode: no
+
+  # Apply new group policy configuration in the changed_dst data to the device line by line
+- name: ASA-RAS - Producing File Containing Configuration required - DST
+  template:
+   src: "{{ role_path }}/templates/dst_cfg_template.j2"
+   dest: "{{ config_file_dst }}"
+  check_mode: no
+
+# Apply new group policy configuration in the changed_dst data to the device line by line
+- name: ASA-RAS - Producing File Containing configuration required - Group Policy
+  template:
+   src: "{{ role_path }}/templates/dst_gp_cfg_template.j2"
+   dest: "{{ config_file_gp }}"
+  check_mode: no
+
+# Apply new DST config in the changed_dst data to the device line by line
+- name: ASA-RAS - Applying the new DSTs that have been Amended to firewall
+  asa_config:
+   src: "{{ role_path }}/templates/dst_cfg_template.j2"
+   match: line
+  notify: "updates_exist"
+  vars:
+    ansible_command_timeout: 600   
+    ansible_connect_timeout: 200
+
+# Apply new group policy configuration in the changed_dst data to the device line by line
+- name: ASA-RAS - Applying the new RAS DST Group Policies for Amended DSTs to firewall
+  asa_config:
+   src: "{{ role_path }}/templates/dst_gp_cfg_template.j2"
+   match: line
+  notify: "updates_exist"
+  vars:
+    ansible_command_timeout: 600   
+    ansible_connect_timeout: 200  

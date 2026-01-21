@@ -1,0 +1,88 @@
+admin:
+  admin-context: admin
+  allocate-interface: [Ethernet1/8]
+  config-url: disk0:/admin.cfg
+  context: admin
+  username: netadmin
+cde-mgmt:
+  allocate-interface: [Port-channel1.30, Port-channel1.140, Port-channel1.2003, Port-channel1.2122-Port-channel1.2125]
+  config-url: disk0:/cde-mgmt.cfg
+  context: cde-mgmt
+corp:
+  allocate-interface: [Port-channel1.2001, Port-channel1.2220-Port-channel1.2224]
+  config-url: disk0:/corp.cfg
+  context: corp
+dr-c-frontend:
+  allocate-interface: [Port-channel1.114-Port-channel1.115, Port-channel1.120-Port-channel1.122,
+    Port-channel1.134, Port-channel1.150, Port-channel1.153-Port-channel1.155, Port-channel1.160-Port-channel1.163,
+    Port-channel1.199, Port-channel1.371, Port-channel1.421]
+  config-url: disk0:/dr-c-frontend-new-LD6.cfg
+  context: dr-c-frontend
+dr-c-mgmt:
+  allocate-interface: [Port-channel1.303-Port-channel1.306, Port-channel1.308-Port-channel1.311,
+    Port-channel1.313, Port-channel1.316, Port-channel1.318, Port-channel1.320-Port-channel1.321,
+    Port-channel1.324, Port-channel1.334, Port-channel1.338-Port-channel1.339, Port-channel1.375]
+  config-url: disk0:/dr-c-mgmt.cfg
+  context: dr-c-mgmt
+dr-e-wan:
+  allocate-interface: [Port-channel1.571, Port-channel1.581, Port-channel1.2004]
+  config-url: disk0:/dr-e-wan.cfg
+  context: dr-e-wan
+  description: us-vrf
+dr-n-frontend:
+  allocate-interface: [Port-channel1.210-Port-channel1.211, Port-channel1.230-Port-channel1.231,
+    Port-channel1.253-Port-channel1.254, Port-channel1.260-Port-channel1.261, Port-channel1.264,
+    Port-channel1.422]
+  config-url: disk0:/dr-n-frontend-new-LD6.cfg
+  context: dr-n-frontend
+dr-n-mgmt:
+  allocate-interface: [Port-channel1.341-Port-channel1.345, Port-channel1.347, Port-channel1.351,
+    Port-channel1.361-Port-channel1.363, Port-channel1.366, Port-channel1.369, Port-channel1.376]
+  config-url: disk0:/dr-n-mgmt.cfg
+  context: dr-n-mgmt
+pr-c-fr-cx:
+  allocate-interface: [Port-channel1.384, Port-channel1.708-Port-channel1.722, Port-channel1.758-Port-channel1.772,
+    Port-channel1.2005, Port-channel1.2275-Port-channel1.2282, Port-channel1.2298-Port-channel1.2305]
+  config-url: disk0:/pr-c-fr-cx.cfg
+  context: pr-c-fr-cx
+production:
+  allocate-interface: [Port-channel1.2000, Port-channel1.2200-Port-channel1.2205,
+    Port-channel1.2210-Port-channel1.2214]
+  config-url: disk0:/production.cfg
+  context: production
+pte-c-fr-cx:
+  allocate-interface: [Port-channel1.1684, Port-channel1.1908-Port-channel1.1930,
+    Port-channel1.1958-Port-channel1.1980]
+  config-url: disk0:/pte-c-fr-cx.cfg
+  context: pte-c-fr-cx
+pte-c-frontend:
+  allocate-interface: [Port-channel1.1300-Port-channel1.1302, Port-channel1.1323,
+    Port-channel1.1334, Port-channel1.1362, Port-channel1.1671]
+  config-url: disk0:/pte-c-frontend.cfg
+  context: pte-c-frontend
+pte-c-mgt:
+  allocate-interface: [Port-channel1.1603-Port-channel1.1605, Port-channel1.1609-Port-channel1.1610,
+    Port-channel1.1620, Port-channel1.1675]
+  config-url: disk0:/pte-c-mgt.cfg
+  context: pte-c-mgt
+pte-n-frontend:
+  allocate-interface: [Port-channel1.1402, Port-channel1.1407, Port-channel1.1410-Port-channel1.1411,
+    Port-channel1.1422, Port-channel1.1431, Port-channel1.1462, Port-channel1.1464,
+    Port-channel1.1677]
+  config-url: disk0:/pte-n-frontend.cfg
+  context: pte-n-frontend
+pte-n-mgt:
+  allocate-interface: [Port-channel1.1641-Port-channel1.1645, Port-channel1.1648-Port-channel1.1649,
+    Port-channel1.1676]
+  config-url: disk0:/pte-n-mgt.cfg
+  context: pte-n-mgt
+  description: pte
+pte-r-frontend:
+  allocate-interface: [Port-channel1.1679, Port-channel1.1750-Port-channel1.1751,
+    Port-channel1.1753, Port-channel1.1780]
+  config-url: disk0:/pte-r-frontend.cfg
+  context: pte-r-frontend
+retail:
+  allocate-interface: [Port-channel1.2002, Port-channel1.2240-Port-channel1.2243]
+  config-url: disk0:/retail.cfg
+  context: retail

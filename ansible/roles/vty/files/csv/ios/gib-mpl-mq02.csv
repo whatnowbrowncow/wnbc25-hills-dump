@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+gib-mpl-mq02,0 4,1,in,15 0,00060A520A0B1803,ssh,none,no,
+gib-mpl-mq02,5 15,1,in,15 0,0823551A07491612,ssh,none,no,

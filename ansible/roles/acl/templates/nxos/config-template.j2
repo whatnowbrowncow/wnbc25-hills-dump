@@ -1,0 +1,12 @@
+{% for item in access_lists %}
+- acl:
+  name: {{item['name']}}
+  lines:
+{%   for line in item.rules %}
+{%     if line.remark is defined %}
+    - {{ line.line_no }} remark {{ line.remark }}
+{%     else %}
+    - {{ line.line_no }} {{ line.rule }}
+{%     endif %}
+{%   endfor %}
+{% endfor %}

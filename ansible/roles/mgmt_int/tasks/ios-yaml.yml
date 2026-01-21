@@ -1,0 +1,178 @@
+---
+
+- name: IOS - Check for a .129 mgmt IP address
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show ip int brief | include [0-9]+\.[0-9]+\.129\.[0-9]+
+  register: mgmt129_int
+
+- name: IOS - Register .129 interface as a variable
+  set_fact:
+    mgmt129_int: "{{ mgmt129_int.stdout[0] | regex_search('(?P<int>\\S+)','\\g<int>') }}"
+
+- name: IOS - capture .129 interface config
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show run int {{ mgmt129_int[0] }}
+  register: mgmt129_int_config
+  when: mgmt129_int != ""
+# Debug commands to check output
+#- name: Display output
+#  debug: var=mgmt_int
+
+- name: IOS - parse .129 interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/ios/parser_ios_mgmt129_int.yml
+    content: "{{ mgmt129_int_config.stdout.0 }}"
+  when: mgmt129_int != ""
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=mgmt129_int_facts
+
+- name: IOS - Check for a mgmt0 IP address
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show ip int brief | include mgmt0
+  register: mgmt0_int
+
+- name: IOS - Register mgmt0 interface as a variable
+  set_fact:
+    mgmt0_int: "{{ mgmt0_int.stdout[0] | regex_search('(?P<int>\\S+)','\\g<int>') }}"
+
+- name: IOS - capture mgmt0 interface config
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show run int {{ mgmt0_int[0] }}
+  register: mgmt0_int_config
+  when: mgmt0_int != ""
+# Debug commands to check output
+#- name: Display output
+#  debug: var=mgmt_int
+
+- name: IOS - parse mgmt0 interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/ios/parser_ios_mgmt0_int.yml
+    content: "{{ mgmt0_int_config.stdout.0 }}"
+  when: mgmt0_int != ""
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=mgmt0_int_facts
+
+- name: IOS - Check for a vlan99
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - "show ip int brief | include Vlan99 " 
+  register: vlan99_int
+
+- name: IOS - capture vlan99 interface config
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show run int vlan99
+  register: vlan99_int_config
+  when: vlan99_int.stdout[0] != ""
+# Debug commands to check output
+#- name: Display output
+#  debug: var=mgmt_int
+
+- name: IOS - parse vlan99 interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/ios/parser_ios_vlan99_int.yml
+    content: "{{ vlan99_int_config.stdout.0 }}"
+  when: vlan99_int.stdout[0] != ""
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=vlan99_int_facts
+
+- name: IOS - check for loopbacks
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show ip int br | inc Loopback
+  register: loopbacks
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=loopbacks
+
+- name: IOS - create loopback_interfaces list
+  set_fact:
+    loopback_interfaces: []
+  when: loopbacks.stdout[0] != ""
+
+
+- name: IOS - Register all loopbacks in loopback_interfaces list
+  set_fact:
+    loopback_interfaces: "{{ loopback_interfaces + item | regex_search('(?P<int>Loopback\\d+)','\\g<int>') }}"
+  with_items:
+    "{{ loopbacks.stdout_lines[0] }}"
+  when: loopbacks.stdout[0] != ""
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=loopback_interfaces
+
+- name: IOS - capture loopback interface config
+  ios_command:
+    commands:
+      - show run int {{ item }}
+  register: loopback_interfaces_config
+  with_items:
+    "{{ loopback_interfaces }}"
+  when: loopbacks.stdout[0] != ""
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=loopback_interfaces_config
+
+- name: IOS - parse loopback_interfaces_config output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/ios/parser_ios_loopback_int.yml
+    content: "{{ item.stdout.0 }}"
+  with_items:
+    "{{ loopback_interfaces_config.results }}"
+  register: loopbacks_facts
+  when: loopbacks.stdout[0] != ""
+
+- name: IOS - register tacacs_source interface
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show run | inc ip tacacs source
+  register: tacacs_source
+
+- name: IOS - Register tacacs source interface as a variable
+  set_fact:
+    tacacs_src_int: "{{ tacacs_source.stdout[0] | regex_search('ip tacacs source-interface (?P<int>\\S+)','\\g<int>') }}"
+
+- name: IOS - capture tacacs source interface config
+# Targets the tacacs source interface as the assumed management interface
+  ios_command:
+    commands:
+      - show run int {{ tacacs_src_int[0] }}
+  register: tacacs_src_int_config
+  when: tacacs_src_int != ""
+
+- name: IOS - parse tacacs source interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/ios/parser_ios_mgmt_tacacs_int.yml
+    content: "{{ tacacs_src_int_config.stdout.0 }}"
+  when: tacacs_src_int != ""
+
+- name: IOS - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS - Generate YAML file
+  template:
+    src: /gitnet/ansible/roles/mgmt_int/templates/ios/yml-template.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/mgmt_interfaces.yml"

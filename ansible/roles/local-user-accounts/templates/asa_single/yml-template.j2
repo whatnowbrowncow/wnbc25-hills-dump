@@ -1,0 +1,8 @@
+---
+local_user_accounts:
+{% for item in asa_single_local_accounts_facts %}
+  - username: "{{ item.user_account.username }}"
+    privilege: "{{ item.user_account.privilege }}"
+    encryption: "{{ item.user_account.encryption }}"
+    password_string: "{{ item.user_account.password_string }}"
+{% endfor %}

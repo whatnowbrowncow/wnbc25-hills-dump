@@ -1,0 +1,5 @@
+access-list 1 remark Permit SSH from these addresses
+{% for address in mgmt_acl %}
+access-list 1 permit {{ address }}
+{% endfor %}
+access-list 1 deny   any log

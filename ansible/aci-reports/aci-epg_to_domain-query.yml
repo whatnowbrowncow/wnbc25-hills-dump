@@ -1,0 +1,36 @@
+---
+
+  - name: PLAY - EPG to Domain query
+    hosts: aci
+    connection: local
+    gather_facts: no
+
+
+    tasks:
+    
+    - name: Query EPG to Domain association
+      aci_epg_to_domain:
+        hostname: '{{ ansible_host }}'
+        username: '{{ aci_user }}'
+        private_key: '{{ aci_key }}'
+        state: query
+        validate_certs: no
+        
+      register: imdata_epg_to_domain
+      
+
+#    - debug:
+#        msg:
+#          - "{{ item }}"
+#      with_items:
+#        - "{{ imdata_epg_to_domain.current }}"
+ 
+    - debug:
+        msg:
+          - "EPG name: {{ item.fvRsDomAtt.attributes.dn.split('/').3 }}"
+          - "Deployment immediacy: {{ item.fvRsDomAtt.attributes.instrImedcy }}"
+          - "Resolution immediacy: {{ item.fvRsDomAtt.attributes.resImedcy }}"
+          - "Domain: {{ item.fvRsDomAtt.attributes.tDn }}"
+      with_items:
+        - "{{ imdata_epg_to_domain.current }} "
+

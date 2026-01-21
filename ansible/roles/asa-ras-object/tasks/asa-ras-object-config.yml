@@ -1,0 +1,294 @@
+---
+- name: ASA-RAS - Creating a changes directory for ACL configuration files
+  file:
+    path: "{{ logs_dir }}"
+    state: directory
+  check_mode: no
+
+# Create Ansible asa_orgs compatable data files
+- name: ASA-RAS - Creating Object Data File
+  shell: "python {{ role_path }}/scripts/ras-object-data-yaml.py --inventory {{ inventory_dir }} -l notice -lp /gitnet/ras-processed/logs/{{ timestamp }}_ras_object_yaml.log > /dev/tty"
+  check_mode: no
+  register: pythonoutput_dataFile_create
+  run_once: true
+
+# Point role to data folder
+
+- name: Pointing Role to Data Directory to Retrieve New ACLs
+  include_vars:
+    dir: '/gitnet/ras-processed/data'
+  check_mode: no
+
+# Create Change Directory
+- name: ASA-RAS - Creating a changes directory for ACL configuration files
+  file:
+    path: "{{ config_dir }}"
+    state: directory
+  check_mode: no
+
+# Create Config file for network objects
+- name: ASA-RAS - Creating the network objects config file
+  template:
+    src: "{{ role_root }}/asa-object-creator/templates/asa_single/network-object-config-template.j2"
+    dest: "{{ config_file_object }}net.cfg"
+  when: (network_objects.fqdn_objects != {} and network_objects.host_objects != {} and network_objects.range_objects != {} and subnet_objects != {})
+  check_mode: no
+
+# # Create config file for protocol objects
+# - name: ASA-RAS - Creating the protocol object groups config file
+#   template:
+#     src: "{{ role_root }}/asa-object-creator/templates/asa_single/protocol-object-group-config-template.j2"
+#     dest: "{{ config_file_object }}proto_groups.cfg"
+#   check_mode: no
+
+# Create config file for service objects
+- name: ASA-RAS - Creating the service object config file
+  template:
+    src: "{{ role_root }}/asa-object-creator/templates/asa_single/service-object-config-template.j2"
+    dest: "{{ config_file_object }}service.cfg"
+  when: service_objects != []
+  check_mode: no
+
+#Apply New Network Objects to device
+- name: ASA-RAS - Applying the network objects to firewall
+  asa_config:
+    src: "{{ role_root }}/asa-object-creator/templates/asa_single/network-object-config-template.j2"
+    match: none
+  notify: "asa-ras-object:updates_exist"
+  register: net_obj_output
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+    ansible_persistent_connect_timeout: 200
+
+# Apply New Service Objects to device
+- name: ASA-RAS - Applying the new service objects to firewall
+  asa_config:
+   src: "{{ role_root }}/asa-object-creator/templates/asa_single/service-object-config-template.j2"
+   match: none
+  register: srv_obj_output
+  notify: "asa-ras-object:updates_exist"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+
+- name: Rendering Configuration for Object Groups
+  block:
+    # Create config for network object groups
+    - name: Rendering Configuration for network groups
+      cisco.asa.asa_ogs:
+        config:
+          - object_type: network
+            object_groups:
+              - name: "{{ item.name }}"
+                description: "{{ item.description | default('') }}"
+                network_object:
+                  "{{ item.object_items }}"
+        state: rendered
+      register: net_redered_output
+      loop: "{{ network_object_groups if network_object_groups|length > 0 else []}}"
+      notify: "asa-ras-object:updates_exist"
+
+    # Create config for service object groups with service Objects
+    - name: Rendering Configuration for Service Groups - Service Objects
+      cisco.asa.asa_ogs:
+        config:
+          - object_type: service
+            object_groups:
+              - name: "{{ serv_og_svr_ob.name }}"
+                protocol: "{{ serv_og_port.protocol | default(omit) }}"
+                description: "{{ serv_og_svr_ob.description | default(omit) }}"
+                services_object:
+                  "{{ serv_og_svr_ob.services_object }}"
+        state: rendered
+      register: svc_redered_output_svr_obj
+      loop: "{{ service_object_groups.object_groups }}"
+      loop_control:
+        loop_var: serv_og_svr_ob
+      when: "'services_object' in serv_og_svr_ob"
+      notify: "asa-ras-object:updates_exist"
+
+    # Create config for service object groups with Group Objects
+    - name: Rendering Configuration for Service Groups - Group Objects
+      cisco.asa.asa_ogs:
+        config:
+          - object_type: service
+            object_groups:
+              - name: "{{ serv_og_grp.name }}"
+                protocol: "{{ serv_og_grp.protocol | default(omit) }}"
+                description: "{{ serv_og_grp.description | default(omit) }}"
+                group_object:
+                  "{{ serv_og_grp.group_object }}"
+        state: rendered
+      register: svc_redered_output_grp
+      loop: "{{ service_object_groups.object_groups }}"
+      loop_control:
+        loop_var: serv_og_grp
+      when: "'group_object' in serv_og_grp"
+      notify: "asa-ras-object:updates_exist"
+
+    # Create config for service object groups with Port Objects
+    - name: Rendering Configuration for Service Groups - Port Objects
+      cisco.asa.asa_ogs:
+        config:
+          - object_type: service
+            object_groups:
+              name: "{{ serv_og_port.name }}"
+              protocol: "{{ serv_og_port.protocol | default(omit) }}"
+              description: "{{ serv_og_port.description | default(omit) }}"
+              port_object:
+                "{{ serv_og_port.port_object }}"
+        state: rendered
+      register: svc_redered_output_port
+      loop: "{{ service_object_groups.object_groups }}"
+      loop_control:
+        loop_var: serv_og_port
+      when: "'port_object' in serv_og_port"
+      notify: "asa-ras-object:updates_exist"
+
+    # Create config for service object groups with service Objects
+    - name: Rendering Configuration for Protocol Groups
+      cisco.asa.asa_ogs:
+        config:
+          - object_type: protocol
+            object_groups:
+              - name: "{{ proto_og_svr_ob.name }}"
+                protocol_object:
+                  protocol: "{{ proto_og_svr_ob.protocol }}"
+        state: rendered
+      register: proto_redered_output
+      loop: "{{ protocol_object_groups if protocol_object_groups|length > 0 else [] }}"
+      loop_control:
+        loop_var: proto_og_svr_ob
+      notify: "asa-ras-object:updates_exist"
+
+# Writing config file for all object groups
+- name: Writing Output Config Files
+  block:
+    - name: Write Net Group Object Config to File
+      copy:
+        content: "{{ net_og_grp_write.rendered |  join('\n') }}"
+        dest: "{{ config_file_object }}_svc_group_svr_obj.cfg"
+      loop: "{{ net_redered_output.results | list }}"
+      check_mode: false
+      when: net_og_grp_write != []
+      loop_control:
+        loop_var: net_og_grp_write
+
+
+    - name: Write Svc Group Object Config to File - Service Objects
+      copy:
+        content: "{{ serv_og_grp_write.rendered |  join('\n') }}"
+        dest: "{{ config_file_object }}_svc_group_svr_obj.cfg"
+      loop: "{{ svc_redered_output_svr_obj.results }}"
+      when: serv_og_grp_write != []
+      check_mode: false
+      loop_control:
+        loop_var: serv_og_grp_write
+
+    - name: Write Svc Group Object Config to File - Service Groups
+      copy:
+        content: "{{ serv_grp_grp_write.rendered |  join('\n') }}"
+        dest: "{{ config_file_object }}_svc_group_grp.cfg"
+      loop: "{{ svc_redered_output_grp.results }}"
+      check_mode: false
+      when: serv_grp_grp_write.rendered is defined
+      loop_control:
+        loop_var: serv_grp_grp_write
+
+    - name: Write Svc Group Object Config to File - Port Objects
+      copy:
+        content: "{{ serv_ports_grp_write.rendered |  join('\n') }}"
+        dest: "{{ config_file_object }}_svc_group_port_obj.cfg"
+      loop: "{{ svc_redered_output_port.results }}"
+      check_mode: false
+      when: serv_ports_grp_write.rendered is defined
+      loop_control:
+        loop_var: serv_ports_grp_write
+
+
+    - name: Write Protocol Group Object Config to File
+      copy:
+        content: "{{ proto_grp_write.rendered |  join('\n') }}"
+        dest: "{{ config_file_object }}_proto_group.cfg"
+      loop: "{{ proto_redered_output.results }}"
+      check_mode: false
+      when: proto_grp_write != []
+      loop_control:
+        loop_var: proto_grp_write
+# Deploying Object Groups to the primiary device
+- name: Deploy groups to Device
+  block:
+    - name: Deploy Network Object Groups
+      cisco.asa.asa_config:
+        lines: "{{ net_grp_deployment.rendered }}"
+        match: none
+      register: proto_deploy_output
+      loop: "{{ net_redered_output.results }}"
+      loop_control:
+        loop_var: net_grp_deployment
+      when: "net_grp_deployment|length > 0 and 'rendered' in net_grp_deployment"
+      vars:
+        ansible_command_timeout: 1000
+        ansible_connect_timeout: 200
+      notify: "asa-ras-object:updates_exist"
+
+    - name: Deploy Service Object Groups - Service Objects
+      cisco.asa.asa_config:
+        lines: "{{ serv_grp_deployment.rendered }}"
+        match: none
+      register: svc_deploy_output_svr_obj
+      loop: "{{ svc_redered_output_svr_obj.results }}"
+      loop_control:
+        loop_var: serv_grp_deployment
+      when: "serv_grp_deployment|length > 0 and 'rendered' in serv_grp_deployment"
+      vars:
+        ansible_command_timeout: 1000
+        ansible_connect_timeout: 200
+      notify: "asa-ras-object:updates_exist"
+
+    - name: Deploy Service Object Groups - Group Objects
+      cisco.asa.asa_config:
+        match: none
+      register: svc_deploy_output_grp
+      loop: "{{ svc_redered_output_grp.results }}"
+      loop_control:
+        loop_var: serv_grp_deployment
+      when: "serv_grp_deployment|length > 0 and 'rendered' in serv_grp_deployment"
+      vars:
+        ansible_command_timeout: 1000
+        ansible_connect_timeout: 200
+      notify: "asa-ras-object:updates_exist"
+
+    - name: Deploy Service Object Groups - Port Objects
+      cisco.asa.asa_config:
+        lines: "{{ serv_grp_deployment.rendered }}"
+        match: none
+      register: svc_deploy_output_port
+      loop: "{{ svc_redered_output_port.results }}"
+      loop_control:
+        loop_var: serv_grp_deployment
+      when: "serv_grp_deployment|length > 0 and 'rendered' in serv_grp_deployment"
+      vars:
+        ansible_command_timeout: 1000
+        ansible_connect_timeout: 200
+      notify: "asa-ras-object:updates_exist"
+
+    - name: Deploy Protocol Object Groups
+      cisco.asa.asa_config:
+        lines: "{{ proto_grp_deployment.rendered }}"
+        match: none
+      register: proto_deploy_output
+      loop: "{{ proto_redered_output.results }}"
+      loop_control:
+        loop_var: proto_grp_deployment
+      when: "proto_grp_deployment|length > 0 and 'rendered' in proto_grp_deployment"
+      vars:
+        ansible_command_timeout: 1000
+        ansible_connect_timeout: 200
+      notify: "asa-ras-object:updates_exist"
+
+    - name: Force Handlers Run
+      meta: flush_handlers
+      check_mode: no

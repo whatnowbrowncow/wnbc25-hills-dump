@@ -1,0 +1,10 @@
+---
+- name: ASA-RAS - Pre-Change Snapshot
+  include_tasks: ./pre-change-snapshot.yml
+  when: 
+    - type is defined and type == "ras"
+
+- name: ASA-RAS - ACL Cleanup Task
+  include_tasks: ./asa-ras-acl-cleanup.yml
+  when: 
+    - type is defined and type == "ras"

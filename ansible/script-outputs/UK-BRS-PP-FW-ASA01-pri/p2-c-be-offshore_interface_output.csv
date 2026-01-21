@@ -1,0 +1,11 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.2330,10.213.40.1,,web-tier,255.255.255.0,100
+up,,Port-channel21.2350,10.213.48.1,,proxy-tier,255.255.255.224,100
+up,,Port-channel21.2351,10.213.48.33,,backoffice-tier,255.255.255.224,100
+up,,Port-channel21.2352,10.213.48.65,,authpro-tier,255.255.255.224,100
+up,,Port-channel21.2353,10.213.48.97,,sftp-ext-tier,255.255.255.224,100
+up,,Port-channel21.2355,10.213.48.161,,crypto-tier,255.255.255.224,100
+up,,Port-channel21.2360,10.213.50.1,,application-tier,255.255.255.0,100
+up,,Port-channel21.2362,10.213.52.1,,database-tier,255.255.255.0,100
+up,,Port-channel21.2501,10.213.129.44,,management,255.255.255.0,100
+up,,Port-channel21.2573,10.213.160.100,,pp2off-internal-vrf,255.255.255.224,100

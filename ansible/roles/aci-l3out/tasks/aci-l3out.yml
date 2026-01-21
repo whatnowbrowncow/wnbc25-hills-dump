@@ -1,0 +1,48 @@
+---
+
+- name: Build L3out template
+  template:
+    src: "./aci/l3out.j2"
+    dest: "./aci/l3out_{{ item.vrf }}_fatl3out.json"
+  with_items:
+    - "{{ l3outs }}"
+          
+- name: L3out build
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.vrf }}_fatl3out.json"
+    src: "./aci/l3out_{{ item.vrf }}_fatl3out.json"
+    validate_certs: no
+  with_items:
+    - "{{ l3outs }}"
+
+
+- name: Build L3 Instance Profile and L3extsubnets template
+  template:
+    src: "./aci/l3extsubnet.j2"
+    dest: "./aci/l3extsubnet_{{ item.vrf }}_fatl3out.json"
+  with_items:
+    - "{{ l3outs }}"
+
+- name: L3 Instance Profile and L3extsubnets build
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.vrf }}_fatl3out/instP-{{ item.vrf }}_fatl3out.json"
+    src: "./aci/l3extsubnet_{{ item.vrf }}_fatl3out.json"
+    validate_certs: no
+  with_items:
+    - "{{ l3outs }}"
+
+
+- include_tasks: aci-l3nodeprofile.yml
+  with_items:
+    - "{{ something }}"
+  loop_control:
+    loop_var: something_item
+

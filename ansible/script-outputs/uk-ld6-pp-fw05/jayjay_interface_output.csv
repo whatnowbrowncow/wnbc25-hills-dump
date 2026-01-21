@@ -1,0 +1,2 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+ shutdown,,Port-channel1.1680,,,inside,,100

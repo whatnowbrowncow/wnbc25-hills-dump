@@ -1,0 +1,10 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+us-ny1-rr01,GE SX,subslot 0/0 transceiver 2,GLC-SX-MMD,FNS22200KJQ,V01
+us-ny1-rr01,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS2222Q0NU,V03
+us-ny1-rr01,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAD22250ENY,V03
+us-ny1-rr01,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT22162DCD,V02
+us-ny1-rr01,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT22162DS4,V02
+us-ny1-rr01,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+us-ny1-rr01,Built-in GE SPA with 2 port 10G and 6 port 1G Interfaces,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+us-ny1-rr01,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+us-ny1-rr01,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

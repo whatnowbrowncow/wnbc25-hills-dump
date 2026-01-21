@@ -1,0 +1,54 @@
+--- 
+
+- name: Select Nodes (With Standard Router IDs) (fatl3out task 5)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}].json"
+    content:
+      {
+        "l3extRsNodeL3OutAtt": {
+          "attributes": {
+            "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}]",
+            "tDn": "topology/pod-1/node-{{ item.1.node_id }}",
+            "rtrId": "{{ item.1.node_id }}.{{ item.1.node_id }}.{{ item.1.node_id }}.{{ item.1.node_id }}",
+            "rn": "rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}]",
+            "status": "created,modified"
+          },
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ node_profiles }}"
+    - nodes
+  when: item.1.router_id is not defined
+
+- name: Select Nodes (With Non-standard Router IDs) (fatl3out task 5)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}].json"
+    content:
+      {
+        "l3extRsNodeL3OutAtt": {
+          "attributes": {
+            "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}]",
+            "tDn": "topology/pod-1/node-{{ item.1.node_id }}",
+            "rtrId": "{{ item.1.router_id }}",
+            "rn": "rsnodeL3OutAtt-[topology/pod-1/node-{{ item.1.node_id }}]",
+            "status": "created,modified"
+          },
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ node_profiles }}"
+    - nodes
+  when: item.1.router_id is defined
+
+- name: Move to Adding Static Routes (if they are defined)
+  include_tasks: ./aci-fatl3out-static-routes.yml

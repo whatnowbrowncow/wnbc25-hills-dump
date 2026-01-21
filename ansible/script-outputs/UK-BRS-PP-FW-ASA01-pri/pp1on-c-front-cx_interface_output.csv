@@ -1,0 +1,5 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.2078,10.212.161.4,,pp1on-internal-vrf,255.255.255.224,100
+up,,Port-channel21.2208,,,pp1on-cde-deployment-lan,,100
+up,,Port-channel21.2209,,,pp1on-cde-web1-lan,,100
+up,,Port-channel21.2210,,,pp1on-cde-app1-lan,,100

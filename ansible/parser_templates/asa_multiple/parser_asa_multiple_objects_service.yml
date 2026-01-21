@@ -1,0 +1,92 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show run object service in-line"
+    network_os: asa
+
+- name: service object match pattern
+  pattern_match:
+    regex: "^object service (\\S+) service (tcp-udp|udp|tcp) (source|destination) ((eq) (\\S+)|(range) (\\S+) (\\S+))"
+    match_all: yes
+    match_greedy: yes
+  register: service_objects
+
+- name: Match service object host values
+  pattern_group:
+    - name: match name
+      pattern_match:
+        regex: "^object service (\\S+)"
+        content: "{{ item }}"
+      register: name
+
+    - name: match protocol
+      pattern_match:
+        regex: "^object service \\S+ service (tcp-udp|udp|tcp)"
+        content: "{{ item }}"
+      register: protocol
+
+    - name: match direction
+      pattern_match:
+        regex: "^object service \\S+ service (tcp|udp|tcp) (source|destination)"
+        content: "{{ item }}"
+      register: direction
+
+    - name: match port type
+      pattern_match:
+        regex: "^object service \\S+ service (tcp-udp|udp|tcp) (source|destination) (eq|range)"
+        content: "{{ item }}"
+      register: port_type
+
+    - name: match first_port
+      pattern_match:
+        regex: "^object service \\S+ service (tcp-udp|udp|tcp) (source|destination) eq (\\S+)"
+        content: "{{ item }}"
+      register: port
+
+    - name: match range_port
+      pattern_match:
+        regex: "^object service \\S+ service (tcp-udp|udp|tcp) (source|destination) range (\\S+)"
+        content: "{{ item }}"
+      register: range_start
+
+    - name: match range_port
+      pattern_match:
+        regex: "^object service \\S+ service (tcp-udp|udp|tcp) (source|destination) range \\S+ (\\S+)"
+        content: "{{ item }}"
+      register: range_end
+
+    - name: match description
+      pattern_match:
+        regex: "^object service \\S+ service (tcp-udp|udp|tcp) (source|destination) (eq \\S+|range \\S+ \\S+)  description (.*)"
+        content: "{{ item }}"
+      register: description
+
+  loop: "{{ service_objects }}"
+  register: service_objects_values    
+
+- name: Generate service object host JSON data structure - 
+  json_template:
+    template:
+      - key: object
+        object:        
+          - key: name
+            value: "{{ item.name.matches.0 }}"
+          - key: protocol
+            value: "{{ item.protocol.matches.0 }}"
+          - key: direction
+            value: "{{ item.direction.matches.1 }}"
+          - key: port_type
+            value: "{{ item.port_type.matches.2 }}"
+          - key: port
+            value: "{{ item.port.matches.2 }}"
+          - key: range_start
+            value: "{{ item.range_start.matches.2 }}"
+          - key: range_end
+            value: "{{ item.range_end.matches.2 }}"
+          - key: description
+            value: "{{ item.description.matches.3 }}"
+  loop: "{{ service_objects_values }}"
+  export: yes
+  register: service_objects_facts

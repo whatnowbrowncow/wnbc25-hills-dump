@@ -1,0 +1,61 @@
+---
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run | i username
+    network_os: asa
+                            
+- name: match sections
+  pattern_match:
+    regex: "^username"
+    match_all: yes
+    match_greedy: yes
+  register: section
+                            
+                            
+- name: match local user accounts
+  pattern_group:
+    - name: match username
+      pattern_match:
+        regex: "^username (\\S+)"
+        content: "{{ item }}"
+      register: username
+                                           
+    - name: match privilege
+      pattern_match:
+        regex: "^.* privilege (\\d+)"
+        content: "{{ item }}"
+      register: privilege
+                                                                                 
+    - name: match encryption
+      pattern_match:
+        regex: "^.* password \\S+ (\\S+) \\S+ \\d+"
+        content: "{{ item }}"
+      register: encryption 
+
+    - name: password_string
+      pattern_match:
+        regex: "^.* password (\\S+)"
+        content: "{{ item }}"
+      register: password_string
+
+  loop: "{{ section }}"
+  register: asa_multiple_local_accounts
+
+- name: generate json data structure
+  json_template:
+    template:
+      - key: user_account
+        object:
+          - key: username
+            value: "{{ item.username.matches.0 }}"
+          - key: privilege
+            value: "{{ item.privilege.matches.0 }}"
+          - key: encryption
+            value: "{{ item.encryption.matches.0 }}"
+          - key: password_string
+            value: "{{ item.password_string.matches.0 }}"
+  loop: "{{ asa_multiple_local_accounts }}"
+  ##use export to display to screen
+  export: yes
+  register: asa_multiple_local_accounts_facts

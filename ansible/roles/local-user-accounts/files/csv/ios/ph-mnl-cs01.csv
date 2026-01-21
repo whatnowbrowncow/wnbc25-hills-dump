@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+ph-mnl-cs01,netadmin,15,secret,5,$1$eUpX$5w3uZ6wmUktlJ.SEXa/nm1
+ph-mnl-cs01,svcnetworkauto,15,secret,5,$1$/LVR$U9FJAAPoGCq0bOkNSsPB11

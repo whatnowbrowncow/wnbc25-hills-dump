@@ -1,0 +1,2 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-thw-cr01,netsec,15,secret,5,$1$lFkI$Oi0..rH3O4wmo/3tO6R2R.

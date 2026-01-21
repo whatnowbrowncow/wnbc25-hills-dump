@@ -1,0 +1,35 @@
+---
+      
+- name: Save IOS Running-Config
+  ios_config:
+    save_when: always
+  when: ansible_network_os == "ios"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_conenct_timeout: 200  
+
+- name: Save NXOS Running-Config
+  nxos_config:
+    save_when: always
+  when: ansible_network_os == "nxos"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_conenct_timeout: 200  
+
+- name: Save ASA Running-Config for multiple contexts
+  asa_command:
+    commands:
+      - write memory all /noconfirm
+    context: system
+  when: ansible_network_os == "asa" and context_mode == "multiple"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_conenct_timeout: 200  
+
+- name: Save ASA Running-Config for single context
+  asa_config:
+    save_when: modified
+  when: ansible_network_os == "asa" and context_mode == "single"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_conenct_timeout: 200  

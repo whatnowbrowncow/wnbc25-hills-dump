@@ -1,0 +1,9 @@
+hostname,ip address,source int,community,poll/trap,version
+uk-sc1-fw04-pri,10.120.163.111,group-vrf,changeme,both,2c
+uk-sc1-fw04-pri,10.120.163.12,group-vrf,changeme,both,2c
+uk-sc1-fw04-pri,10.120.163.13,group-vrf,changeme,both,2c
+uk-sc1-fw04-pri,10.120.163.206,group-vrf,m0squ1t0,both,2c
+uk-sc1-fw04-pri,10.120.163.210,group-vrf,m0squ1t0,poll,2c
+uk-sc1-fw04-pri,10.120.163.71,group-vrf,m0squ1t0,poll,2c
+uk-sc1-fw04-pri,10.120.163.59,group-vrf,m0squ1t0,both,2c
+uk-sc1-fw04-pri,10.120.163.59,oob-mgmt,m0squ1t0,both,2c

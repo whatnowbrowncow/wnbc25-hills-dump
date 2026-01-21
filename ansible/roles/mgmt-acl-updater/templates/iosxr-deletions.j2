@@ -1,0 +1,4 @@
+ipv4 access-list acl-management
+{% for item in aclMATCH %}
+ no {{ item[1] }}
+{% endfor %}

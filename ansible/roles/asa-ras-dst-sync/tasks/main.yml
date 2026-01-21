@@ -1,0 +1,28 @@
+---
+- name: ASA-RAS-SYNC - Check Which Device is Live
+  shell: dig +short vpn.williamhillplc.com
+  register: vpn_nslookup
+  delegate_to: localhost
+  check_mode: no
+
+- name: Point to secondary
+  set_fact:
+    secondary_host: "{% if (vpn_nslookup.stdout.startswith('10.120') or vpn_nslookup.stdout.startswith('141.138')) %}{{ groups[lookup('vars', 'ld6_sync_group')][0] }}{% else %}{{ groups[lookup('vars', 'ma3_sync_group')][0] }}{% endif %}"
+  delegate_to: localhost
+
+- name: ASA-RAS - Validate and deploy ansible data file for current DST
+  include_tasks: asa-ras-dst-validation.yml
+  when:
+    - type is defined and type == "ras" and inventory_hostname == secondary_host
+
+# This takes a snapshot of the ACLs and group policy configuration and places in a temporary file. It is then used to identify what has changed.
+- name: ASA-RAS - Taking pre-change snapshot
+  include_tasks: pre-change-snapshot.yml
+  when:
+    - type is defined and type == "ras" and inventory_hostname == secondary_host
+
+# Apply new RAS configuration to the devices, then produces a text file output showing what has changed
+- name: ASA-RAS - Apply configuration to device for RAS DST
+  include_tasks: asa-ras-dst-config.yml
+  when:
+    - type is defined and type == "ras" and inventory_hostname == secondary_host

@@ -1,0 +1,10 @@
+hostname,ip address,source int,community,poll/trap,version
+uk-brs-vpn-fw01-pri,10.120.163.59,Internal-VRF,10.120.163.59,both,2c
+uk-brs-vpn-fw01-pri,10.1.14.120,Inside,1ns3ct,poll,2c
+uk-brs-vpn-fw01-pri,10.1.19.120,Inside,1ns3ct,poll,2c
+uk-brs-vpn-fw01-pri,10.110.163.59,Inside,1ns3ct,poll,2c
+uk-brs-vpn-fw01-pri,192.168.1.60,Inside,1ns3ct,poll,2c
+uk-brs-vpn-fw01-pri,10.120.163.206,Inside,5&prU$pAtu!H,poll,2c
+uk-brs-vpn-fw01-pri,10.120.163.210,Inside,m0squ1t0,poll,2c
+uk-brs-vpn-fw01-pri,192.168.1.160,Inside,xBtBfGlqV4M3,trap,2c
+uk-brs-vpn-fw01-pri,10.120.163.59,Inside,y83smz2Qc6,poll,2c

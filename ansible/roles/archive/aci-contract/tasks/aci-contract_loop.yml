@@ -1,0 +1,18 @@
+---
+
+- name: Contract Build
+  aci_contract:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: '{{ contract_item.tenant }}'
+    contract: '{{ contract_item.contract }}'
+    scope: '{{ contract_item.scope }}'
+    validate_certs: no
+
+- name: Move to build contract subject
+  include_tasks: ./aci-contract-subject_loop.yml
+  with_items:
+    - "{{ contract_item.subjects }}"
+  loop_control:
+    loop_var: subject_item

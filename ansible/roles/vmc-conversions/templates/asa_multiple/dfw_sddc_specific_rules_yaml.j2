@@ -1,0 +1,455 @@
+---
+
+{% set object_groups_in_acls = [] %}
+{% set objects_in_acls = [] %}
+{% set ips_in_acls = [] %}
+{% set subnets_in_acls = [] %}
+{% set service_obj_grps_in_acls = [] %}
+{% set existing_hosts = [] %}
+{% set existing_subnets = [] %}
+{% set existing_objects = [] %}
+{% set existing_object_groups = [] %}
+{% set duplicate_objects_list = [] %}
+{% set duplicate_objects = [] %}
+{% set duplicate_object_groups_list = [] %}
+{% set duplicate_object_groups = [] %}
+{% set host_objects = [] %}
+{% set subnet_objects = [] %}
+{% for item in network_host_objects_facts %}
+{%   do host_objects.append(item.object.name) %}
+{% endfor %}
+{% if network_subnet_objects_facts is defined %}
+{%   for item in network_subnet_objects_facts %}
+{%    do subnet_objects.append(item.object.name) %}
+{%   endfor %}
+{% endif %}
+{% for acl in access_lists.results %}
+{%   if acl.ansible_facts.access_entry_facts is defined %}
+{%     for ace in acl.ansible_facts.access_entry_facts %}
+{%       if ace.hit_count|int > 0 %}
+{%         if ace.src_network_obj_grp is defined and ace.src_network_obj_grp %}
+{%           if ace.src_network_obj_grp not in object_groups_in_acls %}
+{%             do object_groups_in_acls.append(ace.src_network_obj_grp) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_network_obj is defined and ace.src_network_obj %}
+{%           if ace.src_network_obj not in objects_in_acls %}
+{%             do objects_in_acls.append(ace.src_network_obj) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_host is defined and ace.src_host %}
+{%           if ace.src_host not in ips_in_acls %}
+{%             do ips_in_acls.append(ace.src_host) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_network is defined and ace.src_network %}
+{%           if ace.src_network != "any" and ace.src_network != "any4" %}
+{%             if ace.src_network not in subnets_in_acls %}
+{%               do subnets_in_acls.append(ace.src_network) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_network_obj_grp is defined and ace.dest_network_obj_grp %}
+{%           if ace.dest_network_obj_grp not in object_groups_in_acls %}
+{%             do object_groups_in_acls.append(ace.dest_network_obj_grp) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_network_obj is defined and ace.dest_network_obj %}
+{%           if ace.dest_network_obj not in objects_in_acls %}
+{%             do objects_in_acls.append(ace.dest_network_obj) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_host is defined and ace.dest_host %}
+{%           if ace.dest_host not in ips_in_acls %}
+{%             do ips_in_acls.append(ace.dest_host) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_network is defined and ace.dest_network %}
+{%           if ace.dest_network != "any" and ace.dest_network != "any4" %}
+{%             if ace.dest_network not in subnets_in_acls %}
+{%               do subnets_in_acls.append(ace.dest_network) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_service_obj_grp is defined and ace.src_service_obj_grp %}
+{%           if ace.src_service_obj_grp not in service_obj_grps_in_acls %}
+{%             do service_obj_grps_in_acls.append(ace.src_service_obj_grp) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_port_obj_grp is defined and ace.dest_port_obj_grp %}
+{%           if ace.dest_port_obj_grp not in service_obj_grps_in_acls %}
+{%             do service_obj_grps_in_acls.append(ace.dest_port_obj_grp) %}
+{%           endif %}
+{%         endif %}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}
+{% for group in object_groups_in_acls %}
+{%   for item in obj_groups.results %}
+{%     if group == item.ansible_facts.object_group[0].name %}
+{%       if item.ansible_facts.hosts is defined %}
+{%         for ip in item.ansible_facts.hosts %}
+{%           do ips_in_acls.append(ip.ip_addr) %}
+{%         endfor %}
+{%       endif %}
+{%       if item.ansible_facts.networks is defined %}
+{%         for network in item.ansible_facts.networks %}
+{%           do subnets_in_acls.append([network.ip_addr, network.mask]|join(' ')) %}
+{%         endfor %}
+{%       endif %}
+{%       if item.ansible_facts.objects is defined %}
+{%         for object in item.ansible_facts.objects %}
+{%           if object.object_name not in objects_in_acls %}
+{%             do objects_in_acls.append(object.object_name) %}
+{%           endif %}
+{%         endfor %}
+{%       endif %}
+{%       if item.ansible_facts.group_objects is defined %}
+{%         for group in item.ansible_facts.group_objects %}
+{%           if group.group_object_name not in object_groups_in_acls %}
+{%             do object_groups_in_acls.append(group.group_object_name) %}
+{%           endif %}
+{%         endfor %}
+{%       endif %}
+{%     endif %}
+{%   endfor %}
+{% endfor %}
+{% for object in objects_in_acls %}
+{%   if [context.context, "_", object]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in existing_objects %}
+{%     do existing_objects.append([context.context, "_", object]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   else %}
+{%     do duplicate_objects_list.append([context.context, "_", object]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   endif %}
+{% endfor %}
+{% for object_group in object_groups_in_acls %}
+{%   if [context.context, '_grp_', object_group]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in existing_object_groups %}
+{%     do existing_object_groups.append([context.context, '_grp_', object_group]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   else %}
+{%     do duplicate_object_groups_list.append([context.context, '_grp_', object_group]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   endif %}
+{% endfor %}
+{% set existing_svc_object_groups = [] %}
+{% set duplicate_svc_object_groups = [] %}
+{% for sog in service_obj_grps_in_acls %}
+{%   for item in service_obj_groups.results %}
+{%     if sog == item.ansible_facts.object_group[0].name %}
+{%       if [context.context, '_', item.ansible_facts.object_group[0].name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in existing_svc_object_groups  %}
+{%         do existing_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%       else %}
+{%         do existing_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name, '_dupe']|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%         do duplicate_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name,]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%         set svcmembers = [] %}
+{%         if item.ansible_facts.objects is defined %}
+{%           for group in item.ansible_facts.objects %}
+{%             do svcmembers.append(group.object.name) %}
+{%           endfor %}
+{%         endif %}
+{%         if item.ansible_facts.port_objects is defined %}
+{%           for group in item.ansible_facts.port_objects %}
+{%             if group.port_type == 'range' %}
+{%               do svcmembers.append([group.range_start, group.range_end]|join('-')) %}
+{%             else %}
+{%               do svcmembers.append(group.port) %}
+{%             endif %}
+{%           endfor %}
+{%         endif %}
+{%         if item.ansible_facts.services is defined %}
+{%           for group in item.ansible_facts.services %}
+{%             if group.port_type == 'range' %}
+{%               do svcmembers.append([group.protocol,group.range_start, group.range_end]|join('-')) %}
+{%             else %}
+{%               if group.port is defined and group.port %}
+{%                 do svcmembers.append(group.port) %}
+{%               else %}
+{%                 do svcmembers.append('any') %}
+{%               endif %}
+{%             endif %}
+{%           endfor %}
+{%         endif %}
+{%         if item.ansible_facts.group_objects is defined %}
+{%           for group_name in item.ansible_facts.group_objects %}
+{%             do svcmembers.append(group_name.group_object_name) %}
+{%           endfor %}
+{%         endif %}
+{%         do duplicate_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name, svcmembers]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%       set svcmembers = svcmembers.clear() %}
+{%       endif %}
+{%     endif %}
+{%   endfor %}
+{% endfor %}
+resources:
+  security_policy:
+
+{% for acl in access_lists.results %}
+    - access_list: {{ acl.item.item }}
+      rules:
+{% set remark_list = [] %}
+{%   for ace in acl.ansible_facts.access_entry_facts %}
+{%     if ace.remark is defined and ace.remark %}
+{% set remark_list = remark_list.append( ace.remark ) %}
+{%     elif ace.hit_count|int == 0 %}
+{% set remark_list = remark_list.clear() %}
+{%     elif ace.hit_count|int > 0 %}
+
+        - rule_description: "{{ context.context }}_{{ acl.item.item }}_{{ ace.position }}"
+          change_ref: "{% for remark in remark_list %}{% if loop.first %}{{ remark }}{% else %} ,{{ remark }}{% endif %}{% endfor %}"
+          action: "{{ ace.action }}"
+          source:
+{%       if ace.src_host %}
+            - "{{ context.context }}_ip_{{ ace.src_host | regex_replace ("\.","-") }}"
+{%       elif ace.src_network is defined and ace.src_network %}
+{%         if ace.src_network != "any" and ace.src_network != "any4" %}
+{%           if "255.255.255.255" in ace.src_network  %}
+            - "{{ context.context }}_ip_{{ ace.src_network | regex_replace (" 255.255.255.255","s32") | regex_replace ("\.","-")  }}"
+{%           else %}
+            - "{{ context.context }}_ip_{{ ace.src_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%           endif %}
+{%         elif ace.src_network == "any" or ace.src_network == "any4" %}
+            - "any"
+{%         endif %}
+{%       elif ace.src_network_obj %}
+{%         if [context.context, "_", ace.src_network_obj]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_objects_list %}
+            - "{{ context.context }}_{{ ace.src_network_obj | regex_replace ("\.","-") |lower }}"
+{%         else  %}
+{%           if ace.src_network_obj in host_objects %}
+{%             for object2 in network_host_objects_facts %}
+{%               if object2.object.name == ace.src_network_obj %}
+            - "{{ context.context }}_{{ object2.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower}}_ip_{{ object2.object.ip_addr | regex_replace ("\.","-") }}"
+{%               endif %}
+{%             endfor %}
+{%           elif ace.src_network_obj in subnet_objects %}
+{%             for subnet in network_subnet_objects_facts %}
+{%               if subnet.object.name == ace.src_network_obj %}
+            - "{{ context.context }}_{{ subnet.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_net_{{ subnet.object.network | regex_replace ("\.","-") }}_{{ subnet.object.mask | regex_replace ("\.","-") }}"
+{%               endif %}
+{%             endfor %}
+{%           endif %}
+{%         endif %}
+{%       elif ace.src_network_obj_grp %}
+{%         if [context.context, '_grp_', ace.src_network_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_object_groups_list %}
+            - "{{ context.context }}_grp_{{ ace.src_network_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%         elif [context.context, '_grp_', ace.src_network_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_object_groups_list %}
+{%           for item in obj_groups.results %}
+{%             if ace.src_network_obj_grp == item.ansible_facts.object_group[0].name %}
+            - "{{context.context}}_grp_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_{% if item.ansible_facts.objects is defined %}{{ item.ansible_facts.objects|length }}{% else %}0{% endif %}{% if item.ansible_facts.hosts is defined %}{{ item.ansible_facts.hosts|length }}{% else %}0{% endif %}{% if item.ansible_facts.networks is defined %}{{ item.ansible_facts.networks|length }}{% else %}0{% endif %}{% if item.ansible_facts.group_objects is defined %}{{ item.ansible_facts.group_objects|length }}{% else %}0{% endif %}"
+{%             endif %}
+{%           endfor %}
+{%         endif %}
+{%       else %}
+            - ""
+{%       endif %}
+          destination:
+{%       if ace.dest_host %}
+            - "{{ context.context }}_ip_{{ ace.dest_host | regex_replace ("\.","-") }}"
+{%       elif ace.dest_network is defined and ace.dest_network %}
+{%         if ace.dest_network != "any" and ace.dest_network != "any4" %}
+{%           if "255.255.255.255" in ace.dest_network  %}
+            - "{{ context.context }}_ip_{{ ace.dest_network | regex_replace (" 255.255.255.255","s32") | regex_replace ("\.","-")  }}"
+{%           else %}
+            - "{{ context.context }}_ip_{{ ace.dest_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%           endif %}
+{%         elif ace.dest_network == "any" or ace.dest_network == "any4" %}
+            - "any"
+{%         endif %}
+{%       elif ace.dest_network_obj %}
+{%         if [context.context, "_", ace.dest_network_obj]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_objects_list %}
+            - "{{ context.context }}_{{ ace.dest_network_obj | regex_replace ("\.","-") |lower }}"
+{%         else  %}
+{%           if ace.dest_network_obj in host_objects %}
+{%             for object2 in network_host_objects_facts %}
+{%               if object2.object.name == ace.dest_network_obj %}
+            - "{{ context.context }}_{{ object2.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower}}_ip_{{ object2.object.ip_addr | regex_replace ("\.","-") }}"
+{%               endif %}
+{%             endfor %}
+{%           elif ace.dest_network_obj in subnet_objects %}
+{%             for subnet in network_subnet_objects_facts %}
+{%               if subnet.object.name == ace.dest_network_obj %}
+            - "{{ context.context }}_{{ subnet.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_net_{{ subnet.object.network | regex_replace ("\.","-") }}_{{ subnet.object.mask | regex_replace ("\.","-") }}"
+{%               endif %}
+{%             endfor %}
+{%           endif %}
+{%         endif %}
+{%       elif ace.dest_network_obj_grp %}
+{%         if [context.context, '_grp_', ace.dest_network_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_object_groups_list %}
+            - "{{ context.context }}_grp_{{ ace.dest_network_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%         elif [context.context, '_grp_', ace.dest_network_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_object_groups_list %}
+{%           for item in obj_groups.results %}
+{%             if ace.dest_network_obj_grp == item.ansible_facts.object_group[0].name %}
+            - "{{context.context}}_grp_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_{% if item.ansible_facts.objects is defined %}{{ item.ansible_facts.objects|length }}{% else %}0{% endif %}{% if item.ansible_facts.hosts is defined %}{{ item.ansible_facts.hosts|length }}{% else %}0{% endif %}{% if item.ansible_facts.networks is defined %}{{ item.ansible_facts.networks|length }}{% else %}0{% endif %}{% if item.ansible_facts.group_objects is defined %}{{ item.ansible_facts.group_objects|length }}{% else %}0{% endif %}"
+{%             endif %}
+{%           endfor %}
+{%         endif %}
+{%       else %}
+            - ""
+{%       endif %}
+          service:
+{%       if ace.protocol and ace.dest_port %}
+            - "{{ context.context }}_{{ ace.protocol }}-{{ ace.dest_port }}_eq"
+{%       elif ace.protocol and ace.dest_port_obj_grp %}
+{%         for service_obj_group in service_obj_groups.results %}
+{%           if ace.dest_port_obj_grp == service_obj_group.ansible_facts.object_group[0].name %}
+{%             if [context.context,'_',ace.dest_port_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_svc_object_groups %}
+            - "{{ context.context }}_{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             elif [context.context,'_',ace.dest_port_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_svc_object_groups %}
+{%               set destmembers = [] %}
+{%               if service_obj_group.ansible_facts.objects is defined %}
+{%                 for group in service_obj_group.ansible_facts.objects %}
+{%                   do destmembers.append(group.object.name) %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.port_objects is defined %}
+{%                 for group in service_obj_group.ansible_facts.port_objects %}
+{%                   if group.port_type == 'range' %}
+{%                     do destmembers.append([group.range_start, group.range_end]|join('-')) %}
+{%                   else %}
+{%                     do destmembers.append(group.port) %}
+{%                   endif %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.services is defined %}
+{%                 for group in service_obj_group.ansible_facts.services %}
+{%                   if group.port_type == 'range' %}
+{%                     do destmembers.append([group.protocol,group.range_start, group.range_end]|join('-')) %}
+{%                   else %}
+{%                     if group.port is defined and group.port %}
+{%                       do destmembers.append(group.port) %}
+{%                     else %}
+{%                       do destmembers.append('any') %}
+{%                     endif %}
+{%                   endif %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.group_objects is defined %}
+{%                 for group_name in service_obj_group.ansible_facts.group_objects %}
+{%                   do destmembers.append(group_name.group_object_name) %}
+{%                 endfor %}
+{%               endif %}
+{%               if [context.context, '_', service_obj_group.ansible_facts.object_group[0].name, destmembers]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_svc_object_groups %}
+            - "{{ context.context }}_{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_dupe"
+{%               else %}
+            - "{{ context.context }}_{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%               endif %}
+{%               set destmembers = destmembers.clear() %}
+{%             endif %}
+{%           endif %}
+{%         endfor %}
+{%       elif ace.protocol and ace.dest_port_range %}
+            - "{{ context.context }}_{{ ace.protocol }}-{{ ace.dest_port_range | regex_replace (" ","-") }}_eq"
+{%       elif ace.protocol %}
+            - "{{ ace.protocol |lower }}-any"
+{%       elif ace.src_service_obj_grp and ace.dest_port %}
+            - "{{ context.context }}_{{ ace.src_service_obj_grp |lower }}-{{ ace.dest_port }}"
+{%       elif ace.src_service_obj_grp and ace.dest_port_obj_grp %}
+{%         for service_obj_group in service_obj_groups.results %}
+{%           if ace.dest_port_obj_grp == service_obj_group.ansible_facts.object_group[0].name %}
+{%             if [context.context,'_',ace.dest_port_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_svc_object_groups %}
+            - "{{ context.context }}_{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             elif [context.context,'_',ace.dest_port_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_svc_object_groups %}
+{%               set destprtmembers = [] %}
+{%               if service_obj_group.ansible_facts.objects is defined %}
+{%                 for group in service_obj_group.ansible_facts.objects %}
+{%                   do destprtmembers.append(group.object.name) %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.port_objects is defined %}
+{%                 for group in service_obj_group.ansible_facts.port_objects %}
+{%                   if group.port_type == 'range' %}
+{%                     do destprtmembers.append([group.range_start, group.range_end]|join('-')) %}
+{%                   else %}
+{%                     do destprtmembers.append(group.port) %}
+{%                   endif %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.services is defined %}
+{%                 for group in service_obj_group.ansible_facts.services %}
+{%                   if group.port_type == 'range' %}
+{%                     do destprtmembers.append([group.protocol,group.range_start, group.range_end]|join('-')) %}
+{%                   else %}
+{%                     if group.port is defined and group.port %}
+{%                       do destprtmembers.append(group.port) %}
+{%                     else %}
+{%                       do destprtmembers.append('any') %}
+{%                     endif %}
+{%                   endif %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.group_objects is defined %}
+{%                 for group_name in service_obj_group.ansible_facts.group_objects %}
+{%                   do destprtmembers.append(group_name.group_object_name) %}
+{%                 endfor %}
+{%               endif %}
+{%               if [context.context, '_', service_obj_group.ansible_facts.object_group[0].name, destprtmembers]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_svc_object_groups %}
+            - "{{ context.context }}_{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_dupe"
+{%               else %}
+            - "{{ context.context }}_{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%               endif %}
+{%               set destprtmembers = destprtmembers.clear() %}
+{%             endif %}
+{%           endif %}
+{%         endfor %}
+{%       elif ace.src_service_obj_grp and ace.dest_port_range %}
+            - "{{ context.context }}_{{ ace.src_service_obj_grp |lower }}-{{ ace.dest_port_range | regex_replace (" ","-") }}"
+{%       elif ace.src_service_obj %}
+            - "{{ context.context }}_{{ ace.src_service_obj | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"            
+{%       elif ace.src_service_obj_grp %}
+{%         for protocol_obj_group in protocol_obj_groups.results %}
+{%           if ace.src_service_obj_grp == protocol_obj_group.ansible_facts.object_group[0].name %}
+            - "{{ context.context }}_{{ ace.src_service_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}-any"
+{%           endif %}
+{%         endfor %}
+{%         for service_obj_group in service_obj_groups.results %}
+{%           if ace.src_service_obj_grp == service_obj_group.ansible_facts.object_group[0].name %}
+{%             if [context.context,'_',ace.src_service_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_svc_object_groups %}
+            - "{{ context.context }}_{{ ace.src_service_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             elif [context.context,'_',ace.src_service_obj_grp]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_svc_object_groups %}
+{%               set svcmembers = [] %}
+{%               if service_obj_group.ansible_facts.objects is defined %}
+{%                 for group in service_obj_group.ansible_facts.objects %}
+{%                   do svcmembers.append(group.object.name) %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.port_objects is defined %}
+{%                 for group in service_obj_group.ansible_facts.port_objects %}
+{%                   if group.port_type == 'range' %}
+{%                     do svcmembers.append([group.range_start, group.range_end]|join('-')) %}
+{%                   else %}
+{%                     do svcmembers.append(group.port) %}
+{%                   endif %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.services is defined %}
+{%                 for group in service_obj_group.ansible_facts.services %}
+{%                   if group.port_type == 'range' %}
+{%                     do svcmembers.append([group.protocol,group.range_start, group.range_end]|join('-')) %}
+{%                   else %}
+{%                     if group.port is defined and group.port %}
+{%                       do svcmembers.append(group.port) %}
+{%                     else %}
+{%                       do svcmembers.append('any') %}
+{%                     endif %}
+{%                   endif %}
+{%                 endfor %}
+{%               endif %}
+{%               if service_obj_group.ansible_facts.group_objects is defined %}
+{%                 for group_name in service_obj_group.ansible_facts.group_objects %}
+{%                   do svcmembers.append(group_name.group_object_name) %}
+{%                 endfor %}
+{%               endif %}
+{%               if [context.context, '_', service_obj_group.ansible_facts.object_group[0].name, svcmembers]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower in duplicate_svc_object_groups %}
+            - "{{ context.context }}_{{ ace.src_service_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_dupe"
+{%               else %}
+            - "{{ context.context }}_{{ ace.src_service_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%               endif %}
+{%               set svcmembers = svcmembers.clear() %}
+{%             endif %}
+{%           endif %}
+{%         endfor %}
+{%       else %}
+            - ""
+{%       endif %}
+{% set remark_list = remark_list.clear() %}
+{%     endif %}
+{%   endfor %}
+
+{% endfor %}

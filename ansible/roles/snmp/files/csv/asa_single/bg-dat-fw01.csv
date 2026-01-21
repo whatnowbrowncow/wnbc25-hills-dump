@@ -1,0 +1,4 @@
+hostname,ip address,source int,community,poll/trap,version
+bg-dat-fw01,10.120.163.210,DC-Transit,m0squ1t0,both,2c
+bg-dat-fw01,10.120.163.59,DC-Transit,m0squ1t0,both,2c
+bg-dat-fw01,10.120.163.122,DC-Transit,5wUx1DGU,both,2c

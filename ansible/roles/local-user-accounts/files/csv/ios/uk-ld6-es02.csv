@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-ld6-es02,netadmin,15,secret,5,$1$GIQ3$sGsFRpcPvrLSjaB7FFJAs.
+uk-ld6-es02,netsec,15,secret,5,$1$eC3A$MUIw/kTbuuBQ96yOrNBPC0
+uk-ld6-es02,svcnetworkauto,15,secret,5,$1$EuBs$sMwHv7mW2IXyNL.x9Vjqe.

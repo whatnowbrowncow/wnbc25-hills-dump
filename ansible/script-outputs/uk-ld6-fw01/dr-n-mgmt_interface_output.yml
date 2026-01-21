@@ -1,0 +1,32 @@
+Port-channel1.341: {admin-state: up, interface: Port-channel1.341, ip-add: 10.114.145.1,
+  mac-address: 0200.0101.0101, nameif: web-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.342: {admin-state: up, interface: Port-channel1.342, ip-add: 10.114.146.1,
+  mac-address: 0200.0101.0101, nameif: applications-tier, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.343: {admin-state: up, interface: Port-channel1.343, ip-add: 10.114.147.1,
+  mac-address: 0200.0101.0101, nameif: rng-arcade, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.344: {admin-state: up, interface: Port-channel1.344, ip-add: 10.114.148.1,
+  mac-address: 0200.0101.0101, nameif: backoffice-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.345: {admin-state: up, interface: Port-channel1.345, ip-add: 10.114.149.1,
+  mac-address: 0200.0101.0101, nameif: trading-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.347: {admin-state: up, interface: Port-channel1.347, ip-add: 10.114.151.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-jumphost, netmask: 255.255.255.224,
+  security-level: '100'}
+Port-channel1.351: {admin-state: up, interface: Port-channel1.351, ip-add: 10.114.157.1,
+  mac-address: 0200.0101.0101, nameif: dr-noncde-jumphost, netmask: 255.255.255.224,
+  security-level: '100'}
+Port-channel1.361: {admin-state: up, interface: Port-channel1.361, ip-add: 10.114.158.1,
+  mac-address: 0200.0101.0101, nameif: caerus-apps-man-2, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.362: {admin-state: up, interface: Port-channel1.362, ip-add: 10.114.159.1,
+  mac-address: 0200.0101.0101, nameif: edge-mgmt, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.363: {admin-state: up, interface: Port-channel1.363, ip-add: 10.114.159.33,
+  mac-address: 0200.0101.0101, nameif: ats-web-int, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.366: {admin-state: up, interface: Port-channel1.366, ip-add: 10.114.159.129,
+  mac-address: 0200.0101.0101, nameif: rng-retail, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.369: {admin-state: up, interface: Port-channel1.369, ip-add: 10.114.159.225,
+  mac-address: 0200.0101.0101, nameif: Caerus-apps-man, netmask: 255.255.255.224,
+  security-level: '100'}
+Port-channel1.376: {admin-state: up, interface: Port-channel1.376, ip-add: 10.114.160.196,
+  mac-address: 0200.0101.0101, nameif: internal-vrf, netmask: 255.255.255.224, ospf: mtu-ignore,
+  security-level: '100'}

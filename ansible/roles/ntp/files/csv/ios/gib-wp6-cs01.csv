@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+gib-wp6-cs01,10.180.163.19,,yes,
+gib-wp6-cs01,10.120.193.235,,no,
+gib-wp6-cs01,10.180.163.20,,no,
+gib-wp6-cs01,10.120.193.236,,no,

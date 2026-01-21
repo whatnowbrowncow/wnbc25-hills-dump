@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+GH_WGS_5TH,10.210.193.235,,no,
+GH_WGS_5TH,10.220.193.235,,no,
+GH_WGS_5TH,10.180.193.235,,no,
+GH_WGS_5TH,10.120.193.235,,yes,

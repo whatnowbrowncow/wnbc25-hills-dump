@@ -1,0 +1,52 @@
+---
+
+- name: Backup ASA Contexts
+  hosts: asa
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: Gather list of contexts
+      asa_command:
+        commands:
+          - "show run | in ^context"
+        context: system
+      register: context_list
+              
+
+    - name: Gather show run for contexts
+      asa_command:
+        commands:
+          - "show run"
+        context: "{{ item.split()[1] }}"
+      register: context_configs
+      with_items:
+        - "{{ context_list.stdout_lines[0] }}"
+      #ignore errors added due to issue collecting the WHC context running config
+      ignore_errors: yes
+        
+    - name: Gather show run interfaces contexts
+      asa_command:
+        commands:
+          - "show run interface"
+        context: "{{ item.split()[1] }}"
+      register: interface_list
+      with_items:
+        - "{{ context_list.stdout_lines[0] }}"
+
+    - name: Export interface config to text file
+      template:
+        src: ./templates/line-by-line.j2
+        dest: ./backup/{{ inventory_hostname }}/{{ item.item.split()[1] }}_full_config.cfg
+      with_items:
+        - "{{ context_configs.results }}"
+      #ignore errors added due to issue collecting the WHC context running config
+      ignore_errors: yes
+
+    - name: Export interface config to text file
+      template:
+        src: ./templates/line-by-line.j2
+        dest: ./backup/{{ inventory_hostname }}/{{ item.item.split()[1] }}_interface_config.cfg
+      with_items:
+        - "{{ interface_list.results }}"
+        

@@ -1,0 +1,8 @@
+---
+
+- name: NXOS - Configure local user accounts
+  nxos_config:
+    lines:
+      - username {{ item.username }} password {{ item.password }} role {{ item.role }}  
+  with_items:
+    - "{{ local_user_accounts }}"

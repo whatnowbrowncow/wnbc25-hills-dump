@@ -1,0 +1,132 @@
+---
+
+contracts:
+  - contract: "ob-web-2_to_ob-app-2"
+    description: "Test contract"
+    provider:
+      provider: "ob-app-2"
+      app_prof: "ant-test-1_appprof"
+    consumer: 
+      consumer: "ob-web-2"
+      app_prof: "ant-test-1_appprof"
+    tenant: "ant-tenant"
+    scope: "tenant"
+    subjects:
+      - subject: "fabric_routed"
+        description: "fabric routed subject"
+        filters:
+          - filter: "fab-filter"
+            log: "log"
+            entries:
+              - entry: "Web"
+                protocol: "tcp"
+                dst_port_start: "80"
+                stateful: "yes"
+              - entry: "My_app"
+                dst_port_start: "15000"
+                dst_port_end: "15010"
+                stateful: "yes"
+      - subject: "firewall_routed"
+        description: "Firewall routed subject"
+        filters:
+          - filter: "fw-filter"
+            log: "log"
+            entries:
+              - entry: "Web"
+                protocol: "tcp"
+                dst_port_start: "80"
+                stateful: "yes"
+              - entry: "My_app"
+                dst_port_start: "15000"
+                dst_port_end: "15010"
+                stateful: "yes"
+  - contract: "ob-web_to_ob-app"
+    description: "Test contract"
+    provider:
+      provider: "ob-app"
+      app_prof: "ant-test-1_appprof"
+    consumer: 
+      consumer: "ob-web"
+      app_prof: "ant-test-1_appprof"
+    tenant: "ant-tenant"
+    scope: "tenant"
+    subjects:
+      - subject: "fabric_routed"
+        description: "fabric routed subject"
+        filters:
+          - filter: "absent-filter"
+            log: "log"
+            description: "absent filter description"
+            entries:
+              - entry: "Web"
+                protocol: "tcp"
+                dst_port_start: "80"
+                stateful: "yes"
+              - entry: "My_app"
+                dst_port_start: "15000"
+                dst_port_end: "15010"
+                stateful: "yes"
+      - subject: "firewall_routed"
+        description: "Firewall routed subject"
+        filters:
+          - filter: "fw-filter"
+            log: "log"
+            entries:
+              - entry: "Web"
+                protocol: "tcp"
+                dst_port_start: "80"
+                stateful: "yes"
+              - entry: "My_app"
+                dst_port_start: "15000"
+                dst_port_end: "15010"
+                stateful: "yes"
+  - contract: "ob-app_to_ob-db"
+    description: "Test ob-app to ob-db access"
+    provider:
+      provider: "ob-db"
+      app_prof: "ant-test-1_appprof"
+    consumer: 
+      consumer: "ob-app"
+      app_prof: "ant-test-1_appprof"
+    tenant: "ant-tenant"
+    scope: "tenant"
+    subjects:
+      - subject: "firewall_routed"
+        description: "Firewalled access"
+        filters:
+          - filter: "db_access"
+            log: "log"
+            entries:
+              - entry: "db"
+                protocol: "tcp"
+                dst_port_start: "3106"
+                stateful: "yes"
+              - entry: "alt-db"
+                dst_port_start: "15000"
+                dst_port_end: "15010"
+                stateful: "yes"
+  - contract: "jumphost_to_ob-db"
+    description: "Test jumphost to ob-db access"
+    provider:
+      provider: "jumphost"
+      app_prof: "ant-test-1_appprof"
+    consumer: 
+      consumer: "ob-db"
+      app_prof: "ant-test-1_appprof"
+    tenant: "ant-tenant"
+    scope: "tenant"
+    subjects:
+      - subject: "firewall_routed"
+        description: "Firewalled access"
+        filters:
+          - filter: "Mgmt_access"
+            log: "log"
+            entries:
+              - entry: "ssh"
+                protocol: "tcp"
+                dst_port_start: "22"
+                stateful: "yes"
+              - entry: "https"
+                dst_port_start: "443"
+                stateful: "yes"
+ 

@@ -1,0 +1,4 @@
+---
+
+- name: Save config task
+  include_tasks: ./save_configs.yml

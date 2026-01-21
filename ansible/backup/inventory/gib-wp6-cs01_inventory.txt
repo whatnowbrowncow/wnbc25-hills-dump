@@ -1,0 +1,125 @@
+NAME: "Switch1 System", DESCR: "Cisco Systems, Inc. WS-C4500X-32 2 slot switch "
+PID:                   , VID:      , SN: JAE203706L7
+
+NAME: "Switch1 Supervisor 1 (virtual slot 1)", DESCR: "4500X-32 10GE (SFP+)"
+PID: WS-C4500X-32      , VID: V06  , SN: JAE203706L7
+
+NAME: "TenGigabitEthernet1/1/1", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V04  , SN: FNS17031JQJ
+
+NAME: "TenGigabitEthernet1/1/2", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V04  , SN: FNS17031JRC
+
+NAME: "TenGigabitEthernet1/1/3", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V04  , SN: FNS17091ZKS
+
+NAME: "TenGigabitEthernet1/1/13", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22219F6P
+
+NAME: "TenGigabitEthernet1/1/14", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22219REZ
+
+NAME: "TenGigabitEthernet1/1/15", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22219F9N
+
+NAME: "TenGigabitEthernet1/1/16", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2220ACK4
+
+NAME: "TenGigabitEthernet1/1/17", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: AVC22172470
+
+NAME: "TenGigabitEthernet1/1/19", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2221975H
+
+NAME: "TenGigabitEthernet1/1/20", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22219742
+
+NAME: "TenGigabitEthernet1/1/21", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD222190FM
+
+NAME: "TenGigabitEthernet1/1/22", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2221974Z
+
+NAME: "TenGigabitEthernet1/1/24", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: AVC2217246H
+
+NAME: "TenGigabitEthernet1/1/27", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: AVC2217249C
+
+NAME: "TenGigabitEthernet1/1/29", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2221973B
+
+NAME: "TenGigabitEthernet1/1/30", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2221926S
+
+NAME: "TenGigabitEthernet1/1/32", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2221974F
+
+NAME: "Switch1 Power Supply 1", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: ART2039X1E4
+
+NAME: "Switch1 Power Supply 2", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: ART2038X0JS
+
+NAME: "Switch2 System", DESCR: "Cisco Systems, Inc. WS-C4500X-32 2 slot switch "
+PID:                   , VID:      , SN: JAE203706NV
+
+NAME: "Switch2 Supervisor 1 (virtual slot 11)", DESCR: "4500X-32 10GE (SFP+)"
+PID: WS-C4500X-32      , VID: V06  , SN: JAE203706NV
+
+NAME: "TenGigabitEthernet2/1/1", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD1819A38K
+
+NAME: "TenGigabitEthernet2/1/2", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V04  , SN: FNS17091YJ4
+
+NAME: "TenGigabitEthernet2/1/3", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD1819A8RL
+
+NAME: "TenGigabitEthernet2/1/13", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2221972W
+
+NAME: "TenGigabitEthernet2/1/14", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2220ACKV
+
+NAME: "TenGigabitEthernet2/1/15", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD222197R2
+
+NAME: "TenGigabitEthernet2/1/16", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2220ACLE
+
+NAME: "TenGigabitEthernet2/1/17", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: AVC2217247M
+
+NAME: "TenGigabitEthernet2/1/19", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD222192DB
+
+NAME: "TenGigabitEthernet2/1/20", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD222192A4
+
+NAME: "TenGigabitEthernet2/1/21", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2220ACJY
+
+NAME: "TenGigabitEthernet2/1/22", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22219F7S
+
+NAME: "TenGigabitEthernet2/1/24", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: AVC2217247E
+
+NAME: "TenGigabitEthernet2/1/27", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: AVC22172478
+
+NAME: "TenGigabitEthernet2/1/29", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2220ACKE
+
+NAME: "TenGigabitEthernet2/1/30", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD22219F7L
+
+NAME: "TenGigabitEthernet2/1/32", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD2221926X
+
+NAME: "Switch2 Power Supply 1", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: ART2039X1EZ
+
+NAME: "Switch2 Power Supply 2", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: ART2039X1EY

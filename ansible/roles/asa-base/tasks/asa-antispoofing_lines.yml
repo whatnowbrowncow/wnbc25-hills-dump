@@ -1,0 +1,23 @@
+---
+
+#- name: build list
+#  with_items:
+#    - "{{ contexts }}"
+#  register: reg_context
+  
+- name: debug reg_context list
+  debug: var={{ item }}
+  with_items:
+    - "{{ context_item }}"
+
+#- name: Build Antispoofing on a context
+#  asa_config:
+#    lines:
+#      - ip verify reverse-path interface {{ item[1].nameif }}
+#    match: line
+#    replace: line
+#    update: check
+#    context: "{{ item[0].context }}"
+#  with_items:
+#    - "{{ contexts }}"
+#    - "{{ vlans }}"

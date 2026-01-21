@@ -1,0 +1,87 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show access-list | exclude ^ "
+    network_os: asa
+
+- name: extended acl match pattern
+  pattern_match:
+    regex: "access-list .+ +line (?:extended)?.+"
+    match_all: yes
+    match_greedy: yes
+  register: extended
+
+- name: Match ACL configuration
+  pattern_group:
+    - name: Match ACL Name
+      pattern_match:
+        regex: "^access-list (\\S+(?=_)|\\S+\\s+)"
+        content: "{{ item }}"
+      register: name
+    
+    - name: Match ACL Version
+      pattern_match:
+        regex: "^access-list \\S+_v(\\d+)"
+        content: "{{ item }}"
+      register: version
+
+    - name: Match ACL Details
+      pattern_match:
+        regex: "^access-list +\\S+ +line +(\\d+) +(?:(?:remark +(\\S+.*))?(?:extended +(permit|deny) +(?:(?:object +(\\S+)?)?(?:object-group +(\\S+))?(?:(ip|tcp|udp|\\S+)?)?)?)?)(?:(?: +host +(\\d+.\\d+.\\d+.\\d+)?)|(?:(?: +object +(\\S+)?)|(?:(?: +object-group +(\\S+)?)|(?: +(any4|any|\\d+.\\d+.\\d+.\\d+ +\\d+.\\d+.\\d+.\\d+)))?))(?: +(?:host +(\\d+.\\d+.\\d+.\\d+)?)|(?: +object +(\\S+)?)|(?: +object-group +(\\S+)?)|(?: +(any4|any|\\d+.\\d+.\\d+.\\d+ +\\d+.\\d+.\\d+.\\d+)))?(?: +(?:eq +(\\S+)?)|(?: +object-group +(\\S+)?)|(?: +range +(\\d+ +\\d+)))?(?: +log +(\\S+))?(?: +interval +(\\d+))?(?: +(inactive))?"
+        content: "{{ item }}"
+      register: details
+  loop: "{{ extended }}"
+  register: ext_acl_configration
+
+- name: Generate extended lines JSON data structure - 
+  json_template:
+    template:
+      - key: name
+        value: "{{ item.name.matches.0 }}"
+      - key: version
+        value: "{{ item.version.matches.0 }}"
+      - key: seq
+        value: "{{ item.details.matches.0 }}"
+      - key: remark
+        value: "{{ item.details.matches.1 }}"
+      - key: action
+        value: "{{ item.details.matches.2 }}"
+      - key: src_service_obj
+        value: "{{ item.details.matches.3 }}"
+      - key: src_service_obj_grp
+        value: "{{ item.details.matches.4 }}"
+      - key: protocol
+        value: "{{ item.details.matches.5 }}"
+      - key: src_host
+        value: "{{ item.details.matches.6 }}"
+      - key: src_network_obj
+        value: "{{ item.details.matches.7 }}"
+      - key: src_network_obj_grp
+        value: "{{ item.details.matches.8 }}"
+      - key: src_network
+        value: "{{ item.details.matches.9 }}"
+      - key: dest_host
+        value: "{{ item.details.matches.10 }}"
+      - key: dest_network_obj
+        value: "{{ item.details.matches.11 }}"
+      - key: dest_network_obj_grp
+        value: "{{ item.details.matches.12 }}"
+      - key: dest_network
+        value: "{{ item.details.matches.13 }}"
+      - key: dest_port
+        value: "{{ item.details.matches.14 }}"
+      - key: dest_port_obj_grp
+        value: "{{ item.details.matches.15 }}"
+      - key: dest_port_range
+        value: "{{ item.details.matches.16 }}"
+      - key: logging_level
+        value: "{{ item.details.matches.17 }}"
+      - key: logging_interval
+        value: "{{ item.details.matches.18 }}"
+      - key: status
+        value: "{{ item.details.matches.19|default('active',true) }}"
+  loop: "{{ ext_acl_configration }}"
+  export: yes
+  register: acl_extended_facts

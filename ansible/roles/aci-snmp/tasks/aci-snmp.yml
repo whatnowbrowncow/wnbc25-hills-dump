@@ -1,0 +1,193 @@
+---
+
+- name: Enable the Default SNMP Policy
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "api/node/mo/uni/fabric/snmppol-default.json"
+    content:
+      {
+        "snmpPol": {
+          "attributes": {
+            "dn": "uni/fabric/snmppol-default",
+            "adminSt": "enabled"
+          },
+          "children": []
+        }
+      }         
+    validate_certs: no
+
+- name: Create the SNMP Client Group Policy
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/snmppol-default/clgrp-{{ item.0.name }}.json"
+    content:
+      {
+        "snmpClientGrpP": {
+          "attributes": {
+            "dn": "uni/fabric/snmppol-default/clgrp-{{ item.0.name }}",
+            "name": "{{ item.0.name }}",
+            "rn": "clgrp-{{ item.0.name }}",
+          },
+          "children": [
+            {
+              "snmpClientP": {
+                "attributes": {
+                  "dn": "uni/fabric/snmppol-default/clgrp-{{ item.0.name }}/client-[{{ item.1.ip_addr }}]",
+                  "name": "{{ item.1.host }}",
+                  "addr": "{{ item.1.ip_addr }}",
+                  "rn": "client-[{{ item.1.ip_addr }}]",
+                },
+                "children": []
+              }
+            },
+            {
+              "snmpRsEpg": {
+                "attributes": {
+                  "tDn": "uni/tn-mgmt/mgmtp-default/oob-default",
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ snmp }}"
+    - servers
+
+- name: Create the SNMP Community Policy
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "api/node/mo/uni/fabric/snmppol-default/community-{{ item.comm_str }}.json"
+    content:
+      {
+        "snmpCommunityP": {
+          "attributes": {
+            "dn": "uni/fabric/snmppol-default/community-{{ item.comm_str }}",
+            "name": "{{ item.comm_str }}",
+            "descr": "{{ item.name }}",
+            "rn": "community-{{ item.comm_str }}"
+          },
+          "children": []
+        }
+      }      
+    validate_certs: no
+  with_items:
+    - "{{ snmp }}"
+
+- name: Confirm the POD1 Policy Group uses the Default SNMP Policy
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "api/node/mo/uni/fabric/funcprof/podpgrp-POD1.json"
+    content:
+      {
+        "fabricPodPGrp": {
+          "attributes": {
+            "dn": "uni/fabric/funcprof/podpgrp-POD1",
+            "name": "POD1",
+            "rn": "podpgrp-POD1",
+          },
+          "children": [
+            {
+              "fabricRsSnmpPol": {
+                "attributes": {
+                  "tnSnmpPolName": "default",
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      }         
+    validate_certs: no
+
+- name: Create the SNMP Monitoring Destination Group
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "api/node/mo/uni/fabric/snmpgroup-{{ item.0.name }}.json"
+    content: 
+      {
+        "snmpGroup": {
+          "attributes": {
+            "dn": "uni/fabric/snmpgroup-{{ item.0.name }}",
+            "name": "{{ item.0.name }}",
+            "rn": "snmpgroup-{{ item.0.name }}",
+          },
+          "children": [
+            {
+              "snmpTrapDest": {
+                "attributes": {
+                  "dn": "uni/fabric/snmpgroup-{{ item.0.name }}/trapdest-{{ item.1.ip_addr }}-port-162",
+                  "host": "{{ item.1.ip_addr }}",
+                  "secName": "{{ item.0.comm_str }}",
+                  "rn": "trapdest-{{ item.1.ip_addr }}-port-162",
+                },
+                "children": [
+                  {
+                    "fileRsARemoteHostToEpg": {
+                      "attributes": {
+                        "tDn": "uni/tn-mgmt/mgmtp-default/oob-default",
+                      },
+                      "children": []
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ snmp }}"
+    - servers
+
+- name: Create the Default SNMP Monitoring Policy
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "api/node/mo/uni/fabric/monfab-default/snmpsrc-{{ item.name }}.json"
+    content: 
+      {
+        "snmpSrc": {
+          "attributes": {
+            "dn": "uni/fabric/monfab-default/snmpsrc-{{ item.name }}",
+            "incl": "audits,events,faults",
+            "name": "{{ item.name }}",
+            "rn": "snmpsrc-{{ item.name }}",
+            "status": "created"
+          },
+          "children": [
+            {
+              "snmpRsDestGroup": {
+                "attributes": {
+                  "tDn": "uni/fabric/snmpgroup-{{ item.name }}",
+                  "status": "created"
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ snmp }}"

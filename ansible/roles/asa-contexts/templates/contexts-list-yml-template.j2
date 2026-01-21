@@ -1,0 +1,6 @@
+---
+
+contexts:
+{% for item in active_contexts %}
+  - context: "{{ item }}"
+{% endfor %}

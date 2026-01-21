@@ -1,0 +1,10 @@
+hostname,Interface,mgmt?,Description,IP Address,Subnet mask,vrf
+{% for item in mgmt_int_facts %}
+{{ inventory_hostname }},{{ item.management_interface.interface }},yes,{{ item.management_interface.description }},{{ item.management_interface.ipv4_address }},{{ item.management_interface.mask }},{{ item.management_interface.vrf }}
+{% endfor %}
+{% for item in loopbacks_facts.results %}
+{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.interface != mgmt_int_facts[0].management_interface.interface %}
+{{ inventory_hostname }},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.interface }},no,{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.description }},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.ipv4_address }},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.mask }},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.vrf }}
+{% else %}
+{% endif %}
+{% endfor %}

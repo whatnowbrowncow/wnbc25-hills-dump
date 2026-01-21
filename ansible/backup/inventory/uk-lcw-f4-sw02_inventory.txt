@@ -1,0 +1,2 @@
+NAME: "LCW_F4_SW2", DESCR: "Cisco Catalyst c2950 switch with 24 10/100 BaseTX ports"
+PID: WS-C2950-24       , VID: Q0 , SN: FOC0847Z2U3

@@ -1,0 +1,62 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-stj-cs01,1000BaseT,TenGigabitEthernet1/1/15,GLC-T,00000MTC162501HE,none
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/26,GLC-SX-MMD,ACW22280F9G,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/26,GLC-SX-MMD,ACW22290HRE,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/8,GLC-SX-MMD,AGJ1808R52L,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/4,GLC-SX-MMD,AGJ1808R5YB,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/22,Unspecified,AGM1532L38Y,none
+uk-stj-cs01,1000BaseT,TenGigabitEthernet1/1/16,GLC-T,AGM170121NZ,V03
+uk-stj-cs01,1000BaseT,TenGigabitEthernet2/1/15,GLC-T,AGM19054E3W,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/12,SFP-10G-SR,AVD1932ABFH,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/25,SFP-10G-SR,AVD2027A5M1,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/25,SFP-10G-SR,AVD2027A5MD,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/1,SFP-10G-SR,AVD21249PBS,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/2,SFP-10G-SR,AVD21249PD2,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/1,SFP-10G-SR,AVD2125993D,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/5,SFP-10G-SR,AVD22309EA8,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/5,SFP-10G-SR,AVD22309EAV,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/7,SFP-10G-SR,AVD223399WP,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/13,SFP-10G-SR,AVD223399X3,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/13,SFP-10G-SR,AVD223399X5,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/7,SFP-10G-SR,AVD223399XK,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/14,SFP-10G-SR,FNS16210Z3H,V03
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/9,GLC-SX-MMD,FNS164201JC,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/10,GLC-SX-MMD,FNS16431KXQ,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/8,GLC-SX-MMD,FNS16431L07,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/10,GLC-SX-MMD,FNS16431L6D,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/22,GLC-SX-MMD,FNS16431PHH,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/11,GLC-SX-MMD,FNS16440MPN,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/11,GLC-SX-MMD,FNS16441KQR,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/6,GLC-SX-MMD,FNS16441KTE,V01
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/14,SFP-10G-SR,FNS17031L4L,V04
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/9,GLC-SX-MMD,FNS19090387,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/4,GLC-SX-MMD,FNS1920059Z,V01
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/3,SFP-10G-SR,FNS19480050,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/3,SFP-10G-SR,FNS19480059,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/17,SFP-10G-SR,FNS19480071,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/17,SFP-10G-SR,FNS19480676,V03
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/21,GLC-SX-MMD,FNS20031582,V01
+uk-stj-cs01,4500X-32 10GE (SFP+),Switch2 Supervisor 1 (virtual slot 11),WS-C4500X-32,JAE214602ZS,V06
+uk-stj-cs01,Cisco Systems,Switch2 System,,JAE214602ZS,none
+uk-stj-cs01,4500X-32 10GE (SFP+),Switch1 Supervisor 1 (virtual slot 1),WS-C4500X-32,JAE21460301,V06
+uk-stj-cs01,Cisco Systems,Switch1 System,,JAE21460301,none
+uk-stj-cs01,10GBase-CU-2M,TenGigabitEthernet2/1/19,SFP-H10GB-CU2M,JPC213600UR,V02
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/2,SFP-10G-SR,JUR1925G8L5,V03
+uk-stj-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/12,SFP-10G-SR,JUR1925G8LC,V03
+uk-stj-cs01,10GBase-CU-2M,TenGigabitEthernet2/1/23,SFP-H10GB-CU2M,LRM2138608E,V02
+uk-stj-cs01,10GBase-CU-2M,TenGigabitEthernet2/1/20,SFP-H10GB-CU2M,LRM213860FE,V02
+uk-stj-cs01,10GBase-CU-5M,TenGigabitEthernet1/1/6,SFP-H10GB-CU5M,LRM213991RF,V03
+uk-stj-cs01,10GBase-CU-5M,TenGigabitEthernet1/1/21,SFP-H10GB-CU5M,LRM2139923Y,V03
+uk-stj-cs01,10GBase-CU-5M,TenGigabitEthernet1/1/19,SFP-H10GB-CU5M,LRM21399243,V03
+uk-stj-cs01,1000BaseT,TenGigabitEthernet2/1/16,GLC-T,MTC180706ND,V03
+uk-stj-cs01,1000BaseT,TenGigabitEthernet2/1/18,GLC-TE,MTC212101CH,V01
+uk-stj-cs01,1000BaseT,TenGigabitEthernet1/1/20,GLC-TE,MTC212101D4,V01
+uk-stj-cs01,1000BaseT,TenGigabitEthernet1/1/18,GLC-TE,MTC2121023Z,V01
+uk-stj-cs01,1000BaseT,TenGigabitEthernet1/1/23,GLC-TE,MTC2121027T,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/31,GLC-SX-MMD,OPM22380S82,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet2/1/30,GLC-SX-MMD,OPM22380SAQ,V01
+uk-stj-cs01,1000BaseSX,TenGigabitEthernet1/1/30,GLC-SX-MMD,OPM22380SB5,V01
+uk-stj-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 2,C4KX-PWR-750AC-R,QCS21383E64,V01
+uk-stj-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 1,C4KX-PWR-750AC-R,QCS21383E7S,V01
+uk-stj-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 2,C4KX-PWR-750AC-R,QCS21383EHH,V01
+uk-stj-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 1,C4KX-PWR-750AC-R,QCS21383EKK,V01

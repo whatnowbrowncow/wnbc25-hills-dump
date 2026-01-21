@@ -1,0 +1,14 @@
+hostname,community,access,access-list
+uk-brs-sbc,public,RO,
+uk-brs-sbc,cs1whil5,RO,5
+uk-brs-sbc,cs1whil6,RW,5
+uk-brs-sbc,c4q7p9wk,RO,7
+uk-brs-sbc,1PTr0,RO,10
+uk-brs-sbc,1PTrW,RW,11
+uk-brs-sbc,c1sc0,RO,19
+uk-brs-sbc,m0squ1t0,RO,10
+uk-brs-sbc,wh1LLc0rp,RW,11
+uk-brs-sbc,whM0n1T0r,RO,12
+uk-brs-sbc,5nmp-W1lH1l-R0,RO,
+uk-brs-sbc,GA4nzvYW,RW,10
+uk-brs-sbc,5wUxlDGU,RW,solarwinds-new

@@ -1,0 +1,33 @@
+---
+  - name: NXOS device report
+    hosts: nxos
+    connection: network_cli
+    strategy: free
+    gather_facts: no
+    
+    tasks:
+    - name: Collect facts
+      nxos_facts:
+      when: ansible_network_os == "nxos"
+
+  - name: Generate report
+    hosts: localhost
+    connection: local
+    gather_facts: no
+
+## Insert required username/password variable with fake contents to allow tasks to complete
+    vars:
+      user_username: "fake"
+      user_password: "fake"
+
+    tasks:
+    - name: Generate report
+      copy:
+        content: |
+          | Device | OS version | Serial No. | Model |
+          | ----- | ------ | ------ | ----- |
+          {% for device in groups['nxos'] %}
+          | {{ device }} | {{ hostvars[device].ansible_net_version | default('not collected') }} | {{ hostvars[device].ansible_net_serialnum | default('not collected') }} | {{ hostvars[device].ansible_net_model | default('not collected') }} |
+          {% endfor %}
+        dest: ./reports/nxos_report.md
+      run_once: true

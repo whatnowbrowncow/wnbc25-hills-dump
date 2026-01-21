@@ -1,0 +1,60 @@
+
+  - app_prof: 'pr-r-mgt'
+    tenant: 'production'
+    vrf: 'pr-r-mgt'
+    bds:
+      - bd: 'pr-r-mgt_internal-vrf'
+        network: '10.120.161.0'
+        gateway: '10.120.161.4'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-mgt_internal-vrf'
+            encap_id: '378'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-mgt_retail-dc-mgmt'
+        network: '10.120.171.0'
+        gateway: '10.120.171.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-mgt_retail-dc-mgmt'
+            encap_id: '452'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-mgt_web-mgmt'
+        network: '10.120.180.0'
+        gateway: '10.120.180.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-mgt_web-mgmt'
+            encap_id: '485'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-mgt_app-mgmt'
+        network: '10.120.180.128'
+        gateway: '10.120.180.129'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-mgt_app-mgmt'
+            encap_id: '486'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-mgt_server-ilo'
+        network: '10.120.183.0'
+        gateway: '10.120.183.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-mgt_server-ilo'
+            encap_id: '492'
+            vcenter_dynamic_vlan: true

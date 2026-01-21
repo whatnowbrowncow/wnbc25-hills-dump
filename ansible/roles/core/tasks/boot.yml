@@ -1,0 +1,8 @@
+---
+
+- name: Generate boot configurations
+  template:
+    src: "boot.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/boot.cfg"
+  tags:
+    - boot

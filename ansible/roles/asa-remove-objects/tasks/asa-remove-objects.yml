@@ -1,0 +1,14 @@
+---
+
+- name: Build objects removal commands
+  template:
+    src: objects.j2
+    dest: ./roles/asa-remove-objects/configs/{{ inventory_hostname }}_objects.cfg
+
+    
+- name: Remove objects from context {{ contexts.context }}
+  asa_config:
+    src: ./roles/asa-remove-objects/configs/{{ inventory_hostname }}_objects.cfg
+    context: "{{ item.context }}"
+  with_items:
+    - "{{ contexts }}"

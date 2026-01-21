@@ -1,0 +1,44 @@
+NAME: "Switch System", DESCR: "Cisco Systems, Inc. WS-C4500X-16 2 slot switch "
+PID:                   , VID:      , SN: JAE21240A82
+
+NAME: "Supervisor(slot 1)", DESCR: "4500X-16 10GE (SFP+)"
+PID: WS-C4500X-16      , VID: V05  , SN: JAE21240A82
+
+NAME: "TenGigabitEthernet1/1", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD21169K1U
+
+NAME: "TenGigabitEthernet1/2", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD21169K0R
+
+NAME: "TenGigabitEthernet1/3", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD21169K11
+
+NAME: "TenGigabitEthernet1/5", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: AVC212925FV
+
+NAME: "TenGigabitEthernet1/7", DESCR: "1000BaseT"
+PID: GLC-T             , VID: V03  , SN: MTC183702AF
+
+NAME: "TenGigabitEthernet1/8", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: MTC22120RPS
+
+NAME: "TenGigabitEthernet1/10", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS21200N8U
+
+NAME: "TenGigabitEthernet1/12", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: MTC22120QNF
+
+NAME: "TenGigabitEthernet1/13", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS212014M4
+
+NAME: "TenGigabitEthernet1/15", DESCR: "1000BaseT"
+PID: GLC-TE            , VID: V01  , SN: MTC211904F2
+
+NAME: "TenGigabitEthernet1/16", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS21200QJB
+
+NAME: "Power Supply 1", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: QCS21113DJP
+
+NAME: "Power Supply 2", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: QCS21113CHY

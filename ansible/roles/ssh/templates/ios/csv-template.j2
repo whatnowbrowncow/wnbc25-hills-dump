@@ -1,0 +1,4 @@
+device,timeout,auth_retries,source-interface,version,server-algorithm,client-algorithm
+{% for item in ios_ssh_facts %}
+{{ inventory_hostname }},{{ item.ssh.timeout }},{{ item.ssh.retries }},{{ item.ssh.sinterface }},{{ item.ssh.version }},{{ item.ssh.server_algorithm }},{{ item.ssh.client_algorithm }}
+{% endfor %}

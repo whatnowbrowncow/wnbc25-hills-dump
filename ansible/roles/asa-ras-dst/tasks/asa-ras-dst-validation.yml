@@ -1,0 +1,96 @@
+---
+# Retrieves current DST Group Policy Information 
+- name: ASA-RAS - Retrieving the RAS Group Policy configuration
+  asa_command:
+    commands:
+      - "show running-config group-policy"
+  register: activeDST
+# Creates DATA YAMLs with grouped sections and restored 
+- name: ASA-RAS - Validating and Creating RAS YAML Deployment Data Files
+  block:
+    - name: ASA-RAS - Validating and Creating RAS YAML Deployment Data Files
+      shell: python3 {{ role_path }}/scripts/dst-validation.py -i {{ inventory_dir }}
+      register: pythonoutput
+      delegate_to: 127.0.0.1
+      check_mode: no
+      changed_when: false
+  rescue:
+    - name: Display Error Message if required
+      fail:
+        msg: "{{ pythonoutput.stderr }}"
+# This points ansible to the newly created data in the task above
+- name: Pointing Role to Data Directory to Retrieve New DSTs
+  include_vars:
+    dir: '/gitnet/ras-processed/data'
+  check_mode: no
+# This extracts all DSTs that are currently deployed to the device via the activeDST variable created above
+- name: ASA-RAS - Collecting the Names of all the currently deployed RAS DST from the group-policy variable 
+  set_fact:
+    device_dst_temp: "{{ activeDST.stdout[0] | regex_findall('group-policy (\\S+) attributes[\\s\\S]*?(?:(?<!default-domain value prod.williamhill.plc)webvpn|(?:anyconnect-custom \\S+ value) ((\\S+(?=_v)|\\S+)?(?:_v)?(\\d+)?))') | unique }}"
+# Adding name and device version key to the information and placing them in a variable called 
+- name: ASA-RAS - Adding keys to Deployed DST variable 
+  set_fact :
+    device_dst: "{{ device_dst | default([]) + [{'policy' : loop_device_temp.0,'device_acl': loop_device_temp.2,'device_version': loop_device_temp.3 }] }}"
+  loop: "{{ device_dst_temp }}"
+  loop_control:
+    loop_var: loop_device_temp
+    extended: yes    
+    label: "Adding keys to relevant deployed DST data - {{ ((ansible_loop.index / ansible_loop.length)*100)|round(1,'common') }}%"   
+  when: 
+    - loop_device_temp.2 != ""
+    - loop_device_temp.3 != ""
+# Extracts all the YAML and Device version data into a single dictionary and filters out DSTs that haven’t changed
+- name: Extracting YAML and Device Version Data into a single dictionary for changed dsts
+  set_fact:
+    combined_dst_data: "{{ combined_dst_data | default({})| combine({loop_extract_data.policy: {'device_acl': loop_extract_data.device_acl, 'yaml_acl': yaml_acl[0], 'device_version': loop_extract_data.device_version, 'yaml_version': yaml_version}}) }}"
+  loop: "{{ device_dst }}"
+  loop_control:
+    loop_var: loop_extract_data
+    extended: yes    
+    label: "Extracting DST Data from Device - {{ ((ansible_loop.index / ansible_loop.length)*100)|round(1,'common') }}%"     
+  when: 
+    - (loop_extract_data.device_version | int) < (yaml_version | int) or
+      loop_extract_data.device_acl not in yaml_acl
+  vars:
+    yaml_acl: "{{  (ra_dst | selectattr('policy', 'equalto', loop_extract_data.policy)|map(attribute='name')|list) }}"
+    yaml_version: "{{ lookup('vars', loop_extract_data.device_acl).version | default (0) }}"  
+
+# Checking if the changes_acls variable was defined and if not, assumes no changes so display message and ends the playbook 
+- name: ASA-RAS - Checking the DST YAML files for any version updates
+  block:
+    - name: ASA-RAS - Display Message if there are no DSTs to process
+      shell: "echo '\e[1;32m ############################################ There are no new DSTs to be processed for {{ inventory_hostname }} ############################################ \e[0m' > /dev/tty"
+      check_mode: no
+      changed_when: false
+      
+    - name: ASA-RAS - End Play if no DST changes
+      meta: end_host
+  when: combined_dst_data is not defined
+
+    # Extracting all the dst names from the combined data above to be used to extract all the DST data in the next task 
+- name: Extracting names of DST that have changed
+  set_fact:
+    dst_list: "{{ (combined_dst_data |map('extract',combined_dst_data,'yaml_acl'))|flatten | unique }}"
+
+    # By Looping through all the DST Named YML files in /gitnet/ras-processed/data, this extracts all the data where they match the values in the dst_list variable and then adds the relevant matching detail from the dst_list varible 
+    # This then creates a variable called changed_dst to produce a complete set of DSTs that can be deployed to the device 
+- name: ASA-RAS - Collecting all RAS DST data from the current YML files 
+  set_fact:
+     changed_dst: "{{ changed_dst | default([]) + [(lookup('vars', loop_ra_dst))] }}"
+  loop: "{{ dst_list }}"
+  loop_control:
+    loop_var: loop_ra_dst
+    extended: yes    
+    label: "Combining all information for DSTs  - {{ ((ansible_loop.index / ansible_loop.length)*100)|round(1,'common') }}%" 
+       
+
+# This is to extract all the acl names from the configuration
+- name: ASA-RAS - Search for DST of same version 
+  asa_command:
+    commands:
+      - "show run anyconnect-custom-data | in {{ loop_device_dst.name }}_v{{ loop_device_dst.version }}"
+  loop: "{{ changed_dst }}"
+  loop_control:
+    loop_var: loop_device_dst
+  register: deviceDST
+  failed_when: deviceDST.stdout != [""]

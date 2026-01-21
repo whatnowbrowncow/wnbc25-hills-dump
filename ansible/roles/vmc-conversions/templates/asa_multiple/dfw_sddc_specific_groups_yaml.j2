@@ -1,0 +1,392 @@
+---
+{% set object_groups_in_acls = [] %}
+{% set objects_in_acls = [] %}
+{% set ips_in_acls = [] %}
+{% set subnets_in_acls = [] %}
+{% set existing_hosts = [] %}
+{% set existing_subnets = [] %}
+{% set existing_objects = [] %}
+{% set existing_object_groups = [] %}
+{% set duplicate_objects_list = [] %}
+{% set duplicate_objects = [] %}
+{% set duplicate_object_groups_list = [] %}
+{% set duplicate_object_groups = [] %}
+{% set host_objects = [] %}
+{% set subnet_objects = [] %}
+{% set range_objects = [] %}
+{% for item in network_host_objects_facts %}
+{%   do host_objects.append(item.object.name) %}
+{% endfor %}
+{% if network_subnet_objects_facts is defined %}
+{%   for item in network_subnet_objects_facts %}
+{%    do subnet_objects.append(item.object.name) %}
+{%   endfor %}
+{% endif %}
+{% if network_range_objects_facts is defined %}
+{%   for item in network_range_objects_facts %}
+{%    do range_objects.append(item.object.name) %}
+{%   endfor %}
+{% endif %}
+{% for acl in access_lists.results %}
+{%   if acl.ansible_facts.access_entry_facts is defined %}
+{%     for ace in acl.ansible_facts.access_entry_facts %}
+{%       if ace.hit_count|int > 0 %}
+{%         if ace.src_network_obj_grp is defined and ace.src_network_obj_grp %}
+{%           if ace.src_network_obj_grp not in object_groups_in_acls %}
+{%             do object_groups_in_acls.append(ace.src_network_obj_grp) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_network_obj is defined and ace.src_network_obj %}
+{%           if ace.src_network_obj not in objects_in_acls %}
+{%             do objects_in_acls.append(ace.src_network_obj) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_host is defined and ace.src_host %}
+{%           if ace.src_host not in ips_in_acls %}
+{%             do ips_in_acls.append(ace.src_host) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_network is defined and ace.src_network %}
+{%           if ace.src_network != "any" and ace.src_network != "any4" %}
+{%             if ace.src_network not in subnets_in_acls %}
+{%               do subnets_in_acls.append(ace.src_network) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_network_obj_grp is defined and ace.dest_network_obj_grp %}
+{%           if ace.dest_network_obj_grp not in object_groups_in_acls %}
+{%             do object_groups_in_acls.append(ace.dest_network_obj_grp) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_network_obj is defined and ace.dest_network_obj %}
+{%           if ace.dest_network_obj not in objects_in_acls %}
+{%             do objects_in_acls.append(ace.dest_network_obj) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_host is defined and ace.dest_host %}
+{%           if ace.dest_host not in ips_in_acls %}
+{%             do ips_in_acls.append(ace.dest_host) %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_network is defined and ace.dest_network %}
+{%           if ace.dest_network != "any" and ace.dest_network != "any4" %}
+{%             if ace.dest_network not in subnets_in_acls %}
+{%               do subnets_in_acls.append(ace.dest_network) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}
+{% for group in object_groups_in_acls %}
+{%   for item in obj_groups.results %}
+{%     if group == item.ansible_facts.object_group[0].name %}
+{%       if item.ansible_facts.hosts is defined %}
+{%         for ip in item.ansible_facts.hosts %}
+{%           do ips_in_acls.append(ip.ip_addr) %}
+{%         endfor %}
+{%       endif %}
+{%       if item.ansible_facts.networks is defined %}
+{%         for network in item.ansible_facts.networks %}
+{%           do subnets_in_acls.append([network.ip_addr, network.mask]|join(' ')) %}
+{%         endfor %}
+{%       endif %}
+{%       if item.ansible_facts.objects is defined %}
+{%         for object in item.ansible_facts.objects %}
+{%           if object.object_name not in objects_in_acls %}
+{%             do objects_in_acls.append(object.object_name) %}
+{%           endif %}
+{%         endfor %}
+{%       endif %}
+{%       if item.ansible_facts.group_objects is defined %}
+{%         for group in item.ansible_facts.group_objects %}
+{%           if group.group_object_name not in object_groups_in_acls %}
+{%             do object_groups_in_acls.append(group.group_object_name) %}
+{%           endif %}
+{%         endfor %}
+{%       endif %}
+{%     endif %}
+{%   endfor %}
+{% endfor %}
+{% for object in objects_in_acls %}
+{%   if [context.context, "_", object]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in existing_objects %}
+{%     do existing_objects.append([context.context, "_", object]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   else %}
+{%     do duplicate_objects_list.append([context.context, "_", object]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   endif %}
+{% endfor %}
+{% for object_group in object_groups_in_acls %}
+{%   if [context.context, '_grp_', object_group]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in existing_object_groups %}
+{%     do existing_object_groups.append([context.context, '_grp_', object_group]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   else %}
+{%     do duplicate_object_groups_list.append([context.context, '_grp_', object_group]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%   endif %}
+{% endfor %}
+resources:
+  group_objects:
+
+###IPS IN ACLS###
+
+{% for ip in ips_in_acls %}
+{%   if ip not in existing_hosts %}
+    - group_name: "{{ context.context }}_ip_{{ ip | regex_replace ("\.","-") }}"
+      description: "{{ context.context }}_ip_{{ ip | regex_replace ("\.","-") }}"
+      ip_addr_list:
+        - "{{ ip }}"
+
+{%   do existing_hosts.append(ip) %}
+{%   else %}
+{%   endif %}
+{% endfor %}
+
+####SUBNETS IN ACLS###
+{% for subnet in subnets_in_acls %}
+{%   if subnet not in existing_subnets %}
+{%     if "255.255.255.255" in subnet  %}
+    - group_name: "{{ context.context }}_ip_{{ subnet | regex_replace (" 255.255.255.255","s32") | regex_replace ("\.","-")  }}"
+      description: "{{ context.context }}_ip_{{ subnet | regex_replace (" 255.255.255.255","s32") | regex_replace ("\.","-")  }}"
+      ip_addr_list:
+        - "{{ subnet | regex_replace (" 255.255.255.255","/32") }}"
+
+{%     do existing_subnets.append(subnet) %}
+{%     else %}
+    - group_name: "{{ context.context }}_ip_{{ subnet| regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      description: "{{ context.context }}_ip_{{ subnet | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      ip_addr_list:
+        - "{{ subnet | regex_replace (" ","/") | ipaddr('net') }}"
+
+{%     do existing_subnets.append(subnet) %}
+{%     endif %}
+{%   endif %}
+{% endfor %}
+
+###OBJECTS###
+
+{% for object in objects_in_acls %}
+{%     if [context.context, "_", object]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_objects_list %}
+{%       if object in host_objects %}
+{%         for item in network_host_objects_facts %}
+{%           if item.object.name == object %}
+    - group_name: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             if item.object.description %}
+      description: "{{ item.object.description }}"
+{%             else %}
+      description: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             endif %}
+      ip_addr_list:
+        - "{{ item.object.ip_addr }}"
+
+{%           endif %}
+{%         endfor %}
+{%       elif object in subnet_objects  %}
+{%         for item in network_subnet_objects_facts %}
+{%           if item.object.name == object %}
+    - group_name: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             if item.object.description %}
+      description: "{{ item.object.description }}"
+{%             else %}
+      description: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             endif %}
+      ip_addr_list:
+{%             if item.object.mask == '255.255.255.255' %}
+        - "{{ item.object.network }}/32"
+{%             else %}
+        - "{{ [item.object.network, item.object.mask]|join('/') | ipaddr('net')}}"
+{%             endif %}
+
+{%           endif %}
+{%         endfor %}
+{%       elif object in range_objects %}
+{%         for item in network_range_objects_facts %}
+{%           if item.object.name == object %}
+    - group_name: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             if item.object.description %}
+      description: "{{ item.object.description }}"
+{%             else %}
+      description: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%             endif %}
+      ip_addr_list:
+{%             for ip in range( item.object.end.split('.')[3] | int - item.object.start.split('.')[3] | int + 1) %}
+        - "{{ item.object.start | ipmath(ip) }}"
+{%             endfor %}
+
+{%           endif %}
+{%         endfor %}
+{%       endif %}
+{%     else %}
+{%       if object in host_objects %}
+{%         for item in network_host_objects_facts %}
+{%           if object == item.object.name %}
+{%             if [context.context, "_", item.object.name, "_ip_", item.object.ip_addr ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_objects %}
+    - group_name: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_ip_{{ item.object.ip_addr | regex_replace ("\.","-") }}"
+{%               if item.object.description %}
+      description: "{{ item.object.description }}"
+{%               else %}
+      description: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_ip_{{ item.object.ip_addr | regex_replace ("\.","-") }}"
+{%               endif %}
+      ip_addr_list:
+        - "{{ item.object.ip_addr }}"
+
+{%               do duplicate_objects.append([context.context, "_", item.object.name, "_ip_", item.object.ip_addr ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%             endif %}
+{%           endif %}
+{%         endfor %}
+{%       elif object in subnet_objects %}
+{%         for item in network_subnet_objects_facts %}
+{%           if object|lower == item.object.name|lower %}
+{%             if [context.context, "_", item.object.name, "_net_", item.object.network,'_', item.object.mask ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_objects %}
+    - group_name: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_net_{{ item.object.network | regex_replace ("\.","-") }}_{{ item.object.mask | regex_replace ("\.","-") }}"
+{%               if item.object.description %}
+      description: "{{ item.object.description }}"
+{%               else %}
+      description: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_net_{{ item.object.network | regex_replace ("\.","-") }}_{{ item.object.mask | regex_replace ("\.","-") }}"
+{%               endif %}
+      ip_addr_list:
+{%               if item.object.mask == '255.255.255.255' %}
+        - "{{ item.object.network }}/32"
+{%               else %}
+        - "{{ [item.object.network, item.object.mask]|join('/') | ipaddr('net')}}"
+{%               endif %}
+
+{%               do duplicate_objects.append([context.context, "_", item.object.name, "_net_", item.object.network,'_', item.object.mask ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%             endif %}
+{%           endif %}
+{%         endfor %}
+{%       endif %}
+{%     endif %}
+{% endfor %}
+###OBJECT_GROUPS###
+
+  object_groups:
+{%   for object_group in object_groups_in_acls %}
+{%     if [context.context, '_grp_', object_group]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_object_groups_list %}
+{%       for item in obj_groups.results %}
+{%         if item.ansible_facts.object_group[0].name == object_group %}
+    - group_name: "{{context.context}}_grp_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%           if item.ansible_facts.object_group_description is defined %}
+      description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{%           else %}
+      description: "{{context.context}}_grp_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%           endif %}
+      sub_group_list:
+{%           if item.ansible_facts.objects is defined %}
+{%             set member_objects = [] %}
+{%             for object in item.ansible_facts.objects %}
+{%               if [context.context, "_", object.object_name]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_objects_list %}
+        - "{{ context.context }}_{{ object.object_name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%               else %}
+{%                 if object.object_name in host_objects %}
+{%                   for object2 in network_host_objects_facts %}
+{%                     if object2.object.name == object.object_name %}
+{%                       if [context.context, "_", object.object_name, "_ip_", object2.object.ip_addr ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in member_objects %}
+        - "{{ context.context }}_{{ object.object_name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower}}_ip_{{ object2.object.ip_addr | regex_replace ("\.","-") }}"
+{%                         do member_objects.append([context.context, "_", object.object_name, "_ip_", object2.object.ip_addr ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                       endif %}
+{%                     endif %}
+{%                   endfor %}
+{%                 elif object.object_name in subnet_objects %}
+{%                   for subnet in network_subnet_objects_facts %}
+{%                     if subnet.object.name == object.object_name %}
+{%                       if [context.context, "_", subnet.object.name, "_net_", subnet.object.network,'_', subnet.object.mask ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in member_objects %}
+        - "{{ context.context }}_{{ subnet.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_net_{{ subnet.object.network | regex_replace ("\.","-") }}_{{ subnet.object.mask | regex_replace ("\.","-") }}"
+{%                         do member_objects.append([context.context, "_", subnet.object.name, "_net_", subnet.object.network,'_', subnet.object.mask ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                       endif %}
+{%                     endif %}
+{%                   endfor %}
+{%                 endif %}
+{%               endif %}
+{%             endfor %}
+{%             set member_objects = member_objects.clear() %}
+{%           endif %}
+{%           if item.ansible_facts.hosts is defined %}
+{%             for ip in item.ansible_facts.hosts %}
+        - "{{ context.context }}_ip_{{ ip.ip_addr | regex_replace ("\.","-") }}"
+{%             endfor %}
+{%           endif %}
+{%           if item.ansible_facts.networks is defined %}
+{%             for network in item.ansible_facts.networks %}
+{%               if network.mask == '255.255.255.255' %}
+        - "{{ context.context }}_ip_{{ [network.ip_addr, "s32"]|join('')| regex_replace ("\.","-") }}"
+{%               else %}
+        - "{{ context.context }}_ip_{{ [network.ip_addr, network.mask]|join('/') | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%               endif %}
+{%             endfor %}
+{%           endif %}
+{%           if item.ansible_facts.group_objects is defined %}
+{%             for group in item.ansible_facts.group_objects %}
+{%               if [context.context, '_grp_', group.group_object_name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_object_groups_list %}
+        - "{{context.context}}_grp_{{ group.group_object_name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%               else %}
+        - "{{context.context}}_grp_{{ group.group_object_name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_{% if group.ansible_facts.objects is defined %}{{ group.ansible_facts.objects|length }}{% else %}0{% endif %}{% if group.ansible_facts.hosts is defined %}{{ group.ansible_facts.hosts|length }}{% else %}0{% endif %}{% if group.ansible_facts.networks is defined %}{{ group.ansible_facts.networks|length }}{% else %}0{% endif %}{% if group.ansible_facts.group_objects is defined %}{{ group.ansible_facts.group_objects|length }}{% else %}0{% endif %}"
+{%               endif %}
+{%             endfor %}
+{%           endif %}
+{%         endif %}
+{%       endfor %}
+{%     else %}
+{%       for item in obj_groups.results %}
+{%         if item.ansible_facts.object_group[0].name == object_group %}
+    - group_name: "{{context.context}}_grp_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_{% if item.ansible_facts.objects is defined %}{{ item.ansible_facts.objects|length }}{% else %}0{% endif %}{% if item.ansible_facts.hosts is defined %}{{ item.ansible_facts.hosts|length }}{% else %}0{% endif %}{% if item.ansible_facts.networks is defined %}{{ item.ansible_facts.networks|length }}{% else %}0{% endif %}{% if item.ansible_facts.group_objects is defined %}{{ item.ansible_facts.group_objects|length }}{% else %}0{% endif %}"
+{%           if item.ansible_facts.object_group_description is defined %}
+      description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{%           else %}
+      description: "{{context.context}}_grp_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_{% if item.ansible_facts.objects is defined %}{{ item.ansible_facts.objects|length }}{% else %}0{% endif %}{% if item.ansible_facts.hosts is defined %}{{ item.ansible_facts.hosts|length }}{% else %}0{% endif %}{% if item.ansible_facts.networks is defined %}{{ item.ansible_facts.networks|length }}{% else %}0{% endif %}{% if item.ansible_facts.group_objects is defined %}{{ item.ansible_facts.group_objects|length }}{% else %}0{% endif %}"
+{%           endif %}
+      sub_group_list:
+{%           if item.ansible_facts.objects is defined %}
+{%             set member_objects = [] %}
+{%             for object in item.ansible_facts.objects %}
+{%               if [context.context, "_", object.object_name]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_objects_list %}
+        - "{{ context.context }}_{{ object.object_name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%               else %}
+{%                 if object.object_name in host_objects %}
+{%                   for object2 in network_host_objects_facts %}
+{%                     if object2.object.name == object.object_name %}
+{%                       if [context.context, "_", object.object_name, "_ip_", object2.object.ip_addr ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in member_objects %}
+        - "{{ context.context }}_{{ object.object_name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower}}_ip_{{ object2.object.ip_addr | regex_replace ("\.","-") }}"
+{%                         do member_objects.append([context.context, "_", object.object_name, "_ip_", object2.object.ip_addr ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                       endif %}
+{%                     endif %}
+{%                   endfor %}
+{%                 elif object.object_name in subnet_objects %}
+{%                   for subnet in network_subnet_objects_facts %}
+{%                     if subnet.object.name == object.object_name %}
+{%                       if [context.context, "_", subnet.object.name, "_net_", subnet.object.network,'_', subnet.object.mask ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in member_objects %}
+        - "{{ context.context }}_{{ subnet.object.name | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_net_{{ subnet.object.network | regex_replace ("\.","-") }}_{{ subnet.object.mask | regex_replace ("\.","-") }}"
+{%                         do member_objects.append([context.context, "_", subnet.object.name, "_net_", subnet.object.network,'_', subnet.object.mask ]|join('') | regex_replace ("\.","-") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                       endif %}
+{%                     endif %}
+{%                   endfor %}
+{%                 endif %}
+{%               endif %}
+{%             endfor %}
+{%             set member_objects = member_objects.clear() %}
+{%           endif %}
+{%           if item.ansible_facts.hosts is defined %}
+{%             for ip in item.ansible_facts.hosts %}
+        - "{{ context.context }}_ip_{{ ip.ip_addr | regex_replace ("\.","-") }}"
+{%             endfor %}
+{%           endif %}
+{%           if item.ansible_facts.networks is defined %}
+{%             for network in item.ansible_facts.networks %}
+{%               if network.mask == '255.255.255.255' %}
+        - "{{ context.context }}_ip_{{ [network.ip_addr, "s32"]|join('')| regex_replace ("\.","-") }}"
+{%               else %}
+        - "{{ context.context }}_ip_{{ [network.ip_addr, network.mask]|join('/') | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%               endif %}
+{%             endfor %}
+{%           endif %}
+{%           if item.ansible_facts.group_objects is defined %}
+{%             for group in item.ansible_facts.group_objects %}
+{%               if [context.context, '_grp_', group.group_object_name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in duplicate_object_groups_list %}
+        - "{{context.context}}_grp_{{ group.group_object_name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%               else %}
+        - "{{context.context}}_grp_{{ group.group_object_name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_{% if group.ansible_facts.objects is defined %}{{ group.ansible_facts.objects|length }}{% else %}0{% endif %}{% if group.ansible_facts.hosts is defined %}{{ group.ansible_facts.hosts|length }}{% else %}0{% endif %}{% if group.ansible_facts.networks is defined %}{{ group.ansible_facts.networks|length }}{% else %}0{% endif %}{% if group.ansible_facts.group_objects is defined %}{{ group.ansible_facts.group_objects|length }}{% else %}0{% endif %}"
+{%               endif %}
+{%             endfor %}
+{%           endif %}
+{%         endif %}
+{%       endfor %}
+{%     endif %}
+{%   endfor %}

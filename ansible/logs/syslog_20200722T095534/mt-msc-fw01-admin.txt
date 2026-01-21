@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: mt-msc-fw01-admin @ 20200722T095534 ---!
+!
+logging host management 10.120.163.134
+!
+!--- END UPDATES: mt-msc-fw01-admin @ 20200722T095534 ---!
+}

@@ -1,0 +1,7 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.30,10.61.8.1,0200.0101.0501,vsphere,255.255.254.0,100
+up,,Port-channel1.1650,10.61.215.196,0200.0101.0501,internal-vrf,255.255.255.248,100
+up,,Port-channel1.2122,10.61.10.1,0200.0101.0501,server-mgmt,255.255.254.0,100
+up,,Port-channel1.2123,10.61.13.1,0200.0101.0501,mano,255.255.255.0,100
+up,,Port-channel1.2124,10.61.12.1,0200.0101.0501,core-services,255.255.255.0,100
+up,,Port-channel1.2125,10.61.15.1,0200.0101.0501,jumphosts,255.255.255.0,100

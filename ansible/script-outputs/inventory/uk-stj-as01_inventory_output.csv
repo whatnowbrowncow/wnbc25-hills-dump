@@ -1,0 +1,7 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-stj-as01,10/100/1000BaseTX SFP,GigabitEthernet1/1/2,,AGM1643204A,none
+uk-stj-as01,WS-C3650-48TD,Switch 1,WS-C3650-48TD,FDO2029E12L,V03
+uk-stj-as01,c36xx Stack,c36xx Stack,WS-C3650-48TD,FDO2029E12L,V03
+uk-stj-as01,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-250WAC,LIT20310MSH,V03
+uk-stj-as01,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-250WAC,LIT20310NHX,V03
+uk-stj-as01,10/100/1000BaseTX SFP,GigabitEthernet1/1/1,,MTC1520017P,none

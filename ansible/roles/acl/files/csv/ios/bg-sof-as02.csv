@@ -1,0 +1,96 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+bg-sof-as02,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+bg-sof-as02,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+bg-sof-as02,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+bg-sof-as02,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+bg-sof-as02,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+bg-sof-as02,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+bg-sof-as02,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+bg-sof-as02,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+bg-sof-as02,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+bg-sof-as02,solarwinds-new,Standard,100,deny,,any log,,,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,10,permit,tcp,any,any,22
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,20,permit,tcp,any,any,465
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,30,permit,tcp,any,any,143
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,40,permit,tcp,any,any,993
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,50,permit,tcp,any,any,995
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,60,permit,tcp,any,any,1914
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,70,permit,tcp,any,any,ftp
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,80,permit,tcp,any,any,ftp-data
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,90,permit,tcp,any,any,smtp
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,100,permit,tcp,any,any,pop3
+bg-sof-as02,AutoQos-4.0-wlan-Acl-MultiEnhanced-Conf,Extended,10,permit,udp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-MultiEnhanced-Conf,Extended,20,permit,tcp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,10,permit,tcp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,20,permit,udp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,30,permit,tcp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,40,permit,tcp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,50,permit,tcp,any,any,1214
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,60,permit,udp,any,any,1214
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,70,permit,tcp,any,any,3689
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,80,permit,udp,any,any,3689
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Scavanger,Extended,90,permit,tcp,any,any,11999
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Signaling,Extended,10,permit,tcp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Signaling,Extended,20,permit,tcp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Signaling,Extended,30,permit,udp,any,any,
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,10,permit,tcp,any,any,443
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,20,permit,tcp,any,any,1521
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,30,permit,udp,any,any,1521
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,40,permit,tcp,any,any,1526
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,50,permit,udp,any,any,1526
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,60,permit,tcp,any,any,1575
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,70,permit,udp,any,any,1575
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,80,permit,tcp,any,any,1630
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,90,permit,udp,any,any,1630
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,100,permit,tcp,any,any,1527
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,110,permit,tcp,any,any,6200
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,120,permit,tcp,any,any,3389
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,130,permit,tcp,any,any,5985
+bg-sof-as02,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,140,permit,tcp,any,any,8080
+bg-sof-as02,1,Standard,10,permit,,10.120.163.210,,,
+bg-sof-as02,1,Standard,20,permit,,10.1.74.66,,,
+bg-sof-as02,1,Standard,30,permit,,10.180.163.18,,,
+bg-sof-as02,1,Standard,40,permit,,10.120.163.151,,,
+bg-sof-as02,1,Standard,50,permit,,10.210.163.60,,,
+bg-sof-as02,1,Standard,60,permit,,10.120.163.152,,,
+bg-sof-as02,1,Standard,70,permit,,10.1.74.29,,,
+bg-sof-as02,1,Standard,80,permit,,10.112.13.17,,,
+bg-sof-as02,1,Standard,90,permit,,10.1.74.48,,,
+bg-sof-as02,1,Standard,100,permit,,10.1.74.57,,,
+bg-sof-as02,1,Standard,110,permit,,10.1.74.61,,,
+bg-sof-as02,1,Standard,120,permit,,10.120.195.31,,,
+bg-sof-as02,1,Standard,130,permit,,10.120.143.70,,,
+bg-sof-as02,1,Standard,140,permit,,10.1.74.128,,,
+bg-sof-as02,1,Standard,150,permit,,10.180.142.230,,,
+bg-sof-as02,1,Standard,160,permit,,10.120.163.37,,,
+bg-sof-as02,1,Standard,170,permit,,10.1.82.64 0.0.0.31,,,
+bg-sof-as02,1,Standard,180,permit,,10.1.22.0 0.0.0.255,,,
+bg-sof-as02,1,Standard,190,permit,,192.168.2.0 0.0.1.255,,,
+bg-sof-as02,1,Standard,200,permit,,10.210.141.40 0.0.0.7,,,
+bg-sof-as02,1,Standard,210,permit,,10.180.141.40 0.0.0.7,,,
+bg-sof-as02,1,Standard,220,permit,,10.120.141.40 0.0.0.7,,,
+bg-sof-as02,1,Standard,230,deny,,any log,,,
+bg-sof-as02,10,Standard,10,permit,,10.120.163.59,,,
+bg-sof-as02,10,Standard,20,deny,,any log,,,
+bg-sof-as02,11,Standard,50,permit,,10.112.12.126,,,
+bg-sof-as02,11,Standard,40,permit,,10.112.12.125,,,
+bg-sof-as02,11,Standard,10,permit,,10.120.136.140,,,
+bg-sof-as02,11,Standard,30,permit,,10.120.163.123,,,
+bg-sof-as02,11,Standard,20,permit,,10.120.163.122,,,
+bg-sof-as02,11,Standard,60,deny,,any log,,,
+bg-sof-as02,12,Standard,10,permit,,10.220.163.112,,,
+bg-sof-as02,12,Standard,20,permit,,10.220.163.111,,,
+bg-sof-as02,12,Standard,30,permit,,10.180.163.112,,,
+bg-sof-as02,12,Standard,40,permit,,10.180.163.111,,,
+bg-sof-as02,12,Standard,50,permit,,10.120.163.112,,,
+bg-sof-as02,12,Standard,60,permit,,10.110.163.111,,,
+bg-sof-as02,12,Standard,70,permit,,10.110.163.112,,,
+bg-sof-as02,12,Standard,80,permit,,10.120.163.111,,,
+bg-sof-as02,12,Standard,90,deny,,any log,,,
+bg-sof-as02,13,Standard,10,permit,,10.180.163.12,,,
+bg-sof-as02,14,Standard,10,permit,,10.180.129.202,,,
+bg-sof-as02,14,Standard,20,permit,,10.180.129.201,,,
+bg-sof-as02,16,Standard,10,permit,,10.120.163.206,,,
+bg-sof-as02,19,Standard,10,permit,,172.16.41.192 0.0.0.31,,,
+bg-sof-as02,19,Standard,20,permit,,10.1.82.64 0.0.0.31,,,
+bg-sof-as02,20,Standard,10,permit,,10.180.163.120,,,

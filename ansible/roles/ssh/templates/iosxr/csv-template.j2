@@ -1,0 +1,4 @@
+device,vrf,acl
+{% for item in iosxr_ssh_facts %}
+{{ inventory_hostname }},{{ item.ssh.vrf }},{{ item.ssh.acl }}
+{% endfor %}

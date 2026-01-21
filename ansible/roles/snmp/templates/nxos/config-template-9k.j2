@@ -1,0 +1,10 @@
+{% for item in snmp.community %}
+{%   if item.role == 'network-admin' %}
+snmp-server community {{ item.string }} rw
+{%   elif item.role == 'network-operator' %} 
+snmp-server community {{ item.string }} ro
+{%   else %}
+snmp-server community {{ item.string }} ro
+{%   endif %}
+snmp-server community {{ item.string }} use-ipv4acl {{ item.access_list }}
+{%- endfor %}

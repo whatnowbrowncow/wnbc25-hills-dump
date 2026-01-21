@@ -1,0 +1,8 @@
+NAME: "CISCO2921/K9", DESCR: "CISCO2921/K9 chassis, Hw Serial#: FGL1907110V, Hw Revision: 1.0"
+PID: CISCO2921/K9      , VID: V08 , SN: FGL1907110V
+
+NAME: "WAN Interface Card - HWIC Serial 1T on Slot 0 SubSlot 0", DESCR: "WAN Interface Card - HWIC Serial 1T"
+PID: HWIC-1T           , VID: V05 , SN: FOC19031LTT
+
+NAME: "C2921/C2951 AC Power Supply", DESCR: "C2921/C2951 AC Power Supply"
+PID: PWR-2921-51-AC    , VID: V03 , SN: QCS18520STP

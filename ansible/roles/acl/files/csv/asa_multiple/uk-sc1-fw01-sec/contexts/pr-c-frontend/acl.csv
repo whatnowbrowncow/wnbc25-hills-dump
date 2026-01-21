@@ -1,0 +1,711 @@
+hostname,name,type,seq number,remark,action,src_service_obj,src_service_obj_grp,protocol,src_host,src_network_obj,src_network_obj_grp,src_network,dest_host,dest_network_obj,dest_network_obj_grp,dest_network,dest_port,dest_port_obj_grp,dest_port_range,logging_level,logging_interval,status
+uk-sc1-fw01-sec,group-vrf_access_in,extended,1,,permit,,,ip,,,,any4,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,3,CHG0034224,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,4,,permit,,,ip,,scc-nessus,,,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,5,CHG0136121,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,6,CHG0138783,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,7,,permit,,,tcp,,sc1-monitoring,,,,cdeproxy.group.williamhill.plc,,,https,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,8,,permit,,,tcp,,,commvault-brs-media-servers,,,sc1wnprbkcs01,,,,TCP_8400-8403,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,9,CHG0133137,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,10,CHG0139905,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,11,,permit,,,tcp,,continuousx-network,,,,,DM_INLINE_NETWORK_80,,,DM_INLINE_TCP_13,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,12,,permit,,,tcp,,SC1WNPREMN20,,,,,SCC-NAS-IP-Range40-49,,,DM_INLINE_TCP_68,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,13,CHG0024076, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,14,,permit,,,tcp,,,DM_INLINE_NETWORK_31,,,citrix.group.williamhill.plc,,,https,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,15,CHG0021198, CHG0021327, CHG0022383, CHG0022234, CHG0023308,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,16,,permit,,,tcp,,,DM_INLINE_NETWORK_19,,,,DM_INLINE_NETWORK_12,,,DM_INLINE_TCP_12,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,17,CHG0124072,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,18,,permit,tcp-2513,,,,brsapprcmg002,,,,,grp-pr-c-xen-app-controllers,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,19,CHG0018357, CHG0019810, CHG0021073, CHG0021327, CHG0002234, CHG0023308,CHG0059082,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,20,,permit,,,tcp,,,DM_INLINE_NETWORK_16,,,,DM_INLINE_NETWORK_17,,,DM_INLINE_TCP_8,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,21,CHG0119859, PCI Q4 2018,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,22,,permit,,,tcp,,brs-jenkins-brswn109,,,,sc1-whapi-servers,,,,DM_INLINE_TCP_46,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,23,CHG0126042 - DENY Rule, Do Not Disable,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,24,,deny,,,tcp,,VPN-UK-24,,,,,informix-db-servers,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,25,CHG0023174,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,26,,permit,,,tcp,,,oxi_application_servers,,,,DM_INLINE_NETWORK_29,,sqlnet,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,27,*** Locked on BRS CP ***,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,28,*** Locked on BRS CP ***,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,29,,permit,,,ip,,VPN-UK-24,,,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,30,CHG0029533, CHG0071526, CHG0134381,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,31,,permit,,,tcp,,,Openbet-Live-DR,,,,DM_INLINE_NETWORK_13,,,Web,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,32,CHG0032682, CHG0032663,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,33,,permit,,,tcp,,,DM_INLINE_NETWORK_54,,,informix-hdr-vip,,,1528,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,34,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,35,,permit,,,tcp,,ServerOperations-27,,,,CITRIX-NETWORK-24,,,3389,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,36,CHG0074086,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,37,,permit,,,tcp,,sccuxstnmg03,,,,CITRIX-NETWORK-24,,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,38,CHG0076619,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,39,,permit,,,tcp,,,grp-ta-gsh-testers,,,,grp-scc-ta-citrix,,3389,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,40,CHG0032985, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,41,,permit,,,tcp,,sc1wnprein03,,,,SC1-WN-PRE-FS01,,,,DM_INLINE_TCP_23,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,42,CHG0037131, CHG0134381, PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,43,,permit,,,tcp,,,Gib-Citrix-Hosts,,,,DM_INLINE_NETWORK_14,,,Web,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,44,CHG0125763, CHG0134381,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,45,,permit,,,tcp,,,DM_INLINE_NETWORK_125,,,,DM_INLINE_NETWORK_18,,,DM_INLINE_TCP_69,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,46,CHG0040975,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,47,,permit,,,tcp,10.120.101.10,,,,,informix-hdr-vip,,,1528,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,48,CHG0041361,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,49,,permit,,,tcp,,Net_10.210.39.0m24,,,,,DM_INLINE_NETWORK_65,,,DM_INLINE_TCP_29,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,50,CHG0050575,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,51,,permit,,,tcp,,Net_10.210.39.0m24,,,,,scc-citrix-servers,,,DM_INLINE_TCP_31,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,52,CHG0069466,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,53,,permit,,,tcp,,scc_netscaler_SNIP,,,,,xenapp_server_range,,citrix-ica,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,54,CHG0069466,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,55,,permit,,,tcp,,sc1wnpremg01,,,,sc1wnprccp004.prod.williamhill.plc,,,3389,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,56,CHG0091814,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,57,,permit,,grp-vtm-svc,,,,DM_INLINE_NETWORK_7,,,,grp-scc-int-lb-cde-stingray,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,58,CHG0091814,CHG0118303,CHG0120322, CHG0123895,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,59,,permit,,,tcp,,,grp-brocade-vtm-admin,,,,grp-scc-int-lb-cde-stingray,,,DM_INLINE_TCP_2,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,60,CHG0094883,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,61,,permit,,,tcp,,brsux311,,,,informix-db-vip,,,1523,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,62,Proofpoint Rule - CHG0097030, PCI Q4 2018,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,63,,permit,,,icmp,,,Proofpoint_Admins,,,,MailHosts,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,64,Proofpoint Rule - CHG0100580,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,65,,permit,,MailHostports,,,sc1apprcmg001,,,,,MailHosts,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,66,Proofpoint Rule - CHG0103121, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,67,,permit,,MailHostports,,,Brsapprcmg001,,,,,MailHosts,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,68,Proofpoint Rule - CHG0100580,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,69,,permit,,,tcp,,sc1apprcmg001,,,,,MailHosts,,smtp,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,70,Proofpoint Rule - CHG0103121, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,71,,permit,,,tcp,,Brsapprcmg001,,,,,MailHosts,,smtp,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,72,Proofpoint Rule,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,73,,permit,,,tcp,,,Proofpoint_Admins,,,emailhost02,,,ssh,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,74,Proofpoint Rule,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,75,,permit,,,tcp,,,Proofpoint_Admins,,,emailhost01,,,ssh,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,76,Proofpoint Rule - CHG0097030, PCI Q4 2018,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,77,,permit,,,tcp,,,RFC1918,,,emailhost02,,,smtp,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,78,Proofpoint Rule - CHG0097030,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,79,,permit,,,tcp,,,RFC1918,,,emailhost01,,,smtp,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,80,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,81,,permit,,,tcp,,,,10.180.134.0 255.255.255.128,,SC1-WN-PRE-WI01,,,27000,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,82,CHG0097369, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,83,,permit,,,tcp,,,DM_INLINE_NETWORK_10,,,,TnA_Citrix,,,DM_INLINE_TCP_3,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,84,CHG0098329, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,85,,permit,,,tcp,,,,10.180.134.0 255.255.255.128,,SC1-WN-PRE-XA01,,,7279,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,86,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,87,,permit,,,tcp,,,,10.180.134.0 255.255.255.128,,SC1-WN-PRE-WI01,,,7279,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,88,CHG0101535,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,89,,permit,,,tcp,,,DM_INLINE_NETWORK_34,,,,DM_INLINE_NETWORK_35,,,DM_INLINE_TCP_15,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,90,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,91,,permit,,,tcp,,,,10.180.39.0 255.255.255.0,,SC1-WN-PRE-WI01,,,27000,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,92,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,93,,permit,,,tcp,,,,10.180.39.0 255.255.255.0,,SC1-WN-PRE-WI01,,,7279,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,94,CHG0099151, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,95,,permit,,netscaler_ports,,,,netscaler_SNIP,,,est-wmh-osl-001,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,96,CHG0100330,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,97,,permit,,,tcp,,,DM_INLINE_NETWORK_32,,,,DM_INLINE_NETWORK_33,,,puppet-services,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,98,CHG0100449-CHG82151,CHG83600,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,99,,permit,,,tcp,,,fct-pearl-app-srvs,,,SCC_INTERNAL_03,,,,Web,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,100,CHG0123577,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,101,,permit,,,tcp,,10.121.73.0s24,,,,SCC_INTERNAL_03,,,https,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,102,CHG0100449-CHG0025683,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,103,,permit,,,tcp,,WHO-Platform-Integration,,,,,scc_internal,,,Web,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,104,CHG0100449-CHG91757, CHG0094722,CHG0116922,CHG0120588,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,105,,permit,,,tcp,,,DM_INLINE_NETWORK_102,,,,grp-scc-pr-cwb-layer7,,,web-proxy-ports,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,106,CHG0100449-CHG71475,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,107,,permit,,,ip,,,cde-web-any-access,,,Net_10.120.37.0m24,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,108,*** internal_rules_above_this_line ***,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,109,*** external_rules_below_this_line ***,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,110,CHG0100449-CHG19941,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,111,,permit,,,tcp,,,Internet-All-Subnets,,,,inbound-ext-web-access,,,Web,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,112,CHG0106968,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,113,,permit,,,tcp,,,EUC-TEAM.,,,,,10.120.39.0 255.255.255.0,3389,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,114,CHG0107054,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,115,,permit,,Informix_replication,,,,MGS_VIP,,,Informix_RSS_VIP,,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,116,CHG0107904, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,117,,permit,,Informix_replication,,,,DM_INLINE_NETWORK_46,,10.120.48.122,,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,118,CHG0108843, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,119,,permit,,,tcp,,,Informix_archive,,,sc1ux307,,,ssh,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,120,CHG0108933,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,121,,permit,,CIFS,,,brswndrccp003,,,,SC1WNPRCCP003,,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,122,CHG0109619,TASK0238453,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,123,,permit,,DM_INLINE_SERVICE_7,,,,DM_INLINE_NETWORK_53,,,,,10.120.46.0 255.255.255.128,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,124,CHG0110043, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,125,,permit,,,tcp,,,DM_INLINE_NETWORK_68,,,,DM_INLINE_NETWORK_69,,smtp,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,126,CHG0110147,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,127,,permit,,,udp,,,infoblox-all-dns-servers,,,sc1isilon-ssip,,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,128,CHG0109787,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,129,,permit,,,tcp,,scc_netscaler_SNIP,,,,,,10.120.39.0 255.255.255.0,,netscaler-ports,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,130,CHG0110428, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,131,,permit,,commvault-media-server-service,,,,commvault-media-servers,,,,commvault-media-servers,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,132,CHG0110428, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,133,,permit,,commvault-commcell-service,,,,commvault-commcell,,,,commvault-commcell,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,134,CHG0110614, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,135,,permit,,commvault-media-server-service,,,,commvault-media-servers,,,,commvault-commcell,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,136,CHG0110614, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,137,,permit,,commvault-media-server-service,,,,commvault-commcell,,,,commvault-media-servers,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,138,CHG0110901, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,139,,permit,,commvault-proxy-server-service,,,,DM_INLINE_NETWORK_73,,,,commvault-commcell,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,140,CHG0111028 CHG0118198,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,141,,permit,,,tcp,,,DM_INLINE_NETWORK_101,,,,,10.120.46.0 255.255.255.128,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,142,CHG0110901, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,143,,permit,,commvault-proxy-server-service,,10.120.134.253,,,,,,DM_INLINE_NETWORK_71,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,144,CHG0111088,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,145,,permit,,,tcp,,,commvault-backup-networks,,,,DM_INLINE_NETWORK_79,,,,8400 8403,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,146,CHG0111326, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,147,,permit,,comm_vault_service,,,,comm_vault_a_src,,,,DM_INLINE_NETWORK_86,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,148,CHG0111287,CHG0117589,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,149,,permit,,,tcp,,,DM_INLINE_NETWORK_97,,,,DM_INLINE_NETWORK_81,,,DM_INLINE_TCP_34,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,150,CHG0111088,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,151,,permit,,,tcp,,bireports,,,,,DM_INLINE_NETWORK_75,,,TCP_8400-8403,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,152,CHG0112262, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,153,,permit,,DM_INLINE_SERVICE_21,,,,,10.121.68.0 255.255.255.0,,,,10.120.46.40 255.255.255.248,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,154,CHG0112262, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,155,,permit,,DM_INLINE_SERVICE_20,,,,,10.121.68.0 255.255.255.0,,,,10.120.46.48 255.255.255.248,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,156,CHG0112804, CHG0114385,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,157,,permit,,,tcp,10.120.163.134,,,,,,DM_INLINE_NETWORK_89,,,DM_INLINE_TCP_43,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,158,CHG0113167,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,159,,permit,,DM_INLINE_SERVICE_22,,10.210.143.170,,,,,,DM_INLINE_NETWORK_91,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,160,CHG0114967 CHG0115147,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,161,,permit,,DM_INLINE_SERVICE_23,,,,,any,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,162,CHG0117312, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,163,,permit,,,tcp,,,WHC-Nexus,,,SCC-NAS-IP-Range,,,,DM_INLINE_TCP_41,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,164,CHG0130862,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,165,,permit,,,tcp,,,DM_INLINE_NETWORK_140,,,SCC-NAS-IP-Range,,,445,,,informational,300,inactive
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,166,CHG0117702, PCI Q4 2018,TASK0238453,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,167,,permit,TCP-81,,,,,DM_INLINE_NETWORK_98,,,sc1wnprbkcs01,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,168,CHG0125842, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,169,,permit,,,tcp,,,Operations_Team,,,sc1wnprbkcs01,,,,TCP8400-8403,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,170,CHG0117834,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,171,,permit,,,tcp,,,WHC-Nexus,,,isilon-cluster-scc,,,,DM_INLINE_TCP_42,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,172,CHG0118423, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,173,,permit,60606,,,,SC1WNPREMG30,,,,,,10.120.46.0 255.255.255.128,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,174,CHG0120057, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,175,,permit,,DM_INLINE_SERVICE_25,,10.121.10.114,,,,,,DM_INLINE_NETWORK_104,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,176,CHG0120392, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,177,,permit,,,tcp,,,iSeries-Servers,,,emailhost01,,,,DM_INLINE_TCP_47,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,178,CHG0120549,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,179,,permit,,,tcp,,GSHWNCPECP01,,,,sc1wnprbkcs01,,,,TCP8400-8403,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,180,CHG0120808, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,181,,permit,,,tcp,10.112.46.30,,,,,,DM_INLINE_NETWORK_105,,,DM_INLINE_TCP_44,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,182,CHG0120873, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,183,,permit,,,tcp,,,DM_INLINE_NETWORK_107,,10.120.46.30,,,,8080,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,184,CHG0121018, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,185,,permit,,,tcp,,,whapi-cluster-4-be,,,SCC_INTERNAL_01,,,8443,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,186,CHG0121121,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,187,,permit,TCP-1528,,,,sc1uxprnap71,,,,informix-hdr-vip,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,188,CHG0125642,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,189,CHG0125642,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,190,CHG0125642,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,191,,permit,tcp-1530,,,,sc1uxprnap71,,,,archive-db,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,192,CHG0122987,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,193,,permit,,,tcp,,,,10.118.0.0 255.255.0.0,,,DM_INLINE_NETWORK_112,,,DM_INLINE_TCP_49,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,194,CHG0122369,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,195,CHG0122735, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,196,CHG0123406,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,197,,permit,,,tcp,,,DM_INLINE_NETWORK_113,,,sc1wnprbkcs01,,,https,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,198,,permit,,,tcp,,,,10.209.0.0 255.255.0.0,,,DM_INLINE_NETWORK_114,,,DM_INLINE_TCP_50,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,199,CHG0123406,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,200,CHG0124172,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,201,,permit,,,tcp,,brswndrexa040.prod.williamhill.plc,,,,sc1wnpredb004,,,1433,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,202,CHG0127637,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,203,,permit,,,tcp,,,grp-scc-bomgar-jumphosts,,,sc1wnpredb004,,,3389,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,204,CHG0124172,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,205,,permit,,,tcp,,,,10.120.141.0 255.255.255.0,,,,10.120.46.0 255.255.255.128,,RDP,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,206,CHG0124953 CHG0125133,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,207,,permit,,,tcp,,,DM_INLINE_NETWORK_122,,10.120.39.108,,,,,DM_INLINE_TCP_54,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,208,CHG0124975,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,209,,permit,,,tcp,10.120.69.200,,,,,,DM_INLINE_NETWORK_120,,,DM_INLINE_TCP_53,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,210,CHG0124975, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,211,CHG0124975,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,212,,permit,,TCPUDP,,10.120.69.200,,,,,,,10.120.39.0 255.255.255.0,,DM_INLINE_TCPUDP_1,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,213,CHG0126133,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,214,,permit,,DM_INLINE_SERVICE_29,,,brsapprcmg002,,,,CITRIX-NETWORK-24,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,215,CHG0124975, PCI Q4 2018,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,216,,permit,,,tcp,,,DM_INLINE_NETWORK_121,,10.120.69.201,,,,https,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,217,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,218,,permit,,,tcp,,Net_10.210.39.0m24,,,,sc1wnprefs04,,,,DM_INLINE_TCP_56,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,219,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,220,CHG0126775,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,221,,permit,,,tcp,,Net_10.210.39.0m24,,,,sc1wnpredb005,,,,DM_INLINE_TCP_57,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,222,CHG0126941,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,223,CHG0126309, PCI Q4 2018,CHG0130496,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,224,,permit,,,tcp,,,DM_INLINE_NETWORK_138,,,sc1wnprbkcs01,,,https,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,225,CHG0126550,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,226,CHG0128520,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,227,,permit,TCP-81,,,10.120.69.200,,,,,,DM_INLINE_NETWORK_133,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,228,CHG0128663,CHG0129496,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,229,CHG0126775,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,230,,permit,,,tcp,,,,10.210.39.0 255.255.255.0,10.120.38.10,,,,,DM_INLINE_TCP_64,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,231,CHG0126941,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,232,CHG0128407,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,233,,permit,,,tcp,,,ClaraNet-Discovery-Server,,,,,10.120.0.0 255.255.0.0,,DM_INLINE_TCP_65,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,234,CHG0127113,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,235,,permit,,,tcp,,,DM_INLINE_NETWORK_142,,,sc1-whapi-servers,,,,DM_INLINE_TCP_66,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,236,CHG0128520,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,237,,permit,,,tcp,,,DM_INLINE_NETWORK_134,,10.120.46.30,,,,,DM_INLINE_TCP_135,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,238,CHG0128663 CHG0129496, CHG0137980,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,239,,permit,,,tcp,,,DM_INLINE_NETWORK_136,,10.120.46.30,,,,,,8404 8423,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,240,CHG0130058,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,241,,permit,,,tcp,,sc1uxpremg22.prod.williamhill.plc,,,,,DM_INLINE_NETWORK_137,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,242,CHG0128407,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,243,,permit,,,tcp,,,AS400_LD6_Automation,,,emailhost01,,,,AS400_Automation_Ports,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,244,,permit,,,tcp,,,sc1-apic-servers,,,isilon-cluster-scc,,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,245,CHG0133364,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,246,,permit,TCP-8404-8407,,,,,DM_INLINE_NETWORK_1,,,sc1wnprbkcs01,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,247,CHG0134829,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,248,,permit,,,tcp,,brsuxpremon01,,,,CITRIX-NETWORK-24,,,5693,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,249,,permit,,,tcp,,brsuxpremon01,,,,CITRIX-NETWORK-24,,,12489,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,250,,permit,,,tcp,,brsuxpremon01,,,,CITRIX-NETWORK-24,,,5666,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,251,CHG0135151,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,252,,permit,,,tcp,,gibux998,,,,,DM_INLINE_NETWORK_37,,,DM_INLINE_TCP_4,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,253,CHG0136839,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,254,,permit,,,tcp,,sc1wnprein03,,,,,commvault-vsa-proxy-servers-scc,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,255,CHG0137245,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,256,,permit,,,tcp,,gibux998,,,,int-lb-cdebackoffice.sc1.prod.williamhill.plc,,,,DM_INLINE_TCP_9,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,257,CHG0141258,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,258,,permit,,,tcp,10.114.135.221,,,,,sc1wnprbkcs01,,,,DM_INLINE_TCP_33,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,259,CHG0141421,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,260,,permit,,,tcp,10.120.163.89,,,,,,DM_INLINE_NETWORK_88,,9070,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,261,CHG0142498,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,262,,permit,,,tcp,,gibux998,,,,,DM_INLINE_NETWORK_99,,,DM_INLINE_TCP_35,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,263,CHG0142925,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,264,,permit,,,tcp,,,DM_INLINE_NETWORK_144,,,int-lb-cdebackoffice.sc1.prod.williamhill.plc,,,www,,,informational,300,active
+uk-sc1-fw01-sec,management_access_in,extended,1,,permit,,,icmp,,,,any4,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,citrix_access_in,extended,3,,permit,,active-directory-ports,,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_5,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,4,CHG0020111,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,5,,permit,,,tcp,,,grp-pr-c-xen-SessionHost-XA65,,,wg.wrproxy.com-23,,,3128,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,6,CHG0075108 CHG0075369, CHG0077339,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,7,,permit,,DM_INLINE_SERVICE_15,,,,grp-scc-ta-citrix,,,,grp-pr-scc-ta-db,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,8,CHG0018190,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,9,,permit,,DM_INLINE_SERVICE_4,,,,DM_INLINE_NETWORK_3,,,10.120.146.66,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,10,CHG0017397, CHG0018815,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,11,,permit,,,tcp,,,grp-pr-c-xen-servers,,,SC1-WN-PRE-IN01,,,,DM_INLINE_TCP_1,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,12,CHG0018398, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,13,,permit,,grp-pr-c-trendav-ports,,,CITRIX-NETWORK-24,,,,,grp-pr-c-trendav-servers,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,14,CHG0018398,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,15,,permit,,grp-pr-syslog-ports,,,CITRIX-NETWORK-24,,,,,grp-pr-c-syslog-servers,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,16,CHG0018398,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,17,,permit,,grp-pr-c-wsus-ports,,,CITRIX-NETWORK-24,,,,,grp-pr-c-wsus-servers,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,18,CHG0021821, CHG0134381, PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,19,,permit,,,tcp,,,grp-pr-c-xen-SessionHost-XA65,,,,DM_INLINE_NETWORK_24,,,Web,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,20,CHG0080302,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,21,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,,any,,DM_INLINE_TCP_38,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,22,CHG0032985, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,23,,permit,,,tcp,,SC1-WN-PRE-FS01,,,,sc1wnprein03,,,,DM_INLINE_TCP_20,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,24,CHG0035366,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,25,,permit,,,tcp,,CITRIX-NETWORK-24,,,,DEVJDE,,,,,9401 9405,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,26,CHG0054043,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,27,,permit,,,tcp,,Citrix-JDE-session-servers,,,,DEVJDE,,,,DM_INLINE_TCP_36,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,28,CHG0037577,CHG0038337,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,29,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_60,,9645,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,30,CHG0040247 CHG0066169,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,31,,permit,,DM_INLINE_SERVICE_10,,,,DM_INLINE_NETWORK_63,,,10.120.146.66,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,32,CHG0059427, CHG0074987,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,33,,permit,,DM_INLINE_SERVICE_9,,,,,10.120.39.0 255.255.255.0,,,DM_INLINE_NETWORK_66,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,34,CHG0041184,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,35,,permit,,,tcp,,10.120.39.40-50,,,,SCC-PRODJDE,,,,DM_INLINE_TCP_27,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,36,CHG0050893,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,37,,permit,,,tcp,,,scc-dfs-servers,,,,brs-dfs-servers,,,DM_INLINE_TCP_32,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,38,CHG0015230,CHG0058556,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,39,,permit,,,tcp,,,Accurate_App_Session_Hosts,,10.120.99.10,,,,,Windows_File_services,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,40,CHG0058556,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,41,,permit,,,tcp,,,Accurate_App_Session_Hosts,,10.120.99.155,,,,sqlnet,,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,42,CHG0058556,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,43,,permit,,,tcp,,,Accurate_App_Session_Hosts,,10.120.66.23,,,,8443,,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,44,CHG0058556,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,45,,permit,,,tcp,,,Accurate_App_Session_Hosts,,10.120.66.23,,,,8080,,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,46,CHG0064525,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,47,,permit,,DM_INLINE_SERVICE_12,,,,DM_INLINE_NETWORK_124,,,,retail-nets,,,,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,48,CHG0069466,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,49,,permit,,,tcp,,sc1wnprccp004.prod.williamhill.plc,,,,,esteem_nimbus,,,,48000 48030,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,50,CHG0072918,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,51,,permit,,,tcp,,,scc_citrix_provisioning_server,,,esxi_consol_10.120.134.0_24,,,,DM_INLINE_TCP_37,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,52,CHG0072906, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,53,,permit,,,tcp,,,citrix_backups,,,sc1wnprein03,,,,citrix_backups_tcp_ports,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,54,CHG0077607,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,55,,permit,,,tcp,,,scc_citrix_web_interfaces,,,,netscaler_vips,,444,,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,56,CHG0097369,CHG0098944,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,57,,permit,,,tcp,,,TnA_Citrix,,,SC1WNPRGDB13,,,,DM_INLINE_TCP_10,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,58,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,59,,permit,,WHGROUP-AD-PORTS,,,,TnA_Citrix,,,,WHGROUP-AD-SERVERS,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,60,CHG0099151,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,61,,permit,,,tcp,,est-wmh-osl-001,,,,Esteem_Opsview_Master,,,48003,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,62,CHG0099815,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,63,,permit,,DM_INLINE_SERVICE_2,,,,sc1wnprexa86-91.prod.williamhill.plc,,,,sc1wnprncp005-006,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,64,CHG0108186,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,65,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_49,,,DM_INLINE_TCP_22,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,66,CHG0108696,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,67,,permit,,TCPUDP,,,,Windows_share_servers,,,brsapprcmg002,,,,Windows_File_services,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,68,CHG0108933,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,69,,permit,,CIFS,,,SC1WNPRCCP003,,,,brswndrccp003,,,,,,,,active
+uk-sc1-fw01-sec,citrix_access_in,extended,70,CHG0109764,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,71,,permit,,TCPUDP,,,CITRIX-NETWORK-24,,,10.120.194.50,,,,,Windows_File_services,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,72,PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,73,,permit,,CIFS,,,CITRIX-NETWORK-24,,,,grp-net-pr-n-sc1-nas-share,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,74,CHG0120819,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,75,,permit,,DM_INLINE_SERVICE_26,,,,,10.120.39.0 255.255.255.0,,SCC-PRODJDE,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,76,CHG0122003, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,77,,permit,,SCC-NAS-Ports,,,,,10.120.39.0 255.255.255.0,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,78,CHG0123348, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,79,,permit,,,tcp,,CITRIX-NETWORK-24,,,,onshore_TBv2_PP1,,,https,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,80,CHG0123349,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,81,,permit,,,tcp,,sc1wnprexa040.prod.williamhill.plc,,,,Infinium_DEV,,,,Infinium_DEV_Ports,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,82,CHG0123808,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,83,,permit,,DM_INLINE_SERVICE_27,,,CITRIX-NETWORK-24,,,,sc1uxprtdb001,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,84,CHG0124179,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,85,,permit,,,tcp,,CITRIX-NETWORK-24,,,,Infinium_DEV,,,,Windows_File_services,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,86,PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,87,,permit,,,tcp,,CITRIX-NETWORK-24,,,,Infinium_DEV,,,8474,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,88,CHG0124953 CHG0125133, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,89,,permit,,,tcp,,,,10.120.39.0 255.255.255.0,10.210.39.108,,,,,DM_INLINE_TCP_55,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,90,CHG0124661,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,91,,permit,,,tcp,,,,10.120.39.0 255.255.255.0,,,DM_INLINE_NETWORK_123,,,TCP-445,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,92,CHG0125209,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,93,,permit,,,tcp,,CITRIX-NETWORK-24,,,,sc1uxprsap01.sc1.prod.williamhill.plc,,,3299,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,94,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,95,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_126,,,JDE,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,96,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,97,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_127,,sqlnet,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,98,CHG0125763, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,99,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_128,,,Web,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,100,CHG0125763, PCI Q4 2018,PCI-Q2-2019 CHG0134913,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,101,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_36,,https,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,102,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,103,,permit,,DM_INLINE_SERVICE_28,,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_129,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,104,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,105,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_130,,,DM_INLINE_TCP_58,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,106,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,107,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_131,,,DM_INLINE_TCP_59,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,108,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,109,,permit,,,tcp,,CITRIX-NETWORK-24,,,,brswnprefs04,,,,DM_INLINE_TCP_60,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,110,CHG0125763, PCI Q4 2018, CHG0131679,PCI-Q2-2019,CHG0134721,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,111,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_132,,https,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,112,CHG0125763, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,113,,permit,,,tcp,,CITRIX-NETWORK-24,,,,SC1-WN-PRE-IN01,,,www,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,114,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,115,,permit,,,tcp,,sc1wnpredb005,,,,brswnpredb005,,,,DM_INLINE_TCP_61,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,116,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,117,,permit,,,tcp,,CITRIX-NETWORK-24,,,,brswnprefs04,,,,DM_INLINE_TCP_62,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,118,CHG0126102,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,119,,permit,3299,,,,CITRIX-NETWORK-24,,,,brsuxprsap01.brs.prod.williamhill.plc,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,120,CHG0126550,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,121,,permit,TCP-81,,,,CITRIX-NETWORK-24,,,,sc1wnprens01-BOVIP,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,122,CHG0126775, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,123,,permit,,,tcp,,,,10.120.39.0 255.255.255.0,10.120.38.10,,,,,DM_INLINE_TCP_63,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,124,CHG0127442, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,125,,permit,,DM_INLINE_SERVICE_30,,,,,10.120.39.0 255.255.255.0,,10.96.0.0-16,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,126,CHG0128407,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,127,,permit,,,ip,,,,10.120.39.0 255.255.255.0,10.118.214.152,,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,128,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,129,,permit,,,tcp,,,,10.120.39.0 255.255.255.0,,,iseries_dr_stack,,,iseries_dr_stack_ports,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,130,CHG0132038,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,131,,permit,,DM_INLINE_SERVICE_31,,,CITRIX-NETWORK-24,,,,sc1wnprncp005.prod.williamhill.plc,,,,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,132,CHG0137135,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,133,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_40,,445,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,134,CHG0137135,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,135,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_41,,8443,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,136,CHG0137135,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,137,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_44,,sqlnet,,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,138,CHG0139029,CHG0140449,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,139,,permit,,,tcp,,CITRIX-NETWORK-24,,,,was01n.prod.williamhill.plc,,,,DM_INLINE_TCP_16,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,140,CHG0140834,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,141,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_83,,,DM_INLINE_TCP_19,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,142,CHG0142763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,143,,permit,,,tcp,,CITRIX-NETWORK-24,,,,,DM_INLINE_NETWORK_143,,,DM_INLINE_TCP_40,,informational,300,active
+uk-sc1-fw01-sec,citrix_access_in,extended,144,CHG0142944,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,citrix_access_in,extended,145,,permit,,DM_INLINE_SERVICE_3,,,CITRIX-NETWORK-24,,,10.210.163.13,,,,,,,informational,300,active
+uk-sc1-fw01-sec,backoffice_access_in,extended,1,,permit,,,icmp,,,,any4,,,,any4,,,,notifications,300,active
+uk-sc1-fw01-sec,pcap,extended,1,,permit,,,ip,,CITRIX-NETWORK-24,,,,CITRIX-NETWORK-24,,,,,,informational,300,active
+uk-sc1-fw01-sec,cde-backoffice_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-backoffice_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,cde-backoffice_in,extended,3,CHG0021821,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-backoffice_in,extended,4,,permit,,,tcp,,,cde-backoffice-web-servers,,,,cde_backoffice_app_servers,,,,10201 10600,informational,300,active
+uk-sc1-fw01-sec,cde-backoffice_in,extended,5,CHG0021821, CHG0020771,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-backoffice_in,extended,6,,permit,,,tcp,,,cde-backoffice-web-servers,,,,cde_crypto_app_servers,,,,10201 10600,informational,300,active
+uk-sc1-fw01-sec,cde-backoffice_in,extended,7,CHG0041229, CHG0135748,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-backoffice_in,extended,8,,permit,,,tcp,,,cde-backoffice-web-servers,,,,DM_INLINE_NETWORK_141,,www,,,informational,300,active
+uk-sc1-fw01-sec,cde-backoffice_in,extended,9,CHG0122003,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-backoffice_in,extended,10,,permit,,SCC-NAS-Ports,,,,DM_INLINE_NETWORK_109,,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,cde-backoffice_in,extended,11,CHG0139243,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-backoffice_in,extended,12,,permit,,,tcp,,,DM_INLINE_NETWORK_47,,,,DM_INLINE_NETWORK_51,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,cde-app_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-app_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,cde-app_in,extended,3,CHG0023174,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-app_in,extended,4,,permit,,,tcp,,,DM_INLINE_NETWORK_26,,,,DM_INLINE_NETWORK_27,,sqlnet,,,,,active
+uk-sc1-fw01-sec,cde-app_in,extended,5,,permit,,,tcp,,sc1uxprcap31,,,,informix-db-vip,,,1540,,,informational,300,active
+uk-sc1-fw01-sec,cde-app_in,extended,6,,permit,,,tcp,,sc1uxprcap32,,,,informix-db-vip,,,1540,,,informational,300,active
+uk-sc1-fw01-sec,cde-app_in,extended,7,CHG0030481,CHG0032128,CHG0134084,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-app_in,extended,8,,permit,,,tcp,,,DM_INLINE_NETWORK_50,,,,DM_INLINE_NETWORK_6,,,DM_INLINE_TCP_21,,informational,300,active
+uk-sc1-fw01-sec,cde-app_in,extended,9,CHG0035108, CHG0035320, CHG0134381, CHG0134721,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-app_in,extended,10,,permit,,,tcp,,,DM_INLINE_NETWORK_57,,,,DM_INLINE_NETWORK_59,,www,,,informational,300,active
+uk-sc1-fw01-sec,cde-app_in,extended,11,CHG0040300,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-app_in,extended,12,,permit,,,tcp,,,cde_backoffice_app_servers,,,,oxi_application_servers,,10300,,,informational,300,active
+uk-sc1-fw01-sec,cde-app_in,extended,13,CHG0122003, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-app_in,extended,14,,permit,,SCC-NAS-Ports,,,,DM_INLINE_NETWORK_108,,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,database_access_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,database_access_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,database_access_in,extended,3,CHG0023174,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,database_access_in,extended,4,,permit,,,tcp,,,informix-db-servers,,,informix-hdr-vip,,,,DM_INLINE_TCP_14,,informational,300,active
+uk-sc1-fw01-sec,database_access_in,extended,5,,permit,,,tcp,,,informix-db-servers,,,archive-db,,,1530,,,informational,300,active
+uk-sc1-fw01-sec,database_access_in,extended,6,,permit,,,tcp,,,informix-db-servers,,,brsux311,,,1560,,,informational,300,active
+uk-sc1-fw01-sec,database_access_in,extended,7,CHG0122003, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,database_access_in,extended,8,,permit,,SCC-NAS-Ports,,,database-network-24,,,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,9H-TIMEOUT-ACL,extended,1,,permit,,,tcp,,,,any4,,,,any4,,9H-TIMEOUT-TCP,,,,inactive
+uk-sc1-fw01-sec,hdr-db_access_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,hdr-db_access_in,extended,3,CHG0139243,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,4,,permit,,,tcp,,,DM_INLINE_NETWORK_55,,,,DM_INLINE_NETWORK_56,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,5,CHG0032040,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,6,,permit,,,tcp,,,OpenBet-HDR-Reporting-DBs,,,,DM_INLINE_NETWORK_52,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,7,CHG0032569,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,8,,permit,,,tcp,,,OpenBet-HDR-Reporting-DBs,,,informix-db-vip,,,1523,,,informational,300,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,9,CHG0040696,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,10,,permit,,,tcp,,,OpenBet-HDR-Reporting-DBs,,,,DM_INLINE_NETWORK_64,,,DM_INLINE_TCP_26,,informational,300,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,11,CHG0040987,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,12,,permit,,,tcp,,,OpenBet-HDR-Reporting-DBs,,,PRODJDE,,,ftp,,,informational,300,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,13,CHG0095962,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,14,,permit,,,tcp,,,OpenBet-HDR-Reporting-DBs,,10.120.99.10,,,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,15,CHG0107054,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,16,,permit,,Informix_replication,,,Informix_RSS_VIP,,,,,MGS_VIP,,,,,,,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,17,CHG0108843, CHG0110643, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,18,,permit,,Informix_replication,,,sc1ux307,,,,,Informix_archive,,,,,,,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,19,CHG0111088,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,20,,permit,,,tcp,,,commvault-backup-networks,,,,,10.120.46.0 255.255.255.128,,DM_INLINE_TCP_30,,informational,300,active
+uk-sc1-fw01-sec,hdr-db_access_in,extended,21,CHG0122003, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-db_access_in,extended,22,,permit,,SCC-NAS-Ports,,,10.120.48.0slash24,,,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,cap-acl,extended,1,,permit,,,ip,,PRODJDE,,,,SC1-WN-PRE-XA07,,,,,,,,active
+uk-sc1-fw01-sec,cap-acl,extended,2,,permit,,,ip,,SC1-WN-PRE-XA07,,,,PRODJDE,,,,,,,,active
+uk-sc1-fw01-sec,global_access,extended,1,CHG0141979 -  wide access on prem due to specific rules in sddc,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,2,,permit,,,ip,,,vmc-sddcs,,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,3,,permit,,,ip,,,,any4,,,vmc-sddcs,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,4,CHG0142763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,5,,permit,,splunk_indexing_port-CHG0142763,,,,wh_nets-CHG0142763,,,,splunk_heavy_forwarders-CHG0142763,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,6,CHG0142763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,7,,permit,,splunk_mgmt_port-CHG0142763,,,,wh_nets-CHG0142763,,,,splunk_deployment_server-CHG0142763,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,8,CHG0119266,CHG0130310,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,9,,permit,,,tcp,,,DM_INLINE_NETWORK_139,,,,,10.120.0.0 255.255.0.0,,DM_INLINE_TCP_45,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,10,,permit,,,ip,,,ras-vpn-pool,,,,,any,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,11,CHG0141790,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,12,,permit,,whgroup_ad_ports,,,,,any,,,whgroup_ad_servers,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,13,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,14,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,global_access,extended,15,,permit,,Informix_replication,,10.120.48.122,,,,,,DM_INLINE_NETWORK_48,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,16,CHG0101535,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,17,,permit,,,tcp,,,,10.120.66.0 255.255.255.0,,,DM_INLINE_NETWORK_43,,,DM_INLINE_TCP_18,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,18,,permit,,,tcp,,,Athene-Servers,,,,,any4,ssh,,,,,active
+uk-sc1-fw01-sec,global_access,extended,19,CHG0106526,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,20,,permit,,Rundeck-WinRM-Ports,,,,Rundeck-Servers,,,,,any,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,21,Wily global access - CHG0081701, PCI Q2 2016,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,22,,permit,,wily-outbound-ports,,,,wily-svrs_all,,,,wily-access-group,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,23,CHG0101535,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,24,,permit,,,tcp,,,DM_INLINE_NETWORK_42,,,,DM_INLINE_NETWORK_39,,,DM_INLINE_TCP_17,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,25,CHG0116053,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,26,,permit,,,tcp,,ClassA-8,,,,,DM_INLINE_NETWORK_93,,,LDAP-Services,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,27,CHG0111326,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,28,,permit,,,tcp,,sc1uxprbkvs03,,,,sc1hspreesx31,,,,TCP_902,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,29,Global Rule,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,30,,permit,TCP-8275,,,,,,any4,,,grp-pr-c-ldap-servers,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,31,Global Rule,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,32,,permit,,,tcp,,,,any,,,Katello,,,DM_INLINE_TCP_25,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,33,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,34,,permit,,grp-pr-c-wsus-ports,,,,,any,,,WSUS,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,35,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,36,,permit,,,ip,,,,any,,,grp-pr-c-dns-servers,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,37,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,38,,permit,,,tcp,,,,any,,,grp-pr-c-yum-servers,,www,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,39,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,40,,permit,,,udp,,,,any,,,grp-pr-c-syslog-servers,,syslog,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,41,CHG0114133,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,42,,permit,,SCC-NAS-Ports,,,,,any,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,43,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,44,,permit,,DM_INLINE_SERVICE_8,,,,,any,,,DM_INLINE_NETWORK_62,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,45,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,46,,permit,,,udp,,,,any,,,grp-pr-c-nms-servers,,snmptrap,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,47,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,48,,permit,,,ip,,,,any,,,Splunk-Logger,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,49,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,50,,permit,,DM_INLINE_SERVICE_13,,,,,any,,,Splunk-Heavy-Forwarder,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,51,STANDARD RULE,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,52,,permit,,,tcp,,,grp-pr-c-trendav-servers,,,,,any,30231,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,53,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,54,,permit,,,udp,,,,any,,,scc-update-svs,,snmptrap,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,55,PCI Q2 2016,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,56,,permit,,wily-inbound-ports,,,,wily-access-group,,,,wily-svrs_all,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,57,CHG0078639, PCI Q2 2016,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,58,,permit,,,ip,,,,any,,,WebProxies-CX-SCC,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,59,Standard rule - CHG0083506,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,60,,permit,,Infoblox-Standard-Ports,,,,,any4,,,infoblox-all-dns-servers,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,61,CHG0097030,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,62,,permit,,,tcp,,,,any4,,,MailHosts,,smtp,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,63,Standard rule - CHG0083747,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,64,,permit,,WHGROUP-AD-PORTS,,,,,any,,,DM_INLINE_NETWORK_67,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,65,CHG0031243,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,66,,permit,,,tcp,,,,any4,,SC1WNPREIN12,,,1688,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,67,CHG0067511, PCI Q2 2016,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,68,,permit,,,udp,,,,any,,sc1uxpremn74,,,snmptrap,,,,,active
+uk-sc1-fw01-sec,global_access,extended,69,CHG0067511, PCI Q2 2016,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,70,,permit,,splunk_mgmt,,,sc1uxpremn74,,,,,,any,,,,,,active
+uk-sc1-fw01-sec,global_access,extended,71,CHG0081848 ,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,72,,permit,,,tcp,,,,any4,,SCC_SNOW_Collector,,,https,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,73,CHG0079749,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,74,,permit,,,tcp,,,UIM-Servers,,,ClassA-8,,,,,48000 48030,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,75,CHG0079749,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,76,,permit,,,tcp,,ClassA-8,,,,,UIM-Servers,,,,48000 48030,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,77,CHG0095370,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,78,,permit,,,udp,,,,any,,,UIM-WIN,,snmptrap,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,79,CHG0109028,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,80,,permit,,,ip,,,RFC1918,,,,RDS-KMS-server,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,81,CHG0109764,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,82,,permit,,,ip,,,RFC1918,,,,DM_INLINE_NETWORK_61,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,83,Standard rule - CHG0083593,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,84,,permit,,,icmp,,,,any4,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,85,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,86,,permit,,,tcp,,,,any,,,grp-commvault-svrs,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,87,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,88,,permit,,,tcp,,,,any,,,grp-ld6-commvault-svrs,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,89,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,90,,permit,,,tcp,,,,any,,,grp-gib-commvault-svrs,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,91,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,92,,permit,,,tcp,,,grp-commvault-svrs,,,,,any,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,93,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,94,,permit,,,tcp,,,grp-ld6-commvault-svrs,,,,,any,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,95,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,96,,permit,,,tcp,,,grp-gib-commvault-svrs,,,,,any,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,97,CHG0116436,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,98,,permit,,,tcp,,,DM_INLINE_NETWORK_94,,,sc1wnprbkcs01,,,,TCP8400-8403,,informational,300,inactive
+uk-sc1-fw01-sec,global_access,extended,99,CHG0116436,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,100,,permit,,,tcp,,,DM_INLINE_NETWORK_95,,,,DM_INLINE_NETWORK_96,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,101,CHG0115147,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,102,,permit,,DM_INLINE_SERVICE_24,,,,,any,,,DM_INLINE_NETWORK_92,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,103,CHG0118423,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,104,,permit,60606,,,,,,10.120.46.0 255.255.255.128,,SC1WNPREMG30,,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,105,CHG0119053,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,106,,permit,,,tcp,,,DM_INLINE_NETWORK_103,,10.120.163.33,,,,8083,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,107,CHG0128017,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,108,,deny,,,tcp,,,,any,,,AWS-F5s,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,109,CHG0122435, CHG0133580,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,110,,permit,,DM_INLINE_SERVICE_1,,,,skybox-appliances,,,ClassA-8,,,,,,,,active
+uk-sc1-fw01-sec,global_access,extended,111,,deny,,,ip,,,,any4,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,hdr-tier_access_in,extended,1,CHG0058556,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,hdr-tier_access_in,extended,2,,permit,,,tcp,,,Openbet_RSS_Servers_onshore,,10.120.99.10,,,,ftp,,,,,active
+uk-sc1-fw01-sec,int-lb_access_in,extended,1,Deny Rule - CHG0126092, CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,2,CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,3,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,int-lb_access_in,extended,4,CHG0091814,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,5,CHG0134295,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,6,,permit,,,tcp,,,DM_INLINE_NETWORK_4,,,,DM_INLINE_NETWORK_8,,,DM_INLINE_TCP_7,,informational,300,active
+uk-sc1-fw01-sec,int-lb_access_in,extended,7,,permit,,,tcp,,,grp-scc-int-lb-cde-stingray,,,,grp-brocade-svc-control,,,,8100 8101,informational,300,active
+uk-sc1-fw01-sec,int-lb_access_in,extended,8,CHG0134368,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,9,,permit,,,ip,,,DM_INLINE_NETWORK_15,,,,DM_INLINE_NETWORK_22,,,,,informational,300,active
+uk-sc1-fw01-sec,int-lb_access_in,extended,10,CHG0100330,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,11,,permit,,,tcp,,,DM_INLINE_NETWORK_30,,,,DM_INLINE_NETWORK_25,,,puppet-services,,informational,300,active
+uk-sc1-fw01-sec,int-lb_access_in,extended,12,CHG0102733, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,13,,permit,,DM_INLINE_SERVICE_6,,,,grp-scc-int-lb-cde-stingray,,,,Rundeck-Application-Servers,,,,,informational,300,active
+uk-sc1-fw01-sec,int-lb_access_in,extended,14,CHG0130251,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,int-lb_access_in,extended,15,,permit,,,udp,,,grp-scc-int-lb-cde-stingray,,,sc1uxpremn77,,,syslog,,,informational,300,active
+uk-sc1-fw01-sec,mailhosts_access_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,mailhosts_access_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,mailhosts_access_in,extended,3,CHG0097030, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,mailhosts_access_in,extended,4,,permit,,MailHostports,,,,MailHosts,,,Brsapprcmg001,,,,,,,,active
+uk-sc1-fw01-sec,mailhosts_access_in,extended,5,CHG0097030, PCI Q4 2018,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,mailhosts_access_in,extended,6,,permit,,MailHostports,,,,MailHosts,,,sc1apprcmg001,,,,,,,,active
+uk-sc1-fw01-sec,mailhosts_access_in,extended,7,CHG0097030,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,mailhosts_access_in,extended,8,,permit,,,udp,,,MailHosts,,,SCC_Syslog,,,syslog,,,,,active
+uk-sc1-fw01-sec,mailhosts_access_in,extended,9,CHG0097030,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,mailhosts_access_in,extended,10,,permit,,,tcp,,,MailHosts,,,,,any,smtp,,,,,active
+uk-sc1-fw01-sec,mailhosts_access_in,extended,11,CHG0122003, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,mailhosts_access_in,extended,12,,permit,,SCC-NAS-Ports,,,,,10.120.33.160 255.255.255.224,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,mailhosts_access_in,extended,13,CHG0123744,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,mailhosts_access_in,extended,14,,permit,,,udp,,,DM_INLINE_NETWORK_116,,,,Splunk-group,,syslog,,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,cde-web_access_in,extended,3,CHG0118004, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,4,,permit,,,tcp,,,scc-cluster(whapi),,,,DM_INLINE_NETWORK_100,,61402,,,,,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,5,CHG0100449-CHG86354,CHG0116922,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,6,,permit,,,tcp,,,whapi-gateway-srvs,,,gibux1023,,,8081,,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,7,CHG0100449-CHG96558,CHG96693,CHG0116922,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,8,,permit,,,tcp,,,grp-scc-pr-cwb-layer7,,,int-api-sports-pds-cmapi-whapi,,,9191,,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,9,internal_rules_above_this_line,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,10,external_rules_above_this_line,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,11,CHG0100449-filted on scc-fw01-02,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,12,,permit,,,tcp,,,outbound-ext-web-access,,,,Internet-All-Subnets,,,Web,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,13,CHG0100449-CHG32140,CHG82531,CHG011692,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,14,,permit,,,tcp,,,outbound-any-web-access,,,,,any,,Web,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,15,CHG0100449-filted on scc-fw01-02,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,16,,permit,,,tcp,,,outbound-3rdParty-access,,,,Internet-All-Subnets,,,3rdParties,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,17,CHG0120221, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,18,,permit,,,tcp,,,grp-scc-pr-cwb-layer7,,,int-api-rewards.prod.williamhill.plc,,,8080,,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,19,CHG0106065,CHG0116922, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,20,,permit,,,tcp,,,grp-scc-pr-cwb-layer7,,,int-api-rewards.prod.williamhill.plc,,,8083,,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,21,CHG0118888, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,22,,permit,,,tcp,,,grp-scc-pr-cwb-layer7,,,int-api-vegas-feeds.sc1.prod.williamhill.plc,,,www,,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,23,CHG0122003, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,24,,permit,,SCC-NAS-Ports,,,,DM_INLINE_NETWORK_110,,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,25,CHG0128746,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,26,,permit,,,tcp,,,whapi-gateway-srvs,,,int-lb-oxi-proxy-cde-gib.prod,,,,Web,,informational,300,active
+uk-sc1-fw01-sec,cde-web_access_in,extended,27,CHG0137419,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,cde-web_access_in,extended,28,,permit,,,tcp,,,grp-scc-pr-cwb-layer7,,,,scc-sports-pds-cmapi-whapi,,9191,,,informational,300,active
+uk-sc1-fw01-sec,internal-access,extended,1,CHG0101244,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-access,extended,2,,permit,,,tcp,,,layer7-gateways,,,SCC_INTERNAL_01,,,8443,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,1,Deny Rule - CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,2,,deny,,,ip,,,Corp-Wifi,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,storage_data_access_in,extended,3,CHG0136121,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,4,,permit,,,tcp,,sc1wnprbkcs01,,,,,commvault-brs-media-servers,,,TCP_8400-8403,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,5,,permit,,,tcp,,sc1wnprbkcs01,,,,,DM_INLINE_NETWORK_38,,8080,,,,,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,6,,permit,,,icmp,,,,10.120.46.0 255.255.255.0,,,,any,,,,,,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,7,CHG0110428, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,8,,permit,,commvault-media-server-service,,,,commvault-media-servers,,,,commvault-media-servers,,,,,,,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,9,CHG0110428, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,10,,permit,,commvault-commcell-service,,,,commvault-commcell,,,,commvault-commcell,,,,,,,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,11,CHG0110614, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,12,,permit,,commvault-media-server-service,,,,commvault-commcell,,,,commvault-media-servers,,,,,,,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,13,CHG0110614, CHG0111187,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,14,,permit,,commvault-media-server-service,,,,commvault-media-servers,,,,commvault-commcell,,,,,,,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,15,CHG0110901,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,16,,permit,,commvault-proxy-server-service,,,,commvault-vsa-proxy-servers-scc,,,,commvault-commcell,,,,,,,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,17,CHG0111049,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,18,,permit,,,udp,,,DM_INLINE_NETWORK_70,,10.120.163.73,,,,snmptrap,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,19,CHG0110826,PCI-Q4-2017, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,20,,permit,,,udp,,,commvault-commcell-scc,,10.120.163.73,,,,snmp,,,notifications,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,21,CHG0110901, PCI Q4 2018,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,22,,permit,,DM_INLINE_SERVICE_16,,,,commvault-commcell-scc,,,,DM_INLINE_NETWORK_72,,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,23,CHG0110901,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,24,,permit,,DM_INLINE_SERVICE_14,,,,DM_INLINE_NETWORK_74,,10.120.134.253,,,,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,25,CHG0110901, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,26,,permit,,DM_INLINE_SERVICE_18,,,,DM_INLINE_NETWORK_76,,10.120.134.253,,,,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,27,CHG0110901,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,28,,permit,,DM_INLINE_SERVICE_19,,,sc1wnprbkcs01,,,,,DM_INLINE_NETWORK_77,,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,29,CHG0124417,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,30,,permit,,,udp,,sc1wnprbkcs01,,,10.120.163.73,,,,snmptrap,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,31,CHG0111088,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,32,,permit,,,tcp,,,DM_INLINE_NETWORK_78,,,,DM_INLINE_NETWORK_87,,,DM_INLINE_TCP_28,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,33,CHG0111326, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,34,,permit,,comm_vault_service,,,,DM_INLINE_NETWORK_85,,,,comm_vault_a_src,,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,35,CHG0111287, CHG0111353,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,36,,permit,,,tcp,,,DM_INLINE_NETWORK_82,,10.180.142.164,,,,,DM_INLINE_TCP_39,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,37,CHG0111326,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,38,,permit,,DM_INLINE_SERVICE_17,,,,DM_INLINE_NETWORK_84,,,,,10.120.134.0 255.255.255.0,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,39,CHG0112804,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,40,,permit,,,udp,,,DM_INLINE_NETWORK_90,,10.120.163.134,,,,syslog,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,41,CHG0115825,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,42,,permit,,,tcp,,,InsightIQ-servers,,,,isilon-clusters,,8080,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,43,CHG0120549,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,44,,permit,,,tcp,,sc1wnprbkcs01,,,,GSHWNCPECP01,,,,TCP8400-8403,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,45,CHG0120808, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,46,,permit,,,tcp,10.120.46.30,,,,,,DM_INLINE_NETWORK_106,,,DM_INLINE_TCP_48,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,47,CHG0122003, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,48,,permit,,SCC-NAS-Ports,,,,,10.120.46.0 255.255.255.0,,SCC-NAS-IP-Range,,,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,49,CHG0122987,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,50,,permit,,,tcp,,,DM_INLINE_NETWORK_111,,,,DM_INLINE_NETWORK_115,,,DM_INLINE_TCP_112,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,51,CHG0124339, PCI Q4 2018,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,52,,permit,,,tcp,,sc1prcap01.prod.williamhill.plc,,,,,DM_INLINE_NETWORK_117,,,DM_INLINE_TCP_51,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,53,CHG0124578,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,54,,permit,,,tcp,10.120.46.70,,,,,,DM_INLINE_NETWORK_118,,8080,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,55,CHG0124821,CHG0134573,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,56,,permit,,,tcp,,sc1wnprbkcs01,,,,,DM_INLINE_NETWORK_28,,,DM_INLINE_TCP_52,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,57,CHG0124810,PCI-Q2-2019,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,58,,permit,,,tcp,,sc1wnprbkcs01,,,,,DM_INLINE_NETWORK_119,,445,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,59,CHG0128520,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,60,,permit,,,tcp,10.120.46.30,,,,,,DM_INLINE_NETWORK_135,,,DM_INLINE_TCP_67,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,61,CHG0133364,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,62,,permit,TCP-8404-8407,,,,sc1wnprbkcs01,,,,,DM_INLINE_NETWORK_2,,,,,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,63,CHG0137980,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,64,,permit,,,tcp,,sc1wnprbkcs01,,,,,DM_INLINE_NETWORK_45,,,,8404 8423,informational,300,active
+uk-sc1-fw01-sec,storage_data_access_in,extended,65,CHG0141258,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,storage_data_access_in,extended,66,,permit,,,tcp,,sc1wnprbkcs01,,,10.114.135.221,,,,,DM_INLINE_TCP_24,,informational,300,active

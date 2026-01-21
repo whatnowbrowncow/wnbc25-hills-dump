@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-sc1-er01,netsec,15,secret,5,$1$.iJh$.Y/Pd21/YDEgPvJ0d7p5C1
+uk-sc1-er01,netadmin,15,secret,5,$1$U.Cj$qBUKFhWG30lDY/DHr5wgo1
+uk-sc1-er01,nessus,15,secret,5,$1$.q/y$VYNsURZPpd9dNehMkvSz90
+uk-sc1-er01,svcnetworkauto,15,secret,5,$1$Z887$5EonGbCKFCJft805/Zrk1/

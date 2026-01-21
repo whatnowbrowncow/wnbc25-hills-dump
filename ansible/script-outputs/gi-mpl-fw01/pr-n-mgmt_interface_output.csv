@@ -1,0 +1,16 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.340,10.180.144.1,,server-ilo,255.255.255.0,100
+up,,Port-channel1.341,10.180.145.1,,web-tier,255.255.255.0,100
+up,,Port-channel1.342,10.180.146.1,,applications-tier,255.255.255.0,100
+up,,Port-channel1.343,10.180.147.1,,rng-arcade,255.255.255.0,100
+up,,Port-channel1.344,10.180.148.1,,backoffice-tier,255.255.255.0,100
+up,,Port-channel1.347,10.180.151.1,,noncde-jumphosts,255.255.255.0,100
+ shutdown,,Port-channel1.360,10.180.157.225,,gib-noncde-jumphost,255.255.255.224,100
+up,,Port-channel1.361,10.180.158.1,,caerus-apps-man-2,255.255.255.0,100
+up,,Port-channel1.362,10.180.159.1,,edge-mgmt,255.255.255.224,100
+up,,Port-channel1.364,10.180.159.65,,webscreen-mgmt,255.255.255.224,100
+up,,Port-channel1.366,10.180.159.129,,rng-retail,255.255.255.224,100
+up,,Port-channel1.367,10.180.159.161,,f1x2-web,255.255.255.224,100
+up,,Port-channel1.368,10.180.159.193,,f1x2-app,255.255.255.224,100
+up,,Port-channel1.369,10.180.159.225,,caerus-apps-man,255.255.255.224,100
+up,,Port-channel1.376,10.180.160.194,,internal-vrf,255.255.255.224,100

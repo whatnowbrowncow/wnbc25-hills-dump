@@ -1,0 +1,3 @@
+hostname,username,password,encryption,role
+mt-msc-cs02,admin,$5$WSMsvfJy$TYUgTiDxr7nflLrwaw6i8q.6tC6bGA0ITODkWgmw4G0,5,network-admin
+mt-msc-cs02,netadmin,$5$2INaARGJ$R0xAp/VjatfWudhHBvpA9IMn2.5c3g0rNuivCdGvxg9,5,network-admin

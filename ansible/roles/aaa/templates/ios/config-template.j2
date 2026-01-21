@@ -1,0 +1,22 @@
+{% for host in aaa_all.servers %}
+tacacs server {{ host.host }}
+ address ipv4 {{ host.ip_addr }}
+ key {{ aaa_all.key }}
+{% endfor %}
+aaa group server tacacs+ {{ aaa_all.group_name }}
+{% for host in aaa_all.servers %}
+ server name {{ host.host }}
+{% endfor %}
+ ip vrf forwarding {{ aaa.grp_vrf }}
+ ip tacacs source-interface {{ aaa.grp_src_int }}
+tacacs-server directed-request
+aaa authentication login default group {{ aaa_all.group_name }} local-case
+aaa authentication enable default group {{ aaa_all.group_name }} enable
+aaa authorization exec default group {{ aaa_all.group_name }} if-authenticated 
+aaa authorization commands 15 default group {{ aaa_all.group_name }} if-authenticated 
+aaa authorization config-commands
+aaa authorization console
+aaa accounting exec default start-stop group {{ aaa_all.group_name }}
+aaa accounting connection default start-stop group {{ aaa_all.group_name }}
+aaa accounting commands 15 default start-stop group {{ aaa_all.group_name }}
+aaa accounting system default start-stop group {{ aaa_all.group_name }}

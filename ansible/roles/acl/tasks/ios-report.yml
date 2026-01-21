@@ -1,0 +1,40 @@
+---
+
+- name: IOS - Collecting the ACL configuration
+  ios_command:
+    commands:
+      - show run | i access-list
+  register: acl_output
+
+- name: IOS - Collecting the named ACLs
+  set_fact:
+    named_acls: "{{ acl_output.stdout[0] | regex_findall('^ip\\s+access-list\\s+(?!logging)\\S+\\s+(?!CISCO)(?P<named_acls>\\S+)','\\g<named_acls>') }}"
+
+- name: IOS - Collecting the numbered ACLs
+  set_fact:
+    num_acls: "{{ acl_output.stdout[0] | regex_findall('^access-list\\s(?P<num_acls>\\d+)','\\g<num_acls>') }}"
+
+- name: IOS - Merging the named & numbered ACLs into a list
+  set_fact:
+    acls_csv: "{{ acls_csv|default([]) + named_acls + num_acls | unique }}"
+
+- name: IOS - Collecting the ACLs configured
+  ios_command:
+    commands:
+      - show access-lists {{ item }}
+  with_items: 
+  - "{{ acls_csv }}"
+  register: rules
+
+- name: IOS - Parsing the ACL configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/ios/parser_ios_acl.yml"
+    content: "{{ item.stdout[0] }}"
+  with_items: 
+  - "{{ rules.results }}"
+  register: access_lists
+
+- name: IOS - Generating the CSV report
+  template:
+    src: "/gitnet/ansible/roles/acl/templates/ios/csv-template.j2"
+    dest: "/gitnet/ansible/roles/acl/files/csv/ios/{{ inventory_hostname }}.csv"

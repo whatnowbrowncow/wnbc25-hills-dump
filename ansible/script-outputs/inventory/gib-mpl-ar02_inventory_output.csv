@@ -1,0 +1,17 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-mpl-ar02,GE T,subslot 0/0 transceiver 7,SBCU-5740ARZ-CS1,AVC2217246M,G3.1
+gib-mpl-ar02,GE SX,subslot 0/0 transceiver 2,GLC-SX-MMD,FNS175111RR,A
+gib-mpl-ar02,SFP+ 10GBASE-LR,subslot 0/0 transceiver 0,SFP-10G-LR,FNS21190UV4,A
+gib-mpl-ar02,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS1915Q3FC,V01
+gib-mpl-ar02,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE192100ZR,V01
+gib-mpl-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT19151BRU,V01
+gib-mpl-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT19151BSL,V01
+gib-mpl-ar02,GE T,subslot 0/0 transceiver 6,SP7041-E,MTC131002KK,E
+gib-mpl-ar02,GE T,subslot 0/0 transceiver 3,SP7041_Rev_F,MTC17430DM7,F
+gib-mpl-ar02,GE T,subslot 0/0 transceiver 4,SP7041-E-R,MTC19030FWK,none
+gib-mpl-ar02,GE T,subslot 0/0 transceiver 5,SP7041-E-R,MTC19030G2S,none
+gib-mpl-ar02,SFP+ 10GBASE-SR,subslot 0/0 transceiver 1,SFP-10G-SR,SPC141900N7,A
+gib-mpl-ar02,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+gib-mpl-ar02,8-port Built-in GE SPA,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+gib-mpl-ar02,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+gib-mpl-ar02,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

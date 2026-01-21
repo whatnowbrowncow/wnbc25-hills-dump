@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+gib-wpg-vacc2,netsec,15,secret,5,$1$CLSp$78IQE/Yzai60QYDV.F9Od/
+gib-wpg-vacc2,netadmin,15,secret,5,$1$q8D7$bNr0xs4lPRwbzYyQ8SrIC/
+gib-wpg-vacc2,svcnetworkauto,15,secret,5,$1$QjEo$5O2obWnRjkeu/VHmTVD361

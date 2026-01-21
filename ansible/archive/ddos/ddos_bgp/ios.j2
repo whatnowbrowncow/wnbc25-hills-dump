@@ -1,0 +1,18 @@
+!
+router bgp 57002
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} peer-group
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} remote-as {{ item.value.THRDPTY_BGP_AS_num }}
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} password {{ item.value.THRDPTY_BGP_password }}
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} timers {{ item.value.THRDPTY_BGP_keepalive_timer }} {{ item.value.THRDPTY_BGP_hold_timer }}
+ neighbor {{ item.value.THRDPTY_to_WH_THRDPTY_TUN_IP }} peer_group {{ item.value.THRDPTY_to_WH_PG_NAME }}
+ neighbor {{ item.value.THRDPTY_to_WH_THRDPTY_TUN_IP }} description {{ item.value.THRDPTY_to_WH_BGP_NEIG_DESCRIPTION }}
+
+address-family ipv4
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} send-community
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_in }} in
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} out
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} route-map {{ item.value.THRDPTY_to_WH_RM_in }} in
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} route-map {{ item.value.THRDPTY_to_WH_RM_out }} out
+  neighbor {{ item.value.THRDPTY_to_WH_THRDPTY_TUN_IP }} activate
+ exit-address-family
+!

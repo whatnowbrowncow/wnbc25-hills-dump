@@ -1,0 +1,3 @@
+hostname,tacacs-style,svr-grp name,svr-grp source int,svr-grp vrf,svr name,svr ip address,svr encryption key,authn-login,authn-enable,auths-exec,auths-commands,acc-exec,acc-connection,acc-commands,acc-system
+ph-mak-cs02,legacy,WH-ACS-TACACS,Vlan314,group-vrf,,10.120.163.26,104C58125419430900052920,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS
+ph-mak-cs02,legacy,WH-ACS-TACACS,Vlan314,group-vrf,,10.210.163.26,091D1C5A4D5041455355,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS

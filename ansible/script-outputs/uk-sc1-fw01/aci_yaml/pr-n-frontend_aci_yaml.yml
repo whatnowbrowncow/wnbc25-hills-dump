@@ -1,0 +1,313 @@
+
+  - app_prof: 'pr-n-frontend'
+    tenant: 'production'
+    vrf: 'pr-n-frontend'
+    bds:
+      - bd: 'pr-n-frontend_noncde-web'
+        network: '10.120.64.0'
+        gateway: '10.120.64.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-web'
+            encap_id: '200'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-backoffice'
+        network: '10.120.64.32'
+        gateway: '10.120.64.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-backoffice'
+            encap_id: '201'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-app'
+        network: '10.120.64.64'
+        gateway: '10.120.64.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-app'
+            encap_id: '202'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_cobain'
+        network: '10.120.64.96'
+        gateway: '10.120.64.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_cobain'
+            encap_id: '203'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-finance-prod'
+        network: '10.120.64.128'
+        gateway: '10.120.64.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-finance-prod'
+            encap_id: '204'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-finance-test'
+        network: '10.120.64.160'
+        gateway: '10.120.64.161'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-finance-test'
+            encap_id: '205'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_non-cde-app2'
+        network: '10.120.64.224'
+        gateway: '10.120.64.225'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_non-cde-app2'
+            encap_id: '207'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-backoffice-new'
+        network: '10.120.66.0'
+        gateway: '10.120.66.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-backoffice-new'
+            encap_id: '210'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-web-new'
+        network: '10.120.67.0'
+        gateway: '10.120.67.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-web-new'
+            encap_id: '211'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-webcache'
+        network: '10.120.69.0'
+        gateway: '10.120.69.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-webcache'
+            encap_id: '213'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_BACS'
+        network: '10.120.69.32'
+        gateway: '10.120.69.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_BACS'
+            encap_id: '214'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_cobain-iptv'
+        network: '10.120.69.96'
+        gateway: '10.120.69.99'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_cobain-iptv'
+            encap_id: '216'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-sccm'
+        network: '10.120.69.224'
+        gateway: '10.120.69.225'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-sccm'
+            encap_id: '218'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_citrix_netscaler'
+        network: '10.120.69.192'
+        gateway: '10.120.69.193'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_citrix_netscaler'
+            encap_id: '219'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-cf-web'
+        network: '10.120.72.0'
+        gateway: '10.120.72.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-cf-web'
+            encap_id: '222'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_vmware-esc'
+        network: '10.120.70.0'
+        gateway: '10.120.70.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_vmware-esc'
+            encap_id: '223'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_ping-federate'
+        network: '10.120.70.32'
+        gateway: '10.120.70.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_ping-federate'
+            encap_id: '224'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_int-lb'
+        network: '10.120.74.0'
+        gateway: '10.120.74.1'
+        mask: '255.255.254.0'
+        cidr_mask: '23'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_int-lb'
+            encap_id: '231'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_property-prod'
+        network: '10.120.65.64'
+        gateway: '10.120.65.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_property-prod'
+            encap_id: '232'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_corporate-web'
+        network: '10.120.76.0'
+        gateway: '10.120.76.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_corporate-web'
+            encap_id: '233'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_hr-sap'
+        network: '10.120.65.96'
+        gateway: '10.120.65.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_hr-sap'
+            encap_id: '234'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_aspect-stunnel'
+        network: '10.120.65.128'
+        gateway: '10.120.65.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_aspect-stunnel'
+            encap_id: '235'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_non-cde-app2-new'
+        network: '10.120.98.0'
+        gateway: '10.120.98.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_non-cde-app2-new'
+            encap_id: '260'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-app-new'
+        network: '10.120.99.0'
+        gateway: '10.120.99.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-app-new'
+            encap_id: '261'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-ods'
+        network: '10.120.100.0'
+        gateway: '10.120.100.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-ods'
+            encap_id: '262'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_trading-dmz'
+        network: '10.120.101.0'
+        gateway: '10.120.101.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_trading-dmz'
+            encap_id: '263'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_noncde-cf-app'
+        network: '10.120.102.0'
+        gateway: '10.120.102.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_noncde-cf-app'
+            encap_id: '264'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-frontend_internal-vrf'
+        network: '10.120.160.224'
+        gateway: '10.120.160.228'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-frontend_internal-vrf'
+            encap_id: '377'
+            vcenter_dynamic_vlan: true

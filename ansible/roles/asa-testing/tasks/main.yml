@@ -1,0 +1,11 @@
+---
+
+
+- name: Syslog-host build
+  include_tasks: ./asa-syslog-host_loop.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: contexts_item
+  tags:
+    - syslog-host

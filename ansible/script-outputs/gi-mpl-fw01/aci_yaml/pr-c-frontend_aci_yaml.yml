@@ -1,0 +1,148 @@
+
+  - app_prof: 'pr-c-frontend'
+    tenant: 'production'
+    vrf: 'pr-c-frontend'
+    bds:
+      - bd: 'pr-c-frontend_cde-web'
+        network: '10.180.32.0'
+        gateway: '10.180.32.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_cde-web'
+            encap_id: '100'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_cde-backoffice'
+        network: '10.180.33.0'
+        gateway: '10.180.33.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_cde-backoffice'
+            encap_id: '110'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_data-analytics'
+        network: '10.180.33.96'
+        gateway: '10.180.33.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_data-analytics'
+            encap_id: '113'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_citrix'
+        network: '10.180.33.128'
+        gateway: '10.180.33.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_citrix'
+            encap_id: '114'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_mailhosts'
+        network: '10.180.33.160'
+        gateway: '10.180.33.161'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_mailhosts'
+            encap_id: '115'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_cde-web-sportsbook'
+        network: '10.180.36.0'
+        gateway: '10.180.36.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_cde-web-sportsbook'
+            encap_id: '120'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_cde-proxy-topend'
+        network: '10.180.37.0'
+        gateway: '10.180.37.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_cde-proxy-topend'
+            encap_id: '121'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_cde-backoffice-new'
+        network: '10.180.38.0'
+        gateway: '10.180.38.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_cde-backoffice-new'
+            encap_id: '122'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_int-lb'
+        network: '10.180.44.0'
+        gateway: '10.180.44.1'
+        mask: '255.255.254.0'
+        cidr_mask: '23'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_int-lb'
+            encap_id: '134'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_storage_data'
+        network: '10.180.46.0'
+        gateway: '10.180.46.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_storage_data'
+            encap_id: '140'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_internal-vrf'
+        network: '10.180.160.32'
+        gateway: '10.180.160.34'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_internal-vrf'
+            encap_id: '371'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_cag'
+        network: '10.180.166.128'
+        gateway: '10.180.166.129'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_cag'
+            encap_id: '421'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-frontend_voip-recorder'
+        network: '10.180.25.32'
+        gateway: '10.180.25.33'
+        mask: '255.255.255.240'
+        cidr_mask: '28'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-frontend_voip-recorder'
+            encap_id: '56'
+            vcenter_dynamic_vlan: true

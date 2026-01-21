@@ -1,0 +1,29 @@
+---
+
+- name: ASA-MULTIPLE - "{{ context.context }}" - Retrieving the management access configuration
+  asa_command:   
+    commands:  
+      - "show running-config ssh"
+      - "show running-config http"
+    context: "{{ context.context }}"
+  register: mgmtACL
+
+- name: ASA-MULTIPLE - "{{ context.context }}" - Registering the configuration lines that are to be removed
+  set_fact:
+    sshACC: "{{ mgmtACL.stdout[0] | regex_findall('(.*10.120.163.*)') }}"
+    httpACC: "{{ mgmtACL.stdout[1] | regex_findall('(.*10.120.163.*)') }}"
+
+#- name: ASA-MULTIPLE - "{{ context.context }}" - Building the configuration for testing purposes
+#  template:
+#    src: "{{ role_path }}/templates/asa-deletions.j2"
+#    dest: "{{ role_path }}/files/configs/asa/{{ inventory_hostname }}.{{ context.context }}.cfg"
+#  when: sshACC or httpACC
+
+- name: ASA-MULTIPLE - "{{ context.context }}" - Building and applying the configuration
+  asa_config:
+    src: "{{ role_path }}/templates/asa-deletions.j2"
+    save: yes
+    context: "{{ context.context }}"
+  register: mgmtUPDATED
+  notify: "updates exist"
+  when: sshACC or httpACC

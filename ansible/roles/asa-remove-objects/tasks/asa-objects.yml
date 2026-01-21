@@ -1,0 +1,14 @@
+---
+
+- name: Build objects
+  template:
+    src: objects.j2
+    dest: ./asa/{{ inventory_hostname }}_objects.cfg
+
+    
+- name: Build objects on a context
+  asa_config:
+    src: ./asa/{{ inventory_hostname }}_objects.cfg
+    context: "{{ item.context }}"
+  with_items:
+    - "{{ contexts }}"

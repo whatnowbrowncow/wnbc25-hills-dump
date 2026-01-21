@@ -1,0 +1,17 @@
+---
+
+- name: IOS-XR - collect local user account info
+  iosxr_command:
+    commands:
+      - show run
+  register: iosxr_local_accounts_output
+
+- name: IOS-XR - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_iosxr_local_user_accounts.yml"
+    content: "{{ iosxr_local_accounts_output.stdout.0 }}"
+
+- name: IOS-XR - Generate csv report
+  template:
+    src: "{{ role_path }}/templates/iosxr/csv-template.j2"
+    dest: "{{ role_path }}/files/csv/iosxr/{{ inventory_hostname }}.csv"

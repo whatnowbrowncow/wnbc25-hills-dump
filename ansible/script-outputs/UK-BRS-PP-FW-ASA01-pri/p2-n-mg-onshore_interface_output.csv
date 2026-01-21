@@ -1,0 +1,8 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.3041,10.214.145.1,,proxy-tier,255.255.255.0,100
+up,,Port-channel21.3042,10.214.146.1,,applications-tier,255.255.255.0,100
+up,,Port-channel21.3043,10.214.147.1,,applications2-tier,255.255.255.0,100
+up,,Port-channel21.3044,10.214.148.1,,backoffice-tier,255.255.255.0,100
+up,,Port-channel21.3045,10.214.149.1,,ODS-mgmt-servers,255.255.255.0,100
+up,,Port-channel21.3066,10.214.159.129,,ODS-mgmt,255.255.255.224,100
+up,,Port-channel21.3076,10.214.160.196,,pp2on-internal-vrf,255.255.255.224,100

@@ -1,0 +1,35 @@
+---
+
+## Create directory structure in case it doesn't already exist.
+- file:
+    path: roles/mgmt_acl/configs/{{ inventory_hostname }}
+    state: directory
+
+## Generate the Mgmt ACL using a template and register the outcome.
+- name: "Generate Mgmt ACL configuration for {{ inventory_hostname }}"
+  template:
+    src: "mgmt_acl.j2"
+    dest: "roles/mgmt_acl/configs/{{ inventory_hostname }}/mgmt_acl.cfg"
+  tags:
+    - mgmt_acl
+  register: acl_generation
+  
+
+## The registered output (acl_generation) is used below to see if a change was 
+## made during the last task.
+## If there was a change it removes the acl, so that it can be completely updated.
+- name: "Remove Mgmt ACL on {{ inventory_hostname }}"
+  ios_config:
+    lines:
+      - no ip access-list standard 1
+    match: none
+  when: acl_generation.changed == true
+
+  
+## Compare the generated ACL against the running config and apply if different   
+- name: "Deploy Mgmt ACL to {{ inventory_hostname }}"
+  ios_config:
+    src: "roles/mgmt_acl/configs/{{ inventory_hostname }}/mgmt_acl.cfg"
+  register: acl_output
+
+

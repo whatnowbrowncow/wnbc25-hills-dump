@@ -1,0 +1,33 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show run object-group network"
+    network_os: asa
+
+- name: network object-group match pattern
+  pattern_match:
+    regex: "^object-group network \\S+"
+    match_all: yes
+    match_greedy: yes
+  register: section
+
+- name: match network object-group values
+  pattern_group:
+    - name: match name
+      pattern_match:
+        regex: "^object-group network (\\S+)"
+        content: "{{ item }}"
+      register: name
+
+    - name: network object-group match pattern
+      pattern_match:
+        regex: "(.*)"
+        match_greedy: yes
+        content: "{{ item }}"
+      register: network_objects
+      
+  loop: "{{ section }}"
+  export: yes
+  register: network_objects_groups

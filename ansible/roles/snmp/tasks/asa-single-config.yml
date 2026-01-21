@@ -1,0 +1,11 @@
+---
+
+#- name: ASA-SINGLE - Build configuration for testing purposes
+#  template:
+#    src: /gitnet/ansible/roles/snmp/templates/asa_single/config-template.j2
+#    dest: /gitnet/ansible/roles/snmp/files/configs/asa_single/{{ inventory_hostname }}.cfg
+
+- name: ASA-SINGLE - Apply configuration
+  asa_config:
+    src: /gitnet/ansible/roles/snmp/templates/asa_single/config-template.j2
+    save: yes

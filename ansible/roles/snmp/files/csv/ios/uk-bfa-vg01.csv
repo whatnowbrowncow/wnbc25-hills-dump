@@ -1,0 +1,13 @@
+hostname,community,access,access-list
+uk-bfa-vg01,public,RO,
+uk-bfa-vg01,cs1whil5,RO,5
+uk-bfa-vg01,cs1whil6,RW,5
+uk-bfa-vg01,c4q7p9wk,RO,7
+uk-bfa-vg01,1PTr0,RO,10
+uk-bfa-vg01,1PTrW,RW,11
+uk-bfa-vg01,c1sc0,RO,19
+uk-bfa-vg01,m0squ1t0,RO,10
+uk-bfa-vg01,wh1LLc0rp,RW,11
+uk-bfa-vg01,whM0n1T0r,RO,12
+uk-bfa-vg01,5nmp-W1lH1l-R0,RO,
+uk-bfa-vg01,GA4nzvYW,RW,10

@@ -1,0 +1,368 @@
+--- 
+
+- name: Create Logical Interface Profiles that use BGP (SINGLE profile) (fatl3out task 4)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof.json"
+    content:
+      {
+        "l3extLIfP": { ## Creates the parent Logical Interface Profile
+          "attributes": {
+            "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof",
+            "name": "{{ item.0.np }}_intprof",
+            "rn": "lifp-{{ item.0.np }}_intprof",
+            "status": "created,modified"
+          },
+          "children": [
+            { ## Specifies the BFD Interface Policy
+              "bfdIfP": {
+                "attributes": {
+                  "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/bfdIfP",
+                  "rn": "bfdIfP",
+                  "status": "created,modified"
+                },
+                "children": [
+                  {
+                    "bfdRsIfPol": {
+                      "attributes": {
+                        "tnBfdIfPolName": "{{ item.0.bfd_policy | default(omit) }}",
+                        "status": "created,modified"
+                      },
+                    }
+                  }
+                ]
+              }
+            },
+            { ## Configures the SVI (linked to an existing VPC polgrp)
+              "l3extRsPathL3OutAtt": {
+                "attributes": {
+                  "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/protpaths-{{ item.0.svi_nodes }}/pathep-[{{ item.0.svi_path }}]]",
+                  "mac": "00:22:BD:F8:19:FF",
+                  "ifInstT": "ext-svi",
+                  "encap": "vlan-{{ item.0.svi_vlan }}",
+                  "tDn": "topology/pod-1/protpaths-{{ item.0.svi_nodes }}/pathep-[{{ item.0.svi_path }}]",
+                  "rn": "rspathL3OutAtt-[topology/pod-1/protpaths-{{ item.0.svi_nodes }}/pathep-[{{ item.0.svi_path }}]]",
+                  "status": "created,modified"
+                },
+                "children": [
+                  { ## Configures the BGP Peer Connectivity Profile linked to the SVI
+                    "bgpPeerP": {
+                      "attributes": {
+                        "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/protpaths-{{ item.0.svi_nodes }}/pathep-[{{ item.0.svi_path }}]]/peerP-[{{ item.1.bgp_peer }}]",
+                        "addr": "{{ item.1.bgp_peer }}",
+                        "ctrl": "allow-self-as,send-com,send-ext-com",
+                        "peerCtrl": "{{ item.1.bgp_peerctrl | default(omit) }}",
+                        "weight": "0",
+                        "privateASctrl": "{{ item.1.bgp_asctrl | default(omit) }}",
+                        "rn": "peerP-[{{ item.1.bgp_peer }}]",
+                        "status": "created,modified"
+                      },
+                      "children": [
+                        { ## Configures the remote AS-Number
+                          "bgpAsP": {
+                            "attributes": {
+                              "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/protpaths-{{ item.0.svi_nodes }}/pathep-[{{ item.0.svi_path }}]]/peerP-[{{ item.1.bgp_peer }}]/as",
+                              "asn": "{{ item.1.bgp_remote_as }}",
+                              "rn": "as",
+                              "status": "created,modified"
+                            },
+                          }
+                        },
+                        { ## Configures the local AS-Number
+                          "bgpLocalAsnP": {
+                            "attributes": {
+                              "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/protpaths-{{ item.0.svi_nodes }}/pathep-[{{ item.0.svi_path }}]]/peerP-[{{ item.1.bgp_peer }}]/localasn",
+                              "localAsn": "{{ item.1.bgp_local_as }}",
+                              "rn": "localasn",
+                              "status": "created,modified"
+                            },
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "l3extMember": {
+                      "attributes": {
+                        "side": "A",
+                        "addr": "{{ item.0.svi_side_a }}/{{ item.0.svi_cidr }}",
+                        "llAddr": "0.0.0.0",
+                        "status": "created,modified"
+                      },
+                      "children": [
+                        {
+                          "l3extIp": {
+                            "attributes": {
+                              "addr": "{{ item.0.svi_shared }}/{{ item.0.svi_cidr }}",
+                              "status": "created,modified"
+                            },
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "l3extMember": {
+                      "attributes": {
+                        "side": "B",
+                        "addr": "{{ item.0.svi_side_b }}/{{ item.0.svi_cidr }}",
+                        "llAddr": "0.0.0.0",
+                        "status": "created,modified"
+                      },
+                      "children": [
+                        {
+                          "l3extIp": {
+                            "attributes": {
+                              "addr": "{{ item.0.svi_shared }}/{{ item.0.svi_cidr }}",
+                              "status": "created,modified"
+                            },
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ node_profiles }}"
+    - bgp
+    - skip_missing: True
+  when: item.0.svi_path is defined
+
+- name: Create Logical Interface Profiles that use BGP (DUAL profile) (fatl3out task 4)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof.json"
+    content:
+      {
+        "l3extLIfP": { ## Creates the parent Logical Interface Profile
+          "attributes": {
+            "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof",
+            "name": "{{ item.0.np }}_intprof",
+            "rn": "lifp-{{ item.0.np }}_intprof",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "l3extRsPathL3OutAtt": {
+                "attributes": {
+                  "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node1_id }}/pathep-[{{ item.0.svi_interface }}]]",
+                  "mac": "00:22:BD:F8:19:FF",
+                  "ifInstT": "ext-svi",
+                  "encap": "vlan-{{ item.0.svi_vlan }}",
+                  "addr": "{{ item.0.svi_node1_ip_addr }}/{{ item.0.svi_cidr }}",
+                  "tDn": "topology/pod-1/paths-{{ item.0.svi_node1_id }}/pathep-[{{ item.0.svi_interface }}]",
+                  "rn": "rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node1_id }}/pathep-[{{ item.0.svi_interface }}]]",
+                  "status": "created,modified"
+                },
+                "children": [
+                  {
+                    "bgpPeerP": {
+                      "attributes": {
+                        "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node1_id }}/pathep-[{{ item.0.svi_interface }}]]/peerP-[{{ item.1.bgp_peer }}]",
+                        "addr": "{{ item.1.bgp_peer }}",
+                        "ctrl": "allow-self-as,send-com,send-ext-com",
+                        "peerCtrl": "{{ item.1.bgp_peerctrl | default(omit) }}",
+                        "weight": "0",
+                        "privateASctrl": "remove-all,remove-exclusive",
+                        "rn": "peerP-[{{ item.1.bgp_peer }}]",
+                        "status": "created,modified"
+                      },
+                      "children": [
+                        {
+                          "bgpAsP": {
+                            "attributes": {
+                              "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node1_id }}/pathep-[{{ item.0.svi_interface }}]]/peerP-[{{ item.1.bgp_peer }}]/as",
+                              "asn": "{{ item.1.bgp_remote_as }}",
+                              "rn": "as",
+                              "status": "created,modified"
+                            },
+                          }
+                        },
+                        {
+                          "bgpLocalAsnP": {
+                            "attributes": {
+                              "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node1_id }}/pathep-[{{ item.0.svi_interface }}]]/peerP-[{{ item.1.bgp_peer }}]/localasn",
+                              "localAsn": "{{ item.1.bgp_local_as }}",
+                              "rn": "localasn",
+                              "status": "created,modified"
+                            },
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "l3extIp": {
+                      "attributes": {
+                        "addr": "{{ item.0.svi_shared }}/{{ item.0.svi_cidr }}",
+                        "status": "created,modified"
+                      },
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "l3extRsPathL3OutAtt": {
+                "attributes": {
+                  "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node2_id }}/pathep-[{{ item.0.svi_interface }}]]",
+                  "mac": "00:22:BD:F8:19:FF",
+                  "ifInstT": "ext-svi",
+                  "encap": "vlan-{{ item.0.svi_vlan }}",
+                  "addr": "{{ item.0.svi_node2_ip_addr }}/{{ item.0.svi_cidr }}",
+                  "tDn": "topology/pod-1/paths-{{ item.0.svi_node2_id }}/pathep-[{{ item.0.svi_interface }}]",
+                  "rn": "rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node2_id }}/pathep-[{{ item.0.svi_interface }}]]",
+                  "status": "created,modified"
+                },
+                "children": [
+                  {
+                    "bgpPeerP": {
+                      "attributes": {
+                        "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node2_id }}/pathep-[{{ item.0.svi_interface }}]]/peerP-[{{ item.1.bgp_peer }}]",
+                        "addr": "{{ item.1.bgp_peer }}",
+                        "ctrl": "allow-self-as,send-com,send-ext-com",
+                        "peerCtrl": "{{ item.1.bgp_peerctrl | default(omit) }}",
+                        "privateASctrl": "remove-all,remove-exclusive",
+                        "weight": "0",
+                        "rn": "peerP-[{{ item.1.bgp_peer }}]",
+                        "status": "created,modified"
+                      },
+                      "children": [
+                        {
+                          "bgpAsP": {
+                            "attributes": {
+                              "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node2_id }}/pathep-[{{ item.0.svi_interface }}]]/peerP-[{{ item.1.bgp_peer }}]/as",
+                              "asn": "{{ item.1.bgp_remote_as }}",
+                              "rn": "as",
+                              "status": "created,modified"
+                            },
+                          }
+                        },
+                        {
+                          "bgpLocalAsnP": {
+                            "attributes": {
+                              "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.fatl3out }}/lnodep-{{ item.0.np }}_np/lifp-{{ item.0.np }}_intprof/rspathL3OutAtt-[topology/pod-1/paths-{{ item.0.svi_node2_id }}/pathep-[{{ item.0.svi_interface }}]]/peerP-[{{ item.1.bgp_peer }}]/localasn",
+                              "localAsn": "{{ item.1.bgp_local_as }}",
+                              "rn": "localasn",
+                              "status": "created,modified"
+                            },
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "l3extIp": {
+                      "attributes": {
+                        "addr": "{{ item.0.svi_shared }}/{{ item.0.svi_cidr }}",
+                        "status": "created,modified"
+                      },
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ node_profiles }}"
+    - bgp
+    - skip_missing: True
+  when: item.0.svi_interface is defined
+
+- name: Create Logical Interface Profiles that do NOT use BGP (fatl3out task 4)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.fatl3out }}/lnodep-{{ item.np }}_np/lifp-{{ item.np }}_intprof.json"
+    content:
+      {
+        "l3extLIfP": { ## Creates the parent Logical Interface Profile
+          "attributes": {
+            "dn": "uni/tn-{{ item.tenant }}/out-{{ item.fatl3out }}/lnodep-{{ item.np }}_np/lifp-{{ item.np }}_intprof",
+            "name": "{{ item.np }}_intprof",
+            "rn": "lifp-{{ item.np }}_intprof",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "l3extRsPathL3OutAtt": { ## Configures the SVI (linked to an existing VPC polgrp)
+                "attributes": {
+                  "dn": "uni/tn-{{ item.tenant }}/out-{{ item.fatl3out }}/lnodep-{{ item.np }}_np/lifp-{{ item.np }}_intprof/rspathL3OutAtt-[topology/pod-1/protpaths-{{ item.svi_nodes }}/pathep-[{{ item.svi_path }}]]",
+                  "mac": "00:22:BD:F8:19:FF",
+                  "ifInstT": "ext-svi",
+                  "encap": "vlan-{{ item.svi_vlan }}",
+                  "tDn": "topology/pod-1/protpaths-{{ item.svi_nodes }}/pathep-[{{ item.svi_path }}]",
+                  "rn": "rspathL3OutAtt-[topology/pod-1/protpaths-{{ item.svi_nodes }}/pathep-[{{ item.svi_path }}]]",
+                  "status": "created,modified"
+                },
+                "children": [
+                  {
+                    "l3extMember": {
+                      "attributes": {
+                        "side": "A",
+                        "addr": "{{ item.svi_side_a }}/{{ item.svi_cidr }}",
+                        "llAddr": "0.0.0.0",
+                        "status": "created,modified"
+                      },
+                      "children": [
+                        {
+                          "l3extIp": {
+                            "attributes": {
+                              "addr": "{{ item.svi_shared }}/{{ item.svi_cidr }}",
+                              "status": "created,modified"
+                            },
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "l3extMember": {
+                      "attributes": {
+                        "side": "B",
+                        "addr": "{{ item.svi_side_b }}/{{ item.svi_cidr }}",
+                        "llAddr": "0.0.0.0",
+                        "status": "created,modified"
+                      },
+                      "children": [
+                        {
+                          "l3extIp": {
+                            "attributes": {
+                              "addr": "{{ item.svi_shared }}/{{ item.svi_cidr }}",
+                              "status": "created,modified"
+                            },
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ node_profiles }}"
+  when: item.bgp is not defined
+
+- name: Move to Select Nodes
+  include_tasks: ./aci-fatl3out-select-nodes.yml

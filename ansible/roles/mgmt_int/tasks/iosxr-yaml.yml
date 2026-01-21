@@ -1,0 +1,112 @@
+---
+
+- name: IOSXR - establish management interface
+# Targets the tacacs source interface as the assumed management interface
+  iosxr_command:
+    commands:
+      - show run | inc tacacs source
+  register: tacacs_source
+
+- name: IOSXR - Register tacacs source interface as a management interface variable
+  set_fact:
+    tacacs_src_int: "{{ tacacs_source.stdout[0] | regex_search('tacacs source-interface (?P<int>\\S+)','\\g<int>') }}"
+
+- name: IOSXR - capture management interface config
+# Targets the tacacs source interface as the assumed management interface
+  iosxr_command:
+    commands:
+      - show run int {{ tacacs_src_int[0] }}
+  register: mgmt_int
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=mgmt_int
+
+- name: IOSXR - parse management interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/iosxr/parser_iosxr_mgmt_int.yml
+    content: "{{ mgmt_int.stdout.0 }}"
+
+## Debug commands to check output
+#- name: Display JSON output
+#  debug: var=mgmt_int_facts
+
+
+- name: IOSXR - check for loopbacks
+# Targets the tacacs source interface as the assumed management interface
+  iosxr_command:
+    commands:
+      - show ip int br | inc Loopback
+  register: loopbacks
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=loopbacks
+
+- name: IOSXR - create loopback_interfaces list
+  set_fact:
+    loopback_interfaces: []
+
+
+- name: IOSXR - Register all loopbacks in loopback_interfaces list
+  set_fact:
+    loopback_interfaces: "{{ loopback_interfaces + item | regex_search('(?P<int>Loopback\\d+)','\\g<int>') }}"
+  with_items:
+    "{{ loopbacks.stdout_lines[0] }}"
+  when: loopbacks.stdout[0] != ""
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=loopback_interfaces
+
+- name: IOSXR - capture loopback interface config
+  iosxr_command:
+    commands:
+      - show run int {{ item }}
+  register: loopback_interfaces_config
+  with_items:
+    "{{ loopback_interfaces }}"
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=loopback_interfaces_config
+
+- name: IOSXR - parse loopback_interfaces_config output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/iosxr/parser_iosxr_loopback_int.yml
+    content: "{{ item.stdout.0 }}"
+  with_items:
+    "{{ loopback_interfaces_config.results }}"
+  register: loopbacks_facts
+#
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=loopbacks_facts
+
+## Debug commands to check output
+#- name: Display JSON output
+#  debug: var=item.ansible_facts.loopback_int_facts[0]
+#  with_items:
+#    "{{ loopbacks_facts.results }}"
+
+# Debug commands to check output
+#- name: Display mgmt interface
+#  debug: 
+#    msg: The management interface of this device is {{ mgmt_int_facts[0].management_interface.interface }}
+#
+#- name: Display loopback interface
+#  debug: 
+#    msg: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.interface }} is a loopback interface on this device"
+#  with_items:
+#    "{{ loopbacks_facts.results }}"
+#  when: " item.ansible_facts.loopback_int_facts[0].loopback_interface.interface != mgmt_int_facts[0].management_interface.interface "  
+
+- name: IOSXR - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOSXR - Generate YAML file
+  template:
+    src: /gitnet/ansible/roles/mgmt_int/templates/iosxr/yml-template.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/mgmt_interfaces.yml"

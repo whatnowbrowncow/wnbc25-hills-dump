@@ -1,0 +1,13 @@
+{% for object in context_service_objects.service_objects %}
+object service {{ object.name }}
+{% if object.port_type == "eq" %}
+ service {{ object.protocol }} {{ object.direction }} eq {{ object.port }}
+{% elif object.port_type == "range" %}
+ service {{ object.protocol }} {{ object.direction }} range {{ object.range_start }} {{ object.range_end }}
+{% else %}
+{% endif %}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endfor %}

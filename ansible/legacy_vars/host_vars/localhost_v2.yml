@@ -1,0 +1,71 @@
+---
+
+"ddos_device":
+  "brs-er01":
+    ## THRDPTY to WH - THRDPTY DC Name
+    "THRDPTY_to_WH_THRDPTY_DC_NAME": "LON"
+    
+    ##  THRDPTY to WH  - THRDPTY DC Tunnel Ref
+    "THRDPTY_to_WH_THRDPTY_DC_Tunnel_Ref": "LON_DDOS_REF:1234"
+    
+    ##  THRDPTY to WH  - WH end Tunnel Interface IP address
+    "THRDPTY_to_WH_WH_TUN_IP": "50.50.50.1"
+    
+    ##  THRDPTY to WH  - WH end Tunnel Interface netmask
+    "THRDPTY_to_WH_WH_TUN_netmask": "255.255.255.252"
+    
+    ##  THRDPTY to WH  - WH end Tunnel Interface GRE Load Interval value
+    "THRDPTY_to_WH_WH_TUN_GRE_Load_Interval": "10"
+    
+    ##  THRDPTY to WH  - WH end Tunnel Interface GRE Keepalive timer
+    "THRDPTY_to_WH_GRE_keepalive_timer": "10"
+        
+    ##  THRDPTY to WH  - WH end Tunnel Interface GRE Keepalive retries
+    "THRDPTY_to_WH_GRE_keepalive_retires": "3"
+    
+    ##  THRDPTY to WH  - WH end Tunnel Source IP address
+    "THRDPTY_to_WH_TUN_SRC_IFC_IP": "100.100.100.129"
+    
+    ##  THRDPTY to WH  - WH end Tunnel Destination IP address
+    "THRDPTY_to_WH_TUN_DST_IFC_IP": "200.200.200.129"
+    
+    ##  THRDPTY to WH  - BGP THRDPTY Peer_group name
+    "THRDPTY_to_WH_PG_NAME": "LON_PEER"
+    
+    ##  THRDPTY to WH  - THRDPTY AS number
+    "THRDPTY_BGP_AS_num": "5432"
+    
+    ##  THRDPTY to WH  - BGP password
+    "THRDPTY_BGP_password": "bgp_password"
+    
+    ##  THRDPTY to WH  - BGP Keepalive timer
+    "THRDPTY_BGP_keepalive_timer": "10"
+    
+    ##  THRDPTY to WH  - BGP Hold timer
+    "THRDPTY_BGP_hold_timer": "10"
+    
+    ##  THRDPTY to WH  - THRDPTY end Tunnel IP address
+    "THRDPTY_to_WH_THRDPTY_TUN_IP": "100.100.100.130"
+    
+    ##  THRDPTY to WH  - BGP neighbour description
+    "THRDPTY_to_WH_BGP_NEIG_DESCRIPTION": "DDOS_LON"
+    
+    ##  THRDPTY to WH  - Inbound Prefix-list filter name
+    "THRDPTY_to_WH_PFX_filter_in": "ddos-lon-filter-in"
+    
+    ##  THRDPTY to WH  - Outbound Prefix-list filter name
+    "THRDPTY_to_WH_PFX_filter_out": "ddos-lon-filter-out"
+    
+    ##  THRDPTY to WH  - Inbound Route_map name
+    "THRDPTY_to_WH_RM_in": "ddos-lon-rm-in"
+    
+    ##  THRDPTY to WH  - Outbound Route_map name
+    "THRDPTY_to_WH_RM_out": "ddos-lon-rm-out"
+    
+    ##  THRDPTY to WH  - BGP community for BRS networks
+    "THRDPTY_to_WH_BRS_NETS_COMMUNITY": "2345677"
+    
+    ##  THRDPTY to WH  - BGP community for SCC networks
+    "THRDPTY_to_WH_SCC_NETS_COMMUNITY": "2739058"
+  
+  "scc-er01":

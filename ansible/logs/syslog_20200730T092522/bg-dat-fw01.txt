@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: bg-dat-fw01 @ 20200730T092522 ---!
+!
+logging host DC-Transit 10.120.163.126
+!
+!--- END UPDATES: bg-dat-fw01 @ 20200730T092522 ---!
+}

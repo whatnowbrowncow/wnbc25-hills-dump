@@ -1,0 +1,96 @@
+---
+- hosts: asa
+  connection: network_cli
+  remote_user: "{{ user_username }}"
+  gather_facts: no
+
+  vars_prompt:
+    - name: "user_username"
+      prompt: "Please enter your username"
+      private: no
+    - name: "user_password"
+      prompt: "Please enter your password"
+      private: yes
+
+  vars:
+    - my_acl:
+        - acl_name: my_ansible_acl
+          action: permit
+          line_num: 1
+          src_ip: "192.168.1.0 255.255.255.0"
+          dst_ip: "192.168.2.0 255.255.255.0"
+          protocol: tcp
+          dst_port: 4444
+          state: absent  
+          context: admin
+        - acl_name: my_ansible_acl
+          action: permit
+          line_num: 4
+          src_ip: "192.168.3.0 255.255.255.0"
+          dst_ip: "192.168.4.0 255.255.255.0"
+          protocol: tcp
+          dst_port: 5555
+          state: present 
+          context: admin
+        - acl_name: my_ansible_acl
+          action: permit
+          line_num: 2
+          src_ip: "192.168.5.0 255.255.255.0"
+          dst_ip: "192.168.6.0 255.255.255.0"
+          protocol: tcp
+          dst_port: 5555
+          state: present 
+          context: admin
+        - acl_name: my_ansible_acl
+          action: permit
+          line_num: 7
+          src_ip: "192.168.7.0 255.255.255.0"
+          dst_ip: "192.168.8.0 255.255.255.0"
+          protocol: tcp
+          dst_port: 5555
+          state: present 
+          context: admin
+        - acl_name: my_ansible_acl
+          action: permit
+          line_num: 8
+          src_ip: "192.168.9.0 255.255.255.0"
+          dst_ip: "192.168.1.0 255.255.255.0"
+          protocol: tcp
+          dst_port: 5555
+          state: present 
+          context: admin
+        - acl_name: my_ansible_acl
+          action: permit
+          line_num: 5
+          src_ip: "192.168.3.0 255.255.255.0"
+          dst_ip: "192.168.5.0 255.255.255.0"
+          protocol: tcp
+          dst_port: 5555
+          state: present 
+          context: admin
+
+
+
+
+
+
+  tasks:
+    - name: Test asa_my_acl module
+      asa_my_acl:
+        acl_name: "{{ item.acl_name }}"
+        action: "{{ item.action }}"
+        line_num: "{{ item.line_num }}"
+        src_ip: "{{ item.src_ip }}"
+        dst_ip: "{{ item.dst_ip }}"
+        protocol: "{{ item.protocol }}"
+        dst_port: "{{ item.dst_port }}"
+        state: "{{ item.state }}"
+        context: "{{ item.context }}"
+        provider: "{{ provider_cli }}"
+      register: reg_output
+      with_items:
+        - "{{ my_acl }}"
+
+    - debug:
+        msg: "{{ reg_output }}"
+

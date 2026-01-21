@@ -1,0 +1,346 @@
+
+  - app_prof: 'pr-inv-fr-cx'
+    tenant: 'production'
+    vrf: 'pr-inv-fr-cx'
+    bds:
+      - bd: 'pr-inv-fr-cx_internal-vrf'
+        network: '10.120.164.96'
+        gateway: '10.120.164.100'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_internal-vrf'
+            encap_id: '403'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-deployment-lan'
+        network: '10.122.1.0'
+        gateway: '10.122.1.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-deployment-lan'
+            encap_id: '808'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-web1-lan'
+        network: '10.122.2.0'
+        gateway: '10.122.2.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-web1-lan'
+            encap_id: '809'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-app1-lan'
+        network: '10.122.3.0'
+        gateway: '10.122.3.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-app1-lan'
+            encap_id: '810'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-int-pres-lan'
+        network: '10.122.4.0'
+        gateway: '10.122.4.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-int-pres-lan'
+            encap_id: '811'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-api-lan'
+        network: '10.122.5.0'
+        gateway: '10.122.5.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-api-lan'
+            encap_id: '812'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-ext-pres-lan'
+        network: '10.122.6.0'
+        gateway: '10.122.6.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-ext-pres-lan'
+            encap_id: '813'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan01'
+        network: '10.122.7.0'
+        gateway: '10.122.7.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan01'
+            encap_id: '814'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan02'
+        network: '10.122.8.0'
+        gateway: '10.122.8.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan02'
+            encap_id: '815'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan03'
+        network: '10.122.9.0'
+        gateway: '10.122.9.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan03'
+            encap_id: '816'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-mgmt-lan'
+        network: '10.122.10.0'
+        gateway: '10.122.10.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-mgmt-lan'
+            encap_id: '817'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan04'
+        network: '10.122.11.0'
+        gateway: '10.122.11.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan04'
+            encap_id: '818'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan05'
+        network: '10.122.12.0'
+        gateway: '10.122.12.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan05'
+            encap_id: '819'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan06'
+        network: '10.122.13.0'
+        gateway: '10.122.13.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan06'
+            encap_id: '820'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan07'
+        network: '10.122.14.0'
+        gateway: '10.122.14.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan07'
+            encap_id: '821'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-cde-lan08'
+        network: '10.122.15.0'
+        gateway: '10.122.15.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-cde-lan08'
+            encap_id: '822'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-deployment-lan'
+        network: '10.122.65.0'
+        gateway: '10.122.65.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-deployment-lan'
+            encap_id: '858'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-web1-lan'
+        network: '10.122.66.0'
+        gateway: '10.122.66.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-web1-lan'
+            encap_id: '859'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-app1-lan'
+        network: '10.122.67.0'
+        gateway: '10.122.67.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-app1-lan'
+            encap_id: '860'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan01'
+        network: '10.122.68.0'
+        gateway: '10.122.68.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan01'
+            encap_id: '861'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan02'
+        network: '10.122.69.0'
+        gateway: '10.122.69.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan02'
+            encap_id: '862'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan03'
+        network: '10.122.70.0'
+        gateway: '10.122.70.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan03'
+            encap_id: '863'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-ext-api'
+        network: '10.122.71.0'
+        gateway: '10.122.71.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-ext-api'
+            encap_id: '864'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan05'
+        network: '10.122.72.0'
+        gateway: '10.122.72.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan05'
+            encap_id: '865'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan06'
+        network: '10.122.73.0'
+        gateway: '10.122.73.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan06'
+            encap_id: '866'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan07'
+        network: '10.122.74.0'
+        gateway: '10.122.74.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan07'
+            encap_id: '867'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan08'
+        network: '10.122.75.0'
+        gateway: '10.122.75.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan08'
+            encap_id: '868'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan09'
+        network: '10.122.76.0'
+        gateway: '10.122.76.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan09'
+            encap_id: '869'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-lan10'
+        network: '10.122.77.0'
+        gateway: '10.122.77.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-lan10'
+            encap_id: '870'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-app2-lan'
+        network: '10.122.78.0'
+        gateway: '10.122.78.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-app2-lan'
+            encap_id: '871'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-inv-fr-cx_inv-noncde-app3-lan'
+        network: '10.122.79.0'
+        gateway: '10.122.79.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-inv-fr-cx_inv-noncde-app3-lan'
+            encap_id: '872'
+            vcenter_dynamic_vlan: true

@@ -1,0 +1,71 @@
+---
+
+- name: Creating your ACI local user account
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "api/node/mo/uni/userext/user-{{ user_username }}-local.json"
+    content:
+      {
+        "aaaUser": {
+          "attributes": {
+            "dn": "uni/userext/user-{{ user_username }}-local",
+            "name": "{{ user_username }}-local",
+            "pwd": "{{ local_password }}",
+            "firstName": "{{ first_name }}",
+            "lastName": "{{ last_name }}",
+            "email": "{{ email_address }}",
+            "rn": "user-{{ user_username }}-local",
+            "status": "created"
+          },
+          "children": [
+            {
+              "aaaUserDomain": {
+                "attributes": {
+                  "dn": "uni/userext/user-{{ user_username }}-local/userdomain-all",
+                  "name": "all",
+                  "rn": "userdomain-all",
+                  "status": "created,modified"
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      }         
+    validate_certs: no
+
+- name: Configuring your new account's Security Domains
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/userext/user-{{ user_username }}-local/userdomain-all.json"
+    content:
+      {
+        "aaaUserDomain": {
+          "attributes": {
+            "dn": "uni/userext/user-{{ user_username }}-local/userdomain-all",
+            "name": "all",
+            "rn": "userdomain-all",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "aaaUserRole": {
+                "attributes": {
+                  "dn": "uni/userext/user-{{ user_username }}-local/userdomain-all/role-admin",
+                  "name": "admin",
+                  "privType": "writePriv",
+                  "rn": "role-admin",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no

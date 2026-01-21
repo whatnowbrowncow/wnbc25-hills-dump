@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+pl-krk-cs01,10.120.163.19,group-vrf,no,
+pl-krk-cs01,10.120.163.20,group-vrf,no,

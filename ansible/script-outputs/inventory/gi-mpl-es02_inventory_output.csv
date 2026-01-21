@@ -1,0 +1,25 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/1,GLC-T,00000MTC145005YZ,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/14,GLC-T,00000MTC153307GX,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/6,Unspecified,AGM1744237W,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/5,Unspecified,AGM1744237Z,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/12,Unspecified,AGM174427TX,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/16,Unspecified,AGM174427TY,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet2/6,Unspecified,AGM174427UB,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet2/5,Unspecified,AGM1840259Q,none
+gi-mpl-es02,Power Supply ( AC 750W ),Power Supply 1,C4KX-PWR-750AC-R,ART1741X08A,V01
+gi-mpl-es02,Power Supply ( AC 750W ),Power Supply 2,C4KX-PWR-750AC-R,ART1746X2DC,V01
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet1/11,SFP-10G-SR,AVD1736AUP4,V03
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet2/4,SFP-10G-SR,AVD1736AUPD,V03
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet1/2,SFP-10G-SR,AVD1736AUPG,V03
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet1/13,SFP-10G-SR,AVD1736AWG0,V03
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet2/8,SFP-10G-SR,AVD1736AWH6,V03
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet2/1,SFP-10G-SR,FNS1805078Y,V03
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet1/9,SFP-10G-SR,FNS1825170G,V03
+gi-mpl-es02,10GE SFP+,Linecard(slot 2),C4KX-NM-8,JAE17400MZ5,V02
+gi-mpl-es02,4500X-16 10GE (SFP+),Supervisor(slot 1),WS-C4500X-16,JAE174107WJ,V02
+gi-mpl-es02,Cisco Systems,Switch System,,JAE174107WJ,none
+gi-mpl-es02,SFP-10Gbase-SR,TenGigabitEthernet1/7,SFP-10G-SR,JUR1837G5TB,V03
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/4,GLC-T,MTC175100VL,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/8,GLC-T,MTC1751011L,none
+gi-mpl-es02,1000BaseT,TenGigabitEthernet1/10,GLC-T,MTC17510281,none

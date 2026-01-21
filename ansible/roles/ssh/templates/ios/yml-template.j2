@@ -1,0 +1,28 @@
+ssh:
+{% for item in ios_ssh_facts %}
+{% if item.ssh.version is none %}
+  - version: "2"
+{% else %}
+  - version: "{{ item.ssh.version }}"
+{% endif %}
+{% if item.ssh.timeout is none %}
+{% else %}
+    timeout: "{{ item.ssh.timeout }}"
+{% endif %}
+{% if item.ssh.retries is none %}
+{% else %}
+    auth_retries: "{{ item.ssh.retries }}"
+{% endif %}
+{% if item.ssh.sinterface is none %}
+{% else %}
+    source_int: "{{ item.ssh.sinterface }}"
+{% endif %}
+{% if item.ssh.server_algorithm is none %}
+{% else %}
+    server_algorithm: "{{ item.ssh.server_algorithm }}"
+{% endif %}
+{% if item.ssh.client_algorithm is none %}
+{% else %}
+    client_algorithm: "{{ item.ssh.client_algorithm }}"
+{% endif %}
+{% endfor %}

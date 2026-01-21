@@ -1,0 +1,23 @@
+---
+
+- name: Build Bridge Domains
+  aci_bd_subnet:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ item.0.tenant }}"
+    bd: "{{ item.1.bd }}-{{ item.1.network }}s{{ item.1.cidr_mask}}"
+    gateway: "{{ item.1.gateway }}"
+    mask: "{{ item.1.cidr_mask }}"
+    scope: "{{ item.1.scope }}"
+    state: present
+    validate_certs: no
+  with_subelements:
+    - "{{ app_profs }}"
+    - bds
+  when: item.1.l3_ownership == 'aci'
+
+  register: imdata_bd
+  
+#- debug:
+#    msg: "The response was: {{ imdata_bd }}"

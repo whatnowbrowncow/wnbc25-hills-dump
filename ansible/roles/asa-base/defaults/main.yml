@@ -1,0 +1,18 @@
+---
+
+#syslog_svrs:
+#  - 10.112.12.111
+#  - 10.112.13.17
+  
+base:
+  - same-security-traffic permit inter-interface
+  - domain-name network.williamhill.plc
+  - ssh timeout 15
+  - sysopt connection tcpmss 0
+  - "timeout xlate 1:05:00"
+  - "timeout pat-xlate 0:00:30"
+  - "timeout conn 1:00:00 half-closed 0:10:00 udp 0:01:00 sctp 0:02:00 icmp 0:00:02"
+  - "timeout sunrpc 0:01:00 h323 0:00:01 h225 0:00:01 mgcp 0:00:01 mgcp-pat 0:05:00"
+  - "timeout sip 0:05:00 sip_media 0:01:00 sip-invite 0:03:00 sip-disconnect 0:02:00"
+  - "timeout sip-provisional-media 0:02:00 uauth 0:00:01 absolute"
+  - "timeout tcp-proxy-reassembly 0:01:00"

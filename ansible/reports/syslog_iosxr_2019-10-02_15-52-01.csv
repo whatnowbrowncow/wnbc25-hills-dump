@@ -1,0 +1,11 @@
+hostname,syslog ip address,vrf,logging source, logging source vrf
+uk-ld6-cr01-new,10.112.13.17,management,MgmtEth0/RSP0/CPU0/0,management
+uk-ld6-cr02-new,10.112.13.17,management,MgmtEth0/RSP0/CPU0/0,management
+uk-ld6-er01,10.112.13.17,management,MgmtEth0/RSP0/CPU0/0,management
+uk-ld6-er02,10.112.13.17,management,MgmtEth0/RSP0/CPU0/0,management
+uk-sc1-cr01-new,10.120.163.37,management,MgmtEth0/RSP0/CPU0/0,management
+uk-sc1-cr02-new,10.120.163.37,management,MgmtEth0/RSP0/CPU0/0,management
+uk-sc1-cr02-new,10.120.163.95,management,MgmtEth0/RSP0/CPU0/0,management
+uk-sov-cr01-new,10.112.13.17,group-vrf,Loopback20,group-vrf
+uk-sov-cr01-new,192.168.1.61,group-vrf,Loopback20,group-vrf
+uk-sov-cr01-new,10.120.163.37,group-vrf,Loopback20,group-vrf

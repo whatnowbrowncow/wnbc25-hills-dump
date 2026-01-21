@@ -1,0 +1,1423 @@
+hostname,acl-name,seq number,action
+uk-ld6-er02,acl-cacti,10,permit udp host 10.120.163.59 any eq snmp
+uk-ld6-er02,acl-cacti,20,deny ipv4 any any log
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,10,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,20,remark Deny IANA special purpose address registry
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,30,remark **************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,40,deny ipv4 0.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,50,deny ipv4 10.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,60,deny ipv4 100.64.0.0 0.63.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,70,deny ipv4 127.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,80,deny ipv4 169.254.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,90,deny ipv4 172.16.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,100,deny ipv4 192.0.0.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,110,deny ipv4 192.0.0.0 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,120,deny ipv4 host 192.0.0.8 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,130,deny ipv4 host 192.0.0.9 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,140,deny ipv4 host 192.0.0.10 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,150,deny ipv4 host 192.0.0.170 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,160,deny ipv4 192.0.2.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,170,deny ipv4 192.31.196.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,180,deny ipv4 192.52.193.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,190,deny ipv4 192.88.99.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,200,deny ipv4 192.168.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,210,deny ipv4 192.175.48.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,220,deny ipv4 198.18.0.0 0.1.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,230,deny ipv4 198.51.100.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,240,deny ipv4 203.0.113.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,250,deny ipv4 240.0.0.0 15.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,260,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,270,remark Deny bogons and bad ips and other attacks
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,280,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,290,deny tcp any range 1 1024 141.138.128.0 0.0.7.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,300,deny tcp any range 1 1024 185.119.152.0 0.0.3.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,310,deny udp any 141.138.128.0 0.0.7.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,320,deny udp any 185.119.152.0 0.0.3.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,330,deny ipv4 71.6.128.0 0.0.63.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,340,deny ipv4 any host 95.131.186.32
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,350,deny ipv4 any host 141.138.130.12
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,360,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,370,remark Allow BGP and GRE traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,380,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,390,deny tcp any 141.138.128.0 0.0.7.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,400,deny tcp any 185.119.152.0 0.0.3.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,410,permit tcp any any eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,420,deny gre any 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,430,deny gre any 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,440,permit gre any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,450,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,460,remark Allow icmp traffic to infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,470,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,480,permit icmp any 141.138.128.0 0.0.7.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,490,permit icmp any 141.138.128.0 0.0.7.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,500,permit icmp any 141.138.128.0 0.0.7.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,510,permit icmp any 141.138.128.0 0.0.7.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,520,permit icmp any 141.138.128.0 0.0.7.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,530,permit icmp any 185.119.152.0 0.0.3.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,540,permit icmp any 185.119.152.0 0.0.3.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,550,permit icmp any 185.119.152.0 0.0.3.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,560,permit icmp any 185.119.152.0 0.0.3.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,570,permit icmp any 185.119.152.0 0.0.3.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,580,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,590,remark Permit Ipsec traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,600,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,610,permit udp any 141.138.128.0 0.0.1.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,620,permit udp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,630,permit tcp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,640,permit tcp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,650,permit udp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,660,permit esp any 141.138.128.0 0.0.1.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,670,permit esp any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,680,permit udp any 185.119.152.0 0.0.0.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,690,permit udp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,700,permit tcp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,710,permit udp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,720,permit tcp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,730,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,740,remark Permit https traffic towards checkpoints / RAS
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,750,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,760,permit ipv4 any host 141.138.129.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,770,permit ipv4 any host 141.138.129.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,780,permit ipv4 any host 141.138.129.40
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,790,permit ipv4 any host 141.138.128.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,800,permit ipv4 any host 141.138.128.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,810,permit ipv4 any host 141.138.128.36
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,820,permit ipv4 any host 141.138.129.43
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,830,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,840,remark Allow general services and return traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,850,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,860,permit tcp any 141.138.128.0 0.0.7.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,870,permit tcp any 185.119.152.0 0.0.3.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,880,permit udp any eq domain 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,890,permit udp any eq domain 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,900,permit tcp any 141.138.130.0 0.0.0.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,910,permit tcp any 185.119.152.0 0.0.3.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,920,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,930,remark Allow all traffic to client Playtech
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,940,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,950,permit ipv4 any 141.138.128.136 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,960,permit ipv4 any host 141.138.128.96
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,970,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,980,remark Deny inbound traffic towards infrastructure range
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,990,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1000,deny ipv4 any 141.138.128.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1010,deny ipv4 any 141.138.129.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1020,deny ipv4 any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1030,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1040,remark Pentesting sources mdesc
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1050,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1060,permit ipv4 host 95.154.227.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1070,permit ipv4 95.154.227.72 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1080,permit ipv4 host 95.154.227.95 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1090,permit ipv4 host 95.154.227.94 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1100,permit ipv4 host 95.154.227.91 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1110,permit ipv4 host 95.154.227.84 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1120,permit ipv4 host 95.154.227.72 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1130,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1140,remark Allow specific source hosts
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1150,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1160,permit ipv4 host 95.154.227.13 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1170,permit ipv4 host 94.156.185.44 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1180,permit ipv4 host 92.52.99.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1190,permit ipv4 host 92.247.8.98 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1200,permit ipv4 host 87.121.79.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1210,permit ipv4 host 81.149.239.118 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1220,permit ipv4 host 80.94.22.241 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1230,permit ipv4 host 217.153.136.10 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1240,permit ipv4 host 213.155.178.165 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1250,permit ipv4 host 62.172.215.182 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1260,permit ipv4 host 52.56.142.152 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1270,permit ipv4 host 37.98.232.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1280,permit ipv4 host 213.120.94.24 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1290,permit ipv4 host 213.120.94.19 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1300,permit ipv4 host 212.142.66.129 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1310,permit ipv4 host 207.45.120.28 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1320,permit ipv4 host 207.45.119.254 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1330,permit ipv4 host 199.91.137.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1340,permit ipv4 host 195.244.210.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1350,permit ipv4 host 195.244.198.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1360,permit ipv4 host 194.73.173.139 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1370,permit ipv4 host 194.73.173.134 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1380,permit ipv4 host 155.136.20.201 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1390,permit ipv4 host 109.238.64.94 host 141.138.135.186
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1400,permit ipv4 host 109.238.64.94 host 141.138.135.168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1410,permit ipv4 host 109.234.202.159 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1420,permit ipv4 94.174.178.208 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1430,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.45
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1440,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.46
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1450,permit ipv4 any host 141.138.130.145
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1460,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1470,remark Allow mail services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1480,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1490,permit tcp any host 141.138.130.3 eq smtp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1500,permit tcp any host 141.138.130.3 eq 465
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1510,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1520,remark Allow file transfer services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1530,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1540,permit tcp any 141.138.130.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1550,permit tcp any 141.138.131.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1560,permit tcp any 141.138.135.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1570,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1580,remark Allow other services - grouped by port
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1590,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1600,permit tcp any 141.138.131.0 0.0.0.255 eq ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1610,permit tcp any 141.138.130.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1620,permit tcp any 141.138.131.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1630,permit tcp any 141.138.135.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1640,permit tcp any 185.119.153.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1650,permit tcp any 185.119.154.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1660,permit tcp any 185.119.155.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1670,permit tcp any 141.138.130.0 0.0.0.255 eq 389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1680,permit tcp any 141.138.130.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1690,permit tcp any 141.138.131.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1700,permit tcp any 141.138.135.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1710,permit tcp any 185.119.153.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1720,permit tcp any 185.119.154.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1730,permit tcp any 185.119.155.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1740,permit tcp any 141.138.130.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1750,permit tcp any 141.138.131.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1760,permit tcp any 141.138.130.0 0.0.0.255 eq 500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1770,permit tcp any 141.138.130.0 0.0.0.255 eq 636
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1780,permit tcp any 141.138.130.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1790,permit tcp any 141.138.135.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1800,permit tcp any 185.119.153.0 0.0.0.255 eq 1935
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1810,permit tcp any 141.138.130.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1820,permit tcp any 141.138.135.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1830,permit tcp any 185.119.153.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1840,permit tcp any 185.119.154.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1850,permit tcp any 185.119.155.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1860,permit tcp any 141.138.130.0 0.0.0.255 eq 3268
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1870,permit tcp any 141.138.130.0 0.0.0.255 eq 3269
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1880,permit udp any 141.138.130.0 0.0.0.255 eq 4569
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1890,permit tcp any 141.138.130.0 0.0.0.255 eq 5118
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1900,permit tcp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1910,permit udp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1920,permit tcp any 141.138.130.0 0.0.0.255 eq 8014
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1930,permit tcp any 141.138.131.0 0.0.0.255 eq 8080
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1940,permit tcp any 141.138.135.0 0.0.0.255 eq 8192
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1950,permit tcp any 141.138.135.0 0.0.0.255 range 8381 8383
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1960,permit tcp any 141.138.130.0 0.0.0.255 eq 8531
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1970,permit tcp any 141.138.131.0 0.0.0.255 eq 8888
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1980,permit tcp any host 141.138.130.143 range 9031 9032
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,1990,permit tcp any 141.138.135.0 0.0.0.255 eq 9382
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2000,permit tcp any 141.138.135.0 0.0.0.255 range 10125 10129
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2010,permit tcp any 141.138.135.0 0.0.0.255 eq 10168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2020,permit tcp any 141.138.135.0 0.0.0.255 eq 10180
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2030,permit tcp any 141.138.135.0 0.0.0.255 range 10184 10185
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2040,permit tcp any 141.138.135.0 0.0.0.255 eq 10187
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2050,permit tcp any 141.138.135.0 0.0.0.255 range 10225 10228
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2060,permit tcp any 141.138.135.0 0.0.0.255 eq 10278
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2070,permit tcp any 141.138.135.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2080,permit tcp any 185.119.153.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2090,permit tcp any 141.138.131.0 0.0.0.255 eq 9291
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2100,permit tcp any 141.138.130.0 0.0.0.255 eq 9389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2110,permit tcp any 141.138.130.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2120,permit tcp any 141.138.135.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2130,permit tcp any 185.119.153.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2140,permit tcp any 141.138.131.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2150,permit tcp any 185.119.153.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2160,permit tcp any 185.119.154.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2170,permit tcp any 185.119.155.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2180,permit tcp any 141.138.130.0 0.0.0.255 range 48000 48005
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2190,permit udp any eq 4569 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2200,permit udp any eq 5119 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2210,permit udp any eq 25826 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2220,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2230,remark Deny traffic by default to production ranges
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2240,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2250,deny ipv4 any 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2260,deny ipv4 any 141.138.131.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2270,deny ipv4 any 141.138.135.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2280,deny ipv4 any 185.119.153.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2290,deny ipv4 any 185.119.154.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2300,deny ipv4 any 185.119.155.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2310,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2320,remark Playtech traffic - permit playtech whitelist - deny rest
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2330,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2340,permit ipv4 5.62.94.64 0.0.0.63 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2350,permit ipv4 82.146.15.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2360,permit ipv4 94.190.144.0 0.0.1.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2370,permit ipv4 103.36.150.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2380,permit ipv4 176.113.92.0 0.0.3.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2390,permit ipv4 178.255.8.0 0.0.7.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2400,permit ipv4 185.6.176.0 0.0.3.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2410,permit ipv4 185.113.168.0 0.0.3.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2420,permit ipv4 195.171.120.0 0.0.0.63 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2430,permit ipv4 212.72.206.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2440,permit ipv4 213.187.224.0 0.0.31.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2450,permit ipv4 host 61.14.155.196 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2460,permit ipv4 host 61.28.184.226 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2470,permit ipv4 host 84.242.191.2 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2480,permit ipv4 host 88.196.5.89 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2490,permit ipv4 host 89.96.183.50 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2500,permit ipv4 host 91.184.205.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2510,permit ipv4 host 109.205.132.30 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2520,permit ipv4 host 185.83.149.236 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2530,permit ipv4 host 194.126.102.178 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2540,permit ipv4 host 195.244.216.244 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2550,permit ipv4 host 213.180.3.195 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2560,permit ipv4 host 213.180.3.200 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2570,permit ipv4 host 217.35.157.235 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2580,permit ipv4 host 217.37.108.227 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2590,deny ipv4 any 95.131.190.0 0.0.0.127
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2600,deny ipv4 any 95.131.191.0 0.0.0.31
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2610,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2620,remark Permit all other traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2630,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_0_0,2640,permit ipv4 any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,10,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,20,remark Deny IANA special purpose address registry
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,30,remark **************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,40,deny ipv4 0.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,50,deny ipv4 10.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,60,deny ipv4 100.64.0.0 0.63.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,70,deny ipv4 127.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,80,deny ipv4 169.254.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,90,deny ipv4 172.16.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,100,deny ipv4 192.0.0.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,110,deny ipv4 192.0.0.0 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,120,deny ipv4 host 192.0.0.8 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,130,deny ipv4 host 192.0.0.9 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,140,deny ipv4 host 192.0.0.10 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,150,deny ipv4 host 192.0.0.170 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,160,deny ipv4 192.0.2.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,170,deny ipv4 192.31.196.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,180,deny ipv4 192.52.193.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,190,deny ipv4 192.88.99.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,200,deny ipv4 192.168.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,210,deny ipv4 192.175.48.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,220,deny ipv4 198.18.0.0 0.1.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,230,deny ipv4 198.51.100.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,240,deny ipv4 203.0.113.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,250,deny ipv4 240.0.0.0 15.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,260,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,270,remark Deny bogons and bad ips and other attacks
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,280,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,290,deny tcp any range 1 1024 141.138.128.0 0.0.7.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,300,deny tcp any range 1 1024 185.119.152.0 0.0.3.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,310,deny udp any 141.138.128.0 0.0.7.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,320,deny udp any 185.119.152.0 0.0.3.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,330,deny ipv4 71.6.128.0 0.0.63.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,340,deny ipv4 any host 95.131.186.32
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,350,deny ipv4 any host 141.138.130.12
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,360,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,370,remark Allow BGP and GRE traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,380,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,390,deny tcp any 141.138.128.0 0.0.7.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,400,deny tcp any 185.119.152.0 0.0.3.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,410,permit tcp any any eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,420,deny gre any 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,430,deny gre any 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,440,permit gre any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,450,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,460,remark Allow icmp traffic to infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,470,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,480,permit icmp any 141.138.128.0 0.0.7.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,490,permit icmp any 141.138.128.0 0.0.7.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,500,permit icmp any 141.138.128.0 0.0.7.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,510,permit icmp any 141.138.128.0 0.0.7.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,520,permit icmp any 141.138.128.0 0.0.7.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,530,permit icmp any 185.119.152.0 0.0.3.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,540,permit icmp any 185.119.152.0 0.0.3.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,550,permit icmp any 185.119.152.0 0.0.3.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,560,permit icmp any 185.119.152.0 0.0.3.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,570,permit icmp any 185.119.152.0 0.0.3.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,580,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,590,remark Permit Ipsec traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,600,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,610,permit udp any 141.138.128.0 0.0.1.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,620,permit udp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,630,permit tcp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,640,permit tcp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,650,permit udp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,660,permit esp any 141.138.128.0 0.0.1.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,670,permit esp any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,680,permit udp any 185.119.152.0 0.0.0.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,690,permit udp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,700,permit tcp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,710,permit udp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,720,permit tcp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,730,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,740,remark Permit https traffic towards checkpoints / RAS
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,750,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,760,permit ipv4 any host 141.138.129.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,770,permit ipv4 any host 141.138.129.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,780,permit ipv4 any host 141.138.129.40
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,790,permit ipv4 any host 141.138.128.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,800,permit ipv4 any host 141.138.128.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,810,permit ipv4 any host 141.138.128.36
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,820,permit ipv4 any host 141.138.129.43
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,830,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,840,remark Allow general services and return traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,850,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,860,permit tcp any 141.138.128.0 0.0.7.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,870,permit tcp any 185.119.152.0 0.0.3.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,880,permit udp any eq domain 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,890,permit udp any eq domain 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,900,permit tcp any 141.138.130.0 0.0.0.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,910,permit tcp any 185.119.152.0 0.0.3.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,920,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,930,remark Allow all traffic to client Playtech
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,940,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,950,permit ipv4 any 141.138.128.136 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,960,permit ipv4 any host 141.138.128.96
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,970,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,980,remark Deny inbound traffic towards infrastructure range
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,990,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1000,deny ipv4 any 141.138.128.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1010,deny ipv4 any 141.138.129.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1020,deny ipv4 any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1030,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1040,remark Pentesting sources mdesc
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1050,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1060,permit ipv4 host 95.154.227.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1070,permit ipv4 95.154.227.72 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1080,permit ipv4 host 95.154.227.95 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1090,permit ipv4 host 95.154.227.94 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1100,permit ipv4 host 95.154.227.91 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1110,permit ipv4 host 95.154.227.84 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1120,permit ipv4 host 95.154.227.72 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1130,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1140,remark Allow specific source hosts
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1150,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1160,permit ipv4 host 95.154.227.13 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1170,permit ipv4 host 94.156.185.44 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1180,permit ipv4 host 92.52.99.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1190,permit ipv4 host 92.247.8.98 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1200,permit ipv4 host 87.121.79.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1210,permit ipv4 host 81.149.239.118 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1220,permit ipv4 host 80.94.22.241 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1230,permit ipv4 host 217.153.136.10 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1240,permit ipv4 host 213.155.178.165 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1250,permit ipv4 host 62.172.215.182 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1260,permit ipv4 host 52.56.142.152 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1270,permit ipv4 host 37.98.232.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1280,permit ipv4 host 213.120.94.24 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1290,permit ipv4 host 213.120.94.19 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1300,permit ipv4 host 212.142.66.129 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1310,permit ipv4 host 207.45.120.28 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1320,permit ipv4 host 207.45.119.254 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1330,permit ipv4 host 199.91.137.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1340,permit ipv4 host 195.244.210.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1350,permit ipv4 host 195.244.198.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1360,permit ipv4 host 194.73.173.139 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1370,permit ipv4 host 194.73.173.134 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1380,permit ipv4 host 155.136.20.201 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1390,permit ipv4 host 109.238.64.94 host 141.138.135.186
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1400,permit ipv4 host 109.238.64.94 host 141.138.135.168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1410,permit ipv4 host 109.234.202.159 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1420,permit ipv4 94.174.178.208 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1430,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.45
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1440,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.46
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1450,permit ipv4 any host 141.138.130.145
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1460,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1470,remark Allow mail services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1480,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1490,permit tcp any host 141.138.130.3 eq smtp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1500,permit tcp any host 141.138.130.3 eq 465
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1510,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1520,remark Allow file transfer services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1530,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1540,permit tcp any 141.138.130.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1550,permit tcp any 141.138.131.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1560,permit tcp any 141.138.135.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1570,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1580,remark Allow other services - grouped by port
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1590,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1600,permit tcp any 141.138.131.0 0.0.0.255 eq ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1610,permit tcp any 141.138.130.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1620,permit tcp any 141.138.131.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1630,permit tcp any 141.138.135.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1640,permit tcp any 185.119.153.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1650,permit tcp any 185.119.154.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1660,permit tcp any 185.119.155.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1670,permit tcp any 141.138.130.0 0.0.0.255 eq 389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1680,permit tcp any 141.138.130.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1690,permit tcp any 141.138.131.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1700,permit tcp any 141.138.135.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1710,permit tcp any 185.119.153.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1720,permit tcp any 185.119.154.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1730,permit tcp any 185.119.155.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1740,permit tcp any 141.138.130.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1750,permit tcp any 141.138.131.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1760,permit tcp any 141.138.130.0 0.0.0.255 eq 500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1770,permit tcp any 141.138.130.0 0.0.0.255 eq 636
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1780,permit tcp any 141.138.130.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1790,permit tcp any 141.138.135.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1800,permit tcp any 185.119.153.0 0.0.0.255 eq 1935
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1810,permit tcp any 141.138.130.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1820,permit tcp any 141.138.135.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1830,permit tcp any 185.119.153.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1840,permit tcp any 185.119.154.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1850,permit tcp any 185.119.155.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1860,permit tcp any 141.138.130.0 0.0.0.255 eq 3268
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1870,permit tcp any 141.138.130.0 0.0.0.255 eq 3269
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1880,permit udp any 141.138.130.0 0.0.0.255 eq 4569
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1890,permit tcp any 141.138.130.0 0.0.0.255 eq 5118
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1900,permit tcp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1910,permit udp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1920,permit tcp any 141.138.130.0 0.0.0.255 eq 8014
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1930,permit tcp any 141.138.131.0 0.0.0.255 eq 8080
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1940,permit tcp any 141.138.135.0 0.0.0.255 eq 8192
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1950,permit tcp any 141.138.135.0 0.0.0.255 range 8381 8383
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1960,permit tcp any 141.138.130.0 0.0.0.255 eq 8531
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1970,permit tcp any 141.138.131.0 0.0.0.255 eq 8888
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1980,permit tcp any host 141.138.130.143 range 9031 9032
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,1990,permit tcp any 141.138.135.0 0.0.0.255 eq 9382
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2000,permit tcp any 141.138.135.0 0.0.0.255 range 10125 10129
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2010,permit tcp any 141.138.135.0 0.0.0.255 eq 10168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2020,permit tcp any 141.138.135.0 0.0.0.255 eq 10180
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2030,permit tcp any 141.138.135.0 0.0.0.255 range 10184 10185
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2040,permit tcp any 141.138.135.0 0.0.0.255 eq 10187
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2050,permit tcp any 141.138.135.0 0.0.0.255 range 10225 10228
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2060,permit tcp any 141.138.135.0 0.0.0.255 eq 10278
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2070,permit tcp any 141.138.135.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2080,permit tcp any 185.119.153.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2090,permit tcp any 141.138.131.0 0.0.0.255 eq 9291
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2100,permit tcp any 141.138.130.0 0.0.0.255 eq 9389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2110,permit tcp any 141.138.130.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2120,permit tcp any 141.138.135.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2130,permit tcp any 185.119.153.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2140,permit tcp any 141.138.131.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2150,permit tcp any 185.119.153.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2160,permit tcp any 185.119.154.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2170,permit tcp any 185.119.155.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2180,permit tcp any 141.138.130.0 0.0.0.255 range 48000 48005
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2190,permit udp any eq 4569 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2200,permit udp any eq 5119 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2210,permit udp any eq 25826 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2220,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2230,remark Deny traffic by default to production ranges
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2240,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2250,deny ipv4 any 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2260,deny ipv4 any 141.138.131.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2270,deny ipv4 any 141.138.135.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2280,deny ipv4 any 185.119.153.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2290,deny ipv4 any 185.119.154.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2300,deny ipv4 any 185.119.155.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2310,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2320,remark Playtech traffic - permit playtech whitelist - deny rest
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2330,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2340,permit ipv4 5.62.94.64 0.0.0.63 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2350,permit ipv4 82.146.15.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2360,permit ipv4 94.190.144.0 0.0.1.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2370,permit ipv4 103.36.150.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2380,permit ipv4 176.113.92.0 0.0.3.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2390,permit ipv4 178.255.8.0 0.0.7.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2400,permit ipv4 185.6.176.0 0.0.3.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2410,permit ipv4 185.113.168.0 0.0.3.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2420,permit ipv4 195.171.120.0 0.0.0.63 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2430,permit ipv4 212.72.206.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2440,permit ipv4 213.187.224.0 0.0.31.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2450,permit ipv4 host 61.14.155.196 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2460,permit ipv4 host 61.28.184.226 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2470,permit ipv4 host 84.242.191.2 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2480,permit ipv4 host 88.196.5.89 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2490,permit ipv4 host 89.96.183.50 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2500,permit ipv4 host 91.184.205.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2510,permit ipv4 host 109.205.132.30 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2520,permit ipv4 host 185.83.149.236 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2530,permit ipv4 host 194.126.102.178 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2540,permit ipv4 host 195.244.216.244 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2550,permit ipv4 host 213.180.3.195 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2560,permit ipv4 host 213.180.3.200 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2570,permit ipv4 host 217.35.157.235 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2580,permit ipv4 host 217.37.108.227 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2590,permit ipv4 31.168.167.224 0.0.0.31 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2600,permit ipv4 77.89.9.128 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2610,permit ipv4 83.142.184.244 0.0.0.3 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2620,permit ipv4 87.120.11.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2630,permit ipv4 94.42.173.56 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2640,permit ipv4 94.42.173.64 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2650,permit ipv4 195.244.216.128 0.0.0.127 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2660,permit ipv4 199.203.131.64 0.0.0.31 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2670,permit ipv4 199.203.164.56 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2680,permit ipv4 212.72.219.96 0.0.0.5 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2690,permit ipv4 213.121.165.74 0.0.0.1 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2700,permit ipv4 host 109.205.132.30 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2710,permit ipv4 host 125.252.68.233 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2720,permit ipv4 host 125.252.68.234 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2730,permit ipv4 host 13.69.49.226 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2740,permit ipv4 host 134.213.29.5 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2750,permit ipv4 host 141.138.130.1 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2760,permit ipv4 host 162.13.166.135 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2770,permit ipv4 host 162.13.176.100 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2780,permit ipv4 host 18.130.53.59 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2790,permit ipv4 host 184.180.24.200 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2800,permit ipv4 host 185.113.168.3 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2810,permit ipv4 host 185.20.52.98 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2820,permit ipv4 host 194.105.145.103 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2830,permit ipv4 host 195.2.244.193 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2840,permit ipv4 host 195.50.208.200 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2850,permit ipv4 host 195.59.101.162 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2860,permit ipv4 host 199.203.120.66 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2870,permit ipv4 host 199.203.63.45 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2880,permit ipv4 host 199.203.79.137 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2890,permit ipv4 host 212.140.174.166 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2900,permit ipv4 host 212.179.145.66 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2910,permit ipv4 host 212.179.226.196 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2920,permit ipv4 host 212.235.24.254 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2930,permit ipv4 host 212.235.31.243 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2940,permit ipv4 host 212.25.122.125 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2950,permit ipv4 host 212.29.200.52 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2960,permit ipv4 host 212.42.178.125 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2970,permit ipv4 host 213.105.227.34 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2980,permit ipv4 host 217.37.108.227 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,2990,permit ipv4 host 217.39.184.226 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3000,permit ipv4 host 217.65.52.250 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3010,permit ipv4 host 35.177.96.34 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3020,permit ipv4 host 35.178.74.253 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3030,permit ipv4 host 38.107.145.3 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3040,permit ipv4 host 40.113.147.241 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3050,permit ipv4 host 46.166.187.227 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3060,permit ipv4 host 46.235.224.99 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3070,permit ipv4 host 52.174.106.15 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3080,permit ipv4 host 62.149.199.53 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3090,permit ipv4 host 62.172.162.168 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3100,permit ipv4 host 62.176.93.170 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3110,permit ipv4 host 62.189.19.125 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3120,permit ipv4 host 62.90.100.106 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3130,permit ipv4 host 62.90.201.136 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3140,permit ipv4 host 62.90.248.170 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3150,permit ipv4 host 62.90.76.232 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3160,permit ipv4 host 66.212.226.99 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3170,permit ipv4 host 69.90.108.88 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3180,permit ipv4 host 79.135.43.90 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3190,permit ipv4 host 80.169.113.58 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3200,permit ipv4 host 80.179.193.80 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3210,permit ipv4 host 81.29.201.154 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3220,permit ipv4 host 82.110.101.66 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3230,permit ipv4 host 82.147.135.2 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3240,permit ipv4 host 82.163.72.71 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3250,permit ipv4 host 82.166.18.94 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3260,permit ipv4 host 86.18.4.162 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3270,permit ipv4 host 88.196.5.82 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3280,permit ipv4 host 88.196.5.89 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3290,permit ipv4 host 91.143.193.219 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3300,permit ipv4 host 91.184.205.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3310,permit ipv4 host 93.191.172.65 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3320,permit ipv4 host 93.62.214.227 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3330,permit ipv4 host 93.62.214.228 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3340,permit ipv4 host 94.156.185.44 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3350,permit ipv4 host 94.42.173.32 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3360,permit ipv4 host 98.174.195.66 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3370,deny ipv4 any 95.131.190.0 0.0.0.127
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3380,deny ipv4 any 95.131.191.0 0.0.0.31
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3390,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3400,remark Permit all other traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3410,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_1_0,3420,permit ipv4 any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,10,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,20,remark Deny IANA special purpose address registry 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,30,remark **************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,40,deny ipv4 0.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,50,deny ipv4 10.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,60,deny ipv4 100.64.0.0 0.63.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,70,deny ipv4 127.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,80,deny ipv4 169.254.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,90,deny ipv4 172.16.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,100,deny ipv4 192.0.0.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,110,deny ipv4 192.0.0.0 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,120,deny ipv4 host 192.0.0.8 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,130,deny ipv4 host 192.0.0.9 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,140,deny ipv4 host 192.0.0.10 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,150,deny ipv4 host 192.0.0.170 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,160,deny ipv4 192.0.2.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,170,deny ipv4 192.31.196.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,180,deny ipv4 192.52.193.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,190,deny ipv4 192.88.99.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,200,deny ipv4 192.168.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,210,deny ipv4 192.175.48.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,220,deny ipv4 198.18.0.0 0.1.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,230,deny ipv4 198.51.100.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,240,deny ipv4 203.0.113.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,250,deny ipv4 240.0.0.0 15.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,260,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,270,remark Deny bogons and bad ips and other attacks
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,280,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,290,deny tcp any range 1 1024 141.138.128.0 0.0.7.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,300,deny tcp any range 1 1024 185.119.152.0 0.0.3.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,310,deny udp any 141.138.128.0 0.0.7.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,320,deny udp any 185.119.152.0 0.0.3.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,330,deny ipv4 71.6.128.0 0.0.63.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,340,deny ipv4 any host 95.131.186.32
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,350,deny ipv4 any host 141.138.130.12
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,360,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,370,remark Allow BGP and GRE traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,380,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,390,deny tcp any 141.138.128.0 0.0.7.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,400,deny tcp any 185.119.152.0 0.0.3.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,410,permit tcp any any eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,420,deny gre any 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,430,deny gre any 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,440,permit gre any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,450,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,460,remark Allow icmp traffic to infrastructure 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,470,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,480,permit icmp any 141.138.128.0 0.0.7.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,490,permit icmp any 141.138.128.0 0.0.7.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,500,permit icmp any 141.138.128.0 0.0.7.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,510,permit icmp any 141.138.128.0 0.0.7.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,520,permit icmp any 141.138.128.0 0.0.7.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,530,permit icmp any 185.119.152.0 0.0.3.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,540,permit icmp any 185.119.152.0 0.0.3.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,550,permit icmp any 185.119.152.0 0.0.3.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,560,permit icmp any 185.119.152.0 0.0.3.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,570,permit icmp any 185.119.152.0 0.0.3.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,580,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,590,remark Permit Ipsec traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,600,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,610,permit udp any 141.138.128.0 0.0.1.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,620,permit udp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,630,permit tcp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,640,permit tcp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,650,permit udp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,660,permit esp any 141.138.128.0 0.0.1.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,670,permit esp any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,680,permit udp any 185.119.152.0 0.0.0.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,690,permit udp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,700,permit tcp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,710,permit udp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,720,permit tcp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,730,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,740,remark Permit https traffic towards checkpoints / RAS
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,750,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,760,permit ipv4 any host 141.138.129.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,770,permit ipv4 any host 141.138.129.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,780,permit ipv4 any host 141.138.129.40
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,790,permit ipv4 any host 141.138.128.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,800,permit ipv4 any host 141.138.128.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,810,permit ipv4 any host 141.138.128.36
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,820,permit ipv4 any host 141.138.129.43
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,830,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,840,remark Allow general services and return traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,850,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,860,permit tcp any 141.138.128.0 0.0.7.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,870,permit tcp any 185.119.152.0 0.0.3.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,880,permit udp any eq domain 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,890,permit udp any eq domain 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,900,permit tcp any 141.138.130.0 0.0.0.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,910,permit tcp any 185.119.152.0 0.0.3.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,920,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,930,remark Allow all traffic to client Playtech
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,940,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,950,permit ipv4 any 141.138.128.136 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,960,permit ipv4 any host 141.138.128.96
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,970,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,980,remark Deny inbound traffic towards infrastructure range 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,990,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1000,deny ipv4 any 141.138.128.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1010,deny ipv4 any 141.138.129.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1020,deny ipv4 any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1030,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1040,remark Pentesting sources mdesc
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1050,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1060,permit ipv4 host 95.154.227.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1070,permit ipv4 95.154.227.72 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1080,permit ipv4 host 95.154.227.95 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1090,permit ipv4 host 95.154.227.94 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1100,permit ipv4 host 95.154.227.91 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1110,permit ipv4 host 95.154.227.84 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1120,permit ipv4 host 95.154.227.72 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1130,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1140,remark Allow specific source hosts
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1150,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1160,permit ipv4 host 95.154.227.13 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1170,permit ipv4 host 94.156.185.44 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1180,permit ipv4 host 92.52.99.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1190,permit ipv4 host 92.247.8.98 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1200,permit ipv4 host 87.121.79.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1210,permit ipv4 host 81.149.239.118 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1220,permit ipv4 host 80.94.22.241 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1230,permit ipv4 host 217.153.136.10 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1240,permit ipv4 host 213.155.178.165 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1250,permit ipv4 host 62.172.215.182 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1260,permit ipv4 host 52.56.142.152 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1270,permit ipv4 host 37.98.232.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1280,permit ipv4 host 213.120.94.24 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1290,permit ipv4 host 213.120.94.19 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1300,permit ipv4 host 212.142.66.129 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1310,permit ipv4 host 207.45.120.28 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1320,permit ipv4 host 207.45.119.254 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1330,permit ipv4 host 199.91.137.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1340,permit ipv4 host 195.244.210.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1350,permit ipv4 host 195.244.198.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1360,permit ipv4 host 194.73.173.139 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1370,permit ipv4 host 194.73.173.134 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1380,permit ipv4 host 155.136.20.201 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1390,permit ipv4 host 109.238.64.94 host 141.138.135.186
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1400,permit ipv4 host 109.238.64.94 host 141.138.135.168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1410,permit ipv4 host 109.234.202.159 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1420,permit ipv4 94.174.178.208 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1430,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.45
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1440,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.46
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1450,permit ipv4 any host 141.138.130.145
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1460,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1470,remark Allow mail services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1480,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1490,permit tcp any host 141.138.130.3 eq smtp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1500,permit tcp any host 141.138.130.3 eq 465
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1510,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1520,remark Allow file transfer services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1530,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1540,permit tcp any 141.138.130.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1550,permit tcp any 141.138.131.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1560,permit tcp any 141.138.135.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1570,permit tcp any 185.119.153.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1580,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1590,remark Allow other services - grouped by port
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1600,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1610,permit tcp any 141.138.131.0 0.0.0.255 eq ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1620,permit tcp any 141.138.130.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1630,permit tcp any 141.138.131.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1640,permit tcp any 141.138.135.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1650,permit tcp any 185.119.153.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1660,permit tcp any 185.119.154.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1670,permit tcp any 185.119.155.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1680,permit tcp any 141.138.130.0 0.0.0.255 eq 389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1690,permit tcp any 141.138.130.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1700,permit tcp any 141.138.131.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1710,permit tcp any 141.138.135.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1720,permit tcp any 185.119.153.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1730,permit tcp any 185.119.154.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1740,permit tcp any 185.119.155.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1750,permit tcp any 141.138.130.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1760,permit tcp any 141.138.131.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1770,permit tcp any 141.138.130.0 0.0.0.255 eq 500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1780,permit tcp any 141.138.130.0 0.0.0.255 eq 636
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1790,permit tcp any 141.138.130.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1800,permit tcp any 141.138.135.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1810,permit tcp any 185.119.153.0 0.0.0.255 eq 1935
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1820,permit tcp any 141.138.130.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1830,permit tcp any 141.138.135.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1840,permit tcp any 185.119.153.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1850,permit tcp any 185.119.154.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1860,permit tcp any 185.119.155.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1870,permit tcp any 141.138.130.0 0.0.0.255 eq 3268
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1880,permit tcp any 141.138.130.0 0.0.0.255 eq 3269
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1890,permit udp any 141.138.130.0 0.0.0.255 eq 4569
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1900,permit tcp any 141.138.130.0 0.0.0.255 eq 5118
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1910,permit tcp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1920,permit udp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1930,permit tcp any 141.138.130.0 0.0.0.255 eq 8014
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1940,permit tcp any 141.138.131.0 0.0.0.255 eq 8080
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1950,permit tcp any 141.138.135.0 0.0.0.255 eq 8192
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1960,permit tcp any 141.138.135.0 0.0.0.255 range 8381 8383
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1970,permit tcp any 141.138.130.0 0.0.0.255 eq 8531
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1980,permit tcp any 141.138.131.0 0.0.0.255 eq 8888
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,1990,permit tcp any host 141.138.130.143 range 9031 9032
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2000,permit tcp any 141.138.135.0 0.0.0.255 eq 9382
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2010,permit tcp any 141.138.135.0 0.0.0.255 range 10125 10129
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2020,permit tcp any 141.138.135.0 0.0.0.255 eq 10168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2030,permit tcp any 141.138.135.0 0.0.0.255 eq 10180
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2040,permit tcp any 141.138.135.0 0.0.0.255 range 10184 10185
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2050,permit tcp any 141.138.135.0 0.0.0.255 eq 10187
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2060,permit tcp any 141.138.135.0 0.0.0.255 range 10225 10228
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2070,permit tcp any 141.138.135.0 0.0.0.255 eq 10278
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2080,permit tcp any 141.138.135.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2090,permit tcp any 185.119.153.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2100,permit tcp any 141.138.131.0 0.0.0.255 eq 9291
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2110,permit tcp any 141.138.130.0 0.0.0.255 eq 9389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2120,permit tcp any 141.138.130.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2130,permit tcp any 141.138.135.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2140,permit tcp any 185.119.153.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2150,permit tcp any 141.138.131.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2160,permit tcp any 185.119.153.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2170,permit tcp any 185.119.154.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2180,permit tcp any 185.119.155.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2190,permit tcp any 141.138.130.0 0.0.0.255 range 48000 48005
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2200,permit udp any eq 4569 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2210,permit udp any eq 5119 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2220,permit udp any eq 25826 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2230,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2240,remark Deny traffic by default to production ranges 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2250,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2260,deny ipv4 any 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2270,deny ipv4 any 141.138.131.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2280,deny ipv4 any 141.138.135.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2290,deny ipv4 any 185.119.153.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2300,deny ipv4 any 185.119.154.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2310,deny ipv4 any 185.119.155.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2320,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2330,remark Permit all other traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2340,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_2_0,2350,permit ipv4 any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,10,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,20,remark Deny IANA special purpose address registry
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,30,remark **************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,40,deny ipv4 0.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,50,deny ipv4 10.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,60,deny ipv4 100.64.0.0 0.63.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,70,deny ipv4 127.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,80,deny ipv4 169.254.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,90,deny ipv4 172.16.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,100,deny ipv4 192.0.0.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,110,deny ipv4 192.0.0.0 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,120,deny ipv4 host 192.0.0.8 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,130,deny ipv4 host 192.0.0.9 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,140,deny ipv4 host 192.0.0.10 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,150,deny ipv4 host 192.0.0.170 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,160,deny ipv4 192.0.2.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,170,deny ipv4 192.31.196.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,180,deny ipv4 192.52.193.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,190,deny ipv4 192.88.99.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,200,deny ipv4 192.168.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,210,deny ipv4 192.175.48.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,220,deny ipv4 198.18.0.0 0.1.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,230,deny ipv4 198.51.100.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,240,deny ipv4 203.0.113.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,250,deny ipv4 240.0.0.0 15.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,260,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,270,remark Deny bogons and bad ips and other attacks
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,280,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,290,deny tcp any range 1 1024 141.138.128.0 0.0.7.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,300,deny tcp any range 1 1024 185.119.152.0 0.0.3.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,310,deny udp any 141.138.128.0 0.0.7.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,320,deny udp any 185.119.152.0 0.0.3.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,330,deny ipv4 71.6.128.0 0.0.63.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,340,deny ipv4 any host 95.131.186.32
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,350,deny ipv4 any host 141.138.130.12
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,360,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,370,remark Allow BGP and GRE traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,380,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,390,deny tcp any 141.138.128.0 0.0.7.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,400,deny tcp any 185.119.152.0 0.0.3.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,410,permit tcp any any eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,420,deny gre any 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,430,deny gre any 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,440,permit gre any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,450,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,460,remark Allow icmp traffic to infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,470,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,480,permit icmp any 141.138.128.0 0.0.7.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,490,permit icmp any 141.138.128.0 0.0.7.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,500,permit icmp any 141.138.128.0 0.0.7.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,510,permit icmp any 141.138.128.0 0.0.7.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,520,permit icmp any 141.138.128.0 0.0.7.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,530,permit icmp any 185.119.152.0 0.0.3.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,540,permit icmp any 185.119.152.0 0.0.3.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,550,permit icmp any 185.119.152.0 0.0.3.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,560,permit icmp any 185.119.152.0 0.0.3.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,570,permit icmp any 185.119.152.0 0.0.3.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,580,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,590,remark Permit Ipsec traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,600,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,610,permit udp any 141.138.128.0 0.0.1.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,620,permit udp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,630,permit tcp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,640,permit tcp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,650,permit udp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,660,permit esp any 141.138.128.0 0.0.1.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,670,permit esp any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,680,permit udp any 185.119.152.0 0.0.0.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,690,permit udp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,700,permit tcp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,710,permit udp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,720,permit tcp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,730,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,740,remark Permit https traffic towards checkpoints / RAS
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,750,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,760,permit ipv4 any host 141.138.129.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,770,permit ipv4 any host 141.138.129.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,780,permit ipv4 any host 141.138.129.40
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,790,permit ipv4 any host 141.138.128.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,800,permit ipv4 any host 141.138.128.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,810,permit ipv4 any host 141.138.128.36
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,820,permit ipv4 any host 141.138.129.43
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,830,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,840,remark Allow general services and return traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,850,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,860,permit tcp any 141.138.128.0 0.0.7.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,870,permit tcp any 185.119.152.0 0.0.3.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,880,permit udp any eq domain 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,890,permit udp any eq domain 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,900,permit tcp any 141.138.130.0 0.0.0.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,910,permit tcp any 185.119.152.0 0.0.3.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,920,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,930,remark Allow all traffic to client Playtech
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,940,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,950,permit ipv4 any 141.138.128.136 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,960,permit ipv4 any host 141.138.128.96
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,970,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,980,remark Deny inbound traffic towards infrastructure range
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,990,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1000,deny ipv4 any 141.138.128.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1010,deny ipv4 any 141.138.129.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1020,deny ipv4 any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1030,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1040,remark Pentesting sources mdesc
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1050,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1060,permit ipv4 host 95.154.227.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1070,permit ipv4 95.154.227.72 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1080,permit ipv4 host 95.154.227.95 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1090,permit ipv4 host 95.154.227.94 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1100,permit ipv4 host 95.154.227.91 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1110,permit ipv4 host 95.154.227.84 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1120,permit ipv4 host 95.154.227.72 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1130,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1140,remark Allow specific source hosts
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1150,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1160,permit ipv4 host 95.154.227.13 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1170,permit ipv4 host 94.156.185.44 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1180,permit ipv4 host 92.52.99.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1190,permit ipv4 host 92.247.8.98 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1200,permit ipv4 host 87.121.79.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1210,permit ipv4 host 81.149.239.118 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1220,permit ipv4 host 80.94.22.241 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1230,permit ipv4 host 217.153.136.10 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1240,permit ipv4 host 213.155.178.165 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1250,permit ipv4 host 62.172.215.182 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1260,permit ipv4 host 52.56.142.152 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1270,permit ipv4 host 37.98.232.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1280,permit ipv4 host 213.120.94.24 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1290,permit ipv4 host 213.120.94.19 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1300,permit ipv4 host 212.142.66.129 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1310,permit ipv4 host 207.45.120.28 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1320,permit ipv4 host 207.45.119.254 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1330,permit ipv4 host 199.91.137.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1340,permit ipv4 host 195.244.210.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1350,permit ipv4 host 195.244.198.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1360,permit ipv4 host 194.73.173.139 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1370,permit ipv4 host 194.73.173.134 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1380,permit ipv4 host 155.136.20.201 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1390,permit ipv4 host 109.238.64.94 host 141.138.135.186
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1400,permit ipv4 host 109.238.64.94 host 141.138.135.168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1410,permit ipv4 host 109.234.202.159 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1420,permit ipv4 94.174.178.208 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1430,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.45
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1440,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.46
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1450,permit ipv4 any host 141.138.130.145
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1460,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1470,remark Allow mail services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1480,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1490,permit tcp any host 141.138.130.3 eq smtp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1500,permit tcp any host 141.138.130.3 eq 465
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1510,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1520,remark Allow file transfer services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1530,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1540,permit tcp any 141.138.130.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1550,permit tcp any 141.138.131.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1560,permit tcp any 141.138.135.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1570,permit tcp any 185.119.153.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1580,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1590,remark Allow other services - grouped by port
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1600,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1610,permit tcp any 141.138.131.0 0.0.0.255 eq ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1620,permit tcp any 141.138.130.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1630,permit tcp any 141.138.131.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1640,permit tcp any 141.138.135.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1650,permit tcp any 185.119.153.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1660,permit tcp any 185.119.154.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1670,permit tcp any 185.119.155.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1680,permit tcp any 141.138.130.0 0.0.0.255 eq 389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1690,permit tcp any 141.138.130.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1700,permit tcp any 141.138.131.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1710,permit tcp any 141.138.135.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1720,permit tcp any 185.119.153.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1730,permit tcp any 185.119.154.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1740,permit tcp any 185.119.155.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1750,permit tcp any 141.138.130.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1760,permit tcp any 141.138.131.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1770,permit tcp any 141.138.130.0 0.0.0.255 eq 500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1780,permit tcp any 141.138.130.0 0.0.0.255 eq 636
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1790,permit tcp any 141.138.130.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1800,permit tcp any 141.138.135.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1810,permit tcp any 185.119.153.0 0.0.0.255 eq 1935
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1820,permit tcp any 141.138.130.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1830,permit tcp any 141.138.135.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1840,permit tcp any 185.119.153.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1850,permit tcp any 185.119.154.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1860,permit tcp any 185.119.155.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1870,permit tcp any 141.138.130.0 0.0.0.255 eq 3268
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1880,permit tcp any 141.138.130.0 0.0.0.255 eq 3269
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1890,permit udp any 141.138.130.0 0.0.0.255 eq 4569
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1900,permit tcp any 141.138.130.0 0.0.0.255 eq 5118
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1910,permit tcp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1920,permit udp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1930,permit tcp any 141.138.130.0 0.0.0.255 eq 8014
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1940,permit tcp any 141.138.131.0 0.0.0.255 eq 8080
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1950,permit tcp any 141.138.135.0 0.0.0.255 eq 8192
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1960,permit tcp any 141.138.135.0 0.0.0.255 range 8381 8383
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1970,permit tcp any 141.138.130.0 0.0.0.255 eq 8531
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1980,permit tcp any 141.138.131.0 0.0.0.255 eq 8888
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,1990,permit tcp any host 141.138.130.143 range 9031 9032
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2000,permit tcp any 141.138.135.0 0.0.0.255 eq 9382
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2010,permit tcp any 141.138.135.0 0.0.0.255 range 10125 10129
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2020,permit tcp any 141.138.135.0 0.0.0.255 eq 10168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2030,permit tcp any 141.138.135.0 0.0.0.255 eq 10180
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2040,permit tcp any 141.138.135.0 0.0.0.255 range 10184 10185
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2050,permit tcp any 141.138.135.0 0.0.0.255 eq 10187
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2060,permit tcp any 141.138.135.0 0.0.0.255 range 10225 10228
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2070,permit tcp any 141.138.135.0 0.0.0.255 eq 10278
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2080,permit tcp any 141.138.135.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2090,permit tcp any 185.119.153.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2100,permit tcp any 141.138.131.0 0.0.0.255 eq 9291
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2110,permit tcp any 141.138.130.0 0.0.0.255 eq 9389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2120,permit tcp any 141.138.130.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2130,permit tcp any 141.138.135.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2140,permit tcp any 185.119.153.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2150,permit tcp any 141.138.131.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2160,permit tcp any 185.119.153.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2170,permit tcp any 185.119.154.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2180,permit tcp any 185.119.155.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2190,permit tcp any 141.138.130.0 0.0.0.255 range 48000 48005
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2200,permit udp any eq 4569 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2210,permit udp any eq 5119 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2220,permit udp any eq 25826 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2230,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2240,remark Deny traffic by default to production ranges
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2250,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2260,deny ipv4 any 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2270,deny ipv4 any 141.138.131.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2280,deny ipv4 any 141.138.135.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2290,deny ipv4 any 185.119.153.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2300,deny ipv4 any 185.119.154.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2310,deny ipv4 any 185.119.155.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2320,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2330,remark Deny Playtech traffic - to unused IPs
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2340,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2350,deny ipv4 any 95.131.190.56 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2360,deny ipv4 any host 95.131.191.15
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2370,deny ipv4 any host 95.131.190.38
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2380,deny ipv4 any 95.131.190.52 0.0.0.3
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2390,deny ipv4 any 95.131.190.18 0.0.0.1
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2400,deny ipv4 any host 95.131.190.51
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2410,deny ipv4 any host 95.131.190.17
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2420,deny ipv4 any 95.131.190.46 0.0.0.1
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2430,deny ipv4 any 95.131.190.22 0.0.0.1
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2440,deny ipv4 any 95.131.190.64 0.0.0.63
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2450,deny ipv4 any host 95.131.190.12
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2460,deny ipv4 any 95.131.191.8 0.0.0.3
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2470,deny ipv4 any 95.131.190.48 0.0.0.1
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2480,deny ipv4 any host 95.131.191.6
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2490,deny ipv4 any host 95.131.190.11
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2500,deny ipv4 any host 95.131.190.37
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2510,deny ipv4 any host 95.131.190.31
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2520,deny ipv4 any host 95.131.190.2
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2530,deny ipv4 any 95.131.191.4 0.0.0.1
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2540,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2550,remark Permit all other traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2560,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in-1_3_0,2570,permit ipv4 any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,10,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,20,remark Deny IANA special purpose address registry 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,30,remark **************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,40,deny ipv4 0.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,50,deny ipv4 10.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,60,deny ipv4 100.64.0.0 0.63.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,70,deny ipv4 127.0.0.0 0.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,80,deny ipv4 169.254.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,90,deny ipv4 172.16.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,100,deny ipv4 192.0.0.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,110,deny ipv4 192.0.0.0 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,120,deny ipv4 host 192.0.0.8 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,130,deny ipv4 host 192.0.0.9 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,140,deny ipv4 host 192.0.0.10 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,150,deny ipv4 host 192.0.0.170 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,160,deny ipv4 192.0.2.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,170,deny ipv4 192.31.196.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,180,deny ipv4 192.52.193.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,190,deny ipv4 192.88.99.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,200,deny ipv4 192.168.0.0 0.0.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,210,deny ipv4 192.175.48.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,220,deny ipv4 198.18.0.0 0.1.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,230,deny ipv4 198.51.100.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,240,deny ipv4 203.0.113.0 0.0.0.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,250,deny ipv4 240.0.0.0 15.255.255.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,260,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,270,remark Deny bogons and bad ips and other attacks
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,280,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,290,deny tcp any range 1 1024 141.138.128.0 0.0.7.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,300,deny tcp any range 1 1024 185.119.152.0 0.0.3.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,310,deny udp any 141.138.128.0 0.0.7.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,320,deny udp any 185.119.152.0 0.0.3.255 fragments
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,330,deny ipv4 71.6.128.0 0.0.63.255 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,340,deny ipv4 any host 95.131.186.32
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,350,deny ipv4 any host 141.138.130.12
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,360,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,370,remark Allow BGP and GRE traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,380,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,390,deny tcp any 141.138.128.0 0.0.7.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,400,deny tcp any 185.119.152.0 0.0.3.255 eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,410,permit tcp any any eq bgp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,420,deny gre any 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,430,deny gre any 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,440,permit gre any any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,450,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,460,remark Allow icmp traffic to infrastructure 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,470,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,480,permit icmp any 141.138.128.0 0.0.7.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,490,permit icmp any 141.138.128.0 0.0.7.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,500,permit icmp any 141.138.128.0 0.0.7.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,510,permit icmp any 141.138.128.0 0.0.7.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,520,permit icmp any 141.138.128.0 0.0.7.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,530,permit icmp any 185.119.152.0 0.0.3.255 echo-reply
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,540,permit icmp any 185.119.152.0 0.0.3.255 information-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,550,permit icmp any 185.119.152.0 0.0.3.255 mask-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,560,permit icmp any 185.119.152.0 0.0.3.255 timestamp-request
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,570,permit icmp any 185.119.152.0 0.0.3.255 ttl-exceeded
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,580,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,590,remark Permit Ipsec traffic towards infrastructure
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,600,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,610,permit udp any 141.138.128.0 0.0.1.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,620,permit udp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,630,permit tcp any 141.138.128.0 0.0.1.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,640,permit tcp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,650,permit udp any 141.138.128.0 0.0.1.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,660,permit esp any 141.138.128.0 0.0.1.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,670,permit esp any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,680,permit udp any 185.119.152.0 0.0.0.255 eq isakmp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,690,permit udp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,700,permit tcp any 185.119.152.0 0.0.0.255 eq 4500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,710,permit udp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,720,permit tcp any 185.119.152.0 0.0.0.255 eq 10000
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,730,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,740,remark Permit https traffic towards checkpoints / RAS
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,750,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,760,permit ipv4 any host 141.138.129.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,770,permit ipv4 any host 141.138.129.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,780,permit ipv4 any host 141.138.129.40
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,790,permit ipv4 any host 141.138.128.34
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,800,permit ipv4 any host 141.138.128.35
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,810,permit ipv4 any host 141.138.128.36
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,820,permit ipv4 any host 141.138.129.43
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,830,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,840,remark Allow general services and return traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,850,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,860,permit tcp any 141.138.128.0 0.0.7.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,870,permit tcp any 185.119.152.0 0.0.3.255 established
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,880,permit udp any eq domain 141.138.128.0 0.0.7.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,890,permit udp any eq domain 185.119.152.0 0.0.3.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,900,permit tcp any 141.138.130.0 0.0.0.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,910,permit tcp any 185.119.152.0 0.0.3.255 eq domain
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,920,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,930,remark Allow all traffic to client Playtech
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,940,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,950,permit ipv4 any 141.138.128.136 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,960,permit ipv4 any host 141.138.128.96
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,970,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,980,remark Deny inbound traffic towards infrastructure range 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,990,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1000,deny ipv4 any 141.138.128.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1010,deny ipv4 any 141.138.129.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1020,deny ipv4 any 185.119.152.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1030,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1040,remark Pentesting sources mdesc
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1050,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1060,permit ipv4 host 95.154.227.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1070,permit ipv4 95.154.227.72 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1080,permit ipv4 host 95.154.227.95 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1090,permit ipv4 host 95.154.227.94 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1100,permit ipv4 host 95.154.227.91 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1110,permit ipv4 host 95.154.227.84 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1120,permit ipv4 host 95.154.227.72 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1130,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1140,remark Allow specific source hosts
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1150,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1160,permit ipv4 host 95.154.227.13 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1170,permit ipv4 host 94.156.185.44 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1180,permit ipv4 host 92.52.99.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1190,permit ipv4 host 92.247.8.98 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1200,permit ipv4 host 87.121.79.4 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1210,permit ipv4 host 81.149.239.118 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1220,permit ipv4 host 80.94.22.241 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1230,permit ipv4 host 217.153.136.10 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1240,permit ipv4 host 213.155.178.165 141.138.135.48 0.0.0.7
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1250,permit ipv4 host 62.172.215.182 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1260,permit ipv4 host 52.56.142.152 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1270,permit ipv4 host 37.98.232.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1280,permit ipv4 host 213.120.94.24 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1290,permit ipv4 host 213.120.94.19 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1300,permit ipv4 host 212.142.66.129 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1310,permit ipv4 host 207.45.120.28 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1320,permit ipv4 host 207.45.119.254 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1330,permit ipv4 host 199.91.137.12 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1340,permit ipv4 host 195.244.210.64 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1350,permit ipv4 host 195.244.198.114 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1360,permit ipv4 host 194.73.173.139 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1370,permit ipv4 host 194.73.173.134 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1380,permit ipv4 host 155.136.20.201 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1390,permit ipv4 host 109.238.64.94 host 141.138.135.186
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1400,permit ipv4 host 109.238.64.94 host 141.138.135.168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1410,permit ipv4 host 109.234.202.159 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1420,permit ipv4 94.174.178.208 0.0.0.7 any
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1430,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.45
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1440,permit ipv4 82.33.247.80 0.0.0.15 host 141.138.130.46
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1450,permit ipv4 any host 141.138.130.145
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1460,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1470,remark Allow mail services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1480,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1490,permit tcp any host 141.138.130.3 eq smtp
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1500,permit tcp any host 141.138.130.3 eq 465
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1510,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1520,remark Allow file transfer services
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1530,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1540,permit tcp any 141.138.130.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1550,permit tcp any 141.138.131.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1560,permit tcp any 141.138.135.0 0.0.0.255 range ftp-data ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1570,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1580,remark Allow other services - grouped by port
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1590,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1600,permit tcp any 141.138.131.0 0.0.0.255 eq ssh
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1610,permit tcp any 141.138.130.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1620,permit tcp any 141.138.131.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1630,permit tcp any 141.138.135.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1640,permit tcp any 185.119.153.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1650,permit tcp any 185.119.154.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1660,permit tcp any 185.119.155.0 0.0.0.255 eq www
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1670,permit tcp any 141.138.130.0 0.0.0.255 eq 389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1680,permit tcp any 141.138.130.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1690,permit tcp any 141.138.131.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1700,permit tcp any 141.138.135.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1710,permit tcp any 185.119.153.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1720,permit tcp any 185.119.154.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1730,permit tcp any 185.119.155.0 0.0.0.255 eq 443
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1740,permit tcp any 141.138.130.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1750,permit tcp any 141.138.131.0 0.0.0.255 eq 444
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1760,permit tcp any 141.138.130.0 0.0.0.255 eq 500
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1770,permit tcp any 141.138.130.0 0.0.0.255 eq 636
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1780,permit tcp any 141.138.130.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1790,permit tcp any 141.138.135.0 0.0.0.255 eq 843
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1800,permit tcp any 185.119.153.0 0.0.0.255 eq 1935
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1810,permit tcp any 141.138.130.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1820,permit tcp any 141.138.135.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1830,permit tcp any 185.119.153.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1840,permit tcp any 185.119.154.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1850,permit tcp any 185.119.155.0 0.0.0.255 eq 2156
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1860,permit tcp any 141.138.130.0 0.0.0.255 eq 3268
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1870,permit tcp any 141.138.130.0 0.0.0.255 eq 3269
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1880,permit udp any 141.138.130.0 0.0.0.255 eq 4569
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1890,permit tcp any 141.138.130.0 0.0.0.255 eq 5118
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1900,permit tcp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1910,permit udp any 141.138.130.0 0.0.0.255 eq 5119
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1920,permit tcp any 141.138.130.0 0.0.0.255 eq 8014
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1930,permit tcp any 141.138.131.0 0.0.0.255 eq 8080
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1940,permit tcp any 141.138.135.0 0.0.0.255 eq 8192
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1950,permit tcp any 141.138.135.0 0.0.0.255 range 8381 8383
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1960,permit tcp any 141.138.130.0 0.0.0.255 eq 8531
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1970,permit tcp any 141.138.131.0 0.0.0.255 eq 8888
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1980,permit tcp any host 141.138.130.143 range 9031 9032
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,1990,permit tcp any 141.138.135.0 0.0.0.255 eq 9382
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2000,permit tcp any 141.138.135.0 0.0.0.255 range 10125 10129
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2010,permit tcp any 141.138.135.0 0.0.0.255 eq 10168
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2020,permit tcp any 141.138.135.0 0.0.0.255 eq 10180
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2030,permit tcp any 141.138.135.0 0.0.0.255 range 10184 10185
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2040,permit tcp any 141.138.135.0 0.0.0.255 eq 10187
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2050,permit tcp any 141.138.135.0 0.0.0.255 range 10225 10228
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2060,permit tcp any 141.138.135.0 0.0.0.255 eq 10278
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2070,permit tcp any 141.138.135.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2080,permit tcp any 185.119.153.0 0.0.0.255 range 10279 10288
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2090,permit tcp any 141.138.131.0 0.0.0.255 eq 9291
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2100,permit tcp any 141.138.130.0 0.0.0.255 eq 9389
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2110,permit tcp any 141.138.130.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2120,permit tcp any 141.138.135.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2130,permit tcp any 185.119.153.0 0.0.0.255 eq 61321
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2140,permit tcp any 141.138.131.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2150,permit tcp any 185.119.153.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2160,permit tcp any 185.119.154.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2170,permit tcp any 185.119.155.0 0.0.0.255 eq 61616
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2180,permit tcp any 141.138.130.0 0.0.0.255 range 48000 48005
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2190,permit udp any eq 4569 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2200,permit udp any eq 5119 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2210,permit udp any eq 25826 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2220,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2230,remark Deny traffic by default to production ranges 
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2240,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2250,deny ipv4 any 141.138.130.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2260,deny ipv4 any 141.138.131.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2270,deny ipv4 any 141.138.135.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2280,deny ipv4 any 185.119.153.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2290,deny ipv4 any 185.119.154.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2300,deny ipv4 any 185.119.155.0 0.0.0.255
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2310,remark ****************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2320,remark Permit all other traffic
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2330,remark ***************************************************
+uk-ld6-er02,acl-ipv4-filtering-default-edge_protect-in,2340,permit ipv4 any any
+uk-ld6-er02,acl-management,10,remark Permit SSH from these addresses
+uk-ld6-er02,acl-management,20,remark Netbrain
+uk-ld6-er02,acl-management,30,permit ipv4 host 10.120.163.210 any
+uk-ld6-er02,acl-management,40,remark Tufin
+uk-ld6-er02,acl-management,50,permit ipv4 host 10.120.163.37 any
+uk-ld6-er02,acl-management,60,permit ipv4 host 10.180.163.18 any
+uk-ld6-er02,acl-management,70,permit ipv4 host 10.210.163.60 any
+uk-ld6-er02,acl-management,80,permit ipv4 host 10.112.13.17 any
+uk-ld6-er02,acl-management,90,remark Nessus - SCC, CAN, GIB
+uk-ld6-er02,acl-management,100,permit ipv4 host 10.120.143.70 any
+uk-ld6-er02,acl-management,110,permit ipv4 host 10.220.142.230 any
+uk-ld6-er02,acl-management,120,permit ipv4 host 10.180.142.230 any
+uk-ld6-er02,acl-management,130,remark Adnan-DoS-Box
+uk-ld6-er02,acl-management,140,permit ipv4 host 10.120.195.31 any
+uk-ld6-er02,acl-management,150,remark CWK Network Ops
+uk-ld6-er02,acl-management,160,permit ipv4 10.1.82.64 0.0.0.31 any
+uk-ld6-er02,acl-management,170,remark CWK Server Ops
+uk-ld6-er02,acl-management,180,permit ipv4 10.1.82.160 0.0.0.31 any
+uk-ld6-er02,acl-management,190,remark Gib IT
+uk-ld6-er02,acl-management,200,permit ipv4 host 10.17.100.187 any
+uk-ld6-er02,acl-management,210,remark STJ IT
+uk-ld6-er02,acl-management,220,permit ipv4 10.1.22.0 0.0.0.255 any
+uk-ld6-er02,acl-management,230,remark STJ Network and Servers Ops
+uk-ld6-er02,acl-management,240,permit ipv4 host 10.1.74.29 any
+uk-ld6-er02,acl-management,250,permit ipv4 host 10.1.74.61 any
+uk-ld6-er02,acl-management,260,permit ipv4 host 10.1.74.48 any
+uk-ld6-er02,acl-management,270,permit ipv4 host 10.1.74.57 any
+uk-ld6-er02,acl-management,280,permit ipv4 host 10.1.74.66 any
+uk-ld6-er02,acl-management,290,permit ipv4 host 10.1.74.128 any
+uk-ld6-er02,acl-management,300,remark Sofia Support team
+uk-ld6-er02,acl-management,310,permit ipv4 host 10.53.32.93 any
+uk-ld6-er02,acl-management,320,permit ipv4 host 10.53.32.107 any
+uk-ld6-er02,acl-management,330,permit ipv4 host 10.53.32.110 any
+uk-ld6-er02,acl-management,340,permit ipv4 host 10.53.32.133 any
+uk-ld6-er02,acl-management,350,permit ipv4 host 10.53.33.56 any
+uk-ld6-er02,acl-management,360,permit ipv4 host 10.53.33.119 any
+uk-ld6-er02,acl-management,370,permit ipv4 host 10.53.33.120 any
+uk-ld6-er02,acl-management,380,remark Shoreditch Support Team
+uk-ld6-er02,acl-management,390,permit ipv4 host 10.17.144.32 any
+uk-ld6-er02,acl-management,400,remark VPN Subnets
+uk-ld6-er02,acl-management,410,permit ipv4 172.16.41.208 0.0.0.15 any
+uk-ld6-er02,acl-management,420,permit ipv4 172.16.64.16 0.0.0.7 any
+uk-ld6-er02,acl-management,430,permit ipv4 192.168.2.0 0.0.1.255 any
+uk-ld6-er02,acl-management,440,permit ipv4 host 10.120.129.70 any
+uk-ld6-er02,acl-management,450,remark Skybox-Appliances
+uk-ld6-er02,acl-management,460,permit ipv4 host 10.120.163.151 any
+uk-ld6-er02,acl-management,470,permit ipv4 host 10.120.163.152 any
+uk-ld6-er02,acl-management,480,remark Solarwinds
+uk-ld6-er02,acl-management,490,permit ipv4 host 10.120.163.122 any
+uk-ld6-er02,acl-management,500,permit ipv4 host 10.120.163.123 any
+uk-ld6-er02,acl-management,510,permit ipv4 host 10.120.163.142 any
+uk-ld6-er02,acl-management,520,permit ipv4 host 10.120.163.143 any
+uk-ld6-er02,acl-management,530,permit ipv4 host 10.112.12.125 any
+uk-ld6-er02,acl-management,540,permit ipv4 host 10.112.12.126 any
+uk-ld6-er02,acl-management,550,permit ipv4 host 10.112.12.142 any
+uk-ld6-er02,acl-management,560,permit ipv4 host 10.112.12.143 any
+uk-ld6-er02,acl-management,570,permit ipv4 host 10.112.12.144 any
+uk-ld6-er02,acl-management,580,remark AWS
+uk-ld6-er02,acl-management,590,permit ipv4 100.79.0.0 0.0.127.255 any
+uk-ld6-er02,acl-management,600,deny ipv4 any any log
+uk-ld6-er02,acl-ncs,10,permit udp host 10.120.136.140 any eq snmp
+uk-ld6-er02,acl-ncs,20,permit udp host 10.120.136.141 any eq snmp
+uk-ld6-er02,acl-ncs,30,permit udp host 10.120.163.122 any eq snmp
+uk-ld6-er02,acl-ncs,40,permit udp host 10.120.163.123 any eq snmp
+uk-ld6-er02,acl-ncs,50,permit udp host 10.112.12.125 any eq snmp
+uk-ld6-er02,acl-ncs,60,permit udp host 10.112.12.126 any eq snmp
+uk-ld6-er02,acl-ncs,70,deny ipv4 any any log
+uk-ld6-er02,acl-nimsoft,10,permit udp host 10.110.163.111 any eq snmp
+uk-ld6-er02,acl-nimsoft,20,permit udp host 10.110.163.112 any eq snmp
+uk-ld6-er02,acl-nimsoft,30,permit udp host 10.120.163.111 any eq snmp
+uk-ld6-er02,acl-nimsoft,40,permit udp host 10.120.163.112 any eq snmp
+uk-ld6-er02,acl-nimsoft,50,permit udp host 10.180.163.111 any eq snmp
+uk-ld6-er02,acl-nimsoft,60,permit udp host 10.180.163.112 any eq snmp
+uk-ld6-er02,acl-nimsoft,70,permit udp host 10.220.163.111 any eq snmp
+uk-ld6-er02,acl-nimsoft,80,permit udp host 10.220.163.112 any eq snmp
+uk-ld6-er02,acl-nimsoft,90,deny ipv4 any any log
+uk-ld6-er02,acl-smartnet,10,permit udp host 10.120.129.45 any eq snmp
+uk-ld6-er02,acl-smartnet,15,permit udp host 10.112.129.45 any eq snmp
+uk-ld6-er02,acl-smartnet,20,deny ipv4 any any log
+uk-ld6-er02,solarwinds-new,10,permit udp host 10.120.163.122 any eq snmp
+uk-ld6-er02,solarwinds-new,20,permit udp host 10.120.163.123 any eq snmp
+uk-ld6-er02,solarwinds-new,30,permit udp host 10.120.163.142 any eq snmp
+uk-ld6-er02,solarwinds-new,40,permit udp host 10.120.163.143 any eq snmp
+uk-ld6-er02,solarwinds-new,50,permit udp host 10.112.12.125 any eq snmp
+uk-ld6-er02,solarwinds-new,60,permit udp host 10.112.12.126 any eq snmp
+uk-ld6-er02,solarwinds-new,70,permit udp host 10.112.12.142 any eq snmp
+uk-ld6-er02,solarwinds-new,80,permit udp host 10.112.12.143 any eq snmp
+uk-ld6-er02,solarwinds-new,90,permit udp host 10.112.12.144 any eq snmp

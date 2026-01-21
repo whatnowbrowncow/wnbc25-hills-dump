@@ -1,0 +1,11 @@
+---
+
+#This is loop step one. Don't run on its own
+
+- include_tasks: aci-epg-bds.yml
+  when: ansible_network_os == "aci"
+  with_items:
+    - "{{ app_profs }}"
+  loop_control:
+    loop_var: app_prof_item
+     

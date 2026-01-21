@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-brs-es02,0 4,1,in,15 0,0111570F0A05571D2448,ssh,none,yes,
+uk-brs-es02,5 15,1,in,15 0,0006420D55555A0403204F45,ssh,none,yes,

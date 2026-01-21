@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-gsh-as01-f00,netadmin,15,secret,5,$1$3EO2$GZtoahLED4WyLrFQa60TT/
+uk-gsh-as01-f00,svcnetworkauto,15,secret,5,$1$3Li6$2uzQG1vEnbQifQ3NT6g8v.

@@ -1,0 +1,3 @@
+hostname,username,privilege,encryption,password_string
+gi-mpl-fw01,svcnetworkauto,15,pbkdf2,$sha512$5000$uYMS70JP+OyGOK3stLQClw==$oJCZMv8BdC+w5Z+LNowG8A==
+gi-mpl-fw01,netadmin,15,pbkdf2,$sha512$5000$Z9aOOtGz8hlPzdT/tZsYAw==$6allUcYi7SyVCt7XwrEwVQ==

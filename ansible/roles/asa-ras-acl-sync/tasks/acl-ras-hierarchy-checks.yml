@@ -1,0 +1,77 @@
+---
+# This is to extract all the details for the relevant ACL including ACL Name, ACL Version, device version and its Parent and Child dependencies 
+- name: Extracting version and Parent and Child information for ACL "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].name }}"
+  set_fact:
+    dependent_acls:
+      - acl: "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].name }}" 
+        acl_version: "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].version | default([])  }}"
+        device_version: "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].device_version }}"
+        parent: "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].parents | default([]) }}"
+        children: "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].children}}"
+  delegate_to: localhost
+
+# This is to define a child_acls variable ready for the import of child ACLs
+- name: Defining Child ACL varible 
+  set_fact:
+    child_acls: []
+  delegate_to: localhost
+
+# This is to extract all the version information of the child acls related to the ACL that has been changed as defined in the changed_acls variable 
+- name: Extract Child Acls information for ACL "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].name }}"
+  set_fact: 
+    child_acls: "{{ child_acls | default([]) +  [{'name': loop_child.ansible_facts.ra_vpn_access_lists[0].name,'device_version':loop_child.ansible_facts.ra_vpn_access_lists[0].device_version,'yml_version':loop_child.ansible_facts.ra_vpn_access_lists[0].version}] }}"
+  when: (loop_child.ansible_facts.ra_vpn_access_lists[0].name in dependent_acls[0].children)
+  loop: "{{ ras_acl_deploy_results.results }}"
+  register: loop_child_check
+  loop_control:
+    loop_var: loop_child
+    label: "{% if (dependent_acls[0].children is not iterable) or (loop_child.ansible_facts.ra_vpn_access_lists[0].name not in dependent_acls[0].children) %} ################ ACL {{ loop_child.ansible_facts.ra_vpn_access_lists[0].name }} is not a child ACL of {{ dependent_acls[0].acl }} ################{% elif loop_child.ansible_facts.ra_vpn_access_lists[0].name in dependent_acls[0].children %}################ ACL {{ loop_child.ansible_facts.ra_vpn_access_lists[0].name }} is a child ACL of {{ dependent_acls[0].acl }}################{% else %}################ Error Processing child ACLs ################{% endif %}"
+  run_once: yes
+  delegate_to: localhost
+# This is to confirm that the version number of all child ACLs is greater than the current version on the device, if not it will display a message and end the playbook. 
+- name: Confirm all Child dependents version of ACL "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].name }}" are greater than the current installed version on the device
+  fail:
+     msg: >
+      "
+      ################ Versions for ACL {{ loop_acl_dependents.name }} YML is equal to or less than device, should be greater than. Please confirm all versions of Child ACL have been deployed! ################
+      "
+  when: ( loop_acl_dependents.device_version | int  ) > (loop_acl_dependents.yml_version | int )
+  loop: "{{ child_acls }}" 
+  register: loop_acl_dependents_check
+  loop_control:
+    loop_var: loop_acl_dependents
+    label: "Checking versions between yml (version: {{ loop_acl_dependents.yml_version }}) and device for ACL (version: {{ loop_acl_dependents.device_version }}) {{ loop_acl_dependents.name }}{% if loop_acl_dependents_check is not defined or loop_acl_dependents_check.failed is not true %} ############# Check Passed ############# {% else %} ############# Check Failed #############{% endif %}"
+
+# This is to confirm that the version number of all child ACLs has been updated within the YML, if not it will display a message and end the playbook. 
+# NOTE: This will only check the version number has been updated and not the ACLs
+- name: Confirm YML Child ACLs are at an equal or higher version than "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].name }}" 
+  run_once: true 
+  fail:
+     msg: >
+      "
+      ################### The version of {{ loop_acl_dependents.1.name }} is less {{ loop_acl_dependents.0.acl }}. Version should be equal to or greater, Please Confirm rules parent rules been added in Child ACL and version updated!  ################
+      "
+  when: (loop_acl_dependents.1.yml_version|int < loop_acl_dependents.0.acl_version|int) and (loop_acl_dependents.1.name is in loop_acl_dependents.0.children)
+  loop: "{{ dependent_acls|product(child_acls)|list }}" 
+  register: loop_acl_dependents_check
+  loop_control:
+    loop_var: loop_acl_dependents
+    label: "Checking version dependencies between {{ loop_acl_dependents.1.name }} and {{ loop_acl_dependents.0.acl }}{% if loop_acl_dependents_check is not defined or loop_acl_dependents_check.failed is not true %}  ############# Check Passed ############# {% else %}  ############# Check Failed ############# {% endif %}"
+  delegate_to: localhost
+
+# Confirm that the Parent version of the ACL is less than the ACL version, if not it will display a message and end the playbook. 
+- name: Confirm Parents of "{{ loop_changed_acls.ansible_facts.ra_vpn_access_lists[0].name }}" are a lesser or equal version
+  run_once: true 
+  fail:
+     msg: >
+      "
+      ################### The version of {{ loop_acl_dependents }} is greater than {{ dependent_acls[0].acl }}. Version should be equal to or less than,  Please Confirm rules in parent match approprate rules in Child ACL! ################
+      
+      "
+  when: (lookup('vars', loop_acl_dependents | regex_replace ('-','_'))[0].version | int) > (dependent_acls[0].acl_version | int)
+  loop: "{{ dependent_acls[0].parent | list }}"
+  register: loop_acl_dependents_check
+  loop_control:
+    loop_var: loop_acl_dependents
+    label: "Checking version between ACL {{ dependent_acls[0].acl }} and ACL {{ loop_acl_dependents }}{% if loop_acl_dependents_check is not defined or loop_acl_dependents_check.failed is not true %} ############# Check Passed ############# {% else %}  ############# Check Failed ############# {% endif %}"
+  delegate_to: localhost

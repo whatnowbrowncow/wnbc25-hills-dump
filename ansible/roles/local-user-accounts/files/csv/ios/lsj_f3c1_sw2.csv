@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+lsj_f3c1_sw2,netsec,,password,7,1439475F0D451D3209
+lsj_f3c1_sw2,netadmin,15,secret,5,$1$f6tz$mPXjZn84WOscDtFbhvWJY/
+lsj_f3c1_sw2,svcnetworkauto,15,secret,5,$1$Ba6Q$ie/XAMq8E2ily8bXYmhgW1

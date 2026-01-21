@@ -1,0 +1,43 @@
+{# ANY CHANGES TO THIS MAY AFFECT THE asa-ras-object ROLE, SO TESTING WITH BOTH ROLES IS NEEDED  #}
+{% for object in network_objects.host_objects %}
+{% if ras_exclusion is not defined or object.name not in ras_exclusion %}
+object network {{ object.name }}
+ host {{ object.ip_addr }}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% for object in network_objects.subnet_objects %}
+{% if ras_exclusion is not defined or object.name not in ras_exclusion %}
+object network {{ object.name }}
+ subnet {{ object.network }} {{ object.mask }}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% for object in network_objects.range_objects %}
+{% if ras_exclusion is not defined or object.name not in ras_exclusion %}
+object network {{ object.name }}
+ range {{ object.start }} {{ object.end }}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% if network_objects.fqdn_objects is iterable %}
+{% for object in network_objects.fqdn_objects %}
+{% if ras_exclusion is not defined or object.name not in ras_exclusion %}
+object network {{ object.name }}
+ fqdn v{{ object.version }} {{ object.fqdn }}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}

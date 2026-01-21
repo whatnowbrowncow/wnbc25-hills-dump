@@ -1,0 +1,2 @@
+Port-channel1.1680: {admin-state: up, interface: Port-channel1.1680, ip-add: 10.10.10.1,
+  nameif: inside, netmask: 255.255.255.224, security-level: '100'}

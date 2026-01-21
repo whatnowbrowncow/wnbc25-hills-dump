@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface,source vrf
+uk-sov-cr01-new,10.120.193.235,management,yes,MgmtEth0/RSP0/CPU0/0,management
+uk-sov-cr01-new,10.120.193.236,management,no,MgmtEth0/RSP0/CPU0/0,management

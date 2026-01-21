@@ -1,0 +1,43 @@
+---
+- name: ip route vrf template
+  # Based on nxos template - From Mastering Python Networking
+  hosts: localhost
+
+  vars:
+    routers:
+      cr01:
+        routes:
+          - route: "10.0.0.0 255.0.0.0"
+            vrf: "transit-vrf"
+            nh: "10.89.0.68"
+            name: "LD6+WH_nets"
+          - route: "172.16.0.0 255.240.0.0"
+            vrf: "transit-vrf"
+            nh: "10.89.0.68"
+            name: "LD6+WH_nets"
+          - route: "192.168.0.0 255.255.0.0"
+            vrf: "transit-vrf"
+            nh: "10.89.0.68"
+            name: "LD6+WH_nets"
+      cr02:
+        routes:
+          - route: "10.0.0.0 255.0.0.0"
+            vrf: "transit-vrf"
+            nh: "10.89.0.100"
+            name: "LD6+WH_nets"
+          - route: "172.16.0.0 255.240.0.0"
+            vrf: "transit-vrf"
+            nh: "10.89.0.100"
+            name: "LD6+WH_nets"
+          - route: "192.168.0.0 255.255.0.0"
+            vrf: "transit-vrf"
+            nh: "10.89.0.100"
+            name: "LD6+WH_nets"
+
+  tasks:
+    - name: create route config
+      template:
+        src=./templates/ip_route_vrf.j2
+        dest=./config-outputs/{{ item.key }}.conf
+      with_dict: "{{ routers }}"
+

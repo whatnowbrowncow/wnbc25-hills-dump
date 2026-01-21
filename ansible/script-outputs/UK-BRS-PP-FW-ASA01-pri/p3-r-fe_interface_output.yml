@@ -1,0 +1,14 @@
+Port-channel21.3945: {admin-state: up, interface: Port-channel21.3945, ip-add: 10.216.170.1,
+  nameif: retail-web, netmask: 255.255.255.128, security-level: '100'}
+Port-channel21.3946: {admin-state: up, interface: Port-channel21.3946, ip-add: 10.216.172.1,
+  nameif: retail-presentation, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3947: {admin-state: up, interface: Port-channel21.3947, ip-add: 10.216.170.129,
+  nameif: retail-3rdparty, netmask: 255.255.255.128, security-level: '100'}
+Port-channel21.4035: {admin-state: up, interface: Port-channel21.4035, ip-add: 10.216.177.1,
+  nameif: retail-app, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.4036: {admin-state: up, interface: Port-channel21.4036, ip-add: 10.216.178.1,
+  nameif: retail-dev, netmask: 255.255.254.0, security-level: '100'}
+Port-channel21.4084: {admin-state: up, interface: Port-channel21.4084, ip-add: 10.216.161.193,
+  nameif: pp3on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.74: {admin-state: up, interface: Port-channel21.74, ip-add: 10.64.73.65,
+  nameif: wan, netmask: 255.255.255.224, security-level: '100'}

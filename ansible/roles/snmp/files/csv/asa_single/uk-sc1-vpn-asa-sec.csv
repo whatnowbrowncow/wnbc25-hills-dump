@@ -1,0 +1,8 @@
+hostname,ip address,source int,community,poll/trap,version
+uk-sc1-vpn-asa-sec,10.120.163.111,management,changeme,both,2c
+uk-sc1-vpn-asa-sec,10.120.163.12,management,changeme,both,2c
+uk-sc1-vpn-asa-sec,10.120.163.13,management,changeme,both,2c
+uk-sc1-vpn-asa-sec,10.120.163.206,management,m0squ1t0,both,2c
+uk-sc1-vpn-asa-sec,10.120.163.210,management,m0squ1t0,poll,2c
+uk-sc1-vpn-asa-sec,10.120.163.71,internal-vrf,m0squ1t0,poll,2c
+uk-sc1-vpn-asa-sec,10.120.163.59,management,m0squ1t0,both,2c

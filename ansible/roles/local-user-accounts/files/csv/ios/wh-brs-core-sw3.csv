@@ -1,0 +1,6 @@
+hostname,username,privilege,password_type,encryption,password_string
+wh-brs-core-sw3,btinet,15,secret,5,$1$v62x$PFoMfis/cALizZlsatkJL0
+wh-brs-core-sw3,anm-sw,15,secret,5,$1$kTDh$waI9KlQTbh5bw5gxIh6Tv/
+wh-brs-core-sw3,csmars,,secret,5,$1$E0AK$uFdNAthJ1BYwRQFefJAKM.
+wh-brs-core-sw3,netadmin,15,secret,5,$1$ga.0$BT/LMImxvfkrG5jvpEHcd.
+wh-brs-core-sw3,svcnetworkauto,15,secret,5,$1$R5.N$Ktua1IO85k1h24rUAEmmL/

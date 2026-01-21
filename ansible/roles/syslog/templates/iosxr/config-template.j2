@@ -1,0 +1,7 @@
+logging buffered 12800000
+{% for syslog_svr in syslog %}
+logging {{ syslog_svr.ip_addr }} vrf {{ mgmt_interface.vrf }}
+{% endfor %}
+logging source-interface {{ mgmt_interface.interface }} vrf {{ mgmt_interface.vrf }}
+logging buffered informational
+logging trap notifications

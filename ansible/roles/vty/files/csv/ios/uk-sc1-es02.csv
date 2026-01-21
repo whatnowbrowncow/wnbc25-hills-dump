@@ -1,0 +1,4 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-sc1-es02,0 4,1,in,15 0,151012580A7A3821,ssh,none,yes,
+uk-sc1-es02,5 15,1,in,15 0,151012580A7A3821,ssh,none,yes,
+uk-sc1-es02,16,1,in,20 0,151012580A7A3821,ssh,none,yes,

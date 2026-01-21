@@ -1,0 +1,19 @@
+---
+
+#- name: ASA-MULTIPLE - Build configuration for testing purposes
+#  template:
+#    src: /gitnet/ansible/roles/snmp/templates/asa_multiple/config-template.j2
+#    dest: /gitnet/ansible/roles/snmp/files/configs/asa_multiple/{{ inventory_hostname }}.cfg
+
+- name: ASA-MULTIPLE - Construct the intended configuration from template
+  set_fact:
+    intended: "{{ lookup('template', 'templates/asa_multiple/config-template.j2')|from_yaml }}"
+
+- name: ASA-MULTIPLE - Apply configuration
+  asa_config:
+    context: "{{ context['name'] }}"
+    lines: "{{ context['lines'] }}"
+    save: yes
+  with_items: "{{ intended }}"
+  loop_control:
+    loop_var: context

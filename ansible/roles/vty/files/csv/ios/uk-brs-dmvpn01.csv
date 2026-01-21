@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-brs-dmvpn01,0 4,1,in,15 0,094E575D17550417,ssh,none,yes,
+uk-brs-dmvpn01,5 15,1,in,15 0,094E575D17550417,ssh,none,yes,

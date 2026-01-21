@@ -1,0 +1,9 @@
+- name: PLAY - RAS ACL Deployment
+  hosts: ras
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+     - asa-ras-object
+     - asa-ras-acl
+

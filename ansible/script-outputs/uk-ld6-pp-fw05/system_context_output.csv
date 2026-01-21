@@ -1,0 +1,14 @@
+context,allocate-interface,config-url,admin-context
+admin,['Management0/0'],disk0:/admin.cfg,admin
+lab-wan,['Port-channel1.1620-Port-channel1.1622'],disk0:/lab-wan.cfg,
+lab-production,['Port-channel1.1609-Port-channel1.1619'],disk0:/lab-production.cfg,
+lab-corp,['Port-channel1.1640-Port-channel1.1645'],disk0:/lab-corp.cfg,
+lab-retail,['Port-channel1.1630-Port-channel1.1634'],disk0:/lab-retail.cfg,
+lab-cde-mgmt,"['Port-channel1.30', 'Port-channel1.1650', 'Port-channel1.2122-Port-channel1.2125']",disk0:/lab-cde-mgmt.cfg,
+nick2,"['Port-channel1.1669-Port-channel1.1670', 'Port-channel1.1673']",disk0:/nick2.cfg,
+giles,['Port-channel1.1671-Port-channel1.1672'],disk0:/giles.cfg,
+nick2,,disk0:/nick2.cfg,
+lab-auto-demo,['Port-channel1.2300-Port-channel1.2305'],disk0:/lab-auto-demo.cfg,
+jayjay2,"['Port-channel1.1680', 'Port-channel1.1680']",disk0:/jayjay2.cfg,
+jayjay2,['Port-channel1.1680'],disk0:/jayjay2.cfg,
+http-tooling-test,,disk0:/http-tooling-test.cfg,

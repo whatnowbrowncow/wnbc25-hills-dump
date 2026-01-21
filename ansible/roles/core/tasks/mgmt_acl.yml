@@ -1,0 +1,8 @@
+---
+
+- name: Generate Mgmt ACL configurations
+  template:
+    src: "mgmt_acl.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/mgmt_acl.cfg"
+  tags:
+    - mgmt_acl

@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+{% for item in ios_local_accounts_facts %}
+{{ inventory_hostname }},{{ item.user_account.username }},{{ item.user_account.privilege }},{{ item.user_account.password_type}},{{ item.user_account.encryption }},{{ item.user_account.password_string }}
+{% endfor %}

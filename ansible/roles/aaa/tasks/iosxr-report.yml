@@ -1,0 +1,17 @@
+---
+
+- name: IOS-XR - Collecting the AAA configuration
+  iosxr_command:
+    commands:
+      - show run aaa
+  register: raw_output
+
+- name: IOS-XR - Parsing the AAA configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/iosxr/parser_iosxr_aaa.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+- name: IOS-XR - Generating the CSV report
+  template:
+    src: "/gitnet/ansible/roles/aaa/templates/iosxr/csv-template.j2"
+    dest: "/gitnet/ansible/roles/aaa/files/csv/iosxr/{{ inventory_hostname }}.csv"

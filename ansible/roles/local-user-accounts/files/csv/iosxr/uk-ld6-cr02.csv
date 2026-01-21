@@ -1,0 +1,3 @@
+hostname,username,password_type,encryption,password_string,user_group_1,user_group_2,user_group_3
+uk-ld6-cr02,netadmin,secret,5,$1$P4Vr$MlCdG/sCSKZt9yF7T2ugN/,root-lr,cisco-support,
+uk-ld6-cr02,svcnetworkauto,secret,5,$1$hu/U$RFvUKjKeyXUDxhgdrArYA1,root-lr,cisco-support,

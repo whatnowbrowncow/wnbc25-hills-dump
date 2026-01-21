@@ -1,0 +1,133 @@
+---
+
+- name: Create geolocation object for the site - (1/6).
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/site-{{ geo_site }}.json"
+    content:
+      {
+        "geoSite": {
+          "attributes": {
+            "dn": "uni/fabric/site-{{ geo_site }}",
+            "name": "{{ geo_site }}",
+            "rn": "site-{{ geo_site }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }
+    validate_certs: no
+
+- name: Create geolocation object for site building - (2/6).
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}.json"
+    content:
+      {
+        "geoBuilding": {
+          "attributes": {
+            "dn": "uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}",
+            "name": "{{ geo_building }}",
+            "rn": "building-{{ geo_building }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }     
+    validate_certs: no
+
+- name: Create geolocation object for floor - (3/6).
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}.json"
+    content:
+      {
+        "geoFloor": {
+          "attributes": {
+            "dn": "uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}",
+            "name": "{{ geo_floor }}",
+            "rn": "floor-{{ geo_floor }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }      
+    validate_certs: no
+
+- name: Create geolocation object for each room - (4/6).
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}/room-{{ geo_room }}.json"
+    content:
+      {
+        "geoRoom": {
+          "attributes": {
+            "dn": "uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}/room-{{ geo_room }}",
+            "name": "{{ geo_room }}",
+            "rn": "room-{{ geo_room }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }      
+    validate_certs: no
+
+- name: Create geolocation objects for each row of racks - (5/6).
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}/room-{{ geo_room }}/row-{{ item.0.row }}.json"
+    content:
+      {
+        "geoRow": {
+          "attributes": {
+            "dn": "uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}/room-{{ geo_room }}/row-{{ item.0.row }}",
+            "name": "{{ item.0.row }}",
+            "rn": "row-{{ item.0.row }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }      
+    validate_certs: no
+  with_subelements: 
+    - "{{ geo_rows }}"
+    - racks
+
+- name: Create geolocation objects for each rack - (6/6).
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}/room-{{ geo_room }}/row-{{ item.0.row }}/rack-{{ item.1.rack }}.json"
+    content:
+      {
+        "geoRack": {
+          "attributes": {
+            "dn": "uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}/room-{{ geo_room }}/row-{{ item.0.row }}/rack-{{ item.1.rack }}",
+            "name": "{{ item.1.rack }}",
+            "rn": "rack-{{ item.1.rack }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }      
+    validate_certs: no
+  with_subelements: 
+    - "{{ geo_rows }}"
+    - racks

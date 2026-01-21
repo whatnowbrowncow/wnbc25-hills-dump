@@ -1,0 +1,8 @@
+---
+
+- name: Generate AAA configurations
+  template:
+    src: "aaa.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/aaa.cfg"
+  tags:
+    - aaa

@@ -1,0 +1,26 @@
+---
+
+- name: "Create Leaf Interface Profiles (step 2/3)"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/accportprof-{{ item.leaf_prof }}.json"
+    content:
+      {
+        "infraAccPortP": {
+          "attributes": {
+            "dn": "uni/infra/accportprof-{{ item.leaf_prof }}",
+            "name": "{{ item.leaf_prof }}",
+            "rn": "accportprof-{{ item.leaf_prof }}",
+            "status": "created,modified"
+          },
+        }
+      }
+    validate_certs: no
+  with_items: 
+    - "{{ if_selectors }}"
+ 
+- name: "Move to Create Leaf Port Selector task"
+  include_tasks: ./aci-leaf-port-selector.yml

@@ -1,0 +1,13 @@
+---
+
+- name: Setup objects on context firewalls using lines method
+  include_tasks: ./asa-objects_gather_nameifs.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context_item
+
+
+## Original template based version of this task
+#- name: Setup objects on context firewalls
+#  import_tasks: ./asa-objects.yml

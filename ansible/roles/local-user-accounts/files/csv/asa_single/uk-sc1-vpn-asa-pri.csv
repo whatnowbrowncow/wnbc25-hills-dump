@@ -1,0 +1,4 @@
+hostname,username,privilege,encryption,password_string
+uk-sc1-vpn-asa-pri,svcnetworkauto,15,encrypted,Z7iYuCiC3M3XfnGu
+uk-sc1-vpn-asa-pri,netsec,15,encrypted,WQYcFC1y7UoTjqWu
+uk-sc1-vpn-asa-pri,netadmin,15,encrypted,i2TRJYv6De0o1ekb

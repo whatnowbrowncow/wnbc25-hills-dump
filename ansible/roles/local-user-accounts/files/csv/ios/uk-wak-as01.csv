@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-wak-as01,netadmin,15,secret,5,$1$FcWp$iankv59/RU05HIZfzrmYQ/
+uk-wak-as01,svcnetworkauto,15,secret,5,$1$0wqX$C6yBNmgfwSmqQFMrWF58C0

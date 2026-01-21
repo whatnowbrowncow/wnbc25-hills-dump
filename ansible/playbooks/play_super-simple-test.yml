@@ -1,0 +1,16 @@
+---
+  - name: Clear interface counters
+    hosts: uk-wak-ar01
+    connection: network_cli
+    gather_facts: no
+
+    tasks:
+    - name: Clear IOS interface counters
+      ios_command:
+        commands:
+          - command: "clear counters"
+            prompt: 'Clear "show interface" counters on all interfaces \[confirm\]'
+            answer: "\r"
+            #validate_certs: False
+      when: ansible_network_os == "ios"
+

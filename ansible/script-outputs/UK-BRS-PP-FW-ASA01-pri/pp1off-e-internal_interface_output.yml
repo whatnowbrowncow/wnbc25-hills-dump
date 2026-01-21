@@ -1,0 +1,4 @@
+Port-channel21.1583: {admin-state: up, interface: Port-channel21.1583, ip-add: 10.211.161.164,
+  nameif: pp1off-internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1599: {admin-state: up, interface: Port-channel21.1599, ip-add: 10.211.163.1,
+  nameif: monitoring-int, netmask: 255.255.255.0, security-level: '100'}

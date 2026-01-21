@@ -1,0 +1,94 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show snmp community
+    network_os: nxos
+
+- name: SNMP configuration match pattern
+  pattern_match:
+    regex: "^\\S+.*(network-admin|network-operator).*"
+    match_all: yes
+    match_greedy: yes
+  register: snmp_configuration
+
+- name: Match SNMP configuration values
+  pattern_group:
+    - name: match community string
+      pattern_match:
+        regex: "^(\\S+).*(network-admin|network-operator)"
+        content: "{{ item }}"
+      register: community_string
+
+    - name: match user role (RO/RW)
+      pattern_match:
+        regex: "^\\S+.*(network-operator|network-admin)"
+        content: "{{ item }}"
+      register: user_role
+
+    - name: match access-list 
+      pattern_match:
+        regex: "^\\S+.*(network-operator|network-admin)\\s+ACL\\s+mapped:\\s+(ipv4:|ipv6:)(\\S+)"
+        content: "{{ item }}"
+      register: access_list
+
+  loop: "{{ snmp_configuration }}"
+  register: snmp_configuration_values
+  when: "'nxos-9k' in group_names"
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: snmp
+        object:
+          - key: community_string
+            value: "{{ item.community_string.matches.0 }}"          
+          - key: user_role
+            value: "{{ item.user_role.matches.0 }}"        
+          - key: access_list
+            value: "{{ item.access_list.matches.2 }}"
+  loop: "{{ snmp_configuration_values }}"
+  export: yes
+  register: snmp_configuration_facts
+  when: "'nxos-9k' in group_names"
+
+- name: Match SNMP configuration values
+  pattern_group:
+    - name: match community string
+      pattern_match:
+        regex: "^(\\S+).*(network-admin|network-operator)"
+        content: "{{ item }}"
+      register: community_string
+
+    - name: match user role (RO/RW)
+      pattern_match:
+        regex: "^\\S+.*(network-operator|network-admin)"
+        content: "{{ item }}"
+      register: user_role
+
+    - name: match access-list 
+      pattern_match:
+        regex: "^\\S+.*(network-operator|network-admin)\\s+(\\S+)"
+        content: "{{ item }}"
+      register: access_list
+
+  loop: "{{ snmp_configuration }}"
+  register: snmp_configuration_values
+  when: "'nxos-misc' in group_names"
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: snmp
+        object:
+          - key: community_string
+            value: "{{ item.community_string.matches.0 }}"          
+          - key: user_role
+            value: "{{ item.user_role.matches.0 }}"        
+          - key: access_list
+            value: "{{ item.access_list.matches.1 }}"
+  loop: "{{ snmp_configuration_values }}"
+  export: yes
+  register: snmp_configuration_facts
+  when: "'nxos-misc' in group_names"

@@ -1,0 +1,16 @@
+---
+
+cdp_state:
+{% for key,value in pyats_version.items() %}
+{%  for nextkey,nextvalue in value.items() %}
+{%      for inner in nextvalue.items() %}
+  - local_interface: "{{ inner[1].local_interface }}"
+{%          if inner[1].platform == "Phone" %}
+    interface_description: "IP_Phone_{{ inner[1].device_id }}"
+{%          else %}
+    interface_description: "{{ inner[1].device_id }}"
+{%          endif %}
+    remote_interface: "{{ inner[1].port_id }}"
+{%      endfor %}
+{% 	endfor %}
+{% endfor %}

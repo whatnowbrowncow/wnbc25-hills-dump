@@ -1,0 +1,6 @@
+hostname,vty pool,vty pool line range,vty line default or template name,access-class,access-class direction,exec_timeout,transport input,transport output,
+uk-ld6-er01,default,0 4,interactive-vty, acl-management,ingress,15 0,ssh,telnet
+uk-ld6-er01,extra-vtys,5 15,interactive-vty, acl-management,ingress,15 0,ssh,telnet
+uk-ld6-er02,default,0 4,interactive-vty, acl-management,ingress,15 0,ssh,none
+uk-ld6-er02,extra-vtys,5 15,interactive-vty, acl-management,ingress,15 0,ssh,none
+uk-sov-cr01-new,default,0 15,default, acl-management,ingress,15 0,ssh,

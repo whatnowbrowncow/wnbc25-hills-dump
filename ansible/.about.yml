@@ -1,0 +1,13 @@
+project_name: Networks Ansible
+description: Set of Ansible scripts used by Network Services team
+channel: Technical Services
+team_name: Network Services
+contact:
+- url: mailto:networkservices@williamhill.co.uk
+  text: Network Services
+stage: production
+main_branch: master
+testable: false
+links:
+- url: https://gitlab.com/williamhillplc/technical-services/networks
+  text: Gitlab SaaS - Networks

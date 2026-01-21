@@ -1,0 +1,200 @@
+---
+### Collect all object from ASA
+#- name: ASA-SINGLE - collect network info
+#  asa_command:
+#    commands:
+#      - show run object network in-line
+#  register: asa_single_network_objects
+
+### Collect all network groups from ASA
+#- name: ASA-SINGLE - collect network info
+#  asa_command:
+#    commands:
+#      - show run object-group network
+#  register: asa_single_network_object_groups
+
+## Collect all ACLs from ASA
+- name: ASA-SINGLE - Collecting the ACL configuration
+  asa_command:
+    commands:
+      - "show running-config | include access-list"
+      - "show running-config | include access-group"
+  register: acl_output
+
+## Collect all services from ASA
+- name: ASA-SINGLE - collect service objects info
+  asa_command:
+    commands:
+      - show run object service in-line
+  register: asa_single_service_objects
+
+## Collect all service groups from the ASA
+- name: ASA-SINGLE - collect network info
+  asa_command:
+    commands:
+      - show run object-group service
+  register: asa_single_service_object_groups
+
+## Collect all protocol groups from the ASA
+- name: ASA-SINGLE - collect protocol object-group info
+  asa_command:
+    commands:
+      - show run object-group protocol
+  register: asa_single_protocol_object_groups
+
+### Parse the object data from above and place in to a relevent object fact
+#- name: ASA-SINGLE - parse command output - network objects
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_objects_network.yml
+#    content: "{{ asa_single_network_objects.stdout.0 }}"
+
+### Parse the network group names out
+#- name: ASA-SINGLE - parse command output - network groups split
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_network_split.yml
+#    content: "{{ asa_single_network_object_groups.stdout.0 }}"
+
+### Parse out details within the group, mearge with group name and place in relevent object fact
+#- name: ASA-SINGLE - parse command output - networks groups
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_network.yml
+#    content: "{{ network_groups }}"
+#  with_items: "{{ network_objects_groups }}"
+#  when: network_objects_groups is defined
+#  loop_control:
+#    loop_var: network_groups
+#  register: obj_groups
+
+## Parse the access-group configuration
+- name: ASA-SINGLE - Parsing the access-group configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/asa_single/parser_asa_single_acl_access_groups.yml"
+    content: "{{ acl_output.stdout.1 }}"
+
+## Collect the names of extended ACLs
+- name: ASA-SINGLE - Collecting the names of extended ACLs
+  set_fact:
+    ext_acls: "{{ acl_output.stdout[0] | regex_findall('^access-list +(?!global_mpc)(\\S+) +extended','\\g<#ext_acls>') | unique }}"
+
+## Collect the configuration lines of each extended ACL
+- name: ASA-SINGLE - Collecting the configuration lines of each extended ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ ext_acls }}"
+  loop_control:
+    label: "Collecting the configuration of access-list {{ item }}"
+  register: rules
+
+## Parse the extended ACL configuration
+- name: ASA-SINGLE - Parsing the extended ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_acl_extended.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: extended_access_lists
+
+## Collectthe names of standard ACLs
+- name: ASA-SINGLE - Collecting the names of standard ACLs
+  set_fact:
+    std_acls: "{{ acl_output.stdout[0] | regex_findall('^access-list +(\\S+) +standard','\\g<std_acls>') | unique }}"
+
+## Collect the configuration lines of each standard ACL
+- name: ASA-SINGLE - Collecting the configuration lines of each standard ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ std_acls }}"
+  loop_control:
+    label: "Collecting the configuration of access-list {{ item }}"
+  register: rules
+
+## Parse the standard ACL configuration
+- name: ASA-SINGLE - Parsing the standard ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_acl_standard.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: standard_access_lists
+
+## join the ACLs into a single list for YAML templating
+- name: ASA-SINGLE - Joining the ACLs (extended | standard) for YAML templating
+  set_fact:
+    access_lists: "{{ extended_access_lists.results + standard_access_lists.results }}"
+
+## Parse the service data from above and place in to a relevent object fact
+- name: ASA-SINGLE - parse command output - service objects
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_objects_service.yml
+    content: "{{ asa_single_service_objects.stdout.0 }}"
+
+## Parse the service group names out
+- name: ASA-SINGLE - parse command output - service groups split
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_service_split.yml
+    content: "{{ asa_single_service_object_groups.stdout.0 }}"
+
+## Parse out details within the group, mearge with group name and place in relevent object fact
+- name: ASA-SINGLE - Parsing the service object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_service.yml
+    content: "{{ item.service_objects.0 }}"
+  loop: "{{ service_objects_groups }}"
+  loop_control:
+    label: "Parsing the configuration of service object-group {{ item.name.matches.0 }}"
+  register: service_obj_groups
+
+## Debug commands to check output
+#- name: Display JSON output
+#  debug: var=service_objects_facts
+#
+## Debug commands to check output
+#- name: Display JSON output
+#  debug: var=service_obj_groups
+
+## Parse the protocol group names out
+- name: ASA-SINGLE - parse command output - protocol objects
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_protocol_split.yml
+    content: "{{ asa_single_protocol_object_groups.stdout.0 }}"
+
+## Parse out details within the group, mearge with group name and place in relevent object fact
+- name: ASA-SINGLE - Parsing the protocol object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_protocol.yml
+    content: "{{ item.protocol_objects.0 }}"
+  loop: "{{ protocol_objects_groups }}"
+  loop_control:
+    label: "Parsing the configuration of protocol object-group {{ item.name.matches.0 }}"
+  register: protocol_obj_groups
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=protocol_obj_groups
+
+## Confirm Directory Exisits
+- name: ASA-SINGLE - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+## Following task places the details in the SDDC groups yml file 
+- name: ASA-SINGLE - Generate VMC YAML file - Service Objects (groups)
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_single/dfw_sddc_specific_ports_yaml.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/dfw_sddc_specific_ports.yml"
+
+## Convert ASA 'named' ports to 'numbered' ports for VMC
+- name: ASA-SINGLE - Convert ASA named ports to numbered ports
+  command: "./asa2vmc-port-converter.py -i {{ inventory_dir }}/host_vars/{{ inventory_hostname }}/dfw_sddc_specific_ports.yml"
+  args:
+    chdir: "{{ role_path }}/files"
+
+## Refresh dfw_sddc_specific_groups variables in order to generate .tf file in the next task
+- name: Refreshing dfw_sddc_specific_groups variables generated by the above tasks in order to service any subsequent tasks
+  include_vars:
+    file: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/dfw_sddc_specific_ports.yml"

@@ -1,0 +1,10 @@
+{% for item in reg_pings_pre.results %}
+Context name: {{ item.item.context }}
+Ping output:
+Ping to me: {{ item.stdout_lines[0][-1].split(',')[0] }}
+Ping to NS01: {{ item.stdout_lines[1][-1].split(',')[0] }}
+Ping to NS02: {{ item.stdout_lines[2][-1].split(',')[0] }}
+Ping to LDAP svr: {{ item.stdout_lines[3][-1].split(',')[0] }}
+!
+!
+{% endfor %}

@@ -1,0 +1,8 @@
+hostname,local_interface,remote_device_description
+uk-mdc-vacc01,Vlan202,no_data_in_cdp
+uk-mdc-vacc01,Vlan203,no_data_in_cdp
+uk-mdc-vacc01,Vlan204,no_data_in_cdp
+uk-mdc-vacc01,Vlan205,no_data_in_cdp
+uk-mdc-vacc01,Vlan532,no_data_in_cdp
+uk-mdc-vacc01,Vlan533,no_data_in_cdp
+uk-mdc-vacc01,Loopback20,no_data_in_cdp

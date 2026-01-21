@@ -1,0 +1,4 @@
+hostname,syslog ip address,level,vrf
+{% for item in syslog_server_facts %}
+{{ inventory_hostname }},{{ item.syslog_servers.ip_address }},{{ item.syslog_servers.level }},{{ item.syslog_servers.vrf }}
+{% endfor %}

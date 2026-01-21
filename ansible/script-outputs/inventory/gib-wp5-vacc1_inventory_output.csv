@@ -1,0 +1,32 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-wp5-vacc1,1000BaseSX SFP,Gi1/1/1,,AGM11461BEA,none
+gib-wp5-vacc1,1000BaseSX SFP,Gi3/1/1,,AGM115016QX,none
+gib-wp5-vacc1,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,DCB2139B32Z,V03
+gib-wp5-vacc1,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-640WAC,DCB2139B338,V03
+gib-wp5-vacc1,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-640WAC,DCB2139B33D,V03
+gib-wp5-vacc1,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,DCB2139B33L,V03
+gib-wp5-vacc1,Switch 3 - Power Supply B,Switch 3 - Power Supply B,PWR-C2-640WAC,DCB2139B36F,V03
+gib-wp5-vacc1,Switch 4 - Power Supply A,Switch 4 - Power Supply A,PWR-C2-640WAC,DCB2139B36G,V03
+gib-wp5-vacc1,Switch 4 - Power Supply B,Switch 4 - Power Supply B,PWR-C2-640WAC,DCB2139B36H,V03
+gib-wp5-vacc1,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,DCB2139B36K,V03
+gib-wp5-vacc1,StackAdapter3/2,StackAdapter3/2,C3650-STACK,FDO21411MN1,V01
+gib-wp5-vacc1,StackAdapter4/2,StackAdapter4/2,C3650-STACK,FDO21411MN3,V01
+gib-wp5-vacc1,StackAdapter4/1,StackAdapter4/1,C3650-STACK,FDO21411MT8,V01
+gib-wp5-vacc1,StackAdapter3/1,StackAdapter3/1,C3650-STACK,FDO21411MTH,V01
+gib-wp5-vacc1,StackAdapter1/1,StackAdapter1/1,C3650-STACK,FDO21411MUN,V01
+gib-wp5-vacc1,StackAdapter2/2,StackAdapter2/2,C3650-STACK,FDO21411MUT,V01
+gib-wp5-vacc1,StackAdapter2/1,StackAdapter2/1,C3650-STACK,FDO214213JF,V01
+gib-wp5-vacc1,StackAdapter1/2,StackAdapter1/2,C3650-STACK,FDO214213K7,V01
+gib-wp5-vacc1,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2147E10E,V05
+gib-wp5-vacc1,WS-C3650-48PD-S,Switch 4,WS-C3650-48PD-S,FDO2147E10J,V05
+gib-wp5-vacc1,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2147Q0W0,V05
+gib-wp5-vacc1,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2147V14T,V05
+gib-wp5-vacc1,c36xx Stack,c36xx Stack,WS-C3650-48PD-S,FDO2147V14T,V05
+gib-wp5-vacc1,StackPort1/2,StackPort1/2,STACK-T2-1M,LCC2125GAE4,V03
+gib-wp5-vacc1,StackPort4/1,StackPort4/1,STACK-T2-1M,LCC2125GAE4,V03
+gib-wp5-vacc1,StackPort3/1,StackPort3/1,STACK-T2-50CM,LCC2133G21J,V03
+gib-wp5-vacc1,StackPort4/2,StackPort4/2,STACK-T2-50CM,LCC2133G21J,V03
+gib-wp5-vacc1,StackPort1/1,StackPort1/1,STACK-T2-50CM,LCC2133GCHF,V03
+gib-wp5-vacc1,StackPort2/2,StackPort2/2,STACK-T2-50CM,LCC2133GCHF,V03
+gib-wp5-vacc1,StackPort2/1,StackPort2/1,STACK-T2-50CM,LCC2133GCL9,V03
+gib-wp5-vacc1,StackPort3/2,StackPort3/2,STACK-T2-50CM,LCC2133GCL9,V03

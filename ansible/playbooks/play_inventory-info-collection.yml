@@ -1,0 +1,60 @@
+---
+
+- name: Collect inventory information and output to CSV
+  hosts: ios,nxos,asa
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: Create backup directory
+      file:
+        path: backup/inventory
+        state: directory
+      run_once: true
+
+    - name: Create inventory output directory
+      file:
+        path: script-outputs/inventory
+        state: directory
+      run_once: true
+
+    - name: Gather show inventory from ios and nxos devices
+      ios_command:
+        commands:
+          - "show inventory"
+      register: inventory_list
+      when: ansible_network_os != "asa"
+
+    - name: Gather show inventory from ASA devices
+      asa_command:
+        commands:
+          - "show inventory"
+      register: inventory_list_asa
+      when: ansible_network_os == "asa"
+
+#    - name: Output inventory_list
+#      debug:
+#        msg:
+#          - "{{ item.stdout_lines }}"
+#      with_items:
+#        - "{{ inventory_list }}"
+
+    - name: Export ios and nxos inventory to text file
+      template:
+        src: ./templates/line-by-line.j2
+        dest: ./backup/inventory/{{ inventory_hostname }}_inventory.txt
+      with_items:
+        - "{{ inventory_list }}"
+      when: ansible_network_os != "asa"
+ 
+    - name: Export ASA inventory to text file
+      template:
+        src: ./templates/line-by-line.j2
+        dest: ./backup/inventory/{{ inventory_hostname }}_inventory.txt
+      with_items:
+        - "{{ inventory_list_asa }}"
+      when: ansible_network_os == "asa"
+
+    - name: Extract inventory info
+      shell: python3 ./scripts/show_inventory_parser.py -d backup/inventory
+      run_once: true

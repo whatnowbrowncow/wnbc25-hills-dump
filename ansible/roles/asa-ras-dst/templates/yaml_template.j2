@@ -1,0 +1,16 @@
+{% set data = [] %}
+{{ loop_dst_output.name }}:
+    name: "{{ loop_dst_output.name }}"
+    policy: "{{ loop_dst_output.policy }}"
+    dst_data:
+{% for item in (lookup('vars', loop_dst_output.name | replace('-','_'))) %}
+{#{% set data = item.split(',') %}#}
+    {%- for item in item.split(',') -%}
+        {%- do data.append(item) -%}
+    {%- endfor -%}
+{%- endfor -%}
+{% for item in data | sort %}
+        - "{{ item }}"
+{% endfor %}
+    version: 
+    

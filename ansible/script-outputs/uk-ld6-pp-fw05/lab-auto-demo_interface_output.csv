@@ -1,0 +1,7 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.2300,10.61.215.204,0200.0101.0501,internal-vrf,255.255.255.248,100
+up,,Port-channel1.2301,10.65.208.1,0200.0101.0501,auto-demo_ext-web,255.255.254.0,100
+up,,Port-channel1.2302,10.65.210.1,0200.0101.0501,auto-demo_int-web,255.255.254.0,100
+up,,Port-channel1.2303,10.65.212.1,0200.0101.0501,auto-demo_int-lb,255.255.254.0,100
+up,,Port-channel1.2304,10.65.214.1,0200.0101.0501,auto-demo_app,255.255.254.0,100
+up,,Port-channel1.2305,10.65.216.1,0200.0101.0501,auto-demo_db,255.255.254.0,100

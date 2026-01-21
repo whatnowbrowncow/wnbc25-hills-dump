@@ -1,0 +1,33 @@
+---
+
+- name: Import Network Parser role
+  include_role:
+    name: ansible-network.network-engine
+
+- name: IOS - AAA CSV reporting task
+  include_tasks: ./ios-report.yml
+  when: ansible_network_os == "ios"
+
+- name: IOS - AAA YAML creation task
+  include_tasks: ./ios-yaml.yml
+  when: ansible_network_os == "ios"
+  
+#- name: IOS - AAA configuration (new-style tacacs) task
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios" and tacacs_style == "new"
+#
+#- name: IOS - AAA configuration (legacy tacacs) task
+#  include_tasks: ./ios-config-legacy.yml
+#  when: ansible_network_os == "ios" and tacacs_style == "legacy"  
+#  
+#- name: IOS - AAA configuration (private tacacs) task
+#  include_tasks: ./ios-config-private.yml
+#  when: ansible_network_os == "ios" and tacacs_style == "private"  
+
+- name: IOS-XR - AAA CSV reporting task
+  include_tasks: ./iosxr-report.yml
+  when: ansible_network_os == "iosxr"  
+
+#- name: IOS-XR - AAA configuration task
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"

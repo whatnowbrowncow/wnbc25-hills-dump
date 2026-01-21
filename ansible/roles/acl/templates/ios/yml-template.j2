@@ -1,0 +1,31 @@
+---
+
+access_lists:
+
+{% for acl in access_lists.results %}
+{%   for type in acl.ansible_facts.acl_type %}
+  - name: "{{ acl.item.item }}"
+    type: "{{ type.matches }}"
+    rules:
+{%     if 'Standard' == type.matches  %}
+{%       if acl.ansible_facts.access_lists_facts is defined %}
+{%         for aces in acl.ansible_facts.access_lists_facts %}
+{%           if (aces.ace.src_wildcard is defined) and aces.ace.src_wildcard %}
+    - line_no: "{{ aces.ace.seq_num }}"
+      rule: "{{ aces.ace.action }} {{ aces.ace.src }} {{ aces.ace.src_wildcard }}"
+{%-          else %}
+    - line_no: "{{ aces.ace.seq_num }}"
+      rule: "{{ aces.ace.action }} {{ aces.ace.src }}"      
+{%-          endif %}     
+{%         endfor %}
+{%       endif -%}  
+{%     elif 'Extended' == type.matches  %}
+{%       if acl.ansible_facts.ext_access_lists_facts is defined %}
+{%         for ext_aces in acl.ansible_facts.ext_access_lists_facts %}
+    - line_no: "{{ ext_aces.ext_ace.seq_num }}"
+      rule: "{{ ext_aces.ext_ace.rule }}"
+{%         endfor %}
+{%       endif %}
+{%     endif %} 
+{%   endfor %}
+{% endfor %}

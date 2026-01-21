@@ -1,0 +1,105 @@
+---
+
+- name: Turn Off Password Strength Check
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ ansible_user }}'
+    password: '{{ ansible_password }}'
+    method: post
+    path: "/api/node/mo/uni/userext.json"
+    content:
+      {
+        "aaaUserEp": {
+          "attributes": {
+            "dn": "uni/userext",
+            "pwdStrengthCheck": "no"
+          },
+        }
+      }
+    validate_certs: no
+
+- name: Create Local User {{ aci_user }}
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ ansible_user }}'
+    password: '{{ ansible_password }}'
+    method: post
+    path: "/api/node/mo/uni/userext/user-{{ aci_user }}.json"
+    content:
+      {
+        "aaaUser": {
+          "attributes": {
+            "dn": "uni/userext/user-{{ aci_user }}",
+            "name": "{{ aci_user }}",
+            "clearPwdHistory": "yes",
+            "pwd": "{{ aci_password }}",
+            "rn": "user-{{ aci_user }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "aaaUserDomain": {
+                "attributes": {
+                  "dn": "uni/userext/user-{{ aci_user }}/userdomain-all",
+                  "name": "all",
+                  "status": "created,modified"
+                },
+                "children": [
+                  {
+                    "aaaUserRole": {
+                      "attributes": {
+                        "dn": "uni/userext/user-{{ aci_user }}/userdomain-all/role-admin",
+                        "name": "admin",
+                        "privType": "writePriv",
+                        "status": "created,modified"
+                      },
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+
+
+- name: Create Local User {{ aci_user }} Certificate
+  aci_rest:
+    # Rick69    
+    hostname: '{{ ansible_host }}'
+    username: '{{ ansible_user }}'
+    password: '{{ ansible_password }}'
+    method: post
+    path: "/api/node/mo/uni/userext/user-{{ aci_user }}/usercert-{{ aci_user }}.json"
+    content:
+      {
+        "aaaUserCert": {
+          "attributes": {
+            "dn": "uni/userext/user-{{ aci_user }}/usercert-{{ aci_user }}",
+            "name": "{{ aci_user }}",
+            "data": "{{ aci_cert }}",
+            "rn": "usercert-{{ aci_user }}",
+            "status": "created,modified"
+          },
+        }
+      }
+    validate_certs: no
+
+- name: Turn On Password Strength Check
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/userext.json"
+    content:
+      {
+        "aaaUserEp": {
+          "attributes": {
+            "dn": "uni/userext",
+            "pwdStrengthCheck": "yes"
+          },
+        }
+      }
+    validate_certs: no

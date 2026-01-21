@@ -1,0 +1,29 @@
+---
+
+- name: IOS-XR - collect syslog info
+  ios_command:
+    commands:
+      - show run
+  register: iosxr_syslog_output
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=iosxr_syslog_output
+
+- name: IOS-XR - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/iosxr/parser_iosxr_syslog.yml
+    content: "{{ iosxr_syslog_output.stdout.0 }}"
+
+# Debug commands to check output
+- name: Display JSON output
+  debug: var=syslog_server_facts
+
+# Debug commands to check output
+- name: Display JSON output
+  debug: var=syslog_source_facts
+
+- name: IOS-XR - Generate csv report
+  template:
+    src: /gitnet/ansible/roles/syslog/templates/iosxr/csv-template.j2
+    dest: /gitnet/ansible/roles/syslog/files/csv/iosxr/{{ inventory_hostname }}.csv

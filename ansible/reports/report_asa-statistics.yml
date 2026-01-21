@@ -1,0 +1,54 @@
+---
+
+- hosts: asa
+  connection: network_cli
+  gather_facts: false
+  
+  tasks:
+    
+    - name: Gather system interface stats
+      asa_command:
+        commands:
+          - show interface TenGigabitEthernet0/8
+          - show interface TenGigabitEthernet0/9
+        context: system
+      register: reg_output
+      
+ 
+#    - name: debug interface
+#      debug:
+#        msg: "{{ reg_output }}"
+#        
+#    - debug:
+#        msg: "Interface: {{ reg_output.stdout_lines[0][0] }}, 
+#        Input values: {{ reg_output.stdout_lines[0][7] }},
+#        Output values: {{ reg_output.stdout_lines[0][13] }},
+#        Interface: {{ reg_output.stdout_lines[1][0] }}, 
+#        Input values: {{ reg_output.stdout_lines[1][7] }},
+#        Output values: {{ reg_output.stdout_lines[1][13] }}"
+    
+    - name: Gather system CPU stats
+      asa_command:
+        commands:
+          - show cpu usage
+        context: system
+      register: reg_cpu_output
+        
+#    - name: debug CPU
+#      debug:
+#        msg: "{{ reg_cpu_output }}"
+        
+    - name: Export interface stats to markup file
+      template:
+        src: ./reports/templates/asa_interfaces.j2
+        dest: ./reports/{{ inventory_hostname }}_interface_stats.md
+      with_items:
+        - "{{ reg_output }}"
+        
+    
+    - name: Export CPU stats to markup file
+      template:
+        src: ./reports/templates/asa_cpu.j2
+        dest: ./reports/{{ inventory_hostname }}_cpu_stats.md
+      with_items:
+        - "{{ reg_cpu_output }}"

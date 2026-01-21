@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+uk-gsh-fs01,10.210.193.235,group-vrf,no,Vlan99
+uk-gsh-fs01,10.220.193.235,group-vrf,no,Vlan99
+uk-gsh-fs01,10.180.193.235,group-vrf,no,Vlan99
+uk-gsh-fs01,10.120.193.235,group-vrf,yes,Vlan99

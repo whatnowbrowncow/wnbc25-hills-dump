@@ -1,0 +1,4 @@
+hostname,local_interface,remote_device_description
+lsj_f4al_sw1,GigabitEthernet4/0/14,UK-STJ-AP01-F04AL-GigabitEthernet0
+lsj_f4al_sw1,GigabitEthernet4/0/16,UK-STJ-AP02-F04AL-GigabitEthernet0
+lsj_f4al_sw1,GigabitEthernet4/0/18,UK-STJ-AP03-F04AL-GigabitEthernet0

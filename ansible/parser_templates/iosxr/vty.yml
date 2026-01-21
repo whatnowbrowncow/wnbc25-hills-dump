@@ -1,0 +1,124 @@
+---
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run | begin line
+    network_os: iosxr
+                            
+- name: match line sections
+  pattern_match:
+    regex: "^line (default|template)"
+    match_all: yes
+    match_greedy: yes
+  register: line_section                      
+                            
+- name: match line config
+  pattern_group:
+    - name: match line template
+      pattern_match:
+        regex: "^line.* (\\S+)\n"
+        content: "{{ item }}"
+      register: line_template
+                                           
+    - name: match access-class
+      pattern_match:
+        regex: "access-class \\S+ (\\S+)"
+        content: "{{ item }}"
+      register: access_class
+                                                                                                               
+    - name: match access-class direction
+      pattern_match:
+        regex: "access-class (\\S+)"
+        content: "{{ item }}"
+      register: access_class_direction
+
+    - name: exec_timeout
+      pattern_match:
+        regex: "exec-timeout (.*)"
+        content: "{{ item }}"
+      register: exec_timeout
+
+    - name: match transport_input
+      pattern_match:
+        regex: "transport input (.*)"
+        content: "{{ item }}"
+      register: transport_input 
+
+    - name: transport_output
+      pattern_match:
+        regex: "transport output (.*)"
+        content: "{{ item }}"
+      register: transport_output
+
+  loop: "{{ line_section }}"
+  register: line
+
+- name: match vty pools
+  pattern_match:
+    regex: "^vty-pool"
+    match_all: yes
+    match_greedy: yes
+  register: vtp_pool_section                        
+                            
+- name: match vtp pool config
+  pattern_group:
+    - name: match pool name
+      pattern_match:
+        regex: "^vty-pool (\\S+)"
+        content: "{{ item }}"
+      register: pool_name
+                                           
+    - name: line range
+      pattern_match:
+        regex: "^vty-pool \\S+ (\\d+ \\d+)"
+        content: "{{ item }}"
+      register: line_range
+                                                                                                               
+    - name: match line template
+      pattern_match:
+        regex: "line-template (\\S+)"
+        content: "{{ item }}"
+      register: line_template
+
+  loop: "{{ vtp_pool_section }}"
+  register: pool
+
+- name: generate json data structure
+  json_template:
+    template:
+      - key: line
+        object:
+          - key: line
+            value: "{{ item.line_template.matches.0 }}"
+          - key: access_class
+            value: "{{ item.access_class.matches.0 }}"
+          - key: access_class_direction
+            value: "{{ item.access_class_direction.matches.0 }}"
+          - key: exec_timeout
+            value: "{{ item.exec_timeout.matches.0 }}"
+          - key: transport_input
+            value: "{{ item.transport_input.matches.0 }}"
+          - key: transport_output
+            value: "{{ item.transport_output.matches.0 }}"
+
+  loop: "{{ line }}"
+  ##use export to display to screen
+  export: yes
+  register: iosxr_vty_line_facts
+
+- name: generate json data structure
+  json_template:
+    template:
+      - key: pool
+        object:
+          - key: pool_name
+            value: "{{ item.pool_name.matches.0 }}"
+          - key: line_range
+            value: "{{ item.line_range.matches.0 }}"
+          - key: line_template
+            value: "{{ item.line_template.matches.0 }}"
+
+  loop: "{{ pool }}"
+  ##use export to display to screen
+  export: yes
+  register: iosxr_vty_pool_facts

@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-brs-sbc,netsec,15,secret,4,8Kb2slRmQI6xd7qwkxLjCRKlIHuVOj1ax/8vyMkB6Tg
+uk-brs-sbc,ddsupport,15,secret,4,qAO85P77synjN.QYF7oqHyOjFr6uIVZ0DQns63Fzu9Q
+uk-brs-sbc,netadmin,15,secret,5,$1$YlIn$CoPW82gnDQDIqQRFu8R0c.
+uk-brs-sbc,svcnetworkauto,15,secret,5,$1$Pxab$tgT2Gc7q01pojQZjL2jri.

@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-sc1-dmvpn01,whillsup,15,secret,4,x5Kb6MF3rR93yrHOui7byOlaenWncXyA7dVwpgahYVY
+uk-sc1-dmvpn01,netsec,15,secret,5,$1$wQU5$hYKg435IZP7OPSXqcCaLO1
+uk-sc1-dmvpn01,netadmin,15,secret,4,mKij449iJ8grD6NGYBhUQKZtDNnBt203/Qu7AyDAEXc
+uk-sc1-dmvpn01,svcnetworkauto,15,secret,4,vvhhtIPAqxiJjbycSPTNazk4qwXF2yqCsZCDYzkVTHs

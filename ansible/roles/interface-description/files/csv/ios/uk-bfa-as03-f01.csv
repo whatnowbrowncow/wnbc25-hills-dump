@@ -1,0 +1,5 @@
+hostname,local_interface,remote_device_description
+uk-bfa-as03-f01,GigabitEthernet2/0/3,IP_Phone_SEPB4A8B94C8D01-Port1
+uk-bfa-as03-f01,GigabitEthernet2/0/7,IP_Phone_SEP1CDEA783199E-Port1
+uk-bfa-as03-f01,GigabitEthernet2/0/15,IP_Phone_SEP00082F1A56D2-Port1
+uk-bfa-as03-f01,Port-channel12,no_data_in_cdp

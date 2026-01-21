@@ -1,0 +1,103 @@
+---
+
+vrfs:
+  - name: "evpnmgmt-vrf"
+    rd: "10.92.0.38:1"
+    rt_export:
+      - "57002:1"
+    rt_import:
+      - "57002:1"
+  - name: "group-vrf"
+    rd: "10.92.0.38:2"
+    rt_export:
+      - "57002:2"
+    rt_import:
+      - "57002:2"
+  - name: "iptv-vrf"
+    rd: "10.92.0.39:11"
+    vpn_id: "57002:11"
+    import_map: "rm-iptv-vrf-import"
+    rt_export:
+      - "57002:11"
+    rt_import:
+      - "57002:11"
+      - "57002:4"
+    mdt_default:
+      addr: "239.0.1.11"
+    mdt_data:
+      threshold: "40"
+      data:
+        - addr: "239.0.2.0"
+          wmask: "0.0.0.255"
+          threshold: "40"
+  - name: "online-vrf"
+    rd: "10.92.0.38:7"
+    rt_export:
+      - "57002:7"
+    rt_import:
+      - "57002:7"
+  - name: "retail-vrf"
+    rd: "10.92.0.38:4"
+    rt_export:
+      - "57002:4"
+    rt_import:
+      - "57002:4"
+      - "57002:11"
+  - name: "sis-vrf"
+    rd: "10.92.0.38:6"
+    rt_export:
+      - "57002:6"
+    rt_import:
+      - "57002:6"
+  - name: "storage-vrf"
+    rd: "10.92.0.38:3"
+    rt_export:
+      - "57002:3"
+    rt_import:
+      - "57002:3"
+  - name: "tote-vrf"
+    rd: "10.92.0.38:8"
+    rt_export:
+      - "57002:8"
+    rt_import:
+      - "57002:8"
+  - name: "transit-vrf"
+    rd: "10.92.0.38:12"
+    rt_export:
+      - "57002:12"
+    rt_import:
+      - "57002:12"
+  - name: "wan-vrf"
+    rd: "10.92.0.38:5"
+    rt_export:
+      - "57002:5"
+    rt_import:
+      - "57002:5"
+
+interfaces:
+  Loopback:
+    - num: "0"
+      addr: "10.92.0.38"
+      mask: "255.255.255.255"
+      description: "default-vrf : routing : router-id"
+    - num: "20"
+      addr: "10.99.253.59"
+      mask: "255.255.255.255"
+      vrf: "group-vrf"
+      description: "default-vrf : routing : router-id"
+  Port-channel:
+    - type: "main"
+      num: "1"
+      description: "uk-ld6-ls03/04 eth1/22"
+    - type: "sub"
+      num: "1.1"
+      description: "group-vrf : transit : uk-ld6-ls03/04 eth1/22"
+      encap: "500"
+      addr: "10.19.0.1"
+      mask: "255.255.255.224"
+      vrf: "group-vrf"
+      bfd:
+        interval: "750"
+        min_rx: "750"
+        multiplier: "3"
+  

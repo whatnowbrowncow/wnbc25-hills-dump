@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-stj-f1c1-sw1,10.120.193.235,,yes,
+uk-stj-f1c1-sw1,10.120.193.236,,no,

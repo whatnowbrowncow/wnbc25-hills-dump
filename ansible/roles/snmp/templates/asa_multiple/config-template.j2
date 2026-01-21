@@ -1,0 +1,14 @@
+{% for item in snmp %}
+{%   if item.host is defined %}
+- context:
+  name: {{ item.context }}
+  lines:
+{%     for line in item.host %}
+{%       if line.poll_trap == 'both' %}
+    - snmp-server host {{ line.source_int }} {{ line.ip_address }} community {{ line.community_string }} version {{ line.version }}
+{%       else %}
+    - snmp-server host {{ line.source_int }} {{ line.ip_address }} {{ line.poll_trap }} community {{ line.community_string }} version {{ line.version }}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}

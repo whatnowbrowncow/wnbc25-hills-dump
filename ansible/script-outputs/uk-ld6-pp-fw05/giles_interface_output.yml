@@ -1,0 +1,4 @@
+Port-channel1.1671: {admin-state: up, interface: Port-channel1.1671, ip-add: 10.1.0.10,
+  nameif: giles-external-vrf, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1672: {admin-state: up, interface: Port-channel1.1672, ip-add: 10.2.0.10,
+  nameif: giles-internal-vrf, netmask: 255.255.255.0, security-level: '100'}

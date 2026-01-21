@@ -1,0 +1,42 @@
+---
+
+- name: IOS-XR - Collecting the configured ACLs
+  ios_command:
+    commands:
+      - show running-config | in access-list
+  register: acl_output
+
+- name: IOS-XR - Registering the name of each configured ACL
+  set_fact:
+    cfgd_acls: "{{ acl_output.stdout[0] | regex_findall('^ipv4\\s+access-list\\s+(\\S+)','\\g<configured_acls>') }}"
+
+- name: IOS-XR - Collecting the configuration lines of each ACL
+  ios_command:
+    commands:
+      - show access-lists {{ item }}
+  with_items: 
+  - "{{ cfgd_acls }}"
+  register: rules
+
+- debug: var=rules
+
+- name: IOS-XR - Parsing the ACL configuration (NOTE -  This uses the NXOS template as the output is the same)
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/iosxr/parser_iosxr_acl_yaml.yml"
+    content: "{{ item.stdout[0] }}"
+  with_items: 
+  - "{{ rules.results }}"
+  register: access_lists
+
+# - name: Debug Access List Results
+#   debug: var=access_entries
+
+- name: IOS-XR - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS-XR - Generating the YAML file
+  template:
+    src: "/gitnet/ansible/roles/acl/templates/iosxr/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/acl.yml"

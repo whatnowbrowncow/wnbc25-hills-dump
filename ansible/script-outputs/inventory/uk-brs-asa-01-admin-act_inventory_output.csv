@@ -1,0 +1,7 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-brs-asa-01-admin-act,10G Based-SR,TenGigabitEthernet0/8,SFP-10G-SR,AVD1842A4JS,V03
+uk-brs-asa-01-admin-act,10G Based-SR,TenGigabitEthernet0/9,SFP-10G-SR,AVD1842A4KB,V03
+uk-brs-asa-01-admin-act,ASA 5585-X Security Services Processor-20 with 8GE,module 0,ASA5585-SSP-20,JAD184800RJ,V07
+uk-brs-asa-01-admin-act,ASA 5585-X,Chassis,ASA5585,JMX185080H6,V04
+uk-brs-asa-01-admin-act,ASA 5585-X AC Power Supply,power supply 0,ASA5585-PWR-AC,POG1841A043,V05
+uk-brs-asa-01-admin-act,ASA 5585-X AC Power Supply,power supply 1,ASA5585-PWR-AC,POG1841A073,V05

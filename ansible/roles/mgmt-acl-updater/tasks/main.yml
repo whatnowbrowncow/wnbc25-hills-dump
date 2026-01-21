@@ -1,0 +1,37 @@
+---
+
+#- name: IOS - Updates (additions) to the Management ACL
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios"
+#
+#- name: IOS-XR - Updates (additions) to the Management ACL
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"
+#
+#- name: NXOS - Updates (additions) to the Management ACL
+#  include_tasks: ./nxos-config.yml
+#  when: ansible_network_os == "nxos"
+#
+#- name: IOS - Updates (deletions) to the Management ACL
+#  include_tasks: ./ios-config-deletions.yml
+#  when: ansible_network_os == "ios"
+#
+#- name: IOS-XR - Updates (deletions) to the Management ACL
+#  include_tasks: ./iosxr-config-deletions.yml
+#  when: ansible_network_os == "iosxr"
+#
+#- name: NXOS - Updates (deletions) to the Management ACL
+#  include_tasks: ./nxos-config-deletions.yml
+#  when: ansible_network_os == "nxos"
+#
+#- name: ASA-SINGLE - Updates (deletions) to the Management Access
+#  include_tasks: ./asa-single-config-deletions.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+#
+#- name: ASA-MULTIPLE - Updates (deletions) to the Management Access
+#  include_tasks: ./asa-multiple-config-deletions.yml
+#  with_items:
+#    - "{{ contexts }}"
+#  loop_control:
+#    loop_var: context
+#  when: ansible_network_os == "asa" and context_mode == "multiple" and contexts is iterable

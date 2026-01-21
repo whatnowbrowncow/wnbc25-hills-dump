@@ -1,0 +1,5 @@
+---
+
+- name: Create a local user account in ACI.
+  import_tasks: ./aci-local-user.yml
+  when: ansible_network_os == "aci"

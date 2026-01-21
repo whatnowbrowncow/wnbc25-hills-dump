@@ -1,0 +1,12 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-sc1-dm01,Cisco ASR1002 AC Power Supply,Power Supply Module 1,ASR1002-PWR-AC,ART1521U0C1,V02
+uk-sc1-dm01,Cisco ASR1002 AC Power Supply,Power Supply Module 0,ASR1002-PWR-AC,ART1521U0C2,V02
+uk-sc1-dm01,Cisco ASR1002 Chassis,Chassis,ASR1002,FOX1514GG5C,V05
+uk-sc1-dm01,5-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/1,SPA-5X1GE-V2,JAE15160FTE,V02
+uk-sc1-dm01,Cisco ASR1000 Embedded Services Processor,module F0,ASR1000-ESP10,JAE15200B8I,V05
+uk-sc1-dm01,Cisco ASR1002 SPA Interface Processor 10,module 0,ASR1002-SIP10,JAE15220EDE,V04
+uk-sc1-dm01,Cisco ASR1002 Route Processor 1,module R0,ASR1002-RP1,JAE15220F8U,V04
+uk-sc1-dm01,GE T,subslot 0/0 transceiver 0,N/A,MTC1520015V,E
+uk-sc1-dm01,GE T,subslot 0/1 transceiver 0,N/A,MTC152001CS,E
+uk-sc1-dm01,GE T,subslot 0/0 transceiver 1,N/A,MTC152002Z7,E
+uk-sc1-dm01,4-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/0,4XGE-BUILT-IN,N/A,V00

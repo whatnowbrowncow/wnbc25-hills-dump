@@ -1,0 +1,12 @@
+---
+# Check for config Changes
+- name: ios-config check for changes
+  when: "(iosconfig.changed == true)"
+  set_fact: configured=true
+
+# Save config is anything has changed
+- name: IOS-config - Save the configuration
+  ios_command:
+    commands:
+      - "write mem"
+  when: "(configured is defined) and (configured == true)"

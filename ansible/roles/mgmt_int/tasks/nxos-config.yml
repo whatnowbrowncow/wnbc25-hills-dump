@@ -1,0 +1,10 @@
+---
+
+- name: NXOS - Build configuration for testing purposes
+  template:
+    src: /gitnet/ansible/roles/mgmt_int/templates/nxos/config-template.j2
+    dest: /gitnet/ansible/roles/mgmt_int/files/configs/nxos/{{ inventory_hostname }}.cfg
+
+#- name: NXOS - Apply configuration
+#  nxos_config:
+#    src: /gitnet/ansible/roles/mgmt_int/templates/nxos/config-template.j2

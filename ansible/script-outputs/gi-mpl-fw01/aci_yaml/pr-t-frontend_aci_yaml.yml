@@ -1,0 +1,38 @@
+
+  - app_prof: 'pr-t-frontend'
+    tenant: 'production'
+    vrf: 'pr-t-frontend'
+    bds:
+      - bd: 'pr-t-frontend_internal-vrf'
+        network: '10.180.160.224'
+        gateway: '10.180.160.228'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-frontend_internal-vrf'
+            encap_id: '378'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-frontend_internal-web'
+        network: '10.180.168.0'
+        gateway: '10.180.168.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-frontend_internal-web'
+            encap_id: '440'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-frontend_internal-web-new'
+        network: '10.180.169.128'
+        gateway: '10.180.169.129'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-frontend_internal-web-new'
+            encap_id: '449'
+            vcenter_dynamic_vlan: true

@@ -1,0 +1,29 @@
+NAME: "2", DESCR: "WS-C3750X-48P"
+PID: WS-C3750X-48PF-S  , VID: V02  , SN: FDO1539V0H1
+
+NAME: "Switch 2 - Power Supply 0", DESCR: "FRU Power Supply"
+PID: C3KX-PWR-1100WAC  , VID: V02  , SN: LIT15341REK
+
+NAME: "1", DESCR: "WS-C3750X-48P"
+PID: WS-C3750X-48PF-S  , VID: V02  , SN: FDO1538K1S9
+
+NAME: "Switch 1 - Power Supply 0", DESCR: "FRU Power Supply"
+PID: C3KX-PWR-1100WAC  , VID: V02  , SN: LIT15341REV
+
+NAME: "Switch 1 - FRULink Slot 1 - FRULink Module", DESCR: "FRULink 1G Module"
+PID: C3KX-NM-1G        , VID: V01  , SN: FDO15380QL5
+
+NAME: "GigabitEthernet1/1/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: AGM1539L7YU     
+
+NAME: "3", DESCR: "WS-C3750X-48P"
+PID: WS-C3750X-48PF-S  , VID: V02  , SN: FDO1539Z0F1
+
+NAME: "Switch 3 - Power Supply 0", DESCR: "FRU Power Supply"
+PID: C3KX-PWR-1100WAC  , VID: V02  , SN: LIT15341RKN
+
+NAME: "Switch 3 - FRULink Slot 1 - FRULink Module", DESCR: "FRULink 1G Module"
+PID: C3KX-NM-1G        , VID: V01  , SN: FDO15380X23
+
+NAME: "GigabitEthernet3/1/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: FNS153413ZY

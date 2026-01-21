@@ -1,0 +1,37 @@
+---
+
+- name: NX-OS - Collecting the configured ACLs
+  nxos_command:
+    commands:
+      - show running-config | include access-list
+  register: acl_output
+
+- name: NX-OS - Registering the name of each configured ACL
+  set_fact:
+    cfgd_acls: "{{ acl_output.stdout[0] | regex_findall('^ip\\s+access-list\\s+(\\S+)','\\g<configured_acls>') }}"
+
+- name: NX-OS - Collecting the configuration lines of each ACL
+  nxos_command:
+    commands:
+      - show access-lists {{ item }}
+  with_items: 
+  - "{{ cfgd_acls }}"
+  register: rules
+
+- name: NX-OS - Parsing the ACL configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/nxos/parser_nxos_acl_yaml.yml"
+    content: "{{ item.stdout[0] }}"
+  with_items: 
+  - "{{ rules.results }}"
+  register: access_lists
+
+- name: NX-OS - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: NX-OS - Generating the YAML file
+  template:
+    src: "/gitnet/ansible/roles/acl/templates/nxos/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/acl.yml"

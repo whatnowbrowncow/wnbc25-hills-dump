@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+lsj_f3al_retail,netsec,,password,7,002A4652051A3C1F22
+lsj_f3al_retail,netadmin,15,secret,5,$1$8Mfm$NOl3Fq.vyyZCkkCAog3bt.
+lsj_f3al_retail,svcnetworkauto,15,secret,5,$1$pUnZ$bOJKovRkjZNyiBu7DuETO1

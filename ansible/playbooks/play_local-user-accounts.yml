@@ -1,0 +1,9 @@
+---
+
+- name: PLAY - Local User Accounts
+  hosts: ios,nxos,asa
+  gather_facts: no
+  connection: network_cli
+  
+  roles:
+    - local-user-accounts

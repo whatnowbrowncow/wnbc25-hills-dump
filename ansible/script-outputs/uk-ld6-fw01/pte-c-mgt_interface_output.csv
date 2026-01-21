@@ -1,0 +1,8 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.1604,10.115.132.1,0200.0101.0101,app-mgt,255.255.255.0,100
+up,,Port-channel1.1675,10.115.160.164,0200.0101.0101,pte-internal-vrf,255.255.255.224,100
+up,,Port-channel1.1609,10.115.136.1,0200.0101.0101,bladelogic-dmz,255.255.255.0,100
+up,,Port-channel1.1610,10.115.137.1,0200.0101.0101,cde-backoffice-mgt,255.255.255.0,100
+up,,Port-channel1.1620,10.115.140.1,0200.0101.0101,Stingray-Mgt,255.255.255.0,100
+up,,Port-channel1.1605,10.115.133.1,0200.0101.0101,db-mgt,255.255.255.0,100
+up,,Port-channel1.1603,10.115.131.1,0200.0101.0101,web-mgt,255.255.255.0,100

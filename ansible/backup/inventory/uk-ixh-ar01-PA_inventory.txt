@@ -1,0 +1,5 @@
+NAME: "CISCO1921/K9 chassis", DESCR: "CISCO1921/K9 chassis"
+PID: CISCO1921/K9      , VID: V05 , SN: FCZ174191KS
+
+NAME: "WAN Interface Card - HWIC Serial 1T on Slot 0 SubSlot 0", DESCR: "WAN Interface Card - HWIC Serial 1T"
+PID: HWIC-1T           , VID: V05 , SN: FOC17306GK9

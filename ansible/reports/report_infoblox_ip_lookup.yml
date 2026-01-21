@@ -1,0 +1,44 @@
+---
+#
+# This playbook takes in a host IP (e.g. 10.10.10.10) or network in CIDR 
+# format (e.g. 10.10.10.0/24) and performs a lookup of it against an 
+# Infoblox server.
+#
+# Currently the information found is output to the screen via a debug of a 
+# variable.
+#
+# This playbook requires that the ip_addr variable is passed in
+# as an extra-vars variable. E.g. --extra-vars "ip_addr='10.1.82.0/23'"
+#
+
+
+- name: Infoblox host and network search playbook
+  hosts: nios
+  connection: local
+  gather_facts: false
+
+
+  tasks:
+
+  - name: Fetch network info
+    set_fact:
+            host: "{{ lookup('nios', 'network', filter={'network': ip_addr }, provider=nios_provider) }}"
+    register: network_output
+    when: ip_addr | ipaddr('net')
+
+  - name: Fetch host info
+    set_fact:
+           host: "{{ lookup('nios', 'ipv4address', filter={'ip_address': ip_addr | ipaddr('address') }, provider=nios_provider) }}"
+    register: host_output
+    when: ip_addr | ipaddr('address')
+
+  - name: Output network info
+    debug:
+      var: network_output.ansible_facts.host
+    when: network_output.ansible_facts.host is defined
+
+  - name: Output host info
+    debug:
+      var: host_output.ansible_facts.host
+    when: host_output.ansible_facts.host is defined
+

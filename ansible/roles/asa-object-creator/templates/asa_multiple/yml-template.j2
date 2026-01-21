@@ -1,0 +1,74 @@
+---
+
+network_objects:
+
+{% if network_host_objects_facts is defined %}
+  host_objects:
+{% for item in network_host_objects_facts %}
+    - name: "{{ item.object.name }}"
+      description: "{{ item.object.description }}"
+      ip_addr: "{{ item.object.ip_addr }}"
+      type: "{{ item.object.type }}"
+{% endfor %}
+{% endif %}
+
+{% if network_subnet_objects_facts is defined %}
+  subnet_objects:
+{% for item in network_subnet_objects_facts %}
+    - name: "{{ item.object.name }}"
+      description: "{{ item.object.description }}"
+      network: "{{ item.object.network }}"
+      mask: "{{ item.object.mask }}"
+      type: "{{ item.object.type }}"
+{% endfor %}
+{% endif %}
+
+{% if network_range_objects_facts is defined %}
+  range_objects:
+{% for item in network_range_objects_facts %}
+    - name: "{{ item.object.name }}"
+      description: "{{ item.object.description }}"
+      start: "{{ item.object.start }}"
+      end: "{{ item.object.end }}"
+      type: "{{ item.object.type }}"
+{% endfor %}
+{% endif %}
+
+network_object_groups:
+{% for item in obj_groups.results %}
+  - name: "{{ item.ansible_facts.object_group[0].name }}"
+{% if item.ansible_facts.object_group_description is defined %}
+    description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{% else %}
+{% endif %}
+    objects:
+{% if item.ansible_facts.objects is defined %}
+{% for group in item.ansible_facts.objects %}
+      - object_name: "{{ group.object_name }}"
+{% endfor %}
+{% else %}
+{% endif %}
+    hosts:
+{% if item.ansible_facts.hosts is defined %}
+{% for group in item.ansible_facts.hosts %}
+      - ip_addr: "{{ group.ip_addr }}"
+{% endfor %}
+{% else %}
+{% endif %}
+    networks:
+{% if item.ansible_facts.networks is defined %}
+{% for group in item.ansible_facts.networks %}
+      - ip_addr: "{{ group.ip_addr }}"
+        mask: "{{ group.mask }}"
+{% endfor %}
+{% else %}
+{% endif %}
+    group_objects:
+{% if item.ansible_facts.group_objects is defined %}
+{% for group in item.ansible_facts.group_objects %}
+      - group_object_name: "{{ group.group_object_name }}"
+{% endfor %}
+{% else %}
+{% endif %}
+
+{% endfor %}

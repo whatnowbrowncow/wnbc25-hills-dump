@@ -1,0 +1,17 @@
+---
+
+- name: IOS-XR - Collecting the SNMP configuration
+  iosxr_command:
+    commands:
+      - show run | i snmp
+  register: raw_output
+
+- name: IOS-XR - Parsing the SNMP configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/iosxr/parser_iosxr_snmp.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+- name: IOS-XR - Generating the CSV report
+  template:
+    src: "/gitnet/ansible/roles/snmp/templates/iosxr/csv-template.j2"
+    dest: "/gitnet/ansible/roles/snmp/files/csv/iosxr/{{ inventory_hostname }}.csv"

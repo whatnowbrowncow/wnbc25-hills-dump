@@ -1,0 +1,193 @@
+---
+
+- name: NXOS - Check for a .129 mgmt IP address
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show ip int brief vrf all | include [0-9]+\.[0-9]+\.129\.[0-9]+
+  register: mgmt129_int
+
+- name: NXOS - Register .129 interface as a variable
+  set_fact:
+    mgmt129_int: "{{ mgmt129_int.stdout[0] | regex_search('(?P<int>\\S+)','\\g<int>') }}"
+
+- name: NXOS - capture .129 interface config
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show run int {{ mgmt129_int[0] }}
+  register: mgmt129_int_config
+  when: mgmt129_int != ""
+# Debug commands to check output
+#- name: Display output
+#  debug: var=mgmt_int
+
+- name: NXOS - parse .129 interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/nxos/parser_nxos_mgmt129_int.yml
+    content: "{{ mgmt129_int_config.stdout.0 }}"
+  when: mgmt129_int != ""
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=mgmt129_int_facts
+
+- name: NXOS - Check for a mgmt0 IP address
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show ip int brief vrf all | include mgmt0
+  register: mgmt0_int
+
+- name: NXOS - Register mgmt0 interface as a variable
+  set_fact:
+    mgmt0_int: "{{ mgmt0_int.stdout[0] | regex_search('(?P<int>\\S+)','\\g<int>') }}"
+
+- name: NXOS - capture mgmt0 interface config
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show run int {{ mgmt0_int[0] }}
+  register: mgmt0_int_config
+  when: mgmt0_int != ""
+# Debug commands to check output
+#- name: Display output
+#  debug: var=mgmt_int
+
+- name: NXOS - parse mgmt0 interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/nxos/parser_nxos_mgmt0_int.yml
+    content: "{{ mgmt0_int_config.stdout.0 }}"
+  when: mgmt0_int != ""
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=mgmt0_int_facts
+
+- name: NXOS - Check for a vlan99
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - "show ip int brief vrf all | include Vlan99 " 
+  register: vlan99_int
+
+- name: NXOS - capture vlan99 interface config
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show run int vlan99
+  register: vlan99_int_config
+  when: vlan99_int.stdout[0] != ""
+# Debug commands to check output
+#- name: Display output
+#  debug: var=mgmt_int
+
+- name: NXOS - parse vlan99 interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/nxos/parser_nxos_vlan99_int.yml
+    content: "{{ vlan99_int_config.stdout.0 }}"
+  when: vlan99_int.stdout[0] != ""
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=vlan99_int_facts
+
+- name: NXOS - check for loopbacks
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show ip int brief vrf all | inc Loopback
+  register: loopbacks
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=loopbacks
+
+- name: NXOS - create loopback_interfaces list
+  set_fact:
+    loopback_interfaces: []
+  when: loopbacks.stdout[0] != ""
+
+
+- name: NXOS - Register all loopbacks in loopback_interfaces list
+  set_fact:
+    loopback_interfaces: "{{ loopback_interfaces + item | regex_search('(?P<int>Loopback\\d+)','\\g<int>') }}"
+  with_items:
+    "{{ loopbacks.stdout_lines[0] }}"
+  when: loopbacks.stdout[0] != ""
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=loopback_interfaces
+
+- name: NXOS - capture loopback interface config
+  nxos_command:
+    commands:
+      - show run int {{ item }}
+  register: loopback_interfaces_config
+  with_items:
+    "{{ loopback_interfaces }}"
+  when: loopbacks.stdout[0] != ""
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=loopback_interfaces_config
+
+- name: NXOS - parse loopback_interfaces_config output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/nxos/parser_nxos_loopback_int.yml
+    content: "{{ item.stdout.0 }}"
+  with_items:
+    "{{ loopback_interfaces_config.results }}"
+  register: loopbacks_facts
+  when: loopbacks.stdout[0] != ""
+
+- name: NXOS - register tacacs_source interface
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show run | inc 'tacacs source-interface'
+  register: tacacs_source
+
+- name: NXOS - Register tacacs source interface as a variable
+  set_fact:
+    tacacs_src_int: "{{ tacacs_source.stdout[0] | regex_search('tacacs source-interface (?P<int>\\S+)','\\g<int>') }}"
+
+- name: NXOS - capture tacacs source interface config
+# Targets the tacacs source interface as the assumed management interface
+  nxos_command:
+    commands:
+      - show run int {{ tacacs_src_int[0] }}
+  register: tacacs_src_int_config
+  when: tacacs_src_int != ""
+
+- name: NXOS - parse tacacs source interface output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/nxos/parser_nxos_mgmt_tacacs_int.yml
+    content: "{{ tacacs_src_int_config.stdout.0 }}"
+  when: tacacs_src_int != ""
+#
+#- name: debug loopbacks
+#  debug:
+#    var=loopbacks
+#
+#- name: debug loopbacks.stdout[0]
+#  debug:
+#    var=loopbacks.stdout[0]
+#
+#- name: debug loopback_interfaces
+#  debug:
+#    var=loopback_interfaces
+#
+#- name: debug loopback_interfaces_config
+#  debug:
+#    var=loopback_interfaces_config
+#
+#- name: debug loopbacks_facts
+#  debug:
+#    var=loopbacks_facts
+
+- name: NXOS - Generate csv report
+  template:
+    src: /gitnet/ansible/roles/mgmt_int/templates/nxos/csv-template.j2
+    dest: /gitnet/ansible/roles/mgmt_int/files/csv/nxos/{{ inventory_hostname }}.csv

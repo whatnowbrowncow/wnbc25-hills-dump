@@ -1,0 +1,8 @@
+---
+
+- name: Generate VRFs configurations
+  template:
+    src: "vrfs.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/vrfs.cfg"
+  tags:
+    - vrfs

@@ -1,0 +1,141 @@
+---
+
+  - name: PLAY - L3out build
+    hosts: aci
+    connection: local
+    gather_facts: no
+    
+  
+    tasks:
+    
+      - name: build L3out template
+        template:
+          src: "./aci/l3out.j2"
+          dest: "./aci/l3out_{{ item.context }}_fatl3out.json"
+        with_items:
+          - "{{ l3outs }}"
+          
+# Below used for testing          
+#      - name: Output L3outs dict
+#        debug:
+#          msg: "The L3out name is: {{ item.context }}_fatl3out"
+#        with_items:
+#          - "{{ l3outs }}"
+          
+      - name: L3out build
+        aci_rest:
+          hostname: '{{ ansible_host }}'
+          username: '{{ provider_cli.username }}'
+          password: '{{ provider_cli.password }}'
+          method: post
+          path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.context }}_fatl3out.json"
+          src: "./aci/l3out_{{ item.context }}_fatl3out.json"
+          validate_certs: no
+        with_items:
+          - "{{ l3outs }}"
+        #The below register grabs the contents of the returned imdata from the get request
+        register: imdata_l3outs
+        delegate_to: localhost
+
+      - name: Confirm success or failure of configuration
+        debug:
+          msg: "{{item.error_text}}"
+        with_items:
+          - "{{imdata_l3outs.results}}"
+
+## Below used for testing   
+##      - name: Output L3extsubnets dict
+##        debug:
+##          msg:
+##            - "The L3extsubnets is: {{ item.extsubs }}"
+##            - "The L3out tenant is: {{item.tenant}}"
+##            - "The scope is: {{item.extsubs[0].scope}}"
+##        with_items:
+##          - "{{ l3outs }}"
+#         
+#      - name: Build L3 Instance Profile and L3extsubnets template
+#        template:
+#          src: "./aci/l3extsubnet.j2"
+#          dest: "./aci/l3extsubnet_{{ item.context }}_fatl3out.json"
+#        with_items:
+#          - "{{ l3outs }}"
+# 
+#   
+#      - name: L3 Instance Profile and L3extsubnets build
+#        aci_rest:
+#          hostname: '{{ ansible_host }}'
+#          username: '{{ provider_cli.username }}'
+#          password: '{{ provider_cli.password }}'
+#          method: post
+#          path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.context }}_fatl3out/instP-{{ item.context }}_fatl3out.json"
+#          src: "./aci/l3extsubnet_{{ item.context }}_fatl3out.json"
+#          validate_certs: no
+#        with_items:
+#          - "{{ l3outs }}"
+#        #The below register grabs the contents of the returned imdata from the get request
+#        register: imdata_l3extsubs
+#        delegate_to: localhost
+#        
+#      - name: Confirm success or failure of configuration
+#        debug: 
+#          msg: "{{item.error_text}}"
+#        with_items:
+#          - "{{imdata_l3extsubs.results}}"
+#          
+##      - name: Check response status code
+##        debug: var=imdata_l3extsubs.status
+# 
+
+# Below used for testing          
+##      - name: Output L3 Node Profile dict
+##        debug:
+##          msg: "The L3 Node Profile name is: {{ item.1.node_profile }}"
+##        with_subelements:
+##          - "{{ l3outs }}"
+##          - interface_profile
+
+          
+      - name: Build L3 Node Profile template
+        template:
+          src: "./aci/l3extlogicalnodeprofile.j2"
+          dest: "./aci/l3extlogicalnodeprofile_{{ item.0.context }}_{{ item.1.peer_device }}_np.json"
+        with_subelements:
+          - "{{ l3outs }}"
+          - interface_profile
+ 
+  
+      - name: L3 Node Profile build
+        aci_rest:
+          hostname: '{{ ansible_host }}'
+          username: '{{ provider_cli.username }}'
+          password: '{{ provider_cli.password }}'
+          method: post
+          path: "/api/node/mo/uni/tn-{{ item.0.tenant }}/out-{{item.0.context}}_fatl3out/lnodep-{{ item.0.context }}_{{ item.1.peer_device }}_np.json"
+          src: "./aci/l3extlogicalnodeprofile_{{ item.0.context }}_{{ item.1.peer_device }}_np.json"
+          validate_certs: no
+        with_subelements:
+          - "{{ l3outs }}"
+          - interface_profile
+        #The below register grabs the contents of the returned imdata from the get request
+        register: imdata_l3extlogicalnodeprofile
+        delegate_to: localhost
+        
+      - name: Confirm success or failure of configuration
+        debug: 
+          msg: "{{item.error_text}}"
+        with_items:
+          - "{{imdata_l3extlogicalnodeprofile.results}}"
+ 
+#
+#
+#
+#
+ 
+      - name: Build L3 Interface Profile template
+        template:
+          src: "./aci/l3extlogicalinterfaceprofile_test.j2"
+          dest: "./aci/l3extlogicalinterfaceprofile_{{ item.0.context }}_{{ item.1.peer_device }}_intprof.json"
+        with_subelements:
+          - "{{ l3outs }}"
+          - interface_profile
+ 

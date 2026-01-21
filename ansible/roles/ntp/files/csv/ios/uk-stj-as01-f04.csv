@@ -1,0 +1,2 @@
+hostname,ip address,vrf,preferred,source interface
+uk-stj-as01-f04,10.1.99.1,,yes,Vlan99

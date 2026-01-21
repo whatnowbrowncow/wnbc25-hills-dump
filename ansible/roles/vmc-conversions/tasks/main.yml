@@ -1,0 +1,67 @@
+---
+
+- name: Import network parser role
+  include_role:
+    name: ansible-network.network-engine
+
+## ASA-MULTIPLE ########################################################################
+
+## all files at once ##
+
+- name: ASA-MULTIPLE - groups, ports and rules creation task.
+  include_tasks: ./asa-multiple-vmc-all-yaml.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context
+  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+- name: ASA-MULTIPLE - groups, ports and rules VMC Terraform creation task.
+  include_tasks: ./asa-multiple-vmc-all-tf.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context
+  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+## config summary
+
+#- name: ASA-MULTIPLE - configuration count.
+#  include_tasks: ./asa-multiple-config-count.yml
+#  with_items:
+#    - "{{ contexts }}"
+#  loop_control:
+#    loop_var: context
+#  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+## ASA-SINGLE ########################################################################
+
+## network objects/object-groups
+
+- name: ASA-SINGLE - network object/object-group parser VMC YAML creation task.
+  include_tasks: ./asa-single-vmc-groups-yaml.yml
+  when: ansible_network_os == "asa" and context_mode == "single"
+
+- name: ASA-SINGLE - network object/object-group parser VMC Terraform creation task.
+  include_tasks: ./asa-single-vmc-groups-tf.yml
+  when: ansible_network_os == "asa" and context_mode == "single"
+
+## service objects/object-groups
+
+- name: ASA-SINGLE - service object/object-group parser VMC YAML creation task.
+  include_tasks: ./asa-single-vmc-ports-yaml.yml
+  when: ansible_network_os == "asa" and context_mode == "single"
+
+- name: ASA-SINGLE - service object/object-group parser VMC Terraform creation task.
+  include_tasks: ./asa-single-vmc-ports-tf.yml
+  when: ansible_network_os == "asa" and context_mode == "single"
+
+## access-lists
+
+- name: ASA-SINGLE - access-lists parser to VMC YAML creation task.
+  include_tasks: ./asa-single-vmc-rules-yaml.yml
+  when: ansible_network_os == "asa" and context_mode == "single"
+
+- name: ASA-SINGLE - access-lists parser to VMC Terraform creation task.
+  include_tasks: ./asa-single-vmc-rules-tf.yml
+  when: ansible_network_os == "asa" and context_mode == "single"

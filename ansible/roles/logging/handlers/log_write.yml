@@ -1,0 +1,19 @@
+---
+
+- name: "LOG WRITE - Logging changes to disk"
+  block:
+    - name: "LOG WRITE - Building logging directory"
+      listen: "updates exist"
+      file:
+        path: "{{ LOG_PATH }}"
+        state: "directory"
+      changed_when: false
+
+    - name: "LOG WRITE - Printing updates written to device to log file"
+      listen: "updates exist"
+      template:
+        src: "templates/{{ LOG_TEMPLATE }}"
+        dest: "{{ LOG_PATH }}{{ inventory_hostname }}.txt"
+        newline_sequence: '\r\n'
+
+  delegate_to: "localhost"

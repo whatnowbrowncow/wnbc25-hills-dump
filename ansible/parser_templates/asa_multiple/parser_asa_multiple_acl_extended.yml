@@ -1,0 +1,62 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show access-list | exclude ^ "
+    network_os: asa
+
+- name: extended acl match pattern
+  pattern_match:
+    regex: "^access-list +(\\S+) +line +(\\d+) +(?:(?:remark +(\\S+.*))?(?:extended +(permit|deny) +(?:(?:object +(\\S+)?)?(?:object-group +(\\S+))?(?:(ip|tcp|udp|\\S+)?)?)?)?)(?:(?: +host +(\\d+.\\d+.\\d+.\\d+)?)|(?:(?: +object +(\\S+)?)|(?:(?: +object-group +(\\S+)?)|(?: +(any4|any|\\d+.\\d+.\\d+.\\d+ +\\d+.\\d+.\\d+.\\d+)))?))(?: +(?:host +(\\d+.\\d+.\\d+.\\d+)?)|(?: +object +(\\S+)?)|(?: +object-group +(\\S+)?)|(?: +(any4|any|\\d+.\\d+.\\d+.\\d+ +\\d+.\\d+.\\d+.\\d+)))?(?: +(?:eq +(\\S+)?)|(?: +object-group +(\\S+)?)|(?: +range +(\\d+ +\\d+)))?(?: +log +(\\S+))?(?: +interval +(\\d+))?(?: +(inactive))?"
+    match_all: yes
+  register: extended
+
+- name: Generate extended lines JSON data structure - 
+  json_template:
+    template:
+      - key: name
+        value: "{{ item.matches.0 }}"
+      - key: seq
+        value: "{{ item.matches.1 }}"
+      - key: remark
+        value: "{{ item.matches.2 }}"
+      - key: action
+        value: "{{ item.matches.3 }}"
+      - key: src_service_obj
+        value: "{{ item.matches.4 }}"
+      - key: src_service_obj_grp
+        value: "{{ item.matches.5 }}"
+      - key: protocol
+        value: "{{ item.matches.6 }}"
+      - key: src_host
+        value: "{{ item.matches.7 }}"
+      - key: src_network_obj
+        value: "{{ item.matches.8 }}"
+      - key: src_network_obj_grp
+        value: "{{ item.matches.9 }}"
+      - key: src_network
+        value: "{{ item.matches.10 }}"
+      - key: dest_host
+        value: "{{ item.matches.11 }}"
+      - key: dest_network_obj
+        value: "{{ item.matches.12 }}"
+      - key: dest_network_obj_grp
+        value: "{{ item.matches.13 }}"
+      - key: dest_network
+        value: "{{ item.matches.14 }}"
+      - key: dest_port
+        value: "{{ item.matches.15 }}"
+      - key: dest_port_obj_grp
+        value: "{{ item.matches.16 }}"
+      - key: dest_port_range
+        value: "{{ item.matches.17 }}"
+      - key: logging_level
+        value: "{{ item.matches.18 }}"
+      - key: logging_interval
+        value: "{{ item.matches.19 }}"
+      - key: status
+        value: "{{ item.matches.20|default('active',true) }}"
+  loop: "{{ extended }}"
+  export: yes
+  register: acl_extended_facts

@@ -1,0 +1,8 @@
+---
+
+- name: Build VRFs
+  import_tasks: ./aci-vrfs.yml
+  when: ansible_network_os == "aci"
+  tags:
+    - vrf
+

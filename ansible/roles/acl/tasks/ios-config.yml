@@ -1,0 +1,23 @@
+--- 
+
+#- name: IOS - Build configuration for testing purposes
+#  template:
+#    src: /gitnet/ansible/roles/acl/templates/ios/config-template.j2
+#    dest: /gitnet/ansible/roles/acl/files/configs/ios/{{ inventory_hostname }}.cfg
+
+- name: IOS - Construct configuration from template
+  set_fact:
+    acls: "{{ lookup('template', 'templates/ios/config-template.j2')|from_yaml }}"
+
+- name: IOS - Apply configuration from template 
+  ios_config:
+    save_when: "modified"
+    lines: "{{ acl['lines'] }}"
+    match: line
+    replace: block
+    before: "no ip access-list {{ acl['type'] }} {{ acl['name'] }}"
+    parents: "ip access-list {{ acl['type'] }} {{ acl['name'] }}"
+  register: result
+  with_items: "{{acls}}"
+  loop_control:
+    loop_var: acl

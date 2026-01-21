@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+gib-vcore1,netadmin,15,secret,5,$1$jrv6$RAz5ppd.hGSLswd.hyb4C1
+gib-vcore1,svcnetworkauto,15,secret,5,$1$ZJsC$BR/lpzPvmev4tHtUDuh7j0

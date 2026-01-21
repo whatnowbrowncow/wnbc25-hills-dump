@@ -1,0 +1,10 @@
+Port-channel1.381: {admin-state: up, interface: Port-channel1.381, ip-add: 10.180.161.98,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.524: {admin-state: up, interface: Port-channel1.524, ip-add: 10.180.186.130,
+  nameif: wan-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.536: {admin-state: up, interface: Port-channel1.536, ip-add: 10.180.187.193,
+  nameif: tote-vrf, netmask: 255.255.255.224, security-level: '50'}
+Port-channel1.571: {admin-state: up, interface: Port-channel1.571, ip-add: 10.180.193.100,
+  nameif: group-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.60: {admin-state: up, interface: Port-channel1.60, ip-add: 10.180.25.161,
+  nameif: eggcloud, netmask: 255.255.255.248, security-level: '10'}

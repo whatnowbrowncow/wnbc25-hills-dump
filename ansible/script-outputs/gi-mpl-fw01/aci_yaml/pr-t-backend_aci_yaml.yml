@@ -1,0 +1,71 @@
+
+  - app_prof: 'pr-t-backend'
+    tenant: 'production'
+    vrf: 'pr-t-backend'
+    bds:
+      - bd: 'pr-t-backend_internal-vrf'
+        network: '10.180.161.0'
+        gateway: '10.180.161.4'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-backend_internal-vrf'
+            encap_id: '379'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-backend_external-web-bottom-new'
+        network: '10.180.172.0'
+        gateway: '10.180.172.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-backend_external-web-bottom-new'
+            encap_id: '456'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-backend_int-web-bottom'
+        network: '10.180.172.128'
+        gateway: '10.180.172.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-backend_int-web-bottom'
+            encap_id: '457'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-backend_external-web-bottom'
+        network: '10.180.176.0'
+        gateway: '10.180.176.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-backend_external-web-bottom'
+            encap_id: '470'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-backend_internal-web-bottom'
+        network: '10.180.176.32'
+        gateway: '10.180.176.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-backend_internal-web-bottom'
+            encap_id: '471'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-backend_trading-app'
+        network: '10.180.177.0'
+        gateway: '10.180.177.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-backend_trading-app'
+            encap_id: '478'
+            vcenter_dynamic_vlan: true

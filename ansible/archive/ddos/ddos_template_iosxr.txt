@@ -1,0 +1,112 @@
+!
+interface tunnel-ip10
+ description vpn-PLXLON2003493-(uk-ld6-er01)
+ mtu 1360
+ ipv4 address 209.200.181.94 255.255.255.254
+ ipv4 tcp-mss-adjust enable
+ load-interval 30
+ tunnel mode gre ipv4
+ tunnel source TenGigE0/0/2/2
+ keepalive 10 3
+ tunnel destination 209.200.161.239
+ logging events link-status
+!
+
+!
+prefix-set ld6-frontend-prefix
+  185.119.152.0/24,
+  185.119.153.0/24,
+  185.119.154.0/24,
+  185.119.155.0/24
+end-set
+!
+prefix-set pfx-global-prefixes
+  185.119.152.0/22
+end-set
+!
+
+!
+route-policy rpl-prolexic-out
+  if destination in ld6-frontend-prefix then
+    set community (32787:280)
+    pass
+  endif
+end-policy
+!
+
+router bgp 57002
+ bfd minimum-interval 100
+ bfd multiplier 3
+ bgp router-id 185.119.152.82
+ bgp log neighbor changes detail
+ address-family ipv4 unicast
+  network 185.119.152.0/22
+  network 185.119.152.0/24
+  network 185.119.153.0/24
+  network 185.119.154.0/24
+  network 185.119.155.0/24
+ !
+ neighbor-group ng-ibgp
+  remote-as 57002
+  bfd fast-detect
+  timers 10 30
+  password encrypted 132A15471F04052F2825212A202C120E1E
+  update-source Loopback0
+  address-family ipv4 unicast
+   route-policy rpl-ibgp-in in
+   next-hop-self
+  !
+ !
+ neighbor-group ng-prolexic
+  remote-as 32787
+  timers 10 30
+  password encrypted 0056262C54551A305E75151C2F360843213F59500C
+  address-family ipv4 unicast
+   send-community-ebgp
+   route-policy rpl-drop in
+   route-policy rpl-prolexic-out out
+   send-extended-community-ebgp
+  !
+ !
+ neighbor 72.52.55.123
+  use neighbor-group ng-prolexic
+  description prolexic frankfurt
+ !
+ neighbor 62.254.92.198
+  remote-as 5089
+  timers 10 30
+  description VM media
+  address-family ipv4 unicast
+   route-policy rpl-virgin-in in
+   route-policy rpl-virgin-out out
+  !
+ !
+ neighbor 141.138.128.81
+  use neighbor-group ng-ibgp
+  shutdown
+  description uk-sc1-er02
+ !
+ neighbor 141.138.128.82
+  use neighbor-group ng-ibgp
+  shutdown
+  description uk-sc1-er01
+ !
+ neighbor 141.138.129.81
+  use neighbor-group ng-ibgp
+  shutdown
+  description uk-sc1-er02
+ !
+ neighbor 141.138.129.82
+  use neighbor-group ng-ibgp
+  shutdown
+  description uk-sc1-er01
+ !
+ neighbor 185.119.152.81
+  use neighbor-group ng-ibgp
+  description uk-ld6-er02
+ !
+ neighbor 209.200.181.95
+  use neighbor-group ng-prolexic
+  description prolexic london
+ !
+!

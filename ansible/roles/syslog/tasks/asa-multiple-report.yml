@@ -1,0 +1,39 @@
+---
+
+- name: ASA-MULTIPLE - collect syslog info
+  asa_command:
+    commands:
+      - show run | inc logging
+    context: "{{ item.context }}"
+
+  with_items:
+    - "{{ contexts }}"
+  register: "asa_multiple_syslog_output"
+
+
+# #Debug asa_multiple_syslog_output
+#- name: Display output
+#  debug: var=asa_multiple_syslog_output
+
+- name: ASA-MULTIPLE - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_syslog.yml
+    content: "{{ item.stdout.0 }}"
+  with_items:
+    - "{{ asa_multiple_syslog_output.results }}"
+  register: "asa_facts"
+#
+## Debug commands to check output
+#- name: Display JSON output
+#  debug: var="syslog_server_facts"
+#  with_items:
+#    - "{{ contexts }}"
+
+#- name: Display JSON output
+#  debug: var="asa_facts"
+
+#
+- name: ASA-MULTIPLE - Generate csv report
+  template:
+    src: /gitnet/ansible/roles/syslog/templates/asa_multiple/csv-template.j2
+    dest: /gitnet/ansible/roles/syslog/files/csv/asa_multiple/{{ inventory_hostname }}.csv

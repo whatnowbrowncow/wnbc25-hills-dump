@@ -1,0 +1,16 @@
+{% for host in aaa_all.servers %}
+tacacs-server host {{ host.ip_addr }} port 49
+ key {{ aaa_all.key }}
+{% endfor %}
+aaa group server tacacs+ {{ aaa_all.group_name }}
+{% for host in aaa_all.servers %} 
+ server {{ host.ip_addr }}
+{% endfor %}
+ vrf {{ aaa_iosxr.grp_vrf }}
+tacacs source-interface {{ aaa_iosxr.source_interface }} vrf {{ aaa_iosxr.source_vrf }}
+aaa accounting exec default start-stop group {{ aaa_all.group_name }}
+aaa accounting system default start-stop group {{ aaa_all.group_name }}
+aaa accounting commands default start-stop group {{ aaa_all.group_name }}
+aaa authorization exec default group {{ aaa_all.group_name }} local
+aaa authorization commands default group {{ aaa_all.group_name }} none
+aaa authentication login default group {{ aaa_all.group_name }} local

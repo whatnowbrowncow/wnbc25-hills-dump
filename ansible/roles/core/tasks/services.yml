@@ -1,0 +1,8 @@
+---
+
+- name: Generate services configurations
+  template:
+    src: "services.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/services.cfg"
+  tags:
+    - services

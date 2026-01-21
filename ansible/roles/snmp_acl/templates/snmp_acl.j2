@@ -1,0 +1,9 @@
+{% for acl in snmp_acl %}
+{% if acl.remark is defined %}
+access-list {{ acl.acl_num }} remark {{ acl.remark}}
+{% endif %}
+{% for address in acl.address %}
+access-list {{ acl.acl_num }} permit {{ address }}
+{% endfor %}
+access-list {{ acl.acl_num }} deny   any log
+{% endfor %}

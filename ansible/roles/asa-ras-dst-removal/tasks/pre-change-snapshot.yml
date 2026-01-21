@@ -1,0 +1,27 @@
+---
+# Creates the Directory to store the config and snapshot files 
+- name: ASA-RAS - Create directory for changes and config files if not present 
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "{{ configs_dir }}"
+    - "{{ changes_dir }}"
+  check_mode: no
+  changed_when: False
+
+# Retrieves current RAS dsts and Group Policy Information 
+- name: ASA-RAS - Retrieving the pre-change dst configuration 
+  asa_command:
+    commands:
+      - "show run anyconnect-custom-data"
+      - "show running-config group-policy"
+  register: activedst
+
+
+#  Places information gathered in the task above into a temporary file for used in comparison 
+- name: ASA-RAS - Taking a snapshot of the pre_change dst configuration 
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ pre_conf_file }}"
+  changed_when: false

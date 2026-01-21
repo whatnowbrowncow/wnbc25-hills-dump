@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+STJ_SIP_GW,10.120.193.235,,no,GigabitEthernet0/0
+STJ_SIP_GW,10.210.193.236,,no,GigabitEthernet0/0

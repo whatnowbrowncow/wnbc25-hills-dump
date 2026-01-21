@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: uk-ld6-fw03-pri @ 20200730T094714 ---!
+!
+logging host internal-vrf 10.120.163.126
+!
+!--- END UPDATES: uk-ld6-fw03-pri @ 20200730T094714 ---!
+}

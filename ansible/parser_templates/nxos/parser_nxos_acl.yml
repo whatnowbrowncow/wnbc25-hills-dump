@@ -1,0 +1,59 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show access-lists
+    network_os: nxos
+
+- name: Match - ACL Lines
+  pattern_match:
+    regex: "^\\s+"
+    match_all: yes
+    match_greedy: yes
+  register: acl_lines
+
+- name: Match - ACL Line parameters
+  pattern_group:
+    - name:
+      pattern_match:
+        regex: "^\\s+(\\d+)\\s+(?:(remark\\s+(\\S+.*)?))?(?:(permit|deny)?\\s+?((?:ip|tcp|udp)+)\\s+((?:any|host|[\\d.]+(?:/\\d+)?)?(?: [\\d.]+)?)(?:(\\s+(eq|gt|lt|neq|range)\\s+(\\S+)))?\\s+?((?:any|host|[\\d.]+(?:/\\d+)?)?(?: [\\d.]+)?)(?:\\s+(eq|gt|lt|neq|range)\\s+((?:\\S\\ ?)+\\S))?(\\s+established\\s+log)?(?:\\s+(log))?)?"
+        content: "{{ item }}"
+        match_all: yes
+      register: parameter
+
+  loop: "{{ acl_lines }}"
+  register: acl_values
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: "access_entry"
+        object:
+          - key: seq_num
+            value: "{{ item.parameter.0.matches[0] }}"
+          - key: remark
+            value: "{{ item.parameter.0.matches[2] }}"
+          - key: action
+            value: "{{ item.parameter.0.matches[3] }}"
+          - key: protocol
+            value: "{{ item.parameter.0.matches[4] }}"
+          - key: src_network
+            value: "{{ item.parameter.0.matches[5] }}"
+          - key: src_operator
+            value: "{{ item.parameter.0.matches[7] }}"
+          - key: src_port
+            value: "{{ item.parameter.0.matches[8] }}"
+          - key: dest_network
+            value: "{{ item.parameter.0.matches[9] }}"
+          - key: dest_operator
+            value: "{{ item.parameter.0.matches[10] }}"
+          - key: dest_port
+            value: "{{ item.parameter.0.matches[11] }}"
+          - key: established_log
+            value: "{{ item.parameter.0.matches[12] }}"
+          - key: logging
+            value: "{{ item.parameter.0.matches[13] }}"
+  register: access_lists_facts
+  export: yes
+  loop: "{{ acl_values }}"

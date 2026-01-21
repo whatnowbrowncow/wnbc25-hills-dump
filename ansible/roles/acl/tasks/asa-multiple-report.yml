@@ -1,0 +1,72 @@
+---
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Collecting the ACL configuration
+  asa_command:
+    commands:
+      - "show running-config | include access-list"
+      - "show running-config | include access-group"
+    context: "{{ item.context }}"
+  register: acl_output
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Parsing the access-group configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_acl_access_groups.yml"
+    content: "{{ acl_output.stdout.1 }}"
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Collecting the names of extended ACLs
+  set_fact:
+    ext_acls: "{{ acl_output.stdout[0] | regex_findall('^access-list +(?!global_mpc)(\\S+) +extended','\\g<#ext_acls>') | unique }}"
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Collecting the configuration lines of each extended ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ ext_acls }}"
+  loop_control:
+    label: "Collecting the configuration of access-list {{ item }}"
+  register: rules
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Parsing the extended ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_acl_extended.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: extended_access_lists
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Collecting the names of standard ACLs
+  set_fact:
+    std_acls: "{{ acl_output.stdout[0] | regex_findall('^access-list +(\\S+) +standard','\\g<std_acls>') | unique }}"
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Collecting the configuration lines of each standard ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ std_acls }}"
+  loop_control:
+    label: "Collecting the configuration of access-list {{ item }}"
+  register: rules
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Parsing the standard ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_acl_standard.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: standard_access_lists
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Joining the ACLs (extended | standard) for YAML templating
+  set_fact:
+    access_lists: "{{ extended_access_lists.results + standard_access_lists.results }}"
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Creating a directory for CSV files (if not already present)
+  file:
+    path: "{{ role_path }}/files/csv/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}"
+    state: directory
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Generating the CSV report - Access Lists
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/csv-template.j2"
+    dest: "{{ role_path }}/files/csv/asa_multiple/{{ inventory_hostname }}/contexts/{{ item.context }}/acl.csv"

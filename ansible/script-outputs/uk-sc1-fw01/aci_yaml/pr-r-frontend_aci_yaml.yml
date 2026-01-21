@@ -1,0 +1,93 @@
+
+  - app_prof: 'pr-r-frontend'
+    tenant: 'production'
+    vrf: 'pr-r-frontend'
+    bds:
+      - bd: 'pr-r-frontend_internal-vrf'
+        network: '10.120.161.32'
+        gateway: '10.120.161.36'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_internal-vrf'
+            encap_id: '379'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-frontend_retail-ad-top'
+        network: '10.120.168.192'
+        gateway: '10.120.168.193'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_retail-ad-top'
+            encap_id: '446'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-frontend_retail-top-new'
+        network: '10.120.170.0'
+        gateway: '10.120.170.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_retail-top-new'
+            encap_id: '450'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-frontend_retail-3rd-party-top'
+        network: '10.120.170.128'
+        gateway: '10.120.170.129'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_retail-3rd-party-top'
+            encap_id: '451'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-frontend_retail-stingray'
+        network: '10.120.172.0'
+        gateway: '10.120.172.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_retail-stingray'
+            encap_id: '453'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-frontend_retail-vrf'
+        network: '10.120.186.64'
+        gateway: '10.120.186.68'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_retail-vrf'
+            encap_id: '522'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-frontend_sis-vrf'
+        network: '10.120.187.64'
+        gateway: '10.120.187.68'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_sis-vrf'
+            encap_id: '532'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-frontend_tote-vrf'
+        network: '10.120.187.192'
+        gateway: '10.120.187.196'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-frontend_tote-vrf'
+            encap_id: '536'
+            vcenter_dynamic_vlan: true

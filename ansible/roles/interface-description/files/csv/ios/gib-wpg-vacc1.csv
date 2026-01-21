@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+gib-wpg-vacc1,Vlan351,no_data_in_cdp
+gib-wpg-vacc1,Port-channel1,no_data_in_cdp

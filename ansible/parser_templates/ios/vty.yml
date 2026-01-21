@@ -1,0 +1,110 @@
+---
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run | section vty
+    network_os: ios
+                            
+- name: match sections
+  pattern_match:
+    regex: "^line vty"
+    match_all: yes
+    match_greedy: yes
+  register: section
+                            
+                            
+- name: match vty configuration
+  pattern_group:
+    - name: match vty line range
+      pattern_match:
+        regex: "^line vty (.*)"
+        content: "{{ item }}"
+      register: line_range
+                                           
+    - name: match access-class
+      pattern_match:
+        regex: "access-class (\\S+)"
+        content: "{{ item }}"
+      register: access_class
+                                                                                                               
+    - name: match access-class direction
+      pattern_match:
+        regex: "access-class \\S+ (\\S+)"
+        content: "{{ item }}"
+      register: access_class_direction
+                                                                                                                          
+    - name: match vrf-also
+      pattern_match:
+        regex: "access-class .* (vrf-also)"
+        content: "{{ item }}"
+      register: vrf_also 
+
+    - name: exec_timeout
+      pattern_match:
+        regex: "exec-timeout (.*)"
+        content: "{{ item }}"
+      register: exec_timeout
+
+    - name: match password
+      pattern_match:
+        regex: "password \\d+ (\\S+)"
+        content: "{{ item }}"
+      register: password
+                                                                                                                          
+    - name: match password_type
+      pattern_match:
+        regex: "password (\\d+)"
+        content: "{{ item }}"
+      register: password_type 
+
+    - name: logging
+      pattern_match:
+        regex: "logging (synchronous)"
+        content: "{{ item }}"
+      register: logging
+
+    - name: match transport_input
+      pattern_match:
+        regex: "transport input (.*)"
+        content: "{{ item }}"
+      register: transport_input 
+
+    - name: transport_output
+      pattern_match:
+        regex: "transport output (.*)"
+        content: "{{ item }}"
+      register: transport_output
+
+  loop: "{{ section }}"
+  register: vty
+
+- name: generate json data structure
+  json_template:
+    template:
+      - key: config
+        object:
+          - key: line_range
+            value: "{{ item.line_range.matches.0 }}"
+          - key: access_class
+            value: "{{ item.access_class.matches.0 }}"
+          - key: access_class_direction
+            value: "{{ item.access_class_direction.matches.0 }}"
+          - key: vrf_also
+            value: "{{ item.vrf_also.matches.0 }}"
+          - key: exec_timeout
+            value: "{{ item.exec_timeout.matches.0 }}"
+          - key: password
+            value: "{{ item.password.matches.0 }}"
+          - key: password_type
+            value: "{{ item.password_type.matches.0 }}"
+          - key: logging
+            value: "{{ item.logging.matches.0 }}"
+          - key: transport_input
+            value: "{{ item.transport_input.matches.0 }}"
+          - key: transport_output
+            value: "{{ item.transport_output.matches.0 }}"
+
+  loop: "{{ vty }}"
+  ##use export to display to screen
+  export: yes
+  register: ios_vty_facts

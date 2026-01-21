@@ -1,0 +1,22 @@
+---
+
+- name: IOS-XR - Collecting the SNMP configuration
+  iosxr_command:
+    commands:
+      - show run | i snmp
+  register: raw_output
+
+- name: IOS-XR - Parsing the SNMP configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/iosxr/parser_iosxr_snmp.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+- name: IOS-XR - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS-XR - Generating the YAML file
+  template:
+    src: "/gitnet/ansible/roles/snmp/templates/iosxr/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/snmp.yml"

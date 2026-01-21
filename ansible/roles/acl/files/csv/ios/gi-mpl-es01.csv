@@ -1,0 +1,116 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+gi-mpl-es01,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+gi-mpl-es01,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+gi-mpl-es01,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+gi-mpl-es01,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+gi-mpl-es01,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+gi-mpl-es01,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+gi-mpl-es01,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+gi-mpl-es01,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+gi-mpl-es01,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+gi-mpl-es01,solarwinds-new,Standard,100,deny,,any log,,,
+gi-mpl-es01,edge-protect-acl,Extended,10,permit,eigrp,any,any,
+gi-mpl-es01,edge-protect-acl,Extended,20,permit,ip,host 212.142.66.129,any,
+gi-mpl-es01,edge-protect-acl,Extended,30,permit,ip,host 213.120.94.19,any,
+gi-mpl-es01,edge-protect-acl,Extended,40,permit,ip,host 213.120.94.24,any,
+gi-mpl-es01,edge-protect-acl,Extended,50,permit,ip,host 81.149.239.118,any,
+gi-mpl-es01,edge-protect-acl,Extended,60,permit,ip,host 195.244.198.114,any,
+gi-mpl-es01,edge-protect-acl,Extended,70,permit,ip,host 195.244.210.64,any,
+gi-mpl-es01,edge-protect-acl,Extended,80,permit,ip,host 194.73.173.134,any,
+gi-mpl-es01,edge-protect-acl,Extended,90,permit,ip,host 194.73.173.139,any,
+gi-mpl-es01,edge-protect-acl,Extended,100,deny,tcp,any,1.184.0 0.0.7.255,www
+gi-mpl-es01,edge-protect-acl,Extended,110,permit,ip,host 141.138.128.104,any,
+gi-mpl-es01,edge-protect-acl,Extended,120,permit,ip,host 92.247.8.98,any,
+gi-mpl-es01,edge-protect-acl,Extended,130,permit,ip,host 31.193.138.158,any,
+gi-mpl-es01,edge-protect-acl,Extended,140,permit,ip,host 31.193.138.159,any,
+gi-mpl-es01,edge-protect-acl,Extended,150,permit,ip,host 31.193.138.161,any,
+gi-mpl-es01,edge-protect-acl,Extended,160,permit,ip,92.48.64.0 0.0.0.7,any,
+gi-mpl-es01,edge-protect-acl,Extended,170,permit,ip,92.48.96.200 0.0.0.7,any,
+gi-mpl-es01,edge-protect-acl,Extended,180,permit,ip,213.165.239.144 0.0.0.15,any,
+gi-mpl-es01,edge-protect-acl,Extended,190,permit,tcp,any,1.186.0 0.0.0.127,22
+gi-mpl-es01,edge-protect-acl,Extended,200,permit,tcp,any,1.186.0 0.0.0.127,ftp
+gi-mpl-es01,edge-protect-acl,Extended,210,permit,tcp,any,1.186.0 0.0.0.127,www
+gi-mpl-es01,edge-protect-acl,Extended,220,permit,tcp,any,1.186.0 0.0.0.127,443
+gi-mpl-es01,edge-protect-acl,Extended,230,permit,tcp,any,1.186.0 0.0.0.127,444
+gi-mpl-es01,edge-protect-acl,Extended,240,permit,tcp,any,1.186.0 0.0.0.127,843
+gi-mpl-es01,edge-protect-acl,Extended,250,permit,tcp,any,1.186.0 0.0.0.127,1935
+gi-mpl-es01,edge-protect-acl,Extended,260,permit,tcp,any,1.186.0 0.0.0.127,2156
+gi-mpl-es01,edge-protect-acl,Extended,270,permit,tcp,any,1.186.0 0.0.0.127,5118
+gi-mpl-es01,edge-protect-acl,Extended,280,permit,tcp,any,1.186.0 0.0.0.127,5119
+gi-mpl-es01,edge-protect-acl,Extended,290,permit,tcp,any,1.186.0 0.0.0.127,
+gi-mpl-es01,edge-protect-acl,Extended,300,permit,udp,any,1.186.0 0.0.0.127,domain
+gi-mpl-es01,edge-protect-acl,Extended,310,permit,udp,any,1.186.0 0.0.0.127,5119
+gi-mpl-es01,edge-protect-acl,Extended,320,permit,udp,host 95.131.184.30,host 95.131.184.44,9995
+gi-mpl-es01,edge-protect-acl,Extended,330,permit,udp,host 95.131.184.31,host 95.131.184.44,9995
+gi-mpl-es01,edge-protect-acl,Extended,340,permit,udp,host 95.131.184.30,host 95.131.184.68,9991
+gi-mpl-es01,edge-protect-acl,Extended,350,permit,udp,host 95.131.184.31,host 95.131.184.68,9991
+gi-mpl-es01,edge-protect-acl,Extended,360,deny,ip,any,1.186.0 0.0.0.127,
+gi-mpl-es01,edge-protect-acl,Extended,370,deny,udp,any,1.186.0 0.0.0.127,
+gi-mpl-es01,edge-protect-acl,Extended,380,permit,ip,host 94.156.185.44,any,
+gi-mpl-es01,edge-protect-acl,Extended,390,permit,ip,host 87.121.79.4,any,
+gi-mpl-es01,edge-protect-acl,Extended,400,permit,ip,any,any,
+gi-mpl-es01,1,Standard,10,permit,,10.120.163.210,,,
+gi-mpl-es01,1,Standard,20,permit,,10.1.74.66,,,
+gi-mpl-es01,1,Standard,30,permit,,10.112.12.126,,,
+gi-mpl-es01,1,Standard,40,permit,,10.112.12.125,,,
+gi-mpl-es01,1,Standard,50,permit,,10.180.163.18,,,
+gi-mpl-es01,1,Standard,60,permit,,10.120.163.151,,,
+gi-mpl-es01,1,Standard,70,permit,,10.210.163.60,,,
+gi-mpl-es01,1,Standard,80,permit,,10.120.163.152,,,
+gi-mpl-es01,1,Standard,90,permit,,10.1.74.29,,,
+gi-mpl-es01,1,Standard,100,permit,,10.120.163.143,,,
+gi-mpl-es01,1,Standard,110,permit,,10.120.163.142,,,
+gi-mpl-es01,1,Standard,120,permit,,10.112.13.17,,,
+gi-mpl-es01,1,Standard,130,permit,,10.1.74.48,,,
+gi-mpl-es01,1,Standard,140,permit,,10.1.74.57,,,
+gi-mpl-es01,1,Standard,150,permit,,10.1.74.61,,,
+gi-mpl-es01,1,Standard,160,permit,,10.120.163.123,,,
+gi-mpl-es01,1,Standard,170,permit,,10.120.163.122,,,
+gi-mpl-es01,1,Standard,180,permit,,10.120.195.31,,,
+gi-mpl-es01,1,Standard,190,permit,,10.120.143.70,,,
+gi-mpl-es01,1,Standard,200,permit,,10.1.74.128,,,
+gi-mpl-es01,1,Standard,210,permit,,10.180.142.230,,,
+gi-mpl-es01,1,Standard,220,permit,,10.112.12.144,,,
+gi-mpl-es01,1,Standard,230,permit,,10.120.163.37,,,
+gi-mpl-es01,1,Standard,240,permit,,10.112.12.142,,,
+gi-mpl-es01,1,Standard,250,permit,,10.112.12.143,,,
+gi-mpl-es01,1,Standard,260,permit,,10.1.82.64 0.0.0.31,,,
+gi-mpl-es01,1,Standard,270,permit,,10.1.22.0 0.0.0.255,,,
+gi-mpl-es01,1,Standard,280,permit,,192.168.2.0 0.0.1.255,,,
+gi-mpl-es01,1,Standard,290,permit,,10.210.141.40 0.0.0.7,,,
+gi-mpl-es01,1,Standard,300,permit,,10.180.141.40 0.0.0.7,,,
+gi-mpl-es01,1,Standard,310,permit,,10.120.141.40 0.0.0.7,,,
+gi-mpl-es01,1,Standard,320,permit,,100.79.0.0 0.0.127.255,,,
+gi-mpl-es01,1,Standard,330,deny,,any log,,,
+gi-mpl-es01,10,Standard,10,permit,,10.120.163.210,,,
+gi-mpl-es01,10,Standard,20,permit,,10.112.12.126,,,
+gi-mpl-es01,10,Standard,30,permit,,10.112.12.125,,,
+gi-mpl-es01,10,Standard,40,permit,,95.131.184.34,,,
+gi-mpl-es01,10,Standard,50,permit,,141.138.130.1,,,
+gi-mpl-es01,10,Standard,60,permit,,10.120.163.123,,,
+gi-mpl-es01,10,Standard,70,permit,,10.120.163.122,,,
+gi-mpl-es01,10,Standard,80,permit,,10.120.163.59,,,
+gi-mpl-es01,11,Standard,10,permit,,10.112.12.126,,,
+gi-mpl-es01,11,Standard,20,permit,,10.112.12.125,,,
+gi-mpl-es01,11,Standard,30,permit,,10.120.136.140,,,
+gi-mpl-es01,11,Standard,40,permit,,10.120.163.123,,,
+gi-mpl-es01,11,Standard,50,permit,,10.120.163.122,,,
+gi-mpl-es01,11,Standard,60,permit,,10.50.3.140,,,
+gi-mpl-es01,11,Standard,70,deny,,any log,,,
+gi-mpl-es01,12,Standard,10,permit,,10.180.163.0 0.0.0.255,,,
+gi-mpl-es01,16,Standard,10,permit,,10.120.163.206,,,
+gi-mpl-es01,16,Standard,20,permit,,10.120.136.150,,,
+gi-mpl-es01,17,Standard,10,permit,,10.180.163.120,,,
+gi-mpl-es01,22,Standard,10,permit,,10.112.12.119,,,
+gi-mpl-es01,22,Standard,20,permit,,10.210.143.80,,,
+gi-mpl-es01,22,Standard,30,permit,,10.120.143.80,,,
+gi-mpl-es01,22,Standard,40,permit,,10.180.142.232,,,
+gi-mpl-es01,101,Extended,10,permit,tcp,any,1.186.0 0.0.0.255,www
+gi-mpl-es01,101,Extended,20,permit,tcp,any,1.186.0 0.0.0.255,8080
+gi-mpl-es01,101,Extended,30,permit,tcp,any,1.186.0 0.0.0.255,8081
+gi-mpl-es01,101,Extended,40,permit,tcp,any,1.186.0 0.0.0.255,
+gi-mpl-es01,101,Extended,50,permit,tcp,any,1.190.0 0.0.1.255,www
+gi-mpl-es01,101,Extended,60,permit,tcp,any,1.190.0 0.0.1.255,8080
+gi-mpl-es01,101,Extended,70,permit,tcp,any,1.190.0 0.0.1.255,8081
+gi-mpl-es01,101,Extended,80,permit,tcp,any,1.190.0 0.0.1.255,
+gi-mpl-es01,101,Extended,90,deny,ip,any,any,

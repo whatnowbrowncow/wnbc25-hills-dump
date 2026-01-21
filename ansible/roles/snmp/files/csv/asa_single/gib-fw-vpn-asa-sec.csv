@@ -1,0 +1,13 @@
+hostname,ip address,source int,community,poll/trap,version
+gib-fw-vpn-asa-sec,10.120.163.206,Management,5&prU$pAtu!H,poll,2c
+gib-fw-vpn-asa-sec,10.180.163.120,Internal-VRF,DrgsY2ZvSaftVyx83A4S,both,2c
+gib-fw-vpn-asa-sec,10.180.163.103,Internal-VRF,ZPKFuv&3,poll,2c
+gib-fw-vpn-asa-sec,10.180.163.13,Internal-VRF,ZPKFuv&3,poll,2c
+gib-fw-vpn-asa-sec,10.1.82.72,Internet,c1sc0,poll,2c
+gib-fw-vpn-asa-sec,10.180.163.15,Internal-VRF,e45g@we4,both,2c
+gib-fw-vpn-asa-sec,10.180.163.111,Internal-VRF,n1m50ft,poll,2c
+gib-fw-vpn-asa-sec,10.180.163.112,Internal-VRF,n1m50ft,poll,2c
+gib-fw-vpn-asa-sec,10.180.163.12,Internal-VRF,yvWCBS$8,both,2c
+gib-fw-vpn-asa-sec,10.120.163.59,Management,zZ3WGJW5uH,poll,2c
+gib-fw-vpn-asa-sec,10.120.163.210,Management,m0squ1t0,poll,2c
+gib-fw-vpn-asa-sec,10.180.163.71,Internal-VRF,m0squ1t0,poll,2c

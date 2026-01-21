@@ -1,0 +1,73 @@
+admin:
+  admin-context: admin
+  allocate-interface: [Ethernet1/8]
+  config-url: disk0:/admin.cfg
+  context: admin
+  username: netadmin
+pr-c-fr-cx:
+  allocate-interface: [Port-channel1.384, Port-channel1.708-Port-channel1.730, Port-channel1.758-Port-channel1.780]
+  config-url: disk0:/pr-c-fr-cx.cfg
+  context: pr-c-fr-cx
+  description: internal-vrf
+  join-failover-group: '2'
+pr-c-frontend:
+  allocate-interface: [Port-channel1.100-Port-channel1.102, Port-channel1.115, Port-channel1.123,
+    Port-channel1.134, Port-channel1.140, Port-channel1.154, Port-channel1.162, Port-channel1.371]
+  config-url: disk0:/pr-c-frontend.cfg
+  context: pr-c-frontend
+  description: internal-vrf
+pr-c-mgt:
+  allocate-interface: [Port-channel1.300, Port-channel1.302-Port-channel1.307, Port-channel1.309-Port-channel1.310,
+    Port-channel1.319-Port-channel1.321, Port-channel1.323, Port-channel1.329, Port-channel1.333-Port-channel1.337,
+    Port-channel1.375]
+  config-url: disk0:/pr-c-mgt.cfg
+  context: pr-c-mgt
+  description: internal-vrf
+pr-e-internal:
+  allocate-interface: [Port-channel1.383, Port-channel1.398-Port-channel1.399]
+  config-url: disk0:/pr-e-internal.cfg
+  context: pr-e-internal
+  description: internal-vrf
+pr-e-wan:
+  allocate-interface: [Port-channel1.381, Port-channel1.502, Port-channel1.507, Port-channel1.571]
+  config-url: disk0:/pr-e-wan.cfg
+  context: pr-e-wan
+  description: us-vrf
+  join-failover-group: '2'
+pr-inv-fr-cx:
+  allocate-interface: [Port-channel1.403, Port-channel1.808-Port-channel1.822, Port-channel1.858-Port-channel1.872]
+  config-url: disk0:/pr-inv-fr-cx.cfg
+  context: pr-inv-fr-cx
+  description: internal-vrf
+pr-n-frontend:
+  allocate-interface: [Port-channel1.200-Port-channel1.205, Port-channel1.207, Port-channel1.213-Port-channel1.214,
+    Port-channel1.216, Port-channel1.218-Port-channel1.219, Port-channel1.222-Port-channel1.223,
+    Port-channel1.231-Port-channel1.234, Port-channel1.262-Port-channel1.264, Port-channel1.377]
+  config-url: disk0:/pr-n-frontend.cfg
+  context: pr-n-frontend
+  description: internal-vrf
+pr-n-mgt:
+  allocate-interface: [Port-channel1.340-Port-channel1.345, Port-channel1.347-Port-channel1.349,
+    Port-channel1.353, Port-channel1.362, Port-channel1.364-Port-channel1.365, Port-channel1.368,
+    Port-channel1.376]
+  config-url: disk0:/pr-n-mgt.cfg
+  context: pr-n-mgt
+  description: internal-vrf
+pr-r-backend:
+  allocate-interface: [Port-channel1.380, Port-channel1.460-Port-channel1.461, Port-channel1.480,
+    Port-channel1.539]
+  config-url: disk0:/pr-r-backend.cfg
+  context: pr-r-backend
+  description: internal-vrf
+pr-r-frontend:
+  allocate-interface: [Port-channel1.379, Port-channel1.443, Port-channel1.446, Port-channel1.451,
+    Port-channel1.453, Port-channel1.522, Port-channel1.532, Port-channel1.536]
+  config-url: disk0:/pr-r-frontend.cfg
+  context: pr-r-frontend
+  description: internal-vrf
+pr-r-mgt:
+  allocate-interface: [Port-channel1.378, Port-channel1.452, Port-channel1.485-Port-channel1.486,
+    Port-channel1.492]
+  config-url: disk0:/pr-r-mgt.cfg
+  context: pr-r-mgt
+  description: internal-vrf

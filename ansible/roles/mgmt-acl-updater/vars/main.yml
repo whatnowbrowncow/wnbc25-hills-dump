@@ -1,0 +1,35 @@
+--- 
+
+mgmt_acl: 
+
+#
+#  remark: "example access-list entries"
+#  lines:
+#  -
+#    host: "10.120.163.122"
+#  -
+#    network: "192.168.0.0"
+#    wilcard: "0.0.7.255"
+#    cidr: "21"
+#
+
+  remark: ""
+  lines:
+  -
+    host: ""
+  -
+    host: ""
+  -
+    host: ""
+  -
+    network: ""
+    wilcard: ""
+    cidr: ""
+  -
+    network: ""
+    wilcard: ""
+    cidr: ""
+  -
+    network: ""
+    wilcard: ""
+    cidr: ""

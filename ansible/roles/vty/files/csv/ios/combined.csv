@@ -1,0 +1,328 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+GH_FIBRESWITCH_1,0 4,,,5 0,104C104D0B47010E,telnet ssh,,no,synchronous
+GH_FIBRESWITCH_1,5 15,,,5 0,00060A520A0B1803,telnet ssh,,no,synchronous
+GH_FIBRESWITCH_2,0 4,,,5 0,110B005119421809,telnet ssh,,no,synchronous
+GH_FIBRESWITCH_2,5 15,,,5 0,13070E46055C172F,telnet ssh,,no,synchronous
+GH_WGS_1ST,0 4,1,in,5 0,01111F50555B150A,telnet ssh,telnet,no,synchronous
+GH_WGS_1ST,5 15,1,in,5 0,01111F50555B150A,telnet ssh,,no,synchronous
+GH_WGS_4TH,0 4,1,in,5 0,01111F50555B150A,telnet ssh,,no,synchronous
+GH_WGS_4TH,5 15,1,in,5 0,01111F50555B150A,telnet ssh,,no,synchronous
+GH_WGS_5TH,0 4,1,in,5 0,0459125201715F4B,telnet ssh,,no,synchronous
+GH_WGS_5TH,5 15,1,in,5 0,151012580A7A3821,telnet ssh,,no,synchronous
+GH_WGS_GROUND,0 4,1,in,5 0,09621B5D1844200B26,telnet ssh,,no,synchronous
+GH_WGS_GROUND,5 15,1,in,5 0,10605C4D0456251221,telnet ssh,,no,synchronous
+LSJ_F2C1_SW1,0 4,1,in,,,ssh,none,no,synchronous
+LSJ_F2C1_SW1,5 15,,,,,,,no,
+LSJ_F2C1_SW2,0 4,1,in,,,ssh,none,no,synchronous
+LSJ_F2C1_SW2,5 15,,,,,,,no,
+LSJ_F3AL_POD,0 4,1,in,,,ssh,none,no,synchronous
+LSJ_F3AL_POD,5 15,,,,,,,no,
+LSJ_F3AL_RETAIL,0 4,1,in,,,ssh,none,no,synchronous
+LSJ_F3AL_RETAIL,5 15,,,,,,,no,
+LSJ_F3AL_SW1,0 4,1,in,,,ssh,none,no,synchronous
+LSJ_F3AL_SW1,5 15,,,,,,,no,
+LSJ_F3C1_SW1,0 4,1,in,,,ssh,none,yes,synchronous
+LSJ_F3C1_SW1,5 15,,,,,,,no,
+LSJ_F3C1_SW2,0 4,1,in,,,ssh,none,yes,synchronous
+LSJ_F3C1_SW2,5,1,in,,,ssh,none,yes,synchronous
+LSJ_F3C1_SW2,6 15,,,,,,,no,
+LSJ_F4AL_SW1,0 4,,,5 0,044C03285A605E7A3E,telnet ssh,,no,
+LSJ_F4AL_SW1,5 15,,,5 0,105901375056003F3B,telnet ssh,,no,
+LSJ_F4C1_SW1,0 4,1,in,15 0,080F191A0858320E3F,telnet ssh,,no,
+LSJ_F4C1_SW1,5 15,1,in,15 0,094E575D17550417,telnet ssh,,no,
+LSJ_F5C1_SW1,0 4,1,in,15 0,,ssh,none,no,synchronous
+LSJ_F5C1_SW1,5 15,1,in,15 0,,ssh,none,no,synchronous
+LSJ_F6AL_SW1,0 4,1,in,15 0,070A754F461E4D1C,ssh,none,yes,synchronous
+LSJ_F6AL_SW1,5 15,1,in,15 0,1412460804137E32,ssh,none,yes,synchronous
+STJ_SIP_GW,0 4,1,in,15 0,0824184D010E510E,ssh,none,yes,
+STJ_SIP_GW,5 15,1,in,15 0,0824184D010E510E,ssh,none,yes,
+bg-dat-cs01,0 4,1,in,15 0,00060A520A0B1803,ssh,ssh,yes,
+bg-dat-cs01,5 15,1,in,15 0,05091F5B2F1C5D0C,ssh,ssh,yes,
+bg-sof-ar01,0 4,1,in,15 0,121B1C431C5B1F01,ssh,none,yes,
+bg-sof-ar01,5 15,1,in,15 0,,ssh,none,yes,
+bg-sof-ar02,0 4,1,in,15 0,05091F5B2F1C5D0C,ssh,none,yes,
+bg-sof-ar02,5 15,1,in,15 0,,ssh,none,yes,
+bg-sof-as01,0 4,,,15 0,,ssh,none,no,
+bg-sof-as01,5 15,,,15 0,,ssh,none,no,
+bg-sof-as02,0 4,,,15 0,,ssh,none,no,
+bg-sof-as02,5 15,,,15 0,,ssh,none,no,
+bg-sof-cs01,0 4,1,in,15 0,02041D0F05561C24,ssh,ssh,yes,
+bg-sof-cs01,5 15,1,in,15 0,02041D0F05561C24,ssh,,yes,
+bg-sof-es01,0 4,1,in,,104C104D0B47010E,ssh,none,yes,
+bg-sof-es01,5 15,1,in,,104C104D0B47010E,ssh,none,yes,
+bg-sof-es02,0 4,1,in,,104C104D0B47010E,ssh,none,yes,
+bg-sof-es02,5 15,1,in,,104C104D0B47010E,ssh,none,yes,
+ch-zur-ar01,0 4,1,in,15 0,000147050C4C5F1F,ssh,telnet ssh,yes,
+ch-zur-ar01,5 15,1,in,15 0,000147050C4C5F1F,ssh,telnet ssh,yes,
+ch-zur-ar02,0 4,1,in,15 0,15175F0F0C3D7F3D,telnet,none,yes,
+ch-zur-ar02,5 15,1,in,15 0,000147050C4C5F1F,ssh,none,yes,
+de-fr7-cr01,0 4,,,15 0,,ssh,telnet ssh,no,
+de-fr7-cr01,5 15,,,15 0,,ssh,telnet ssh,no,
+gi-mpl-es01,0 4,1,in,15 0,110B005119421809,ssh,telnet ssh,yes,
+gi-mpl-es01,5 15,1,in,15 0,110B005119421809,ssh,telnet ssh,yes,
+gi-mpl-es02,0 4,1,in,15 0,110B005119421809,ssh,telnet ssh,yes,
+gi-mpl-es02,5 15,1,in,15 0,110B005119421809,ssh,telnet ssh,yes,
+gi-mpl-mq01,0 4,1,in,15 0,00060A520A0B1803,ssh,none,no,
+gi-mpl-mq01,5 15,1,in,15 0,0823551A07491612,ssh,none,no,
+gi-mpl-mq02,0 4,1,in,15 0,00060A520A0B1803,ssh,none,no,
+gi-mpl-mq02,5 15,1,in,15 0,0823551A07491612,ssh,none,no,
+gib-mpl-ar01,0 4,1,in,15 0,14150B5F0254392E,telnet ssh,,yes,
+gib-mpl-ar01,5 15,1,in,15 0,14150B5F0254392E,telnet ssh,,yes,
+gib-mpl-ar02,0 4,1,in,15 0,14150B5F0254392E,telnet ssh,,yes,
+gib-mpl-ar02,5 15,1,in,15 0,14150B5F0254392E,telnet ssh,,yes,
+gib-mpl-mq01,0 4,1,in,15 0,00060A520A0B1803,ssh,none,no,
+gib-mpl-mq01,5 15,1,in,15 0,0823551A07491612,ssh,none,no,
+gib-mpl-mq02,0 4,1,in,15 0,00060A520A0B1803,ssh,none,no,
+gib-mpl-mq02,5 15,1,in,15 0,0823551A07491612,ssh,none,no,
+gib-vcore1,0 4,1,in,15 0,151012580A7A3821,ssh,telnet ssh,yes,
+gib-vcore1,5 15,1,in,15 0,151012580A7A3821,ssh,telnet,yes,
+gib-wp6-cs01,0 4,1,in,15 0,,ssh,all,yes,
+it-ml2-cr01,0 4,1,in,15 0,,ssh,telnet ssh,yes,
+it-ml2-cr01,5 15,1,in,15 0,,ssh,telnet ssh,yes,
+it-rom-ar01-sogei,0 4,,,15 0,09491A0A1112430B,ssh,none,no,synchronous
+it-rom-ar01-sogei,5 15,1,in,15 0,0824184D010E510E,ssh,none,yes,synchronous
+it-rom-ar02-sogei,0 4,1,in,15 0,06041675421E1A1C,ssh,ssh,yes,synchronous
+it-rom-ar02-sogei,5 15,1,in,15 0,104C104D0B47010E,ssh,none,yes,synchronous
+mt-msc-cr01,0,,,15 0,,ssh,ssh,no,
+mt-msc-cr01,1 4,,,15 0,,ssh,ssh,no,
+mt-msc-cr01,5 15,,,15 0,,ssh,ssh,no,
+mt-msc-cr02,0,,,15 0,,ssh,ssh,no,
+mt-msc-cr02,1 4,,,15 0,,ssh,ssh,no,
+mt-msc-cr02,5 15,,,15 0,,ssh,ssh,no,
+ph-mak-ar01,0 4,1,in,15 0,013D53505A4A31160C,ssh,none,yes,
+ph-mak-ar01,5 15,1,in,15 0,013D53505A4A31160C,ssh,none,yes,
+ph-mak-cs01,0 4,1,in,15 0,04755E520E607B5724,ssh,none,yes,
+ph-mak-cs01,5 15,1,in,15 0,04755E520E607B5724,ssh,none,yes,
+ph-mak-cs02,0 4,1,in,15 0,002A4652051A3C1F22,ssh,none,yes,
+ph-mak-cs02,5 15,1,in,15 0,002A4652051A3C1F22,ssh,none,yes,
+ph-mnl-ar01,0 4,1,in,15 0,110A1016141D,ssh,all,yes,
+ph-mnl-ar01,5 15,1,in,15 0,00071A150754,ssh,all,yes,
+ph-mnl-ar02,0 4,1,in,15 0,00071A150754,ssh,ssh,yes,
+ph-mnl-ar02,5 15,1,in,15 0,00071A150754,ssh,ssh,yes,
+ph-mnl-cs01,0 4,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,
+ph-mnl-cs01,5 15,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,
+ph-mnl-vacc01,0 4,1,in,15 0,110B005119421809,ssh,none,yes,synchronous
+ph-mnl-vacc01,5 15,1,in,15 0,110B005119421809,ssh,none,yes,synchronous
+ph-mnl-vacc02,0 4,1,in,15 0,02041D0F05561C24,ssh,none,yes,synchronous
+ph-mnl-vacc02,5 15,1,in,15 0,06041675421E1A1C,ssh,none,yes,
+ph-mnl-vacc03,0 4,1,in,15 0,070D381840590A00,ssh,none,yes,
+ph-mnl-vacc03,5 15,1,in,15 0,05091F5B2F1C5D0C,ssh,none,yes,
+ph-vit-ar01,0 4,1,in,15 0,12375043134A3B1D07,ssh,ssh,yes,
+ph-vit-ar01,5 15,1,in,15 0,153C5E58056B1C3D05,ssh,ssh,yes,
+ph-vit-ar02,0 4,1,in,15 0,11274C5116533C1529,ssh,ssh,yes,
+ph-vit-ar02,5 15,1,in,15 0,11274C5116533C1529,ssh,ssh,yes,
+ph-vit-cs01,0 4,1,in,15 0,10605C4D0456251221,ssh,telnet,yes,
+ph-vit-cs01,5 15,1,in,15 0,10605C4D0456251221,ssh,none,yes,
+ph-vit-cs02,0 4,1,in,15 0,072174184F482E1C3A,ssh,none,yes,
+ph-vit-cs02,5 15,1,in,15 0,072174184F482E1C3A,ssh,none,yes,
+pl-krk-ar01,0,1,in,15 0,,ssh,none,yes,
+pl-krk-ar01,1 4,1,in,15 0,,ssh,none,yes,
+pl-krk-ar01,5 15,1,in,15 0,,ssh,none,yes,
+pl-krk-ar02,0,1,in,15 0,,ssh,none,yes,
+pl-krk-ar02,1 4,1,in,15 0,,ssh,none,yes,
+pl-krk-ar02,5 15,1,in,15 0,,ssh,none,yes,
+pl-krk-as01-f01,0 4,1,in,15 0,,ssh,none,yes,
+pl-krk-as01-f01,5 15,1,in,15 0,,ssh,none,yes,
+pl-krk-as01-f03,0 4,1,in,15 0,0823551A07491612,ssh,none,yes,
+pl-krk-as01-f03,5 15,1,in,15 0,13070E46055C172F,ssh,none,yes,
+pl-krk-as01-f05,0 4,1,in,15 0,0823551A07491612,ssh,none,yes,
+pl-krk-as01-f05,5 15,1,in,15 0,13070E46055C172F,ssh,none,yes,
+pl-krk-as02-f01,0 4,1,in,15 0,0823551A07491612,ssh,none,yes,
+pl-krk-as02-f01,5 15,1,in,15 0,13070E46055C172F,ssh,none,yes,
+pl-krk-as02-f03,0 4,1,in,15 0,0823551A07491612,ssh,none,yes,
+pl-krk-as02-f03,5 15,1,in,15 0,13070E46055C172F,ssh,none,yes,
+pl-krk-as03-f01,0 4,1,in,15 0,0823551A07491612,ssh,none,yes,
+pl-krk-as03-f01,5 15,1,in,15 0,13070E46055C172F,ssh,none,yes,
+pl-krk-as03-f03,0 4,1,in,15 0,0823551A07491612,ssh,none,yes,
+pl-krk-as03-f03,5 15,1,in,15 0,13070E46055C172F,ssh,none,yes,
+pl-krk-as04-f01,0 4,1,in,15 0,0823551A07491612,ssh,none,yes,
+pl-krk-as04-f01,5 15,1,in,15 0,13070E46055C172F,ssh,none,yes,
+pl-krk-as04-f03,0 4,1,in,15 0,,ssh,none,yes,
+pl-krk-as04-f03,5 15,1,in,15 0,,ssh,none,yes,
+pl-krk-cs01,0 4,1,in,15 0,,ssh,telnet,yes,
+pl-krk-cs01,5 15,1,in,,,ssh,telnet,yes,
+pl-krk-vacc01,0 4,1,in,15 0,,ssh,telnet ssh,yes,
+pl-krk-vacc01,5 15,1,in,15 0,,ssh,telnet ssh,yes,
+pl-krk-vacc02,0 4,1,in,15 0,,ssh,telnet ssh,yes,
+pl-krk-vacc02,5 15,1,in,15 0,,ssh,telnet ssh,yes,
+pl-krk-vg01,0 4,,,15 0,050E520C295B1A10,ssh,none,no,synchronous
+pl-krk-vg01,5 15,,,15 0,0824184D010E510E,ssh,none,no,synchronous
+uk-bfa-ar01,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-ar01,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-ar02,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-ar02,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as01-f01,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as01-f01,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as01-f02,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as01-f02,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as01-f03,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as01-f03,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as02-f01,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as02-f01,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as02-f02,0 4,1,in,15 0,09491A0A1112430B,ssh,none,yes,synchronous
+uk-bfa-as02-f02,5 15,1,in,15 0,09491A0A1112430B,ssh,none,yes,synchronous
+uk-bfa-as02-f03,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as02-f03,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as03-f01,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-as03-f01,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-cs01,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-cs01,5 15,1,in,15 0,,ssh,none,yes,synchronous
+uk-bfa-vg01,0 4,,,15 0,050E520C295B1A10,telnet ssh,ssh,no,synchronous
+uk-bfa-vg01,5 15,,,15 0,0824184D010E510E,telnet ssh,ssh,no,synchronous
+uk-brs-cr01,0 4,1,in,15 0,121B1C431C5B1F01,ssh,none,yes,synchronous
+uk-brs-cr01,5 15,1,in,15 0,094E575D17550417,ssh,none,yes,
+uk-brs-cr02,0 4,1,in,15 0,151012580A7A3821,ssh,none,yes,synchronous
+uk-brs-cr02,5 15,1,in,15 0,104C104D0B47010E,ssh,none,yes,
+uk-brs-cs01,0 4,1,in,15 0,01165207531C5216,ssh,telnet,yes,synchronous
+uk-brs-cs01,5 15,1,in,15 0,01165207531C5216,ssh,telnet,yes,synchronous
+uk-brs-dmvpn01,0 4,1,in,15 0,094E575D17550417,ssh,none,yes,
+uk-brs-dmvpn01,5 15,1,in,15 0,094E575D17550417,ssh,none,yes,
+uk-brs-er01,0 4,1,in,15 0,1439475F0D451D3209,ssh,none,yes,
+uk-brs-er01,5 15,1,in,15 0,0525535B200D791034,ssh,none,yes,
+uk-brs-er02,0 4,1,in,15 0,1439475F0D451D3209,ssh,telnet,yes,
+uk-brs-er02,5 15,1,in,15 0,0525535B200D791034,ssh,none,yes,
+uk-brs-es01,0 4,1,in,15 0,08231D4558175405170F,ssh,none,yes,
+uk-brs-es01,5 15,1,in,15 0,020455505A085E23404F0A12,ssh,none,yes,
+uk-brs-es02,0 4,1,in,15 0,0111570F0A05571D2448,ssh,none,yes,
+uk-brs-es02,5 15,1,in,15 0,0006420D55555A0403204F45,ssh,none,yes,
+uk-brs-sbc,0 4,,,15 0,050E520C295B1A10,telnet ssh,ssh,no,synchronous
+uk-brs-sbc,5 15,,,15 0,0824184D010E510E,telnet ssh,ssh,no,synchronous
+uk-cwk-ar01,0 4,1,in,15 0,11274C5116533C1529,ssh,ssh,yes,synchronous
+uk-cwk-ar01,5 15,1,in,15 0,070D381840590A00,ssh,ssh,yes,synchronous
+uk-cwk-ar02,0 4,1,in,15 0,032A0E5F074E165563,ssh,ssh,yes,synchronous
+uk-cwk-ar02,5 15,1,in,15 0,01111F50555B150A,ssh,ssh,yes,synchronous
+uk-cwk-as03,0 4,1,in,60 0,,ssh,none,yes,
+uk-cwk-as03,5 15,1,in,60 0,,ssh,none,yes,
+uk-cwk-as04,0 4,1,in,60 0,,ssh,none,yes,
+uk-cwk-as04,5 15,1,in,60 0,,ssh,none,yes,
+uk-cwk-cs01,0 4,1,in,15 0,,ssh,telnet ssh,yes,synchronous
+uk-cwk-cs01,5 15,1,in,15 0,,ssh,telnet ssh,yes,synchronous
+uk-cwk-oob-spoke01,0 4,1,in,15 0,,ssh,none,yes,synchronous
+uk-cwk-vacc01,0 4,1,in,30 0,0824184D010E040E,ssh,none,yes,
+uk-cwk-vacc01,5 15,1,in,30 0,0824184D010E040E,ssh,none,yes,
+uk-cwk3-as02,0 4,1,in,15 0,070A754F461E4D1C,ssh,none,yes,synchronous
+uk-cwk3-as02,5 15,1,in,15 0,050E520C295B1A10,ssh,none,yes,synchronous
+uk-cwk4-as01,0 4,1,in,15 0,000147050C4C5F1F,ssh,none,no,synchronous
+uk-cwk4-as01,5 15,1,in,15 0,13004311031B5033,ssh,none,no,synchronous
+uk-cwk4-as02,0 4,1,in,15 0,104B5D1A0D004612,ssh,none,no,synchronous
+uk-cwk4-as02,5 15,1,in,15 0,0203505803115B38,ssh,none,no,synchronous
+uk-dum-ar01,0 4,1,in,15 0,06041675421E1A1C,ssh,none,yes,
+uk-dum-ar01,5 15,1,in,15 0,06041675421E1A1C,ssh,none,yes,
+uk-gsh-ar01,0 4,,,15 0,,telnet ssh,,no,synchronous
+uk-gsh-ar01,5 15,,,15 0,,telnet ssh,,no,synchronous
+uk-gsh-ar02,0 4,,,15 0,0306425F085F3249,telnet ssh,,no,synchronous
+uk-gsh-ar02,5 15,,,15 0,0306425F085F3249,telnet ssh,,no,synchronous
+uk-ixh-ar01-PA,0 4,1,in,15 0,01230717481C091D251C1F,ssh,none,yes,
+uk-ixh-ar01-PA,5 15,1,in,15 0,01230717481C091D251C1F,ssh,none,yes,
+uk-ld6-cr01,0 4,1,in,15 0,,telnet ssh,,yes,synchronous
+uk-ld6-cr01,5 15,1,in,15 0,,telnet ssh,,yes,synchronous
+uk-ld6-cr02,0 4,1,in,15 0,,telnet ssh,,yes,synchronous
+uk-ld6-cr02,5 15,1,in,15 0,,telnet ssh,,yes,synchronous
+uk-ld6-dm01,0 4,1,in,15 0,121B1C431C5B1F01,ssh,none,yes,synchronous
+uk-ld6-dm01,5 15,1,in,15 0,094E575D17550417,ssh,none,yes,
+uk-ld6-es01,0 4,1,in,15 0,13070E46055C172F,ssh,none,yes,
+uk-ld6-es01,5 16,1,in,15 0,13070E46055C172F,ssh,none,yes,
+uk-ld6-es02,0 4,1,in,15 0,13070E46055C172F,ssh,none,yes,
+uk-ld6-es02,5 16,1,in,15 0,13070E46055C172F,ssh,none,yes,
+uk-ld6-rr01,0 4,1,in,15 0,1439475F0D451D3209,ssh,ssh,yes,
+uk-ld6-rr01,5 15,1,in,15 0,0525535B200D791034,ssh,none,yes,
+uk-man-cr01,0 4,,,15 0,09491A0A1112430B,telnet ssh,telnet ssh,no,
+uk-man-cr01,5 15,,,15 0,045802150C2E,telnet ssh,telnet ssh,no,
+uk-man-rr01,0 4,1,in,15 0,1439475F0D451D3209,ssh,none,yes,
+uk-man-rr01,5 15,1,in,15 0,0525535B200D791034,ssh,none,yes,
+uk-mdc-ar01,0 4,,,0 0,121B1C431C5B1F01,telnet ssh,,no,synchronous
+uk-mdc-ar01,5 97,,,0 0,,,,no,synchronous
+uk-mdc-ar02,0 4,,,0 0,121B1C431C5B1F01,telnet ssh,,no,synchronous
+uk-mdc-ar02,5 97,,,0 0,,,,no,synchronous
+uk-mdc-vacc01,0 4,,,15 0,13070E46055C172F,telnet ssh,telnet ssh,no,synchronous
+uk-mdc-vacc01,5 15,,,15 0,13070E46055C172F,telnet ssh,telnet ssh,no,synchronous
+uk-mtk-acc01,0 4,,,15 0,13070E46055C172F,ssh,telnet,no,synchronous
+uk-mtk-acc01,5 15,,,15 0,13070E46055C172F,ssh,telnet,no,synchronous
+uk-mtk-ar01,0 4,,,15 0,00060A520A0B1803,ssh,none,no,synchronous
+uk-mtk-ar01,5 858,,,15 0,00060A520A0B1803,ssh,none,no,synchronous
+uk-sc1-cr01,0 4,1,in,15 0,121B1C431C5B1F01,ssh,none,yes,
+uk-sc1-cr01,5 13,1,in,15 0,121B1C431C5B1F01,ssh,none,yes,
+uk-sc1-cr01,14,1,in,15 0,121B1C431C5B1F01,ssh,telnet ssh,yes,
+uk-sc1-cr01,15,1,in,15 0,121B1C431C5B1F01,ssh,none,yes,
+uk-sc1-cr01,16 97,1,in,0 0,121B1C431C5B1F01,telnet ssh,ssh,yes,
+uk-sc1-cr02,0 4,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,synchronous
+uk-sc1-cr02,5 15,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,synchronous
+uk-sc1-cr02,16 97,1,in,0 0,094E575D17550417,telnet ssh,none,yes,synchronous
+uk-sc1-cs01,0 4,1,in,15 0,02041D0F05561C24,ssh,telnet,yes,synchronous
+uk-sc1-cs01,5 15,1,in,15 0,,ssh,telnet,yes,synchronous
+uk-sc1-dm01,0 4,1,in,15 0,121B1C431C5B1F01,ssh,none,yes,synchronous
+uk-sc1-dm01,5 15,1,in,15 0,094E575D17550417,ssh,none,yes,synchronous
+uk-sc1-dm01,16 97,1,in,0 0,094E575D17550417,telnet ssh,none,yes,synchronous
+uk-sc1-dmvpn01,0 4,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,
+uk-sc1-dmvpn01,5 15,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,
+uk-sc1-dmvpn02,0 4,1,in,15 0,094E575D17550417,ssh,none,yes,
+uk-sc1-dmvpn02,5 15,1,in,15 0,094E575D17550417,ssh,none,yes,
+uk-sc1-er01,0 4,1,in,15 0,132B42460A4D333306,ssh,none,yes,
+uk-sc1-er01,5 15,1,in,15 0,132B42460A4D333306,ssh,none,yes,
+uk-sc1-er02,0 4,1,in,15 0,132B42460A4D333306,ssh,none,yes,
+uk-sc1-er02,5 15,1,in,15 0,132B42460A4D333306,ssh,none,yes,
+uk-sc1-es01,0 4,1,in,15 0,01111F50555B150A,ssh,none,yes,
+uk-sc1-es01,5 15,1,in,15 0,151012580A7A3821,ssh,none,yes,
+uk-sc1-es01,16,1,in,20 0,151012580A7A3821,ssh,none,yes,
+uk-sc1-es02,0 4,1,in,15 0,151012580A7A3821,ssh,none,yes,
+uk-sc1-es02,5 15,1,in,15 0,151012580A7A3821,ssh,none,yes,
+uk-sc1-es02,16,1,in,20 0,151012580A7A3821,ssh,none,yes,
+uk-sc1-rr01,0 4,1,in,15 0,1439475F0D451D3209,ssh,none,yes,
+uk-sc1-rr01,5 15,1,in,15 0,0525535B200D791034,ssh,none,yes,
+uk-scc-sbc,0 4,,,15 0,050E520C295B1A10,telnet ssh,ssh,no,synchronous
+uk-scc-sbc,5 15,,,15 0,0824184D010E510E,telnet ssh,ssh,no,synchronous
+uk-sov-cr01,0 4,1,in,15 0,,telnet ssh,,yes,synchronous
+uk-sov-cr01,5 15,1,in,15 0,,telnet ssh,,yes,
+uk-stj-ar01,0 4,1,in,15 0,00060A520A0B1803,ssh,telnet ssh,yes,synchronous
+uk-stj-ar01,5 15,1,in,15 0,00060A520A0B1803,ssh,telnet ssh,yes,
+uk-stj-ar02,0 4,1,in,15 0,02041D0F05561C24,ssh,telnet ssh,yes,synchronous
+uk-stj-ar02,5 15,1,in,15 0,110B005119421809,ssh,telnet ssh,yes,
+uk-stj-as01,0 4,1,in,60 0,13070E46055C172F,ssh,none,yes,synchronous
+uk-stj-as01,5 15,1,in,60 0,13070E46055C172F,ssh,none,yes,synchronous
+uk-stj-as02,0 4,1,in,60 0,13070E46055C172F,ssh,none,yes,synchronous
+uk-stj-as02,5 15,1,in,60 0,13070E46055C172F,ssh,none,yes,synchronous
+uk-stj-cs01,0 4,1,in,15 0,,ssh,telnet ssh,yes,synchronous
+uk-stj-cs01,5 15,1,in,15 0,,ssh,telnet ssh,yes,synchronous
+uk-stj-f1c1-sw1,0 2,1,in,,,ssh,none,no,synchronous
+uk-stj-f1c1-sw1,3 4,1,in,,,ssh,none,no,synchronous
+uk-stj-f1c1-sw1,5 15,,,,,,,no,
+uk-stj-f1c1-sw2,0 4,1,in,15 0,151012580A7A3821,ssh,telnet ssh,no,
+uk-stj-f1c1-sw2,5 15,1,in,15 0,151012580A7A3821,ssh,telnet ssh,no,
+uk-stj-f1c1-sw4,0 4,1,in,,,ssh,,no,
+uk-stj-f1c1-sw4,5 15,,,,,,,no,
+uk-stj-vacc01,0 4,1,in,15 0,151012580A7A3821,ssh,telnet ssh,no,
+uk-stj-vacc01,5 15,1,in,15 0,151012580A7A3821,ssh,telnet ssh,no,
+uk-stj-vacc02,0 4,,,15 0,151012580A7A3821,ssh,telnet ssh,no,
+uk-stj-vacc02,5 15,,,15 0,151012580A7A3821,ssh,telnet,no,
+uk-thn-ar01-pa,0 4,1,in,15 0,032A0E5F074E165563,ssh,none,yes,
+uk-thn-ar01-pa,5 15,1,in,15 0,,ssh,none,yes,
+uk-thn-ar02-pa,0 4,1,in,15 0,06285A754D0F3E0028,ssh,none,yes,
+uk-thn-ar02-pa,5 15,1,in,15 0,06285A754D0F3E0028,ssh,none,yes,
+uk-thw-cr01,0 4,,,15 0,1439475F0D451D3209,telnet ssh,telnet ssh,no,
+uk-thw-cr01,5 15,,,15 0,0228510F0A47383861,telnet ssh,telnet ssh,no,
+uk-thw-rr01,0 4,1,in,15 0,1439475F0D451D3209,ssh,none,yes,
+uk-thw-rr01,5 15,1,in,15 0,0525535B200D791034,ssh,none,yes,
+uk-wak-ar01,0 4,management,in,15 0,12375043134A3B1D07,ssh,ssh,yes,synchronous
+uk-wak-ar01,5 15,management,in,15 0,072174184F482E1C3A,ssh,ssh,yes,synchronous
+uk-wak-as01,0 4,1,in,15 0,,ssh,none,yes,
+uk-wak-as01,5 15,1,in,15 0,,ssh,none,yes,
+uk-wig-ar01-tote,0 4,1,in,15 0,06285A754D0F3E0028,ssh,none,yes,
+uk-wig-ar01-tote,5 15,1,in,15 0,06285A754D0F3E0028,ssh,none,yes,
+uk-wig-ar02-tote,0 4,1,in,15 0,06285A754D0F3E0028,ssh,none,yes,
+uk-wig-ar02-tote,5 15,1,in,15 0,06285A754D0F3E0028,ssh,none,yes,
+us-da1-cr01,0 4,,,15 0,,ssh,telnet ssh,no,
+us-da1-cr01,5 15,,,15 0,,ssh,telnet ssh,no,
+us-da1-rr01,0 4,,,15 0,,ssh,telnet ssh,no,
+us-da1-rr01,5 15,,,15 0,,ssh,telnet ssh,no,
+us-las-ar02,0 4,,,15 0,0306425F085F3249,telnet ssh,telnet ssh,no,
+us-las-ar02,5 15,,,15 0,0306425F085F3249,telnet ssh,telnet ssh,no,
+us-nj1-cr01,0 4,1,in,15 0,,ssh,telnet ssh,yes,
+us-nj1-cr01,5 15,1,in,15 0,,ssh,telnet ssh,yes,
+us-ny1-cr01,0 4,,,15 0,,ssh,telnet ssh,no,
+us-ny1-cr01,5 15,,,15 0,,ssh,telnet ssh,no,
+us-ny1-rr01,0 4,,,15 0,,ssh,telnet ssh,no,
+us-ny1-rr01,5 15,,,15 0,,ssh,telnet ssh,no,
+wh-brs-core-sw3,0 4,1,in,15 0,045E5F0507361857,ssh,none,no,synchronous
+wh-brs-core-sw3,5 15,1,in,15 0,045E5F0507361857,ssh,none,no,
+wh-brs-core-sw4,0 4,1,in,15 0,15175F0F0C3D7F3D,ssh,none,no,synchronous
+wh-brs-core-sw4,5 15,1,in,15 0,15175F0F0C3D7F3D,ssh,none,no,

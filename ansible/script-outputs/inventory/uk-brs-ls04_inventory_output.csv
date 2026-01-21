@@ -1,0 +1,9 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-brs-ls04,Nexus9000 93180YC-EX chassis Power Supply,Power Supply 1,NXA-PAC-650W-PE,ART2138F8PW,V02
+uk-brs-ls04,Nexus9000 93180YC-EX chassis Power Supply,Power Supply 2,NXA-PAC-650W-PE,ART2138F8PY,V02
+uk-brs-ls04,Nexus9000 93180YC-EX chassis,Chassis,N9K-C93180YC-EX,FDO21480SUL,V02
+uk-brs-ls04,48x10/25G + 6x40/100G Ethernet Module,Slot 1,N9K-C93180YC-EX,FDO21480SUL,V02
+uk-brs-ls04,Nexus9000 93180YC-EX chassis Fan Module,Fan 1,NXA-FAN-30CFM-F,N/A,V01
+uk-brs-ls04,Nexus9000 93180YC-EX chassis Fan Module,Fan 2,NXA-FAN-30CFM-F,N/A,V01
+uk-brs-ls04,Nexus9000 93180YC-EX chassis Fan Module,Fan 3,NXA-FAN-30CFM-F,N/A,V01
+uk-brs-ls04,Nexus9000 93180YC-EX chassis Fan Module,Fan 4,NXA-FAN-30CFM-F,N/A,V01

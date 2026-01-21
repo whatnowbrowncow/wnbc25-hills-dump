@@ -1,0 +1,5 @@
+---
+
+- name: SNMP ACL config task
+  include_tasks: ./snmp_acl.yml
+

@@ -1,0 +1,5 @@
+---
+
+- name: Build BDs
+  import_tasks: ./aci-bds.yml
+  when: ansible_network_os == "aci"

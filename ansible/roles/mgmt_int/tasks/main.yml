@@ -1,0 +1,40 @@
+---
+- name: Import network parser role
+  include_role:
+    name: ansible-network.network-engine
+
+#- name: IOS - Management interface report task
+#  include_tasks: ./ios-report.yml
+#  when: ansible_network_os == "ios"
+
+- name: IOS - Management interface YAML creation task
+  include_tasks: ./ios-yaml.yml
+  when: ansible_network_os == "ios"
+
+#- name: IOS - Management interface config task
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios"
+
+#- name: NXOS - Management interface report task
+#  include_tasks: ./nxos-report.yml
+#  when: ansible_network_os == "nxos"
+
+- name: NXOS - Management interface YAML creation task
+  include_tasks: ./nxos-yaml.yml
+  when: ansible_network_os == "nxos"
+
+#- name: NXOS - Management interface config task
+#  include_tasks: ./nxos-config.yml
+#  when: ansible_network_os == "nxos"
+#
+#- name: IOS-XR - Management interface report task
+#  include_tasks: ./iosxr-report.yml
+#  when: ansible_network_os == "iosxr" 
+#
+- name: IOS-XR - Management interface YAML creation task
+  include_tasks: ./iosxr-yaml.yml
+  when: ansible_network_os == "iosxr"
+#
+#- name: IOS-XR - Management interface config task
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"

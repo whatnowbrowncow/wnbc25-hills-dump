@@ -1,0 +1,12 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+ph-mnl-ar02,GE T,subslot 0/0 transceiver 2,SP7041_Rev_F,00000MTC162809ZC,F
+ph-mnl-ar02,GE T,subslot 0/0 transceiver 3,SP7041_Rev_F,00000MTC16280A1G,F
+ph-mnl-ar02,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS2128Q385,V03
+ph-mnl-ar02,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE213606LL,V03
+ph-mnl-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT21273ARE,V01
+ph-mnl-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT21273CJ7,V01
+ph-mnl-ar02,GE LX,subslot 0/0 transceiver 4,GLC-LH-SMD,OPM212900JT,01
+ph-mnl-ar02,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+ph-mnl-ar02,Built-in GE SPA with 2 port 10G and 6 port 1G Interfaces,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+ph-mnl-ar02,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+ph-mnl-ar02,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

@@ -1,0 +1,22 @@
+---
+
+#- name: NX-OS - Build configuration for testing purposes
+#  template:
+#    src: /gitnet/ansible/roles/acl/templates/nxos/config-template.j2
+#    dest: /gitnet/ansible/roles/acl/files/configs/nxos/{{ inventory_hostname }}.cfg
+
+- name: NX-OS - Construct configuration from template
+  set_fact:
+    acls: "{{ lookup('template', 'templates/nxos/config-template.j2')|from_yaml }}"
+    
+- name: NX-OS - Apply configuration from template
+  nxos_config:
+    save_when: changed
+    lines: "{{ acl['lines'] }}"
+    match: line
+    replace: block
+    before: "no ip access-list {{ acl['name'] }}"
+    parents: "ip access-list {{ acl['name'] }}"
+  with_items: "{{acls}}"
+  loop_control:
+    loop_var: acl

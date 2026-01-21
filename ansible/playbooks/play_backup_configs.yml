@@ -1,0 +1,25 @@
+---
+
+  - name: Backup configs for IOS and IOS-XR
+    hosts: ios,iosxr
+    connection: network_cli
+    strategy: free
+    gather_facts: no
+
+    tasks:
+      - name: Gather config for IOS device
+        ios_facts:
+          gather_subset:
+            - config
+        when: ansible_network_os == "ios"
+
+      - name: Gather Config for IOSXR device
+        iosxr_facts:
+            gather_subset:
+              - config 
+        when: ansible_network_os == "iosxr"
+
+      - name: Copy output to a file
+        copy:
+          content: "{{ ansible_net_config }}"
+          dest: ./backups/{{ inventory_hostname }}.cfg

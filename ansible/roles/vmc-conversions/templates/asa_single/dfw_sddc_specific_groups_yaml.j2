@@ -1,0 +1,223 @@
+---
+
+resources:
+  group_objects:
+
+########## Standard host, subnet and range objects #########
+
+{% if network_host_objects_facts is defined %}
+{%   for item in network_host_objects_facts %}
+{%     if item.object.description %}
+    - group_name: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      description: "{{ item.object.description }}"
+      ip_addr_list:
+        - "{{ item.object.ip_addr }}"
+{%     else %}
+    - group_name: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      description: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      ip_addr_list:
+        - "{{ item.object.ip_addr }}"
+{%     endif %}
+
+{%   endfor %}
+{% endif %}
+{% if network_subnet_objects_facts is defined %}
+{%   for item in network_subnet_objects_facts %}
+{%     if item.object.description %}
+    - group_name: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      description: "{{ item.object.description }}"
+      ip_addr_list:
+        - "{{ [item.object.network, item.object.mask]|join('/') | ipaddr('net')}}"
+{%     else %}
+    - group_name: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      description: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      ip_addr_list:
+        - "{{ [item.object.network, item.object.mask]|join('/') | ipaddr('net')}}"
+{%     endif %}
+
+{%   endfor %}
+{% endif %}
+{% if network_range_objects_facts is defined %}
+{%   for item in network_range_objects_facts %}
+{%     if item.object.description %}
+    - group_name: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      description: "{{ item.object.description }}"
+      ip_addr_list:
+{%       for ip in range( item.object.end.split('.')[3] | int - item.object.start.split('.')[3] | int + 1) %}
+        - "{{ item.object.start | ipmath(ip) }}"
+{%       endfor %}
+{%     else %}
+    - group_name: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      description: "{{ item.object.name | regex_replace ("\.","-") |lower }}"
+      ip_addr_list:
+{%       for ip in range( item.object.end.split('.')[3] | int - item.object.start.split('.')[3] | int + 1) %}
+        - "{{ item.object.start | ipmath(ip) }}"
+{%       endfor %}
+{%     endif %}
+
+{%   endfor %}
+{% endif %}
+############### Newly created objects for IPS and subnets directly added to object-groups #####
+
+{% set existing_hosts = [] %}
+{% set existing_subnets = [] %}
+{% for item in obj_groups.results %}
+{%   if item.ansible_facts.hosts is defined %}
+{%     for ip in item.ansible_facts.hosts %}
+{%       if ip.ip_addr not in existing_hosts %}
+    - group_name: "ip_{{ ip.ip_addr | regex_replace ("\.","-") }}"
+      description: "ip_{{ ip.ip_addr | regex_replace ("\.","-") }}"
+      ip_addr_list:
+        - "{{ ip.ip_addr }}"
+
+{%       do existing_hosts.append(ip.ip_addr) %}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{%   if item.ansible_facts.networks is defined %}
+{%     for network in item.ansible_facts.networks %}
+{%       if [network.ip_addr, network.mask]|join(' ') not in existing_subnets %}
+    - group_name: "ip_{{ [network.ip_addr, network.mask]|join('/') | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+      description: "ip_{{ [network.ip_addr, network.mask]|join('/') | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+      ip_addr_list:
+        - "{{ [network.ip_addr, network.mask]|join('/') | ipaddr('net') }}"
+
+{%       do existing_subnets.append([network.ip_addr, network.mask]|join(' ')) %}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}
+############### Newly created objects for IPs and subnets directly referenced in ACLs ########
+
+{% for acl in access_lists %}
+{%   if acl.ansible_facts.acl_extended_facts is defined %}
+{%     for aces in acl.ansible_facts.acl_extended_facts %}
+{%         if aces.src_host is defined and aces.src_host %}
+{%           if aces.src_host not in existing_hosts %}
+    - group_name: "ip_{{ aces.src_host | regex_replace ("\.","-") }}"
+      description: "ip_{{ aces.src_host | regex_replace ("\.","-") }}"
+      ip_addr_list:
+        - "{{ aces.src_host }}"
+
+{%           do existing_hosts.append(aces.src_host) %}
+{%           endif %}
+{%         endif %}
+{%         if aces.src_network is defined and aces.src_network %}
+{%           if aces.src_network != "any" and aces.src_network != "any4" %}
+{%             if aces.src_network not in existing_subnets %}
+    - group_name: "ip_{{ aces.src_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      description: "ip_{{ aces.src_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      ip_addr_list:
+        - "{{ aces.src_network | regex_replace (" ","/") | ipaddr('net') }}"
+
+{%             do existing_subnets.append(aces.src_network) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%         if aces.dest_host is defined and aces.dest_host %}
+{%           if aces.dest_host not in existing_hosts %}
+    - group_name: "ip_{{ aces.dest_host | regex_replace ("\.","-") }}"
+      description: "ip_{{ aces.dest_host | regex_replace ("\.","-") }}"
+      ip_addr_list:
+        - "{{ aces.dest_host }}"
+
+{%           do existing_hosts.append(aces.dest_host) %}
+{%           endif %}
+{%         endif %}
+{%         if aces.dest_network is defined and aces.dest_network %}
+{%           if aces.dest_network != "any" and aces.dest_network != "any4" %}
+{%             if aces.dest_network not in existing_subnets %}
+    - group_name: "ip_{{ aces.dest_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      description: "ip_{{ aces.dest_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      ip_addr_list:
+        - "{{ aces.dest_network | regex_replace (" ","/") | ipaddr('net') }}"
+
+{%             do existing_subnets.append(aces.dest_network) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%     endfor %}
+{%   elif  acl.ansible_facts.acl_standard_facts is defined %}
+{%     for aces in acl.ansible_facts.acl_standard_facts %}
+{%       if aces.dest_host is defined and aces.dest_host %}
+{%         if aces.dest_host not in existing_hosts %}
+    - group_name: "ip_{{ aces.dest_host | regex_replace ("\.","-") }}"
+      description: "ip_{{ aces.dest_host | regex_replace ("\.","-") }}"
+      ip_addr_list:
+        - "{{ aces.dest_host }}"
+
+{%         do existing_hosts.append(aces.dest_host) %}
+{%         endif %}
+{%       endif %}
+{%       if aces.dest_network is defined and aces.dest_network %}
+{%         if aces.dest_network != "any" and aces.dest_network != "any4" %}
+{%           if aces.dest_network not in existing_subnets %}
+    - group_name: "ip_{{ aces.dest_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      description: "ip_{{ aces.dest_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-")  }}"
+      ip_addr_list:
+        - "{{ aces.dest_network | regex_replace (" ","/") | ipaddr('net') }}"
+
+{%           do existing_subnets.append(aces.dest_network) %}
+{%           endif %}
+{%         endif %}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}
+############### Create object_groups ###############
+
+  object_groups:
+
+{% for item in obj_groups.results %}
+{%   if item.ansible_facts.object_group_description is defined %}
+    - group_name: "{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+      description: "{{ item.ansible_facts.object_group_description[0].description }}"
+      sub_group_list:
+{%     if item.ansible_facts.objects is defined %}
+{%       for group in item.ansible_facts.objects %}
+        - "{{ group.object_name | regex_replace ("\.","-") |lower }}"
+{%       endfor %}
+{%     endif %}
+{%     if item.ansible_facts.hosts is defined %}
+{%       for ip in item.ansible_facts.hosts %}
+        - "ip_{{ ip.ip_addr | regex_replace ("\.","-") }}"
+{%       endfor %}
+{%     endif %}
+{%     if item.ansible_facts.networks is defined %}
+{%       for network in item.ansible_facts.networks %}
+        - "ip_{{ [network.ip_addr, network.mask]|join('/') | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%       endfor %}
+{%     endif %}
+{%     if item.ansible_facts.group_objects is defined %}
+{%       for group in item.ansible_facts.group_objects %}
+        - "{{ group.group_object_name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+{%       endfor %}
+{%     endif %}
+
+{%   else %}
+    - group_name: "{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+      description: "{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+      sub_group_list:
+{%     if item.ansible_facts.objects is defined %}
+{%       for group in item.ansible_facts.objects %}
+        - "{{ group.object_name | regex_replace ("\.","-") |lower }}"
+{%       endfor %}
+{%     endif %}
+{%     if item.ansible_facts.hosts is defined %}
+{%       for ip in item.ansible_facts.hosts %}
+        - "ip_{{ ip.ip_addr | regex_replace ("\.","-") }}"
+{%       endfor %}
+{%     endif %}
+{%     if item.ansible_facts.networks is defined %}
+{%       for network in item.ansible_facts.networks %}
+        - "ip_{{ [network.ip_addr, network.mask]|join('/') | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%       endfor %}
+{%     endif %}
+{%     if item.ansible_facts.group_objects is defined %}
+{%       for group in item.ansible_facts.group_objects %}
+        - "{{ group.group_object_name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+{%       endfor %}
+{%     endif %}
+
+{%   endif %}
+{% endfor %}

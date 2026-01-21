@@ -1,0 +1,15 @@
+---
+
+- name: Build context interfaces template
+  template:
+    src: interfaces.j2
+    dest: ./roles/asa-interfaces/configs/{{ item.context }}_interfaces.cfg
+  with_items:
+    - "{{ contexts }}"
+    
+#- name: Build interfaces on a context
+#  asa_config:
+#    src: ./roles/asa-interfaces/configs/{{ item.context }}_interfaces.cfg
+#    context: "{{ item.context }}"
+#  with_items:
+#    - "{{ contexts }}"

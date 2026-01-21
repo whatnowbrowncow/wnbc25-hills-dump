@@ -1,0 +1,7 @@
+!
+boot-start-marker
+{% for image in boot_image %}
+boot system bootdisk:{{ image }}
+{% endfor %}
+boot-end-marker
+!

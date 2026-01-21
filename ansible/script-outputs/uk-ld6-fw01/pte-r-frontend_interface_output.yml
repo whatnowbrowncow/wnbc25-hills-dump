@@ -1,0 +1,14 @@
+Port-channel1.1679: {admin-state: up, interface: Port-channel1.1679, ip-add: 10.115.161.36,
+  mac-address: 0200.0101.0101, nameif: pte-internal-vrf, netmask: 255.255.255.224,
+  ospf: mtu-ignore, security-level: '100'}
+Port-channel1.1750: {admin-state: up, interface: Port-channel1.1750, ip-add: 10.115.170.1,
+  mac-address: 0200.0101.0101, nameif: pte-retail-internal, netmask: 255.255.255.128,
+  security-level: '100'}
+Port-channel1.1751: {admin-state: up, interface: Port-channel1.1751, ip-add: 10.115.170.129,
+  mac-address: 0200.0101.0101, nameif: pte-retail-3rdparty-web, netmask: 255.255.255.128,
+  security-level: '100'}
+Port-channel1.1753: {admin-state: up, interface: Port-channel1.1753, ip-add: 10.115.172.1,
+  mac-address: 0200.0101.0101, nameif: pte-retail-stingray, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.1780: {admin-state: up, interface: Port-channel1.1780, ip-add: 10.115.177.1,
+  mac-address: 0200.0101.0101, nameif: pte-retail-app, netmask: 255.255.255.0, security-level: '100'}

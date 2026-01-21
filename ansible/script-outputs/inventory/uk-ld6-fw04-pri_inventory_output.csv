@@ -1,0 +1,7 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-ld6-fw04-pri,10G Based-SR,TenGigabitEthernet0/8,SFP-10G-SR,AVD1714A0CC,V03
+uk-ld6-fw04-pri,10G Based-SR,TenGigabitEthernet0/9,SFP-10G-SR,AVD1714A0CW,V03
+uk-ld6-fw04-pri,ASA 5585-X Security Services Processor-20 with 8GE,module 0,ASA5585-SSP-20,JAD171903Q7,V05
+uk-ld6-fw04-pri,ASA 5585-X,Chassis,ASA5585,JMX1721800F,V04
+uk-ld6-fw04-pri,ASA 5585-X AC Power Supply,power supply 0,ASA5585-PWR-AC,POG17090031,V05
+uk-ld6-fw04-pri,ASA 5585-X AC Power Supply,power supply 1,ASA5585-PWR-AC,POG1709005P,V05

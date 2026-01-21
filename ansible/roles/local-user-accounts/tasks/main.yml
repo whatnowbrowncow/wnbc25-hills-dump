@@ -1,0 +1,84 @@
+---
+- name: Import network parser role
+  include_role:
+    name: ansible-network.network-engine
+
+#- name: IOS - local user account report task
+#  include_tasks: ./ios-report.yml
+#  when: ansible_network_os == "ios"
+
+#- name: NXOS - local user account report task
+#  include_tasks: ./nxos-report.yml
+#  when: ansible_network_os == "nxos"
+
+#- name: IOS-XR - local user account report task
+#  include_tasks: ./iosxr-report.yml
+#  when: ansible_network_os == "iosxr"
+
+#- name: ASA MULTIPLE - local user account report task 
+#  include_tasks: ./asa-multiple-report.yml
+#  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+#- name: ASA single - local user account report task 
+#  include_tasks: ./asa-single-report.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+#- name: IOS - local user account YAML creation task
+#  include_tasks: ./ios-yaml.yml
+#  when: ansible_network_os == "ios"
+
+#- name: NXOS - local user account YAML creation task
+#  include_tasks: ./nxos-yaml.yml
+#  when: ansible_network_os == "nxos"
+
+#- name: IOS-XR - local user account YAML creation task
+#  include_tasks: ./iosxr-yaml.yml
+#  when: ansible_network_os == "iosxr"
+
+#- name: ASA MULTIPLE- local user account YAML creation task
+#  include_tasks: ./asa-multiple-yaml.yml
+#  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+#- name: ASA SINGLE- local user account YAML creation task
+#  include_tasks: ./asa-single-yaml.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+#- name: IOS - local user account config task
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios"
+
+#- name: NXOS - local user account config task
+#  include_tasks: ./nxos-config.yml
+#  when: ansible_network_os == "nxos"
+
+#- name: IOS-XR - local user account config task
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"
+
+#- name: ASA MULTIPLE - local user account config task
+#  include_tasks: ./asa-multiple-config.yml
+#  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+#- name: ASA SINGLE - local user account config task
+#  include_tasks: ./asa-single-config.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+- name: IOS - standardise local user accounts
+  include_tasks: ./ios-standardise.yml
+  when: ansible_network_os == "ios"
+
+- name: NXOS - standardise local user accounts
+  include_tasks: ./nxos-standardise.yml
+  when: ansible_network_os == "nxos"
+
+- name: IOS-XR - standardise local user accounts
+  include_tasks: ./iosxr-standardise.yml
+  when: ansible_network_os == "iosxr"
+
+- name: ASA MULTIPLE - standardise local user accounts
+  include_tasks: ./asa-multiple-standardise.yml
+  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+- name: ASA SINGLE - standardise local user accounts
+  include_tasks: ./asa-single-standardise.yml
+  when: ansible_network_os == "asa" and context_mode == "single"

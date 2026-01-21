@@ -1,0 +1,29 @@
+!
+{% for vrf in vrfs %}
+ip vrf {{ vrf.name }}
+ rd {{ vrf.rd }}
+{% if vrf.vpn_id is defined %}
+ vpn id {{ vrf.vpn_id }}
+{% endif %}
+{% if vrf.import_map is defined %}
+ import map {{ vrf.import_map }}
+{% endif %}
+{% if vrf.mdt_default is defined %}
+ mdt default {{ vrf.mdt_default.addr }}
+{% endif %}
+{% if vrf.mdt_data is defined %}
+{% for data in vrf.mdt_data.data %}
+ mdt data {{ data.addr }} {{ data.wmask }} {{ data.threshold }}
+{% endfor %}
+{% endif %}
+{% if vrf.mdt_data is defined %}
+ mdt data threshold {{ vrf.mdt_data.threshold }}
+{% endif %}
+{% for export in vrf.rt_export %}
+ route-target export {{ export}}
+{% endfor %}
+{% for import in vrf.rt_import %}
+ route-target import {{ import}}
+{% endfor %}
+{% endfor %}
+!

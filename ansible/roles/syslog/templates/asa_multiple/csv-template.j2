@@ -1,0 +1,10 @@
+hostname,context,interface,syslog ip address
+{% for context in asa_facts.results %}
+{% if context.ansible_facts.syslog_server_facts is defined %}
+{% for syslog_svr in context.ansible_facts.syslog_server_facts %}
+{{ inventory_hostname }},{{ context.item.item.context}},{{syslog_svr.syslog_servers.interface}},{{syslog_svr.syslog_servers.ip_address}}
+{% endfor %}
+{% else %}
+{{ inventory_hostname }},{{ context.item.item.context}},NO SYSLOG CONFIG FOUND,NO SYSLOG CONFIG FOUND
+{% endif %}
+{% endfor %}

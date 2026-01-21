@@ -1,0 +1,31 @@
+---
+  
+- name: Generate core router config files
+  connection: local
+  gather_facts: no
+  template:
+    src=core_router.j2
+    dest="/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/{{ item }}.cfg"
+  with_items: "{{ inventory_hostname }}"
+
+#- name: Generate SNMP configurations
+#  connection: local
+#  gather_facts: no
+#  template:
+#    src: "snmp.j2"
+#    dest: "/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/snmp/{{ item }}.cfg"
+#  with_items: "{{ inventory_hostname }}"
+
+  
+- name: Generate SNMP config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/tasks/snmp.yml
+- name: Generate Line VTY config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/tasks/line_vty.yml
+
+- name: Combine config parts to whole
+  connection: local
+  gather_facts: no
+  assemble:
+    src="/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/{{ item }}"
+    dest="/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/full-config/{{ item }}.cfg"
+  with_items: "{{ inventory_hostname }}"

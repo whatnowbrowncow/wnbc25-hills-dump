@@ -1,0 +1,49 @@
+
+  - app_prof: 'pr-n-acitest'
+    tenant: 'production'
+    vrf: 'pr-n-acitest'
+    bds:
+      - bd: 'pr-n-acitest_internal-vrf'
+        network: '10.180.195.0'
+        gateway: '10.180.195.2'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-acitest_internal-vrf'
+            encap_id: '590'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-acitest_acitest-mgmt'
+        network: '10.180.195.32'
+        gateway: '10.180.195.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-acitest_acitest-mgmt'
+            encap_id: '591'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-acitest_acitest-frontend'
+        network: '10.180.195.64'
+        gateway: '10.180.195.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-acitest_acitest-frontend'
+            encap_id: '592'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-acitest_acitest-multicast'
+        network: '10.180.195.96'
+        gateway: '10.180.195.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-acitest_acitest-multicast'
+            encap_id: '593'
+            vcenter_dynamic_vlan: true

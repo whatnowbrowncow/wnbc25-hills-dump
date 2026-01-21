@@ -1,0 +1,16 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-ld6-es01,1000BaseT,TenGigabitEthernet1/7,GLC-T,AGM18182708,V03
+uk-ld6-es01,1000BaseT,TenGigabitEthernet1/8,GLC-TE,AVC212925E8,V01
+uk-ld6-es01,1000BaseT,TenGigabitEthernet1/12,GLC-TE,AVC212925EE,V01
+uk-ld6-es01,SFP-10Gbase-SR,TenGigabitEthernet1/10,SFP-10G-SR,AVD21169K0E,V03
+uk-ld6-es01,SFP-10Gbase-SR,TenGigabitEthernet1/2,SFP-10G-SR,AVD21169K0W,V03
+uk-ld6-es01,SFP-10Gbase-SR,TenGigabitEthernet1/3,SFP-10G-SR,AVD21169K14,V03
+uk-ld6-es01,SFP-10Gbase-SR,TenGigabitEthernet1/1,SFP-10G-SR,AVD21169K1D,V03
+uk-ld6-es01,SFP-10Gbase-SR,TenGigabitEthernet1/16,SFP-10G-SR,FNS21201LTG,V03
+uk-ld6-es01,SFP-10Gbase-SR,TenGigabitEthernet1/13,SFP-10G-SR,FNS2122198U,V03
+uk-ld6-es01,4500X-16 10GE (SFP+),Supervisor(slot 1),WS-C4500X-16,JAE21250772,V05
+uk-ld6-es01,Cisco Systems,Switch System,,JAE21250772,none
+uk-ld6-es01,1000BaseT,TenGigabitEthernet1/5,GLC-TE,MTC22120QRB,V01
+uk-ld6-es01,1000BaseT,TenGigabitEthernet1/15,GLC-TE,MTC22120RNQ,V01
+uk-ld6-es01,Power Supply ( AC 750W ),Power Supply 1,C4KX-PWR-750AC-R,QCS21093DUZ,V01
+uk-ld6-es01,Power Supply ( AC 750W ),Power Supply 2,C4KX-PWR-750AC-R,QCS21113D42,V01

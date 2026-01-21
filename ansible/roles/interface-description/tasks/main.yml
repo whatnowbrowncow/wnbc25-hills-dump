@@ -1,0 +1,21 @@
+---
+
+- name: Import Network Parser role
+  include_role:
+    name: ansible-network.network-engine
+
+- name: IOS - Gather Interface Status For all UP Interfaces with No Description
+  include_tasks: ./ios-report.yml
+  when: ansible_network_os == "ios"
+
+- name: IOS - Config Task - Build Interface Descriptions
+  include_tasks: ./ios-standardise.yml
+  when: ansible_network_os == "ios"
+
+- name: NX0S - Gather Interface Status For all UP Interfaces with No Description
+  include_tasks: ./nxos-report.yml
+  when: ansible_network_os == "nxos"
+
+- name: NXOS - Config Task - Build Interface Descriptions
+  include_tasks: ./nxos-standardise.yml
+  when: ansible_network_os == "nxos"

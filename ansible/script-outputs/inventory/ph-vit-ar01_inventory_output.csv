@@ -1,0 +1,14 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+ph-vit-ar01,GE LX,subslot 0/0 transceiver 5,GLC-LH-SMD,FNS191204G7,A
+ph-vit-ar01,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS1912Q1E5,V01
+ph-vit-ar01,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE191708B0,V01
+ph-vit-ar01,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT19110WN1,V01
+ph-vit-ar01,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT19110WNC,V01
+ph-vit-ar01,GE T,subslot 0/0 transceiver 3,SP7041-R,MTC19090D95,none
+ph-vit-ar01,GE T,subslot 0/0 transceiver 2,SP7041-R,MTC19090DE2,none
+ph-vit-ar01,GE T,subslot 0/0 transceiver 4,SP7041-E-R,MTC194900U8,none
+ph-vit-ar01,GE LX,subslot 0/0 transceiver 7,GLC-LH-SMD,OPM212900K5,01
+ph-vit-ar01,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+ph-vit-ar01,8-port Built-in GE SPA,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+ph-vit-ar01,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+ph-vit-ar01,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

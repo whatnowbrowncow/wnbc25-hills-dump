@@ -1,0 +1,11 @@
+# {{ inventory_hostname }}
+
+## Interface List
+| Interface name | IP address | Description |
+|---------------|-----------------|-----------------|
+{% for interface,value in ansible_net_interfaces.items() %}
+{#Check if value.ipv4 has a value, and if it does print the interface name and the IP address#}
+{% if value.ipv4 %}
+  - {{ interface }}  |  {{ value.ipv4[0].address }}  |  {{ value.description }}
+{% endif %}
+{% endfor %}

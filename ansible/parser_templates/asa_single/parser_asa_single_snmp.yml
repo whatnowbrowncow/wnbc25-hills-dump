@@ -1,0 +1,68 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: more system:running-config | include snmp-server
+    network_os: asa
+
+- name: SNMP configuration match pattern
+  pattern_match:
+    regex: "^snmp-server\\s+host.*"
+    match_all: yes
+    match_greedy: yes
+  register: snmp_configuration
+
+- name: Match SNMP configuration values
+  pattern_group:
+    - name: match source interface
+      pattern_match:
+        regex: "host\\s+(\\S+)"
+        content: "{{ item }}"
+      register: source_int
+
+    - name: match ip address
+      pattern_match:
+        regex: "(\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address      
+
+    - name: match privelege (poll, trap or both)
+      pattern_match:
+        regex: "(poll|trap)"
+        content: "{{ item }}"
+      register: poll_trap
+
+    - name: match community string
+      pattern_match:
+        regex: "community\\s+(\\S+)"
+        content: "{{ item }}"
+      register: community_string
+
+    - name: match SNMP version
+      pattern_match:
+        regex: "version\\s+(\\S+)"
+        content: "{{ item }}"
+      register: snmp_version
+
+  loop: "{{ snmp_configuration }}"
+  register: snmp_configuration_values
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: snmp
+        object:
+          - key: source_int
+            value: "{{ item.source_int.matches.0 }}"
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"            
+          - key: poll_trap
+            value: "{{ item.poll_trap.matches.0 | default('both') }}"          
+          - key: community_string
+            value: "{{ item.community_string.matches.0 }}"        
+          - key: snmp_version
+            value: "{{ item.snmp_version.matches.0 }}"
+  loop: "{{ snmp_configuration_values }}"
+  export: yes
+  register: snmp_configuration_facts

@@ -1,0 +1,23 @@
+---
+
+mgmt_interface:
+  
+  interface: "{{ mgmt_int_facts[0].management_interface.interface }}"
+  description: "{{ mgmt_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ mgmt_int_facts[0].management_interface.ipv4_address }}"
+  mask: "{{ mgmt_int_facts[0].management_interface.mask }}"
+  vrf: "{{ mgmt_int_facts[0].management_interface.vrf }}"
+
+loopback_interfaces:
+
+{% for item in loopbacks_facts.results %}
+{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.interface != mgmt_int_facts[0].management_interface.interface %}
+  - interface: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.interface }}"
+    description: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.description }}"
+    ip_addr: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.ipv4_address }}"
+    mask: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.mask }}"
+    vrf: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.vrf }}"
+
+{% else %}
+{% endif %}
+{% endfor %}

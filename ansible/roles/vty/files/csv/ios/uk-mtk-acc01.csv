@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-mtk-acc01,0 4,,,15 0,13070E46055C172F,ssh,telnet,no,synchronous
+uk-mtk-acc01,5 15,,,15 0,13070E46055C172F,ssh,telnet,no,synchronous

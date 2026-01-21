@@ -1,0 +1,81 @@
+/*======================================
+#### Parse of ASA network objects ####
+
+######### Example Format #############
+
+resource "nsxt_policy_group" "group1" {
+  lifecycle {
+    create_before_destroy = true
+  }
+   display_name = "tf-group1"
+   description = "Terraform provisioned Group"
+   domain       = "cgw"
+   criteria {
+     ipaddress_expression {
+       ip_addresses = ["211.1.1.1", "212.1.1.1"]
+     }
+   }
+}
+
+How we will format and standardise this:
+The "resource" name and "display_name" will be the same/identical
+The IP addresses/Networks will always be a list
+IP address ranges are not permitted (e.g. 192.168.10.1-192.168.10.10)
+The "description" must contain the "role" and "ip" keys (this format is to aid later computer based extraction):
+role: describes the object, where this information is available. Where it isn't the group_name must be added
+ip: lists the IP addresses/networks (CIDR) defined in the object in a comma separated format
+The ip_addr_list must always be in the "description", as this allows us to overcome a limitation with the VMC rule search/filter
+
+
+resource "nsxt_policy_group" "( group_name )" {
+  lifecycle {
+    create_before_destroy = true
+  }
+   display_name = "( group_name )"
+   description = "role: ( existing/valid object description | group_name ), ip: [( ip_addr_list )]"
+   domain       = "cgw"
+   criteria {
+     ipaddress_expression {
+       ip_addresses = [( ip_addr_list )]
+     }
+   }
+}
+========================================*/
+
+{% for resource in resources.group_objects %}
+resource "nsxt_policy_group" "{{ resource.group_name }}" {
+  lifecycle {
+    create_before_destroy = true
+  }
+   display_name = "{{ resource.group_name }}"
+   description = "role: {{ resource.description }}, ip: [{% for ip in resource.ip_addr_list %}{% if loop.last %}{{ ip }}{% else %}{{ ip }}, {% endif %}{% endfor %}]"
+   domain       = "cgw"
+   criteria {
+     ipaddress_expression {
+       ip_addresses = [{% for ip in resource.ip_addr_list %}{% if loop.last %}"{{ ip }}"{% else %}"{{ ip }}", {% endif %}{% endfor %}]
+     }
+   }
+}
+{% endfor %}
+
+/*======================================
+#### object-groups ####
+========================================*/
+
+{% for resource in resources.object_groups %}
+{% if resource.sub_group_list is iterable %}
+resource "nsxt_policy_group" "{{ resource.group_name }}" {
+  lifecycle {
+    create_before_destroy = true
+  }
+   display_name = "{{ resource.group_name }}"
+   description = "role: {{ resource.description }}"
+   domain       = "cgw"
+    criteria {
+      path_expression {
+        member_paths = [{% for object in resource.sub_group_list %}{% if loop.last %}nsxt_policy_group.{{ object }}.path{% else %}nsxt_policy_group.{{ object }}.path, {% endif %}{% endfor %}]
+     }
+   }
+}
+{% endif %}
+{% endfor %}

@@ -1,0 +1,4 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-stj-f1c1-sw1,0 2,1,in,,,ssh,none,no,synchronous
+uk-stj-f1c1-sw1,3 4,1,in,,,ssh,none,no,synchronous
+uk-stj-f1c1-sw1,5 15,,,,,,,no,

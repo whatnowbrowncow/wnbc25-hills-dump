@@ -1,0 +1,22 @@
+---
+
+- name: ASA SINGLE - collect local user account info
+  asa_command:
+    commands:
+      - show run | i username
+  register: asa_single_local_accounts_output
+
+- name: ASA SINGLE - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_asa_single_local_user_accounts.yml"
+    content: "{{ asa_single_local_accounts_output.stdout.0 }}"
+
+- name: ASA SINGLE - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: ASA SINGLE - Generate YAML file
+  template:
+    src: "{{ role_path }}/templates/asa_single/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/local-user-accounts.yml"

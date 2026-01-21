@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+pl-krk-ar02,netadmin,15,secret,5,$1$tk5H$sCheyPNDXrskXYQBdgQtZ.
+pl-krk-ar02,svcnetworkauto,15,secret,5,$1$xmCG$Qm4ZJAcWaUid8H8ceciuA0

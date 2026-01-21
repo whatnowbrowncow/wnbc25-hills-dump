@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-stj-as01,netadmin,15,secret,5,$1$UpFA$92ayU/RlyGCYAd3U1ytTL0
+uk-stj-as01,svcnetworkauto,15,secret,5,$1$irXE$KY1DwivU9SB/U2jnO1I0I0

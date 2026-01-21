@@ -1,0 +1,8 @@
+---
+
+- name: Generate Line VTY configurations
+  template:
+    src: "line_vty.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/line_vty.cfg"
+  tags:
+    - line_vty

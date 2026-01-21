@@ -1,0 +1,42 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show access-lists
+    network_os: nxos
+
+- name: Match - ACL Lines
+  pattern_match:
+    regex: "^ +"
+    match_all: yes
+    match_greedy: yes
+  register: lines
+
+- name: Match - ACL Group
+  pattern_group:
+    - name: MATCH - ACL Rules
+      pattern_match:
+        regex: "^ +(\\d+) +(?:(remark +(.*)?))?(?:(.*))?"
+        content: "{{ item }}"
+        match_all: yes
+      register: aces
+
+  loop: "{{ lines }}"
+  register: access_entries
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: "ace"
+        object:
+          - key: seq_num
+            value: "{{ item.aces.0.matches[0] }}"
+          - key: remark
+            value: "{{ item.aces.0.matches[2] }}"            
+          - key: rule
+            value: "{{ item.aces.0.matches[3] }}"
+
+  register: access_lists_facts
+  export: yes
+  loop: "{{ access_entries }}"

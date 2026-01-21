@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+ph-mak-cs01,10.120.193.235,group-vrf,yes,Vlan314
+ph-mak-cs01,10.210.193.235,group-vrf,no,Vlan314
+ph-mak-cs01,10.210.193.236,group-vrf,no,Vlan314
+ph-mak-cs01,10.120.193.236,group-vrf,no,Vlan314

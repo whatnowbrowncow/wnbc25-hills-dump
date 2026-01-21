@@ -1,0 +1,11 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-stj-ar01,GE SX,subslot 0/0 transceiver 2,SFBR-5766PZ-CS2,AGM1532L388,none
+uk-stj-ar01,GE SX,subslot 0/0 transceiver 3,SFBR-5766PZ-CS2,AGM1532L38C,none
+uk-stj-ar01,GE SX,subslot 0/0 transceiver 4,SFBR-5766PZ-CS2,AGM1532L38K,none
+uk-stj-ar01,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS2014Q31R,V02
+uk-stj-ar01,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE203401AZ,V02
+uk-stj-ar01,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT20280CKH,V01
+uk-stj-ar01,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT20280CQM,V01
+uk-stj-ar01,8-port Built-in GE SPA,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+uk-stj-ar01,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+uk-stj-ar01,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

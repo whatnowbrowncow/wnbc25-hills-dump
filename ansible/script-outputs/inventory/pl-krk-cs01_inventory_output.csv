@@ -1,0 +1,52 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+pl-krk-cs01,1000BaseSX,TenGigabitEthernet1/1/2,GLC-SX-MMD,ACW21310CCS,V01
+pl-krk-cs01,1000BaseSX,TenGigabitEthernet2/1/2,GLC-SX-MMD,ACW21310EDP,V01
+pl-krk-cs01,1000BaseT,TenGigabitEthernet2/1/6,GLC-T,AGM180520B8,V03
+pl-krk-cs01,1000BaseT,TenGigabitEthernet1/1/6,GLC-T,AGM19054E4R,V03
+pl-krk-cs01,1000BaseT,TenGigabitEthernet1/1/4,GLC-T,AGM19054F4G,V03
+pl-krk-cs01,1000BaseT,TenGigabitEthernet1/1/3,GLC-T,AGM19054G42,V03
+pl-krk-cs01,1000BaseT,TenGigabitEthernet2/1/5,GLC-T,AGM19054G4Y,V03
+pl-krk-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 1,C4KX-PWR-750AC-R,ART2126X1HZ,V01
+pl-krk-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 2,C4KX-PWR-750AC-R,ART2126X1JC,V01
+pl-krk-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 2,C4KX-PWR-750AC-R,ART2126X1JF,V01
+pl-krk-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 1,C4KX-PWR-750AC-R,ART2126X1K5,V01
+pl-krk-cs01,1000BaseT,TenGigabitEthernet2/1/11,GLC-TE,AVC212920LS,V01
+pl-krk-cs01,1000BaseT,TenGigabitEthernet1/1/12,GLC-TE,AVC212925EA,V01
+pl-krk-cs01,1000BaseT,TenGigabitEthernet1/1/11,GLC-TE,AVC212925EB,V01
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/16,SFP-10G-SR,AVD1819A4AD,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/16,SFP-10G-SR,AVD1819A6BS,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/1,SFP-10G-SR,AVD1819A98D,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/26,SFP-10G-SR,AVD212490BE,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/27,SFP-10G-SR,AVD212490BJ,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/25,SFP-10G-SR,AVD212490BP,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/31,SFP-10G-SR,AVD212490C5,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/31,SFP-10G-SR,AVD212490C7,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/25,SFP-10G-SR,AVD212490CA,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/28,SFP-10G-SR,AVD212490CF,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/32,SFP-10G-SR,AVD212490CG,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/27,SFP-10G-SR,AVD212490CM,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/29,SFP-10G-SR,AVD212490CV,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/30,SFP-10G-SR,AVD212490CX,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/28,SFP-10G-SR,AVD212490D3,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/26,SFP-10G-SR,AVD212490DH,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/24,SFP-10G-SR,AVD212490DL,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/32,SFP-10G-SR,AVD212490E5,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/30,SFP-10G-SR,AVD212490E6,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/29,SFP-10G-SR,AVD212490E7,V03
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/24,SFP-10G-SR,AVD212490EF,V03
+pl-krk-cs01,10GBase-CU-3M,TenGigabitEthernet2/1/8,Unspecified,CN75FRN4Z3,none
+pl-krk-cs01,10GBase-CU-3M,TenGigabitEthernet2/1/7,Unspecified,CN75FRN50F,none
+pl-krk-cs01,1000BaseSX,TenGigabitEthernet1/1/17,Unspecified,FNS1026Q9CE,none
+pl-krk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/1,SFP-10G-SR,FNS162202KN,V03
+pl-krk-cs01,4500X-32 10GE (SFP+),Switch1 Supervisor 1 (virtual slot 1),WS-C4500X-32,JAE21410553,V06
+pl-krk-cs01,Cisco Systems,Switch1 System,,JAE21410553,none
+pl-krk-cs01,4500X-32 10GE (SFP+),Switch2 Supervisor 1 (virtual slot 11),WS-C4500X-32,JAE214207XW,V06
+pl-krk-cs01,Cisco Systems,Switch2 System,,JAE214207XW,none
+pl-krk-cs01,10GBase-CU-2M,TenGigabitEthernet2/1/10,SFP-H10GB-CU2M,JPC2028020W,V02
+pl-krk-cs01,10GBase-CU-5M,TenGigabitEthernet2/1/9,SFP-H10GB-CU5M,LRM20449280,V03
+pl-krk-cs01,10GBase-CU-5M,TenGigabitEthernet1/1/9,SFP-H10GB-CU5M,LRM204492C9,V03
+pl-krk-cs01,10GBase-CU-5M,TenGigabitEthernet1/1/10,SFP-H10GB-CU5M,LRM204493YZ,V03
+pl-krk-cs01,10GBase-CU-2M,TenGigabitEthernet1/1/7,SFP-H10GB-CU2M,MOC2018A2DB,V02
+pl-krk-cs01,1000BaseT,TenGigabitEthernet1/1/5,GLC-T,MTC180705B1,V03
+pl-krk-cs01,1000BaseT,TenGigabitEthernet2/1/12,GLC-T,MTC183001Z1,V03
+pl-krk-cs01,10GBase-CU-2M,TenGigabitEthernet1/1/8,SFP-H10GB-CU2M,TED2009H0FF,V03

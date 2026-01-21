@@ -1,0 +1,98 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show access-lists
+    network_os: ios
+
+- name: Match - ACL Type
+  pattern_match:
+    regex: "(\\S+)\\s+IP\\s+access\\s+list\\s+\\S+"
+    match_all: yes
+    match_greedy: no
+  register: acl_type
+  export: yes
+
+- name: Match - ACL Name
+  pattern_match:
+    regex: "\\S+\\s+IP\\s+access\\s+list\\s+(\\S+)"
+    match_all: yes
+    match_greedy: no
+  register: acl_name
+  export: yes
+
+- name: Match - ACL Lines
+  pattern_match:
+    regex: "^\\s+\\d+\\s+(permit|deny)\\s+(any|\\d+.\\d+.\\d+.\\d+)"
+    match_all: yes
+    match_greedy: yes
+  register: acl_lines
+
+- name: Match - Standard ACL Group
+  pattern_group:
+    - name: MATCH - Standard ACL Lines
+      pattern_match:
+        regex: "^\\s+(\\d+)\\s+(permit|deny)\\s+(any\\s+log|any|\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+        match_all: yes
+      register: aces
+    - name: MATCH - Standard ACL Wildcards
+      pattern_match:
+        regex: "^\\s+\\d+\\s+(permit|deny)\\s+\\d+.\\d+.\\d+.\\d+,\\s+wildcard\\s+bits\\s+(\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+        match_all: yes
+      register: wildcard
+
+  loop: "{{ acl_lines }}"
+  register: acl_values
+  export: yes
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: "ace"
+        object:       
+          - key: seq_num
+            value: "{{ item.aces.0.matches[0] }}"
+          - key: action
+            value: "{{ item.aces.0.matches[1] }}"
+          - key: src
+            value: "{{ item.aces.0.matches[2] }}"
+          - key: src_wildcard
+            value: "{{ item.wildcard.0.matches[1] }}"
+  register: access_lists_facts
+  export: yes
+  loop: "{{ acl_values }}"
+
+- name: Match - Extended ACL Lines
+  pattern_match:
+    regex: "^\\s+\\d+\\s+(permit|deny)\\s+(?!any|\\d+.\\d+.\\d+.\\d+)\\S+"
+    match_all: yes
+    match_greedy: yes
+  register: ext_acl_lines
+
+- name: Match - Extended ACL Group
+  pattern_group:
+    - name: MATCH - Extended ACL Lines
+      pattern_match:
+        regex: "^\\s+(\\d+)\\s+(((?!\\(\\d+\\s+matches\\)).)*)"
+        content: "{{ item }}"
+        match_all: yes
+      register: ext_aces
+
+  loop: "{{ ext_acl_lines }}"
+  register: ext_acl_values
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: "ext_ace"
+        object:       
+          - key: seq_num
+            value: "{{ item.ext_aces.0.matches[0] }}"
+          - key: rule
+            value: "{{ item.ext_aces.0.matches[1] }}"
+  register: ext_access_lists_facts
+  export: yes
+  loop: "{{ ext_acl_values }}"

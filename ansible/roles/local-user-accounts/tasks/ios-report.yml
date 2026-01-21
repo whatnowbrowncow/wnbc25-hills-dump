@@ -1,0 +1,17 @@
+---
+
+- name: IOS - collect local user account info
+  ios_command:
+    commands:
+      - show run | i username
+  register: ios_local_accounts_output
+
+- name: IOS - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_ios_local_user_accounts.yml"
+    content: "{{ ios_local_accounts_output.stdout.0 }}"
+
+- name: IOS - Generate csv report
+  template:
+    src: "{{ role_path }}/templates/ios/csv-template.j2"
+    dest: "{{ role_path }}/files/csv/ios/{{ inventory_hostname }}.csv"

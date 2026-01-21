@@ -1,0 +1,36 @@
+---
+
+# The below task will use the variables from the 'fabric_nodes' dictionary
+# to add leaf and spine switches to the ACI fabric. 
+
+- name: Add switches to the ACI fabric
+  aci_fabric_node:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    serial: "{{ item.serial }}"
+    node_id: "{{ item.node_id }}" 
+    switch: "{{ item.switch }}"
+    state: present
+    validate_certs: no
+  with_items: "{{ fabric_nodes }}"
+
+- name: Add rack information to each switch
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/site-{{ geo_site }}/building-{{ geo_building }}/floor-{{ geo_floor }}/room-{{ geo_room }}/row-{{ item.geo_row | default('unassigned') }}/rack-{{ item.geo_rack | default('unassigned') }}.json"
+    content:
+      {
+        "geoRsNodeLocation": {
+          "attributes": {
+            "tDn": "topology/pod-1/node-{{ item.node_id }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }         
+    validate_certs: no
+  with_items: "{{ fabric_nodes }}"

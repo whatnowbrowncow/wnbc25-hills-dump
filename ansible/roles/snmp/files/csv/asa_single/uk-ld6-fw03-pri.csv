@@ -1,0 +1,4 @@
+hostname,ip address,source int,community,poll/trap,version
+uk-ld6-fw03-pri,10.120.163.59,internal-vrf,m0squ1t0,both,2c
+uk-ld6-fw03-pri,10.120.163.59,oob-mgmt,*****,both,2c
+uk-ld6-fw03-pri,10.120.129.45,oob-mgmt,juzusl4e11crIphigAQl,both,2c

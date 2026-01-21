@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: uk-sc1-vpn-asa-pri @ 20200722T115019 ---!
+!
+logging host internal-vrf 10.120.163.134
+!
+!--- END UPDATES: uk-sc1-vpn-asa-pri @ 20200722T115019 ---!
+}

@@ -1,0 +1,195 @@
+---
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show interface
+    network_os: ios
+                            
+- name: match sections
+  pattern_match:
+    regex: "^(\\S+) is .*, line protocol"
+    match_all: yes
+    match_greedy: yes
+  register: section
+                            
+                            
+- name: match interface values
+  pattern_group:
+    - name: match name
+      pattern_match:
+        regex: "^(\\S+)"
+        content: "{{ item }}"
+      register: name
+                                           
+    - name: match protocol state
+      pattern_match:
+        regex: "line protocol is (\\S+)"
+        content: "{{ item }}"
+      register: protocol_state
+
+    - name: match admin state
+      pattern_match:
+        regex: "^\\S+ is (.*),"
+        content: "{{ item }}"
+      register: admin_state
+
+    - name: match mac
+      pattern_match:
+        regex: "address is (\\S+) "
+        content: "{{ item }}"
+      register: mac
+
+    - name: match hardware
+      pattern_match:
+        regex: "Hardware is (.+,|Loopback)"
+        content: "{{ item }}"
+      register: type
+
+    - name: match cidr
+      pattern_match:
+        regex: "Internet address is (.*)"
+        content: "{{ item }}"
+      register: cidr
+
+    - name: match description
+      pattern_match:
+        regex: "Description: (.*)"
+        content: "{{ item }}"
+      register: description
+
+    - name: match mtu
+      pattern_match:
+        regex: "MTU (\\d+)"
+        content: "{{ item }}"
+      register: mtu
+                                                                                                                          
+    - name: match bandwidth
+      pattern_match:
+        regex: ", BW (\\d+) (?i)kbit\/sec,"
+        content: "{{ item }}"
+      register: bandwidth
+
+    - name: match reliability_tx
+      pattern_match:
+        regex: "txload (\\d+\/\\d+)"
+        content: "{{ item }}"
+      register: reliability_tx
+
+    - name: match reliability_rx
+      pattern_match:
+        regex: "rxload (\\d+\/\\d+)"
+        content: "{{ item }}"
+      register: reliability_rx
+
+    - name: match output_drops
+      pattern_match:
+        regex: "Total output drops: (\\d+)"
+        content: "{{ item }}"
+      register: output_drops
+
+    - name: match input_rate_interval
+      pattern_match:
+        regex: "(\\d+ \\S+) input rate (\\d+) bits\/sec"
+        content: "{{ item }}"
+      register: input_rate_interval
+
+    - name: match output_rate_interval
+      pattern_match:
+        regex: "(\\d+ \\S+) output rate (\\d+) bits\/sec"
+        content: "{{ item }}"
+      register: output_rate_interval
+
+    - name: match input_rate_value
+      pattern_match:
+        regex: "input rate (\\d+) bits\/sec"
+        content: "{{ item }}"
+      register: input_rate_value
+
+    - name: match input_packet_value
+      pattern_match:
+        regex: "input rate \\d+ bits\/sec, (\\d+) packets\/sec"
+        content: "{{ item }}"
+      register: input_packet_value
+
+    - name: match output_rate_value
+      pattern_match:
+        regex: "output rate (\\d+) bits\/sec"
+        content: "{{ item }}"
+      register: output_rate_value
+
+    - name: match output_packet_value
+      pattern_match:
+        regex: "output rate \\d+ bits\/sec, (\\d+) packets\/sec"
+        content: "{{ item }}"
+      register: output_packet_value
+      
+    - name: match input_errors
+      pattern_match:
+        regex: "(\\d+) input errors,"
+        content: "{{ item }}"
+      register: input_errors
+
+    - name: match output_errors
+      pattern_match:
+        regex: "(\\d+) output errors,"
+        content: "{{ item }}"
+      register: output_errors
+
+  loop: "{{ section }}"
+  register: interfaces
+
+- name: generate json data structure
+  json_template:
+    template:
+      - key: config
+        object:
+          - key: name
+            value: "{{ item.name.matches.0 }}"
+          - key: type
+            value: "{{ item.type.matches.0 }}"
+          - key: mtu
+            value: "{{ item.mtu.matches.0 }}"
+          - key: description
+            value: "{{ item.description.matches.0 }}"
+          - key: cidr
+            value: "{{ item.cidr.matches.0 }}"
+      - key: metadata
+        object:
+          - key: protocol_state
+            value: "{{ item.protocol_state.matches.0 }}"
+          - key: admin_state
+            value: "{{ item.admin_state.matches.0 }}"
+          - key: mac
+            value: "{{ item.mac.matches.0 }}"
+          - key: bandwidth 
+            value: "{{ item.bandwidth.matches.0 }}"
+          - key: reliability_tx
+            value: "{{ item.reliability_tx.matches.0 }}"
+          - key: reliability_rx
+            value: "{{ item.reliability_rx.matches.0 }}"
+          - key: output_drops
+            value: "{{ item.output_drops.matches.0 }}"
+          - key: input_rate
+            object: 
+              - key: interval
+                value: "{{ item.input_rate_interval.matches.0 }}"
+              - key: rate
+                value: "{{ item.input_rate_value.matches.0 }}"
+              - key: packet
+                value: "{{ item.input_packet_value.matches.0 }}"
+          - key: output_rate
+            object: 
+              - key: interval
+                value: "{{ item.output_rate_interval.matches.0 }}"
+              - key: rate
+                value: "{{ item.output_rate_value.matches.0 }}"
+              - key: packet
+                value: "{{ item.output_packet_value.matches.0 }}"
+          - key: input_errors
+            value: "{{ item.input_errors.matches.0 }}"
+          - key: output_errors
+            value: "{{ item.output_errors.matches.0 }}"
+  loop: "{{ interfaces }}"
+  ##use export to display to screen
+  export: yes
+  register: interface_facts

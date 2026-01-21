@@ -1,0 +1,2 @@
+device,timeout,auth_retries,source-interface,version,server-algorithm,client-algorithm
+uk-man-rr01,60,,Loopback20,2,,

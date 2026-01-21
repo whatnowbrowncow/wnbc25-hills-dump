@@ -1,0 +1,302 @@
+---
+- name: ASA-RAS - Creating a changes directory for Object configuration 'diff' files
+  file:
+    path: "{{ logs_dir }}"
+    state: directory
+  check_mode: no
+  listen:
+    - "fail_executed"
+    - "updates_exist"
+
+- name: Find all files older that 28 days in changes directory
+  find:
+    paths:
+      - "{{ backup_dir }}"
+      - "{{ config_dir }}"
+      - "{{ logs_dir }}"
+    age: 28d
+    recurse: yes
+  register: filesOlderThan28d
+  check_mode: no
+  listen:
+    - "updates_exist"
+
+- name: ASA-RAS - Saving the post-change configuration
+  asa_config:
+    save: yes
+  listen:
+    - "updates_exist"
+  check_mode: no
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Extracting all the current anyconnect custom data and group policy config
+- name: ASA-RAS - Retrieving the post-change DST configuration
+  asa_command:
+    commands:
+      - "show running-config anyconnect-custom-data "
+      - "show running-config group-policy"
+  check_mode: no
+  listen:
+      - "updates_exist"
+  register: activeDST
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Create a directory to store configuration files in
+- name: ASA-RAS - Creating a changes directory for DST configuration 'diff' files
+  file:
+    path: "{{ changes_dir }}"
+    state: directory
+  check_mode: no
+  listen:
+    - "updates_exist"
+
+# Take post change data and place in a file
+- name: ASA-RAS - Taking a snapshot of the post-change, committed DST configuration (for diff)
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ post_conf_file }}"
+  check_mode: no
+  listen:
+    - "updates_exist"
+  register: config_results
+
+# Retrieve all data from pre-config file that contains changed dsts
+- name: Obtaining All Pre-Config DST Entries
+  set_fact:
+    pre_change_temp: "{{ (lookup('file', pre_conf_file) | regex_findall('anyconnect-custom-data dynamic-split-include-domains ' + loop_dst_check.value.device_acl + '_v' + loop_dst_check.value.device_version | string + '(.+)')) }}"
+  loop: "{{ combined_dst_data | dict2items }}"
+  loop_control:
+    loop_var: loop_dst_check
+    extended: yes
+    label: "Retrieving All Pre Change Data - {{ ((ansible_loop.index / ansible_loop.length)*100)|round(1,'common') }}%"
+  when: loop_dst_check.value.yaml_acl == loop_dst_check.value.device_acl
+  delegate_to: 127.0.0.1
+  listen:
+    - "updates_exist"
+  check_mode: no
+
+# Retrieve all data from post-config file that contains changed dsts
+- name: Obtaining All Post Config DST Entries
+  set_fact:
+    post_change_temp: "{{ (lookup('file', post_conf_file) | regex_findall('anyconnect-custom-data dynamic-split-include-domains ' + loop_dst_check.value.yaml_acl + '_v' + loop_dst_check.value.yaml_version | string + '(.+)')) }}"
+  loop: "{{ combined_dst_data | dict2items}}"
+  loop_control:
+    loop_var: loop_dst_check
+    extended: yes
+    label: "Retrieving All Post Change Data - {{ ((ansible_loop.index / ansible_loop.length)*100) | round(1,'common') }}%"
+  delegate_to: 127.0.0.1
+  when: loop_dst_check.value.yaml_acl == loop_dst_check.value.device_acl
+  listen:
+    - "updates_exist"
+  check_mode: no
+
+- name: Placing all Pre-Change DSTs into list
+  set_fact:
+     pre_change: "{{ (pre_change | default([])) + (loop_pre_data.split(',') | list) }}"
+  loop: "{{ pre_change_temp }}"
+  loop_control:
+    extended: yes
+    loop_var: loop_pre_data
+    label: "Compiling Pre Change Data - {{ ((ansible_loop.index / ansible_loop.length)*100) | round(1,'common') }}%"
+  listen:
+    - "updates_exist"
+  check_mode: no
+
+- name: Create Changes Files
+  file:
+    path: "{{ changes_dir }}/{{ timestamp }}_changes.conf"
+    state: touch
+  listen:
+    - "updates_exist"
+  check_mode: no
+
+# Highlight Difference between pre and post config change and place in output file for user
+- name: Checking Pre and Post differences
+  block:
+    - name: Placing all Post Change DSTs into list
+      set_fact:
+         post_change: "{{ (post_change | default([])) + (loop_post_data.split(',') | list) }}"
+      loop: "{{ post_change_temp }}"
+      loop_control:
+        extended: yes
+        loop_var: loop_post_data
+        label: "Compiling Post Change Data - {{ ((ansible_loop.index / ansible_loop.length)*100) | round(1,'common') }}%"
+      listen:
+        - "updates_exist"
+      check_mode: no
+
+    - name: Confirming differences Between Pre and Post config lists
+      set_fact:
+        different_dst: "{{ {'additions':post_change | difference(pre_change)} }}"
+      when: pre_change is defined
+      listen:
+        - "updates_exist"
+      check_mode: no
+
+    - name: Confirming differences Between Pre and Post config lists
+      set_fact:
+        different_dst: "{{ different_dst | combine({'removals':(pre_change | difference(post_change))}) }}"
+      when: pre_change is defined
+      listen:
+        - "updates_exist"
+      check_mode: no
+
+    - name: Create Changes Files
+      file:
+          path: "{{ changes_dir }}/{{ timestamp }}_changes.conf"
+          state: touch
+      when: (different_dst is defined) and (different_dst | length>0)
+      listen:
+        - "updates_exist"
+      check_mode: no
+
+    - name: Outputting Configuration for DSTs that have been Added
+      lineinfile:
+        path: "{{ changes_dir }}/{{ timestamp }}_changes.conf"
+        line: "The following lines have had the following DSTs added : {{ different_dst.additions }} \n\t{{ (lookup('file', post_conf_file) | regex_findall('.*' + loop_post_change.1.value.yaml_acl + '_v' + loop_post_change.1.value.yaml_version | string + '.*' + loop_post_change.0 + '.*')) | join('\n')}}"
+        insertbefore: EOF
+      loop: "{{ different_dst.additions | zip((combined_dst_data | dict2items)) | list }}"
+      loop_control:
+        loop_var: loop_post_change
+        extended: yes
+        label: "Writing All Additions To Log File - {{ ((ansible_loop.index / ansible_loop.length)*100) | round(1,'common') }}%"
+      when: different_dst.additions is defined
+      listen:
+        - "updates_exist"
+      check_mode: no
+
+    - name: Outputting Configuration for DSTs that have been Removed
+      lineinfile:
+        path: "{{ changes_dir }}/{{ timestamp }}_changes.conf"
+        line: "The following lines have had the following DSTs removed : {{ different_dst.removals }} \n\t{{ (lookup('file', pre_conf_file) | regex_findall('.*' + loop_pre_change.1.value.device_acl + '_v' + loop_pre_change.1.value.device_version | string + '.*' + loop_pre_change.0 + '.*')) | join('\n')}}"
+        insertbefore: EOF
+      loop: "{{ different_dst.removals | zip((combined_dst_data | dict2items)) | list }}"
+      loop_control:
+        loop_var: loop_pre_change
+        extended: yes
+        label: "Writing All Removals To Log File - {{ ((ansible_loop.index / ansible_loop.length)*100) | round(1,'common') }}%"
+      when: different_dst.removals is defined and ((lookup('file', pre_conf_file) | regex_findall('.*' + loop_pre_change.0 | string + '.*')) | length>0)
+      listen:
+        - "updates_exist"
+      check_mode: no
+
+    - name: ASA-RAS - Producing Full Code differences
+      shell: diff {{ pre_conf_file }} {{ post_conf_file }}
+      register: diff_result
+      failed_when: diff_result.rc > 1
+      listen:
+        - "updates_exist"
+      check_mode: no
+
+    - name: Outputting Configuration for DSTs that have been Removed
+      lineinfile:
+        path: "{{ changes_dir }}/{{ timestamp }}_changes.conf"
+        line: "\nAll Lines That have been changed:\n\n{{ diff_result.stdout }}"
+        insertbefore: EOF
+      listen:
+        - "updates_exist"
+      check_mode: no
+  when: ((post_change_temp is defined) and (post_change_temp|length>0))
+
+- name: Ouput Message to file if no changes
+  lineinfile:
+    path: "{{ changes_dir }}/{{ timestamp }}_changes.conf"
+    line: "No Changes Have Been Made"
+    insertafter: BOF
+  when: (post_change_temp is not defined) or (post_change_temp|length==0)
+  check_mode: no
+  listen:
+    - "updates_exist"
+
+
+# Clearing Temporary data from ras-processed directory
+- name: Delete Temporary Files for DSTs
+  file:
+    state: absent
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+    - "{{ pre_conf_file }}"
+    - "{{ post_conf_file }}"
+  loop_control:
+    loop_var: foldernames
+    label: "Removing Directory and contents of {{ foldernames }}"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "updates_exist"
+
+- name: Recreate empty Processed Files Directory
+  file:
+    state: directory
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+    - "{{ logs_dir }}"
+  loop_control:
+    loop_var: foldernames
+    label: "Creating Directory {{ foldernames }}"
+  check_mode: no
+  run_once: true
+  delegate_to: localhost
+  listen:
+    - "updates_exist"
+
+- name: Move Ansible Log to Log Files
+  command: "mv $HOME/ansible.log {{ logs_dir }}/{{ date }}_{{ time }}_ansible.log"
+  check_mode: no
+  listen:
+    - "fail_executed"
+    - "updates_exist"
+
+- name: Run Log Collection on Fail
+  shell: "{{ wh_net_tools_path }}ras_log_retrieval.sh > /dev/tty"
+  check_mode: no
+  listen:
+    - "fail_executed"
+
+- name: Send Slack Message Informing Of Failure
+  shell: "python {{ playbook_dir }}/scripts/send_slack_message.py -lp $HOME/slack_message.log -bt {{ ns_slack_bottoken }} -c {{ channel_id }} -m {{ slack_message }} "
+  check_mode: no
+  listen:
+    - "fail_executed"
+
+- name: End playbook due to failure
+  fail:
+    msg: "\n############################################ \nThere has been a deployment Failure on {{ inventory_hostname }}, Please Check \n LOGS CAN BE FOUND IN ~/Ras_automation_logs.zip \n ############################################"
+  check_mode: no
+  listen:
+    - "fail_executed"
+
+- name: Remove all files found that are older than 28 days in changes directory
+  file:
+    path: "{{ filename.path }}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: "Removing old change file {{ filename.path }}"
+  check_mode: no
+  listen:
+    - "updates_exist"
+
+- name: Remove all associated directories in changes directory
+  file:
+    path: "{{ filename.path | dirname}}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: "Removing old directory {{ filename.path | dirname }}"
+  check_mode: no
+  listen:
+    - "updates_exist"
+
+- shell: "echo '\e[1;32m ############## Changed that were made to the Devices Can be found in {{ changes_dir }} ##############\e[0m' > /dev/tty"
+  check_mode: no
+  listen:
+    - "updates_exist"

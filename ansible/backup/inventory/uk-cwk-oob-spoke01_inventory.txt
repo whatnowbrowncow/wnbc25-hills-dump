@@ -1,0 +1,5 @@
+NAME: "C887VA-K9", DESCR: "C887VA-K9 chassis, Hw Serial#: FCZ223310UY, Hw Revision: 1.0"
+PID: C887VA-K9         , VID: V02, SN: FCZ223310UY
+
+NAME: "C887VA Mother board on Slot 0", DESCR: "C887VA Mother board"
+PID: C887VA-K9         , VID: V02, SN: FOC22283Y6X

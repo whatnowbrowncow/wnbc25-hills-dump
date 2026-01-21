@@ -1,0 +1,7 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+ph-mak-cs01,WS-C3650-48PS,Switch 1,WS-C3650-48PS,FDO1916E10M,V02
+ph-mak-cs01,c3xxx Stack,c3xxx Stack,WS-C3650-48PS,FDO1916E10M,V02
+ph-mak-cs01,1000BaseSX SFP,GigabitEthernet1/1/2,GLC-SX-MMD,FNS19140D95,V01
+ph-mak-cs01,1000BaseSX SFP,GigabitEthernet1/1/1,GLC-SX-MMD,FNS19140D9K,V01
+ph-mak-cs01,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,LIT19130263,V01
+ph-mak-cs01,10/100/1000BaseTX SFP,GigabitEthernet1/1/3,,MTC181603PJ,none

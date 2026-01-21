@@ -1,0 +1,13 @@
+---
+
+- name: Bind filter to subject
+  aci_contract_subject_to_filter:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: '{{ contract_item.tenant }}'
+    contract: '{{ contract_item.contract }}'
+    subject: '{{ subject_item.subject }}'
+    filter: '{{ filter_item.filter }}'
+    log: "log"
+    validate_certs: no

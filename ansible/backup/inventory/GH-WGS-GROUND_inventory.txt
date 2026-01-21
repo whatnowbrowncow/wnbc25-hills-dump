@@ -1,0 +1,35 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PS     , VID: V03  , SN: FDO1948E0P9
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PS"
+PID: WS-C3650-48PS     , VID: V03  , SN: FDO1948E0P9
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V02  , SN: LIT1944016R
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V02  , SN: LIT195102DX
+
+NAME: "GigabitEthernet1/1/1", DESCR: "1000BaseSX SFP"
+PID:                    , VID:      , SN: AGS091005NQ    
+
+NAME: "Switch 2", DESCR: "WS-C3650-48PS"
+PID: WS-C3650-48PS     , VID: V03  , SN: FDO1934E3NA
+
+NAME: "Switch 2 - Power Supply A", DESCR: "Switch 2 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V02  , SN: DCB1919B0QB
+
+NAME: "Switch 2 - Power Supply B", DESCR: "Switch 2 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V02  , SN: LIT194401D4
+
+NAME: "Switch 3", DESCR: "WS-C3650-48PS"
+PID: WS-C3650-48PS     , VID: V03  , SN: FDO1945Q1BQ
+
+NAME: "Switch 3 - Power Supply A", DESCR: "Switch 3 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V02  , SN: LIT194709QT
+
+NAME: "Switch 3 - Power Supply B", DESCR: "Switch 3 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V02  , SN: LIT19350G65
+
+NAME: "GigabitEthernet3/1/1", DESCR: "1000BaseSX SFP"
+PID:                    , VID:      , SN: FNS10401HNP

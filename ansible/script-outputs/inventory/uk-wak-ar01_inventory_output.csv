@@ -1,0 +1,11 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-wak-ar01,GE SX,subslot 0/0 transceiver 2,GLC-SX-MMD,FNS1843108T,A
+uk-wak-ar01,Cisco ASR1001 Route Processor,module R0,ASR1001,JAE184403QM,V03
+uk-wak-ar01,Cisco ASR1001 AC Power Supply,Power Supply Module 1,ASR1001-PWR-AC,MP518350291,V02
+uk-wak-ar01,Cisco ASR1001 AC Power Supply,Power Supply Module 0,ASR1001-PWR-AC,MP5183502F4,V02
+uk-wak-ar01,GE T,subslot 0/0 transceiver 1,N/A,MTC181603TX,E
+uk-wak-ar01,GE T,subslot 0/0 transceiver 0,N/A,MTC181603U7,E
+uk-wak-ar01,Cisco ASR1001 Chassis w/o IDC,Chassis,ASR1001,SSI183506KA,V03
+uk-wak-ar01,4-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/0,ASR1001,none,none
+uk-wak-ar01,Cisco ASR1001 SPA Interface Processor,module 0,ASR1001,none,none
+uk-wak-ar01,Cisco ASR1001 Embedded Services Processor,module F0,ASR1001,none,none

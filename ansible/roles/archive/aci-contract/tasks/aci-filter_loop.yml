@@ -1,0 +1,20 @@
+---
+
+- name: Create filter
+  aci_filter:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: '{{ contract_item.tenant }}'
+    filter: '{{ filter_item.filter }}'
+    description: '(( filter_item.description))'
+    validate_certs: no
+
+    
+- name: Move to filter entry creation
+  include_tasks: ./aci-filter_entry_loop.yml
+  with_items:
+    - "{{ filter_item.entries }}"
+  loop_control:
+    loop_var: filter_entry_item
+  

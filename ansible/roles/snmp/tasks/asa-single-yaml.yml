@@ -1,0 +1,22 @@
+---
+
+- name: ASA-SINGLE - Collecting the SNMP configuration
+  asa_command:
+    commands:
+      - more system:running-config | include snmp-server
+  register: raw_output
+
+- name: ASA-SINGLE - Parsing the SNMP configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/asa_single/parser_asa_single_snmp.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+- name: ASA-SINGLE - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: ASA-SINGLE - Generating the YAML file
+  template:
+    src: "/gitnet/ansible/roles/snmp/templates/asa_single/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/snmp.yml"

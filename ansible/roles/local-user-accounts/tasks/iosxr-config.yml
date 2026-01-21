@@ -1,0 +1,12 @@
+---
+
+- name: IOS-XR - Build configuration
+  template:
+    src: {{ role_path }}/templates/iosxr/config-template.j2
+    dest: {{ role_path }}/files/configs/iosxr/{{ inventory_hostname }}.cfg
+    with_items:
+      - "{{ local_user_accounts }}"
+  
+- name: IOS-XR - Apply configuration
+  iosxr_config:
+    src: {{ role_path }}/files/configs/iosxr/{{ inventory_hostname }}.cfg

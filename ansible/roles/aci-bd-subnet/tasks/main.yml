@@ -1,0 +1,5 @@
+---
+
+- name: Build BD subnets
+  import_tasks: ./aci-bd-subnet.yml
+  when: ansible_network_os == "aci"

@@ -1,0 +1,452 @@
+hostname,name,type,seq number,remark,action,src_service_obj,src_service_obj_grp,protocol,src_host,src_network_obj,src_network_obj_grp,src_network,dest_host,dest_network_obj,dest_network_obj_grp,dest_network,dest_port,dest_port_obj_grp,dest_port_range,logging_level,logging_interval,status
+uk-sc1-fw01-sec,app-top_access_in,extended,1,CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,2,,deny,,,ip,,,Corp-WiFi-Subnets,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,app-top_access_in,extended,3,CHG0015737,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,4,,permit,,,tcp,,,DM_INLINE_NETWORK_3,,,,DM_INLINE_NETWORK_5,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,5,CHG0019020,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,6,,permit,,,tcp,,,DM_INLINE_NETWORK_10,,,,sc1wnprrpl,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,7,CHG0019070,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,8,,permit,,,tcp,,,DM_INLINE_NETWORK_11,,,,sc1wnprrbk,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,9,CHG0019513,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,10,,permit,,,tcp,,,DM_INLINE_NETWORK_17,,10.100.4.219,,,,1433,,,notifications,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,11,CHG0059717,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,12,,permit,,,tcp,,,DM_INLINE_NETWORK_33,,,,wily-production-onshore,,5001,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,13,CHG0021002,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,14,,permit,,,tcp,,sc1wnprrtp01,,,,,DM_INLINE_NETWORK_18,,smtp,,,notifications,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,15,CHG0070262,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,16,,permit,,,tcp,,sc1wnprrdb01-symantec,,,10.210.168.25,,,,smtp,,,notifications,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,17,CHG0033465,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,18,,permit,,,tcp,,,liability-viewer-pds-apps,,,liability-viewer-rtapps-vip,,,www,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,19,CHG0033465,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,20,,permit,,,tcp,,,liability-viewer-euthenia-apps,,,liability-viewer-rtapps-vip,,,www,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,21,CHG0035130, CHG0116405, CHG0116407,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,22,,permit,,,tcp,,,liability-viewer-tills,,,,Polling-VIPs,,,DM_INLINE_TCP_27,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,23,CHG0035130,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,24,,permit,,,tcp,,,liability-viewer-tills,,,,serial-repeaters-brs,,21299,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,25,CHG0076120,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,26,,permit,,,tcp,,,grp-pr-seneca-servers,,,DR-ASDI-VIP,,,7011,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,27,CHG0076774,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,28,,permit,,,tcp,,,grp-pr-seneca-servers,,,internalproxy.williamhill.remote,,,,DM_INLINE_TCP_10,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,29,CHG0035849,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,30,,permit,,,tcp,,sc1wnprrcsvi,,,,,sc1wnprrbk,,35011,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,31,CHG0037956 - uses FTP inspection,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,32,,permit,,,tcp,,,sc1wnprrcs,,,,sc1wnprrbk,,35011,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,33,CHG0052743,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,34,,permit,,,tcp,,,vr-mysql-servers-live,,,,vr-mysql-servers-dr,,3306,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,35,CHG0056731,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,36,,permit,,,tcp,,sc1pcprrep01,,,,,Polling_Servers,,8011,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,37,CHG0075809,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,38,,permit,,,tcp,,,grp-scc-serverised-tills,,,brs-email-gateway,,,smtp,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,39,CHG0062597,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,40,,permit,,,tcp,,,DM_INLINE_NETWORK_34,,,PreProd_Test_Till,,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,41,CHG0064934,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,42,,permit,,DM_INLINE_SERVICE_5,,,sc1wnprrtp01,,,,,sc1wnprrpl,,,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,43,CHG0065030,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,44,,permit,,,tcp,,,ASDI_Servers,,,brs1wnprrcsvi,,,2003,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,45,CHG0065030,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,46,,permit,,,tcp,,,ASDI_Servers,,,brswndrrcs01,,,1433,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,47,CHG0065670,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,48,,permit,,,tcp,,,SIS-Serial-Repeaters-SC1,,,,Retail_Nets,,21299,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,49,CHG0070439, CHG0074679,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,50,,permit,,DM_INLINE_SERVICE_7,,,,Retail-SFTP,,,,DM_INLINE_NETWORK_40,,,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,51,CHG0071041, CHG0071668, CHG0071672,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,52,,permit,,DM_INLINE_SERVICE_8,,,,DM_INLINE_NETWORK_39,,,,DM_INLINE_NETWORK_38,,,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,53,CHG0074376, CHG0076825, RTSK0039249,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,54,,permit,,DM_INLINE_SERVICE_10,,,,grp-retail-helios01,,,,DM_INLINE_NETWORK_41,,,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,55,CHG0076057,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,56,,permit,Stingray_Proxy,,,,,,10.120.177.0 255.255.255.128,,retail-proxy.prod.williamhill.plc,,,,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,57,CHG0074376,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,58,,permit,,grp-svc-ssbt-tig,,,,,10.120.177.0 255.255.255.128,,,grp-pr-retail-estate,,,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,59,CHG0086591,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,60,,permit,,,tcp,,,DM_INLINE_NETWORK_46,,,SCC-WSUS,,,www,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,61,CHG0093894,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,62,CHG0093894,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,63,CHG0093894,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,64,,permit,,,tcp,,,GRP-ELK-SERVERS,,,,GRP-NFS-HEADS-SAN,,sunrpc,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,65,,permit,,,tcp,,,GRP-ELK-SERVERS,,,,GRP-NFS-HEADS-SAN,,nfs,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,66,CHG0095730, CHG0096579,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,67,,permit,,,tcp,,,GRP-SC1UXPRRDB,,,,DM_INLINE_NETWORK_50,,3306,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,68,CHG0095761,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,69,,permit,,GRP-SSBT-DATABASE-MONITORING,,,,GRP-SSBT-DATABASE-SERVERS,,,brswn246-mg,,,,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,70,CHG0095796,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,71,,permit,,,tcp,,,GRP-SSBT-DATABASE-SERVERS,,,brsuxdrrdb001.prod.williamhill.plc,,,3306,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,72,CHG0101250,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,73,,permit,,,tcp,,sc1uxprnap005,,,,,grp-int-lb-servicelayer,,www,,,,,active
+uk-sc1-fw01-sec,app-top_access_in,extended,74,CHG0104689,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,75,,permit,,,tcp,,,retail-liability-db-vip,,,brsux232,,,,DM_INLINE_TCP_20,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,76,CHG0109321,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,77,,permit,,,tcp,,,DM_INLINE_NETWORK_63,,10.120.172.30,,,,www,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,78,CHG0109477,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,79,,permit,,,tcp,,,DM_INLINE_NETWORK_64,,10.120.172.151,,,,,DM_INLINE_TCP_23,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,80,CHG0109477,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,81,,permit,,,tcp,,,DM_INLINE_NETWORK_65,,10.120.172.150,,,,7011,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,82,CHG0109477,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,83,,permit,,,tcp,,,DM_INLINE_NETWORK_66,,10.120.172.100,,,,21299,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,84,CHG0109477,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,85,,permit,,,tcp,,,DM_INLINE_NETWORK_67,,10.120.172.101,,,,21299,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,86,CHG0109477,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,87,,permit,,,tcp,,,DM_INLINE_NETWORK_68,,10.120.172.150,,,,7011,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,88,CHG0109982,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,89,,permit,,,tcp,,,DM_INLINE_NETWORK_76,,10.210.172.101,,,,21299,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,90,CHG0109982,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,91,,permit,,,tcp,,,DM_INLINE_NETWORK_77,,10.210.172.150,,,,7011,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,92,CHG0109982,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,93,,permit,,,tcp,,,DM_INLINE_NETWORK_78,,10.210.172.100,,,,21299,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,94,CHG0110043,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,95,,permit,,,tcp,,,DM_INLINE_NETWORK_79,,,,DM_INLINE_NETWORK_80,,smtp,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,96,CHG0114101,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,97,,permit,,,tcp,,sc1uxprrdb002,,,,brsuxdrrdb001.prod.williamhill.plc,,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,98,CHG0118486,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,99,,permit,tcp-3306,,,,sc1uxprrdb010,,,,brsuxdrrdb010,,,,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,100,CHG0123808,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,101,,permit,tcp-1521,,,,sc1uxprtdb001,,,,sc1uxprgdb01,,,,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,102,CHG0123808,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,103,,permit,tcp-1433,,,,sc1uxprtdb001,,,,corpservicessql,,,,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,104,CHG0123808,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,105,,permit,,,tcp,,sc1uxprtdb001,,,,emailhost01,,,smtp,,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,106,CHG0126210 CHG0129203 CHG0129088,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,107,,permit,,,tcp,,,DM_INLINE_NETWORK_98,,,ld6-retail_production-omni-services,,,,DM_INLINE_TCP_99,,informational,300,active
+uk-sc1-fw01-sec,app-top_access_in,extended,108,sc1nasncde.williamhill.plc,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,app-top_access_in,extended,109,,permit,,DM_INLINE_SERVICE_106,,,,DM_INLINE_NETWORK_105,,,,sc1nasncde.williamhill.plc,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,1,CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,2,,deny,,,ip,,,Corp-WiFi-Subnets,,,,,any,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,3,CHG0033465,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,4,,permit,,rtapps-pds-apps,,,,liability-viewer-rtapps,,,,liability-viewer-pds-apps,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,5,CHG0033465,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,6,,permit,,rtapps-euthenia,,,,liability-viewer-rtapps,,,,liability-viewer-euthenia-apps,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,7,CHG0079048,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,8,,permit,,,tcp,,,liability-viewer-rtapps,,,sc1uxprrap007,,,,DM_INLINE_TCP_11,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,9,CHG0079048,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,10,,permit,,,tcp,,,liability-viewer-risk,,,sc1uxprrap007,,,,DM_INLINE_TCP_12,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,11,CHG0080940, CHG0084832, CHG0101698, CHG0112087, CHG0128596,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,12,,permit,,,tcp,,,grp-retail-serial-repeaters-src,,,,grp-serial-repeaters-scc,,21299,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,13,CHG0079048,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,14,,permit,,,tcp,,brsuxdrnap008,,,,sc1uxprrap007,,,9200,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,15,CHG0079118,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,16,,permit,,,tcp,,,DM_INLINE_NETWORK_42,,,sc1uxprrap007,,,9200,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,17,CHG0033465,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,18,,permit,,,tcp,,stj-dev-net,,,,,liability-viewer-tills,,1433,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,19,CHG0033465, CHG0096923, CHG0097421, CHG0117835, CHG0119299, TASK0164264, CHG0134784, CHG0136028,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,20,,permit,,,tcp,,,DM_INLINE_NETWORK_52,,,sc1uxprrdb-vip,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,21,CHG0129088,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,22,,permit,,,tcp,,ld6uxprrdb001,,,,sc1uxprrdb-vip,,,,DM_INLINE_TCP_16,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,23,CHG0129202,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,24,,permit,,,tcp,,ld6uxprrdb010,,,,sc1uxprrdb010,,,,DM_INLINE_TCP_17,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,25,CHG0033465,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,26,,permit,,,tcp,,,wily-production-onshore,,,,liability-viewer-tills,,1433,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,27,CHG0035130,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,28,,permit,,,tcp,,,wily-production-onshore,,,,liability-viewer-pds-db,,3306,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,29,CHG0020939, CHG0062597,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,30,,permit,,,tcp,,,DM_INLINE_NETWORK_35,,,,SIS-Serial-Repeaters-SC1,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,31,CHG0021075,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,32,,permit,,,tcp,,,stj-pch,,,,DM_INLINE_NETWORK_20,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,33,CHG0059717,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,34,,permit,,,tcp,,,wily-production-onshore,,,,DM_INLINE_NETWORK_32,,www,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,35,CHG0059717,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,36,,permit,,,tcp,,LCW-SamIllingworth,,,,,DM_INLINE_NETWORK_30,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,37,CHG0021991,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,38,,permit,,,tcp,,,DM_INLINE_NETWORK_22,,,,DM_INLINE_NETWORK_21,,,DM_INLINE_TCP_5,,notifications,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,39,**Emergency Rule, Virtual Server Failure, Approved by Matt B, 18/11/12, AB**,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,40,,permit,,,tcp,10.150.4.114,,,,,sc1wnprrcsvi,,,4511,,,notifications,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,41,CHG0023012,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,42,,permit,,,tcp,,,SAVOR-users,,,sc1wnprrcs-vip,,,1433,,,notifications,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,43,CHG0023834,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,44,,permit,,,tcp,,,DM_INLINE_NETWORK_23,,,sc1wnprrcsvi,,,50000,,,debugging,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,45,CHG0033465, CHG0035341,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,46,CHG0033465, CHG0035341,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,47,,permit,,,tcp,,,System-Engineers,,,,liability-viewer-tills,,,System-Engineer-LV-access,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,48,CHG0022115,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,49,,permit,,DM_INLINE_SERVICE_3,,10.1.82.152,,,,,sc1wnprrtp01,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,50,CHG0123189,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,51,,permit,,RDC_PORTS,,,brswnprrjb01,,,,sc1wnprrtp01,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,52,CHG0103555,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,53,,permit,,,tcp,,brswnprrjb01,,,,sc1wnprrtp01,,,1433,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,54,CHG0103725,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,55,,permit,,,tcp,,brswnprrjb01,,,10.120.177.11,,,,1433,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,56,CHG0035130, CHG0039219, CHG0055198,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,57,,permit,,,tcp,,,DBA-Team,,,,liability-viewer-tills,,,DM_INLINE_TCP_8,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,58,CHG0052999, CHG0080071,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,59,,permit,,,tcp,,,DM_INLINE_NETWORK_26,,,sc1wnprrcsvi,,,,DM_INLINE_TCP_6,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,60,CHG0083866,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,61,,permit,,,tcp,,,DM_INLINE_NETWORK_45,,,sc1wnprrcsvi,,,,DM_INLINE_TCP_13,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,62,CHG0083144,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,63,,permit,,,tcp,,,DM_INLINE_NETWORK_44,,,sc1wnprrcsvi,,,3822,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,64,CHG0035130,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,65,,permit,,,tcp,,,DBA-Team,,,,liability-viewer-pds-db,,,liability-viewer-db-mg,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,66,CHG0035130, CHG0081986, CHG0096116,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,67,,permit,,,tcp,,,DM_INLINE_NETWORK_36,,,sc1uxprrdb-vip,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,68,CHG0033387,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,69,,permit,,MS-SQL,,,,Symantec-Management-Servers,,,sc1wnprrdb01-symantec,,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,70,CHG0035926, CHG0041147,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,71,,permit,,,tcp,,,liability-viewer-till-support,,,,liability-viewer-tills,,6502,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,72,CHG0051588,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,73,,permit,,,tcp,,SC1WNPREMN20,,,,,,any4,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,74,CHG0052743,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,75,,permit,,,tcp,,,vr-mysql-servers-dr,,,,vr-mysql-servers-live,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,76,CHG0053517,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,77,,permit,,,tcp,,whg-lcw-capacity_monitoring,,,,Oscar-Splunk,,,8000,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,78,CHG0053779,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,79,,permit,,,tcp,,bruxdrrvr05,,,,,vr-mysql-servers-live,,3306,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,80,CHG0053180,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,81,,permit,,,tcp,,VR_Viewer_PCs,,,,NAS,,,445,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,82,CHG0056018, CHG0117052,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,83,,permit,,,tcp,,,DM_INLINE_NETWORK_28,,,,VR_Live_OSCAR_Servers,,7021,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,84,CHG0056018,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,85,,permit,,,tcp,,stj-dev-net,,,,,vr-mysql-servers-live,,3306,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,86,CHG0056731, CHG0119062,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,87,,permit,,,tcp,,,DM_INLINE_NETWORK_91,,,sc1pcprrep01,,,1433,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,88,CHG0056731,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,89,CHG0056731,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,90,,permit,,DM_INLINE_SERVICE_4,,,,DM_INLINE_NETWORK_27,,,,DM_INLINE_NETWORK_31,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,91,CHG0056731,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,92,CHG0056731,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,93,,permit,,,tcp,,,System-Engineers,,,sc1pcprrep01,,,,DM_INLINE_TCP_9,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,94,CHG0053180,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,95,,permit,,,tcp,,,DM_INLINE_NETWORK_29,,10.120.177.49,,,,9997,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,96,,permit,,,tcp,,,liability-viewer-till-support,,,Oscar-Splunk,,,8000,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,97,CHG0057251,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,98,,permit,,,tcp,,sc1wnprrvr11,,,,sc1uxprrvr01,,,7021,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,99,CHG0074376,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,100,,permit,,grp-svc-app-top-dst,,,,grp-pr-retail-stingray,,,,,10.120.177.0 255.255.255.128,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,101,CHG0105700,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,102,CHG0117628,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,103,,permit,,DM_INLINE_SERVICE_13,,,,DM_INLINE_NETWORK_74,,,,,10.120.177.0 255.255.255.128,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,104,CHG0085781,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,105,,permit,,,tcp,,,grp-pr-retail-stingray,,,,grp-ssbt-salt-masters,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,106,CHG0065078,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,107,,permit,,,tcp,,,DR_ASDI_Servers,,,sc1wnprrcs-vip,,,1433,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,108,CHG0065078,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,109,,permit,,,tcp,,,DR_ASDI_Servers,,,sc1wnprrcsvi,,,2003,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,110,CHG0068681,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,111,,permit,,,tcp,,,DR-SIS&PA-Data-Collectors,,,Prod-ASDi-VIP,,,7011,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,112,CHG0070439,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,113,,permit,,DM_INLINE_SERVICE_9,,,,Retail-SFTP,,,,web-btm-mgmt-svrs,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,114,CHG0071475,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,115,,permit,,,ip,,net-pr-cde-api-integration,,,,,,10.120.0.0 255.255.0.0,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,116,CHG0071475,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,117,,permit,,,ip,,net-inv-cde-api-lan,,,,,,10.120.0.0 255.255.0.0,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,118,CHG0094024,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,119,,permit,,,ip,,,grp-pr-retail-stingray,,,,grp-scc-int-lb-dest-nets,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,120,CHG0097120,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,121,,permit,,,tcp,,,trs-servers,,,,retail-liability-db-vip,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,122,CHG0104755,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,123,,permit,,,tcp,,brsux232,,,,,retail-liability-db-vip,,,DM_INLINE_TCP_21,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,124,CHG0099283,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,125,,permit,,,tcp,,,grp-trs-nodes,,10.120.177.65,,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,126,CHG0076893,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,127,,permit,,,tcp,,SCR-Ifeoma-Emodi-PC,,,,,Retail-SFTP-SCC,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,128,CHG0078585,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,129,,permit,,,tcp,,sc1uxprgdb01,,,,,Retail-SFTP-SCC,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,130,CHG0084924,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,131,,permit,,,tcp,,sc1uxprgdb01,,,,sc1wnprrcs-vip,,,1433,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,132,CHG0078585,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,133,,permit,,,tcp,,sc1wnprndb019,,,,,Retail-SFTP-SCC,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,134,CHG0077964, CHG0078207,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,135,,permit,,,tcp,,,DR-CES-Servers,,,Prod-ASDi-VIP,,,7011,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,136,CHG0111150,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,137,,permit,,,tcp,,,DM_INLINE_NETWORK_83,,,Prod-ASDi-VIP,,,,DM_INLINE_TCP_26,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,138,CHG0084293,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,139,,permit,,RDC_PORTS,,,brswnp3rcs001,,,,,grp-pr-r-be-sis-web,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,140,CHG0086206,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,141,,permit,,,tcp,,sc1wnprndb019,,,,sc1wnprrcs-vip,,,1433,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,142,CHG0087700,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,143,,permit,,,tcp,,brsux090,,,,,Retail-SFTP-SCC,,ssh,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,144,CHG0103213,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,145,,permit,,,tcp,,,DM_INLINE_NETWORK_58,,,,Retail-SFTP-SCC,,ssh,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,146,CHG0093794,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,147,,permit,,,tcp,,,DM_INLINE_NETWORK_44,,,sc1wnprrcsvi,,,3823,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,148,CHG0095730, CHG0096579,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,149,,permit,,,tcp,,,DM_INLINE_NETWORK_51,,,,GRP-SC1UXPRRDB,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,150,CHG0095761,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,151,,permit,,GRP-SSBT-DATABASE-PORTS,,,brswn246-mg,,,,,GRP-SSBT-DATABASE-SERVERS,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,152,CHG0095796,CHG0122860,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,153,,permit,,,tcp,,,DM_INLINE_NETWORK_93,,,,GRP-SSBT-DATABASE-SERVERS,,3306,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,154,CHG0098188,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,155,,permit,,,icmp,,brswn246-mg,,,,,GRP-SSBT-DATABASE-SERVERS,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,156,CHG0095369, CHG0096484, CHG0097010,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,157,,permit,,,tcp,,,DM_INLINE_NETWORK_49,,,omniwallet-db,,,,DM_INLINE_TCP_15,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,158,CHG0096251,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,159,,permit,,,tcp,,,DM_INLINE_NETWORK_48,,,omniwallet-db,,,,DM_INLINE_TCP_14,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,160,CHG0097899,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,161,,permit,,TCPUDP,,,,grp-chyron-svrs,,,sc1wnprrcsvi,,,445,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,162,CHG0099521,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,163,,permit,,,tcp,,PA-NAT,,,,sc1wnprrcsvi,,,,,2000 2010,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,164,CHG0104031,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,165,,permit,,DM_INLINE_SERVICE_12,,,STJ-AmarBarot,,,10.120.177.72,,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,166,CHG0104552,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,167,,permit,,,tcp,,,grp-lb-stingrays,,,,ASDI_Servers,,7011,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,168,CHG0105430,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,169,,permit,,,tcp,,brswn251,,,,,DM_INLINE_NETWORK_59,,21299,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,170,CHG0106742,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,171,,permit,,DM_INLINE_SERVICE_14,,,,QAALaptops,,,,DM_INLINE_NETWORK_60,,,,,,,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,172,CHG0108066,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,173,,permit,,,tcp,,,DM_INLINE_NETWORK_61,,,sc1uxprrdb-vip,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,174,CHG0109116,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,175,,permit,,,tcp,,,DM_INLINE_NETWORK_62,,10.120.177.68,,,,,DM_INLINE_TCP_22,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,176,CHG0109477,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,177,,permit,,,tcp,,,DM_INLINE_NETWORK_69,,,,DM_INLINE_NETWORK_70,,7011,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,178,CHG0109477,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,179,,permit,,,tcp,,,DM_INLINE_NETWORK_71,,,,DM_INLINE_NETWORK_72,,,DM_INLINE_TCP_24,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,180,CHG0110213,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,181,,permit,,DM_INLINE_SERVICE_15,,,,DM_INLINE_NETWORK_81,,,,DM_INLINE_NETWORK_82,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,182,CHG0110900,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,183,,permit,,,tcp,,,uno-servers,,,sc1uxprrdb-vip,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,184,RTSK0074177,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,185,RTSK0074178,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,186,RTSK0074179, CHG0125748,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,187,,permit,,,tcp,,,DM_INLINE_NETWORK_97,,,omniwallet-db,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,188,CHG0112228 CHG0120424, RITM0089899,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,189,,permit,,,tcp,,,DM_INLINE_NETWORK_92,,,omniwallet-db,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,190,CHG0112287,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,191,,permit,,,tcp,,,DM_INLINE_NETWORK_84,,,omniwallet-db,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,192,CHG0112588,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,193,,permit,,,tcp,,,Data-mgt-Dev,,,sc1uxprrdb-vip,,,3306,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,194,CHG0115241, CHG0127490, CHG0131234,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,195,,permit,,DM_INLINE_SERVICE_20,,,,DM_INLINE_NETWORK_86,,10.120.177.10,,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,196,CHG0118083,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,197,,permit,tcp-3306,,,,sc1wnmem01,,,,sc1uxprshd010,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,198,CHG0118332, CHG0118486,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,199,,permit,tcp-3306,,,,,DM_INLINE_NETWORK_75,,,sc1uxprrdb010,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,200,CHG0118549,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,201,,permit,,DM_INLINE_SERVICE_17,,,,DM_INLINE_NETWORK_100,,,sc1uxprshd010,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,202,CHG0121866, CHG0123531,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,203,,permit,tcp-3306,,,,,DM_INLINE_NETWORK_94,,,sc1uxprrdb-vip,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,204,CHG0123808,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,205,,permit,tcp-1521,,,,,DM_INLINE_NETWORK_95,,,sc1uxprtdb001,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,206,CHG0123808,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,207,,permit,,DM_INLINE_SERVICE_18,,,,grp-sc1-cde-jumphosts,,,sc1uxprtdb001,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,208,CHG0123808,CHG0124126,CHG0125763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,209,,permit,,DM_INLINE_SERVICE_19,,,,DM_INLINE_NETWORK_96,,,sc1uxprtdb001,,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,210,CHG0126040,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,211,,permit,,,tcp,,,DM_INLINE_NETWORK_99,,,sc1uxprtdb001,,,,TCP-8080,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,212,CHG0130911,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,213,,permit,,DM_INLINE_SERVICE_25,,,STJ-SupportPC,,,,,liability-viewer-tills,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,214,CHG0137599,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,215,,permit,,DM_INLINE_SERVICE_27,,,brswnprrjb01,,,,,DM_INLINE_NETWORK_104,,,,,informational,300,active
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,216,CHG0141969, CHG0142213,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,internal-vrf_access_in,extended,217,,permit,,DM_INLINE_SERVICE_28,,10.210.180.34,,,,,,DM_INLINE_NETWORK_106,,,,,informational,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,1,CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,2,,deny,,,ip,,,Corp-WiFi-Subnets,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,web-btm_access_in,extended,3,CHG0014842, CHG0019100,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,4,,permit,,DM_INLINE_SERVICE_2,,,,sc1wnprrpl,,,sc1wnprrtp01,,,,,,notifications,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,5,CHG0019100,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,6,,permit,,,tcp,,,sc1wnprrpl,,,sc1wnprrcsvi,,,8011,,,notifications,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,7,CHG0019100,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,8,,permit,,,tcp,,,sc1wnprrbk,,,sc1wnprrcsvi,,,,DM_INLINE_TCP_4,,notifications,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,9,CHG0019020,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,10,,permit,,,tcp,,,sc1wnprrpl,,,,DM_INLINE_NETWORK_9,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,11,CHG0019070,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,12,,permit,,,tcp,,,sc1wnprrbk,,,,DM_INLINE_NETWORK_12,,21299,,,notifications,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,13,CHG0035849, CHG0037956,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,14,,permit,,,tcp,,,sc1wnprrbk,,,sc1wnprrcs-vip,,,1433,,,informational,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,15,CHG0019176, CHG0023993,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,16,,permit,,,tcp,,,DM_INLINE_NETWORK_6,,,,DM_INLINE_NETWORK_16,,,DM_INLINE_TCP_2,,notifications,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,17,CHG0030802,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,18,,permit,,,tcp,,SC1WNPRRAP02,,,,SC1WNPRRDB01,,,1433,,,informational,300,active
+uk-sc1-fw01-sec,web-btm_access_in,extended,19,CHG0064934,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,web-btm_access_in,extended,20,,permit,,DM_INLINE_SERVICE_6,,,,sc1wnprrpl,,,sc1wnprrtp01,,,,,,,,active
+uk-sc1-fw01-sec,management_access_in,extended,1,,permit,,,icmp,,,,any4,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,1,CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,2,,deny,,,ip,,,Corp-WiFi-Subnets,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,3,CHG0015671, CHG0015740,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,4,,permit,,,tcp,,,DM_INLINE_NETWORK_1,,,,DM_INLINE_NETWORK_2,,,DM_INLINE_TCP_1,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,5,CHG0017368, CHG0019612, CHG0021711, CHG0027899,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,6,,permit,,,tcp,,,DM_INLINE_NETWORK_4,,,,DM_INLINE_NETWORK_19,,,DM_INLINE_TCP_7,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,7,CHG0018996,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,8,,permit,,,tcp,,,DM_INLINE_NETWORK_7,,,,DM_INLINE_NETWORK_8,,,DM_INLINE_TCP_3,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,9,CHG0034559, CHG0071922, CHG0080071, CHG0127490, CHG0131234,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,10,,permit,,DM_INLINE_SERVICE_23,,,,DM_INLINE_NETWORK_24,,,,DM_INLINE_NETWORK_25,,,,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,11,CHG0083144, CHG0083604,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,12,,permit,,,tcp,,,DM_INLINE_NETWORK_43,,,,grp-CESExec-VIPs,,,,3822 3823,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,13,CHG0084293,CHG0098754,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,14,,permit,,DM_INLINE_SERVICE_22,,,,DM_INLINE_NETWORK_47,,,brswnp3rcs001,,,,,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,15,CHG0098754,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,16,,permit,,DM_INLINE_SERVICE_21,,,,DM_INLINE_NETWORK_53,,,,DM_INLINE_NETWORK_54,,,,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,17,CHG0131234,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,18,,permit,,DM_INLINE_SERVICE_103,,,,DM_INLINE_NETWORK_102,,,,DM_INLINE_NETWORK_103,,,,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,19,CHG0098754,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,20,,permit,,,tcp,,,DM_INLINE_NETWORK_55,,,,DM_INLINE_NETWORK_56,,,DM_INLINE_TCP_18,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,21,CHHG0115174, CHG0115165,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,22,,permit,,,tcp,,,DM_INLINE_NETWORK_85,,,,DM_INLINE_NETWORK_87,,3824,,,informational,300,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,23,CHG0068676,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,24,,permit,,,tcp,,,Prod-SIS&PA-Data-Collectors,,,,DM_INLINE_NETWORK_37,,7011,,,,,active
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,25,CHG0115416,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,3rd-party-bottom_access_in,extended,26,,permit,,,tcp,,sc1wnprrcl02,,,93.174.217.43,,,,1480,,,informational,300,active
+uk-sc1-fw01-sec,ces-connect_access_in,extended,1,CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,ces-connect_access_in,extended,2,,deny,,,ip,,,Corp-WiFi-Subnets,,,,,any,,,,informational,300,inactive
+uk-sc1-fw01-sec,ces-connect_access_in,extended,3,CHG0019215,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,ces-connect_access_in,extended,4,,permit,,,tcp,,,DM_INLINE_NETWORK_13,,,,DM_INLINE_NETWORK_14,,www,,,notifications,300,active
+uk-sc1-fw01-sec,sstest,extended,1,,permit,,,ip,,,,10.120.173.0 255.255.255.128,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,sstest,extended,2,,permit,,,ip,,,,any4,,,DM_INLINE_NETWORK_15,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,1,CHG0141979 -  wide access on prem due to specific rules in sddc,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,2,,permit,,,ip,,,vmc-sddcs,,,,,any4,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,3,,permit,,,ip,,,,any4,,,vmc-sddcs,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,4,CHG0142763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,5,,permit,,splunk_indexing_port-CHG0142763,,,,wh_nets-CHG0142763,,,,splunk_heavy_forwarders-CHG0142763,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,6,CHG0142763,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,7,,permit,,splunk_mgmt_port-CHG0142763,,,,wh_nets-CHG0142763,,,,splunk_deployment_server-CHG0142763,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,8,RAS-VPN,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,9,,permit,,,ip,,,ras-vpn-pool,,,,,any,,,,,,active
+uk-sc1-fw01-sec,global_access,extended,10,CHG0119266, CHG0130310,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,11,,permit,,DM_INLINE_SERVICE_24,,,,DM_INLINE_NETWORK_101,,,,,10.120.0.0 255.255.0.0,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,12,CHG0141790,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,13,,permit,,whgroup_ad_ports,,,,,any,,,whgroup_ad_servers,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,14,CHG0115229,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,15,,deny,,,ip,,,Corp-WiFi-Subnets,,,,,any,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,16,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,17,,permit,,,tcp,,,grp-scc-commvault-svrs,,,,,any,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,18,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,19,,permit,,,tcp,,,grp-ld6-commvault-svrs,,,,,any,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,20,CHG0121600,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,21,,permit,,,tcp,,,grp-gib-commvault-svrs,,,,,any,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,22,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,23,,permit,,,tcp,,,,any,,,grp-scc-commvault-svrs,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,24,Standard rule - CHG0083747,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,25,,permit,,AD-global-rule-ports,,,,,any,,,WHGROUP-AD-SERVERS,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,26,CHG0112231,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,27,,permit,,,tcp,,,,any,,,grp-ld6-commvault-svrs,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,28,CHG0121600,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,29,,permit,,,tcp,,,,any,,,grp-gib-commvault-svrs,,,TCP-8400-8403,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,30,,permit,,,tcp,,,Athene-Servers,,,,,any4,ssh,,,,,active
+uk-sc1-fw01-sec,global_access,extended,31,Wily global access - CHG0081701,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,32,,permit,,wily-outbound-ports,,,,wily-svrs_all,,,,wily-access-group,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,33,CHG0101535,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,34,,permit,,,tcp,,,,10.120.0.0 255.255.0.0,,,DM_INLINE_NETWORK_57,,,DM_INLINE_TCP_19,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,35,CHG0106526,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,36,,permit,,Rundeck-WinRM-Ports,,,,Rundeck-Servers,,,,,any,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,37,,permit,,wily-inbound-ports,,,,wily-access-group,,,,wily-svrs_all,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,38,CHG0078639,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,39,,permit,,,ip,,,,any,,,WebProxies-CX-SCC,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,40,Standard rule - CHG0083506,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,41,,permit,,Infoblox-Standard-Ports,,,,,any4,,,infoblox-all-dns-servers,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,42,CHG0097030,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,43,,permit,,,tcp,,,,any4,,,MailHosts,,smtp,,,,,active
+uk-sc1-fw01-sec,global_access,extended,44,CHG0067511 - allow all hosts to send SNMP traps to Splunk Heavy Forwarder,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,45,,permit,,,udp,,,,any,,sc1uxpremn74,,,snmptrap,,,,,active
+uk-sc1-fw01-sec,global_access,extended,46,CHG0067511 - allow Splunk Heavy Forwarder secure access to management protocols and SNMP agent,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,47,CHG0081848 ,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,48,,permit,,,tcp,,,,any4,,SCC_SNOW_Collector,,,https,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,49,Global Rules,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,50,,permit,8089,,,,,,any,,sc1uxpromn012,,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,51,CHG0094403,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,52,,permit,,DM_INLINE_SERVICE_11,,,,Albos-EPOS-Access,,,,EPOS-ALBOS,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,53,CHG0116053,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,54,,permit,,,tcp,,,,10.0.0.0 255.0.0.0,,,DM_INLINE_NETWORK_89,,,LDAP-Services,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,55,,permit,,splunk_mgmt,,,sc1uxpremn74,,,,,,any,,,,,,active
+uk-sc1-fw01-sec,global_access,extended,56,CHG0109764,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,57,,permit,,,ip,,,RFC-1918,,,,DM_INLINE_NETWORK_73,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,58,CHG0109028,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,59,,permit,,,ip,,,RFC-1918,,,,RDS-KMS-server,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,60,Standard rule - CHG0083593,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,61,,permit,,,icmp,,,,any,,,,any,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,62,CHG0115147 CHG0118220,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,63,,permit,,DM_INLINE_SERVICE_16,,,,,any,,,DM_INLINE_NETWORK_88,,,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,64,CHG0119053,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,65,,permit,,,tcp,,,DM_INLINE_NETWORK_90,,10.120.163.33,,,,8083,,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,66,CHG0122435, CHG0133580,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,67,,permit,,DM_INLINE_SERVICE_26,,,,skybox-appliances,,,ClassA-8,,,,,,,,active
+uk-sc1-fw01-sec,global_access,extended,68,CHG0126941,,,,,,,,,,,,,,,,,,
+uk-sc1-fw01-sec,global_access,extended,69,,permit,,,tcp,,,ClaraNet-Discovery-Server,,,,,10.120.0.0 255.255.0.0,,DM_INLINE_TCP_28,,informational,300,active
+uk-sc1-fw01-sec,global_access,extended,70,,deny,,,ip,,,,any,,,,any,,,,informational,300,active
+uk-sc1-fw01-sec,CAPTURE1,extended,1,,permit,,,tcp,10.120.173.51,,,,10.100.4.181,,,,9261,,,,,active
+uk-sc1-fw01-sec,CAPTURE1,extended,2,,permit,,,tcp,10.100.4.181,,,,,,,,9261,,,,,active

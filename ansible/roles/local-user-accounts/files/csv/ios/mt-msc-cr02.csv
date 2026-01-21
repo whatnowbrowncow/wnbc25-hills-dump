@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+mt-msc-cr02,netadmin,15,secret,5,$1$j04B$Mgi5NAUx7Vdeh/4K4Et.y/
+mt-msc-cr02,svcnetworkauto,15,secret,5,$1$Burc$PyifofFRqe28LSsbL3yyY1

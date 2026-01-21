@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+LSJ_F3AL_POD,0 4,1,in,,,ssh,none,no,synchronous
+LSJ_F3AL_POD,5 15,,,,,,,no,

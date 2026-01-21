@@ -1,0 +1,7 @@
+line vty {{ line_num }}
+ access-class {{vty_acl }} in vrf-also
+ exec-timeout {{ timeout_mins }} 0
+ privilege level 15
+ logging synchronous
+ transport input {{ transport_input }}
+ 

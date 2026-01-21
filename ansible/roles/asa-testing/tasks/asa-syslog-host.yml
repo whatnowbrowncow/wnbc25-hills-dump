@@ -1,0 +1,38 @@
+---
+
+- name: Collect show route output
+  asa_command:
+    commands:
+      - show route
+    context: "{{ item.context }}" 
+  register: reg_output
+  with_items:
+    - "{{ contexts }}"
+
+- name: Debug the routing table
+  debug:
+    msg:
+      - "The routing table of {{ item.context }} is:"
+      - "{{ reg_output.results.0.stdout_lines }}"
+  with_items:
+    - "{{ contexts }}"
+    
+#- name: Collect route for {{ syslog_id }}
+#  asa_command:
+#    commands:
+#      - "show route {{ syslog_id }}"
+#    context: "{{ item.context }}" 
+#  register: reg_syslog_route_output
+#  with_items:
+#    - "{{ contexts }}"
+#
+#
+#- name: Add syslog host config to context
+#  asa_config:
+#    lines:
+#      - logging host {{ item.syslog_interface }} {{ svr }}
+#    context: "{{ item.context }}"
+#  with_items:
+#    - "{{ contexts }}"
+#  tags:
+#    - syslog-host

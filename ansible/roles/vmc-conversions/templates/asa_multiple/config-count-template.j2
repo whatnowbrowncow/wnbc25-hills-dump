@@ -1,0 +1,14 @@
+---
+
+host: {{ inventory_hostname }}
+context: {{ context.context }}
+rules:
+  access_lists: {{ acls | length }}
+  access_entries: {{ config_output.stdout_lines[0] | length }}
+groups:
+  network_objects: {{ config_output.stdout_lines[1] | length }}
+  network_object_groups: {{ net_obj_grps | length }}
+ports:
+  service_objects: {{ config_output.stdout_lines[3] | length }}
+  service_object_groups: {{ svc_obj_grps | length }}
+  protocol_object_groups: {{ proto_obj_grps | length }}

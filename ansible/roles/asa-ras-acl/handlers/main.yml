@@ -1,0 +1,182 @@
+---
+- name: ASA-RAS - Creating a changes directory for Object configuration 'diff' files
+  ansible.builtin.file:
+    path: "{{ logs_dir }}"
+    state: directory
+  check_mode: false
+  listen:
+    - asa-ras-acl:fail_executed
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed
+
+- name: Find all files older that 28 days in changes directory
+  ansible.builtin.find:
+    paths:
+      - "{{ backup_dir }}"
+      - "{{ config_dir }}"
+      - "{{ logs_dir }}"
+    age: 28d
+    recurse: true
+  register: filesOlderThan28d
+  check_mode: false
+  listen:
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed
+
+- name: ASA-RAS - Saving the post-change configuration
+  cisco.asa.asa_config:
+    save: true
+  listen:
+    - asa-ras-acl:updates_exist
+  check_mode: false
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Extracting all the current anyconnect ACL data and group policy config
+- name: ASA-RAS - Retrieving the post-change ACL configuration
+  cisco.asa.asa_command:
+    commands:
+      - show running-config access-list
+      - show running-config group-policy
+  listen:
+    - asa-ras-acl:updates_exist
+  register: activeACL
+  check_mode: false
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Create a directory to store configuration files in
+- name: ASA-RAS - Creating a changes directory for ACL configuration 'diff' files
+  ansible.builtin.file:
+    path: "{{ changes_dir }}"
+    state: directory
+  check_mode: false
+  listen:
+    - asa-ras-acl:updates_exist
+
+# Take post change data and place in a file
+- name: ASA-RAS - Taking a snapshot of the post-change, committed ACL configuration (for diff)
+  ansible.builtin.template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ post_conf_file }}"
+  check_mode: false
+  listen:
+    - asa-ras-acl:updates_exist
+  register: config_results
+
+# Creating Snapshot of ACL Changes
+- name: ASA-RAS - Saving a 'diff' of the pre_change snapshot and the new committed ACL configuration
+  ansible.builtin.shell: diff {{ pre_conf_file }} {{ post_conf_file }} > {{ changes_dir }}/{{ timestamp }}_acl_changes.conf
+  register: diff_result
+  failed_when: diff_result.rc > 1
+  check_mode: false
+  listen:
+    - asa-ras-acl:updates_exist
+
+# Clearing Temporary data from ras-processed directory
+- name: Delete Temporary Files for ACLs
+  ansible.builtin.file:
+    state: absent
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+    - "{{ pre_conf_file }}"
+    - "{{ post_conf_file }}"
+  loop_control:
+    loop_var: foldernames
+    label: Removing Directory and contents of {{ foldernames }}
+  check_mode: false
+  delegate_to: localhost
+  listen:
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed
+
+- name: Recreate empty Processed Files Directory
+  ansible.builtin.file:
+    state: directory
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+    - "{{ logs_dir }}"
+  loop_control:
+    loop_var: foldernames
+    label: Creating Directory {{ foldernames }}
+  check_mode: false
+  run_once: true
+  delegate_to: localhost
+  listen:
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed
+
+- name: Move Ansible Log to Log Files
+  ansible.builtin.command: mv $HOME/ansible.log {{ logs_dir }}/{{ date }}_{{ time }}_ansible.log
+  check_mode: false
+  listen:
+    - asa-ras-acl:fail_executed
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed
+
+- name: Run Log Collection on Fail
+  ansible.builtin.shell: "{{ wh_net_tools_path }}ras_log_retrieval.sh >> /dev/tty"
+  check_mode: false
+  delegate_to: localhost
+  listen:
+    - asa-ras-acl:fail_executed
+
+# - name: Send Slack Message Informing Of Failure
+#   ansible.builtin.shell: "python {{ playbook_dir }}/scripts/send_slack_message.py -lp $HOME/slack_message.log -bt {{ ns_slack_bottoken }} -c {{ channel_id }} -m {{
+#     slack_message }} "
+#   check_mode: false
+#   listen:
+#     - asa-ras-acl:fail_executed
+- name: Wait on User Prompt in failure
+  ansible.builtin.pause:
+    prompt: "\n############################################ There has been a deployment Failure on {{ inventory_hostname }}, type 'yes' to allow you to investigate ############################################"
+  check_mode: false
+  register: user_input
+  until: user_input.user_input == "yes"
+  retries: 10000
+  listen:
+    - asa-ras-acl:fail_executed
+
+- name: End playbook due to failure
+  ansible.builtin.fail:
+    msg: "\n############################################ To Resolve Failure you can Check \n LOGS that are found in ~/Ras_automation_logs.zip \n ############################################"
+  check_mode: false
+  listen:
+    - asa-ras-acl:fail_executed
+
+- name: Remove all files found that are older than 28 days in changes directory
+  ansible.builtin.file:
+    path: "{{ filename.path }}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: Removing old change file {{ filename.path }}
+  check_mode: false
+  listen:
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed
+
+- name: Remove all associated directories in changes directory
+  ansible.builtin.file:
+    path: "{{ filename.path | dirname}}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: Removing old directory {{ filename.path | dirname }}
+  check_mode: false
+  listen:
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed
+
+- ansible.builtin.shell: "echo '\e[1;32m ############## Changed that were made to the Devices Can be found in {{ changes_dir }} ##############\e\
+    [0m' > /dev/tty"
+  check_mode: false
+  listen:
+    - asa-ras-acl:updates_exist
+    - asa-ras-acl:objects_changed

@@ -1,0 +1,6 @@
+---
+
+- name: Build Tenants
+  import_tasks: ./aci-tenant.yml
+  when: ansible_network_os == "aci"
+

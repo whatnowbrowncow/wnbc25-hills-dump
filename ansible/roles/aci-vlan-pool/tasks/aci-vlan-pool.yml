@@ -1,0 +1,58 @@
+---
+
+## The below task builds a vlan pool. The "allocMode" variable is checked to see if it is set.
+## Assuming it is set the value is used, if it isn't set the default value of "dynamic" is used instead.
+## It is critical the pool_allocation_mode matches the current mode, otherwise the the task and play will 
+## fail. This could occur if the pool was originally created manually or if the host var was amended.
+- name: Build Vlan pools
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/vlanns-[{{ item.name }}]-{{ item.pool_allocation_mode | default('dynamic') }}.json"
+    content:
+      {
+      "fvnsVlanInstP": {
+          "attributes": {
+          "allocMode": "{{ item.pool_allocation_mode | default('dynamic') }}",
+          "descr": "Ansible created",
+          #"dn": "uni/infra/vlanns-[{{ item.name }}]-dynamic",
+          "name": "{{ item.name }}",
+          "nameAlias": "",
+          "ownerKey": "",
+          "ownerTag": ""
+          }
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ vlan_pools }}"
+
+## The below task adds encap vlans to a pool. The "allocMode" variable is checked to see if it is set.
+## Assuming it is set the value is used, if it isn't set the default value of "dynamic" is used instead.
+- name: "Add vlans to pool"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/vlanns-[{{ item.0.name }}]-{{ item.0.pool_allocation_mode | default('dynamic') }}/from-[vlan-{{ item.1.start }}]-to-[vlan-{{ item.1.end }}].json"
+    content:
+      {
+      "fvnsEncapBlk": {
+        "attributes": {
+            "allocMode": "{{ item.1.allocation_mode | default('dynamic') }}",
+                "descr": "Ansible created",
+                "from": "vlan-{{ item.1.start }}",
+                "name": "",
+                "nameAlias": "",
+                "to": "vlan-{{ item.1.end }}"
+                }
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ vlan_pools }}"
+    - vlans
+

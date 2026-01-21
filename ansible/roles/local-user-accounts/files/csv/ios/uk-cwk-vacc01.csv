@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-cwk-vacc01,netsec,15,secret,5,$1$KmlB$Rpt6KNtGsoChaNP9aqHdb1
+uk-cwk-vacc01,netadmin,15,secret,5,$1$UnL8$cS0JR8Dds1E6EpJTbZ3fR.
+uk-cwk-vacc01,svcnetworkauto,15,secret,5,$1$ilW0$F4ppTcqpjZ8VcM.bqdozE0

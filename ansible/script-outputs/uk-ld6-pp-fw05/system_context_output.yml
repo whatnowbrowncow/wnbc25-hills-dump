@@ -1,0 +1,47 @@
+admin:
+  admin-context: admin
+  allocate-interface: [Management0/0]
+  config-url: disk0:/admin.cfg
+  context: admin
+giles:
+  allocate-interface: [Port-channel1.1671-Port-channel1.1672]
+  config-url: disk0:/giles.cfg
+  context: giles
+http-tooling-test: {config-url: 'disk0:/http-tooling-test.cfg', context: http-tooling-test}
+jayjay:
+  allocate-interface: [Port-channel1.1680, Port-channel1.1680]
+  config-url: disk0:/jayjay2.cfg
+  context: jayjay2
+jayjay2:
+  allocate-interface: [Port-channel1.1680]
+  config-url: disk0:/jayjay2.cfg
+  context: jayjay2
+lab-auto-demo:
+  allocate-interface: [Port-channel1.2300-Port-channel1.2305]
+  config-url: disk0:/lab-auto-demo.cfg
+  context: lab-auto-demo
+lab-cde-mgmt:
+  allocate-interface: [Port-channel1.30, Port-channel1.1650, Port-channel1.2122-Port-channel1.2125]
+  config-url: disk0:/lab-cde-mgmt.cfg
+  context: lab-cde-mgmt
+lab-corp:
+  allocate-interface: [Port-channel1.1640-Port-channel1.1645]
+  config-url: disk0:/lab-corp.cfg
+  context: lab-corp
+lab-production:
+  allocate-interface: [Port-channel1.1609-Port-channel1.1619]
+  config-url: disk0:/lab-production.cfg
+  context: lab-production
+lab-retail:
+  allocate-interface: [Port-channel1.1630-Port-channel1.1634]
+  config-url: disk0:/lab-retail.cfg
+  context: lab-retail
+lab-wan:
+  allocate-interface: [Port-channel1.1620-Port-channel1.1622]
+  config-url: disk0:/lab-wan.cfg
+  context: lab-wan
+nick:
+  allocate-interface: [Port-channel1.1669-Port-channel1.1670, Port-channel1.1673]
+  config-url: disk0:/nick2.cfg
+  context: nick2
+nick2: {config-url: 'disk0:/nick2.cfg', context: nick2}

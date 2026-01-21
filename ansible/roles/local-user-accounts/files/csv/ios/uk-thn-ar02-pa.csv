@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-thn-ar02-pa,netsec,15,password,7,132B42460A4D333306
+uk-thn-ar02-pa,netadmin,15,secret,5,$1$Vtey$rb15biWDOuazGuhScmUuA1
+uk-thn-ar02-pa,svcnetworkauto,15,secret,5,$1$grUW$vbb4ndd2EX4q.oXGa6yzu/

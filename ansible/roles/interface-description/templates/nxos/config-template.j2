@@ -1,0 +1,14 @@
+---
+final_state:
+{%  if interface_description_state is iterable %}
+{%      for key_int in interface_description_state -%}
+{%          set interface_name = namespace(id=key_int.interface) %}
+{%          for key_cdp in cdp_state -%}
+{%              if key_int.interface == key_cdp.local_interface %}
+  - interface: "{{ key_int.interface }}"
+    interface_description: "{{ key_cdp.interface_description }}-{{ key_cdp.remote_interface }}"
+{%                  break %}
+{%              endif %}
+{%-         endfor %}
+{%-     endfor %}
+{%  endif %}

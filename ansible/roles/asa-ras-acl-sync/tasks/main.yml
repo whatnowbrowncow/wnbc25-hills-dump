@@ -1,0 +1,41 @@
+---
+# Locate which site is live using dig
+- name: ASA-RAS-SYNC - Check Which Device is Live
+  shell: dig +short vpn.williamhillplc.com
+  register: vpn_nslookup
+  delegate_to: localhost
+  check_mode: no
+
+# Set secondly host and define fact for use
+- name: Point to secondary
+  set_fact:
+    secondary_host: "{% if (vpn_nslookup.stdout.startswith('10.120') or vpn_nslookup.stdout.startswith('141.138')) %}{{ groups[lookup('vars', 'ld6_sync_group')][0] }}{% else %}{{ groups[lookup('vars', 'ma3_sync_group')][0] }}{% endif %}"
+  delegate_to: localhost
+
+# Identify all RAS ACLs and collate the information. It then place all this in a fact called changed_acl. This will contain only the ACLs that have changed.
+- name: ASA-RAS - Identifying ACLs version within YML and device
+  include_tasks: acl-ras-version-checks.yml
+  when:
+    - type is defined and type == "ras" and inventory_hostname == secondary_host
+
+# Takes each ACL defined in the changed_acl fact, extracts each of the required parent and children ACLs. Then it confirms that the relevant information has been updated. If this check fails, the whole playbook will end with an error describing which ACLs are out of sync.
+- name: ASA-RAS - Identifying Dependent ACLs and check hierarchical changes
+  include_tasks: acl-ras-hierarchy-checks.yml
+  loop: "{{ changed_acls }}"
+  loop_control:
+   loop_var: loop_changed_acls
+   label: "Collating Dependent Rules for {{ loop_changed_acls }}"
+  when:
+    - type is defined and type == "ras" and inventory_hostname == secondary_host and changed_acls is defined
+
+# This takes a snapshot of the ACLs and group policy configuration and places in a temporary file. It is then used to identify what has changed.
+- name: ASA-RAS - Taking pre-change snapshot
+  include_tasks: pre-change-snapshot.yml
+  when:
+    - type is defined and type == "ras" and inventory_hostname == secondary_host and changed_acls is defined
+
+# Apply new RAS configuration to the devices, then produces a text file output showing what has changed
+- name: ASA-RAS - Apply configuration to device for RAS ACLs
+  include_tasks: asa-ras-acl-config.yml
+  when:
+    - type is defined and type == "ras" and inventory_hostname == secondary_host and changed_acls is defined

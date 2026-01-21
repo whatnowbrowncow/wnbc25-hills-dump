@@ -1,0 +1,5 @@
+NAME: "2821 chassis", DESCR: "2821 chassis"
+PID: CISCO2821         , VID: V01 , SN: FCZ092770YU
+
+NAME: "Virtual Private Network (VPN) Module", DESCR: "Encryption AIM Element"
+PID: AIM-VPN/EPII-PLUS , VID:   NA, SN: FOC09120VHK

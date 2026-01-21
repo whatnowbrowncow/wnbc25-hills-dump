@@ -1,0 +1,57 @@
+---
+- name: ASA-RAS-OBJECT - Setting Objects Changed Flag to false
+  set_fact:
+    objects_changed: false
+
+- name: ASA-RAS-OBJECT - Starting Deployment of RAS Objects
+  block:
+    - name: ASA-RAS - Check Which Device is Live
+      shell: dig +short vpn.williamhillplc.com
+      register: vpn_nslookup
+      check_mode: no
+
+    - name: Point to primary
+      set_fact:
+        primary_host: "{% if (vpn_nslookup.stdout.startswith('10.120') or vpn_nslookup.stdout.startswith('141.138')) %}{{ groups[lookup('vars', 'ma3_sync_group')][0] }}{% else %}{{ groups[lookup('vars', 'ld6_sync_group')][0] }}{% endif %}"
+
+
+    # Import Network Parser Role Required for future tasks
+    - name: Import Network Parser role
+      include_role:
+        name: ansible-network.network-engine
+
+    # Call task to create Object and ACL yaml files where the deivice is a RAS device
+    # - name: ASA-RAS - VPN YAML creation task
+    #   include_tasks: asa-ras-object-yaml.yml
+    #   when:
+    #     - type == "ras"
+    - name: Deploying data to device
+      block:
+    # Creates DATA YAMLs and updated version number, if a error occurs than this is passed to ansible and the role is stopped
+        - name: ASA-RAS - Checking for Object Duplication
+          shell: "python3 {{ role_path }}/scripts/ras-object-checks.py -i {{ inventory_dir }} -l info > /dev/tty"
+          check_mode: no
+          register: pythonoutput
+          when:
+            - type is defined and type == "ras" and inventory_hostname == primary_host
+
+        #This takes a snapshot of the ACLs and group policy and places in a tempory file. It is then used to compare agaist changed
+        - name: ASA-RAS - Taking pre-change snapshot
+          include_tasks: pre-change-snapshot.yml
+          when:
+            - type is defined and type == "ras" and inventory_hostname == primary_host
+
+        # Apply RAS configuration to the device where the device is a RAS device, then produces an ouput showing whats changed
+        - name: ASA-RAS - Apply configuration to device for RAS Objects (CFG files if enabled)
+          include_tasks: asa-ras-object-config.yml
+          when:
+            - type is defined and type == "ras" and inventory_hostname == primary_host
+  rescue:
+    - name: For Run of Cleanup after Failure
+      shell: "echo '\e[1;32m############## Starting Failure Handling Process ############## \e[0m'"
+      notify: "asa-ras-object:fail_executed"
+      check_mode: no
+
+    - name: Force Handlers Run
+      ansible.builtin.meta: flush_handlers
+      check_mode: false

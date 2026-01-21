@@ -1,0 +1,26 @@
+- name: PLAY - Build of networks (BDs and EPGs)
+  hosts: asa,aci 
+  connection: local
+  gather_facts: no
+
+  vars_prompt:
+    - name: "snapshot_description"
+      prompt: "Provide the change ref. This will be used for the slack message and/or snapshots:"
+      default: "ansible pre-change backup"
+      private: no
+
+  roles:
+    - slack-message-start
+    - role: "ping-test"
+      vars:
+        ping_state: "pre-ping"
+    - aci-snapshot
+    - aci-bd
+    - aci-bd-subnet
+    - aci-app_prof
+    - aci-epg
+    - role: "ping-test"
+      vars:
+        ping_state: "post-ping"
+    - slack-message-end
+

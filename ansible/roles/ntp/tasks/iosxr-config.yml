@@ -1,0 +1,31 @@
+---
+
+- name: IOS-XR - Configure timezone & daylight savings
+  iosxr_config:
+    lines:
+      - clock timezone GMT 0 0
+      - clock summer-time BST recurring last Sun Mar 2:00 last Sun Oct 2:00
+  when: "'iosxr-cxr' in group_names"
+
+- name: IOS-XR - Configure timezone & daylight savings
+  iosxr_config:
+    lines:
+      - clock timezone GMT GB
+  when: "'iosxr-exr' in group_names"
+
+- name: IOS-XR - Configure NTP source interface
+  iosxr_config:
+    lines:
+      - source vrf {{ item.source_vrf}} {{ item.source_interface }}
+    parents: ntp  
+  with_items:
+    - "{{ ntp }}"
+
+- name: IOS-XR - Configure NTP server(s)
+  iosxr_config:
+    lines:      
+      - server vrf {{ item.vrf}} {{ item.ip_addr}} {{ item.preferred }}
+      - update-calendar
+    parents: ntp  
+  with_items:
+    - "{{ ntp.ntp_servers }}"

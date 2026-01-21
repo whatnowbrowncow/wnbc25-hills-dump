@@ -1,0 +1,60 @@
+---
+# Collecting all the RAS filter configuration and adding it to the variable ras_filter_output for later use 
+- name: ASA-RAS - Collecting the RAS Filter configuration
+  cisco.asa.asa_command:
+    commands:
+      - show run group-policy
+  register: ras_filter_output
+
+# Using the data in the ras_filter_output run it through the parser to separate the configuration into Policy name and ACL 
+- name: ASA-RAS - Parsing the group policy configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_ras_filters.yml
+    content: "{{ ras_filter_output.stdout.0 }}"
+
+# Using the ACL information in ras_filter_ouput, it extracts all names of the ACLs configured on the device that are related to RAS and places them in a variable called ravpn_acls 
+- name: ASA-RAS - Collecting the names of extended ACLs
+  ansible.builtin.set_fact:
+    ravpn_acls: "{{ ras_filter_output.stdout[0] | regex_findall('^ vpn-filter +value (\\S+)','\\g<#ravpn_acls>') | unique }}"
+
+# Exports all RAS ACE, for all ACLs in ravpn_acls. 
+- name: ASA-RAS - Collate RAS ACEs
+  cisco.asa.asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ ravpn_acls }}"
+  loop_control:
+    label: Exporting RAS ACL "{{ item | regex_search ('\S+(?=_)|\S+') }}"
+  register: ras_access_lists_exports
+
+# Export all RAS ACE details and place them in a varible, using the data in the varible ras_access_lists_exports
+- name: ASA-RAS - Parsing the RAS ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_acl_extended.yml
+    content: "{{ item.stdout.0 }}"
+  when: item.skipped is not defined
+  loop: "{{ ras_access_lists_exports.results }}"
+  loop_control:
+    label: Parsing RAS ACL "{{ item.item | regex_search ('\S+(?=_)|\S+') }}"
+  register: ras_access_lists
+
+# This adds all ACLs and ACEs extracted above and places it in a variable called access_lists for use later 
+- name: ASA-RAS - Joining the ACLs (extended | standard) for YAML templating
+  ansible.builtin.set_fact:
+    access_lists: "{{ ras_access_lists.results }}"
+
+# Confirm the group_vars RAS directory is there, if not create it  
+- name: ASA-RAS - Creating a host directory for YAML files (if not already present)
+  ansible.builtin.file:
+    path: "{{ inventory_dir }}/group_vars/ras"
+    state: directory
+
+# Looping through the access_lists variable, place the data in a yml file, (The name of the yml file will be the ACL name) 
+- name: ASA-RAS - Generating the YAML file
+  ansible.builtin.template:
+    src: "{{ role_root }}/acl/templates/asa_single/yml-template.j2"
+    dest: "{{ inventory_dir }}/group_vars/ras/{{ loop_acl | regex_search ('\\S+(?=_)|\\S+') }}.yml"
+  loop: "{{ ravpn_acls }}"
+  loop_control:
+    label: Producing YML for {{ loop_acl | regex_search ('\S+(?=_)|\S+') }}
+    loop_var: loop_acl

@@ -1,0 +1,22 @@
+---
+# Creates the Directory to store the config files
+- name: ASA-RAS - Create directory for config files if not present
+  file:
+    path: "{{ changes_dir }}"
+    state: directory
+
+# Retrieves current RAS ACLs and Group Policy Information
+- name: ASA-RAS - Retrieving the pre-change ACL configuration
+  asa_command:
+    commands:
+      - "show running-config access-list"
+      - "show running-config group-policy"
+  register: activeACL
+
+
+#  Places information gathered in the task above into a temporary file for used in comparison
+- name: ASA-RAS - Taking a snapshot of the pre_change ACL configuration
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ pre_conf_file }}"
+  changed_when: false

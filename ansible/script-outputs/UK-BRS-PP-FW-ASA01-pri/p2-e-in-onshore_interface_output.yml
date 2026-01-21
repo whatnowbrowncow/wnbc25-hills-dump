@@ -1,0 +1,6 @@
+Port-channel21.3080: {admin-state: up, interface: Port-channel21.3080, ip-add: 10.214.161.68,
+  nameif: pp2on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3093: {admin-state: up, interface: Port-channel21.3093, ip-add: 10.214.162.1,
+  nameif: almbuild-int, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3094: {admin-state: up, interface: Port-channel21.3094, ip-add: 10.214.163.1,
+  nameif: monitoring-int, netmask: 255.255.255.0, security-level: '100'}

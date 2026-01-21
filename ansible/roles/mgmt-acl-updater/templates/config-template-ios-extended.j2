@@ -1,0 +1,12 @@
+ip access-list extended {{ aclNAME[0] }}
+{% if mgmt_acl.remark is defined and mgmt_acl.remark %}
+ remark {{ mgmt_acl.remark }}
+{% endif %}
+{% for acl in mgmt_acl.lines %}
+{%   if acl.host is defined and acl.host|length %}
+ permit ip host {{ acl.host }} any
+{%   endif %}
+{%   if acl.network is defined and acl.network|length %}
+ permit ip {{ acl.network }} {{ acl.wilcard }} any
+{%   endif %}
+{% endfor %}

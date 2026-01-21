@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+uk-stj-as01,10.120.193.235,,yes,
+uk-stj-as01,10.210.193.235,,no,
+uk-stj-as01,10.210.193.236,,no,
+uk-stj-as01,10.120.193.236,,no,

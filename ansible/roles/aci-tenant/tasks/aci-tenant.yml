@@ -1,0 +1,33 @@
+---
+
+- name: (1/2) Build Tenants 
+  aci_tenant:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ item.tenant }}"
+    state: present
+    validate_certs: no
+  with_items:
+    - "{{ tenants }}"
+  register: imdata_tenants
+
+- name: (2/2) Add Tenant-level syslog source (Add default monitoring policy to all user created tenants)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.tenant }}/rsTenantMonPol.json"
+    content:
+      {
+        "fvRsTenantMonPol": {
+          "attributes": {
+            "tnMonEPGPolName": "default",
+            "status": "created,modified"
+          }
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ tenants }}"  

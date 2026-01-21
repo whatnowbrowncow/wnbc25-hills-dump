@@ -1,0 +1,3 @@
+hostname,username,privilege,encryption,password_string
+uk-ld6-fw02-pri,svcnetworkauto,15,pbkdf2,$sha512$5000$cFZfw+QD12x0KuGCmc+jmw==$CwCHo/rv8ZjD1g6rkEj+Fw==
+uk-ld6-fw02-pri,netadmin,15,pbkdf2,$sha512$5000$rgLELxOeIQE9cShuzZAkgw==$xOAHw+kHXDygJajS3FW0iA==

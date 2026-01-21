@@ -1,0 +1,4 @@
+context {{ context_item.context }}
+{% for vlan in item.vlans %}
+  allocate-interface Port-channel1.{{ vlan.vlan }}
+{% endfor%}

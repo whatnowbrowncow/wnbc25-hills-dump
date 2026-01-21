@@ -1,0 +1,2 @@
+device,timeout,auth_retries,source-interface,version,server-algorithm,client-algorithm
+gib-wpg-vacc1,60,,,2,,

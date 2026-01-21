@@ -1,0 +1,4 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-sc1-cr02,0 4,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,synchronous
+uk-sc1-cr02,5 15,1,in,15 0,094E575D17550417,ssh,telnet ssh,yes,synchronous
+uk-sc1-cr02,16 97,1,in,0 0,094E575D17550417,telnet ssh,none,yes,synchronous

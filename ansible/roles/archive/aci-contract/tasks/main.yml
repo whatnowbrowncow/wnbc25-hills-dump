@@ -1,0 +1,12 @@
+---
+#This role builds each of the elements required for a contract to be applied to EPGs
+
+
+- name: Full Contract builder main
+  include_tasks: ./aci-contract_loop.yml
+  with_items:
+    - "{{ contracts }}"
+  loop_control:
+    loop_var: contract_item
+  
+

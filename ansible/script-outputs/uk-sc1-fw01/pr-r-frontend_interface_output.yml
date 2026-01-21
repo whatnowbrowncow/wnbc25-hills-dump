@@ -1,0 +1,17 @@
+BVI0: {admin-state: up, interface: BVI0, 'no': ip}
+Port-channel1.379: {admin-state: up, interface: Port-channel1.379, ip-add: 10.120.161.36,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.443: {admin-state: up, interface: Port-channel1.443, ip-add: 10.120.168.97,
+  nameif: retail-top, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.446: {admin-state: up, interface: Port-channel1.446, ip-add: 10.120.168.193,
+  nameif: retail-ad-top, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.451: {admin-state: up, interface: Port-channel1.451, ip-add: 10.120.170.129,
+  nameif: retail-3rd-party-top, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.453: {admin-state: up, interface: Port-channel1.453, ip-add: 10.120.172.1,
+  nameif: retail-stingray, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.522: {admin-state: up, interface: Port-channel1.522, ip-add: 10.120.186.68,
+  nameif: retail-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.532: {admin-state: up, interface: Port-channel1.532, ip-add: 10.120.187.68,
+  nameif: sis-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.536: {admin-state: up, interface: Port-channel1.536, ip-add: 10.120.187.196,
+  nameif: tote-vrf, netmask: 255.255.255.224, security-level: '100'}

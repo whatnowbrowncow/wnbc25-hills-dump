@@ -1,0 +1,19 @@
+"l3extInstP": {
+    "attributes": {
+        "dn": "uni/tn-{{item.tenant}}/out-{{item.context}}_fatl3out/instP-{{ item.context }}_fatl3out",
+        "name": "{{ item.context }}_fatl3out",
+        "status": "created,modified"
+    },
+    "children": [
+    {% for extsub in item.extsubs %}
+    {
+        "l3extSubnet": {
+            "attributes": {
+                "aggregate": "{{ extsub.aggregate }}",
+                "ip": "{{ extsub.extsub }}",
+                "scope": "{{ extsub.scope }}",
+            }
+        }
+    },
+{% endfor %}
+]}

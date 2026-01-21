@@ -1,0 +1,42 @@
+---
+
+- name: IOS-XR - Setting the terminal length to 0
+  iosxr_command:   
+    commands:  
+      - "terminal length 0"
+
+- name: IOS-XR  - Retrieving the management ACL
+  iosxr_command:   
+    commands:  
+      - "show access-lists acl-management"
+  register: mgmtACL
+
+- name: IOS-XR - Ending the play for devices with no management ACL configured
+  meta: end_host
+  when: mgmtACL == ""
+
+- name: IOS-XR - Registering the sequence numbers that are to be removed
+  set_fact:
+    aclMATCH: "{{ mgmtACL.stdout[0] | regex_findall('((\\d+) +permit +\\S+ +host +10.120.163.143.*)') }}"
+
+#- name: IOS-XR - Building configuration for testing purposes
+#  template:
+#    src: "{{ role_path }}/templates/iosxr-deletions.j2"
+#    dest: "{{ role_path }}/files/configs/iosxr/{{ inventory_hostname }}.cfg"
+#  when: aclMATCH
+
+- name: IOS-XR - Building and applying the configuration
+  iosxr_config:
+    src: "{{ role_path }}/templates/iosxr-deletions.j2"
+  register: aclUPDATED
+  notify: "updates exist"
+  when: aclMATCH
+
+- name: IOS-XR - Resequencing the management ACL
+  iosxr_command:
+    commands:
+      - resequence access-list ipv4 acl-management 10 10
+  changed_when: True
+  register: aclRESEQUENCED
+  notify: "updates exist"
+  when: aclUPDATED.changed

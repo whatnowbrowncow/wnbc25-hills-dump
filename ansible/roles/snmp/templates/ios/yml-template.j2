@@ -1,0 +1,13 @@
+---
+
+snmp:
+  community:
+{% for item in snmp_configuration_facts %}
+    - string: "{{ item.snmp.community_string }}"
+      access: "{{ item.snmp.access }}"
+{% if item.snmp.access_list is none %}
+      access_list: ""
+{% else %}
+      access_list: "{{ item.snmp.access_list }}"
+{% endif %}
+{% endfor %}

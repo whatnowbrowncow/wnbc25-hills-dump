@@ -1,0 +1,24 @@
+---
+
+- name: Configure management IP addresses for all ACI fabric switches.
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/tn-mgmt/mgmtp-default/oob-default/rsooBStNode-[topology/pod-1/node-{{ item.node_id }}].json"
+    content:
+      {
+        "mgmtRsOoBStNode": {
+          "attributes": {
+            "tDn": "topology/pod-1/node-{{ item.node_id }}",
+            "addr": "{{ item.mgmt_ipv4_addr }}",
+            "gw": "{{ mgmt_ipv4_gway }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ fabric_nodes }}"

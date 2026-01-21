@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+gib-wp5-vacc1,netadmin,15,secret,5,$1$e5bK$keYtXXZ9NW2eJCCmgN6hE1
+gib-wp5-vacc1,svcnetworkauto,15,secret,5,$1$TYDk$KR4UHihW4W3S8FxrtM7TG1

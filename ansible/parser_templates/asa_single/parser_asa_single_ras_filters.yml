@@ -1,0 +1,55 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show run group-policy"
+    network_os: asa
+
+- name: RAS Filter match pattern
+  pattern_match:
+    regex: "group-policy \\S+ attribute"
+    match_all: yes
+    match_greedy: yes
+  register: ras_filter
+
+
+- name: Match RAS Filter Configuration
+  pattern_group:
+    - name: Match Policy Group
+      pattern_match:
+        regex: "group-policy (\\S+) attribute"
+        content: "{{ loop_ras_filter }}"
+      register: policy_group
+
+    - name: Match Filter ACL Configuration
+      pattern_match:
+        regex: "vpn-filter value (\\S+)"
+        content: "{{ loop_ras_filter }}"
+      register: filter_name
+
+    - name: Match Split Tunnel Configration
+      pattern_match:
+        regex: "split-tunnel-network-list value (\\S+)"
+        content: "{{ loop_ras_filter }}"
+      register: split_tunnel
+  loop: "{{ ras_filter }}"
+  loop_control:
+    loop_var: loop_ras_filter
+    label: Collecting RA VPN Filters into Json
+  export: yes
+  register: ras_filter_configration
+
+- name: Generate extended lines JSON data structure - 
+  json_template:
+    template:
+      - key: policy_name
+        value: "{{ item.policy_group.matches.0 }}"
+      - key: acl_name
+        value: "{{ item.filter_name.matches.0 | default (' ') }}"
+      - key: split_tunnel_acl
+        value: "{{ item.split_tunnel.matches.0 }}"
+  loop: "{{ ras_filter_configration }}"
+  export: yes
+  register: ras_filters_facts
+

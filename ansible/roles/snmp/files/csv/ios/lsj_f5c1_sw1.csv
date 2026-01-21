@@ -1,0 +1,9 @@
+hostname,community,access,access-list
+lsj_f5c1_sw1,m0squ1t0,RO,10
+lsj_f5c1_sw1,whn4ccam01,RO,13
+lsj_f5c1_sw1,whn4ccam02,RW,13
+lsj_f5c1_sw1,whM0n1T0r,RO,12
+lsj_f5c1_sw1,c1sc0,RO,19
+lsj_f5c1_sw1,wh1LLc0rp,RW,11
+lsj_f5c1_sw1,$n0Wd5c4nN3r,RO,22
+lsj_f5c1_sw1,5wUxlDGU,RW,solarwinds-new

@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+GH_WGS_1ST,0 4,1,in,5 0,01111F50555B150A,telnet ssh,telnet,no,synchronous
+GH_WGS_1ST,5 15,1,in,5 0,01111F50555B150A,telnet ssh,,no,synchronous

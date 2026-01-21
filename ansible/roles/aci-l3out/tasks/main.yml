@@ -1,0 +1,6 @@
+---
+
+- name: Build L3out
+  import_task: ./aci-l3out.yml
+  when: ansible_network_os == "aci"
+

@@ -1,0 +1,5 @@
+---
+# This file contains test variables that show the variable format requirements.
+
+myhost: "po1_1650.uk-ld6-fw05-lab-cde-mgmt.network.williamhill.plc"
+myip: "10.61.215.196"

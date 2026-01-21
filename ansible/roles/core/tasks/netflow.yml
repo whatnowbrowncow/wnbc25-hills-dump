@@ -1,0 +1,8 @@
+---
+
+- name: Generate netflow configurations
+  template:
+    src: "netflow.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/netflow.cfg"
+  tags:
+    - netflow

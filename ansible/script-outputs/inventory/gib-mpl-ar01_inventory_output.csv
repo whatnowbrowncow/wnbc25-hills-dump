@@ -1,0 +1,17 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-mpl-ar01,GE T,subslot 0/0 transceiver 3,SP7041_Rev_F,00000MTC153307MZ,F
+gib-mpl-ar01,GE T,subslot 0/0 transceiver 7,SBCU-5740ARZ-CS1,AVC22172492,G3.1
+gib-mpl-ar01,SFP+ 10GBASE-LR,subslot 0/0 transceiver 0,SFP-10G-LR,AVD2110KDZP,G3.1
+gib-mpl-ar01,SFP+ 10GBASE-SR,subslot 0/0 transceiver 1,SFP-10G-SR,FNS14190E6K,E
+gib-mpl-ar01,GE SX,subslot 0/0 transceiver 2,GLC-SX-MMD,FNS17511BGS,A
+gib-mpl-ar01,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS1913Q444,V01
+gib-mpl-ar01,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE19200DKT,V01
+gib-mpl-ar01,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT19151BSH,V01
+gib-mpl-ar01,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT19151BST,V01
+gib-mpl-ar01,GE T,subslot 0/0 transceiver 6,SP7041-E,MTC1308028V,E
+gib-mpl-ar01,GE T,subslot 0/0 transceiver 5,SP7041-E-R,MTC19030PN5,none
+gib-mpl-ar01,GE T,subslot 0/0 transceiver 4,SP7041-E-R,MTC19030XXD,none
+gib-mpl-ar01,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+gib-mpl-ar01,8-port Built-in GE SPA,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+gib-mpl-ar01,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+gib-mpl-ar01,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

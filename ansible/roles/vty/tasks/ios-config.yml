@@ -1,0 +1,10 @@
+---
+
+- name: IOS - Build configuration
+  template:
+    src: /gitnet/ansible/roles/vty/templates/ios/config-template.j2
+    dest: /gitnet/ansible/roles/vty/files/configs/ios/{{ inventory_hostname }}.cfg
+
+- name: IOS - Apply configuration
+  ios_config:
+    src: /gitnet/ansible/roles/vty/files/configs/ios/{{ inventory_hostname }}.cfg

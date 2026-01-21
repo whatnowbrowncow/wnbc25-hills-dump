@@ -1,0 +1,8 @@
+Port-channel21.3950: {admin-state: up, interface: Port-channel21.3950, ip-add: 10.216.96.1,
+  nameif: backoffice-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3951: {admin-state: up, interface: Port-channel21.3951, ip-add: 10.216.96.33,
+  nameif: web-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3952: {admin-state: ' shutdown', interface: Port-channel21.3952, ip-add: 10.216.96.65,
+  nameif: oxi-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.4074: {admin-state: up, interface: Port-channel21.4074, ip-add: 10.216.160.132,
+  nameif: pp3on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

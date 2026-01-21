@@ -1,0 +1,12 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.1609,10.61.215.172,0200.0101.0501,internal-vrf,255.255.255.248,100
+up,,Port-channel1.1610,10.62.64.1,0200.0101.0501,cde_ext-web,255.255.248.0,100
+up,,Port-channel1.1611,10.62.72.1,0200.0101.0501,cde_int-web,255.255.248.0,100
+up,,Port-channel1.1612,10.62.80.1,0200.0101.0501,cde_int-lb,255.255.248.0,100
+up,,Port-channel1.1613,10.62.88.1,0200.0101.0501,cde_app,255.255.248.0,100
+up,,Port-channel1.1614,10.62.96.1,0200.0101.0501,cde_db,255.255.248.0,100
+up,,Port-channel1.1615,10.62.128.1,0200.0101.0501,ncde_ext-web,255.255.248.0,100
+up,,Port-channel1.1616,10.62.136.1,0200.0101.0501,ncde_int-web,255.255.248.0,100
+up,,Port-channel1.1617,10.62.144.1,0200.0101.0501,ncde_int-lb,255.255.248.0,100
+up,,Port-channel1.1618,10.62.152.1,0200.0101.0501,ncde_app,255.255.248.0,100
+up,,Port-channel1.1619,10.62.160.2,0200.0101.0501,ncde_db,255.255.248.0,100

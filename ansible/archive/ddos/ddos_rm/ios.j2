@@ -1,0 +1,11 @@
+!
+route-map {{ item.value.THRDPTY_to_WH_RM_in }} deny 10
+!
+route-map {{ item.value.THRDPTY_to_WH_RM_out }} permit 10
+ match ip address prefix-list brs-frontend-prefix
+ set community {{ item.value.THRDPTY_to_WH_BRS_NETS_COMMUNITY }}
+!
+route-map {{ item.value.THRDPTY_to_WH_RM_out }} permit 20
+ match ip address prefix-list scc-frontend-prefix
+ set community {{ item.value.THRDPTY_to_WH_SCC_NETS_COMMUNITY }}
+!

@@ -1,0 +1,323 @@
+NAME: "Chassis 1 WS-C6509-E", DESCR: "Chassis 1 Cisco Systems Catalyst 6500 9-slot Chassis System"
+PID: WS-C6509-E        ,                     VID: V04, SN: SMC1148003R
+
+NAME: "Chassis 1 WS-C6K-VTT-E 1", DESCR: "Chassis 1 VTT-E FRU 1"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1140B148
+
+NAME: "Chassis 1 WS-C6K-VTT-E 2", DESCR: "Chassis 1 VTT-E FRU 2"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1140A977
+
+NAME: "Chassis 1 WS-C6K-VTT-E 3", DESCR: "Chassis 1 VTT-E FRU 3"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1140B133
+
+NAME: "Chassis 1 CLK-7600 1", DESCR: "Chassis 1 OSR-7600 Clock FRU 1"
+PID: CLK-7600          ,                     VID:    , SN: SMT1136F704
+
+NAME: "Chassis 1 CLK-7600 2", DESCR: "Chassis 1 OSR-7600 Clock FRU 2"
+PID: CLK-7600          ,                     VID:    , SN: SMT1136F704
+
+NAME: "Chassis 1 1", DESCR: "Chassis 1 WS-X6704-10GE CEF720 4 port 10-Gigabit Ethernet Rev. 2.6"
+PID: WS-X6704-10GE     ,                     VID: V02, SN: SAL1201BTYY
+
+NAME: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 1", DESCR: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.0"
+PID: WS-F6700-CFC      ,                     VID: V05, SN: SAL1201BQEF
+
+NAME: "Chassis 1 Transceiver Te1/1/1", DESCR: "Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/1"
+PID: XENPAK-10GB-SR    ,                     VID: V01 , SN: ONT114800BX
+
+NAME: "Chassis 1 Transceiver Te1/1/2", DESCR: "Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/2"
+PID: XENPAK-10GB-SR    ,                     VID: V01 , SN: ONT114800JW
+
+NAME: "Chassis 1 Transceiver Te1/1/3", DESCR: "Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/3"
+PID: XENPAK-10GB-SR    ,                     VID: V01 , SN: ONT114800K1
+
+NAME: "Chassis 1 Transceiver Te1/1/4", DESCR: "Chassis 1 Xenpak Transceiver 10Gbase-SR Te1/1/4"
+PID: XENPAK-10GB-SR    ,                     VID: V01 , SN: ONT114800U8
+
+NAME: "Chassis 1 2", DESCR: "Chassis 1 ACE20-MOD-K9 1 ports Application Control Engine Module Rev. 2.3"
+PID: ACE20-MOD-K9      ,                     VID: V02, SN: SAD1202078F
+
+NAME: "Chassis 1 3", DESCR: "Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9"
+PID: WS-X6708-10GE     ,                     VID: V12, SN: SAL18464815
+
+NAME: "Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 3", DESCR: "Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8"
+PID: WS-F6700-DFC3C    ,                     VID: V04, SN: SAL1918EBUJ
+
+NAME: "Chassis 1 Transceiver Te1/3/1", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/1"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100T09
+
+NAME: "Chassis 1 Transceiver Te1/3/2", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/2"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100T0L
+
+NAME: "Chassis 1 Transceiver Te1/3/3", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/3"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100T0P
+
+NAME: "Chassis 1 Transceiver Te1/3/4", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/4"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100T0S
+
+NAME: "Chassis 1 Transceiver Te1/3/5", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/5"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100Y8Z
+
+NAME: "Chassis 1 Transceiver Te1/3/6", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/6"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100Y8P
+
+NAME: "Chassis 1 Transceiver Te1/3/7", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/7"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100Y47
+
+NAME: "Chassis 1 Transceiver Te1/3/8", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/8"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19100Y4J
+
+NAME: "Chassis 1 4", DESCR: "Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 2.2"
+PID: WS-X6708-10GE     ,                     VID: V08, SN: SAL14470KT9
+
+NAME: "Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 4", DESCR: "Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.4"
+PID: WS-F6700-DFC3C    ,                     VID: V03, SN: SAL1445ZALN
+
+NAME: "Chassis 1 Transceiver Te1/4/1", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/1"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1444XZWX
+
+NAME: "Chassis 1 Transceiver Te1/4/2", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/2"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1444XVFJ
+
+NAME: "Chassis 1 Transceiver Te1/4/3", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/3"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1445X0B9
+
+NAME: "Chassis 1 Transceiver Te1/4/4", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/4"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1444XVFD
+
+NAME: "Chassis 1 Transceiver Te1/4/5", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/5"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1445X0CF
+
+NAME: "Chassis 1 Transceiver Te1/4/6", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/6"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1445X0B6
+
+NAME: "Chassis 1 Transceiver Te1/4/7", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/7"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1445X0B5
+
+NAME: "Chassis 1 Transceiver Te1/4/8", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/8"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1444XZYF
+
+NAME: "Chassis 1 5", DESCR: "Chassis 1 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 4.1"
+PID: VS-S720-10G       ,                     VID: V06, SN: SAL1550XPAP
+
+NAME: "Chassis 1 msfc sub-module of 5", DESCR: "Chassis 1 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 5.1"
+PID: VS-F6K-MSFC3      ,                     VID: V06, SN: SAL1547W6C9
+
+NAME: "Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5", DESCR: "Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.1"
+PID: VS-F6K-PFC3C      ,                     VID: V01, SN: SAL1549X9RU
+
+NAME: "Chassis 1 Transceiver Te1/5/4", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/4"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT163504QE
+
+NAME: "Chassis 1 Transceiver Te1/5/5", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/5"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1635041G
+
+NAME: "Chassis 1 7", DESCR: "Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9"
+PID: WS-X6708-10GE     ,                     VID: V12, SN: SAL1948TW3P
+
+NAME: "Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 7", DESCR: "Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8"
+PID: WS-F6700-DFC3C    ,                     VID: V04, SN: SAL1948TRFG
+
+NAME: "Chassis 1 Transceiver Te1/7/1", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/1"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1919014H
+
+NAME: "Chassis 1 Transceiver Te1/7/2", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/2"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT191900XF
+
+NAME: "Chassis 1 Transceiver Te1/7/3", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/3"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1920017A
+
+NAME: "Chassis 1 Transceiver Te1/7/4", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/4"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT192000PC
+
+NAME: "Chassis 1 Transceiver Te1/7/5", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/5"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT19210015
+
+NAME: "Chassis 1 Transceiver Te1/7/6", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/6"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1919008R
+
+NAME: "Chassis 1 Transceiver Te1/7/7", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/7"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1920017B
+
+NAME: "Chassis 1 Transceiver Te1/7/8", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/7/8"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1921004L
+
+NAME: "Chassis 1 8", DESCR: "Chassis 1 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 4.5"
+PID: WS-X6748-GE-TX    ,                     VID: V06, SN: SAL15013ZL6
+
+NAME: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 8", DESCR: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.1"
+PID: WS-F6700-CFC      ,                     VID: V06, SN: SAL15014953
+
+NAME: "Chassis 1 9", DESCR: "Chassis 1 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 2.7"
+PID: WS-X6748-GE-TX    ,                     VID: V02, SN: SAL1201C5FL
+
+NAME: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 9", DESCR: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.0"
+PID: WS-F6700-CFC      ,                     VID: V05, SN: SAL1201C5V9
+
+NAME: "Chassis 1 WS-C6509-E-FAN 1", DESCR: "Chassis 1 Enhanced 9-slot Fan Tray 1"
+PID: WS-C6509-E-FAN    ,                     VID: V03, SN: DCH11453820
+
+NAME: "Chassis 1 PS 1 WS-CAC-6000W", DESCR: "Chassis 1 AC power supply, 6000 watt 1"
+PID: WS-CAC-6000W      ,                     VID: V06, SN: ART1924F077
+
+NAME: "Chassis 1 PS 2 WS-CAC-6000W", DESCR: "Chassis 1 AC power supply, 6000 watt 2"
+PID: WS-CAC-6000W      ,                     VID: V06, SN: ART1924F07G
+
+NAME: "Chassis 2 WS-C6509-E", DESCR: "Chassis 2 Cisco Systems Catalyst 6500 9-slot Chassis System"
+PID: WS-C6509-E        ,                     VID: V04, SN: SMG1128N2KQ
+
+NAME: "Chassis 2 WS-C6K-VTT-E 1", DESCR: "Chassis 2 VTT-E FRU 1"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1120F236
+
+NAME: "Chassis 2 WS-C6K-VTT-E 2", DESCR: "Chassis 2 VTT-E FRU 2"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1120F234
+
+NAME: "Chassis 2 WS-C6K-VTT-E 3", DESCR: "Chassis 2 VTT-E FRU 3"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1120F250
+
+NAME: "Chassis 2 CLK-7600 1", DESCR: "Chassis 2 OSR-7600 Clock FRU 1"
+PID: CLK-7600          ,                     VID:    , SN: SMT1118E827
+
+NAME: "Chassis 2 CLK-7600 2", DESCR: "Chassis 2 OSR-7600 Clock FRU 2"
+PID: CLK-7600          ,                     VID:    , SN: SMT1118E827
+
+NAME: "Chassis 2 1", DESCR: "Chassis 2 WS-X6704-10GE CEF720 4 port 10-Gigabit Ethernet Rev. 2.6"
+PID: WS-X6704-10GE     ,                     VID: V02, SN: SAL1201BTZW
+
+NAME: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card sub-module of 1", DESCR: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card Rev. 4.0"
+PID: WS-F6700-CFC      ,                     VID: V05, SN: SAL1201C85P
+
+NAME: "Chassis 2 Transceiver Te2/1/1", DESCR: "Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/1"
+PID: XENPAK-10GB-SR    ,                     VID:     , SN: FNS14450C8R
+
+NAME: "Chassis 2 Transceiver Te2/1/2", DESCR: "Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/2"
+PID: XENPAK-10GB-SR    ,                     VID: V01 , SN: ONT114800P1
+
+NAME: "Chassis 2 Transceiver Te2/1/3", DESCR: "Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/3"
+PID: XENPAK-10GB-SR    ,                     VID: V01 , SN: ONT114800MU
+
+NAME: "Chassis 2 Transceiver Te2/1/4", DESCR: "Chassis 2 Xenpak Transceiver 10Gbase-SR Te2/1/4"
+PID: XENPAK-10GB-SR    ,                     VID: V01 , SN: ONT114800JL
+
+NAME: "Chassis 2 2", DESCR: "Chassis 2 ACE20-MOD-K9 1 ports Application Control Engine Module Rev. 2.3"
+PID: ACE20-MOD-K9      ,                     VID: V02, SN: SAD1202074Y
+
+NAME: "Chassis 2 3", DESCR: "Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9"
+PID: WS-X6708-10GE     ,                     VID: V12, SN: SAL1911B3E9
+
+NAME: "Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 3", DESCR: "Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8"
+PID: WS-F6700-DFC3C    ,                     VID: V04, SN: SAL1911B8RW
+
+NAME: "Chassis 2 Transceiver Te2/3/1", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/1"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19101H5A
+
+NAME: "Chassis 2 Transceiver Te2/3/2", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/2"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19101H57
+
+NAME: "Chassis 2 Transceiver Te2/3/3", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/3"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19101H58
+
+NAME: "Chassis 2 Transceiver Te2/3/4", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/4"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19101GZH
+
+NAME: "Chassis 2 Transceiver Te2/3/5", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/5"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19111F1W
+
+NAME: "Chassis 2 Transceiver Te2/3/6", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/6"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19111F1F
+
+NAME: "Chassis 2 Transceiver Te2/3/7", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/7"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19111F5S
+
+NAME: "Chassis 2 Transceiver Te2/3/8", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/8"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: FNS19111F64
+
+NAME: "Chassis 2 4", DESCR: "Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 2.2"
+PID: WS-X6708-10GE     ,                     VID: V08, SN: SAL14470H3Z
+
+NAME: "Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 4", DESCR: "Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.4"
+PID: WS-F6700-DFC3C    ,                     VID: V03, SN: SAL14480RBS
+
+NAME: "Chassis 2 Transceiver Te2/4/1", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/1"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1445X02Z
+
+NAME: "Chassis 2 Transceiver Te2/4/2", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/2"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1445X0CG
+
+NAME: "Chassis 2 Transceiver Te2/4/3", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/3"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1444XZXX
+
+NAME: "Chassis 2 Transceiver Te2/4/4", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/4"
+PID: X2-10GB-SR        ,                     VID: V04 , SN: AGA1445X0CE
+
+NAME: "Chassis 2 Transceiver Te2/4/5", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/5"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: AGA1628X01B
+
+NAME: "Chassis 2 Transceiver Te2/4/6", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/6"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: AGA1629X1YK
+
+NAME: "Chassis 2 Transceiver Te2/4/7", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/7"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: AGA1628X03F
+
+NAME: "Chassis 2 Transceiver Te2/4/8", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/8"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: AGA1628X1JZ
+
+NAME: "Chassis 2 5", DESCR: "Chassis 2 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 4.1"
+PID: VS-S720-10G       ,                     VID: V06, SN: SAL1550XPAY
+
+NAME: "Chassis 2 msfc sub-module of 5", DESCR: "Chassis 2 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 5.1"
+PID: VS-F6K-MSFC3      ,                     VID: V06, SN: SAL1549X032
+
+NAME: "Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5", DESCR: "Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.1"
+PID: VS-F6K-PFC3C      ,                     VID: V01, SN: SAL1549XBG6
+
+NAME: "Chassis 2 Transceiver Te2/5/4", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/4"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1635039D
+
+NAME: "Chassis 2 Transceiver Te2/5/5", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/5"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT16350643
+
+NAME: "Chassis 2 7", DESCR: "Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.9"
+PID: WS-X6708-10GE     ,                     VID: V12, SN: SAL1948TW1P
+
+NAME: "Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 7", DESCR: "Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.8"
+PID: WS-F6700-DFC3C    ,                     VID: V04, SN: SAL1948TRDE
+
+NAME: "Chassis 2 Transceiver Te2/7/1", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/1"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT19190142
+
+NAME: "Chassis 2 Transceiver Te2/7/2", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/2"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT192001L6
+
+NAME: "Chassis 2 Transceiver Te2/7/3", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/3"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT19190087
+
+NAME: "Chassis 2 Transceiver Te2/7/4", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/4"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1921002G
+
+NAME: "Chassis 2 Transceiver Te2/7/5", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/5"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1920011F
+
+NAME: "Chassis 2 Transceiver Te2/7/6", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/6"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1921002F
+
+NAME: "Chassis 2 Transceiver Te2/7/7", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/7"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT1921004W
+
+NAME: "Chassis 2 Transceiver Te2/7/8", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/7/8"
+PID: X2-10GB-SR        ,                     VID: V06 , SN: ONT191901NJ
+
+NAME: "Chassis 2 9", DESCR: "Chassis 2 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 2.6"
+PID: WS-X6748-GE-TX    ,                     VID: V02, SN: SAL1126SEMM
+
+NAME: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card sub-module of 9", DESCR: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card Rev. 3.1"
+PID: WS-F6700-CFC      ,                     VID: V04, SN: SAL1125S02H
+
+NAME: "Chassis 2 WS-C6509-E-FAN 1", DESCR: "Chassis 2 Enhanced 9-slot Fan Tray 1"
+PID: WS-C6509-E-FAN    ,                     VID: V03, SN: DCH11271642
+
+NAME: "Chassis 2 PS 1 WS-CAC-6000W", DESCR: "Chassis 2 AC power supply, 6000 watt 1"
+PID: WS-CAC-6000W      ,                     VID: V06, SN: ART1924F07V
+
+NAME: "Chassis 2 PS 2 WS-CAC-6000W", DESCR: "Chassis 2 AC power supply, 6000 watt 2"
+PID: WS-CAC-6000W      ,                     VID: V06, SN: ART1924F07J

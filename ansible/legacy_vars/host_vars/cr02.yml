@@ -1,0 +1,31 @@
+---
+
+hostname: cro2
+
+snmp:
+  contact: "Network Services"
+  communities:
+    - community: "m0squ1t0"
+      snmp_svr: "10.120.163.59"
+      type: "ro"
+      acl: "10"
+    - community: "wh1LLc0rp"
+      snmp_svr: "10.120.163.59"
+      type: "rw"
+      acl: "11"
+    - community: "n1m50ft"
+      snmp_svr: "10.120.163.59"
+      type: "ro"
+      acl: "12"
+
+line_vty:
+  line_num:
+    - "0 4"
+    - "5 15"
+  vty_acl: "1"
+  timeout_mins: "15"
+  transport_input: "ssh"
+  
+ssh:
+  ssh_timeout: "5"
+  ssh_ver: "2"

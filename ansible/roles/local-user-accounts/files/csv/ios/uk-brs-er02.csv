@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-brs-er02,netsec,15,secret,5,$1$Suby$oHiLEl37ytDqxkqmcfSXP.
+uk-brs-er02,nessus,15,password,7,032E7F4F540E32454103110B1143215F452B38
+uk-brs-er02,netadmin,15,secret,5,$1$s.AL$QdIZP4mdnI1QHi1R.moBa0
+uk-brs-er02,svcnetworkauto,15,secret,5,$1$iVAT$Kwsule8RY4gdCq0TrSRuV.

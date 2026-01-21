@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: uk-brs-asa-01-admin-act-pr-c-fr-cx @ 20200722T104236 ---!
+!
+logging host internal-vrf 10.210.163.59
+!
+!--- END UPDATES: uk-brs-asa-01-admin-act-pr-c-fr-cx @ 20200722T104236 ---!
+}

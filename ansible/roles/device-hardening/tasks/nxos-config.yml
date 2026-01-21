@@ -1,0 +1,19 @@
+---
+# Add Service Hardening commands where required
+- name: "NXOS - Perfoming Service Hardening on for All Devices"
+  nxos_config:
+    defaults: yes
+    lines:
+      - "feature lldp"
+      - "ip tcp synwait-time 10"
+      - "no ip domain-lookup"
+  register: nxosconfig
+  failed_when: nxosconfig.changed 
+
+#Recording and Saving Config
+- name: NXOS-Record Config
+  include_tasks: ./nxos-report-output.yml
+
+#Recording and Saving Config
+- name: NXOS-Save Config
+  include_tasks: ./nxos-save.yml

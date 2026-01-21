@@ -1,0 +1,53 @@
+NAME: "C6880-X", DESCR: "Cisco Systems, Inc. Catalyst 6880 5-slot Chassis System"
+PID: C6880-X           ,                     VID: V01, SN: SAL1935N6ZJ
+
+NAME: "5", DESCR: "C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.2"
+PID: C6880-X-SUP       ,                     VID:    , SN: SAL1932LYSP
+
+NAME: "C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5", DESCR: "C6880-X-PFC Policy Feature Card 4 Rev. 1.2"
+PID: C6880-X-PFC       ,                     VID:    , SN: SAL1932LVA0
+
+NAME: "Transceiver Te5/1", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/1"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACC4     
+
+NAME: "Transceiver Te5/2", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/2"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACAN     
+
+NAME: "Transceiver Te5/3", DESCR: "SFP Transceiver 1000BaseSX Te5/3"
+PID: GLC-SX-MMD         ,                     VID: V01 , SN: AGA1709R231     
+
+NAME: "Transceiver Te5/4", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/4"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACD9     
+
+NAME: "Transceiver Te5/5", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/5"
+PID: Unspecified       ,                     VID: Unspecified, SN: AGS1025L2ED     
+
+NAME: "Transceiver Te5/6", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/6"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ABEW     
+
+NAME: "Transceiver Te5/7", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/7"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACEF     
+
+NAME: "Transceiver Te5/8", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/8"
+PID: Unspecified       ,                     VID: Unspecified, SN: AGM16432395     
+
+NAME: "Transceiver Te5/10", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/10"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACAM     
+
+NAME: "Transceiver Te5/11", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/11"
+PID: Unspecified       ,                     VID: Unspecified, SN: AGM184025AB     
+
+NAME: "Transceiver Te5/15", DESCR: "SFP Transceiver 1000BaseSX Te5/15"
+PID: Unspecified       ,                     VID: Unspecified, SN: AGM1532L62L     
+
+NAME: "Transceiver Te5/16", DESCR: "SFP Transceiver 1000BaseSX Te5/16"
+PID: GLC-SX-MMD         ,                     VID: V01 , SN: FNS18160NVQ     
+
+NAME: "C6880-X-FAN 1", DESCR: "C6880-X Fan Tray 1"
+PID: C6880-X-FAN       ,                     VID: V01, SN: FOX1928XE6Y
+
+NAME: "PS 1 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 1"
+PID: C6880-X-3KW-AC    ,                     VID: V01, SN: DTM193200QB
+
+NAME: "PS 2 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 2"
+PID: C6880-X-3KW-AC    ,                     VID: V01, SN: DTM1932012S

@@ -1,0 +1,5 @@
+contract_name,contract_description,provider_name,provider_app_profile,consumer_name,consumer_app_profile,tenant,scope,subject_name,subject_description,filter_name,entry_name,entry_protocol,dst_port_start,dst_port_end
+ob-web-2_to_ob-app-2,Test contract,ob-app-2,ant-test-1_appprof,ob-web-2,ant-test-1_appprof,ant-tenant,tenant,fabric_routed,fabri routed subject,my-filter,Web,tcp,80,80
+ob-web-2_to_ob-app-2,Test contract,ob-app-2,ant-test-1_appprof,ob-web-2,ant-test-1_appprof,ant-tenant,tenant,fabric_routed,fabri routed subject,my-filter,My_app,tcp,15000,15001
+ob-web_to_ob-app,Test contract,ob-app,ant-test-1_appprof,ob-web,ant-test-1_appprof,ant-tenant,tenant,fabric_routed,fabri routed subject,my-filter,Web,tcp,80,80
+ob-web_to_ob-app,Test contract,ob-app,ant-test-1_appprof,ob-web,ant-test-1_appprof,ant-tenant,tenant,fabric_routed,fabri routed subject,my-filter,My_app,tcp,15000,15001

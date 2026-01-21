@@ -1,0 +1,22 @@
+---
+
+- name: IOS - collect local user account info
+  ios_command:
+    commands:
+      - show run | i username
+  register: ios_local_accounts_output
+
+- name: IOS - parse command output
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/ios/parser_ios_local_user_accounts.yml"
+    content: "{{ ios_local_accounts_output.stdout.0 }}"
+
+- name: IOS - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS - Generate YAML file
+  template:
+    src: "{{ role_path }}/templates/ios/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/local-user-accounts.yml"

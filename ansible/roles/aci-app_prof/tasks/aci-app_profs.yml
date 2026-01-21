@@ -1,0 +1,18 @@
+---
+
+- name: Build Application Profile
+  aci_ap:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ item.tenant }}"
+    ap: "{{ item.app_prof}}"
+    state: present
+    validate_certs: no
+  with_items:
+    - "{{ app_profs }}"
+
+  register: imdata_app_profs
+      
+#- debug:
+#    msg: "The response was: {{ imdata_app_profs }}"

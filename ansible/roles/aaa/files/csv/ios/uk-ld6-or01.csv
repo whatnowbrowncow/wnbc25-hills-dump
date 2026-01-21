@@ -1,0 +1,3 @@
+hostname,tacacs-style,svr-grp name,svr-grp source int,svr-grp vrf,svr name,svr ip address,svr encryption key,authn-login,authn-enable,auths-exec,auths-commands,acc-exec,acc-connection,acc-commands,acc-system
+uk-ld6-or01,new,WH-ACS-TACACS,GigabitEthernet0,Mgmt-intf,SCC-ACS,10.120.163.26,021405093E073B750F63281B0E56300D1C,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS
+uk-ld6-or01,new,WH-ACS-TACACS,GigabitEthernet0,Mgmt-intf,BRS-ACS,10.210.163.26,15000A5E312B1F706B1E14201846340511,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS

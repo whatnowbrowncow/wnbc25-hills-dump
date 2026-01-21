@@ -1,0 +1,44 @@
+enable secret 5 {{ enable_secret_5 }}
+!
+username {{ local_admin.name }} privilege 15 secret 5 {{ local_admin.secret_5 }}
+aaa new-model
+!
+!
+{% for aaa_group in aaa.group %}
+aaa group server {{ aaa_group.type }} {{ aaa_group.name }}
+{% for server in aaa_group.server_list %}
+ server name {{ server.name }}
+{% endfor %}
+ ip vrf forwarding {{ aaa_group.vrf }}
+ ip tacacs source-interface {{ aaa_group.source_int }}
+{% endfor %}
+!
+{% for aaa_group in aaa.group %}
+aaa authentication login default group {{ aaa_group.name }} local-case
+aaa authentication enable default group {{ aaa_group.name }} enable
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group {{ aaa_group.name }} if-authenticated 
+aaa authorization commands 15 default group {{ aaa_group.name }} if-authenticated 
+aaa accounting exec default start-stop group {{ aaa_group.name }}
+aaa accounting commands 15 default start-stop group {{ aaa_group.name }}
+aaa accounting connection default start-stop group {{ aaa_group.name }}
+aaa accounting system default start-stop group {{ aaa_group.name }}
+{% endfor %}
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+{% for aaa_group in aaa.group %}
+{% for server in aaa_group.server_list %}
+{{ server.type }} server {{ server.name }}
+ address ipv4 {{ server.addr }}
+ key 7 {{ server.key_7 }}
+{% endfor %}
+{% endfor %}
+!

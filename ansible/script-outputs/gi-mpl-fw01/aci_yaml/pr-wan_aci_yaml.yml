@@ -1,0 +1,60 @@
+
+  - app_prof: 'pr-wan'
+    tenant: 'production'
+    vrf: 'pr-wan'
+    bds:
+      - bd: 'pr-wan_internal-vrf'
+        network: '10.180.161.96'
+        gateway: '10.180.161.98'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-wan_internal-vrf'
+            encap_id: '381'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-wan_wan-vrf'
+        network: '10.180.186.128'
+        gateway: '10.180.186.130'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-wan_wan-vrf'
+            encap_id: '524'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-wan_tote-vrf'
+        network: '10.180.187.192'
+        gateway: '10.180.187.193'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-wan_tote-vrf'
+            encap_id: '536'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-wan_group-vrf'
+        network: '10.180.193.96'
+        gateway: '10.180.193.100'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-wan_group-vrf'
+            encap_id: '571'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-wan_eggcloud'
+        network: '10.180.25.160'
+        gateway: '10.180.25.161'
+        mask: '255.255.255.248'
+        cidr_mask: '29'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-wan_eggcloud'
+            encap_id: '60'
+            vcenter_dynamic_vlan: true

@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+gib-mpl-mq01,10.220.193.235,,no,Vlan301
+gib-mpl-mq01,10.180.193.235,,no,Vlan301
+gib-mpl-mq01,10.220.193.236,,no,Vlan301
+gib-mpl-mq01,10.180.193.236,,no,Vlan301

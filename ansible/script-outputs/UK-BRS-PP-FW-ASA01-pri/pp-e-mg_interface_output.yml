@@ -1,0 +1,18 @@
+Port-channel21.137: {admin-state: up, interface: Port-channel21.137, ip-add: 10.1.94.36,
+  nameif: Corporate, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.915: {admin-state: up, interface: Port-channel21.915, ip-add: 10.210.8.1,
+  nameif: HCI-Hypervisor-ILO, netmask: 255.255.254.0, security-level: '100'}
+Port-channel21.916: {admin-state: up, interface: Port-channel21.916, ip-add: 10.210.10.1,
+  nameif: HCI-Hypervisor-Mgmt, netmask: 255.255.254.0, security-level: '100'}
+Port-channel21.930: {admin-state: up, interface: Port-channel21.930, ip-add: 10.201.224.4,
+  nameif: PreProd-network-mgmt, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.938: {admin-state: up, interface: Port-channel21.938, ip-add: 10.201.225.1,
+  nameif: PreProd-ILO, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.939: {admin-state: up, interface: Port-channel21.939, ip-add: 10.201.226.1,
+  nameif: PreProd-server-mgmt, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.941: {admin-state: up, interface: Port-channel21.941, ip-add: 10.201.239.100,
+  nameif: pp-external-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.943: {admin-state: up, interface: Port-channel21.943, ip-add: 10.201.230.1,
+  nameif: PreProd-contx-mgmt, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.944: {admin-state: ' shutdown', interface: Port-channel21.944, nameif: PreProd-contx-frontend,
+  'no': ip, security-level: '100'}

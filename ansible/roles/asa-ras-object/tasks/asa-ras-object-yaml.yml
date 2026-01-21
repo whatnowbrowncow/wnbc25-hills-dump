@@ -1,0 +1,7 @@
+---
+
+# Create a YAML for all objects, services and group config
+- name: ASA-RAS - Export Objects from VPN device
+  include_role:
+    name: asa-object-creator
+    tasks_from: asa-single-yaml

@@ -1,0 +1,148 @@
+
+  - app_prof: 'pr-c-backend'
+    tenant: 'production'
+    vrf: 'pr-c-backend'
+    bds:
+      - bd: 'pr-c-backend_web-tier'
+        network: '10.180.40.0'
+        gateway: '10.180.40.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_web-tier'
+            encap_id: '130'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_proxy-tier-new'
+        network: '10.180.41.0'
+        gateway: '10.180.41.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_proxy-tier-new'
+            encap_id: '131'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_backoffice-tier-new'
+        network: '10.180.42.0'
+        gateway: '10.180.42.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_backoffice-tier-new'
+            encap_id: '132'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_proxy-tier'
+        network: '10.180.48.0'
+        gateway: '10.180.48.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_proxy-tier'
+            encap_id: '150'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_backoffice-tier'
+        network: '10.180.48.32'
+        gateway: '10.180.48.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_backoffice-tier'
+            encap_id: '151'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_authpro-tier'
+        network: '10.180.48.64'
+        gateway: '10.180.48.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_authpro-tier'
+            encap_id: '152'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_sftp-tier'
+        network: '10.180.48.96'
+        gateway: '10.180.48.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_sftp-tier'
+            encap_id: '153'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_hdr-tier'
+        network: '10.180.48.128'
+        gateway: '10.180.48.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_hdr-tier'
+            encap_id: '154'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_crypto-tier'
+        network: '10.180.48.160'
+        gateway: '10.180.48.161'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_crypto-tier'
+            encap_id: '155'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_application-tier'
+        network: '10.180.50.0'
+        gateway: '10.180.50.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_application-tier'
+            encap_id: '160'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_authpro'
+        network: '10.180.51.0'
+        gateway: '10.180.51.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_authpro'
+            encap_id: '161'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_database-tier'
+        network: '10.180.52.0'
+        gateway: '10.180.52.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_database-tier'
+            encap_id: '162'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-backend_internal-vrf'
+        network: '10.180.160.96'
+        gateway: '10.180.160.98'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-backend_internal-vrf'
+            encap_id: '373'
+            vcenter_dynamic_vlan: true

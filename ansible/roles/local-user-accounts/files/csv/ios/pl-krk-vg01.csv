@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+pl-krk-vg01,netsec,15,secret,4,8Kb2slRmQI6xd7qwkxLjCRKlIHuVOj1ax/8vyMkB6Tg
+pl-krk-vg01,ddsupport,15,secret,4,qAO85P77synjN.QYF7oqHyOjFr6uIVZ0DQns63Fzu9Q
+pl-krk-vg01,netadmin,15,secret,5,$1$NBWs$TVfopkPgqxY1GVCgJKIVS1
+pl-krk-vg01,svcnetworkauto,15,secret,5,$1$5d/3$ysZ.gmPnpGuB.tt5zJWwD0

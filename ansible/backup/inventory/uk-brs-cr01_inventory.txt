@@ -1,0 +1,41 @@
+NAME: "C6880-X", DESCR: "Cisco Systems, Inc. Catalyst 6880 5-slot Chassis System"
+PID: C6880-X           ,                     VID: V01, SN: SAL1935N6YL
+
+NAME: "5", DESCR: "C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.2"
+PID: C6880-X-SUP       ,                     VID:    , SN: SAL1933MDVX
+
+NAME: "C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5", DESCR: "C6880-X-PFC Policy Feature Card 4 Rev. 1.2"
+PID: C6880-X-PFC       ,                     VID:    , SN: SAL1933MDXK
+
+NAME: "Transceiver Te5/1", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/1"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACDL     
+
+NAME: "Transceiver Te5/2", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/2"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACDS     
+
+NAME: "Transceiver Te5/4", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/4"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACDN     
+
+NAME: "Transceiver Te5/5", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/5"
+PID: Unspecified       ,                     VID: Unspecified, SN: MTC152506T4     
+
+NAME: "Transceiver Te5/6", DESCR: "SFP Transceiver 1000BaseSX Te5/6"
+PID: SFP-GE-S           ,                     VID: V01 , SN: FNS1426209C     
+
+NAME: "Transceiver Te5/9", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/9"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932AD5X     
+
+NAME: "Transceiver Te5/10", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/10"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACCA     
+
+NAME: "Transceiver Te5/12", DESCR: "SFP Transceiver 1000BaseSX Te5/12"
+PID: GLC-SX-MMD         ,                     VID: V01 , SN: AGA1709R237     
+
+NAME: "C6880-X-FAN 1", DESCR: "C6880-X Fan Tray 1"
+PID: C6880-X-FAN       ,                     VID: V01, SN: FOX1931XG5Y
+
+NAME: "PS 1 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 1"
+PID: C6880-X-3KW-AC    ,                     VID: V01, SN: DTM193200Q9
+
+NAME: "PS 2 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 2"
+PID: C6880-X-3KW-AC    ,                     VID: V01, SN: DTM193200SM

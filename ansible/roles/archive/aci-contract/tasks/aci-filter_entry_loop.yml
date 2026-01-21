@@ -1,0 +1,21 @@
+---
+  
+- name: Filter entry definition
+  aci_filter_entry:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: '{{ contract_item.tenant }}'
+    filter: '{{ filter_item.filter }}'
+    ether_type: '{{ filter_entry_item.ether_type | default("ip") }}'
+    ip_protocol: '{{ filter_entry_item.protocol | default("tcp") }}'
+    entry: '{{ filter_entry_item.entry }}'
+    dst_port_start: '{{ filter_entry_item.dst_port_start }}'
+    dst_port_end: '{{ filter_entry_item.dst_port_end | default(filter_entry_item.dst_port_start) }}'
+    stateful: '{{ filter_entry_item.stateful | default("no") }}'
+    validate_certs: no
+  
+- name: Move to contract to epg association
+  include_tasks: ./aci-epg_to_contract_loop.yml
+
+  

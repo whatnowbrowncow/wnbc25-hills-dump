@@ -1,0 +1,5 @@
+---
+
+- name: IOS-XR - Applying the AAA configuration
+  iosxr_config:
+    src: "/gitnet/ansible/roles/aaa/templates/iosxr/config-template.j2"

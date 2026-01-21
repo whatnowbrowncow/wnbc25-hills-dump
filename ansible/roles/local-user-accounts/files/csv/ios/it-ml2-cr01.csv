@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+it-ml2-cr01,netadmin,15,secret,5,$1$h48H$BdFCBejtrnnsHxajv5aof/
+it-ml2-cr01,svcnetworkauto,15,secret,5,$1$ctSb$T5T.CZgp0MvCeAhaHkiBE0

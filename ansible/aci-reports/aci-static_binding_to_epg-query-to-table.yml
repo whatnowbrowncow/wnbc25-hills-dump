@@ -1,0 +1,31 @@
+---
+
+  - name: PLAY - Static Bindings query
+    hosts: aci
+    connection: local
+    gather_facts: no
+
+
+    tasks:
+    
+    - name: Query Static Bindings
+      aci_static_binding_to_epg:
+        hostname: '{{ ansible_host }}'
+        username: '{{ aci_user }}'
+        private_key: '{{ aci_key }}'
+        state: query
+        interface_type: vpc
+        leafs: '{{ item }}'
+        validate_certs: no
+      with_items:
+        - 101,102
+        
+      register: imdata_static
+
+      
+    - name: Output to table
+      template:
+        src: ./templates/static_bindings_table.j2
+        dest: ./reports/static_bindings_{{ inventory_hostname }}.md
+      with_items:
+        - "{{ imdata_static }} "

@@ -1,0 +1,29 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-mpl-ds04,AC power supply,Power supply 2,N55-PAC-750W-B,ART173810JV,V02
+gib-mpl-ds04,AC power supply,Power supply 1,N55-PAC-750W-B,ART173810K8,V02
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 106 Power Supply 2,N2200-PAC-400W,DTN1735P0P0,V04
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 106 Power Supply 1,N2200-PAC-400W,DTN1735P0P1,V04
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 108 Power Supply 2,N2200-PAC-400W,DTN1735P0PK,V04
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 104 Power Supply 1,N2200-PAC-400W,DTN1735P0PL,V04
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 108 Power Supply 1,N2200-PAC-400W,DTN1735P0PM,V04
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 104 Power Supply 2,N2200-PAC-400W,DTN1735P0PN,V04
+gib-mpl-ds04,O2 Non L3 Daughter Card,Module 3,N55-DL2,FOC16524EJL,V01
+gib-mpl-ds04,O2 32X10GE/Modular Universal Platform Supervisor,Module 1,N5K-C5548UP,FOC17015Q2C,V01
+gib-mpl-ds04,O2 16 port flexible GEM,Module 2,N55-M16UP,FOC174273MX,V01
+gib-mpl-ds04,Fabric Extender Module,FEX 102 Module 1,N2K-C2248TP-E-1GE,FOC17436SY6,V02
+gib-mpl-ds04,Fabric Extender Module,FEX 106 Module 1,N2K-C2248TP-E-1GE,FOC17436T05,V02
+gib-mpl-ds04,Fabric Extender Module,FEX 108 Module 1,N2K-C2248TP-E-1GE,FOC17436T42,V02
+gib-mpl-ds04,Fabric Extender Module,FEX 104 Module 1,N2K-C2248TP-E-1GE,FOC17436T61,V02
+gib-mpl-ds04,N2K-C2248TP-E-1GE  CHASSIS,FEX 106 CHASSIS,N2K-C2248TP-E-1GE,FOX1741GZND,V02
+gib-mpl-ds04,N2K-C2248TP-E-1GE  CHASSIS,FEX 104 CHASSIS,N2K-C2248TP-E-1GE,FOX1744G5TC,V02
+gib-mpl-ds04,N2K-C2248TP-E-1GE  CHASSIS,FEX 108 CHASSIS,N2K-C2248TP-E-1GE,FOX1744G5UD,V02
+gib-mpl-ds04,N2K-C2248TP-E-1GE  CHASSIS,FEX 102 CHASSIS,N2K-C2248TP-E-1GE,FOX1744G62W,V02
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 102 Power Supply 2,N2200-PAC-400W-B,LIT17191P5Q,V02
+gib-mpl-ds04,Fabric Extender AC power supply,FEX 102 Power Supply 1,N2200-PAC-400W-B,LIT17191P5Y,V02
+gib-mpl-ds04,Fabric Extender Fan module,FEX 102 Fan 1,N2K-C2248-FAN-B,N/A,N/A
+gib-mpl-ds04,Fabric Extender Fan module,FEX 104 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds04,Fabric Extender Fan module,FEX 106 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds04,Fabric Extender Fan module,FEX 108 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds04,Chassis fan module,Fan 1,N5548P-FAN-B,N/A,N/A
+gib-mpl-ds04,Chassis fan module,Fan 2,N5548P-FAN-B,N/A,N/A
+gib-mpl-ds04,Nexus5548 Chassis,Chassis,N5K-C5548UP,SSI164909QS,V01

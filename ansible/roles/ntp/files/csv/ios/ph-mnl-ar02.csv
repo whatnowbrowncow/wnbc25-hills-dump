@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+ph-mnl-ar02,10.210.193.235,group-vrf,no,Loopback20
+ph-mnl-ar02,10.120.193.235,group-vrf,yes,Loopback20
+ph-mnl-ar02,10.120.193.236,group-vrf,no,Loopback20
+ph-mnl-ar02,10.210.193.236,group-vrf,no,Loopback20

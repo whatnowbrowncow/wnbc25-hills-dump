@@ -1,0 +1,11 @@
+---
+
+- name: Add base config to context
+  asa_config:
+    lines:
+      - "{{ item[1] }}"
+    context: "{{ item[0].context }}"
+  with_nested:
+    - "{{ contexts }}"
+    - "{{ base }}"
+

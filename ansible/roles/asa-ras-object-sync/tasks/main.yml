@@ -1,0 +1,33 @@
+---
+# Identifies which device is the secondary RAS Firewall
+- name: ASA-RAS-SYNC - Check Which Device is Live
+  shell: dig +short vpn.williamhillplc.com
+  register: vpn_nslookup
+  delegate_to: localhost
+  check_mode: no
+
+# Takes the value from above and calculates the name of the secondary device and places it in a fact
+- name: Point to secondary
+  set_fact:
+    secondary_host: "{% if (vpn_nslookup.stdout.startswith('10.120') or vpn_nslookup.stdout.startswith('141.138')) %}{{ groups[lookup('vars', 'ld6_sync_group')][0] }}{% else %}{{ groups[lookup('vars', 'ma3_sync_group')][0] }}{% endif %}"
+  delegate_to: localhost
+
+# Creates DATA YAMLs and updated version number, if a error occurs than this is passed to ansible and the role is stopped
+- name: ASA-RAS - Checking for Object Duplication
+  shell: "python3 ansible/roles/asa-ras-object/scripts/ras-object-checks.py -i {{ inventory_dir }} -l info"
+  check_mode: no
+  register: pythonoutput
+  when:
+    - inventory_hostname == secondary_host
+
+#This takes a snapshot of the ACLs and group policy and places in a temporary file. It is then used to compare against changed
+- name: ASA-RAS - Taking pre-change snapshot
+  include_tasks: pre-change-snapshot.yml
+  when:
+    - inventory_hostname == secondary_host
+
+# Apply RAS configuration to the device where the device is a RAS device, then produces an output showing whats changed
+- name: ASA-RAS - Apply configuration to device for RAS Objects (CFG files if enabled)
+  include_tasks: asa-ras-object-config.yml
+  when:
+    - inventory_hostname == secondary_host

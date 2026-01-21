@@ -1,0 +1,8 @@
+---
+
+- name: IOS - Configuring the SNMP communities
+  ios_config:
+    lines: |-
+      snmp-server community {{ item.string }} {{ item.access }} {{ item.access_list }}
+  with_items:
+    - "{{ snmp.community }}"

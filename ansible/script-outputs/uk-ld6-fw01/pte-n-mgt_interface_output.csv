@@ -1,0 +1,9 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.1648,10.115.152.1,0200.0101.0101,noncde-cf-web-mgmt,255.255.255.0,100
+up,,Port-channel1.1641,10.115.145.1,0200.0101.0101,web-tier,255.255.255.0,100
+up,,Port-channel1.1645,10.115.149.1,0200.0101.0101,ods-mgmt,255.255.255.0,100
+up,,Port-channel1.1649,10.115.153.1,0200.0101.0101,noncde-cf-app-mgmt,255.255.255.0,100
+up,,Port-channel1.1642,10.115.146.1,0200.0101.0101,app-tier,255.255.255.0,100
+up,,Port-channel1.1676,10.115.160.196,0200.0101.0101,pte-internal-vrf,255.255.255.224,100
+up,,Port-channel1.1643,10.115.147.1,0200.0101.0101,app2-tier,255.255.255.0,100
+up,,Port-channel1.1644,10.115.148.1,0200.0101.0101,backoffice-tier,255.255.255.0,100

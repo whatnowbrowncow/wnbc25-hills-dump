@@ -1,0 +1,9 @@
+{% if snmp.host is defined %}
+{%   for item in snmp.host %}
+{%     if item.poll_trap == 'both' %}
+snmp-server host {{ item.source_int }} {{ item.ip_address }} community {{ item.community_string }} version {{ item.version }}
+{%     else %}
+snmp-server host {{ item.source_int }} {{ item.ip_address }} {{ item.poll_trap }} community {{ item.community_string }} version {{ item.version }}
+{%     endif %}
+{%   endfor %}
+{% endif %}

@@ -1,0 +1,15 @@
+Port-channel1.140: {admin-state: up, interface: Port-channel1.140, ip-add: 10.112.46.1,
+  mac-address: 0200.0101.0101, nameif: cde_storage-data, netmask: 255.255.255.128,
+  security-level: '100'}
+Port-channel1.2003: {admin-state: up, interface: Port-channel1.2003, ip-add: 10.112.215.196,
+  mac-address: 0200.0101.0101, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.2122: {admin-state: up, interface: Port-channel1.2122, ip-add: 10.112.10.1,
+  mac-address: 0200.0101.0101, nameif: server-mgmt, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.2123: {admin-state: up, interface: Port-channel1.2123, ip-add: 10.112.13.1,
+  mac-address: 0200.0101.0101, nameif: mano, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2124: {admin-state: up, interface: Port-channel1.2124, ip-add: 10.112.12.1,
+  mac-address: 0200.0101.0101, nameif: core-services, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2125: {admin-state: up, interface: Port-channel1.2125, ip-add: 10.112.15.1,
+  mac-address: 0200.0101.0101, nameif: jumphosts, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.30: {admin-state: up, interface: Port-channel1.30, ip-add: 10.112.8.1,
+  mac-address: 0200.0101.0101, nameif: vsphere, netmask: 255.255.254.0, security-level: '100'}

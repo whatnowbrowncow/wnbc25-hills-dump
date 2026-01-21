@@ -1,0 +1,16 @@
+---
+
+- name: "Creates all schedules in the schedules list"
+  aci_fabric_scheduler:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    name: "{{ item.sched_name }}"
+    hour: "{{ item.hour | default(omit) }}" 
+    minute: "{{ item.minute | default(omit) }}"
+    windowname: "{{ item.window_name | default(omit) }}"
+    recurring: "{{ item.recur | default(omit) }}"
+    state: present
+    validate_certs: no
+  with_items: 
+    - "{{ schedules }}"

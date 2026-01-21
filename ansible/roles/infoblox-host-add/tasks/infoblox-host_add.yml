@@ -1,0 +1,20 @@
+---
+# This roles is not currently ready for use
+# Create host record in the following format: po1_1650.uk-ld6-fw05-lab-cde-mgmt.network.williamhill.plc
+- name: "Add host entry to Infoblox"
+  nios_host_record:
+    name: "po1_{{ item.vlan }}.{{ inventory_hostname }}-{{ context_item.context }}.network.williamhill.plc"
+    ipv4:
+      - address: "{{ item.addr }}"
+    comment: "Ansible programmed host entry"
+    state: present
+    provider: "{{ nios_provider }}"
+  register: host_entry
+  with_items:
+    -  "{{ context_interfaces_item }}"
+#  when: context_item.context == 'lab-cde-mgmt'
+
+- debug:
+    msg:
+      - "The response was: {{ host_entry }}"
+      - "System is {{ inventory_hostname }}"

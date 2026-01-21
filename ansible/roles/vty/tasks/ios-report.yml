@@ -1,0 +1,25 @@
+---
+
+- name: IOS - collect VTY info
+  ios_command:
+    commands:
+      - show run | section vty
+  register: ios_vty_output
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=ios_vty_output
+
+- name: IOS - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/ios/vty.yml
+    content: "{{ ios_vty_output.stdout.0 }}"
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=ios_vty_facts
+
+- name: IOS - Generate csv report
+  template:
+    src: /gitnet/ansible/roles/vty/templates/ios/csv-template.j2
+    dest: /gitnet/ansible/roles/vty/files/csv/ios/{{ inventory_hostname }}.csv

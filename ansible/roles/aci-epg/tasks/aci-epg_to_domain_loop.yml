@@ -1,0 +1,57 @@
+---
+
+- name: Add physical domains to EPG {{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}
+  aci_epg_to_domain:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    tenant: "{{ app_prof_item.tenant }}"
+    ap: "{{ app_prof_item.app_prof }}"
+    domain: "{{ item }}"
+    domain_type: "phys"
+    epg: "{{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}" 
+    resolution_immediacy: immediate
+    validate_certs: no
+  with_items:
+    - "enclosures"
+    - "network-devices"
+
+# Config to add the vmware domain to an EPG
+- name: Add vmware domain with static vlans to EPG {{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}
+  aci_epg_to_domain:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    tenant: "{{ app_prof_item.tenant }}"
+    ap: "{{ app_prof_item.app_prof }}"
+    domain: "{{ vmm_domain }}"
+    domain_type: "vmm"
+    encap: "{{ epg_item.vcenter_vlan }}"
+    encap_mode: "{{ epg_item.vcenter_vlan_mode }}"
+    vm_provider: vmware
+    epg: "{{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}"
+    deploy_immediacy: immediate
+    resolution_immediacy: pre-provision
+    validate_certs: no
+  when: epg_item.vcenter_dynamic_vlan is defined and epg_item.vcenter_dynamic_vlan == false
+
+- name: Add vmware domain with dynamic vlans to EPG {{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}
+  aci_epg_to_domain:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    tenant: "{{ app_prof_item.tenant }}"
+    ap: "{{ app_prof_item.app_prof }}"
+    domain: "{{ vmm_domain }}"
+    domain_type: "vmm"
+    encap_mode: "auto"
+    vm_provider: vmware
+    epg: "{{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}" 
+    deploy_immediacy: immediate
+    resolution_immediacy: pre-provision
+    validate_certs: no
+  when: epg_item.vcenter_dynamic_vlan is defined and epg_item.vcenter_dynamic_vlan == true
+ 
+- name: Move to static binding to EPG loop
+  include_tasks: ./aci_static_binding_to_epg.yml
+  when: static_interfaces is defined

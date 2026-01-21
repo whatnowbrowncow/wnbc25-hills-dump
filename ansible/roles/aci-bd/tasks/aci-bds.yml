@@ -1,0 +1,49 @@
+---
+#The below tasks use the "l3_ownership" variable in the app_profs dictionary 
+# to determine whether the BD needs to be built as an L2 or L3 version
+
+- name: Build L3 Bridge Domains - gateway owned by ACI
+  aci_bd:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ item.0.tenant }}"
+    vrf: "{{ item.1.vrf | default(item.0.vrf)}}"
+    bd: "{{ item.1.bd }}-{{ item.1.network }}s{{ item.1.cidr_mask}}"
+    ip_learning: "True"
+    l2_unknown_unicast: "proxy"
+    arp_flooding: "False"
+    state: present
+    validate_certs: no
+  with_subelements:
+    - "{{ app_profs }}"
+    - bds
+  when: item.1.l3_ownership == 'aci'
+  
+  register: imdata_bd
+  
+- name: Build L2 Bridge Domains - gateway owned by firewall or no gateway
+  aci_bd:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ item.0.tenant }}"
+    vrf: "{{ item.1.vrf | default(item.0.vrf)}}"
+    bd: "{{ item.1.bd }}-{{ item.1.network }}s{{ item.1.cidr_mask}}"
+    ip_learning: "True"
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    enable_routing: "False"
+    endpoint_move_detect: "garp"
+    endpoint_clear: "yes"
+    state: present
+    validate_certs: no
+  with_subelements:
+    - "{{ app_profs }}"
+    - bds
+  when: item.1.l3_ownership == 'firewall' or item.1.l3_ownership == 'none'
+  
+  register: imdata_bd
+
+#- debug:
+#    msg: "The response was: {{ imdata_bd }}"

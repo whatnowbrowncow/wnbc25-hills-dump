@@ -1,0 +1,5 @@
+hostname,vty pool,vty pool line range,vty line default or template name,access-class,access-class direction,exec_timeout,transport input,transport output,
+{% for item in vty_pools %}
+{{ inventory_hostname }},{{ item.pool_name }},{{ item.line_range }},{{ item.line_template}},{% for bob in vty %} {% if item.line_template == bob.line_template %}{{ bob.access_class }},{{ bob.access_class_direction }},{{ bob.exec_timeout }},{{ bob.transport_input }},{{ bob.transport_output }}{% else %}{% endif %}{% endfor %}
+
+{% endfor %}

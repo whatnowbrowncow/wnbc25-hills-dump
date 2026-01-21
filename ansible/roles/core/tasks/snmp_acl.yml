@@ -1,0 +1,8 @@
+---
+
+- name: Generate Mgmt ACL configurations
+  template:
+    src: "snmp_acl.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/snmp_acl.cfg"
+  tags:
+    - snmp_acl

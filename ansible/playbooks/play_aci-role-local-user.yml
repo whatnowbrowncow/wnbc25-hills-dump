@@ -1,0 +1,51 @@
+---
+
+- name: PLAY - Create a local user account
+  hosts: aci
+  connection: local
+  gather_facts: no
+  
+  vars_prompt:
+    - name: "snapshot_description"
+      prompt: "Provide the change ref. This will be used for the slack message and/or snapshots:"
+      default: "ansible pre-change backup"
+      private: no
+    - name: 'first_name'
+      prompt: 'Please enter your first name'
+      private: no
+    - name: 'last_name'
+      prompt: 'Please enter your last name'
+      private: no
+    - name: 'user_username'
+      prompt: 'Please enter your AD username'
+      private: no
+    - name: 'email_address'
+      prompt: 'Please enter your email address'
+      private: no      
+    - name: 'local_password'
+      prompt: 'Please create a password (8 character minimum, include 3 of the following classes: upper, lower, digits and special characters)'
+      private: yes
+      confirm: yes
+
+  pre_tasks:
+    - name: Confirm your details are correct
+      vars:
+        msg: |
+            First Name: {{ first_name }}
+            Last Name: {{ last_name }}
+            Email Address: {{ email_address }}
+            AD Username: {{ user_username }}
+      debug: 
+        msg: "{{ msg.split('\n') }}"
+    - name:      
+      pause: prompt='Confirm the information you entered above is correct. Press return to continue or Ctrl+c and then "a" to abort.'    
+
+  roles:
+    - slack-message-start
+    - aci-local-user
+    - slack-message-end
+
+  post_tasks:
+    - debug:
+        msg:
+        - Your ACI username is '{{ user_username }}-local'

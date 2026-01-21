@@ -1,0 +1,26 @@
+NAME: "c38xx Stack", DESCR: "c38xx Stack"
+PID: WS-C3850-48P      , VID: V02  , SN: FOC1736X0LN
+
+NAME: "Switch 1", DESCR: "WS-C3850-48P"
+PID: WS-C3850-48P      , VID: V02  , SN: FOC1736X0LN
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C1-1100WAC    , VID: V01  , SN: LIT17300XV3
+
+NAME: "Switch 1 FRU Uplink Module 1", DESCR: "4x1G Uplink Module"
+PID: C3850-NM-4-1G     , VID: V01  , SN: FOC1733245P
+
+NAME: "GigabitEthernet1/1/1", DESCR: "10/100/1000BaseTX SFP"
+PID: GLC-T              , VID:      , SN: MTC173418HA    
+
+NAME: "Switch 2", DESCR: "WS-C3850-48P"
+PID: WS-C3850-48P      , VID: V02  , SN: FOC1736U0A3
+
+NAME: "Switch 2 - Power Supply B", DESCR: "Switch 2 - Power Supply B"
+PID: PWR-C1-1100WAC    , VID: V01  , SN: LIT17300XU2
+
+NAME: "Switch 2 FRU Uplink Module 1", DESCR: "4x1G Uplink Module"
+PID: C3850-NM-4-1G     , VID: V01  , SN: FOC173324X9
+
+NAME: "GigabitEthernet2/1/1", DESCR: "10/100/1000BaseTX SFP"
+PID: SFP-GE-T           , VID: V02  , SN: MTC18470CT9

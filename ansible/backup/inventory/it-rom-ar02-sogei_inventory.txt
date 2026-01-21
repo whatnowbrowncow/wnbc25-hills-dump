@@ -1,0 +1,8 @@
+NAME: "CISCO2921/K9", DESCR: "CISCO2921/K9 chassis, Hw Serial#: FCZ1830609B, Hw Revision: 1.0"
+PID: CISCO2921/K9      , VID: V08 , SN: FCZ1830609B
+
+NAME: "Wan Interface Card BRI U (82912) on Slot 0 SubSlot 0", DESCR: "Wan Interface Card BRI U (82912)"
+PID: HWIC-1B-U         , VID: V02 , SN: FOC18051LCW
+
+NAME: "C2921/C2951 AC Power Supply", DESCR: "C2921/C2951 AC Power Supply"
+PID: PWR-2921-51-AC    , VID: V03 , SN: DCA1806K03W

@@ -1,0 +1,17 @@
+"l3extInstP": {
+    "attributes": {
+        "dn": "uni/tn-common/out-default-fatl3out/instP-default-fatl3out",
+        "name": "default-fatl3out",
+        "status": "created,modified"
+    },
+    "children": [
+        {
+        "l3extSubnet": {
+            "attributes": {
+                "aggregate": "export-rtctrl",
+                "ip": "0.0.0.0/0",
+                "scope": "export-rtctrl,import-security",
+            }
+        }
+    },
+]}

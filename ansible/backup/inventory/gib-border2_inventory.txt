@@ -1,0 +1,35 @@
+NAME: "Chassis", DESCR: "Cisco ASR1002 Chassis"
+PID: ASR1002           , VID: V02, SN: FOX1303GTWE
+
+NAME: "module F0", DESCR: "Cisco ASR1000 Embedded Services Processor, 10Gbps"
+PID: ASR1000-ESP10     , VID: V06, SN: JAE17480HSA
+
+NAME: "Power Supply Module 0", DESCR: "Cisco ASR1002 AC Power Supply"
+PID: ASR1002-PWR-AC    , VID: V01, SN: ART1302U04C
+
+NAME: "Power Supply Module 1", DESCR: "Cisco ASR1002 AC Power Supply"
+PID: ASR1002-PWR-AC    , VID: V01, SN: ART1302U04H
+
+NAME: "module 0", DESCR: "Cisco ASR1002 SPA Interface Processor 10"
+PID: ASR1002-SIP10     , VID:    , SN:            
+
+NAME: "SPA subslot 0/1", DESCR: "2-port Gigabit Ethernet Shared Port Adapter"
+PID: SPA-2X1GE-V2      , VID: V01, SN: JAE13083FWW
+
+NAME: "SPA subslot 0/0", DESCR: "4-port Gigabit Ethernet Shared Port Adapter"
+PID: 4XGE-BUILT-IN     , VID:    , SN:            
+
+NAME: "subslot 0/0 transceiver 0", DESCR: "GE T"
+PID: N/A                 , VID: E   , SN: MTC131002KE     
+
+NAME: "subslot 0/0 transceiver 1", DESCR: "GE T"
+PID: N/A                 , VID: E   , SN: MTC130801XD     
+
+NAME: "subslot 0/0 transceiver 2", DESCR: "GE LX"
+PID: N/A                 , VID: A1B , SN: OPC12512747     
+
+NAME: "subslot 0/0 transceiver 3", DESCR: "GE LX"
+PID: SFP-GE-L            , VID: A   , SN: SPC161305PX     
+
+NAME: "module R0", DESCR: "Cisco ASR1002 Route Processor 1"
+PID: ASR1002-RP1       , VID: V02, SN: JAE13136CK2

@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-wak-ar01,netsec,15,secret,5,$1$VkTN$zC2sm18lpNVQx5IzKQV97.
+uk-wak-ar01,netadmin,15,secret,5,$1$YQFP$xc31yvLtfQ6kw3s5bDxPB.
+uk-wak-ar01,svcnetworkauto,15,secret,5,$1$lpI/$jR.nb1PfwlG4pGjd4DhD91

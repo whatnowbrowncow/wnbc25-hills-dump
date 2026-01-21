@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-gsh-as01-f01,whill,,secret,5,$1$5rD8$KUPXyHCjZWYMXqy8KsCSh0
+uk-gsh-as01-f01,netadmin,15,secret,5,$1$LLqT$Ba4.DukKgZoxU/QkZL6uG/
+uk-gsh-as01-f01,svcnetworkauto,15,secret,5,$1$LBLu$rPBdaJmbEWBy9vR5iyB.80

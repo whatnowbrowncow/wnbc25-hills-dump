@@ -1,0 +1,157 @@
+/*=========================================================
+#### Parse of ASA Service and Protocol Objects (ports) ####
+
+######### Example Format #############
+
+resource "nsxt_policy_service" "tcp_80" {
+  display_name = "tcp-80"
+  description  = "description: tcp-80, services: tcp80"
+  l4_port_set_entry {
+    protocol          = "TCP"
+    destination_ports = ["80"]
+  }
+}
+
+How we will format and standardise this:
+The "resource" name and "display_name" will be the same/identical, referencing the same varible: port_obj_name
+The "destination_ports" will always be a list
+The "description" must contain a service object's description, if it has one, and list of protocol/ports 
+description: describes the service object, where this information is available. Where it isn't the port_obj_name must be added
+services: lists the protocol/ports defined in the object in a comma separated format (e.g. tcp3389, udp514)
+The ports must always be listed in the "description", as this allows us to overcome a limitation with the VMC rule search/filter
+
+
+resource "nsxt_policy_service" "( port_obj_name )" {
+  display_name = "( port_obj_name )"
+  description  = "description: ( existing/valid object description | port_obj_name ), services: [( protocol )( port ), ( protocol )( port )]"
+  l4_port_set_entry {
+    protocol          = "( protocol (uppercase) )"
+    destination_ports = [( port )]
+  }
+  l4_port_set_entry {
+    protocol          = "( protocol (uppercase) )"
+    destination_ports = [( port )]
+  }
+}
+
+=========================================================*/
+
+resource "nsxt_policy_service" "ip-any" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  display_name = "ip-any"
+  description  = "description: ip"
+  ether_type_entry {
+    ether_type = "2048"
+  }
+}
+
+resource "nsxt_policy_service" "icmp-any" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  display_name = "icmp-any"
+  description  = "description: icmp"
+  icmp_entry {
+    protocol = "ICMPv4"
+  }
+}
+
+resource "nsxt_policy_service" "tcp-any" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  display_name = "tcp-any"
+  description  = "description: tcp-any"
+  ip_protocol_entry {
+    display_name = "tcp"
+    protocol = "6"
+  }
+}
+
+resource "nsxt_policy_service" "udp-any" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  display_name = "udp-any"
+  description  = "description: udp-any"
+  ip_protocol_entry {
+    display_name = "udp"
+    protocol = "17"
+  }
+}
+
+{% set existingresources = [] %}
+{% for resource in resources.port_obj_groups %}
+{%   if resource.name not in existingresources %}
+resource "nsxt_policy_service" "{{ resource.name }}" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  display_name = "{{ resource.name }}"
+{%     if resource.protocol_obj is defined and resource.protocol_obj %}
+  description  = "description: {% if resource.description|length %}{{ resource.description }}{% else %}{{ resource.name }}{% endif %}, services: [{% for object in resource.protocol_obj %}{% if loop.last %}{{ object.protocol |lower }}{% else %}{{ object.protocol |lower }}, {% endif %}{% endfor %}]"
+{%       for object in resource.protocol_obj %}
+  ip_protocol_entry {
+    display_name = "{{ object.protocol }}"
+{%         if object.protocol == 'udp' %}
+    protocol = "17"
+{%         elif object.protocol == 'tcp' %}
+    protocol = "6"
+{%         else %}
+    protocol = "WARNING"
+{%         endif %}
+  }
+{%       endfor %}
+{%     else %}
+{%     endif %}
+{%     if resource.port_obj is defined and resource.port_obj %}
+  description  = "description: {% if resource.description|length %}{{ resource.description }}{% else %}{{ resource.name }}{% endif %}, services: [{% for object in resource.port_obj %}{% if loop.last %}{{ object.protocol |lower }}{{ object.port }}{% else %}{{ object.protocol |lower }}{{ object.port }}, {% endif %}{% endfor %}]"
+{%       for object in resource.port_obj %}
+{%         if object.port != 'any' %}
+{%           if object.protocol == 'tcp-udp' %}
+  l4_port_set_entry {
+    protocol          = "TCP"
+{%             if object.direction == 'source' %}
+    source_ports = [{{ object.port }}]
+{%             else %}
+    destination_ports = ["{{ object.port }}"]
+{%             endif %}
+  }
+  l4_port_set_entry {
+    protocol          = "UDP"
+{%             if object.direction == 'source' %}
+    source_ports = [{{ object.port }}]
+{%             else %}
+    destination_ports = ["{{ object.port }}"]
+{%             endif %}
+  }
+{%           else %}
+  l4_port_set_entry {
+    protocol          = "{{ object.protocol |upper }}"
+{%             if object.direction == 'source' %}
+    source_ports = [{{ object.port }}]
+{%             else %}
+    destination_ports = ["{{ object.port }}"]
+{%             endif %}
+  }
+{%           endif %}
+{%         else %}
+  l4_port_set_entry {
+    protocol          = "{{ object.protocol |upper }}"
+{%           if object.direction == 'source' %}
+    source_ports = ["1-65535"]
+{%           else %}
+    destination_ports = ["1-65535"]
+{%           endif %}
+  }
+{%         endif %}
+{%       endfor %}
+{%     else %}
+{%     endif %}
+}
+
+{%   do existingresources.append(resource.name) %}
+{%   endif %}
+{% endfor %}

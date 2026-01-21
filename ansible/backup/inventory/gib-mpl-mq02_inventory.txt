@@ -1,0 +1,8 @@
+NAME: "1", DESCR: "WS-C3750E-48TD"
+PID: WS-C3750E-48TD-S  , VID: V03  , SN: FDO1327R0GG
+
+NAME: "Switch 1 - Power Supply 0", DESCR: "FRU Power Supply"
+PID: C3K-PWR-265WAC    , VID: V01D , SN: DTN1323C0GT
+
+NAME: "TenGigabitEthernet1/0/1", DESCR: "10GBase-SR"
+PID: X2-10GB-SR        , VID: V03  , SN: AGA1336X960

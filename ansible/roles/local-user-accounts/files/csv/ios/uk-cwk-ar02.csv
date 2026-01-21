@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-cwk-ar02,netsec,15,password,7,1439475F0D451D3209
+uk-cwk-ar02,netadmin,15,secret,5,$1$kiqt$kgLrEG463jaqFgyGDmxP.1
+uk-cwk-ar02,svcnetworkauto,15,secret,5,$1$42JH$5HUf3wzEBHmJhBoaXs2Gk/

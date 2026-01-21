@@ -1,0 +1,78 @@
+---
+- name: Clear Data Files
+  ansible.builtin.file:
+    state: absent
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+  loop_control:
+    loop_var: foldernames
+    label: Removing Directory and contents of {{ foldernames }} if exists
+  check_mode: false
+
+# Creates DATA YAMLs and updated version number, if a error occurs than this is passed to ansible and the role is stopped
+- name: ASA-RAS - Creating RAS YAML Deployment Data Files and Updating Version
+  ansible.builtin.shell: python3 {{ role_path }}/scripts/ras_acl_constructor/ras_acl_constructor.py -i {{ inventory_dir }} -oc {{ hostvars[inventory_hostname]['objects_changed']
+    }} -l info > /dev/tty
+  check_mode: false
+  register: pythonoutput
+  any_errors_fatal: true
+
+# This points ansible to the newly created data in the task above
+- name: Pointing Role to Data Directory to Retrieve New ACLs
+  ansible.builtin.include_vars:
+    dir: /gitnet/ras-processed/data
+  check_mode: false
+
+# Retrieves current RAS Group Policy Information
+- name: ASA-RAS - Retrieving the RAS Group Policy configuration
+  cisco.asa.asa_command:
+    commands:
+      - show running-config group-policy
+  register: activeACL
+
+# This extracts all ACLs that are currently deployed to the device via the activeACL variable created above
+- name: ASA-RAS - Collecting the Names of all the currently deployed RAS ACL from the group-policy variable
+  ansible.builtin.set_fact:
+    device_acl_temp: "{{ activeACL.stdout[0] | regex_findall('vpn-filter value (\\S+(?=_v)|\\S+)?(?:_v)?(\\d+)?') | unique }}"
+# Adding name and device version key to the information and placing them in a variable called
+
+- name: ASA-RAS - Adding keys to Deployed ACL variable
+  ansible.builtin.set_fact:
+    device_acl: "{{ device_acl | default([]) + [{'name': loop_device_temp.0,'device_version': loop_device_temp.1 }] }}"
+  loop: "{{ device_acl_temp }}"
+  loop_control:
+    loop_var: loop_device_temp
+    label: Adding keys to {{ loop_device_temp.0 }} for deployed device ACLs ({{inventory_hostname }})
+
+# By Looping through all the ACL Named YML files in /gitnet/ansible/environments/<environment>/group_vars/ras, this extracts all the data where they match the values in the ra_vpn variable and then adds the relevant matching detail from the device_acl varible
+# This then creates a variable called ras_acl_deploy_results to produce a complete set of ACLs that can be deployed to the device
+- name: ASA-RAS - Collecting all RAS ACL data from the current YML files
+  ansible.builtin.set_fact:
+    ra_vpn_access_lists: "{{ [(lookup('vars', loop_ra_acl | regex_replace ('-','_'))|combine([{'device_version': device_version[0]|int}], recursive=True))]}}"
+  loop: "{{ ra_acl }}"
+  loop_control:
+    loop_var: loop_ra_acl
+    label: Combining all information for {{ loop_ra_acl }}
+  vars:
+    device_version: "{{ (device_acl | selectattr('name', 'equalto', loop_ra_acl)|map(attribute='device_version')|list) }}"
+  register: ras_acl_deploy_results
+  notify: asa-ras-acl:output_change
+
+#This loops though ras_acl_deploy_results variable and adds the ACLs where the YML version number is greater than the device version number and places all the details in a variable called changes_acls
+- name: ASA-RAS - Identify which RAS ACLs that have changed
+  ansible.builtin.set_fact:
+    changed_acls: "{{ changed_acls|default([]) + [loop_changed] }}"
+  when: ((loop_changed.ansible_facts.ra_vpn_access_lists[0].device_version | int) < (loop_changed.ansible_facts.ra_vpn_access_lists[0].version | int))
+  loop: "{{ ras_acl_deploy_results.results }}"
+  loop_control:
+    label: "Access-List: {{ loop_changed.ansible_facts.ra_vpn_access_lists[0].name }}, Device version: {{ loop_changed.ansible_facts.ra_vpn_access_lists[0].device_version
+      | int }}, YAML version: {{ loop_changed.ansible_facts.ra_vpn_access_lists[0].version | int }}"
+    loop_var: loop_changed
+
+- name: End playbook due to failure
+  ansible.builtin.fail:
+    msg: "m############################################ \nThere are no new
+      ACLs or objects to be processed for {{ inventory_hostname }} ############################################"
+  notify: asa-ras-acl:fail_executed
+  when: hostvars[inventory_hostname]['objects_changed'] == 'True' and changed_acls is not defined

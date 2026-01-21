@@ -1,0 +1,8 @@
+hostname,local_interface,remote_device_description
+uk-ld6-or01,GigabitEthernet0/0/0.300,no_data_in_cdp
+uk-ld6-or01,ATM0/1/0.1,no_data_in_cdp
+uk-ld6-or01,Di0,no_data_in_cdp
+uk-ld6-or01,Loopback0,no_data_in_cdp
+uk-ld6-or01,Tunnel0,no_data_in_cdp
+uk-ld6-or01,Tunnel1,no_data_in_cdp
+uk-ld6-or01,Vi1,no_data_in_cdp

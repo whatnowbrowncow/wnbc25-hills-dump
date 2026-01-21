@@ -1,0 +1,360 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run
+    network_os: ios
+
+- name: AAA servers
+  pattern_match:
+    regex: "^tacacs server"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_servers
+
+- name: AAA servers values
+  pattern_group:
+    - name: server
+      pattern_match:
+        regex: "tacacs server (\\S+)"
+        content: "{{ item }}"
+      register: server
+
+    - name: ip_address
+      pattern_match:
+        regex: "address ipv4 (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address
+
+    - name: encryption_key
+      pattern_match:
+        regex: "key \\d+ (\\S+)"
+        content: "{{ item }}"
+      register: encryption_key       
+
+  loop: "{{ aaa_servers }}"
+  register: aaa_servers_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_servers
+        object:
+          - key: name
+            value: "{{ item.server.matches.0 }}"
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: encryption_key
+            value: "{{ item.encryption_key.matches.0 }}"
+          - key: tacacs_style
+            value: new
+  loop: "{{ aaa_servers_values }}"
+  export: yes
+  register: aaa_servers_facts
+
+- name: AAA servers
+  pattern_match:
+    regex: "^.*tacacs-server (?!directed-request)"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_servers
+  when: aaa_servers_facts is not defined
+
+- name: AAA servers values
+  pattern_group:
+    - name: ip_address
+      pattern_match:
+        regex: "tacacs-server host (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address
+
+    - name: encryption_key
+      pattern_match:
+        regex: "key \\d+ (\\S+)"
+        content: "{{ item }}"
+      register: encryption_key       
+
+  loop: "{{ aaa_servers }}"
+  register: aaa_servers_values
+  when: aaa_servers_facts is not defined
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_servers
+        object:
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: encryption_key
+            value: "{{ item.encryption_key.matches.0 }}"
+          - key: tacacs_style
+            value: legacy
+  loop: "{{ aaa_servers_values }}"
+  export: yes
+  register: aaa_servers_facts
+  when: aaa_servers_facts is not defined
+
+- name: AAA servers
+  pattern_match:
+    regex: "^.*server-private"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_servers
+  when: aaa_servers_facts is not defined
+
+- name: AAA servers values
+  pattern_group:
+    - name: ip_address
+      pattern_match:
+        regex: "server-private (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address
+
+    - name: encryption_key
+      pattern_match:
+        regex: "key \\d+ (\\S+)"
+        content: "{{ item }}"
+      register: encryption_key       
+
+  loop: "{{ aaa_servers }}"
+  register: aaa_servers_values
+  when: aaa_servers_facts is not defined
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_servers
+        object:
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: encryption_key
+            value: "{{ item.encryption_key.matches.0 }}"
+          - key: tacacs_style
+            value: private              
+  loop: "{{ aaa_servers_values }}"
+  export: yes
+  register: aaa_servers_facts
+  when: aaa_servers_facts is not defined
+
+- name: AAA server group
+  pattern_match:
+    regex: "^aaa group server"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_server_group
+
+- name: AAA server group values
+  pattern_group:
+    - name: group_name
+      pattern_match:
+        regex: "aaa group server tacacs\\+ (\\S+)"
+        content: "{{ item }}"
+      register: group_name
+
+    - name: vrf
+      pattern_match:
+        regex: "ip vrf forwarding (\\S+)"
+        content: "{{ item }}"
+      register: vrf
+
+    - name: source_interface
+      pattern_match:
+        regex: "ip tacacs source-interface (\\S+)"
+        content: "{{ item }}"
+      register: source_interface
+
+  loop: "{{ aaa_server_group }}"
+  register: aaa_server_group_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_server_group
+        object:
+          - key: group_name
+            value: "{{ item.group_name.matches.0 }}"
+          - key: vrf
+            value: "{{ item.vrf.matches.0 }}"
+          - key: source_interface
+            value: "{{ item.source_interface.matches.0 }}"
+  loop:  "{{ aaa_server_group_values }}"
+  export: yes
+  register: aaa_server_group_facts
+
+- name: AAA server group servers
+  pattern_match:
+    regex: "^.*server name"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_server_group_servers
+
+- name: AAA server group servers values
+  pattern_group:
+    - name: server
+      pattern_match:
+        regex: "^.*server name (\\S+)"
+        content: "{{ item }}"
+      register: server
+
+  loop: "{{ aaa_server_group_servers }}"
+  register: aaa_server_group_servers_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_server_group_servers
+        object:
+          - key: server
+            value: "{{ item.server.matches.0 }}"
+  loop: "{{ aaa_server_group_servers_values }}"              
+  export: yes
+  register: aaa_server_group_servers_facts
+
+- name: AAA server group servers
+  pattern_match:
+    regex: "^.*server-private"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_server_group_servers
+  when: aaa_server_group_servers_facts is not defined
+
+- name: AAA server group servers values
+  pattern_group:
+    - name: server
+      pattern_match:
+        regex: "server-private (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: server
+
+  loop: "{{ aaa_server_group_servers }}"
+  register: aaa_server_group_servers_values
+  when: aaa_server_group_servers_facts is not defined
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_server_group_servers
+        object:
+          - key: server
+            value: "{{ item.server.matches.0 }}" 
+  loop: "{{ aaa_server_group_servers_values }}"              
+  export: yes
+  register: aaa_server_group_servers_facts
+  when: aaa_server_group_servers_facts is not defined
+
+- name: AAA server group servers
+  pattern_match:
+    regex: "^\\s+server"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_server_group_servers
+  when: aaa_server_group_servers_facts is not defined
+
+- name: AAA server group servers values
+  pattern_group:
+    - name: server
+      pattern_match:
+        regex: "^\\s+server (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: server
+
+  loop: "{{ aaa_server_group_servers }}"
+  register: aaa_server_group_servers_values
+  when: aaa_server_group_servers_facts is not defined
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_server_group_servers
+        object:
+          - key: server
+            value: "{{ item.server.matches.0 }}"
+  loop: "{{ aaa_server_group_servers_values }}"              
+  export: yes
+  register: aaa_server_group_servers_facts
+  when: aaa_server_group_servers_facts is not defined
+
+- name: AAA method lists
+  pattern_match:
+    regex: "^aaa authentication.*|aaa authorization.*|aaa accounting.*"
+    match_greedy: yes
+  register: aaa_method_lists
+
+- name: AAA method lists values
+  pattern_group:
+    - name: authentication login server-group
+      pattern_match:
+        regex: "^aaa authentication login default group (\\S+)"
+        content: "{{ item }}"
+      register: authentication_login
+
+    - name: authentication enable-mode server-group
+      pattern_match:
+        regex: "^aaa authentication enable default group (\\S+)"
+        content: "{{ item }}"
+      register: authentication_enable
+
+    - name: authorisation exec server-group
+      pattern_match:
+        regex: "^aaa authorization exec default group (\\S+)"
+        content: "{{ item }}"
+      register: authorisation_exec
+
+    - name: authorisation commands server-group
+      pattern_match:
+        regex: "^aaa authorization commands 15 default group (\\S+)"
+        content: "{{ item }}"
+      register: authorisation_commands
+
+    - name: accounting exec server-group
+      pattern_match:
+        regex: "^aaa accounting exec default start-stop group (\\S+)"
+        content: "{{ item }}"
+      register: accounting_exec
+
+    - name: accounting connection server-group
+      pattern_match:
+        regex: "^aaa accounting connection default start-stop group (\\S+)"
+        content: "{{ item }}"
+      register: accounting_connection
+
+    - name: accounting commands server-group
+      pattern_match:
+        regex: "^aaa accounting commands 15 default start-stop group (\\S+)"
+        content: "{{ item }}"
+      register: accounting_commands
+
+    - name: accounting system server-group
+      pattern_match:
+        regex: "^aaa accounting system default start-stop group (\\S+)"
+        content: "{{ item }}"
+      register: accounting_system
+
+  loop: "{{ aaa_method_lists }}"
+  register: aaa_method_lists_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_method_lists
+        object:
+          - key: authentication_login
+            value: "{{ item.authentication_login.matches.0 }}"
+          - key: authentication_enable
+            value: "{{ item.authentication_enable.matches.0 }}"                   
+          - key: authorisation_exec
+            value: "{{ item.authorisation_exec.matches.0 }}"
+          - key: authorisation_commands
+            value: "{{ item.authorisation_commands.matches.0 }}"
+          - key: accounting_exec
+            value: "{{ item.accounting_exec.matches.0 }}"
+          - key: accounting_connection
+            value: "{{ item.accounting_connection.matches.0 }}"                   
+          - key: accounting_commands
+            value: "{{ item.accounting_commands.matches.0 }}"
+          - key: accounting_system
+            value: "{{ item.accounting_system.matches.0 }}"            
+  loop:  "{{ aaa_method_lists_values }}"
+  export: yes
+  register: aaa_method_lists_facts

@@ -1,0 +1,20 @@
+---
+
+- name: Contract Subject Build
+  aci_contract_subject:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: '{{ contract_item.tenant }}'
+    contract: '{{ contract_item.contract }}'
+    subject: '{{ subject_item.subject }}'
+    description: '{{ subject_item.description }}'
+    validate_certs: no
+
+- name: Move to bind filter to subject
+  include_tasks: ./aci_contract_subject_to_filter_loop.yml
+  with_items:
+    - "{{ subject_item.filters }}"
+  loop_control:
+    loop_var: filter_item
+  

@@ -1,0 +1,9 @@
+---
+
+- name: Gather interfaces for {{ context_item.context }}
+  include_tasks: ./infoblox-host_add.yml
+  with_items:
+    - "{{ context_item.vlans }}"
+  loop_control:
+    loop_var: context_interfaces_item
+    

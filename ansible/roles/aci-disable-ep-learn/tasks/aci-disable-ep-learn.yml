@@ -1,0 +1,20 @@
+---
+
+- name: Disable ep learn across the entire fabric within system settings.
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/infra/settings.json"
+    content:
+      {
+        "infraSetPol": {
+          "attributes": {
+            "dn": "uni/infra/settings",
+            "unicastXrEpLearnDisable": "true"
+          },
+          "children": []
+        }
+      }    
+    validate_certs: no

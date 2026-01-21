@@ -1,0 +1,92 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2220E1S5
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2220E1S5
+
+NAME: "StackPort1/1", DESCR: "StackPort1/1"
+PID: STACK-T2-1M       , VID: V03  , SN: LCC2213GA07
+
+NAME: "StackPort1/2", DESCR: "StackPort1/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2220GMAN
+
+NAME: "StackAdapter1/1", DESCR: "StackAdapter1/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO222523NK
+
+NAME: "StackAdapter1/2", DESCR: "StackAdapter1/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO222525MN
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V04  , SN: DCB2232B1MT
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT22082SPE
+
+NAME: "Te1/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR          , VID: V03  , SN: AVD22309E9Y     
+
+NAME: "Switch 2", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2215E1NC
+
+NAME: "StackPort2/1", DESCR: "StackPort2/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2220GMAN
+
+NAME: "StackPort2/2", DESCR: "StackPort2/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211GM
+
+NAME: "StackAdapter2/1", DESCR: "StackAdapter2/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO22260NW7
+
+NAME: "StackAdapter2/2", DESCR: "StackAdapter2/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO222525NB
+
+NAME: "Switch 2 - Power Supply A", DESCR: "Switch 2 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V04  , SN: DCB2232B1L2
+
+NAME: "Switch 2 - Power Supply B", DESCR: "Switch 2 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2208B5UW
+
+NAME: "Switch 3", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2220E1TB
+
+NAME: "StackPort3/1", DESCR: "StackPort3/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211GM
+
+NAME: "StackPort3/2", DESCR: "StackPort3/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2220GM9P
+
+NAME: "StackAdapter3/1", DESCR: "StackAdapter3/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO22221YKC
+
+NAME: "StackAdapter3/2", DESCR: "StackAdapter3/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO222525AY
+
+NAME: "Switch 3 - Power Supply A", DESCR: "Switch 3 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V04  , SN: DCB2232B1L3
+
+NAME: "Switch 3 - Power Supply B", DESCR: "Switch 3 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT22082T7H
+
+NAME: "Te3/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR          , VID: V03  , SN: AVD22309EAY     
+
+NAME: "Switch 4", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2220Q1HL
+
+NAME: "StackPort4/1", DESCR: "StackPort4/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2220GM9P
+
+NAME: "StackPort4/2", DESCR: "StackPort4/2"
+PID: STACK-T2-1M       , VID: V03  , SN: LCC2213GA07
+
+NAME: "StackAdapter4/1", DESCR: "StackAdapter4/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO22260P63
+
+NAME: "StackAdapter4/2", DESCR: "StackAdapter4/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO222525C4
+
+NAME: "Switch 4 - Power Supply A", DESCR: "Switch 4 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V04  , SN: DCB2232B1KS
+
+NAME: "Switch 4 - Power Supply B", DESCR: "Switch 4 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT22082ST3

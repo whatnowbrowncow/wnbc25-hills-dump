@@ -1,0 +1,22 @@
+---
+# vars file for asa-vpn
+ras_cfg: deploy
+yml_dir: group_vars/ras
+role_root: /gitnet/ansible/roles
+wh_net_tools_path: "/gitnet/automation-tools/wh_net_python_toolset/"
+
+date: "{{ now().strftime('%Y_%m_%d') | string }}"
+time: "{{ now().strftime('%H-%M-%S') | string }}"
+
+backup_dir: "/gitnet/ras-processed/changes/{{ inventory_hostname }}"
+logs_dir: "/gitnet/ras-processed/logs"
+changes_dir: "{{ backup_dir }}/{{ date }}"
+config_dir: "/gitnet/ras-processed/config/{{ inventory_hostname }}/{{ date }}"
+pre_conf_file: "{{ changes_dir }}/acl_pre_change.conf"
+post_conf_file: "{{ changes_dir }}/acl_post_change.conf"
+ld6_sync_group: "{{ ansible_limit }}-sync-ld6"
+ma3_sync_group: "{{ ansible_limit }}-sync-ma3"
+config_file_acl: "{{ config_dir }}/{{ timestamp }}_config_acl.cfg"
+config_file_gp: "{{ config_dir }}/{{ timestamp }}_config_acl_gp.cfg"
+channel_id: "'C06JHGK9YDT'"
+slack_message: "'RAS ACL AUTOMATION FAILED TO DEPLOY - PLEASE CONFIRM BEFORE ANY FURTHER DEPLOYMENTS'"

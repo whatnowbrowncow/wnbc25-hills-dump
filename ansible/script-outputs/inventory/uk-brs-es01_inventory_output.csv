@@ -1,0 +1,20 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-brs-es01,1000BaseT,TenGigabitEthernet1/14,GLC-T,00000MTC164600V0,none
+uk-brs-es01,1000BaseT,TenGigabitEthernet1/12,Unspecified,AGM16432045,none
+uk-brs-es01,1000BaseT,TenGigabitEthernet1/8,Unspecified,AGM16432047,none
+uk-brs-es01,1000BaseT,TenGigabitEthernet1/3,Unspecified,AGM1643204E,none
+uk-brs-es01,1000BaseT,TenGigabitEthernet1/7,Unspecified,AGM1643205D,none
+uk-brs-es01,Power Supply ( AC 750W ),Power Supply 1,C4KX-PWR-750AC-R,ART1639X099,V01
+uk-brs-es01,Power Supply ( AC 750W ),Power Supply 2,C4KX-PWR-750AC-R,ART1639X0A1,V01
+uk-brs-es01,SFP-10Gbase-SR,TenGigabitEthernet2/1,SFP-10G-SR,AVD1932ACB3,V03
+uk-brs-es01,4500X-16 10GE (SFP+),Supervisor(slot 1),WS-C4500X-16,JAE164800GQ,V01
+uk-brs-es01,Cisco Systems,Switch System,,JAE164800GQ,none
+uk-brs-es01,10GE SFP+,Linecard(slot 2),C4KX-NM-8,JAE164801X0,V01
+uk-brs-es01,SFP-10Gbase-SR,TenGigabitEthernet1/16,SFP-10G-SR,JUR1930GYMS,V03
+uk-brs-es01,1000BaseT,TenGigabitEthernet1/15,Unspecified,MTC152502EM,none
+uk-brs-es01,1000BaseT,TenGigabitEthernet2/2,GLC-T,MTC1815025G,none
+uk-brs-es01,SFP-10Gbase-SR,TenGigabitEthernet1/5,SFP-10G-SR,SPC1647009X,V03
+uk-brs-es01,SFP-10Gbase-SR,TenGigabitEthernet1/11,SFP-10G-SR,SPC1647009Z,V03
+uk-brs-es01,SFP-10Gbase-SR,TenGigabitEthernet1/9,SFP-10G-SR,SPC164700A0,V03
+uk-brs-es01,SFP-10Gbase-SR,TenGigabitEthernet2/8,SFP-10G-SR,SPC164700A1,V03
+uk-brs-es01,SFP-10Gbase-SR,TenGigabitEthernet2/7,SFP-10G-SR,SPC164700A3,V03

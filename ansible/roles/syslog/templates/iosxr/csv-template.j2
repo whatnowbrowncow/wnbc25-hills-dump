@@ -1,0 +1,4 @@
+hostname,syslog ip address,vrf,logging source, logging source vrf
+{% for item in syslog_server_facts %}
+{{ inventory_hostname }},{{ item.syslog_servers.ip_address }},{{ item.syslog_servers.vrf }},{{ syslog_source_facts[0].syslog_source.interface }},{{ syslog_source_facts[0].syslog_source.vrf }}
+{% endfor %}

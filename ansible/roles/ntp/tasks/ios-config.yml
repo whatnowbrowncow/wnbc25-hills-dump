@@ -1,0 +1,30 @@
+---
+
+- name: IOS - Configure timezone & daylight savings
+  ios_config:
+    lines:
+      - clock timezone GMT 0 0
+      - clock summer-time BST recurring last Sun Mar 2:00 last Sun Oct 2:00
+
+- name: IOS - Configure NTP source interface
+  ios_config:
+    lines:
+      - ntp source {{ item.source_interface }}
+  with_items:
+    - "{{ ntp }}"
+
+- name: IOS - Configure VRF aware NTP server(s)
+  ios_config:
+    lines:
+      - ntp server vrf {{ item.vrf }} {{ item.ip_addr }} {{ item.preferred }}
+  with_items:
+    - "{{ ntp.ntp_servers }}"
+  when: "item.vrf != ''"
+
+- name: IOS - Configure NTP server(s)
+  ios_config:
+    lines:
+      - ntp server {{ item.ip_addr }} {{ item.preferred }}
+  with_items:
+    - "{{ ntp.ntp_servers }}"
+  when: "item.vrf == ''"

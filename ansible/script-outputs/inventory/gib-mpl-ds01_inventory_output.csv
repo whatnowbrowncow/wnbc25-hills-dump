@@ -1,0 +1,24 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-mpl-ds01,AC power supply,Power supply 1,N55-PAC-750W-B,ART1839102E,V02
+gib-mpl-ds01,AC power supply,Power supply 2,N55-PAC-750W-B,ART18391069,V02
+gib-mpl-ds01,Fabric Extender AC power supply,FEX 109 Power Supply 2,N2200-PAC-400W,DTN1850P27L,V05
+gib-mpl-ds01,Fabric Extender AC power supply,FEX 109 Power Supply 1,N2200-PAC-400W,DTN1850P27M,V05
+gib-mpl-ds01,Fabric Extender AC power supply,FEX 113 Power Supply 1,N2200-PAC-400W,DTN1850P2RM,V05
+gib-mpl-ds01,Fabric Extender AC power supply,FEX 113 Power Supply 2,N2200-PAC-400W,DTN1850P2RN,V05
+gib-mpl-ds01,Fabric Extender AC power supply,FEX 111 Power Supply 2,N2200-PAC-400W,DTN1850P2SW,V05
+gib-mpl-ds01,Fabric Extender AC power supply,FEX 111 Power Supply 1,N2200-PAC-400W,DTN1850P2T4,V05
+gib-mpl-ds01,O2 16 port flexible GEM,Module 2,N55-M16UP,FOC18482Q84,V01
+gib-mpl-ds01,O2 Non L3 Daughter Card,Module 3,N55-DL2,FOC19020L44,V02
+gib-mpl-ds01,Fabric Extender Module,FEX 111 Module 1,N2K-C2248TP-E-1GE,FOC19023SBV,V02
+gib-mpl-ds01,O2 32X10GE/Modular Universal Platform Supervisor,Module 1,N5K-C5548UP,FOC190300XJ,V01
+gib-mpl-ds01,Fabric Extender Module,FEX 109 Module 1,N2K-C2248TP-E-1GE,FOC19030LWJ,V02
+gib-mpl-ds01,Fabric Extender Module,FEX 113 Module 1,N2K-C2248TP-E-1GE,FOC19030M6G,V02
+gib-mpl-ds01,N2K-C2248TP-E-1GE  CHASSIS,FEX 111 CHASSIS,N2K-C2248TP-E-1GE,FOX1848GL46,V02
+gib-mpl-ds01,N2K-C2248TP-E-1GE  CHASSIS,FEX 113 CHASSIS,N2K-C2248TP-E-1GE,FOX1901G07C,V02
+gib-mpl-ds01,N2K-C2248TP-E-1GE  CHASSIS,FEX 109 CHASSIS,N2K-C2248TP-E-1GE,FOX1902G0DS,V02
+gib-mpl-ds01,Fabric Extender Fan module,FEX 109 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds01,Fabric Extender Fan module,FEX 111 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds01,Fabric Extender Fan module,FEX 113 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds01,Chassis fan module,Fan 1,N5548P-FAN-B,N/A,N/A
+gib-mpl-ds01,Chassis fan module,Fan 2,N5548P-FAN-B,N/A,N/A
+gib-mpl-ds01,Nexus5548 Chassis,Chassis,N5K-C5548UP,SSI184502MV,V01

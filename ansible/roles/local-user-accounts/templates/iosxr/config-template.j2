@@ -1,0 +1,7 @@
+{% for item in local_user_accounts %}
+username {{ item.username }}
+{% for group in item.user_groups %}
+ group {{ group.name }}
+{% endfor %}
+ {{ item.password_type }} {{ item.encryption }} {{ item.password_string }}
+{% endfor %}

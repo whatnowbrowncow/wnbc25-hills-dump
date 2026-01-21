@@ -1,0 +1,8 @@
+---
+local_user_accounts:
+{% for item in nxos_local_accounts_facts %}
+  - username: "{{ item.user_account.username }}"
+    password: "{{ item.user_account.password }}"
+    encryption: "{{ item.user_account.encryption }}"
+    role: "{{ item.user_account.role }}"
+{% endfor %}

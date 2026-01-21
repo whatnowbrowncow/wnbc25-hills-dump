@@ -1,0 +1,13 @@
+---
+
+# Check for config Changes
+- name: nxos-config check for changes
+  when: "(nxosconfig.changed == true)"
+  set_fact: configured=true
+
+# Save config is anything has changed
+- name: nxos-config - Save the configuration
+  nxos_command:
+    commands:
+      - "copy running-config startup-config"
+  when: "(configured is defined) and (configured == true)"

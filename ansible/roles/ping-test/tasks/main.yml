@@ -1,0 +1,11 @@
+---
+
+- name: ASA Ping tests
+  include_tasks: ./asa.yml
+  when: ansible_network_os == "asa"
+
+- name: IOS Ping tests
+  include_tasks: ./ios.yml
+  when: ansible_network_os == "ios"
+
+

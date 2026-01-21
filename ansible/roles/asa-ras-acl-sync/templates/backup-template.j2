@@ -1,0 +1,7 @@
+{% for item in activeACL.stdout %}
+{% if loop.last %}
+{{ item }} 
+{% else %}
+{{ item }}
+{% endif %}
+{% endfor %}

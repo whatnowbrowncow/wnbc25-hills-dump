@@ -1,0 +1,33 @@
+---
+
+- name: IOS-XR - Collecting the NTP configuration
+  iosxr_command:
+    commands:
+      - show run ntp
+  register: raw_output
+
+# Debug commands to display the raw output  
+#- name: Displaying the raw output
+#  debug: var=raw_output    
+
+- name: IOS-XR - Parsing the NTP configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/iosxr/parser_iosxr_ntp.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+# Debug commands to display the parsed outputs 
+#- name: Displaying the parsed output
+#  debug: var=ntp_server_facts
+
+#- name: Displaying the parsed output
+#  debug: var=ntp_source_interface_facts
+
+- name: IOS-XR - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS-XR - Generating the YAML file
+  template:
+    src: "/gitnet/ansible/roles/ntp/templates/iosxr/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/ntp.yml"

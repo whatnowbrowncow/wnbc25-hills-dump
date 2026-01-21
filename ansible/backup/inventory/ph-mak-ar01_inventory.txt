@@ -1,0 +1,35 @@
+NAME: "Chassis", DESCR: "Cisco ASR1001-X Chassis"
+PID: ASR1001-X         , VID: V01, SN: FXS1912Q1RK
+
+NAME: "Power Supply Module 0", DESCR: "Cisco ASR1001-X AC Power Supply"
+PID: ASR1001-X-PWR-AC  , VID: V01, SN: LIT19100YX5
+
+NAME: "Power Supply Module 1", DESCR: "Cisco ASR1001-X AC Power Supply"
+PID: ASR1001-X-PWR-AC  , VID: V01, SN: LIT19100YW5
+
+NAME: "Fan Tray", DESCR: "Cisco ASR1001-X Fan Tray"
+PID: ASR1001-X-FANTRAY , VID:    , SN:            
+
+NAME: "module 0", DESCR: "Cisco ASR1001-X SPA Interface Processor"
+PID: ASR1001-X         , VID:    , SN:            
+
+NAME: "SPA subslot 0/0", DESCR: "8-port Built-in GE SPA"
+PID: BUILT-IN-2T+6X1GE , VID:    , SN:            
+
+NAME: "subslot 0/0 transceiver 2", DESCR: "GE T"
+PID: SP7041-E          , VID: E   , SN: MTC181604LA     
+
+NAME: "subslot 0/0 transceiver 3", DESCR: "GE T"
+PID: SP7041-E          , VID: E   , SN: MTC181603PL     
+
+NAME: "subslot 0/0 transceiver 4", DESCR: "GE T"
+PID: SP7041-E-R        , VID:     , SN: MTC1949039C     
+
+NAME: "subslot 0/0 transceiver 5", DESCR: "GE LX"
+PID: GLC-LH-SMD          , VID: A   , SN: FNS191204E7     
+
+NAME: "module R0", DESCR: "Cisco ASR1001-X Route Processor"
+PID: ASR1001-X         , VID: V01, SN: JAE191708GF
+
+NAME: "module F0", DESCR: "Cisco ASR1001-X Embedded Services Processor"
+PID: ASR1001-X         , VID:    , SN:

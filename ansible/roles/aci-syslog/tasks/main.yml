@@ -1,0 +1,5 @@
+---
+
+- name: Configure Syslog
+  include_tasks: ./aci-syslog.yml
+  when: ansible_network_os == "aci"

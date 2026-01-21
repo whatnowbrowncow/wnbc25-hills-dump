@@ -1,0 +1,31 @@
+{%if context_network_objects.network_objects.host_objects is defined %}
+{% for object in context_network_objects.network_objects.host_objects %}
+object network {{ object.name }}
+ host {{ object.ip_addr }}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if context_network_objects.network_objects.subnet_objects is defined %}
+{% for object in context_network_objects.network_objects.subnet_objects %}
+object network {{ object.name }}
+ subnet {{ object.network }} {{ object.mask }}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if context_network_objects.network_objects.range_objects is defined %}
+{% for object in context_network_objects.network_objects.range_objects %}
+object network {{ object.name }}
+ range {{ object.start }} {{ object.end }}
+{% if object.description != "" %}
+ description {{ object.description }}
+{% else %}
+{% endif %}
+{% endfor %}
+{% endif %}
+

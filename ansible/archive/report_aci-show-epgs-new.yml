@@ -1,0 +1,39 @@
+---
+- name: PLAY - Query EPGs Only (dev)
+  hosts: ld6-pte-aci
+  connection: local
+  remote_user: "{{ user_username }}"
+  gather_facts: no
+
+  vars_prompt:
+    - name: "user_username"
+      prompt: "Please enter your username"
+      private: no
+    - name: "user_password"
+      prompt: "Please enter your password"
+      private: yes
+
+  tasks:
+    - name: Query EPG Static Port Associations
+      aci_static_binding_to_epg:
+        hostname: '{{ ansible_host }}'
+        username: '{{ provider_cli.username }}'
+        password: '{{ provider_cli.password }}'
+        validate_certs: no
+        pod: 1
+        leafs: 119,120
+        interface_type: vpc
+        interface: "enc07-mod1_PolGrp"
+        state: query
+      register: query_result_2
+
+    - name: Export query_result_2 to Text File
+      template:
+        src: ./templates/line-by-line-v2.j2
+        dest: ./script-outputs/dev/ld6-epgs/ld6-epg-query-data-2.txt
+      with_items:
+        - "{{ query_result_2 }}"
+
+    - name: Extract & Parse query_result Data
+      shell: python3 ./scripts/epg_query_parser_sp.py
+      run_once: true

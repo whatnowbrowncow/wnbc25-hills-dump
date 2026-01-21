@@ -1,0 +1,31 @@
+interface {{ mgmt_interface.interface }}
+ description {{ mgmt_interface.description }}
+ ip address {{ mgmt_interface.ip_addr }} {{ mgmt_interface.mask }}
+{% if mgmt_interface.vrf != ""  %} ip vrf forwarding {{ mgmt_interface.vrf }}
+{% else %}
+{% endif %}
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ no ip directed-broadcast
+ no ip mask-reply
+ no shut
+
+{% if loopback_interfaces %}
+{% for loopback in loopback_interfaces %}
+interface {{ loopback.interface }}
+ description {{ loopback.description }}
+ ip address {{ loopback.ip_addr }} {{ loopback.mask }}
+{% if loopback.vrf != ""  %} ip vrf forwarding {{ loopback.vrf }}
+{% else %}
+{% endif %}
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ no ip directed-broadcast
+ no ip mask-reply
+ no shut
+
+{% endfor %}
+{% else %}
+{% endif %}

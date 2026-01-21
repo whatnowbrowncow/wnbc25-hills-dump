@@ -1,0 +1,18 @@
+---
+
+## Import the dfw_sddc_specific_rules variables if running this task standalone
+- name: ASA-SINGLE - Importing the 'dfw_sddc_specific_rules' variables (if running this task standalone)
+  include_vars:
+    file: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/dfw_sddc_specific_rules.yml"
+
+## Confirms the host directory exists prior to the template rendering task
+- name: ASA-SINGLE - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+## Calls a Jinja2 template that renders the host_var SDDC security policy YAML file into a host_var SDDC security policy Terraform file
+- name: ASA-SINGLE - Generating the VMC Terraform file - Security Policy
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_single/dfw_sddc_specific_rules_tf.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/dfw_sddc_specific_rules.tf"

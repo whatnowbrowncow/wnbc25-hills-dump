@@ -1,0 +1,5 @@
+Ping output:
+Ping to me: {{ reg_pings.stdout_lines[0][-1].split(',')[0] }}
+Ping to NS01: {{ reg_pings.stdout_lines[1][-1].split(',')[0] }}
+Ping to NS02: {{ reg_pings.stdout_lines[2][-1].split(',')[0] }}
+Ping to LDAP svr: {{ reg_pings.stdout_lines[3][-1].split(',')[0] }}

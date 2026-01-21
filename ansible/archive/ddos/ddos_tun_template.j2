@@ -1,0 +1,14 @@
+!
+interface Tunnel500
+ description {{ item.value.THRDPTY_to_WH_THRDPTY_DC_NAME }} - {{ item.value.THRDPTY_to_WH_THRDPTY_DC_Tunnel_Ref }}
+ ip address {{ item.value.THRDPTY_to_WH_WH_TUN_IP }} {{ item.value.THRDPTY_to_WH_WH_TUN_netmask }}
+ no ip redirects
+ ip tcp adjust-mss 1436
+ logging event link-status
+ load-interval {{ item.value.THRDPTY_to_WH_WH_TUN_GRE_Load_Interval }}
+ keepalive {{ item.value.THRDPTY_to_WH_GRE_keepalive_timer }} {{ item.value.THRDPTY_to_WH_GRE_keepalive_retires }}
+ tunnel source {{ item.value.THRDPTY_to_WH_TUN_SRC_IFC_IP }}
+ tunnel destination {{ item.value.THRDPTY_to_WH_TUN_DST_IFC_IP }}
+ hold-queue 1024 in
+ hold-queue 1024 out
+!

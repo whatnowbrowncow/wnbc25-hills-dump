@@ -1,0 +1,5 @@
+NAME: "CISCO1921/K9", DESCR: "CISCO1921/K9 chassis, Hw Serial#: FCZ1743C3PC, Hw Revision: 1.0"
+PID: CISCO1921/K9      , VID: V05 , SN: FCZ1743C3PC
+
+NAME: "Wan Interface Card BRI S/T (3086) on Slot 0 SubSlot 0", DESCR: "Wan Interface Card BRI S/T (3086)"
+PID: WIC-1B-S/T-V3     , VID: V01 , SN: FOC17294F7P

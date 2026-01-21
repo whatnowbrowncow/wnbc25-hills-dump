@@ -1,0 +1,125 @@
+---
+## Collect all object from ASA
+- name: ASA-MULTIPLE - "{{ item.context }}" - collect network info
+  asa_command:
+    commands:
+      - show run object network in-line
+    context: "{{ item.context }}"
+  register: asa_multiple_network_objects
+
+### Collect all network groups from ASA
+#- name: ASA-MULTIPLE - "{{ item.context }}" - collect network info
+#  asa_command:
+#    commands:
+#      - show run object-group network
+#    context: "{{ item.context }}"
+#  register: asa_multiple_network_object_groups
+
+### Collect all services from ASA
+#- name: ASA-MULTIPLE - "{{ item.context }}" - collect service objects info
+#  asa_command:
+#    commands:
+#      - show run object service in-line
+#    context: "{{ item.context }}"
+#  register: asa_multiple_service_objects
+#
+## Collect all service groups from the ASA
+#- name: ASA-MULTIPLE - "{{ item.context }}" - collect network info
+#  asa_command:
+#    commands:
+#      - show run object-group service
+#    context: "{{ item.context }}"
+#  register: asa_multiple_service_object_groups
+
+## Collect all protocol groups from the ASA
+#- name: ASA-MULTIPLE - "{{ item.context }}" - collect protocol object-group info
+#  asa_command:
+#    commands:
+#      - show run object-group protocol
+#    context: "{{ item.context }}"
+#  register: asa_multiple_protocol_object_groups
+
+## Parse the object data from above and place in to a relevent object fact
+- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - network objects
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_objects_network.yml
+    content: "{{ asa_multiple_network_objects.stdout.0 }}"
+
+### Parse the network group names out
+#- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - network groups split
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_network_split.yml
+#    content: "{{ asa_multiple_network_object_groups.stdout.0 }}"
+#
+### Parse out details within the group, mearge with group name and place in relevent object fact
+#- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - networks groups
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_network.yml
+#    content: "{{ network_groups }}"
+#  with_items: "{{ network_objects_groups }}"
+#  when: network_objects_groups is defined
+#  loop_control:
+#    loop_var: network_groups
+#  register: obj_groups
+#
+### Parse the service data from above and place in to a relevent object fact
+#- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - service objects
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_objects_service.yml
+#    content: "{{ asa_multiple_service_objects.stdout.0 }}"
+#
+### Parse the service group names out
+#- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - service groups split
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_service_split.yml
+#    content: "{{ asa_multiple_service_object_groups.stdout.0 }}"
+#
+### Parse out details within the group, mearge with group name and place in relevent object fact
+#- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - service groups
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_service.yml
+#    content: "{{ service_groups }}"
+#  with_items: "{{ service_objects_groups }}"
+#  when: service_objects_groups is defined
+#  loop_control:
+#    loop_var: service_groups
+#  register: service_obj_groups
+#
+### Parse the protocol group names out
+#- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - protocol objects
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_protocol_split.yml
+#    content: "{{ asa_multiple_protocol_object_groups.stdout.0 }}"
+#
+### Parse out details within the group, mearge with group name and place in relevent object fact
+#- name: ASA-MULTIPLE - "{{ item.context }}" - parse command output - protocol groups 
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_protocol.yml
+#    content: "{{ protocol_groups }}"
+#  with_items: "{{ protocol_objects_groups }}"
+#  when: protocol_objects_groups is defined
+#  loop_control:
+#    loop_var: protocol_groups
+#  register: protocol_obj_groups
+
+## Confirm Directory Exisits
+- name: ASA-MULTIPLE - "{{ item.context }}" - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ item.context }}"
+    state: directory
+
+## Following 3 tasks place the details in the yml files 
+- name: ASA-MULTIPLE - "{{ item.context }}" - Generate YAML file - Network Objects
+  template:
+    src: /gitnet/ansible/roles/asa-object-creator/templates/asa_multiple/yml-template.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ item.context }}/network-objects.yml"
+ 
+- name: ASA-MULTIPLE - "{{ item.context }}" - Generate YAML file - Service Objects
+  template:
+    src: /gitnet/ansible/roles/asa-object-creator/templates/asa_multiple/svc-yml-template.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ item.context }}/svc-objects.yml"
+
+- name: ASA-MULTIPLE - "{{ item.context }}" - Generate YAML file - Protocol Objects
+  template:
+    src: /gitnet/ansible/roles/asa-object-creator/templates/asa_multiple/protocol-yml-template.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ item.context }}/protocol-objects.yml"

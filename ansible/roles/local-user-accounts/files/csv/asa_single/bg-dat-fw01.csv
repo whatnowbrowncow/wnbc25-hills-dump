@@ -1,0 +1,8 @@
+hostname,username,privilege,encryption,password_string
+bg-dat-fw01,admin,15,encrypted,0mZp7jd7f10ixnPq
+bg-dat-fw01,admin,,,
+bg-dat-fw01,svcnetworkauto,15,pbkdf2,$sha512$5000$1KUnbaQ+c0tGOfxohtW/5w==$465YMPWVB8ygoZgELJJqFw==
+bg-dat-fw01,user1,15,encrypted,R2T8DB2Kf1qYB0SC
+bg-dat-fw01,user1,,,
+bg-dat-fw01,netsec,15,pbkdf2,$sha512$5000$n6Sx2K7Y4MD7uzgFA3YaYQ==$BmVlQFTCMv2Y2VVgohTaVg==
+bg-dat-fw01,netadmin,15,pbkdf2,$sha512$5000$Bo9rPGodyFGtwxRhRZ6URQ==$AWsyBKRy6GJe0RdlJBsr7Q==

@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+de-fr7-cr01,netadmin,15,secret,5,$1$bwqT$b4l96XeweB/S7CYerOes3/
+de-fr7-cr01,svcnetworkauto,15,secret,5,$1$z3q4$O2bo/JlogTcq9DdocTZuL.

@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+wh-brs-core-sw3,10.1.6.175,,no,Vlan99
+wh-brs-core-sw3,10.1.28.100,,yes,Vlan99

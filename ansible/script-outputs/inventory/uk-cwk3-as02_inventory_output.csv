@@ -1,0 +1,32 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-cwk3-as02,SFP-10GBase-SR,Te4/1/3,SFP-10G-SR,AVD223399WN,V03
+uk-cwk3-as02,SFP-10GBase-SR,Te1/1/3,SFP-10G-SR,AVD22339B6Z,V03
+uk-cwk3-as02,StackAdapter3/2,StackAdapter3/2,C3650-STACK,FDO21391M1B,V01
+uk-cwk3-as02,StackAdapter1/2,StackAdapter1/2,C3650-STACK,FDO21410D6G,V01
+uk-cwk3-as02,StackAdapter4/1,StackAdapter4/1,C3650-STACK,FDO21410DU0,V01
+uk-cwk3-as02,StackAdapter2/2,StackAdapter2/2,C3650-STACK,FDO21411PJE,V01
+uk-cwk3-as02,StackAdapter2/1,StackAdapter2/1,C3650-STACK,FDO21411PP8,V01
+uk-cwk3-as02,StackAdapter3/1,StackAdapter3/1,C3650-STACK,FDO21411Q6N,V01
+uk-cwk3-as02,StackAdapter1/1,StackAdapter1/1,C3650-STACK,FDO2143070H,V01
+uk-cwk3-as02,StackAdapter4/2,StackAdapter4/2,C3650-STACK,FDO214308KN,V01
+uk-cwk3-as02,WS-C3650-48PD-S,Switch 4,WS-C3650-48PD-S,FDO2152E2E1,V05
+uk-cwk3-as02,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2152Q241,V05
+uk-cwk3-as02,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2152Q246,V05
+uk-cwk3-as02,c36xx Stack,c36xx Stack,WS-C3650-48PD-S,FDO2152Q246,V05
+uk-cwk3-as02,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2152V2NC,V05
+uk-cwk3-as02,StackPort1/2,StackPort1/2,STACK-T2-3M,LCC2215G9A8,V03
+uk-cwk3-as02,StackPort4/1,StackPort4/1,STACK-T2-3M,LCC2215G9A8,V03
+uk-cwk3-as02,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,LIT214557VK,V03
+uk-cwk3-as02,Switch 4 - Power Supply B,Switch 4 - Power Supply B,PWR-C2-640WAC,LIT21455A4P,V03
+uk-cwk3-as02,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,LIT21455AYN,V03
+uk-cwk3-as02,Switch 4 - Power Supply A,Switch 4 - Power Supply A,PWR-C2-640WAC,LIT21455CFP,V03
+uk-cwk3-as02,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-640WAC,LIT21455CH6,V03
+uk-cwk3-as02,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,LIT21455CWW,V03
+uk-cwk3-as02,Switch 3 - Power Supply B,Switch 3 - Power Supply B,PWR-C2-640WAC,LIT21455EK7,V03
+uk-cwk3-as02,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-640WAC,LIT21455EQJ,V03
+uk-cwk3-as02,StackPort2/1,StackPort2/1,STACK-T2-50CM,LRM214211BG,V03
+uk-cwk3-as02,StackPort3/2,StackPort3/2,STACK-T2-50CM,LRM214211BG,V03
+uk-cwk3-as02,StackPort1/1,StackPort1/1,STACK-T2-50CM,LRM214211L1,V03
+uk-cwk3-as02,StackPort2/2,StackPort2/2,STACK-T2-50CM,LRM214211L1,V03
+uk-cwk3-as02,StackPort3/1,StackPort3/1,STACK-T2-50CM,LRM214211P3,V03
+uk-cwk3-as02,StackPort4/2,StackPort4/2,STACK-T2-50CM,LRM214211P3,V03

@@ -1,0 +1,2 @@
+hostname,vty pool,vty pool line range,vty line default or template name,access-class,access-class direction,exec_timeout,transport input,transport output,
+uk-sov-cr01-new,default,0 15,default, acl-management,ingress,15 0,ssh,

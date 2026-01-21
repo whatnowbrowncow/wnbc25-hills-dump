@@ -1,0 +1,22 @@
+---
+# vars file for asa-vpn
+ras_cfg: deploy
+yml_dir: group_vars/ras
+role_root: /gitnet/ansible/roles
+wh_net_tools_path: "/gitnet/automation-tools/wh_net_python_toolset/"
+
+date: "{{ now().strftime('%Y_%m_%d') | string }}"
+time: "{{ now().strftime('%H-%M-%S') | string }}"
+
+backup_dir: "/gitnet/ras-processed/changes/{{ inventory_hostname }}"
+changes_dir: "{{ backup_dir }}/{{ date }}"
+logs_dir: "/gitnet/ras-processed/logs"
+pre_conf_file: "{{ changes_dir }}/dst_pre_change.conf"
+post_conf_file: "{{ changes_dir }}/dst_post_change.conf"
+config_dir: "/gitnet/ras-processed/config/{{ inventory_hostname }}/{{ date }}"
+config_file_gp: "{{ config_dir }}/{{ timestamp }}_dst_gp.conf"
+config_file_dst: "{{ config_dir }}/{{ timestamp }}_dst.conf"
+ld6_sync_group: "{{ ansible_limit }}-sync-ld6"
+ma3_sync_group: "{{ ansible_limit }}-sync-ma3"
+channel_id: "'C026PND9MEH'"
+slack_message: "'RAS DST AUTOMATION FAILED TO DEPLOY - PLEASE CONFIRM BEFORE ANY FURTHER DEPLOYMENTS'"

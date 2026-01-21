@@ -1,0 +1,6 @@
+---
+
+- name: IOS - Generate a CSV report per device
+  template:
+    src: "/gitnet/ansible/roles/acl/templates/iosxr/csv-template.j2"
+    dest: "/gitnet/ansible/roles/acl/files/csv/iosxr/{{ inventory_hostname }}.csv"

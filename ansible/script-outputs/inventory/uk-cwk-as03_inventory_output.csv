@@ -1,0 +1,7 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-cwk-as03,WS-C3650-48TD,Switch 1,WS-C3650-48TD,FDO2028E1R3,V03
+uk-cwk-as03,c36xx Stack,c36xx Stack,WS-C3650-48TD,FDO2028E1R3,V03
+uk-cwk-as03,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-250WAC,LIT20310NK7,V03
+uk-cwk-as03,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-250WAC,LIT20310PMW,V03
+uk-cwk-as03,10/100/1000BaseTX SFP,GigabitEthernet1/1/1,GLC-T,MTC202206LR,V04
+uk-cwk-as03,10/100/1000BaseTX SFP,GigabitEthernet1/1/2,GLC-T,MTC202209MS,V04

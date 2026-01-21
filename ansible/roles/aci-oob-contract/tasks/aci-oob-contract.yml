@@ -1,0 +1,193 @@
+---
+
+- name: Create Filter (permit-all)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-mgmt/flt-permit-all.json"
+    content:
+      {
+        "vzFilter": {
+          "attributes": {
+            "dn": "uni/tn-mgmt/flt-permit-all",
+            "name": "permit-all",
+            "rn": "flt-permit-all",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "vzEntry": {
+                "attributes": {
+                  "dn": "uni/tn-mgmt/flt-permit-all/e-permit-all",
+                  "name": "permit-all",
+                  "etherT": "ip",
+                  "rn": "e-permit-all",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+
+- name: Create Filter (permit-snmp)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-mgmt/flt-permit-snmp.json"
+    content:
+      {
+        "vzFilter": {
+          "attributes": {
+            "dn": "uni/tn-mgmt/flt-permit-snmp",
+            "name": "permit-snmp",
+            "rn": "flt-permit-snmp",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "vzEntry": {
+                "attributes": {
+                  "dn": "uni/tn-mgmt/flt-permit-snmp/e-snmp-get",
+                  "name": "snmp-get",
+                  "etherT": "ip",
+                  "prot": "udp",
+                  "dFromPort": "161",
+                  "dToPort": "161",
+                  "rn": "e-snmp-get",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "vzEntry": {
+                "attributes": {
+                  "dn": "uni/tn-mgmt/flt-permit-snmp/e-snmp-trap",
+                  "name": "snmp-trap",
+                  "etherT": "ip",
+                  "prot": "udp",
+                  "dFromPort": "162",
+                  "dToPort": "162",
+                  "rn": "e-snmp-trap",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+
+- name: Create Out-Of-Band Contract (oob-mgmt) with Subject and add the Filters
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-mgmt/oobbrc-oob-mgmt.json"
+    content:
+      {
+        "vzOOBBrCP": {
+          "attributes": {
+            "dn": "uni/tn-mgmt/oobbrc-oob-mgmt",
+            "name": "oob-mgmt",
+            "scope": "context",
+            "rn": "oobbrc-oob-mgmt",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "vzSubj": {
+                "attributes": {
+                  "dn": "uni/tn-mgmt/oobbrc-oob-mgmt/subj-fabric_routed",
+                  "name": "fabric_routed",
+                  "rn": "subj-fabric_routed",
+                  "status": "created,modified"
+                },
+                "children": [
+                  {
+                    "vzRsSubjFiltAtt": {
+                      "attributes": {
+                        "status": "created,modified",
+                        "tnVzFilterName": "permit-all"
+                      },
+                    }
+                  },
+                  {
+                    "vzRsSubjFiltAtt": {
+                      "attributes": {
+                        "status": "created,modified",
+                        "tnVzFilterName": "permit-snmp"
+                      },
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+
+- name: Add Out-Of-Band Contract (oob-mgmt) to Out-of-Band EPG - default
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-mgmt/mgmtp-default/oob-default.json"
+    content:
+      {
+        "mgmtRsOoBProv": {
+          "attributes": {
+            "tnVzOOBBrCPName": "oob-mgmt",
+            "status": "created,modified"
+          },
+        }
+      }
+    validate_certs: no
+
+- name: Create External Management Network Instance Profile (emnip) and add the Out-of-Band Contract (oob-mgmt)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-mgmt/extmgmt-default/instp-emnip.json"
+    content:
+      {
+        "mgmtInstP": {
+          "attributes": {
+            "dn": "uni/tn-mgmt/extmgmt-default/instp-emnip",
+            "name": "emnip",
+            "rn": "instp-emnip",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "mgmtSubnet": {
+                "attributes": {
+                  "dn": "uni/tn-mgmt/extmgmt-default/instp-emnip/subnet-[0.0.0.0/0]",
+                  "ip": "0.0.0.0/0",
+                  "rn": "subnet-[0.0.0.0/0]",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "mgmtRsOoBCons": {
+                "attributes": {
+                  "tnVzOOBBrCPName": "oob-mgmt",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no

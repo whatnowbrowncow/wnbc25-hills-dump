@@ -1,0 +1,8 @@
+Port-channel1.380: {admin-state: up, interface: Port-channel1.380, ip-add: 10.180.161.36,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.485: {admin-state: up, interface: Port-channel1.485, ip-add: 10.180.180.1,
+  nameif: external-web, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.486: {admin-state: up, interface: Port-channel1.486, ip-add: 10.180.180.129,
+  nameif: internal-web, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.487: {admin-state: up, interface: Port-channel1.487, ip-add: 10.180.181.1,
+  nameif: trading-app, netmask: 255.255.255.0, security-level: '100'}

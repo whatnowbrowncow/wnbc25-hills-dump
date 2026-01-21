@@ -1,0 +1,16 @@
+---
+
+- hosts: localhost
+  #vars:
+  #  contents: "{{ lookup('csvfile', './aci-contract_input.csv') }}"
+    
+  tasks:
+  
+    - debug: msg="The value of contract_name is {{ lookup('csvfile', 'ob-web-2_to_ob-app-2 file=aci-contract_input.csv delimiter=, col=0') }}"
+    - debug: msg="The value of filter_entry is {{ lookup('csvfile', 'ob-web-2_to_ob-app-2 file=aci-contract_input.csv delimiter=, col=11') }}"
+    
+    - name: loop test
+      debug: msg="The value of contract_name is {{ item }}"
+      with_items:
+        - "{{ lookup('csvfile', 'file=aci-contract_input.csv delimiter=, col=0') }}"
+    

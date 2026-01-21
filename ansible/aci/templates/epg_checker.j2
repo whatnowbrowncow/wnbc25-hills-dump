@@ -1,0 +1,10 @@
+{% for epg in item.existing %}
+EPG: {{ epg.fvAEPg.attributes.name }}
+dn: {{ epg.fvAEPg.attributes.dn }}
+{% for child in epg.fvAEPg.children %}
+Associated BD: {{ child.fvRsBd.attributes.tnFvBDName }}
+{% endfor %}
+
+---
+
+{% endfor %}

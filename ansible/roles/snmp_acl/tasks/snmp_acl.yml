@@ -1,0 +1,19 @@
+---
+
+## Create directory structure in case it doesn't already exist.
+- file:
+    path: roles/snmp_acl/configs/{{ inventory_hostname }}
+    state: directory
+
+
+- name: Generate SNMP ACL configurations
+  template:
+    src: "snmp_acl.j2"
+    dest: "roles/snmp_acl/configs/{{ inventory_hostname }}/snmp_acl.cfg"
+  tags:
+    - snmp_acl
+    
+
+- name: "Deploy SNMP ACL to {{ inventory_hostname }}"
+  ios_config:
+    src: "roles/snmp_acl/configs/{{ inventory_hostname }}/snmp_acl.cfg"

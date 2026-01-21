@@ -1,0 +1,59 @@
+---
+
+- name: NX-OS - collect syslog info
+  ios_command:
+    commands:
+      - show run | inc logging
+  register: nxos_syslog_output
+
+# Debug commands to check output
+- name: Display output
+  debug: var=nxos_syslog_output
+
+- name: NX-OS - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/nxos/parser_nxos_syslog.yml
+    content: "{{ nxos_syslog_output.stdout.0 }}"
+
+# Debug commands to check output
+- name: Display JSON output
+  debug: var=syslog_server_facts
+
+# Debug commands to check output
+- name: Display JSON output
+  debug: var=syslog_source_facts
+
+- name: remove all syslog hosts that do not match data in YAML structure with vrf and level defined
+  nxos_config:
+    lines: no logging server {{ item.syslog_servers.ip_address }} {{ item.syslog_servers.level }} use-vrf {{ item.syslog_servers.vrf }}
+  with_items: 
+    - "{{ syslog_server_facts }}"
+  when: (item.syslog_servers.ip_address != syslog[0].ip_addr and item.syslog_servers.vrf != None and item.syslog_servers.level != None) or (item.syslog_servers.ip_address == syslog[0].ip_addr and item.syslog_servers.vrf != None and item.syslog_servers.vrf != mgmt_interface.vrf and item.syslog_servers.level != None)
+
+- name: remove all syslog hosts that do not match data in YAML structure with level but NOT vrf defined
+  nxos_config:
+    lines: no logging server {{ item.syslog_servers.ip_address }} {{ item.syslog_servers.level }}
+  with_items: 
+    - "{{ syslog_server_facts }}"
+  when: (item.syslog_servers.ip_address != syslog[0].ip_addr and item.syslog_servers.vrf == None and item.syslog_servers.level != None)
+
+- name: remove all syslog hosts that do not match data in YAML structure with vrf and level NOT defined
+  nxos_config:
+    lines: no logging server {{ item.syslog_servers.ip_address }}
+  with_items: 
+    - "{{ syslog_server_facts }}"
+  when: (item.syslog_servers.ip_address != syslog[0].ip_addr and item.syslog_servers.vrf == None and item.syslog_servers.level == None)
+
+- name: remove all syslog source interface config with vrf defined
+  nxos_config:
+    lines: no logging source-interface {{ item.syslog_source.interface }} use-vrf {{ item.syslog_source.vrf }}
+  with_items: 
+    - "{{ syslog_source_facts }}"
+  when: syslog_source_facts is defined and (item.syslog_source.interface != None and item.syslog_source.vrf != None)
+
+- name: remove all syslog source interface config with vrf NOT defined
+  nxos_config:
+    lines: no logging source-interface {{ item.syslog_source.interface }}
+  with_items: 
+    - "{{ syslog_source_facts }}"
+  when: syslog_source_facts is defined and (item.syslog_source.interface != None and item.syslog_source.vrf == None)

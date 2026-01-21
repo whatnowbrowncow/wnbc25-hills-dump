@@ -1,0 +1,29 @@
+NAME: "Chassis", DESCR: "Cisco ASR1001 Chassis w/o IDC"
+PID: ASR1001           , VID: V03, SN: SSI1810027G
+
+NAME: "Power Supply Module 0", DESCR: "Cisco ASR1001 AC Power Supply"
+PID: ASR1001-PWR-AC    , VID: V02, SN: MP51732030H
+
+NAME: "Power Supply Module 1", DESCR: "Cisco ASR1001 AC Power Supply"
+PID: ASR1001-PWR-AC    , VID: V02, SN: MP5173202LL
+
+NAME: "module 0", DESCR: "Cisco ASR1001 SPA Interface Processor"
+PID: ASR1001           , VID:    , SN:            
+
+NAME: "SPA subslot 0/1", DESCR: "2-port Gigabit Ethernet Shared Port Adapter"
+PID: SPA-2X1GE-V2      , VID: V03, SN: SAL1733BH6Y
+
+NAME: "SPA subslot 0/0", DESCR: "4-port Gigabit Ethernet Shared Port Adapter"
+PID: ASR1001           , VID:    , SN:            
+
+NAME: "subslot 0/0 transceiver 0", DESCR: "GE T"
+PID: N/A                 , VID: E   , SN: MTC16250GGG     
+
+NAME: "subslot 0/0 transceiver 2", DESCR: "GE T"
+PID: N/A                 , VID: E   , SN: MTC18080X5N     
+
+NAME: "module R0", DESCR: "Cisco ASR1001 Route Processor"
+PID: ASR1001           , VID: V03, SN: JAE1820069C
+
+NAME: "module F0", DESCR: "Cisco ASR1001 Embedded Services Processor"
+PID: ASR1001           , VID:    , SN:

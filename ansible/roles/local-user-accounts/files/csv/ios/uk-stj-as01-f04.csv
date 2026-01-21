@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-stj-as01-f04,netsec,15,secret,5,$1$M/P5$Tu.Ei.b703Zw2z7BKOxi10
+uk-stj-as01-f04,netadmin,15,secret,5,$1$hhtB$RvGSktPtuyoRazZKJlnmw1
+uk-stj-as01-f04,svcnetworkauto,15,secret,5,$1$KDiD$EauPG7h7w5xXYHFTPYeQr0

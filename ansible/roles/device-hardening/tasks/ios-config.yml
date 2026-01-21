@@ -1,0 +1,29 @@
+---
+
+# Apply standard sercurity configuration on all devices
+- name: "IOS - Performing Service Hardening on for All Devices"
+  ios_config:
+    defaults: yes
+    lines:
+      - service nagle
+      - no service pad
+      - service tcp-keepalives-in
+      - service tcp-keepalives-out
+      - no ip http server
+      - no ip http secure-server
+      - ip tcp synwait-time 10
+      - service password-encryption
+      - ip subnet-zero
+  register: iosconfig
+  failed_when: iosconfig.changed 
+
+
+- name: Record Config
+  include_tasks: ./ios-report-output.yml
+
+#Saving Config
+- name: IOS-Save Config
+  include_tasks: ./ios-save.yml 
+
+
+

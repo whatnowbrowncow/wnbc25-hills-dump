@@ -1,0 +1,12 @@
+hostname,acl_name,seq_num,remark,action,protocol,src_network,src_operator,src_port,dest_network,dest_operator,dest_port,established_log,logging
+{% for acl in access_lists.results %}
+{%   if acl.ansible_facts.access_lists_facts is defined %}
+{%     for aces in acl.ansible_facts.access_lists_facts %}
+{%       if aces.access_entry.remark is defined and aces.access_entry.remark %}
+{{ inventory_hostname }},{{ acl.item.item }},{{ aces.access_entry.seq_num }},{{ aces.access_entry.remark }},,,,,,,,,,
+{%       else %}
+{{ inventory_hostname }},{{ acl.item.item }},{{ aces.access_entry.seq_num }},,{{ aces.access_entry.action }},{{ aces.access_entry.protocol }},{{ aces.access_entry.src_network }},{{ aces.access_entry.src_operator }},{{ aces.access_entry.src_port }},{{ aces.access_entry.dest_network }},{{ aces.access_entry.dest_operator }},{{ aces.access_entry.dest_port }},{{ aces.access_entry.established_log.strip() }},{{ aces.access_entry.logging }}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}

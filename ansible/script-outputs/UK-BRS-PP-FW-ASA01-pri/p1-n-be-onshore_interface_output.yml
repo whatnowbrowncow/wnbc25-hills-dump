@@ -1,0 +1,10 @@
+Port-channel21.1950: {admin-state: up, interface: Port-channel21.1950, ip-add: 10.212.96.1,
+  nameif: backoffice-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1951: {admin-state: up, interface: Port-channel21.1951, ip-add: 10.212.96.33,
+  nameif: web-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1952: {admin-state: ' shutdown', interface: Port-channel21.1952, ip-add: 10.212.96.65,
+  nameif: oxi-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1953: {admin-state: ' shutdown', interface: Port-channel21.1953, ip-add: 10.212.96.97,
+  nameif: applications2-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2074: {admin-state: up, interface: Port-channel21.2074, ip-add: 10.212.160.132,
+  nameif: pp1on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

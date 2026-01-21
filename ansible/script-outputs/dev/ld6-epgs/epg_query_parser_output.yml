@@ -1,0 +1,2055 @@
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-api"
+        network: "10.116.5.0"
+        gateway: "10.116.5.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-api"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-app1"
+        network: "10.116.3.0"
+        gateway: "10.116.3.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-app1"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-deployment"
+        network: "10.116.1.0"
+        gateway: "10.116.1.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-deployment"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-extapi"
+        network: "10.116.7.0"
+        gateway: "10.116.7.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-extapi"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-extpres"
+        network: "10.116.6.0"
+        gateway: "10.116.6.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-extpres"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-intpres"
+        network: "10.116.4.0"
+        gateway: "10.116.4.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-intpres"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan02"
+        network: "10.116.8.0"
+        gateway: "10.116.8.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan02"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan03"
+        network: "10.116.9.0"
+        gateway: "10.116.9.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan03"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan04"
+        network: "10.116.11.0"
+        gateway: "10.116.11.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan04"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan05"
+        network: "10.116.12.0"
+        gateway: "10.116.12.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan05"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan06"
+        network: "10.116.13.0"
+        gateway: "10.116.13.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan06"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan07"
+        network: "10.116.14.0"
+        gateway: "10.116.14.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan07"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan08"
+        network: "10.116.15.0"
+        gateway: "10.116.15.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan08"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-mgmt"
+        network: "10.116.10.0"
+        gateway: "10.116.10.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-mgmt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-web1"
+        network: "10.116.2.0"
+        gateway: "10.116.2.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-web1"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-deployment"
+        network: "10.116.65.0"
+        gateway: "10.116.65.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-deployment"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan01"
+        network: "10.116.68.0"
+        gateway: "10.116.68.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan01"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan02"
+        network: "10.116.69.0"
+        gateway: "10.116.69.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan02"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan03"
+        network: "10.116.70.0"
+        gateway: "10.116.70.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan03"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan04"
+        network: "10.116.71.0"
+        gateway: "10.116.71.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan04"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan05"
+        network: "10.116.72.0"
+        gateway: "10.116.72.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan05"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan06"
+        network: "10.116.73.0"
+        gateway: "10.116.73.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan06"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan07"
+        network: "10.116.74.0"
+        gateway: "10.116.74.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan07"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan08"
+        network: "10.116.75.0"
+        gateway: "10.116.75.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan08"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan09"
+        network: "10.116.76.0"
+        gateway: "10.116.76.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan09"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-lan10"
+        network: "10.116.77.0"
+        gateway: "10.116.77.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-lan10"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-web1"
+        network: "10.116.66.0"
+        gateway: "10.116.66.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-web1"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-caerusapps"
+        network: "10.114.73.0"
+        gateway: "10.114.73.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-caerusapps"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-backoffice"
+        network: "10.114.38.0"
+        gateway: "10.114.38.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-backoffice"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-cag"
+        network: "10.114.166.128"
+        gateway: "10.114.166.129"
+        mask: "255.255.255.128"
+        cidr_mask: "25"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-cag"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-web"
+        network: "10.115.67.0"
+        gateway: "10.115.67.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-web"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-perfhdr"
+        network: "10.114.63.224"
+        gateway: "10.114.63.225"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-perfhdr"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-app"
+        network: "10.114.99.0"
+        gateway: "10.114.99.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-app"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-appmgt"
+        network: "10.114.146.0"
+        gateway: "10.114.146.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-appmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-ats-webint"
+        network: "10.114.159.0"
+        gateway: "10.114.159.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-ats-webint"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-backofficemgt"
+        network: "10.114.148.0"
+        gateway: "10.114.148.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-backofficemgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-caerusappsmgt"
+        network: "10.114.159.224"
+        gateway: "10.114.159.225"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-caerusappsmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-app"
+        network: "10.114.50.0"
+        gateway: "10.114.50.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-app"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-appmgt"
+        network: "10.114.132.0"
+        gateway: "10.114.132.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-appmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-bo-mgt"
+        network: "10.114.137.0"
+        gateway: "10.114.137.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-bo-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-citrix"
+        network: "10.114.33.128"
+        gateway: "10.114.33.129"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-citrix"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-citrixmgt"
+        network: "10.114.134.0"
+        gateway: "10.114.134.1"
+        mask: "255.255.255.128"
+        cidr_mask: "25"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-citrixmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-cms"
+        network: "10.114.37.0"
+        gateway: "10.114.37.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-cms"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-crypto"
+        network: "10.114.48.160"
+        gateway: "10.114.48.161"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-crypto"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-cryptomgt"
+        network: "10.114.143.192"
+        gateway: "10.114.143.193"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-cryptomgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-db"
+        network: "10.114.52.0"
+        gateway: "10.114.52.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-db"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-perfdb-mgt"
+        network: "10.114.135.0"
+        gateway: "10.114.135.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-perfdb-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-caerusappsmgt2"
+        network: "10.114.158.0"
+        gateway: "10.114.158.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-caerusappsmgt2"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-External"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "pteext-Injectors"
+        network: "10.114.32.96"
+        gateway: "10.114.32.97"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteext-Injectors"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-backoffice"
+        network: "10.114.66.0"
+        gateway: "10.114.66.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-backoffice"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-ext-pres"
+        network: "10.114.216.0"
+        gateway: "10.114.216.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-ext-pres"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-ext-pres"
+        network: "10.115.216.0"
+        gateway: "10.115.216.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-ext-pres"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-authpro"
+        network: "10.114.51.0"
+        gateway: "10.114.51.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-authpro"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan09"
+        network: "10.116.16.0"
+        gateway: "10.116.16.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan09"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan10"
+        network: "10.116.17.0"
+        gateway: "10.116.17.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan10"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan11"
+        network: "10.116.18.0"
+        gateway: "10.116.18.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan11"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan12"
+        network: "10.116.19.0"
+        gateway: "10.116.19.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan12"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan13"
+        network: "10.116.20.0"
+        gateway: "10.116.20.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan13"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan14"
+        network: "10.116.21.0"
+        gateway: "10.116.21.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan14"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan15"
+        network: "10.116.22.0"
+        gateway: "10.116.22.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan15"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-cde-lan16"
+        network: "10.116.23.0"
+        gateway: "10.116.23.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-cde-lan16"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app4-lan"
+        network: "10.116.80.0"
+        gateway: "10.116.80.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app4-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app5-lan"
+        network: "10.116.81.0"
+        gateway: "10.116.81.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app5-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app6-lan"
+        network: "10.116.82.0"
+        gateway: "10.116.82.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app6-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app7-lan"
+        network: "10.116.83.0"
+        gateway: "10.116.83.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app7-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app8-lan"
+        network: "10.116.84.0"
+        gateway: "10.116.84.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app8-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app9-lan"
+        network: "10.116.85.0"
+        gateway: "10.116.85.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app9-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app10-lan"
+        network: "10.116.86.0"
+        gateway: "10.116.86.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app10-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-noncde-app11-lan"
+        network: "10.116.87.0"
+        gateway: "10.116.87.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-noncde-app11-lan"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-hbt-bonuswallet"
+        network: "10.114.250.32"
+        gateway: "10.114.250.33"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-hbt-bonuswallet"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-hbt-oracle"
+        network: "10.114.250.128"
+        gateway: "10.114.250.129"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-hbt-oracle"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-db-mgt"
+        network: "10.114.133.0"
+        gateway: "10.114.133.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-db-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-drjumphostmgt"
+        network: "10.114.142.0"
+        gateway: "10.114.142.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-drjumphostmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-hdr"
+        network: "10.114.48.128"
+        gateway: "10.114.48.129"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-hdr"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-hdr-mgt"
+        network: "10.114.139.128"
+        gateway: "10.114.139.129"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-hdr-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-intlb"
+        network: "10.114.44.0"
+        gateway: "10.114.44.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-intlb"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-mail"
+        network: "10.114.33.160"
+        gateway: "10.114.33.161"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-mail"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-mailmgt"
+        network: "10.114.139.192"
+        gateway: "10.114.139.193"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-mailmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-perfdb"
+        network: "10.114.53.0"
+        gateway: "10.114.53.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-perfdb"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-perfhdr-mgt"
+        network: "10.114.143.224"
+        gateway: "10.114.143.225"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-perfhdr-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-proxy"
+        network: "10.114.48.0"
+        gateway: "10.114.48.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-proxy"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-proxymgt"
+        network: "10.114.136.0"
+        gateway: "10.114.136.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-proxymgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-sftp"
+        network: "10.114.48.96"
+        gateway: "10.114.48.97"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-sftp"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-sftp-mgt"
+        network: "10.114.143.64"
+        gateway: "10.114.143.65"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-sftp-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-stingray-mgt"
+        network: "10.114.140.0"
+        gateway: "10.114.140.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-stingray-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-tmg-mgt"
+        network: "10.114.139.32"
+        gateway: "10.114.139.33"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-tmg-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-vmhost-mgt"
+        network: "10.114.138.0"
+        gateway: "10.114.138.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-vmhost-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-web"
+        network: "10.114.36.0"
+        gateway: "10.114.36.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-web"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-webmgt"
+        network: "10.114.131.0"
+        gateway: "10.114.131.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-webmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-cde-whcjumphostmgt"
+        network: "10.114.141.0"
+        gateway: "10.114.141.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-cde-whcjumphostmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-database"
+        network: "10.114.98.0"
+        gateway: "10.114.98.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-database"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-dr-jumphost"
+        network: "10.114.157.0"
+        gateway: "10.114.157.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-dr-jumphost"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-edgemgmt"
+        network: "10.114.159.0"
+        gateway: "10.114.159.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-edgemgmt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-intlb"
+        network: "10.114.74.0"
+        gateway: "10.114.74.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-intlb"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-jumphost"
+        network: "10.114.151.0"
+        gateway: "10.114.151.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-jumphost"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-rng-arcade"
+        network: "10.114.100.0"
+        gateway: "10.114.100.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-rng-arcade"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-rng-arcademgt"
+        network: "10.114.147.0"
+        gateway: "10.114.147.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-rng-arcademgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-rng-retail"
+        network: "10.114.96.128"
+        gateway: "10.114.96.129"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-rng-retail"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-rng-retailmgt"
+        network: "10.114.159.128"
+        gateway: "10.114.159.129"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-rng-retailmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-trading"
+        network: "10.114.102.0"
+        gateway: "10.114.102.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-trading"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-tradingmgt"
+        network: "10.114.149.0"
+        gateway: "10.114.149.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-tradingmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-web"
+        network: "10.114.67.0"
+        gateway: "10.114.67.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-web"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-webmgt"
+        network: "10.114.145.0"
+        gateway: "10.114.145.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-webmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-app"
+        network: "10.115.64.64"
+        gateway: "10.115.64.65"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-app"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-app2"
+        network: "10.115.64.224"
+        gateway: "10.115.64.225"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-app2"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-app2mgmt"
+        network: "10.115.147.0"
+        gateway: "10.115.147.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-app2mgmt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-appmgmt"
+        network: "10.115.146.0"
+        gateway: "10.115.146.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-appmgmt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-backoffice"
+        network: "10.115.64.32"
+        gateway: "10.115.64.33"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-backoffice"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-backofficemgt"
+        network: "10.115.148.0"
+        gateway: "10.115.148.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-backofficemgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-app"
+        network: "10.115.32.64"
+        gateway: "10.115.32.65"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-app"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-appmgt"
+        network: "10.115.132.0"
+        gateway: "10.115.132.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-appmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-backoffice"
+        network: "10.115.32.32"
+        gateway: "10.115.32.33"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-backoffice"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-backofficemgt"
+        network: "10.115.137.0"
+        gateway: "10.115.137.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-backofficemgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-bladelogicdmz-mgt"
+        network: "10.115.136.0"
+        gateway: "10.115.136.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-bladelogicdmz-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-citrix"
+        network: "10.115.39.0"
+        gateway: "10.115.39.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-citrix"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-db"
+        network: "10.115.52.0"
+        gateway: "10.115.52.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-db"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-db-mgt"
+        network: "10.115.133.0"
+        gateway: "10.115.133.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-db-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-intlb"
+        network: "10.115.44.0"
+        gateway: "10.115.44.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-intlb"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-stingraymgt"
+        network: "10.115.140.0"
+        gateway: "10.115.140.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-stingraymgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-web"
+        network: "10.115.32.0"
+        gateway: "10.115.32.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-web"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cde-webmgt"
+        network: "10.115.131.0"
+        gateway: "10.115.131.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cde-webmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cf-app"
+        network: "10.115.102.0"
+        gateway: "10.115.102.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cf-app"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cf-appmgt"
+        network: "10.115.153.0"
+        gateway: "10.115.153.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cf-appmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cf-web"
+        network: "10.115.72.0"
+        gateway: "10.115.72.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cf-web"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-cf-webmgt"
+        network: "10.115.152.0"
+        gateway: "10.115.152.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-cf-webmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-intlb"
+        network: "10.115.74.0"
+        gateway: "10.115.74.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-intlb"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-ods"
+        network: "10.115.100.0"
+        gateway: "10.115.100.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-ods"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-ods-mgt"
+        network: "10.115.149.0"
+        gateway: "10.115.149.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-ods-mgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-retail3rdpartyweb"
+        network: "10.115.170.128"
+        gateway: "10.115.170.129"
+        mask: "255.255.255.128"
+        cidr_mask: "25"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-retail3rdpartyweb"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-retailapp"
+        network: "10.115.177.0"
+        gateway: "10.115.177.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-retailapp"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-retailintpres"
+        network: "10.115.172.0"
+        gateway: "10.115.172.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-retailintpres"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-retailweb"
+        network: "10.115.170.0"
+        gateway: "10.115.170.1"
+        mask: "255.255.255.128"
+        cidr_mask: "25"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-retailweb"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Onshore"
+    tenant: "PTE"
+    vrf: "PTE-Onshore"
+    bds:
+      - bd: "pteon-webmgt"
+        network: "10.115.145.0"
+        gateway: "10.115.145.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteon-webmgt"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-app1"
+        network: "10.116.67.0"
+        gateway: "10.116.67.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-app1"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-app2"
+        network: "10.116.78.0"
+        gateway: "10.116.78.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-app2"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-WHC"
+    tenant: "PTE"
+    vrf: "PTE-internal-vrf"
+    bds:
+      - bd: "ptewhc-app3"
+        network: "10.116.79.0"
+        gateway: "10.116.79.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "ptewhc-app3"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "PTE-Offshore"
+    tenant: "PTE"
+    vrf: "PTE-Offshore"
+    bds:
+      - bd: "pteoff-hbt-informix"
+        network: "10.114.250.192"
+        gateway: "10.114.250.193"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "shared"
+        l3_ownership: firewall
+        epgs:
+          - epg: "pteoff-hbt-informix"
+            vcenter_dynamic_vlan: true

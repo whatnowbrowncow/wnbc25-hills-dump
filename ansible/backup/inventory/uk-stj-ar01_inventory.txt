@@ -1,0 +1,29 @@
+NAME: "Chassis", DESCR: "Cisco ASR1001-X Chassis"
+PID: ASR1001-X         , VID: V02, SN: FXS2014Q31R
+
+NAME: "Power Supply Module 0", DESCR: "Cisco ASR1001-X AC Power Supply"
+PID: ASR1001-X-PWR-AC  , VID: V01, SN: LIT20280CKH
+
+NAME: "Power Supply Module 1", DESCR: "Cisco ASR1001-X AC Power Supply"
+PID: ASR1001-X-PWR-AC  , VID: V01, SN: LIT20280CQM
+
+NAME: "module 0", DESCR: "Cisco ASR1001-X SPA Interface Processor"
+PID: ASR1001-X         , VID:    , SN:            
+
+NAME: "SPA subslot 0/0", DESCR: "8-port Built-in GE SPA"
+PID: BUILT-IN-2T+6X1GE , VID:    , SN:            
+
+NAME: "subslot 0/0 transceiver 2", DESCR: "GE SX"
+PID: SFBR-5766PZ-CS2   , VID:     , SN: AGM1532L388     
+
+NAME: "subslot 0/0 transceiver 3", DESCR: "GE SX"
+PID: SFBR-5766PZ-CS2   , VID:     , SN: AGM1532L38C     
+
+NAME: "subslot 0/0 transceiver 4", DESCR: "GE SX"
+PID: SFBR-5766PZ-CS2   , VID:     , SN: AGM1532L38K     
+
+NAME: "module R0", DESCR: "Cisco ASR1001-X Route Processor"
+PID: ASR1001-X         , VID: V02, SN: JAE203401AZ
+
+NAME: "module F0", DESCR: "Cisco ASR1001-X Embedded Services Processor"
+PID: ASR1001-X         , VID:    , SN:

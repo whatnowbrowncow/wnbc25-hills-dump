@@ -1,0 +1,11 @@
+{% for interface in item.interfaces %}
+interface GigabitEthernet{interface.interface}
+ ip address {interface.ipaddr} {interface.netmask}
+ no shutdown
+{% if interface.key() == "GigabitEthernet" %}
+ media-type rj45
+ speed auto
+ duplex auto
+ negotiation auto
+{% endif %}
+{% endfor %}

@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-thw-cr01,0 4,,,15 0,1439475F0D451D3209,telnet ssh,telnet ssh,no,
+uk-thw-cr01,5 15,,,15 0,0228510F0A47383861,telnet ssh,telnet ssh,no,

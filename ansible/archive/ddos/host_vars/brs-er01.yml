@@ -1,0 +1,69 @@
+Variables:
+
+## THRDPTY to WH - THRDPTY DC Name
+"THRDPTY_to_WH_THRDPTY_DC_NAME":
+
+##  THRDPTY to WH  - THRDPTY DC Tunnel Ref
+"THRDPTY_to_WH_THRDPTY_DC_Tunnel_Ref":
+
+##  THRDPTY to WH  - WH end Tunnel Interface IP address
+"THRDPTY_to_WH_WH_TUN_IP": 
+
+##  THRDPTY to WH  - WH end Tunnel Interface netmask
+"THRDPTY_to_WH_WH_TUN_netmask": 
+
+##  THRDPTY to WH  - WH end Tunnel Interface GRE Load Interval value
+"THRDPTY_to_WH_WH_TUN_GRE_Load_Interval": 
+
+##  THRDPTY to WH  - WH end Tunnel Interface GRE Keepalive timer
+"THRDPTY_to_WH_GRE_keepalive_timer": 
+---
+
+##  THRDPTY to WH  - WH end Tunnel Interface GRE Keepalive retries
+"THRDPTY_to_WH_GRE_keepalive_retires": 
+
+##  THRDPTY to WH  - WH end Tunnel Source IP address
+"THRDPTY_to_WH_TUN_SRC_IFC_IP": 
+
+##  THRDPTY to WH  - WH end Tunnel Destination IP address
+"THRDPTY_to_WH_TUN_DST_IFC_IP": 
+
+##  THRDPTY to WH  - BGP THRDPTY Peer_group name
+"THRDPTY_to_WH_PG_NAME": 
+
+##  THRDPTY to WH  - THRDPTY AS number
+"THRDPTY_BGP_AS_num": 
+
+##  THRDPTY to WH  - BGP password
+"THRDPTY_BGP_password": 
+
+##  THRDPTY to WH  - BGP Keepalive timer
+"THRDPTY_BGP_keepalive_timer": 
+
+##  THRDPTY to WH  - BGP Hold timer
+"THRDPTY_BGP_hold_timer": 
+
+##  THRDPTY to WH  - THRDPTY end Tunnel IP address
+"THRDPTY_to_WH_THRDPTY_TUN_IP":
+
+##  THRDPTY to WH  - BGP neighbour description
+"THRDPTY_to_WH_BGP_NEIG_DESCRIPTION": 
+
+##  THRDPTY to WH  - Inbound Prefix-list filter name
+"THRDPTY_to_WH_PFX_filter_in":
+
+##  THRDPTY to WH  - Outbound Prefix-list filter name
+"THRDPTY_to_WH_PFX_filter_out":
+
+##  THRDPTY to WH  - Inbound Route_map name
+"THRDPTY_to_WH_RM_in":
+
+##  THRDPTY to WH  - Outbound Route_map name
+"THRDPTY_to_WH_RM_out":
+
+##  THRDPTY to WH  - BGP community for BRS networks
+"THRDPTY_to_WH_BRS_NETS_COMMUNITY":
+
+##  THRDPTY to WH  - BGP community for SCC networks
+"THRDPTY_to_WH_scc_NETS_COMMUNITY":
+

@@ -1,0 +1,20 @@
+Port-channel1.101: {admin-state: ' shutdown', interface: Port-channel1.101, ip-add: 10.180.32.33,
+  nameif: noncde-web, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.111: {admin-state: ' shutdown', interface: Port-channel1.111, ip-add: 10.180.33.33,
+  nameif: noncde-backoffice, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.203: {admin-state: ' shutdown', interface: Port-channel1.203, ip-add: 10.180.64.97,
+  nameif: cobain, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.210: {admin-state: up, interface: Port-channel1.210, ip-add: 10.180.66.1,
+  nameif: noncde-backoffice-new, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.211: {admin-state: up, interface: Port-channel1.211, ip-add: 10.180.67.1,
+  nameif: noncde-web-new, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.212: {admin-state: up, interface: Port-channel1.212, ip-add: 10.180.68.1,
+  nameif: iptv, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.215: {admin-state: up, interface: Port-channel1.215, ip-add: 10.180.68.99,
+  nameif: noncde-cobain, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.219: {admin-state: up, interface: Port-channel1.219, ip-add: 10.180.69.193,
+  nameif: citrix_netscaler, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.231: {admin-state: up, interface: Port-channel1.231, ip-add: 10.180.74.1,
+  nameif: int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.422: {admin-state: up, interface: Port-channel1.422, ip-add: 10.180.224.4,
+  nameif: internal-vrf, netmask: 255.255.255.0, security-level: '100'}

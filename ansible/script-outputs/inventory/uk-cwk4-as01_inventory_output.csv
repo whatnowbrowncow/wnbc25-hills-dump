@@ -1,0 +1,14 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-cwk4-as01,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,DCB1842B29J,V01
+uk-cwk4-as01,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,DCB1842B2JJ,V01
+uk-cwk4-as01,Switch 5 - Power Supply A,Switch 5 - Power Supply A,PWR-C2-640WAC,DCB1842B2JM,V01
+uk-cwk4-as01,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,DCB1842B2KV,V01
+uk-cwk4-as01,Switch 4 - Power Supply A,Switch 4 - Power Supply A,PWR-C2-640WAC,DCB1842B2L5,V01
+uk-cwk4-as01,WS-C3650-48PS,Switch 2,WS-C3650-48PS,FDO1840E1Y8,V01
+uk-cwk4-as01,WS-C3650-48PS,Switch 3,WS-C3650-48PS,FDO1840E1Z0,V01
+uk-cwk4-as01,WS-C3650-48PS,Switch 5,WS-C3650-48PS,FDO1840E1ZF,V01
+uk-cwk4-as01,WS-C3650-48PS,Switch 4,WS-C3650-48PS,FDO1840E1ZL,V01
+uk-cwk4-as01,WS-C3650-48PS,Switch 1,WS-C3650-48PS,FDO1841E2RM,V01
+uk-cwk4-as01,c3xxx Stack,c3xxx Stack,WS-C3650-48PS,FDO1841E2RM,V01
+uk-cwk4-as01,1000BaseSX SFP,GigabitEthernet1/1/1,GLC-SX-MMD,FNS18430YEZ,V01
+uk-cwk4-as01,1000BaseSX SFP,GigabitEthernet4/1/1,GLC-SX-MMD,FNS18431TBH,V01

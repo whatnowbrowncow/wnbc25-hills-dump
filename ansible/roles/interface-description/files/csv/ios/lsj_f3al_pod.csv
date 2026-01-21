@@ -1,0 +1,8 @@
+hostname,local_interface,remote_device_description
+lsj_f3al_pod,GigabitEthernet1/0/31,no_data_in_cdp
+lsj_f3al_pod,GigabitEthernet1/0/33,no_data_in_cdp
+lsj_f3al_pod,GigabitEthernet1/0/35,no_data_in_cdp
+lsj_f3al_pod,GigabitEthernet1/0/38,no_data_in_cdp
+lsj_f3al_pod,GigabitEthernet1/0/39,no_data_in_cdp
+lsj_f3al_pod,GigabitEthernet1/0/42,SEPD4E880C846D5-Eth0
+lsj_f3al_pod,GigabitEthernet1/0/43,IP_Phone_SEPAC44F21BB9CF-Port1

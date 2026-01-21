@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+bg-sof-cs01,10.53.98.16,group-vrf,no,Vlan243
+bg-sof-cs01,10.120.193.235,group-vrf,no,Vlan243

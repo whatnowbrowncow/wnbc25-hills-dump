@@ -1,0 +1,13 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+de-fr7-cr01,SFP+ 10GBASE-LR,subslot 0/0 transceiver 1,SFP-10G-LR,AVD2228K7U5,V02
+de-fr7-cr01,SFP+ 10GBASE-LR,subslot 0/0 transceiver 0,SFP-10G-LR,AVD2228K7UB,V02
+de-fr7-cr01,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS2232Q58L,V03
+de-fr7-cr01,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE22420CV4,V03
+de-fr7-cr01,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT22283JGS,V02
+de-fr7-cr01,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT22283JHZ,V02
+de-fr7-cr01,GE LX,subslot 0/0 transceiver 3,GLC-LH-SMD,OPM22380B3N,V01
+de-fr7-cr01,GE LX,subslot 0/0 transceiver 2,GLC-LH-SMD,OPM22380B3U,V01
+de-fr7-cr01,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+de-fr7-cr01,Built-in GE SPA with 2 port 10G and 6 port 1G Interfaces,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+de-fr7-cr01,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+de-fr7-cr01,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

@@ -1,0 +1,6 @@
+Port-channel21.3583: {admin-state: up, interface: Port-channel21.3583, ip-add: 10.215.161.164,
+  nameif: pp3off-internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3599: {admin-state: up, interface: Port-channel21.3599, ip-add: 10.215.163.1,
+  nameif: monitoring-int, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3601: {admin-state: up, interface: Port-channel21.3601, ip-add: 10.215.175.1,
+  nameif: grand-parade, netmask: 255.255.255.128, security-level: '100'}

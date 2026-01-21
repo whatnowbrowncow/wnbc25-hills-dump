@@ -1,0 +1,46 @@
+---
+
+- name: Collect ASA Contexts interface information and output to yaml and CSV
+  hosts: asa
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: Create firewall backup directory
+      file:
+        path: backup/{{ inventory_hostname }}
+        state: directory
+
+    - name: Create firewall interface output directory
+      file:
+        path: script-outputs/{{ inventory_hostname }}
+        state: directory
+
+    - name: Gather list of contexts
+      asa_command:
+        commands:
+          - "show run | in ^context"
+        context: system
+      register: context_list
+              
+    - name: Gather show run interfaces contexts
+      asa_command:
+        commands:
+          - "show run interface"
+        context: "{{ item.split()[1] }}"
+      register: interface_list
+      with_items:
+        - "{{ context_list.stdout_lines[0] }}"
+
+    - name: Export interface config to text file
+      template:
+        src: ./templates/line-by-line.j2
+        dest: ./backup/{{ inventory_hostname }}/{{ item.item.split()[1] }}_interface_config.cfg
+      with_items:
+        - "{{ interface_list.results }}"
+        
+    - name: Extract interface info
+      shell: python3 ./scripts/asa_interface_extraction.py -i backup/{{ inventory_hostname }}/{{ item.item.split()[1] }}_interface_config.cfg -o script-outputs/{{ inventory_hostname }}/{{ item.item.split()[1] }}_interface_output
+      with_items:
+        - "{{ interface_list.results }}"
+      

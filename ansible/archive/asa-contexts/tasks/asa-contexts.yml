@@ -1,0 +1,41 @@
+---
+
+  - name: "Build context in system - {{ context_item.context }}"
+    asa_config:
+      lines:
+        - "context {{ context_item.context }}"
+      context: system
+
+  
+  - name: "Build context interface template - {{ context_item.context }}"
+    template:
+      src: contexts.j2
+      dest: ./roles/asa-contexts/configs/{{ inventory_hostname }}_{{ context_item.context }}_context.cfg
+    with_items:
+      - "{{ context_item }}"  
+
+
+  - name: "Allocate interfaces to context - {{ context_item.context }}"
+    asa_config:
+      src: ./roles/asa-contexts/configs/{{ inventory_hostname }}_{{ context_item.context }}_context.cfg
+      context: system
+
+
+  - name: "Run show context to gather info - {{ context_item.context }}"
+    asa_command:
+      commands:
+        - "show context {{ context_item.context }}"
+      context: system
+    register: context_output
+
+# Only run the below task if the context_output show it doesn't already have the config-url defined
+# It is required to limit to only running against contexts where the config-url isn't defined due 
+# to errors messages being output from the ASA, which cause the ansible module to fail.
+  - name: "Add config-url to context in system - {{ context_item.context }}"
+    asa_config:
+      lines: 
+        - "config-url disk0:/{{ context_item.context }}.cfg"
+      parents: "context {{ context_item.context }}"
+      context: system
+    when: context_output.stdout_lines.0.1.split('   ')[-1] == ' (not entered)'
+

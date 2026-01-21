@@ -1,0 +1,2 @@
+hostname,ip address,vrf,preferred,source interface
+it-rom-ar02-sogei,10.1.6.175,,yes,Loopback20

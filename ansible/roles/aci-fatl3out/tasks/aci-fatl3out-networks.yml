@@ -1,0 +1,41 @@
+--- 
+
+- name: Create External Networks (fatl3out task 2)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.0.tenant }}/out-{{ item.0.l3out_name }}/instP-{{ item.0.l3out_name }}.json"
+    content:
+      {
+        "l3extInstP": {
+          "attributes": {
+            "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.l3out_name }}/instP-{{ item.0.l3out_name }}",
+            "name": "{{ item.0.l3out_name }}",
+            "rn": "instP-{{ item.0.l3out_name }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "l3extSubnet": {
+                "attributes": {
+                  "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.l3out_name }}/instP-{{ item.0.l3out_name }}/extsubnet-[{{ item.1.ext_subnet }}]",
+                  "ip": "{{ item.1.ext_subnet }}",
+                  "scope": "{{ item.1.scope }}",
+                  "aggregate": "{{ item.1.aggregate }}",
+                  "rn": "extsubnet-[{{ item.1.ext_subnet }}]",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ fatl3outs }}"
+    - ext_networks
+
+- name: Move to Create Logical Node Profiles
+  include_tasks: ./aci-fatl3out-node-profiles.yml

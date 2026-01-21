@@ -1,0 +1,44 @@
+---
+
+- name: Parser Metadata
+  parser_metadata:
+    version: 1.0
+    command: show run ssh
+    network_os: iosxr
+
+- name: Match Sections
+  pattern_match:
+    regex: "^ssh "
+    match_all: no
+    match_greedy: yes
+  register: section
+  export: yes
+
+- name: Match IOS-XR SSH Config
+  pattern_group:
+    - name: Match vrf
+      pattern_match:
+        regex: "^ssh server vrf (\\w+)"
+        content: "{{ item }}"
+      register: vrf
+    - name: Match access-list
+      pattern_match:
+        regex: "^ssh server vrf .* access-list (\\S+)"
+        content: "{{ item }}"
+      register: acl
+  loop: "{{ section }}"
+  register: ssh_config
+
+- name: Generate JSON Data Structure
+  json_template:
+    template:
+      - key: ssh
+        object:
+          - key: vrf
+            value: "{{ item.vrf.matches.0 }}"
+          - key: acl
+            value: "{{ item.acl.matches.0 }}"
+  loop: "{{ ssh_config }}"
+  ##use export to display to screen
+  export: yes
+  register: iosxr_ssh_facts

@@ -1,0 +1,7 @@
+hostname,community,access,type,access-list
+uk-ld6-er01,5wUxlDGU,RO,IPv4,solarwinds-new
+uk-ld6-er01,m0squ1t0,RO,IPv4,acl-cacti
+uk-ld6-er01,wh1LLc0rp,RW,IPv4,acl-ncs
+uk-ld6-er01,whM0n1T0r,RO,IPv4,acl-nimsoft
+uk-ld6-er01,5&prU$pAtu!H,RO,IPv4,acl-16
+uk-ld6-er01,juzusl4e11crIphigAQl,RO,IPv4,acl-smartnet

@@ -1,0 +1,10 @@
+Port-channel1.380: {admin-state: up, interface: Port-channel1.380, ip-add: 10.120.161.68,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.460: {admin-state: up, interface: Port-channel1.460, ip-add: 10.120.173.1,
+  nameif: web-btm, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.461: {admin-state: up, interface: Port-channel1.461, ip-add: 10.120.173.129,
+  nameif: 3rd-party-bottom, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.480: {admin-state: up, interface: Port-channel1.480, ip-add: 10.120.177.1,
+  nameif: app-top, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.539: {admin-state: up, interface: Port-channel1.539, ip-add: 10.120.187.234,
+  nameif: ces-connect, netmask: 255.255.255.248, security-level: '100'}

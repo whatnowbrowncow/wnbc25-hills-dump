@@ -1,0 +1,7 @@
+---
+
+#This is loop step one. Don't run on its own
+
+- name: Build a Fat L3out
+  include_tasks: ./aci-fatl3out-routed-outside.yml
+  when: ansible_network_os == "aci" and fatl3outs is defined

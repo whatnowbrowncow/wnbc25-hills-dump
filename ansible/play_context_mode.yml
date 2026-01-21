@@ -1,0 +1,9 @@
+---
+
+- name: PLAY - Context Mode
+  hosts: asa
+  gather_facts: no
+  connection: network_cli
+
+  roles:
+    - asa-contexts

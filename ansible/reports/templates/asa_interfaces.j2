@@ -1,0 +1,7 @@
+## Interfaces
+
+|     Interface   |  Input Packets  |  Input Errors  |  Output Packets |  Output Errors  |
+|-----------------|-----------------|----------------|-----------------|-----------------|
+{% for interstat in item.stdout_lines %}
+| {{ interstat[0].split()[1] }} | {{ interstat[7].split()[0] }} | {{ interstat[9].split()[0] }} | {{ interstat[13].split()[0] }} | {{ interstat[15].split()[0] }} |
+{% endfor %}

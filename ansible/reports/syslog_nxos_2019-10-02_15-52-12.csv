@@ -1,0 +1,16 @@
+hostname,syslog ip address,level,vrf
+gib-mpl-ds03,10.180.163.57,,
+gib-mpl-ds04,10.180.163.57,,
+uk-brs-ds01,10.210.163.58,6,management
+uk-brs-ds02,10.210.163.58,6,management
+uk-brs-ls01,10.210.163.58,6,management
+uk-brs-ls02,10.210.163.58,6,management
+uk-brs-ls03,10.210.163.58,6,management
+uk-brs-ls04,10.210.163.58,6,management
+uk-brs-pp-ds01,10.210.163.58,6,management
+uk-brs-pp-ds02,10.210.163.58,6,management
+uk-sc1-ds01,10.120.163.95,,
+uk-sc1-ds02,10.120.163.95,,
+uk-sc1-ds03,10.120.163.10,,
+uk-sc1-ds03,10.120.163.95,,
+uk-sc1-ds04,10.120.163.95,,

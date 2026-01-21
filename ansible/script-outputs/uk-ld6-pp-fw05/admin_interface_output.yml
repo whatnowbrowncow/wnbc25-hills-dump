@@ -1,0 +1,2 @@
+Management0/0: {admin-state: up, interface: Management0/0, ip-add: 10.112.129.180,
+  nameif: management, netmask: 255.255.255.0, security-level: '0'}

@@ -1,0 +1,5 @@
+---
+
+- name: Set up daily config backup to external NAS server.
+  import_tasks: ./aci-backup.yml
+  when: ansible_network_os == "aci"

@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-ld6-es02,10.120.163.120,mgmtVrf,no,
+uk-ld6-es02,10.120.163.19,mgmtVrf,yes,

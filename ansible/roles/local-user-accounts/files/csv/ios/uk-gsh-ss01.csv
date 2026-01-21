@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-gsh-ss01,netsec,,password,7,12375043134A3B1D07
+uk-gsh-ss01,netadmin,15,secret,5,$1$ULIG$G0gj5g8itGPjwqY06WoSr.
+uk-gsh-ss01,svcnetworkauto,15,secret,5,$1$HSFM$usAFM5FVAFCJ9gs/SPvb8/

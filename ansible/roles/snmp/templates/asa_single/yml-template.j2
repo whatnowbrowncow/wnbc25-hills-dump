@@ -1,0 +1,14 @@
+---
+
+snmp:
+{% if snmp_configuration_facts is defined %}
+  host:
+{%   for item in snmp_configuration_facts %}
+  - ip_address: "{{ item.snmp.ip_address }}"
+    source_int: "{{ item.snmp.source_int }}"
+    community_string: "{{ item.snmp.community_string }}"
+    poll_trap: "{{ item.snmp.poll_trap }}"
+    version: "{{ item.snmp.snmp_version }}"
+{%   endfor %}
+{% else %}
+{% endif %}

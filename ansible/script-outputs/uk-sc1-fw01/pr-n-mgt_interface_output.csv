@@ -1,0 +1,16 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.368,10.120.159.193,,email-mgmt,255.255.255.224,100
+up,,Port-channel1.362,10.120.159.1,,edge-mgmt,255.255.255.224,100
+up,,Port-channel1.364,10.120.159.65,,webscreen-mgmt,255.255.255.224,100
+up,,Port-channel1.340,10.120.144.1,,server-ilo,255.255.255.0,100
+up,,Port-channel1.344,10.120.148.1,,backoffice-tier,255.255.255.0,100
+up,,Port-channel1.376,10.120.160.196,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.365,10.120.159.97,,vc-mgmt,255.255.255.224,100
+up,,Port-channel1.342,10.120.146.1,,app-tier,255.255.255.0,100
+up,,Port-channel1.347,10.120.151.1,,sc1-noncde-jumphost-lan,255.255.255.0,100
+up,,Port-channel1.343,10.120.147.1,,app2-tier,255.255.255.0,100
+up,,Port-channel1.341,10.120.145.1,,web-tier,255.255.255.0,100
+up,,Port-channel1.349,10.120.153.1,,noncde-cf-app-mgmt,255.255.255.0,100
+up,,Port-channel1.353,10.120.157.1,,webcache-mgmt,255.255.255.224,100
+up,,Port-channel1.345,10.120.149.1,,ods-mgmt,255.255.255.0,100
+up,,Port-channel1.348,10.120.152.1,,noncde-cf-web-mgmt,255.255.255.0,100

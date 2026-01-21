@@ -1,0 +1,922 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+uk-brs-es02,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+uk-brs-es02,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+uk-brs-es02,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+uk-brs-es02,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+uk-brs-es02,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+uk-brs-es02,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+uk-brs-es02,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+uk-brs-es02,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+uk-brs-es02,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+uk-brs-es02,solarwinds-new,Standard,100,deny,,any log,,,
+uk-brs-es02,edge-protect-acl-brs,Extended,10,deny,ip,71.6.128.0 0.0.63.255,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,20,permit,eigrp,any,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,30,permit,ip,host 212.142.66.129,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,40,permit,ip,host 141.138.129.40,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,70,permit,ip,host 141.138.134.1,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,80,permit,ip,host 81.149.239.118,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,90,permit,ip,host 195.244.198.114,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,100,permit,ip,host 195.244.210.64,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,130,permit,ip,host 141.138.128.104,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,140,permit,ip,host 92.247.8.98,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,150,permit,ip,host 95.154.227.13,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,151,permit,ip,host 109.234.202.159,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,152,permit,ip,host 52.56.142.152,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,155,permit,ip,host 62.172.215.182,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,160,permit,ip,host 95.154.227.64,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,165,permit,ip,any,host 141.138.130.145,
+uk-brs-es02,edge-protect-acl-brs,Extended,170,permit,ip,host 95.154.227.72,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,180,permit,ip,95.154.227.72 0.0.0.7,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,190,permit,ip,host 95.154.227.84,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,200,permit,ip,host 95.154.227.91,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,210,permit,ip,host 95.154.227.94,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,220,permit,ip,host 92.52.99.114,host 141.138.131.1,
+uk-brs-es02,edge-protect-acl-brs,Extended,230,permit,ip,host 199.91.137.12,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,240,permit,ip,host 155.136.20.201,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,250,permit,ip,any,host 155.136.20.201,
+uk-brs-es02,edge-protect-acl-brs,Extended,260,permit,ip,host 207.45.119.254,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,270,permit,ip,host 207.45.120.28,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,280,permit,ip,host 37.98.232.12,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,290,permit,ip,host 95.154.227.95,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,300,permit,ip,94.174.178.208 0.0.0.7,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,310,permit,tcp,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,320,permit,tcp,any,8.131.0 0.0.0.255,22
+uk-brs-es02,edge-protect-acl-brs,Extended,330,permit,tcp,any,8.131.0 0.0.0.255,www
+uk-brs-es02,edge-protect-acl-brs,Extended,340,permit,tcp,any,8.131.0 0.0.0.255,443
+uk-brs-es02,edge-protect-acl-brs,Extended,350,permit,tcp,any,8.131.0 0.0.0.255,444
+uk-brs-es02,edge-protect-acl-brs,Extended,360,permit,tcp,any,8.131.0 0.0.0.255,8080
+uk-brs-es02,edge-protect-acl-brs,Extended,370,permit,tcp,any,8.131.0 0.0.0.255,8888
+uk-brs-es02,edge-protect-acl-brs,Extended,380,permit,tcp,any,8.131.0 0.0.0.255,9291
+uk-brs-es02,edge-protect-acl-brs,Extended,390,permit,tcp,any,8.131.0 0.0.0.255,61616
+uk-brs-es02,edge-protect-acl-brs,Extended,400,permit,tcp,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,410,permit,udp,any,8.131.0 0.0.0.255,domain
+uk-brs-es02,edge-protect-acl-brs,Extended,420,permit,ip,host 94.156.185.44,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,430,permit,ip,host 87.121.79.4,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,440,permit,ip,host 141.138.131.142,any,
+uk-brs-es02,edge-protect-acl-brs,Extended,450,permit,icmp,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,460,permit,icmp,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,470,permit,icmp,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,480,permit,icmp,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,490,deny,ip,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,500,deny,udp,any,8.131.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,510,permit,ip,host 109.238.64.94,host 141.138.135.168,
+uk-brs-es02,edge-protect-acl-brs,Extended,520,permit,ip,host 109.238.64.94,host 141.138.135.186,
+uk-brs-es02,edge-protect-acl-brs,Extended,530,permit,ip,host 80.94.22.241,8.135.48 0.0.0.7,
+uk-brs-es02,edge-protect-acl-brs,Extended,540,permit,ip,host 213.155.178.165,8.135.48 0.0.0.7,
+uk-brs-es02,edge-protect-acl-brs,Extended,550,permit,ip,host 217.153.136.10,8.135.48 0.0.0.7,
+uk-brs-es02,edge-protect-acl-brs,Extended,560,permit,tcp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,570,permit,tcp,any,8.135.0 0.0.0.255,www
+uk-brs-es02,edge-protect-acl-brs,Extended,580,permit,tcp,any,8.135.0 0.0.0.255,443
+uk-brs-es02,edge-protect-acl-brs,Extended,590,permit,tcp,any,8.135.0 0.0.0.255,843
+uk-brs-es02,edge-protect-acl-brs,Extended,600,permit,tcp,any,8.135.0 0.0.0.255,2156
+uk-brs-es02,edge-protect-acl-brs,Extended,610,permit,tcp,any,8.135.0 0.0.0.255,8192
+uk-brs-es02,edge-protect-acl-brs,Extended,620,permit,tcp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,630,permit,tcp,any,8.135.0 0.0.0.255,9382
+uk-brs-es02,edge-protect-acl-brs,Extended,640,permit,tcp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,650,permit,tcp,any,8.135.0 0.0.0.255,10168
+uk-brs-es02,edge-protect-acl-brs,Extended,660,permit,tcp,any,8.135.0 0.0.0.255,10180
+uk-brs-es02,edge-protect-acl-brs,Extended,670,permit,tcp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,680,permit,tcp,any,8.135.0 0.0.0.255,10187
+uk-brs-es02,edge-protect-acl-brs,Extended,690,permit,tcp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,700,permit,tcp,any,8.135.0 0.0.0.255,10278
+uk-brs-es02,edge-protect-acl-brs,Extended,710,permit,tcp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,720,permit,tcp,any,8.135.0 0.0.0.255,61321
+uk-brs-es02,edge-protect-acl-brs,Extended,730,permit,tcp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,740,permit,udp,any,8.135.0 0.0.0.255,domain
+uk-brs-es02,edge-protect-acl-brs,Extended,750,permit,icmp,any,8.128.0 0.0.7.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,760,permit,icmp,any,8.128.0 0.0.7.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,770,permit,icmp,any,8.128.0 0.0.7.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,780,permit,icmp,any,8.128.0 0.0.7.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,790,permit,icmp,any,8.128.0 0.0.7.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,800,deny,ip,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,810,deny,udp,any,8.135.0 0.0.0.255,
+uk-brs-es02,edge-protect-acl-brs,Extended,1470,permit,ip,any,any,
+uk-brs-es02,1,Standard,10,permit,,10.120.163.210,,,
+uk-brs-es02,1,Standard,20,permit,,10.1.74.66,,,
+uk-brs-es02,1,Standard,30,permit,,10.112.12.126,,,
+uk-brs-es02,1,Standard,40,permit,,10.112.12.125,,,
+uk-brs-es02,1,Standard,50,permit,,10.180.163.18,,,
+uk-brs-es02,1,Standard,60,permit,,10.120.163.151,,,
+uk-brs-es02,1,Standard,70,permit,,10.210.163.60,,,
+uk-brs-es02,1,Standard,80,permit,,10.120.163.152,,,
+uk-brs-es02,1,Standard,90,permit,,10.1.74.29,,,
+uk-brs-es02,1,Standard,100,permit,,10.120.163.143,,,
+uk-brs-es02,1,Standard,110,permit,,10.120.163.142,,,
+uk-brs-es02,1,Standard,120,permit,,10.112.13.17,,,
+uk-brs-es02,1,Standard,130,permit,,10.1.74.48,,,
+uk-brs-es02,1,Standard,140,permit,,10.1.74.57,,,
+uk-brs-es02,1,Standard,150,permit,,10.1.74.61,,,
+uk-brs-es02,1,Standard,160,permit,,10.120.163.123,,,
+uk-brs-es02,1,Standard,170,permit,,10.120.163.122,,,
+uk-brs-es02,1,Standard,180,permit,,10.120.195.31,,,
+uk-brs-es02,1,Standard,190,permit,,10.120.143.70,,,
+uk-brs-es02,1,Standard,200,permit,,10.1.74.128,,,
+uk-brs-es02,1,Standard,210,permit,,10.180.142.230,,,
+uk-brs-es02,1,Standard,220,permit,,10.112.12.144,,,
+uk-brs-es02,1,Standard,230,permit,,10.120.163.37,,,
+uk-brs-es02,1,Standard,240,permit,,10.112.12.142,,,
+uk-brs-es02,1,Standard,250,permit,,10.112.12.143,,,
+uk-brs-es02,1,Standard,260,permit,,10.1.82.64 0.0.0.31,,,
+uk-brs-es02,1,Standard,270,permit,,10.1.22.0 0.0.0.255,,,
+uk-brs-es02,1,Standard,280,permit,,192.168.2.0 0.0.1.255,,,
+uk-brs-es02,1,Standard,290,permit,,10.210.141.40 0.0.0.7,,,
+uk-brs-es02,1,Standard,300,permit,,10.180.141.40 0.0.0.7,,,
+uk-brs-es02,1,Standard,310,permit,,10.120.141.40 0.0.0.7,,,
+uk-brs-es02,1,Standard,320,permit,,100.79.0.0 0.0.127.255,,,
+uk-brs-es02,1,Standard,330,deny,,any log,,,
+uk-brs-es02,10,Standard,20,permit,,10.120.163.210,,,
+uk-brs-es02,10,Standard,30,permit,,10.112.12.126,,,
+uk-brs-es02,10,Standard,40,permit,,10.112.12.125,,,
+uk-brs-es02,10,Standard,10,permit,,141.138.130.1,,,
+uk-brs-es02,10,Standard,50,permit,,10.120.163.123,,,
+uk-brs-es02,10,Standard,60,permit,,10.120.163.122,,,
+uk-brs-es02,10,Standard,70,permit,,10.120.163.59,,,
+uk-brs-es02,11,Standard,14,permit,,10.112.12.126,,,
+uk-brs-es02,11,Standard,13,permit,,10.112.12.125,,,
+uk-brs-es02,11,Standard,10,permit,,10.120.136.140,,,
+uk-brs-es02,11,Standard,12,permit,,10.120.163.123,,,
+uk-brs-es02,11,Standard,11,permit,,10.120.163.122,,,
+uk-brs-es02,11,Standard,20,permit,,10.50.3.140,,,
+uk-brs-es02,11,Standard,30,deny,,any log,,,
+uk-brs-es02,12,Standard,10,permit,,10.220.163.112,,,
+uk-brs-es02,12,Standard,20,permit,,10.220.163.111,,,
+uk-brs-es02,12,Standard,30,permit,,10.180.163.112,,,
+uk-brs-es02,12,Standard,40,permit,,10.180.163.111,,,
+uk-brs-es02,12,Standard,50,permit,,10.1.14.0 0.0.0.255,,,
+uk-brs-es02,16,Standard,10,permit,,10.120.163.206,,,
+uk-brs-es02,19,Standard,10,permit,,172.16.41.192 0.0.0.31,,,
+uk-brs-es02,19,Standard,20,permit,,10.1.82.64 0.0.0.31,,,
+uk-brs-es02,22,Standard,10,permit,,10.112.12.119,,,
+uk-brs-es02,22,Standard,40,permit,,10.210.143.80,,,
+uk-brs-es02,22,Standard,30,permit,,10.120.143.80,,,
+uk-brs-es02,22,Standard,20,permit,,10.180.142.232,,,
+uk-brs-es02,185,Extended,10,permit,udp,0.0.0.0 255.255.255.248,host 224.0.0.2,1985
+uk-brs-es02,185,Extended,20,permit,ip,any,host 213.120.94.19,
+uk-brs-es02,185,Extended,30,permit,ip,any,host 213.120.94.20,
+uk-brs-es02,185,Extended,40,permit,ip,any,host 213.120.94.21,
+uk-brs-es02,185,Extended,50,permit,ip,any,host 213.120.94.24,
+uk-brs-es02,185,Extended,60,permit,ip,any,host 213.120.94.22,
+uk-brs-es02,185,Extended,70,permit,ip,any,host 194.73.173.254,
+uk-brs-es02,185,Extended,80,permit,ip,any,host 195.99.172.179,
+uk-brs-es02,185,Extended,90,permit,ip,any,host 194.73.173.51,
+uk-brs-es02,185,Extended,100,permit,ip,any,host 213.120.94.26,
+uk-brs-es02,185,Extended,110,permit,ip,any,host 194.73.173.159,
+uk-brs-es02,185,Extended,120,permit,udp,any,host 213.120.94.19,isakmp
+uk-brs-es02,185,Extended,130,permit,udp,any,host 213.120.94.19,18234
+uk-brs-es02,185,Extended,140,permit,udp,any,host 213.120.94.19,2746
+uk-brs-es02,185,Extended,150,permit,esp,any,host 213.120.94.19,
+uk-brs-es02,185,Extended,160,permit,udp,any,host 213.120.94.19,259
+uk-brs-es02,185,Extended,170,permit,udp,any,host 194.73.173.132,isakmp
+uk-brs-es02,185,Extended,180,permit,udp,any,host 194.73.173.132,non500-isakmp
+uk-brs-es02,185,Extended,190,permit,esp,any,host 194.73.173.132,
+uk-brs-es02,185,Extended,200,permit,tcp,any,host 194.73.173.132,8080
+uk-brs-es02,185,Extended,210,permit,tcp,any,host 194.73.173.132,
+uk-brs-es02,185,Extended,220,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.184,ftp-data
+uk-brs-es02,185,Extended,230,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.184,ftp
+uk-brs-es02,185,Extended,240,permit,tcp,host 85.223.209.13,host 194.73.173.185,10302
+uk-brs-es02,185,Extended,250,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.185,10302
+uk-brs-es02,185,Extended,260,permit,tcp,host 217.114.162.242,host 212.140.174.215,10275
+uk-brs-es02,185,Extended,270,permit,ip,host 150.101.188.208,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,280,permit,ip,212.122.168.160 0.0.0.31,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,290,permit,ip,host 213.122.168.165,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,300,permit,ip,87.117.218.64 0.0.0.63,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,310,permit,tcp,host 206.225.50.35,host 213.120.94.22,9443
+uk-brs-es02,185,Extended,320,permit,tcp,host 12.47.219.28,host 213.120.94.24,1955
+uk-brs-es02,185,Extended,330,permit,tcp,any,172.176 0.0.0.15,443
+uk-brs-es02,185,Extended,340,permit,tcp,any,172.176 0.0.0.15,www
+uk-brs-es02,185,Extended,350,permit,tcp,any,host 213.120.94.26,443
+uk-brs-es02,185,Extended,360,permit,tcp,any,host 213.120.94.26,www
+uk-brs-es02,185,Extended,370,permit,tcp,any,host 213.120.94.27,443
+uk-brs-es02,185,Extended,380,permit,tcp,any,host 213.120.94.27,www
+uk-brs-es02,185,Extended,390,permit,tcp,any,host 213.120.94.27,8001
+uk-brs-es02,185,Extended,400,permit,tcp,any,host 195.99.172.187,8001
+uk-brs-es02,185,Extended,410,permit,tcp,any,host 213.120.94.28,443
+uk-brs-es02,185,Extended,420,permit,tcp,any,host 213.120.94.28,www
+uk-brs-es02,185,Extended,430,permit,tcp,any,host 213.120.94.30,www
+uk-brs-es02,185,Extended,440,permit,tcp,any,120.94.0 0.0.0.31,443
+uk-brs-es02,185,Extended,450,permit,tcp,any,120.94.0 0.0.0.31,www
+uk-brs-es02,185,Extended,460,permit,tcp,any,172.176 0.0.0.15,443
+uk-brs-es02,185,Extended,470,permit,tcp,any,172.176 0.0.0.15,www
+uk-brs-es02,185,Extended,480,permit,udp,host 194.72.6.51,host 213.120.94.21,domain
+uk-brs-es02,185,Extended,490,permit,udp,host 194.72.6.57,host 213.120.94.21,domain
+uk-brs-es02,185,Extended,500,permit,tcp,host 62.172.215.182,any,ftp
+uk-brs-es02,185,Extended,510,permit,tcp,213.48.117.160 0.0.0.31,host 194.73.173.140,www
+uk-brs-es02,185,Extended,520,permit,tcp,host 62.44.69.131,host 194.73.173.140,8099
+uk-brs-es02,185,Extended,530,permit,tcp,host 62.44.69.132,host 194.73.173.140,8099
+uk-brs-es02,185,Extended,540,permit,tcp,host 62.44.69.133,host 194.73.173.140,8099
+uk-brs-es02,185,Extended,550,permit,tcp,host 62.140.207.152,host 213.120.94.22,443
+uk-brs-es02,185,Extended,560,permit,tcp,host 62.140.207.153,host 213.120.94.22,443
+uk-brs-es02,185,Extended,570,permit,tcp,host 62.140.207.154,host 213.120.94.22,443
+uk-brs-es02,185,Extended,580,permit,tcp,host 80.5.176.119,host 194.73.173.140,www
+uk-brs-es02,185,Extended,590,permit,tcp,195.10.10.0 0.0.0.255,173.144 0.0.0.7,
+uk-brs-es02,185,Extended,600,permit,tcp,195.10.10.0 0.0.0.255,host 194.73.173.152,
+uk-brs-es02,185,Extended,610,permit,tcp,195.10.10.0 0.0.0.255,host 194.73.173.153,
+uk-brs-es02,185,Extended,620,permit,udp,195.10.10.0 0.0.0.255,173.144 0.0.0.7,
+uk-brs-es02,185,Extended,630,permit,udp,195.10.10.0 0.0.0.255,host 194.73.173.152,
+uk-brs-es02,185,Extended,640,permit,udp,195.10.10.0 0.0.0.255,host 194.73.173.153,
+uk-brs-es02,185,Extended,650,permit,tcp,host 195.10.6.237,173.144 0.0.0.7,
+uk-brs-es02,185,Extended,660,permit,tcp,host 195.10.6.237,host 194.73.173.152,
+uk-brs-es02,185,Extended,670,permit,tcp,host 195.10.6.237,host 194.73.173.153,
+uk-brs-es02,185,Extended,680,permit,udp,host 195.10.6.237,173.144 0.0.0.7,
+uk-brs-es02,185,Extended,690,permit,udp,host 195.10.6.237,host 194.73.173.152,
+uk-brs-es02,185,Extended,700,permit,udp,host 195.10.6.237,host 194.73.173.153,
+uk-brs-es02,185,Extended,710,permit,tcp,host 193.109.197.44,173.144 0.0.0.7,22
+uk-brs-es02,185,Extended,720,permit,tcp,host 193.109.197.44,host 194.73.173.152,22
+uk-brs-es02,185,Extended,730,permit,tcp,host 193.109.197.44,host 194.73.173.153,22
+uk-brs-es02,185,Extended,740,permit,tcp,host 81.178.23.133,173.144 0.0.0.7,22
+uk-brs-es02,185,Extended,750,permit,tcp,host 81.178.23.133,host 194.73.173.152,22
+uk-brs-es02,185,Extended,760,permit,tcp,host 81.178.23.133,host 194.73.173.153,22
+uk-brs-es02,185,Extended,770,permit,udp,host 195.10.10.11,host 213.120.94.19,domain
+uk-brs-es02,185,Extended,780,permit,udp,host 195.10.10.12,host 213.120.94.19,domain
+uk-brs-es02,185,Extended,790,permit,tcp,host 195.26.45.101,host 195.99.172.189,22
+uk-brs-es02,185,Extended,800,permit,tcp,host 66.212.242.91,host 194.73.173.125,
+uk-brs-es02,185,Extended,810,permit,tcp,193.109.254.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,185,Extended,820,permit,tcp,194.106.220.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,185,Extended,830,permit,tcp,195.245.230.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,185,Extended,840,permit,tcp,212.125.75.0 0.0.0.31,host 194.73.173.125,
+uk-brs-es02,185,Extended,850,permit,tcp,216.82.240.0 0.0.15.255,host 194.73.173.125,
+uk-brs-es02,185,Extended,860,permit,tcp,62.173.108.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,185,Extended,870,permit,tcp,62.173.108.208 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,185,Extended,880,permit,tcp,62.231.131.0 0.0.0.255,host 194.73.173.125,
+uk-brs-es02,185,Extended,890,permit,tcp,85.158.136.0 0.0.7.255,host 194.73.173.125,
+uk-brs-es02,185,Extended,900,permit,tcp,117.120.16.0 0.0.7.255,host 194.73.173.125,
+uk-brs-es02,185,Extended,910,permit,tcp,any,host 194.73.173.125,
+uk-brs-es02,185,Extended,920,permit,tcp,host 212.143.66.156,host 194.73.173.125,
+uk-brs-es02,185,Extended,930,permit,tcp,host 83.244.202.113,host 194.73.173.125,
+uk-brs-es02,185,Extended,940,permit,tcp,host 83.244.222.44,host 194.73.173.125,
+uk-brs-es02,185,Extended,950,permit,tcp,host 62.244.190.66,host 194.73.173.125,
+uk-brs-es02,185,Extended,960,permit,tcp,host 81.168.52.159,host 194.73.173.125,
+uk-brs-es02,185,Extended,970,permit,ip,66.179.104.128 0.0.0.63,host 194.73.173.125,
+uk-brs-es02,185,Extended,980,permit,ip,66.179.21.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,185,Extended,990,permit,ip,80.69.20.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,185,Extended,1000,permit,ip,host 195.26.45.101,host 194.73.173.125,
+uk-brs-es02,185,Extended,1010,permit,ip,66.179.104.128 0.0.0.63,host 194.73.173.199,
+uk-brs-es02,185,Extended,1020,permit,ip,66.179.21.16 0.0.0.15,host 194.73.173.199,
+uk-brs-es02,185,Extended,1030,permit,ip,80.69.20.16 0.0.0.15,host 194.73.173.199,
+uk-brs-es02,185,Extended,1040,permit,ip,host 195.26.45.101,host 194.73.173.199,
+uk-brs-es02,185,Extended,1050,permit,tcp,any,3.173.0 0.0.0.255,www
+uk-brs-es02,185,Extended,1060,permit,tcp,any,3.173.0 0.0.0.255,443
+uk-brs-es02,185,Extended,1070,permit,tcp,any,host 194.73.173.24,8090
+uk-brs-es02,185,Extended,1080,permit,tcp,any,host 194.73.173.66,8090
+uk-brs-es02,185,Extended,1090,permit,tcp,host 217.114.162.248,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,1100,permit,ip,host 213.170.57.210,host 194.73.173.160,
+uk-brs-es02,185,Extended,1110,permit,ip,host 213.170.57.210,host 195.99.172.185,
+uk-brs-es02,185,Extended,1120,permit,ip,host 212.179.145.66,host 194.73.173.160,
+uk-brs-es02,185,Extended,1130,permit,ip,host 212.179.145.66,host 195.99.172.185,
+uk-brs-es02,185,Extended,1140,permit,ip,host 80.179.102.100,host 194.73.173.160,
+uk-brs-es02,185,Extended,1150,permit,ip,host 80.179.102.100,host 195.99.172.185,
+uk-brs-es02,185,Extended,1160,permit,ip,host 80.179.102.110,host 194.73.173.160,
+uk-brs-es02,185,Extended,1170,permit,ip,host 80.179.102.110,host 195.99.172.185,
+uk-brs-es02,185,Extended,1180,permit,ip,host 95.131.184.99,host 194.73.173.160,
+uk-brs-es02,185,Extended,1190,permit,ip,host 95.131.184.99,host 195.99.172.185,
+uk-brs-es02,185,Extended,1200,permit,ip,host 194.73.173.160,host 213.170.57.210,
+uk-brs-es02,185,Extended,1210,permit,ip,host 195.99.172.185,host 213.170.57.210,
+uk-brs-es02,185,Extended,1220,permit,ip,host 194.73.173.160,host 212.179.145.66,
+uk-brs-es02,185,Extended,1230,permit,ip,host 195.99.172.185,host 212.179.145.66,
+uk-brs-es02,185,Extended,1240,permit,ip,host 194.73.173.160,host 80.179.102.100,
+uk-brs-es02,185,Extended,1250,permit,ip,host 195.99.172.185,host 80.179.102.100,
+uk-brs-es02,185,Extended,1260,permit,ip,host 194.73.173.160,host 80.179.102.110,
+uk-brs-es02,185,Extended,1270,permit,ip,host 195.99.172.185,host 80.179.102.110,
+uk-brs-es02,185,Extended,1280,permit,ip,host 194.73.173.160,host 95.131.184.99,
+uk-brs-es02,185,Extended,1290,permit,ip,host 195.99.172.185,host 95.131.184.99,
+uk-brs-es02,185,Extended,1300,permit,udp,host 212.143.66.165,host 194.73.173.84,4569
+uk-brs-es02,185,Extended,1310,permit,udp,host 95.131.184.97,host 194.73.173.84,4569
+uk-brs-es02,185,Extended,1320,permit,udp,host 95.131.184.98,host 194.73.173.84,4569
+uk-brs-es02,185,Extended,1330,permit,udp,host 212.143.66.165,host 194.73.173.83,4569
+uk-brs-es02,185,Extended,1340,permit,udp,host 95.131.184.97,host 194.73.173.83,4569
+uk-brs-es02,185,Extended,1350,permit,udp,host 95.131.184.98,host 194.73.173.83,4569
+uk-brs-es02,185,Extended,1360,permit,udp,host 92.247.8.99,host 194.73.173.83,4569
+uk-brs-es02,185,Extended,1370,permit,udp,host 92.247.8.99,host 194.73.173.84,4569
+uk-brs-es02,185,Extended,1380,permit,udp,host 61.28.184.236,host 194.73.173.83,4569
+uk-brs-es02,185,Extended,1390,permit,udp,host 61.28.184.236,host 194.73.173.84,4569
+uk-brs-es02,185,Extended,1400,permit,tcp,host 213.249.135.38,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,1410,permit,tcp,host 144.178.241.10,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,1420,permit,tcp,host 213.249.135.41,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,1430,permit,tcp,host 193.36.68.36,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,1440,permit,tcp,host 193.36.68.80,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,1450,permit,tcp,217.196.231.0 0.0.0.127,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,1460,permit,tcp,host 81.19.48.69,host 194.73.173.63,
+uk-brs-es02,185,Extended,1470,permit,tcp,host 80.169.33.170,host 194.73.173.63,
+uk-brs-es02,185,Extended,1480,permit,tcp,81.19.62.64 0.0.0.63,host 194.73.173.63,
+uk-brs-es02,185,Extended,1490,permit,tcp,host 62.25.98.127,host 194.73.173.61,
+uk-brs-es02,185,Extended,1500,permit,tcp,host 62.140.207.142,host 194.73.173.34,1415
+uk-brs-es02,185,Extended,1510,permit,tcp,host 93.174.217.142,host 194.73.173.34,1415
+uk-brs-es02,185,Extended,1520,permit,ip,195.92.77.112 0.0.0.15,host 194.73.173.64,
+uk-brs-es02,185,Extended,1530,permit,ip,213.146.135.128 0.0.0.31,host 194.73.173.64,
+uk-brs-es02,185,Extended,1540,permit,ip,80.45.13.32 0.0.0.15,host 194.73.173.64,
+uk-brs-es02,185,Extended,1550,permit,ip,host 91.209.40.4,host 194.73.173.64,
+uk-brs-es02,185,Extended,1560,permit,ip,193.113.132.144 0.0.0.15,host 213.120.94.23,
+uk-brs-es02,185,Extended,1570,permit,ip,193.113.132.144 0.0.0.15,host 213.120.94.28,
+uk-brs-es02,185,Extended,1580,permit,ip,193.120.70.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1590,permit,ip,193.120.70.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1600,permit,ip,193.120.73.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1610,permit,ip,193.120.73.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1620,permit,ip,193.120.102.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1630,permit,ip,193.120.102.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1640,permit,ip,193.120.104.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1650,permit,ip,193.120.104.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1660,permit,ip,213.202.128.0 0.0.63.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1670,permit,ip,213.202.128.0 0.0.63.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1680,permit,ip,194.125.0.0 0.0.127.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1690,permit,ip,194.125.0.0 0.0.127.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1700,permit,ip,212.2.160.0 0.0.31.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1710,permit,ip,212.2.160.0 0.0.31.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1720,permit,ip,212.9.27.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1730,permit,ip,212.9.27.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1740,permit,ip,213.137.0.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1750,permit,ip,213.137.0.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1760,permit,ip,81.149.167.72 0.0.0.7,host 213.120.94.23,
+uk-brs-es02,185,Extended,1770,permit,ip,81.149.167.72 0.0.0.7,host 213.120.94.28,
+uk-brs-es02,185,Extended,1780,permit,ip,78.16.0.0 0.0.255.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1790,permit,ip,78.16.0.0 0.0.255.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1800,permit,ip,193.203.139.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1810,permit,ip,193.203.139.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1820,permit,ip,192.122.222.0 0.0.1.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1830,permit,ip,192.122.222.0 0.0.1.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1840,permit,ip,213.192.0.0 0.31.255.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1850,permit,ip,213.192.0.0 0.31.255.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1860,permit,ip,193.120.18.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1870,permit,ip,193.120.18.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1880,permit,ip,193.203.156.0 0.0.1.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1890,permit,ip,193.203.156.0 0.0.1.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1900,permit,ip,192.122.220.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1910,permit,ip,192.122.220.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1920,permit,ip,192.122.218.0 0.0.0.255,host 213.120.94.23,
+uk-brs-es02,185,Extended,1930,permit,ip,192.122.218.0 0.0.0.255,host 213.120.94.28,
+uk-brs-es02,185,Extended,1940,permit,ip,host 86.43.231.6,host 213.120.94.23,
+uk-brs-es02,185,Extended,1950,permit,ip,host 86.43.231.6,host 213.120.94.28,
+uk-brs-es02,185,Extended,1960,permit,ip,host 81.149.39.83,host 213.120.94.23,
+uk-brs-es02,185,Extended,1970,permit,ip,host 81.149.39.83,host 213.120.94.28,
+uk-brs-es02,185,Extended,1980,permit,tcp,host 195.173.16.34,host 195.99.172.177,
+uk-brs-es02,185,Extended,1990,permit,tcp,host 193.133.31.189,host 195.99.172.177,
+uk-brs-es02,185,Extended,2000,permit,tcp,host 62.254.195.242,host 195.99.172.177,
+uk-brs-es02,185,Extended,2010,permit,tcp,host 62.190.6.5,host 195.99.172.177,
+uk-brs-es02,185,Extended,2020,permit,tcp,host 194.73.101.234,host 195.99.172.177,
+uk-brs-es02,185,Extended,2030,permit,ip,193.189.98.0 0.0.0.255,host 195.99.172.177,
+uk-brs-es02,185,Extended,2040,permit,ip,83.244.147.192 0.0.0.15,host 195.99.172.177,
+uk-brs-es02,185,Extended,2050,permit,tcp,host 193.133.31.189,host 195.99.172.178,22
+uk-brs-es02,185,Extended,2060,permit,tcp,host 83.244.147.194,host 195.99.172.178,22
+uk-brs-es02,185,Extended,2070,permit,tcp,host 82.109.33.194,host 195.99.172.178,22
+uk-brs-es02,185,Extended,2080,permit,tcp,host 82.109.33.194,host 194.73.173.154,22
+uk-brs-es02,185,Extended,2090,permit,tcp,host 62.25.109.163,host 194.73.173.140,443
+uk-brs-es02,185,Extended,2100,permit,tcp,host 62.25.109.163,host 194.73.173.140,www
+uk-brs-es02,185,Extended,2110,permit,tcp,host 84.20.192.244,host 194.73.173.140,443
+uk-brs-es02,185,Extended,2120,permit,tcp,host 210.4.86.17,host 194.73.173.140,443
+uk-brs-es02,185,Extended,2130,permit,tcp,host 213.249.135.41,host 194.73.173.141,
+uk-brs-es02,185,Extended,2140,permit,tcp,host 213.249.135.38,host 194.73.173.141,
+uk-brs-es02,185,Extended,2150,permit,tcp,host 144.178.241.10,host 194.73.173.141,
+uk-brs-es02,185,Extended,2160,permit,tcp,host 193.36.68.36,host 194.73.173.141,
+uk-brs-es02,185,Extended,2170,permit,tcp,host 193.36.68.80,host 194.73.173.141,
+uk-brs-es02,185,Extended,2180,permit,tcp,host 66.135.197.233,host 194.73.173.140,443
+uk-brs-es02,185,Extended,2190,permit,tcp,host 72.47.192.129,host 213.120.94.22,www
+uk-brs-es02,185,Extended,2200,permit,tcp,host 72.47.192.129,host 213.120.94.22,443
+uk-brs-es02,185,Extended,2210,permit,tcp,213.187.162.160 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,185,Extended,2220,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.189,
+uk-brs-es02,185,Extended,2230,permit,tcp,host 62.44.69.131,host 194.73.173.140,
+uk-brs-es02,185,Extended,2240,permit,tcp,host 62.44.69.132,host 194.73.173.140,
+uk-brs-es02,185,Extended,2250,permit,tcp,host 62.44.69.133,host 194.73.173.140,
+uk-brs-es02,185,Extended,2260,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.183,
+uk-brs-es02,185,Extended,2270,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.187,
+uk-brs-es02,185,Extended,2280,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.188,
+uk-brs-es02,185,Extended,2290,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.183,
+uk-brs-es02,185,Extended,2300,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.187,
+uk-brs-es02,185,Extended,2310,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,185,Extended,2320,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.183,
+uk-brs-es02,185,Extended,2330,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.187,
+uk-brs-es02,185,Extended,2340,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.188,
+uk-brs-es02,185,Extended,2350,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.183,
+uk-brs-es02,185,Extended,2360,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.187,
+uk-brs-es02,185,Extended,2370,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.188,
+uk-brs-es02,185,Extended,2380,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.183,
+uk-brs-es02,185,Extended,2390,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.187,
+uk-brs-es02,185,Extended,2400,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,185,Extended,2410,permit,tcp,host 14.47.219.28,host 195.99.172.184,
+uk-brs-es02,185,Extended,2420,permit,tcp,host 144.148.241.10,host 195.99.172.184,
+uk-brs-es02,185,Extended,2430,permit,tcp,host 193.36.68.36,host 195.99.172.184,
+uk-brs-es02,185,Extended,2440,permit,tcp,host 193.36.68.80,host 195.99.172.184,
+uk-brs-es02,185,Extended,2450,permit,tcp,host 212.187.162.162,host 195.99.172.184,
+uk-brs-es02,185,Extended,2460,permit,tcp,host 213.249.135.38,host 195.99.172.184,
+uk-brs-es02,185,Extended,2470,permit,tcp,host 81.178.195.196,host 195.99.172.184,
+uk-brs-es02,185,Extended,2480,permit,tcp,213.48.117.160 0.0.0.31,host 194.73.173.140,
+uk-brs-es02,185,Extended,2490,permit,tcp,host 66.249.73.109,host 194.73.173.138,
+uk-brs-es02,185,Extended,2500,permit,tcp,host 66.249.73.109,host 194.73.173.139,
+uk-brs-es02,185,Extended,2510,permit,tcp,host 85.223.209.2,host 194.73.173.91,
+uk-brs-es02,185,Extended,2520,permit,tcp,host 85.223.209.13,host 194.73.173.91,
+uk-brs-es02,185,Extended,2530,permit,tcp,host 217.196.231.104,host 194.73.173.91,
+uk-brs-es02,185,Extended,2540,permit,tcp,host 144.178.241.10,host 195.99.172.184,
+uk-brs-es02,185,Extended,2550,permit,tcp,host 135.196.6.178,host 195.99.172.184,
+uk-brs-es02,185,Extended,2560,permit,ip,host 212.187.162.162,172.176 0.0.0.15,
+uk-brs-es02,185,Extended,2570,permit,ip,host 212.187.162.162,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,2580,permit,ip,host 212.187.162.162,host 213.120.94.27,
+uk-brs-es02,185,Extended,2590,permit,ip,213.121.187.192 0.0.0.63,172.176 0.0.0.15,
+uk-brs-es02,185,Extended,2600,permit,ip,213.121.187.192 0.0.0.63,3.173.0 0.0.0.255,
+uk-brs-es02,185,Extended,2610,permit,ip,213.121.187.192 0.0.0.63,host 213.120.94.27,
+uk-brs-es02,185,Extended,2620,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,www
+uk-brs-es02,185,Extended,2630,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,709
+uk-brs-es02,185,Extended,2640,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,17001
+uk-brs-es02,185,Extended,2650,permit,tcp,host 61.194.56.31,host 194.73.173.155,
+uk-brs-es02,185,Extended,2660,permit,tcp,host 211.174.110.248,host 194.73.173.155,
+uk-brs-es02,185,Extended,2670,permit,tcp,host 81.149.34.75,host 194.73.173.155,
+uk-brs-es02,185,Extended,2680,permit,tcp,host 82.152.37.211,host 194.73.173.155,
+uk-brs-es02,185,Extended,2690,permit,tcp,host 66.249.73.109,host 194.73.173.138,www
+uk-brs-es02,185,Extended,2700,permit,tcp,host 66.249.73.109,host 194.73.173.138,443
+uk-brs-es02,185,Extended,2710,permit,tcp,host 66.249.73.109,host 194.73.173.139,www
+uk-brs-es02,185,Extended,2720,permit,tcp,host 66.249.73.109,host 194.73.173.139,443
+uk-brs-es02,185,Extended,2730,permit,ip,any,host 194.73.173.134,
+uk-brs-es02,185,Extended,2740,permit,tcp,any,173.200 0.0.0.7,www
+uk-brs-es02,185,Extended,2750,permit,tcp,any,173.200 0.0.0.7,443
+uk-brs-es02,185,Extended,2760,permit,tcp,any,173.200 0.0.0.7,smtp
+uk-brs-es02,185,Extended,2770,permit,tcp,any,173.200 0.0.0.7,465
+uk-brs-es02,185,Extended,2780,permit,tcp,any,173.200 0.0.0.7,5061
+uk-brs-es02,185,Extended,2790,permit,tcp,any,host 194.73.173.95,smtp
+uk-brs-es02,185,Extended,2800,permit,tcp,host 207.111.236.2,host 194.73.173.95,
+uk-brs-es02,185,Extended,2810,permit,tcp,host 207.111.236.23,host 194.73.173.95,
+uk-brs-es02,185,Extended,2820,permit,ip,213.120.94.0 0.0.0.15,any,
+uk-brs-es02,185,Extended,2830,deny,ip,any,any,
+uk-brs-es02,186,Extended,10,permit,udp,0.0.0.0 255.255.255.248,host 224.0.0.2,1985
+uk-brs-es02,186,Extended,20,permit,ip,any,host 213.120.94.19,
+uk-brs-es02,186,Extended,30,permit,ip,any,host 213.120.94.20,
+uk-brs-es02,186,Extended,40,permit,ip,any,host 213.120.94.21,
+uk-brs-es02,186,Extended,50,permit,ip,any,host 213.120.94.24,
+uk-brs-es02,186,Extended,60,permit,ip,any,host 213.120.94.22,
+uk-brs-es02,186,Extended,70,permit,ip,any,host 194.73.173.254,
+uk-brs-es02,186,Extended,80,permit,ip,any,host 195.99.172.179,
+uk-brs-es02,186,Extended,90,permit,ip,any,host 194.73.173.51,
+uk-brs-es02,186,Extended,100,permit,ip,any,host 213.120.94.26,
+uk-brs-es02,186,Extended,110,permit,ip,any,host 194.73.173.159,
+uk-brs-es02,186,Extended,120,permit,udp,any,host 213.120.94.19,isakmp
+uk-brs-es02,186,Extended,130,permit,udp,any,host 213.120.94.19,18234
+uk-brs-es02,186,Extended,140,permit,udp,any,host 213.120.94.19,2746
+uk-brs-es02,186,Extended,150,permit,esp,any,host 213.120.94.19,
+uk-brs-es02,186,Extended,160,permit,udp,any,host 213.120.94.19,259
+uk-brs-es02,186,Extended,170,permit,udp,any,host 194.73.173.132,isakmp
+uk-brs-es02,186,Extended,180,permit,udp,any,host 194.73.173.132,non500-isakmp
+uk-brs-es02,186,Extended,190,permit,esp,any,host 194.73.173.132,
+uk-brs-es02,186,Extended,200,permit,tcp,any,host 194.73.173.132,8080
+uk-brs-es02,186,Extended,210,permit,tcp,any,host 194.73.173.132,
+uk-brs-es02,186,Extended,220,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.184,ftp-data
+uk-brs-es02,186,Extended,230,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.184,ftp
+uk-brs-es02,186,Extended,240,permit,tcp,host 85.223.209.13,host 194.73.173.185,10302
+uk-brs-es02,186,Extended,250,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.185,10302
+uk-brs-es02,186,Extended,260,permit,tcp,host 217.114.162.242,host 212.140.174.215,10275
+uk-brs-es02,186,Extended,270,permit,ip,host 150.101.188.208,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,280,permit,ip,212.122.168.160 0.0.0.31,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,290,permit,ip,host 213.122.168.165,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,300,permit,ip,87.117.218.64 0.0.0.63,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,310,permit,tcp,host 206.225.50.35,host 213.120.94.22,9443
+uk-brs-es02,186,Extended,320,permit,tcp,host 12.47.219.28,host 213.120.94.24,1955
+uk-brs-es02,186,Extended,330,permit,tcp,any,172.176 0.0.0.15,443
+uk-brs-es02,186,Extended,340,permit,tcp,any,172.176 0.0.0.15,www
+uk-brs-es02,186,Extended,350,permit,tcp,any,host 213.120.94.26,443
+uk-brs-es02,186,Extended,360,permit,tcp,any,host 213.120.94.26,www
+uk-brs-es02,186,Extended,370,permit,tcp,any,host 213.120.94.27,443
+uk-brs-es02,186,Extended,380,permit,tcp,any,host 213.120.94.27,www
+uk-brs-es02,186,Extended,390,permit,tcp,any,host 213.120.94.27,8001
+uk-brs-es02,186,Extended,400,permit,tcp,any,host 195.99.172.187,8001
+uk-brs-es02,186,Extended,410,permit,tcp,any,host 213.120.94.28,443
+uk-brs-es02,186,Extended,420,permit,tcp,any,host 213.120.94.28,www
+uk-brs-es02,186,Extended,430,permit,tcp,any,host 213.120.94.30,www
+uk-brs-es02,186,Extended,440,permit,tcp,any,120.94.0 0.0.0.31,443
+uk-brs-es02,186,Extended,450,permit,tcp,any,120.94.0 0.0.0.31,www
+uk-brs-es02,186,Extended,460,permit,tcp,any,172.176 0.0.0.15,443
+uk-brs-es02,186,Extended,470,permit,tcp,any,172.176 0.0.0.15,www
+uk-brs-es02,186,Extended,480,permit,udp,host 194.72.6.51,host 213.120.94.21,domain
+uk-brs-es02,186,Extended,490,permit,udp,host 194.72.6.57,host 213.120.94.21,domain
+uk-brs-es02,186,Extended,500,permit,tcp,host 62.172.215.182,any,ftp
+uk-brs-es02,186,Extended,510,permit,tcp,213.48.117.160 0.0.0.31,host 194.73.173.140,www
+uk-brs-es02,186,Extended,520,permit,tcp,host 62.44.69.131,host 194.73.173.140,8099
+uk-brs-es02,186,Extended,530,permit,tcp,host 62.44.69.132,host 194.73.173.140,8099
+uk-brs-es02,186,Extended,540,permit,tcp,host 62.44.69.133,host 194.73.173.140,8099
+uk-brs-es02,186,Extended,550,permit,tcp,host 62.140.207.152,host 213.120.94.22,443
+uk-brs-es02,186,Extended,560,permit,tcp,host 62.140.207.153,host 213.120.94.22,443
+uk-brs-es02,186,Extended,570,permit,tcp,host 62.140.207.154,host 213.120.94.22,443
+uk-brs-es02,186,Extended,580,permit,tcp,host 80.5.176.119,host 194.73.173.140,www
+uk-brs-es02,186,Extended,590,permit,tcp,195.10.10.0 0.0.0.255,173.144 0.0.0.7,
+uk-brs-es02,186,Extended,600,permit,tcp,195.10.10.0 0.0.0.255,host 194.73.173.152,
+uk-brs-es02,186,Extended,610,permit,tcp,195.10.10.0 0.0.0.255,host 194.73.173.153,
+uk-brs-es02,186,Extended,620,permit,udp,195.10.10.0 0.0.0.255,173.144 0.0.0.7,
+uk-brs-es02,186,Extended,630,permit,udp,195.10.10.0 0.0.0.255,host 194.73.173.152,
+uk-brs-es02,186,Extended,640,permit,udp,195.10.10.0 0.0.0.255,host 194.73.173.153,
+uk-brs-es02,186,Extended,650,permit,tcp,host 195.10.6.237,173.144 0.0.0.7,
+uk-brs-es02,186,Extended,660,permit,tcp,host 195.10.6.237,host 194.73.173.152,
+uk-brs-es02,186,Extended,670,permit,tcp,host 195.10.6.237,host 194.73.173.153,
+uk-brs-es02,186,Extended,680,permit,udp,host 195.10.6.237,173.144 0.0.0.7,
+uk-brs-es02,186,Extended,690,permit,udp,host 195.10.6.237,host 194.73.173.152,
+uk-brs-es02,186,Extended,700,permit,udp,host 195.10.6.237,host 194.73.173.153,
+uk-brs-es02,186,Extended,710,permit,tcp,host 193.109.197.44,173.144 0.0.0.7,22
+uk-brs-es02,186,Extended,720,permit,tcp,host 193.109.197.44,host 194.73.173.152,22
+uk-brs-es02,186,Extended,730,permit,tcp,host 193.109.197.44,host 194.73.173.153,22
+uk-brs-es02,186,Extended,740,permit,tcp,host 81.178.23.133,173.144 0.0.0.7,22
+uk-brs-es02,186,Extended,750,permit,tcp,host 81.178.23.133,host 194.73.173.152,22
+uk-brs-es02,186,Extended,760,permit,tcp,host 81.178.23.133,host 194.73.173.153,22
+uk-brs-es02,186,Extended,770,permit,udp,host 195.10.10.11,host 213.120.94.19,domain
+uk-brs-es02,186,Extended,780,permit,udp,host 195.10.10.12,host 213.120.94.19,domain
+uk-brs-es02,186,Extended,790,permit,tcp,host 195.26.45.101,host 195.99.172.189,22
+uk-brs-es02,186,Extended,800,permit,tcp,host 66.212.242.91,host 194.73.173.125,
+uk-brs-es02,186,Extended,810,permit,tcp,193.109.254.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,186,Extended,820,permit,tcp,194.106.220.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,186,Extended,830,permit,tcp,195.245.230.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,186,Extended,840,permit,tcp,212.125.75.0 0.0.0.31,host 194.73.173.125,
+uk-brs-es02,186,Extended,850,permit,tcp,216.82.240.0 0.0.15.255,host 194.73.173.125,
+uk-brs-es02,186,Extended,860,permit,tcp,62.173.108.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,186,Extended,870,permit,tcp,62.173.108.208 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,186,Extended,880,permit,tcp,62.231.131.0 0.0.0.255,host 194.73.173.125,
+uk-brs-es02,186,Extended,890,permit,tcp,85.158.136.0 0.0.7.255,host 194.73.173.125,
+uk-brs-es02,186,Extended,900,permit,tcp,117.120.16.0 0.0.7.255,host 194.73.173.125,
+uk-brs-es02,186,Extended,910,permit,tcp,any,host 194.73.173.125,
+uk-brs-es02,186,Extended,920,permit,tcp,host 212.143.66.156,host 194.73.173.125,
+uk-brs-es02,186,Extended,930,permit,tcp,host 83.244.202.113,host 194.73.173.125,
+uk-brs-es02,186,Extended,940,permit,tcp,host 83.244.222.44,host 194.73.173.125,
+uk-brs-es02,186,Extended,950,permit,tcp,host 62.244.190.66,host 194.73.173.125,
+uk-brs-es02,186,Extended,960,permit,tcp,host 81.168.52.159,host 194.73.173.125,
+uk-brs-es02,186,Extended,970,permit,ip,66.179.104.128 0.0.0.63,host 194.73.173.125,
+uk-brs-es02,186,Extended,980,permit,ip,66.179.21.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,186,Extended,990,permit,ip,80.69.20.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,186,Extended,1000,permit,ip,host 195.26.45.101,host 194.73.173.125,
+uk-brs-es02,186,Extended,1010,permit,ip,66.179.104.128 0.0.0.63,host 194.73.173.199,
+uk-brs-es02,186,Extended,1020,permit,ip,66.179.21.16 0.0.0.15,host 194.73.173.199,
+uk-brs-es02,186,Extended,1030,permit,ip,80.69.20.16 0.0.0.15,host 194.73.173.199,
+uk-brs-es02,186,Extended,1040,permit,ip,host 195.26.45.101,host 194.73.173.199,
+uk-brs-es02,186,Extended,1050,permit,tcp,any,3.173.0 0.0.0.255,www
+uk-brs-es02,186,Extended,1060,permit,tcp,any,3.173.0 0.0.0.255,443
+uk-brs-es02,186,Extended,1070,permit,tcp,any,host 194.73.173.24,8090
+uk-brs-es02,186,Extended,1080,permit,tcp,any,host 194.73.173.66,8090
+uk-brs-es02,186,Extended,1090,permit,tcp,host 217.114.162.248,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,1100,permit,ip,host 213.170.57.210,host 194.73.173.160,
+uk-brs-es02,186,Extended,1110,permit,ip,host 213.170.57.210,host 195.99.172.185,
+uk-brs-es02,186,Extended,1120,permit,ip,host 212.179.145.66,host 194.73.173.160,
+uk-brs-es02,186,Extended,1130,permit,ip,host 212.179.145.66,host 195.99.172.185,
+uk-brs-es02,186,Extended,1140,permit,ip,host 80.179.102.100,host 194.73.173.160,
+uk-brs-es02,186,Extended,1150,permit,ip,host 80.179.102.100,host 195.99.172.185,
+uk-brs-es02,186,Extended,1160,permit,ip,host 80.179.102.110,host 194.73.173.160,
+uk-brs-es02,186,Extended,1170,permit,ip,host 80.179.102.110,host 195.99.172.185,
+uk-brs-es02,186,Extended,1180,permit,ip,host 95.131.184.99,host 194.73.173.160,
+uk-brs-es02,186,Extended,1190,permit,ip,host 95.131.184.99,host 195.99.172.185,
+uk-brs-es02,186,Extended,1200,permit,ip,host 194.73.173.160,host 213.170.57.210,
+uk-brs-es02,186,Extended,1210,permit,ip,host 195.99.172.185,host 213.170.57.210,
+uk-brs-es02,186,Extended,1220,permit,ip,host 194.73.173.160,host 212.179.145.66,
+uk-brs-es02,186,Extended,1230,permit,ip,host 195.99.172.185,host 212.179.145.66,
+uk-brs-es02,186,Extended,1240,permit,ip,host 194.73.173.160,host 80.179.102.100,
+uk-brs-es02,186,Extended,1250,permit,ip,host 195.99.172.185,host 80.179.102.100,
+uk-brs-es02,186,Extended,1260,permit,ip,host 194.73.173.160,host 80.179.102.110,
+uk-brs-es02,186,Extended,1270,permit,ip,host 195.99.172.185,host 80.179.102.110,
+uk-brs-es02,186,Extended,1280,permit,ip,host 194.73.173.160,host 95.131.184.99,
+uk-brs-es02,186,Extended,1290,permit,ip,host 195.99.172.185,host 95.131.184.99,
+uk-brs-es02,186,Extended,1300,permit,udp,host 212.143.66.165,host 194.73.173.84,4569
+uk-brs-es02,186,Extended,1310,permit,udp,host 95.131.184.97,host 194.73.173.84,4569
+uk-brs-es02,186,Extended,1320,permit,udp,host 95.131.184.98,host 194.73.173.84,4569
+uk-brs-es02,186,Extended,1330,permit,udp,host 212.143.66.165,host 194.73.173.83,4569
+uk-brs-es02,186,Extended,1340,permit,udp,host 95.131.184.97,host 194.73.173.83,4569
+uk-brs-es02,186,Extended,1350,permit,udp,host 95.131.184.98,host 194.73.173.83,4569
+uk-brs-es02,186,Extended,1360,permit,udp,host 92.247.8.99,host 194.73.173.83,4569
+uk-brs-es02,186,Extended,1370,permit,udp,host 92.247.8.99,host 194.73.173.84,4569
+uk-brs-es02,186,Extended,1380,permit,udp,host 61.28.184.236,host 194.73.173.83,4569
+uk-brs-es02,186,Extended,1390,permit,udp,host 61.28.184.236,host 194.73.173.84,4569
+uk-brs-es02,186,Extended,1400,permit,tcp,host 213.249.135.38,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,1410,permit,tcp,host 144.178.241.10,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,1420,permit,tcp,host 213.249.135.41,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,1430,permit,tcp,host 193.36.68.36,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,1440,permit,tcp,host 193.36.68.80,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,1450,permit,tcp,217.196.231.0 0.0.0.127,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,1460,permit,tcp,host 81.19.48.69,host 194.73.173.63,
+uk-brs-es02,186,Extended,1470,permit,tcp,host 80.169.33.170,host 194.73.173.63,
+uk-brs-es02,186,Extended,1480,permit,tcp,81.19.62.64 0.0.0.63,host 194.73.173.63,
+uk-brs-es02,186,Extended,1490,permit,tcp,host 62.25.98.127,host 194.73.173.61,
+uk-brs-es02,186,Extended,1500,permit,tcp,host 62.140.207.142,host 194.73.173.34,1415
+uk-brs-es02,186,Extended,1510,permit,tcp,host 93.174.217.142,host 194.73.173.34,1415
+uk-brs-es02,186,Extended,1520,permit,ip,195.92.77.112 0.0.0.15,host 194.73.173.64,
+uk-brs-es02,186,Extended,1530,permit,ip,213.146.135.128 0.0.0.31,host 194.73.173.64,
+uk-brs-es02,186,Extended,1540,permit,ip,80.45.13.32 0.0.0.15,host 194.73.173.64,
+uk-brs-es02,186,Extended,1550,permit,ip,host 91.209.40.4,host 194.73.173.64,
+uk-brs-es02,186,Extended,1560,permit,ip,any,host 213.120.94.23,
+uk-brs-es02,186,Extended,1570,permit,ip,any,host 213.120.94.28,
+uk-brs-es02,186,Extended,1580,permit,tcp,host 195.173.16.34,host 195.99.172.177,
+uk-brs-es02,186,Extended,1590,permit,tcp,host 193.133.31.189,host 195.99.172.177,
+uk-brs-es02,186,Extended,1600,permit,tcp,host 62.254.195.242,host 195.99.172.177,
+uk-brs-es02,186,Extended,1610,permit,tcp,host 62.190.6.5,host 195.99.172.177,
+uk-brs-es02,186,Extended,1620,permit,tcp,host 194.73.101.234,host 195.99.172.177,
+uk-brs-es02,186,Extended,1630,permit,ip,193.189.98.0 0.0.0.255,host 195.99.172.177,
+uk-brs-es02,186,Extended,1640,permit,ip,83.244.147.192 0.0.0.15,host 195.99.172.177,
+uk-brs-es02,186,Extended,1650,permit,tcp,host 193.133.31.189,host 195.99.172.178,22
+uk-brs-es02,186,Extended,1660,permit,tcp,host 83.244.147.194,host 195.99.172.178,22
+uk-brs-es02,186,Extended,1670,permit,tcp,host 82.109.33.194,host 195.99.172.178,22
+uk-brs-es02,186,Extended,1680,permit,tcp,host 82.109.33.194,host 194.73.173.154,22
+uk-brs-es02,186,Extended,1690,permit,tcp,host 62.25.109.163,host 194.73.173.140,443
+uk-brs-es02,186,Extended,1700,permit,tcp,host 62.25.109.163,host 194.73.173.140,www
+uk-brs-es02,186,Extended,1710,permit,tcp,host 84.20.192.244,host 194.73.173.140,443
+uk-brs-es02,186,Extended,1720,permit,tcp,host 210.4.86.17,host 194.73.173.140,443
+uk-brs-es02,186,Extended,1730,permit,tcp,host 213.249.135.41,host 194.73.173.141,
+uk-brs-es02,186,Extended,1740,permit,tcp,host 213.249.135.38,host 194.73.173.141,
+uk-brs-es02,186,Extended,1750,permit,tcp,host 144.178.241.10,host 194.73.173.141,
+uk-brs-es02,186,Extended,1760,permit,tcp,host 193.36.68.36,host 194.73.173.141,
+uk-brs-es02,186,Extended,1770,permit,tcp,host 193.36.68.80,host 194.73.173.141,
+uk-brs-es02,186,Extended,1780,permit,tcp,host 66.135.197.233,host 194.73.173.140,443
+uk-brs-es02,186,Extended,1790,permit,tcp,host 72.47.192.129,host 213.120.94.22,www
+uk-brs-es02,186,Extended,1800,permit,tcp,host 72.47.192.129,host 213.120.94.22,443
+uk-brs-es02,186,Extended,1810,permit,tcp,213.187.162.160 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,186,Extended,1820,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.189,
+uk-brs-es02,186,Extended,1830,permit,tcp,host 62.44.69.131,host 194.73.173.140,
+uk-brs-es02,186,Extended,1840,permit,tcp,host 62.44.69.132,host 194.73.173.140,
+uk-brs-es02,186,Extended,1850,permit,tcp,host 62.44.69.133,host 194.73.173.140,
+uk-brs-es02,186,Extended,1860,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.183,
+uk-brs-es02,186,Extended,1870,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.187,
+uk-brs-es02,186,Extended,1880,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.188,
+uk-brs-es02,186,Extended,1890,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.183,
+uk-brs-es02,186,Extended,1900,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.187,
+uk-brs-es02,186,Extended,1910,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,186,Extended,1920,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.183,
+uk-brs-es02,186,Extended,1930,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.187,
+uk-brs-es02,186,Extended,1940,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.188,
+uk-brs-es02,186,Extended,1950,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.183,
+uk-brs-es02,186,Extended,1960,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.187,
+uk-brs-es02,186,Extended,1970,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.188,
+uk-brs-es02,186,Extended,1980,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.183,
+uk-brs-es02,186,Extended,1990,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.187,
+uk-brs-es02,186,Extended,2000,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,186,Extended,2010,permit,tcp,host 14.47.219.28,host 195.99.172.184,
+uk-brs-es02,186,Extended,2020,permit,tcp,host 144.148.241.10,host 195.99.172.184,
+uk-brs-es02,186,Extended,2030,permit,tcp,host 193.36.68.36,host 195.99.172.184,
+uk-brs-es02,186,Extended,2040,permit,tcp,host 193.36.68.80,host 195.99.172.184,
+uk-brs-es02,186,Extended,2050,permit,tcp,host 212.187.162.162,host 195.99.172.184,
+uk-brs-es02,186,Extended,2060,permit,tcp,host 213.249.135.38,host 195.99.172.184,
+uk-brs-es02,186,Extended,2070,permit,tcp,host 81.178.195.196,host 195.99.172.184,
+uk-brs-es02,186,Extended,2080,permit,tcp,213.48.117.160 0.0.0.31,host 194.73.173.140,
+uk-brs-es02,186,Extended,2090,permit,tcp,host 66.249.73.109,host 194.73.173.138,
+uk-brs-es02,186,Extended,2100,permit,tcp,host 66.249.73.109,host 194.73.173.139,
+uk-brs-es02,186,Extended,2110,permit,tcp,host 85.223.209.2,host 194.73.173.91,
+uk-brs-es02,186,Extended,2120,permit,tcp,host 85.223.209.13,host 194.73.173.91,
+uk-brs-es02,186,Extended,2130,permit,tcp,host 217.196.231.104,host 194.73.173.91,
+uk-brs-es02,186,Extended,2140,permit,tcp,host 144.178.241.10,host 195.99.172.184,
+uk-brs-es02,186,Extended,2150,permit,tcp,host 135.196.6.178,host 195.99.172.184,
+uk-brs-es02,186,Extended,2160,permit,ip,host 212.187.162.162,172.176 0.0.0.15,
+uk-brs-es02,186,Extended,2170,permit,ip,host 212.187.162.162,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,2180,permit,ip,host 212.187.162.162,host 213.120.94.27,
+uk-brs-es02,186,Extended,2190,permit,ip,213.121.187.192 0.0.0.63,172.176 0.0.0.15,
+uk-brs-es02,186,Extended,2200,permit,ip,213.121.187.192 0.0.0.63,3.173.0 0.0.0.255,
+uk-brs-es02,186,Extended,2210,permit,ip,213.121.187.192 0.0.0.63,host 213.120.94.27,
+uk-brs-es02,186,Extended,2220,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,www
+uk-brs-es02,186,Extended,2230,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,709
+uk-brs-es02,186,Extended,2240,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,17001
+uk-brs-es02,186,Extended,2250,permit,tcp,host 61.194.56.31,host 194.73.173.155,
+uk-brs-es02,186,Extended,2260,permit,tcp,host 211.174.110.248,host 194.73.173.155,
+uk-brs-es02,186,Extended,2270,permit,tcp,host 81.149.34.75,host 194.73.173.155,
+uk-brs-es02,186,Extended,2280,permit,tcp,host 82.152.37.211,host 194.73.173.155,
+uk-brs-es02,186,Extended,2290,permit,tcp,host 66.249.73.109,host 194.73.173.138,www
+uk-brs-es02,186,Extended,2300,permit,tcp,host 66.249.73.109,host 194.73.173.138,443
+uk-brs-es02,186,Extended,2310,permit,tcp,host 66.249.73.109,host 194.73.173.139,www
+uk-brs-es02,186,Extended,2320,permit,tcp,host 66.249.73.109,host 194.73.173.139,443
+uk-brs-es02,186,Extended,2330,permit,ip,any,host 194.73.173.134,
+uk-brs-es02,186,Extended,2340,permit,tcp,any,173.200 0.0.0.7,www
+uk-brs-es02,186,Extended,2350,permit,tcp,any,173.200 0.0.0.7,443
+uk-brs-es02,186,Extended,2360,permit,tcp,any,173.200 0.0.0.7,smtp
+uk-brs-es02,186,Extended,2370,permit,tcp,any,173.200 0.0.0.7,465
+uk-brs-es02,186,Extended,2380,permit,tcp,any,173.200 0.0.0.7,5061
+uk-brs-es02,186,Extended,2390,permit,tcp,any,host 194.73.173.95,smtp
+uk-brs-es02,186,Extended,2400,permit,tcp,host 207.111.236.2,host 194.73.173.95,
+uk-brs-es02,186,Extended,2410,permit,tcp,host 207.111.236.23,host 194.73.173.95,
+uk-brs-es02,186,Extended,2420,permit,ip,213.120.94.0 0.0.0.15,any,
+uk-brs-es02,186,Extended,2430,deny,ip,any,any,
+uk-brs-es02,187,Extended,10,permit,udp,0.0.0.0 255.255.255.248,host 224.0.0.2,1985
+uk-brs-es02,187,Extended,20,permit,ip,any,host 213.120.94.19,
+uk-brs-es02,187,Extended,30,permit,ip,any,host 213.120.94.20,
+uk-brs-es02,187,Extended,40,permit,ip,any,host 213.120.94.21,
+uk-brs-es02,187,Extended,50,permit,ip,any,host 213.120.94.24,
+uk-brs-es02,187,Extended,60,permit,ip,any,host 213.120.94.22,
+uk-brs-es02,187,Extended,70,permit,ip,any,host 194.73.173.254,
+uk-brs-es02,187,Extended,80,permit,ip,any,host 195.99.172.179,
+uk-brs-es02,187,Extended,90,permit,ip,any,host 194.73.173.51,
+uk-brs-es02,187,Extended,100,permit,ip,any,host 213.120.94.26,
+uk-brs-es02,187,Extended,110,permit,ip,any,host 194.73.173.159,
+uk-brs-es02,187,Extended,120,permit,ip,any,host 194.73.173.205,
+uk-brs-es02,187,Extended,130,permit,udp,any,host 213.120.94.19,isakmp
+uk-brs-es02,187,Extended,140,permit,udp,any,host 213.120.94.19,18234
+uk-brs-es02,187,Extended,150,permit,udp,any,host 213.120.94.19,2746
+uk-brs-es02,187,Extended,160,permit,esp,any,host 213.120.94.19,
+uk-brs-es02,187,Extended,170,permit,udp,any,host 213.120.94.19,259
+uk-brs-es02,187,Extended,180,permit,udp,any,host 194.73.173.132,isakmp
+uk-brs-es02,187,Extended,190,permit,udp,any,host 194.73.173.132,non500-isakmp
+uk-brs-es02,187,Extended,200,permit,esp,any,host 194.73.173.132,
+uk-brs-es02,187,Extended,210,permit,tcp,any,host 194.73.173.132,8080
+uk-brs-es02,187,Extended,220,permit,tcp,any,host 194.73.173.132,
+uk-brs-es02,187,Extended,230,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.184,ftp-data
+uk-brs-es02,187,Extended,240,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.184,ftp
+uk-brs-es02,187,Extended,250,permit,tcp,host 85.223.209.13,host 194.73.173.185,10302
+uk-brs-es02,187,Extended,260,permit,tcp,217.196.231.0 0.0.0.127,host 194.73.173.185,10302
+uk-brs-es02,187,Extended,270,permit,tcp,host 217.114.162.242,host 212.140.174.215,10275
+uk-brs-es02,187,Extended,280,permit,ip,host 150.101.188.208,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,290,permit,ip,212.122.168.160 0.0.0.31,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,300,permit,ip,host 213.122.168.165,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,310,permit,ip,87.117.218.64 0.0.0.63,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,320,permit,tcp,host 206.225.50.35,host 213.120.94.22,9443
+uk-brs-es02,187,Extended,330,permit,tcp,host 12.47.219.28,host 213.120.94.24,1955
+uk-brs-es02,187,Extended,340,permit,tcp,any,172.176 0.0.0.15,443
+uk-brs-es02,187,Extended,350,permit,tcp,any,172.176 0.0.0.15,www
+uk-brs-es02,187,Extended,360,permit,tcp,any,host 213.120.94.26,443
+uk-brs-es02,187,Extended,370,permit,tcp,any,host 213.120.94.26,www
+uk-brs-es02,187,Extended,380,permit,tcp,any,host 213.120.94.27,443
+uk-brs-es02,187,Extended,390,permit,tcp,any,host 213.120.94.27,www
+uk-brs-es02,187,Extended,400,permit,tcp,any,host 213.120.94.27,8001
+uk-brs-es02,187,Extended,410,permit,tcp,any,host 195.99.172.187,8001
+uk-brs-es02,187,Extended,420,permit,tcp,any,host 213.120.94.28,443
+uk-brs-es02,187,Extended,430,permit,tcp,any,host 213.120.94.28,www
+uk-brs-es02,187,Extended,440,permit,tcp,any,host 213.120.94.30,www
+uk-brs-es02,187,Extended,450,permit,tcp,any,120.94.0 0.0.0.31,443
+uk-brs-es02,187,Extended,460,permit,tcp,any,120.94.0 0.0.0.31,www
+uk-brs-es02,187,Extended,470,permit,tcp,any,172.176 0.0.0.15,443
+uk-brs-es02,187,Extended,480,permit,tcp,any,172.176 0.0.0.15,www
+uk-brs-es02,187,Extended,490,permit,udp,host 194.72.6.51,host 213.120.94.21,domain
+uk-brs-es02,187,Extended,500,permit,udp,host 194.72.6.57,host 213.120.94.21,domain
+uk-brs-es02,187,Extended,510,permit,tcp,host 62.172.215.182,any,ftp
+uk-brs-es02,187,Extended,520,permit,tcp,213.48.117.160 0.0.0.31,host 194.73.173.140,www
+uk-brs-es02,187,Extended,530,permit,tcp,host 62.44.69.131,host 194.73.173.140,8099
+uk-brs-es02,187,Extended,540,permit,tcp,host 62.44.69.132,host 194.73.173.140,8099
+uk-brs-es02,187,Extended,550,permit,tcp,host 62.44.69.133,host 194.73.173.140,8099
+uk-brs-es02,187,Extended,560,permit,tcp,host 62.140.207.152,host 213.120.94.22,443
+uk-brs-es02,187,Extended,570,permit,tcp,host 62.140.207.153,host 213.120.94.22,443
+uk-brs-es02,187,Extended,580,permit,tcp,host 62.140.207.154,host 213.120.94.22,443
+uk-brs-es02,187,Extended,590,permit,tcp,host 80.5.176.119,host 194.73.173.140,www
+uk-brs-es02,187,Extended,600,permit,tcp,195.10.10.0 0.0.0.255,173.144 0.0.0.7,
+uk-brs-es02,187,Extended,610,permit,tcp,195.10.10.0 0.0.0.255,host 194.73.173.152,
+uk-brs-es02,187,Extended,620,permit,tcp,195.10.10.0 0.0.0.255,host 194.73.173.153,
+uk-brs-es02,187,Extended,630,permit,udp,195.10.10.0 0.0.0.255,173.144 0.0.0.7,
+uk-brs-es02,187,Extended,640,permit,udp,195.10.10.0 0.0.0.255,host 194.73.173.152,
+uk-brs-es02,187,Extended,650,permit,udp,195.10.10.0 0.0.0.255,host 194.73.173.153,
+uk-brs-es02,187,Extended,660,permit,tcp,host 195.10.6.237,173.144 0.0.0.7,
+uk-brs-es02,187,Extended,670,permit,tcp,host 195.10.6.237,host 194.73.173.152,
+uk-brs-es02,187,Extended,680,permit,tcp,host 195.10.6.237,host 194.73.173.153,
+uk-brs-es02,187,Extended,690,permit,udp,host 195.10.6.237,173.144 0.0.0.7,
+uk-brs-es02,187,Extended,700,permit,udp,host 195.10.6.237,host 194.73.173.152,
+uk-brs-es02,187,Extended,710,permit,udp,host 195.10.6.237,host 194.73.173.153,
+uk-brs-es02,187,Extended,720,permit,tcp,host 193.109.197.44,173.144 0.0.0.7,22
+uk-brs-es02,187,Extended,730,permit,tcp,host 193.109.197.44,host 194.73.173.152,22
+uk-brs-es02,187,Extended,740,permit,tcp,host 193.109.197.44,host 194.73.173.153,22
+uk-brs-es02,187,Extended,750,permit,tcp,host 81.178.23.133,173.144 0.0.0.7,22
+uk-brs-es02,187,Extended,760,permit,tcp,host 81.178.23.133,host 194.73.173.152,22
+uk-brs-es02,187,Extended,770,permit,tcp,host 81.178.23.133,host 194.73.173.153,22
+uk-brs-es02,187,Extended,780,permit,udp,host 195.10.10.11,host 213.120.94.19,domain
+uk-brs-es02,187,Extended,790,permit,udp,host 195.10.10.12,host 213.120.94.19,domain
+uk-brs-es02,187,Extended,800,permit,tcp,host 195.26.45.101,host 195.99.172.189,22
+uk-brs-es02,187,Extended,810,permit,tcp,host 66.212.242.91,host 194.73.173.125,
+uk-brs-es02,187,Extended,820,permit,tcp,193.109.254.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,187,Extended,830,permit,tcp,194.106.220.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,187,Extended,840,permit,tcp,195.245.230.0 0.0.1.255,host 194.73.173.125,
+uk-brs-es02,187,Extended,850,permit,tcp,212.125.75.0 0.0.0.31,host 194.73.173.125,
+uk-brs-es02,187,Extended,860,permit,tcp,216.82.240.0 0.0.15.255,host 194.73.173.125,
+uk-brs-es02,187,Extended,870,permit,tcp,62.173.108.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,187,Extended,880,permit,tcp,62.173.108.208 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,187,Extended,890,permit,tcp,62.231.131.0 0.0.0.255,host 194.73.173.125,
+uk-brs-es02,187,Extended,900,permit,tcp,85.158.136.0 0.0.7.255,host 194.73.173.125,
+uk-brs-es02,187,Extended,910,permit,tcp,117.120.16.0 0.0.7.255,host 194.73.173.125,
+uk-brs-es02,187,Extended,920,permit,tcp,any,host 194.73.173.125,
+uk-brs-es02,187,Extended,930,permit,tcp,host 212.143.66.156,host 194.73.173.125,
+uk-brs-es02,187,Extended,940,permit,tcp,host 83.244.202.113,host 194.73.173.125,
+uk-brs-es02,187,Extended,950,permit,tcp,host 83.244.222.44,host 194.73.173.125,
+uk-brs-es02,187,Extended,960,permit,tcp,host 62.244.190.66,host 194.73.173.125,
+uk-brs-es02,187,Extended,970,permit,tcp,host 81.168.52.159,host 194.73.173.125,
+uk-brs-es02,187,Extended,980,permit,ip,66.179.104.128 0.0.0.63,host 194.73.173.125,
+uk-brs-es02,187,Extended,990,permit,ip,66.179.21.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,187,Extended,1000,permit,ip,80.69.20.16 0.0.0.15,host 194.73.173.125,
+uk-brs-es02,187,Extended,1010,permit,ip,host 195.26.45.101,host 194.73.173.125,
+uk-brs-es02,187,Extended,1020,permit,ip,66.179.104.128 0.0.0.63,host 194.73.173.199,
+uk-brs-es02,187,Extended,1030,permit,ip,66.179.21.16 0.0.0.15,host 194.73.173.199,
+uk-brs-es02,187,Extended,1040,permit,ip,80.69.20.16 0.0.0.15,host 194.73.173.199,
+uk-brs-es02,187,Extended,1050,permit,ip,host 195.26.45.101,host 194.73.173.199,
+uk-brs-es02,187,Extended,1060,permit,tcp,any,3.173.0 0.0.0.255,www
+uk-brs-es02,187,Extended,1070,permit,tcp,any,3.173.0 0.0.0.255,443
+uk-brs-es02,187,Extended,1080,permit,tcp,any,host 194.73.173.24,8090
+uk-brs-es02,187,Extended,1090,permit,tcp,any,host 194.73.173.66,8090
+uk-brs-es02,187,Extended,1100,permit,tcp,host 217.114.162.248,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,1110,permit,ip,host 213.170.57.210,host 194.73.173.160,
+uk-brs-es02,187,Extended,1120,permit,ip,host 213.170.57.210,host 195.99.172.185,
+uk-brs-es02,187,Extended,1130,permit,ip,host 212.179.145.66,host 194.73.173.160,
+uk-brs-es02,187,Extended,1140,permit,ip,host 212.179.145.66,host 195.99.172.185,
+uk-brs-es02,187,Extended,1150,permit,ip,host 80.179.102.100,host 194.73.173.160,
+uk-brs-es02,187,Extended,1160,permit,ip,host 80.179.102.100,host 195.99.172.185,
+uk-brs-es02,187,Extended,1170,permit,ip,host 80.179.102.110,host 194.73.173.160,
+uk-brs-es02,187,Extended,1180,permit,ip,host 80.179.102.110,host 195.99.172.185,
+uk-brs-es02,187,Extended,1190,permit,ip,host 95.131.184.99,host 194.73.173.160,
+uk-brs-es02,187,Extended,1200,permit,ip,host 95.131.184.99,host 195.99.172.185,
+uk-brs-es02,187,Extended,1210,permit,ip,host 194.73.173.160,host 213.170.57.210,
+uk-brs-es02,187,Extended,1220,permit,ip,host 195.99.172.185,host 213.170.57.210,
+uk-brs-es02,187,Extended,1230,permit,ip,host 194.73.173.160,host 212.179.145.66,
+uk-brs-es02,187,Extended,1240,permit,ip,host 195.99.172.185,host 212.179.145.66,
+uk-brs-es02,187,Extended,1250,permit,ip,host 194.73.173.160,host 80.179.102.100,
+uk-brs-es02,187,Extended,1260,permit,ip,host 195.99.172.185,host 80.179.102.100,
+uk-brs-es02,187,Extended,1270,permit,ip,host 194.73.173.160,host 80.179.102.110,
+uk-brs-es02,187,Extended,1280,permit,ip,host 195.99.172.185,host 80.179.102.110,
+uk-brs-es02,187,Extended,1290,permit,ip,host 194.73.173.160,host 95.131.184.99,
+uk-brs-es02,187,Extended,1300,permit,ip,host 195.99.172.185,host 95.131.184.99,
+uk-brs-es02,187,Extended,1310,permit,udp,host 212.143.66.165,host 194.73.173.84,4569
+uk-brs-es02,187,Extended,1320,permit,udp,host 95.131.184.97,host 194.73.173.84,4569
+uk-brs-es02,187,Extended,1330,permit,udp,host 95.131.184.98,host 194.73.173.84,4569
+uk-brs-es02,187,Extended,1340,permit,udp,host 212.143.66.165,host 194.73.173.83,4569
+uk-brs-es02,187,Extended,1350,permit,udp,host 95.131.184.97,host 194.73.173.83,4569
+uk-brs-es02,187,Extended,1360,permit,udp,host 95.131.184.98,host 194.73.173.83,4569
+uk-brs-es02,187,Extended,1370,permit,udp,host 92.247.8.99,host 194.73.173.83,4569
+uk-brs-es02,187,Extended,1380,permit,udp,host 92.247.8.99,host 194.73.173.84,4569
+uk-brs-es02,187,Extended,1390,permit,udp,host 61.28.184.236,host 194.73.173.83,4569
+uk-brs-es02,187,Extended,1400,permit,udp,host 61.28.184.236,host 194.73.173.84,4569
+uk-brs-es02,187,Extended,1410,permit,tcp,host 213.249.135.38,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,1420,permit,tcp,host 144.178.241.10,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,1430,permit,tcp,host 213.249.135.41,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,1440,permit,tcp,host 193.36.68.36,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,1450,permit,tcp,host 193.36.68.80,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,1460,permit,tcp,217.196.231.0 0.0.0.127,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,1470,permit,tcp,host 81.19.48.69,host 194.73.173.63,
+uk-brs-es02,187,Extended,1480,permit,tcp,host 80.169.33.170,host 194.73.173.63,
+uk-brs-es02,187,Extended,1490,permit,tcp,81.19.62.64 0.0.0.63,host 194.73.173.63,
+uk-brs-es02,187,Extended,1500,permit,tcp,host 62.25.98.127,host 194.73.173.61,
+uk-brs-es02,187,Extended,1510,permit,tcp,host 62.140.207.142,host 194.73.173.34,1415
+uk-brs-es02,187,Extended,1520,permit,tcp,host 93.174.217.142,host 194.73.173.34,1415
+uk-brs-es02,187,Extended,1530,permit,ip,195.92.77.112 0.0.0.15,host 194.73.173.64,
+uk-brs-es02,187,Extended,1540,permit,ip,213.146.135.128 0.0.0.31,host 194.73.173.64,
+uk-brs-es02,187,Extended,1550,permit,ip,80.45.13.32 0.0.0.15,host 194.73.173.64,
+uk-brs-es02,187,Extended,1560,permit,ip,host 91.209.40.4,host 194.73.173.64,
+uk-brs-es02,187,Extended,1570,permit,ip,any,host 213.120.94.23,
+uk-brs-es02,187,Extended,1580,permit,ip,any,host 213.120.94.28,
+uk-brs-es02,187,Extended,1590,permit,tcp,host 195.173.16.34,host 195.99.172.177,
+uk-brs-es02,187,Extended,1600,permit,tcp,host 193.133.31.189,host 195.99.172.177,
+uk-brs-es02,187,Extended,1610,permit,tcp,host 62.254.195.242,host 195.99.172.177,
+uk-brs-es02,187,Extended,1620,permit,tcp,host 62.190.6.5,host 195.99.172.177,
+uk-brs-es02,187,Extended,1630,permit,tcp,host 194.73.101.234,host 195.99.172.177,
+uk-brs-es02,187,Extended,1640,permit,ip,193.189.98.0 0.0.0.255,host 195.99.172.177,
+uk-brs-es02,187,Extended,1650,permit,ip,83.244.147.192 0.0.0.15,host 195.99.172.177,
+uk-brs-es02,187,Extended,1660,permit,tcp,host 193.133.31.189,host 195.99.172.178,22
+uk-brs-es02,187,Extended,1670,permit,tcp,host 83.244.147.194,host 195.99.172.178,22
+uk-brs-es02,187,Extended,1680,permit,tcp,host 82.109.33.194,host 195.99.172.178,22
+uk-brs-es02,187,Extended,1690,permit,tcp,host 82.109.33.194,host 194.73.173.154,22
+uk-brs-es02,187,Extended,1700,permit,tcp,host 62.25.109.163,host 194.73.173.140,443
+uk-brs-es02,187,Extended,1710,permit,tcp,host 62.25.109.163,host 194.73.173.140,www
+uk-brs-es02,187,Extended,1720,permit,tcp,host 84.20.192.244,host 194.73.173.140,443
+uk-brs-es02,187,Extended,1730,permit,tcp,host 210.4.86.17,host 194.73.173.140,443
+uk-brs-es02,187,Extended,1740,permit,tcp,host 213.249.135.41,host 194.73.173.141,
+uk-brs-es02,187,Extended,1750,permit,tcp,host 213.249.135.38,host 194.73.173.141,
+uk-brs-es02,187,Extended,1760,permit,tcp,host 144.178.241.10,host 194.73.173.141,
+uk-brs-es02,187,Extended,1770,permit,tcp,host 193.36.68.36,host 194.73.173.141,
+uk-brs-es02,187,Extended,1780,permit,tcp,host 193.36.68.80,host 194.73.173.141,
+uk-brs-es02,187,Extended,1790,permit,tcp,host 66.135.197.233,host 194.73.173.140,443
+uk-brs-es02,187,Extended,1800,permit,tcp,host 72.47.192.129,host 213.120.94.22,www
+uk-brs-es02,187,Extended,1810,permit,tcp,host 72.47.192.129,host 213.120.94.22,443
+uk-brs-es02,187,Extended,1820,permit,tcp,213.187.162.160 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,187,Extended,1830,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.189,
+uk-brs-es02,187,Extended,1840,permit,tcp,host 62.44.69.131,host 194.73.173.140,
+uk-brs-es02,187,Extended,1850,permit,tcp,host 62.44.69.132,host 194.73.173.140,
+uk-brs-es02,187,Extended,1860,permit,tcp,host 62.44.69.133,host 194.73.173.140,
+uk-brs-es02,187,Extended,1870,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.183,
+uk-brs-es02,187,Extended,1880,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.187,
+uk-brs-es02,187,Extended,1890,permit,tcp,194.73.173.0 0.0.0.255,host 195.99.172.188,
+uk-brs-es02,187,Extended,1900,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.183,
+uk-brs-es02,187,Extended,1910,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.187,
+uk-brs-es02,187,Extended,1920,permit,tcp,212.187.162.160 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,187,Extended,1930,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.183,
+uk-brs-es02,187,Extended,1940,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.187,
+uk-brs-es02,187,Extended,1950,permit,tcp,213.122.168.160 0.0.0.31,host 195.99.172.188,
+uk-brs-es02,187,Extended,1960,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.183,
+uk-brs-es02,187,Extended,1970,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.187,
+uk-brs-es02,187,Extended,1980,permit,tcp,213.48.117.160 0.0.0.31,host 195.99.172.188,
+uk-brs-es02,187,Extended,1990,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.183,
+uk-brs-es02,187,Extended,2000,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.187,
+uk-brs-es02,187,Extended,2010,permit,tcp,81.144.179.72 0.0.0.7,host 195.99.172.188,
+uk-brs-es02,187,Extended,2020,permit,tcp,host 14.47.219.28,host 195.99.172.184,
+uk-brs-es02,187,Extended,2030,permit,tcp,host 144.148.241.10,host 195.99.172.184,
+uk-brs-es02,187,Extended,2040,permit,tcp,host 193.36.68.36,host 195.99.172.184,
+uk-brs-es02,187,Extended,2050,permit,tcp,host 193.36.68.80,host 195.99.172.184,
+uk-brs-es02,187,Extended,2060,permit,tcp,host 212.187.162.162,host 195.99.172.184,
+uk-brs-es02,187,Extended,2070,permit,tcp,host 213.249.135.38,host 195.99.172.184,
+uk-brs-es02,187,Extended,2080,permit,tcp,host 81.178.195.196,host 195.99.172.184,
+uk-brs-es02,187,Extended,2090,permit,tcp,213.48.117.160 0.0.0.31,host 194.73.173.140,
+uk-brs-es02,187,Extended,2100,permit,tcp,host 66.249.73.109,host 194.73.173.138,
+uk-brs-es02,187,Extended,2110,permit,tcp,host 66.249.73.109,host 194.73.173.139,
+uk-brs-es02,187,Extended,2120,permit,tcp,host 85.223.209.2,host 194.73.173.91,
+uk-brs-es02,187,Extended,2130,permit,tcp,host 85.223.209.13,host 194.73.173.91,
+uk-brs-es02,187,Extended,2140,permit,tcp,host 217.196.231.104,host 194.73.173.91,
+uk-brs-es02,187,Extended,2150,permit,tcp,host 144.178.241.10,host 195.99.172.184,
+uk-brs-es02,187,Extended,2160,permit,tcp,host 135.196.6.178,host 195.99.172.184,
+uk-brs-es02,187,Extended,2170,permit,ip,host 212.187.162.162,172.176 0.0.0.15,
+uk-brs-es02,187,Extended,2180,permit,ip,host 212.187.162.162,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,2190,permit,ip,host 212.187.162.162,host 213.120.94.27,
+uk-brs-es02,187,Extended,2200,permit,ip,213.121.187.192 0.0.0.63,172.176 0.0.0.15,
+uk-brs-es02,187,Extended,2210,permit,ip,213.121.187.192 0.0.0.63,3.173.0 0.0.0.255,
+uk-brs-es02,187,Extended,2220,permit,ip,213.121.187.192 0.0.0.63,host 213.120.94.27,
+uk-brs-es02,187,Extended,2230,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,www
+uk-brs-es02,187,Extended,2240,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,709
+uk-brs-es02,187,Extended,2250,permit,tcp,194.60.166.0 0.0.0.255,host 195.99.172.185,17001
+uk-brs-es02,187,Extended,2260,permit,tcp,host 61.194.56.31,host 194.73.173.155,
+uk-brs-es02,187,Extended,2270,permit,tcp,host 211.174.110.248,host 194.73.173.155,
+uk-brs-es02,187,Extended,2280,permit,tcp,host 81.149.34.75,host 194.73.173.155,
+uk-brs-es02,187,Extended,2290,permit,tcp,host 82.152.37.211,host 194.73.173.155,
+uk-brs-es02,187,Extended,2300,permit,tcp,host 66.249.73.109,host 194.73.173.138,www
+uk-brs-es02,187,Extended,2310,permit,tcp,host 66.249.73.109,host 194.73.173.138,443
+uk-brs-es02,187,Extended,2320,permit,tcp,host 66.249.73.109,host 194.73.173.139,www
+uk-brs-es02,187,Extended,2330,permit,tcp,host 66.249.73.109,host 194.73.173.139,443
+uk-brs-es02,187,Extended,2340,permit,ip,any,host 194.73.173.134,
+uk-brs-es02,187,Extended,2350,permit,tcp,any,173.200 0.0.0.7,www
+uk-brs-es02,187,Extended,2360,permit,tcp,any,173.200 0.0.0.7,443
+uk-brs-es02,187,Extended,2370,permit,tcp,any,173.200 0.0.0.7,smtp
+uk-brs-es02,187,Extended,2380,permit,tcp,any,173.200 0.0.0.7,465
+uk-brs-es02,187,Extended,2390,permit,tcp,any,173.200 0.0.0.7,5061
+uk-brs-es02,187,Extended,2400,permit,tcp,any,host 194.73.173.95,smtp
+uk-brs-es02,187,Extended,2410,permit,tcp,host 207.111.236.2,host 194.73.173.95,
+uk-brs-es02,187,Extended,2420,permit,tcp,host 207.111.236.23,host 194.73.173.95,
+uk-brs-es02,187,Extended,2430,permit,ip,213.120.94.0 0.0.0.15,any,
+uk-brs-es02,187,Extended,2440,deny,ip,any,any,

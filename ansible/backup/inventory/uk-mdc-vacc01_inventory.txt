@@ -1,0 +1,11 @@
+NAME: "1", DESCR: "WS-C3750V2-24TS"
+PID: WS-C3750V2-24TS-E , VID: V08  , SN: FDO1631Y16X
+
+NAME: "GigabitEthernet1/0/1", DESCR: "10/100/1000BaseTX SFP"
+PID: Unspecified       , VID:      , SN: MTC16030D6X     
+
+NAME: "2", DESCR: "WS-C3750V2-24TS"
+PID: WS-C3750V2-24TS-E , VID: V08  , SN: FDO1631Y17C
+
+NAME: "GigabitEthernet2/0/1", DESCR: "10/100/1000BaseTX SFP"
+PID: Unspecified       , VID:      , SN: MTC16030D1M

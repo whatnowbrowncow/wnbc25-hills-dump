@@ -1,0 +1,11 @@
+{% for interface in item %}
+interface {interface.type} {interface.num}
+ ip address {interface.ipaddr} {interface.netmask}
+ no shutdown
+{% if interface.type != "Loopback" %}
+ media-type rj45
+ speed auto
+ duplex auto
+ negotiation auto
+{% endif %}
+{% endfor %}

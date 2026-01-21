@@ -1,0 +1,45 @@
+---
+
+- name: Configure autonomous system number for the infra route reflectors.
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/bgpInstP-default/as.json"
+    content:
+      {
+        "bgpAsP": {
+          "attributes": {
+            "dn": "uni/fabric/bgpInstP-default/as",
+            "rn": "as",
+            "asn": "{{ asn }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }      
+    validate_certs: no
+
+- name: Add spine switches to default bgp route reflectors policy.
+  aci_rest:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    method: post
+    path: "/api/node/mo/uni/fabric/bgpInstP-default/rr/node-{{ item.node_id }}.json"
+    content:
+      {
+        "bgpRRNodePEp": {
+          "attributes": {
+            "dn": "uni/fabric/bgpInstP-default/rr/node-{{ item.node_id }}",
+            "id": "{{ item.node_id }}",
+            "rn": "node-{{ item.node_id }}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      }
+    validate_certs: no
+  with_items: "{{ fabric_nodes }}"
+  when: item.role is defined and item.role == "spine"

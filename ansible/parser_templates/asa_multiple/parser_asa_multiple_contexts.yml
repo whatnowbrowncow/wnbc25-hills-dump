@@ -1,0 +1,38 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show context | include :"
+    network_os: asa
+
+- name: contexts match pattern
+  pattern_match:
+    regex: "(?!\\*)\\S+\\s+default"
+    match_all: yes
+    match_greedy: yes
+    content: "{{ item }}"
+  export: yes
+  register: contexts
+
+- name: Match context values
+  pattern_group:
+    - name: match context
+      pattern_match:
+        regex: "\\*|(\\S+)\\s+default"
+        content: "{{ item }}"
+      register: context
+
+  loop: "{{ contexts }}"
+  register: context_values    
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: contexts
+        object:        
+          - key: context
+            value: "{{ item.context.matches.0 }}"
+  loop: "{{ context_values }}"
+  export: yes
+  register: asa_context_facts

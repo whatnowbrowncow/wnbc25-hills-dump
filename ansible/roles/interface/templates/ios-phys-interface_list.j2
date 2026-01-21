@@ -1,0 +1,13 @@
+{% if item.mod == "" %}
+interface {{item.type}}{{item.port}}
+{% else %}
+interface {{item.type}}{{item.mod}}/{{item.port}}
+{% endif %}
+ description Ansible generated interface
+ ip address {{item.ipaddr}} {{item.netmask}}
+{% if item.type != "Loopback" %}
+ media-type rj45
+ speed auto
+ duplex auto
+ negotiation auto
+{% endif %}

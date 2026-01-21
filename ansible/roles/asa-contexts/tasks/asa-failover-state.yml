@@ -1,0 +1,31 @@
+---
+
+- name: ASA SINGLE - Collecting the ASA's failover state
+  asa_command:
+    commands:
+      - "show failover state"
+  register: state
+
+- name: ASA SINGLE - Registering the ASA's failover state as a variable
+  set_fact:
+    failSTATE: "{{ state.stdout[0] | regex_search('This +host.*\n +(?P<failstate>\\S+)','\\g<failstate>') }}"
+
+- name: ASA - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: ASA - Generating the 'hostname.yml' host var file (if not already present) and adding the 'failover_state:active|standby' variable
+  template:
+    src: "{{ role_path }}/templates/failover-state-yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"
+    force: no
+
+- name: ASA - Adding the 'failover_state:active|standby' variable (if not already present)
+  lineinfile:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"
+    line: "failover_state: {{ failSTATE[0] | lower }}"
+
+- name: ASA - Refreshing the host variables for subsequent role evaluations
+  include_vars:
+    file: "{{ inventory_dir}}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"

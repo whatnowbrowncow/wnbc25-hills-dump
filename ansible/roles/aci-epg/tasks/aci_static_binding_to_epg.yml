@@ -1,0 +1,55 @@
+---
+
+#- name: debug host_var static_interfaces
+#      debug:
+#        msg: "{{ item.connected_device }}"
+#      with_items:
+#        - "{{ static_interfaces }}"
+#      when: item.connected_device == 'firewall' or item.connected_device == 'enclosure'
+#- name: Check for interfaces to statical bind
+#  debug:
+#    msg: "No interfaces defined in variables file."
+#  when: static_interfaces is undefined
+
+
+- name: Add static binding to EPG for internal firewall vrfs to {{ epg_item.epg }} EPG
+  aci_static_binding_to_epg:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    tenant: "{{ app_prof_item.tenant }}"
+    ap: "{{ app_prof_item.app_prof }}"
+    epg: "{{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}"
+    encap_id: "{{ epg_item.encap_id }}"
+    deploy_immediacy: immediate
+    interface: "{{ item.policy_group }}"
+    interface_mode: regular
+    interface_type: vpc
+    leafs: "{{ item.leafs }}"
+    pod_id: "{{ pod_id }}"
+    state: present
+    validate_certs: no
+  with_items:
+    - "{{ static_interfaces }}"
+  when: bd_item.l3_ownership == 'firewall' and item.connected_device == epg_item.fw_name
+
+- name: Add static binding to EPG for enclosures to {{ epg_item.epg }} EPG
+  aci_static_binding_to_epg:
+    hostname: "{{ ansible_host }}"
+    username: "{{ aci_user }}"
+    private_key: "{{ aci_key }}"
+    tenant: "{{ app_prof_item.tenant }}"
+    ap: "{{ app_prof_item.app_prof }}"
+    epg: "{{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}"
+    encap_id: "{{ epg_item.encap_id }}"
+    deploy_immediacy: immediate
+    interface: "{{ item.policy_group }}"
+    interface_mode: regular
+    interface_type: vpc
+    leafs: "{{ item.leafs }}"
+    pod_id: "{{ pod_id }}"
+    state: present
+    validate_certs: no
+  with_items:
+    - "{{ static_interfaces }}"
+  when: item.connected_device == 'enclosure' and epg_item.encap_id is defined

@@ -1,0 +1,46 @@
+{# ANY CHANGES TO THIS MAY AFFECT THE asa-ras-object ROLE, SO TESTING WITH BOTH ROLES IS NEEDED  #}
+{% for object_group in service_object_groups %}
+{% if object_group.protocol is defined %}
+object-group service {{ object_group.name }} {{ object_group.protocol }}
+{% else %}
+object-group service {{ object_group.name }}
+{% endif %}
+{% if object_group.description is defined %}
+ description {{ object_group.description }}
+{% else %}
+{% endif %}
+{% if object_group.objects is iterable %}
+{% for object in object_group.objects %}
+ service-object object {{ object.object_name }}
+{% endfor %}
+{% else %}
+{% endif %}
+{% if object_group.services is iterable %}
+{% for service in object_group.services %}
+{% if service.port_type == "eq" %}
+ service-object {{ service.protocol }} {{ service.direction }} eq {{ service.port }}
+{% elif service.port_type == "range" %}
+ service-object {{ service.protocol }} {{ service.direction }} range {{ service.range_start }} {{ service.range_end }}
+{% else %}
+{% endif %}
+{% endfor %}
+{% else %}
+{% endif %}
+{% if object_group.port_objects is iterable %}
+{% for port_object in object_group.port_objects %}
+{% if port_object.port_type == "eq" %}
+ port-object eq {{ port_object.port }}
+{% elif port_object.port_type == "range" %}
+ port-object range {{ port_object.range_start }} {{ port_object.range_end }}
+{% else %}
+{% endif %}
+{% endfor %}
+{% else %}
+{% endif %}
+{% if object_group.group_objects is iterable %}
+{% for group in object_group.group_objects %}
+ group-object {{ group.group_object_name }}
+{% endfor %}
+{% else %}
+{% endif %}
+{% endfor %}

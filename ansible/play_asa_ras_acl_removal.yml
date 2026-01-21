@@ -1,0 +1,7 @@
+- name: PLAY - RAS ACL Deployment
+  hosts: ras
+  connection: network_cli
+  gather_facts: yes
+
+  roles:
+    - asa-ras-acl-removal

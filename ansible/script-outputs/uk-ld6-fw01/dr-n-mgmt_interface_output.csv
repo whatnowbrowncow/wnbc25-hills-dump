@@ -1,0 +1,14 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.344,10.114.148.1,0200.0101.0101,backoffice-tier,255.255.255.0,100
+up,,Port-channel1.369,10.114.159.225,0200.0101.0101,Caerus-apps-man,255.255.255.224,100
+up,,Port-channel1.343,10.114.147.1,0200.0101.0101,rng-arcade,255.255.255.0,100
+up,,Port-channel1.342,10.114.146.1,0200.0101.0101,applications-tier,255.255.255.0,100
+up,,Port-channel1.341,10.114.145.1,0200.0101.0101,web-tier,255.255.255.0,100
+up,,Port-channel1.363,10.114.159.33,0200.0101.0101,ats-web-int,255.255.255.224,100
+up,,Port-channel1.366,10.114.159.129,0200.0101.0101,rng-retail,255.255.255.224,100
+up,,Port-channel1.345,10.114.149.1,0200.0101.0101,trading-tier,255.255.255.0,100
+up,,Port-channel1.376,10.114.160.196,0200.0101.0101,internal-vrf,255.255.255.224,100
+up,,Port-channel1.351,10.114.157.1,0200.0101.0101,dr-noncde-jumphost,255.255.255.224,100
+up,,Port-channel1.362,10.114.159.1,0200.0101.0101,edge-mgmt,255.255.255.224,100
+up,,Port-channel1.347,10.114.151.1,0200.0101.0101,ld6-noncde-jumphost,255.255.255.224,100
+up,,Port-channel1.361,10.114.158.1,0200.0101.0101,caerus-apps-man-2,255.255.255.0,100

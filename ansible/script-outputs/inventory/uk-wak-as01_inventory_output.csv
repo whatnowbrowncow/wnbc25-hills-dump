@@ -1,0 +1,5 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-wak-as01,WS-C3650-24TS-S,Switch 1,WS-C3650-24TS-S,FDO2212Q03T,V04
+uk-wak-as01,c36xx Stack,c36xx Stack,WS-C3650-24TS-S,FDO2212Q03T,V04
+uk-wak-as01,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-250WAC,LIT220347F9,V03
+uk-wak-as01,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-250WAC,LIT220347FY,V03

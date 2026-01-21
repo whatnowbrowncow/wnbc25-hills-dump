@@ -1,0 +1,55 @@
+---
+# This is to retrive the Version from the YML of the ACL
+- name: "{{ comment_title }} - {{ loop_acls }} Retriving YML Version"
+  set_fact:
+    yml_version: "{{ lookup('vars', loop_acls | regex_replace ('-','_'))[0].version }}"
+
+#This is to confirm that the version on the YML is equal to current version on the device, if not it will display a message and end the playbook. 
+- name: "{{ comment_title }} - {{ loop_acls }} - Confirm that yml version on ACL {{ loop_acls }} are same as the current installed version on the device"
+  fail:
+     msg: >
+      "
+      ################ Yaml Version (Version #: {{ yml_version }}) for ACL {{ loop_acls }} to be removed are not equal to device (Version #: {{ device_version }}). Please confirm! ################
+      "
+  when: (device_version[0] | int  ) != (yml_version | int)
+  
+# This is to retrive all the versions of the ACL deployed on the device
+- name: "{{ comment_title }} - {{ loop_acls }} - Export ACLs Version from Device"
+  set_fact:
+    deployed_acls_ver: "{{ acls.stdout[0] | regex_findall('access-list ' + loop_acls + '_v(\\d+)') | map('int') | unique | sort}}"
+
+#This is to confirm that the all deployed ACLs are less than or equal to the current version assigned to the RAS, if not it will display a message and end the playbook. 
+- name: "{{ comment_title }} - {{ loop_acls }} - Confirm that all version of ACL {{ loop_acls }} on the device are less than current version assigned to the RAS"
+  fail:
+     msg: >
+      "
+      ################ ACL Version {{ loop_deployed_version }} exists, yet assiged RAS ACL version is {{ device_version[0] | int }} . Please confirm! ################
+      "
+  when: (device_version[0] | int  ) < (loop_deployed_version)
+  loop: "{{ deployed_acls_ver }}"
+  loop_control:
+    loop_var: loop_deployed_version
+    label: "Checking version {{ loop_deployed_version }} is not grater than assigned RAS version"
+
+# This is to take all deployed versions and collate all versions less than the keep_version setting
+- name: "{{ comment_title }} - {{ loop_acls }} - Compile Old ACL List"
+  set_fact:
+    versions_to_remove: "{{ versions_to_remove|default([]) + [loop_acls + '_v' + loop_version | string] }}"
+  loop: "{{ deployed_acls_ver }}"
+  loop_control:
+    loop_var: loop_version
+    index_var: loop_index
+    label: "Check if Version: {{ loop_version }} needs adding to the removal list"
+  when: 
+    - loop_version != []  
+    - loop_version not in deployed_acls_ver[-keep_versions:] 
+
+# These are to clear the varibles ready for the next ACL run
+- name: "{{ comment_title }} - {{ loop_acls }} - Clear Deployed ACL Count"
+  set_fact:
+    deployed_acls_ver: []
+
+- name: "{{ comment_title }} - {{ loop_acls }} - Clear YML Version Varible"
+  set_fact:
+    yml_version: ""
+

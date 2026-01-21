@@ -1,0 +1,14 @@
+---
+
+interface_description_state:
+{%  for key_int_state in interface_status_state %}
+{%      for key,value in pyats_version.items() %}
+{%          if key == "interfaces" %}
+{%              for interface in value %}
+{%                  if key_int_state.interface == interface and value[interface].description == "--" %}
+  - interface: "{{ key_int_state.interface }}"
+{%                  endif %}
+{%              endfor %}
+{%           endif %}
+{%       endfor %}
+{%  endfor %}

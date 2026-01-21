@@ -1,0 +1,5 @@
+---
+
+- name: Add switches to the ACI fabric
+  import_tasks: ./aci-fabric-membership.yml
+  when: ansible_network_os == "aci"

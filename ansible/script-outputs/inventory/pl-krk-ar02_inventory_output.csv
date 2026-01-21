@@ -1,0 +1,12 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+pl-krk-ar02,GE SX,subslot 0/0 transceiver 2,GLC-SX-MMD,ACW21310D4P,1.0
+pl-krk-ar02,GE SX,subslot 0/0 transceiver 3,GLC-SX-MMD,ACW21310D4Q,1.0
+pl-krk-ar02,GE LX,subslot 0/0 transceiver 4,GLC-LH-SMD,FNS19381M5N,A
+pl-krk-ar02,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS2139Q27V,V03
+pl-krk-ar02,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE214209Q4,V03
+pl-krk-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT21312CUK,V01
+pl-krk-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT21312D2E,V01
+pl-krk-ar02,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+pl-krk-ar02,Built-in GE SPA with 2 port 10G and 6 port 1G Interfaces,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+pl-krk-ar02,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+pl-krk-ar02,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

@@ -1,0 +1,7 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.1300,10.211.32.1,,cde-web-tier,255.255.255.224,100
+up,,Port-channel21.1310,10.211.33.1,,cde-backoffice-tier,255.255.255.224,100
+up,,Port-channel21.1323,10.211.39.1,,cde-citrix-tier,255.255.255.0,100
+up,,Port-channel21.1334,10.211.44.1,,int-lb,255.255.254.0,100
+up,,Port-channel21.1501,10.211.129.42,,management,255.255.255.0,100
+up,,Port-channel21.1571,10.211.160.36,,pp1off-internal-vrf,255.255.255.224,100

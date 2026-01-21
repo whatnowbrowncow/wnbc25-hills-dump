@@ -1,0 +1,28 @@
+{# Create the ACL Cofiguration utilizing the changed acl Data #}
+{% for loop_data in changed_acls  %}
+{%  if loop_data.ansible_facts.ra_vpn_access_lists[0].rules is defined %}
+{%     for line in loop_data.ansible_facts.ra_vpn_access_lists[0].rules %}
+{%       if loop_data.ansible_facts.ra_vpn_access_lists[0].type == "extended" %}
+{%        if line.remark is defined %}
+access-list {{ loop_data.ansible_facts.ra_vpn_access_lists[0].name }}{% if loop_data.ansible_facts.ra_vpn_access_lists[0].version is number %}_v{{ loop_data.ansible_facts.ra_vpn_access_lists[0].version }}{% endif %} remark {{ line.remark }}
+
+{%        else %}
+access-list {{loop_data.ansible_facts.ra_vpn_access_lists[0]['name']}}{% if loop_data.ansible_facts.ra_vpn_access_lists[0].version is number %}_v{{ loop_data.ansible_facts.ra_vpn_access_lists[0].version }}{% endif %} {{loop_data.ansible_facts.ra_vpn_access_lists[0]['type']}} {{ line.action }}{% if line.service.type == 'protocol' %} {{ line.service.name }}{% endif %}{% if line.service.type == 'svc_obj' %} object {{ line.service.name }}{% endif %}{% if line.service.type == 'svc_obj_grp' %} object-group {{ line.service.name }}{% endif %}{% if line.source.type == 'host' %} host {{ line.source.name }}{% endif %}{% if line.source.type == 'net_obj' %} object {{ line.source.name }}{% endif %}{% if line.source.type == 'net_obj_grp' %} object-group {{ line.source.name }}{% endif %}{% if line.source.type == 'network' %} {{ line.source.name }}{% endif %}{% if line.destination.type == 'host' %} host {{ line.destination.name }}{% endif %}{% if line.destination.type == 'net_obj' %} object {{ line.destination.name }}{% endif %}{% if line.destination.type == 'net_obj_grp' %} object-group {{ line.destination.name }}{% endif %}{% if line.destination.type == 'network' %} {{ line.destination.name }}{% endif %}{% if line.port is defined and line.port.type == 'port' %} eq {{ line.port.name }}{% elif line.port is defined and line.port.type == 'svc_obj_grp' %} object-group {{ line.port.name }}{% endif %}{% if line.logging is defined %}{% if line.logging.level == 'informational' %} log{% else %} log {{ line.logging.level }}{% endif %}{% if line.logging.interval != '300' %} interval {{ line.logging.interval }}{% endif %}{% if line.status != "active" %} inactive{% endif %}{% endif %}
+
+{%        endif %}
+{%       elif loop_data.type == "standard" %}
+{%        if line.remark is defined %}
+access-list {{loop_data['name']}}{% if loop_data.version is number %}_v{{ loop_data.version }}{% endif %} remark {{ line.remark }}
+{%        else %}
+access-list {{loop_data['name']}}{% if loop_data.version is number %}_v{{ loop_data.version }}{% endif %} {{loop_data['type']}} {{ line.action }}{% if line.destination.type == 'host' %} host {{ line.destination.name }}{% elif line.destination.type == 'network' %} {{ line.destination.name }}{% endif %}
+
+{%        endif %}
+{%      endif %}
+{%   endfor %}
+{%  endif %}
+{% endfor %}
+
+
+
+
+

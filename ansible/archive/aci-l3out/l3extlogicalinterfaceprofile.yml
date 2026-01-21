@@ -1,0 +1,52 @@
+---
+
+  - name: PLAY - test Logical Interface build
+    hosts: aci
+    connection: local
+    gather_facts: no
+  
+    tasks:
+
+##Below used for testing          
+#      - name: Output L3 Interface Profile dict
+#        debug:
+#          msg: "The L3 Interface Profile vpc switch is: {{ l3outs[0].interface_profile[0].svi.vpc_path.vpc_switches }}"
+#         # msg: "The L3 Interface Profile policy group is: {{ l3outs[0].interface_profile[0].svi.vpc_path.policy_group }}"
+#          
+
+##Below used for testing          
+#      - name: Output L3 Interface Profile dict
+#        debug:
+#          msg: "The L3 Interface Profile name is: {{ item.interface_profile }}"
+#        with_items:
+#          - "{{ l3outs }}"
+#
+#          
+      - name: Build L3 Interface Profile template
+        template:
+          src: "./aci/l3extlogicalinterfaceprofile.j2"
+          dest: "./aci/l3extlogicalinterfaceprofile_{{ item.l3out_name }}_intprof.json"
+        with_items:
+          - "{{ l3outs }}"
+ 
+      - name: L3 Interface Profile build
+        aci_rest:
+          hostname: '{{ ansible_host }}'
+          username: '{{ provider_cli.username }}'
+          password: '{{ provider_cli.password }}'
+          method: post
+          path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.l3out_name }}/lnodep-{{ item.l3out_name }}_np.json"
+          src: "./aci/l3extlogicalinterfaceprofile_{{ item.l3out_name }}_intprof.json"
+          validate_certs: no
+        with_items:
+          - "{{ l3outs }}"
+        #The below register grabs the contents of the returned imdata from the get request
+        register: imdata_l3extlogicalinterfaceprofile
+        delegate_to: localhost
+        
+      - name: Confirm success or failure of configuration
+        debug: 
+          msg: "{{item.error_text}}"
+        with_items:
+          - "{{imdata_l3extlogicalinterfaceprofile.results}}"
+ 

@@ -1,0 +1,31 @@
+---
+
+# Creating a folder for the diff file
+- name: ASA-RAS - Creating a changes directory for DST configuration 'diff' files
+  file:
+    path: "{{ changes_dir }}"
+    state: directory
+  check_mode: no
+  changed_when: false
+ 
+
+# Retrieves current RAS DSTs and Group Policy Infomation
+- name: ASA-RAS - Retrieving the pre-change DST configuration
+  asa_command:
+    commands:
+      - "show running-config anyconnect-custom-data "
+      - "show running-config group-policy"
+  register: activeDST
+  check_mode: no 
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200    
+
+
+#  Places infomation gathered in the task above into a temporary file for used in comparison
+- name: ASA-RAS - Taking a snapshot of the pre_change DST configuration
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ pre_conf_file }}"
+  changed_when: false
+  check_mode: no

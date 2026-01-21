@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+bg-sof-ar01,whill,15,password,7,02110C755E471D157B
+bg-sof-ar01,netsec,15,password,7,06285A754D0F3E0028
+bg-sof-ar01,netadmin,15,secret,4,mKij449iJ8grD6NGYBhUQKZtDNnBt203/Qu7AyDAEXc
+bg-sof-ar01,svcnetworkauto,15,secret,4,vvhhtIPAqxiJjbycSPTNazk4qwXF2yqCsZCDYzkVTHs

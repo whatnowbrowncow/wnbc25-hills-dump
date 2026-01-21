@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+gib-wpg-vacc2,Vlan99,no_data_in_cdp
+gib-wpg-vacc2,Vlan351,no_data_in_cdp

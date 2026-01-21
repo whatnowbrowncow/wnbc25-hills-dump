@@ -1,0 +1,19 @@
+---
+
+- name: ASA SINGLE - Configure local user accounts with privilege defined
+  asa_config:
+    lines:
+      - username {{ item.username }} password {{ item.password_string }} {{ item.encryption }} privilege {{ item.privilege }} 
+  with_items:
+    - "{{ local_user_accounts }}"
+  when: 
+    - "item.privilege != ''"
+
+- name: ASA SINGLE - Configure local user accounts with privilege undefined
+  asa_config:
+    lines:
+      - username {{ item.username }} password {{ item.password_string }} {{ item.encryption }}
+  with_items:
+    - "{{ local_user_accounts }}"
+  when: 
+    - "item.privilege == ''"

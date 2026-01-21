@@ -1,0 +1,126 @@
+/*======================================
+
+############ Example Format ############
+
+resource "nsxt_policy_security_policy" "policy1" {
+  display_name = "policy1"
+  description = "Terraform provisioned Security Policy"
+  category = "Application"
+  locked = false
+  stateful = true
+  tcp_strict = false
+  scope = [nsxt_policy_group.pets.path]
+ 
+  rule {
+    display_name = "block_icmp"
+    destination_groups = [nsxt_policy_group.cats.path, nsxt_policy_group.dogs.path]
+    action = "DROP"
+    services = [nsxt_policy_service.icmp.path]
+    logged = true
+  }
+ 
+  rule {
+    display_name = "allow_udp"
+    source_groups = [nsxt_policy_group.fish.path]
+    sources_excluded = true
+    scope = [nsxt_policy_group.aquarium.path]
+    action = "ALLOW"
+    services = [nsxt_policy_service.udp.path]
+    logged = true
+    disabled = true
+    notes = "Disabled by starfish for debugging"
+  }
+}
+
+
+How we will format and standardise this:
+
+- The policy_security_policy on initial build is split into 2 sections: "Core_Management" and "SDDC_Specific"
+  - "Core_Management" section holds the base rules for the SDDC, deployed when the SDDC is     instantiated and fully managed based on the Infra CoE team "dfw_core" TF module
+  - "SDDC_Specific" section holds all channel specific rules for the SDDC. This is the section into which channel rules are deployed and is managed by Network Services
+  
+- The intial Security Policy resource names, display_names, descriptions, category, and stateful variables are fixed by the Infa CoE team TF code
+
+- Additional Security Policy sections can be defined to allow for splitting up of the DFW rules into logical sections. E.g. for the SCC migration we will create a section for each ASA firewall context
+- Each rule is defined in a "rule" section in the main nsxt_policy_security_policy TF resource:
+  - "display_name" is optional, but would be useful to help identify a rule's purpose in the VMC GUI
+  - "description" is a required element and must contain the ServiceNow FAR reference(s) for this rule
+
+
+resource "nsxt_policy_security_policy" "( section_name )" {
+  display_name = "( section_name )"
+  description  = "Firewall section for ( section_name ) - ${var.specific_policy_description}"
+  category     = var.category
+  stateful     = var.stateful
+  domain       = "cgw"
+  rule {
+    display_name       = "( rule_description | leave blank )"
+    description        = "Change ref: ( list_of_far_refs )"
+    action             = "( ALLOW | DROP )"
+    logged             = true
+    ip_version         = "IPV4"
+    direction          = "IN_OUT"
+    source_groups      = [( list_of_source_groups )]
+    destination_groups = [( list_of_destination_groups )]
+    services           = [( list_of_service_groups )]
+  }
+  rule {
+    display_name       = "( rule_description )"
+    description        = "Change ref: ( list_of_far_refs )"
+    action             = "( ALLOW | DROP )"
+    logged             = true
+    ip_version         = "IPV4"
+    direction          = "IN_OUT"
+    source_groups      = [( list_of_source_groups )]
+    destination_groups = [( list_of_destination_groups )]
+    services           = [( list_of_service_groups )]
+  }
+}
+
+======================================*/
+
+resource "nsxt_policy_security_policy" "{{ context.context }}" {
+  display_name = "{{ context.context }}"
+  description  = "Firewall section for {{ context.context }}"
+  category     = var.category
+  stateful     = var.stateful
+  domain       = "cgw"
+{% for resource in resources.security_policy %}
+{%   if resource.rules is iterable %}
+{%     for rule in resource.rules %}
+{%       if rule.destination[0] != '' %}
+  rule {
+    display_name       = "{{ rule.rule_description }}"
+{%         if rule.change_ref %}
+    description        = "Change ref: {{ rule.change_ref }}"
+{%         else %}
+    description        = ""
+{%         endif %}
+{%         if rule.action == 'permit' %}
+    action             = "ALLOW"
+{%         elif rule.action == 'deny' %}
+    action             = "DROP"
+{%         endif %}
+    logged             = true
+    ip_version         = "IPV4"
+    direction          = "IN_OUT"
+{%         if 'any' in rule.source %}
+    source_groups      = [nsxt_policy_group.wh_any.path]
+{%         else %}
+    source_groups      = [{% for src in rule.source %}{% if loop.last %}nsxt_policy_group.{{ src }}.path{% else %}nsxt_policy_group.{{ src }}.path, {% endif %}{% endfor %}]
+{%         endif %}
+{%         if 'any' in rule.destination %}
+    destination_groups = [nsxt_policy_group.wh_any.path]
+{%         else %}
+    destination_groups = [{% for dest in rule.destination %}{% if loop.last %}nsxt_policy_group.{{ dest }}.path{% else %}nsxt_policy_group.{{ dest }}.path, {% endif %}{% endfor %}]
+{%         endif %}
+{%         if 'ip-any' in rule.service %}
+{%         else %}
+    services           = [{% for svc in rule.service %}{% if loop.last %}nsxt_policy_service.{{ svc }}.path{% else %}nsxt_policy_service.{{ svc }}.path, {% endif %}{% endfor %}]
+{%         endif %}
+  }
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}
+}

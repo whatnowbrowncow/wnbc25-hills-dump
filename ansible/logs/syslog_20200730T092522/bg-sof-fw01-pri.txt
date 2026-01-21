@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: bg-sof-fw01-pri @ 20200730T092522 ---!
+!
+logging host inside 10.120.163.126
+!
+!--- END UPDATES: bg-sof-fw01-pri @ 20200730T092522 ---!
+}

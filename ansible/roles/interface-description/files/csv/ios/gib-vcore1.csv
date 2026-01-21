@@ -1,0 +1,11 @@
+hostname,local_interface,remote_device_description
+gib-vcore1,TenGigabitEthernet1/4/1,no_data_in_cdp
+gib-vcore1,TenGigabitEthernet1/4/2,no_data_in_cdp
+gib-vcore1,TenGigabitEthernet1/5/4,no_data_in_cdp
+gib-vcore1,TenGigabitEthernet1/5/5,no_data_in_cdp
+gib-vcore1,TenGigabitEthernet2/4/1,no_data_in_cdp
+gib-vcore1,TenGigabitEthernet2/4/2,no_data_in_cdp
+gib-vcore1,TenGigabitEthernet2/5/4,no_data_in_cdp
+gib-vcore1,TenGigabitEthernet2/5/5,no_data_in_cdp
+gib-vcore1,Port-channel1,no_data_in_cdp
+gib-vcore1,Port-channel2,no_data_in_cdp

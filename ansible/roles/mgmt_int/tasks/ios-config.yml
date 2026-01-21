@@ -1,0 +1,10 @@
+---
+
+- name: IOS - Build configuration for testing purposes
+  template:
+    src: /gitnet/ansible/roles/mgmt_int/templates/ios/config-template.j2
+    dest: /gitnet/ansible/roles/mgmt_int/files/configs/ios/{{ inventory_hostname }}.cfg
+
+#- name: IOS - Apply configuration
+#  ios_config:
+#    src: /gitnet/ansible/roles/mgmt_int/templates/ios/config-template.j2

@@ -1,0 +1,8 @@
+{% for context in contexts %}
+context {{ context.context }}
+{% for vlan in context.vlans %}
+  allocate-interface Port-channel1.{{ vlan.vlan }}
+{% endfor%}
+  config-url disk0:/{{ context.context }}.cfg
+!
+  {% endfor %}

@@ -1,0 +1,34 @@
+---
+
+- name: NXOS - collect local user account info
+  nxos_command:
+    commands:
+      - show run | i username
+  register: nxos_local_accounts_output
+
+- name: NXOS - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_nxos_local_user_accounts.yml"
+    content: "{{ nxos_local_accounts_output.stdout.0 }}"
+
+- name: NXOS - Confirm netadmin user exits and reset password
+  nxos_config:
+    lines:
+      - username {{ local_admin_account }} password {{ local_admin_password }} role network-admin
+
+- name: NXOS - Configure svcnetauto user account on device
+  nxos_config:
+    lines:
+      - username {{ ansible_user }} password {{ ansible_password }} role network-admin
+
+- name: NXOS - Remove all local user accounts that are not on the approved list
+  nxos_user:
+    name: "{{ item.user_account.username }}"
+    state: absent  
+  with_items:
+    - "{{ nxos_local_accounts_facts }}"
+  when: 
+    - "item.user_account.username not in master_local_user_accounts"
+    - (host_local_user_accounts is not defined) or (item.user_account.username not in host_local_user_accounts)
+    - item.user_account.username != "admin"
+

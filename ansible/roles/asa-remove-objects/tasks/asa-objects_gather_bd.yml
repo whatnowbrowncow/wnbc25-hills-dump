@@ -1,0 +1,8 @@
+---
+
+- name: Gather object BD for object name
+  include_tasks: ./asa-objects_lines_with_bd.yml
+  with_items:
+    - "{{ objects }}"
+  loop_control:
+    loop_var: objects_item

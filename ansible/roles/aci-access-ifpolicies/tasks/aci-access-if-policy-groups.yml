@@ -1,0 +1,123 @@
+---
+
+- name: "Create VPC interface policy groups"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/funcprof/accbundle-{{ item.name }}.json"
+    content:
+      {
+        "infraAccBndlGrp": {
+          "attributes": {
+            "dn": "uni/infra/funcprof/accbundle-{{ item.name }}",
+            "lagT": "node",
+            "name": "{{ item.name }}",
+            "rn": "accbundle-{{ item.name }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "infraRsHIfPol": {
+                "attributes": {
+                  "tnFabricHIfPolName": "{{ item.speed }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "infraRsAttEntP": {
+                "attributes": {
+                  "tDn": "uni/infra/attentp-{{ item.aaep }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "infraRsLacpPol": {
+                "attributes": {
+                  "tnLacpLagPolName": "{{ item.linkagg }}",
+                  "status": "created,modified"
+                },              }
+            },
+            {
+              "infraRsCdpIfPol": {
+                "attributes": {
+                  "tnCdpIfPolName": "{{ item.cdp }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "infraRsLldpIfPol": {
+                "attributes": {
+                  "tnLldpIfPolName": "{{ item.lldp }}",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ],
+        } 
+      }
+    validate_certs: no
+  with_items: 
+    - "{{ if_policy_groups }}"
+  when: item.type == 'vpc'
+ 
+- name: "Create access port interface policy groups"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/funcprof/accportgrp-{{ item.name }}.json"
+    content:
+      {
+        "infraAccPortGrp": {
+          "attributes": {
+            "dn": "uni/infra/funcprof/accportgrp-{{ item.name }}",
+            "name": "{{ item.name }}",
+            "rn": "accportgrp-{{ item.name }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "infraRsHIfPol": {
+                "attributes": {
+                  "tnFabricHIfPolName": "{{ item.speed }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "infraRsCdpIfPol": {
+                "attributes": {
+                  "tnCdpIfPolName": "{{ item.cdp }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "infraRsAttEntP": {
+                "attributes": {
+                  "tDn": "uni/infra/attentp-{{ item.aaep }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "infraRsLldpIfPol": {
+                "attributes": {
+                  "tnLldpIfPolName": "{{ item.lldp }}",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      } 
+    validate_certs: no
+  with_items: 
+    - "{{ if_policy_groups }}"
+  when: item.type == 'access'

@@ -1,0 +1,4 @@
+hostname,username,password,encryption,role
+gib-mpl-ds04,admin,$1$rxaKwloN$ZDnq6g3Qo44YUVp1pCFOz/,5,network-admin
+gib-mpl-ds04,netsec,$1$ybbDoxyc$ct7ef34O2QNnggTJbxlO1.,5,network-admin
+gib-mpl-ds04,netadmin,$1$mFBK6bQ1$c66XW95VDwJwwpJt9asZW1,5,network-admin

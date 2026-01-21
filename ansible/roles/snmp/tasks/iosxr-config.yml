@@ -1,0 +1,8 @@
+---
+
+- name: IOS-XR - Configuring the SNMP communities
+  iosxr_config:
+    lines: |-
+      snmp-server community {{ item.string }} {{ item.access }} {{ item.type }} {{ item.access_list }}
+  with_items:
+    - "{{ snmp.community }}"

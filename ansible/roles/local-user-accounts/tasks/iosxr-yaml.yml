@@ -1,0 +1,22 @@
+---
+
+- name: IOS-XR - collect local user account info
+  iosxr_command:
+    commands:
+      - show run
+  register: iosxr_local_accounts_output
+
+- name: IOS-XR - parse command output
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/iosxr/parser_iosxr_local_user_accounts.yml"
+    content: "{{ iosxr_local_accounts_output.stdout.0 }}"
+
+- name: IOS-XR - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS-XR - Generate YAML file
+  template:
+    src: "{{ role_path }}/templates/iosxr/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/local-user-accounts.yml"

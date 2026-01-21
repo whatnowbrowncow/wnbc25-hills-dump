@@ -1,0 +1,5 @@
+---
+
+- name: Add DNS servers to the default DNS profile.
+  import_tasks: ./aci-dns.yml
+  when: ansible_network_os == "aci"

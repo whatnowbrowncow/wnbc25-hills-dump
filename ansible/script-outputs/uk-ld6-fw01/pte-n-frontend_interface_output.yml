@@ -1,0 +1,20 @@
+Port-channel1.1402: {admin-state: up, interface: Port-channel1.1402, ip-add: 10.115.64.65,
+  mac-address: 0200.0101.0101, nameif: noncde-app, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.1407: {admin-state: up, interface: Port-channel1.1407, ip-add: 10.115.64.225,
+  mac-address: 0200.0101.0101, nameif: non-cde-app2, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.1410: {admin-state: up, interface: Port-channel1.1410, ip-add: 10.115.66.1,
+  mac-address: 0200.0101.0101, nameif: noncde-backoffice, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.1411: {admin-state: up, interface: Port-channel1.1411, ip-add: 10.115.67.1,
+  mac-address: 0200.0101.0101, nameif: non-cde-web-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1422: {admin-state: up, interface: Port-channel1.1422, ip-add: 10.115.72.1,
+  mac-address: 0200.0101.0101, nameif: noncde-cf-web, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1431: {admin-state: up, interface: Port-channel1.1431, ip-add: 10.115.74.1,
+  mac-address: 0200.0101.0101, nameif: int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1462: {admin-state: up, interface: Port-channel1.1462, ip-add: 10.115.100.1,
+  mac-address: 0200.0101.0101, nameif: noncde-ods, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1464: {admin-state: up, interface: Port-channel1.1464, ip-add: 10.115.102.1,
+  mac-address: 0200.0101.0101, nameif: noncde-cf-app, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1677: {admin-state: up, interface: Port-channel1.1677, ip-add: 10.115.160.228,
+  mac-address: 0200.0101.0101, nameif: pte-internal-vrf, netmask: 255.255.255.224,
+  ospf: mtu-ignore, security-level: '100'}

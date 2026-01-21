@@ -1,0 +1,39 @@
+---
+
+- name: IOS - Configure SSH (version 2 standard)
+  ios_config:
+    lines:
+      - ip ssh version 2
+
+- name: IOS - Configure SSH (time out)
+  ios_config:
+    lines:
+      - ip ssh time-out {{ item.timeout }}
+  with_items:
+    - "{{ ssh }}"
+  when: item.timeout is defined
+
+- name: IOS - Configure SSH (authentication retries)
+  ios_config:
+    lines:
+      - ip ssh authentication-retries {{ item.auth_retries }}
+  with_items:
+    - "{{ ssh }}"
+  when: item.auth_retries is defined
+
+- name: IOS - Configure SSH (source interface)
+  ios_config:
+    lines:
+      - ip ssh source-interface {{ item.source_int }}
+  with_items:
+    - "{{ ssh }}"
+  when: item.source_int is defined
+
+- name: IOS - Configure SSH (algorithm encryption)
+  ios_config:
+    lines:
+      - ip ssh server algorithm encryption {{ item.server_algorithm }}
+      - ip ssh client algorithm encryption {{ item.client_algorithm }}
+  with_items:
+    - "{{ ssh }}"
+  when: item.server_algorithm is defined

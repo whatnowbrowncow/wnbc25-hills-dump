@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+ph-vit-cs01,netsec,,secret,5,$1$HpN0$DXxETa/uLhpdXPY5hF.BH.
+ph-vit-cs01,netadmin,15,secret,5,$1$fyFJ$gP94Tp.6CjguCLADPPwWh1
+ph-vit-cs01,svcnetworkauto,15,secret,5,$1$/QG0$jFqiSxsMKhkao83DvOYAH/

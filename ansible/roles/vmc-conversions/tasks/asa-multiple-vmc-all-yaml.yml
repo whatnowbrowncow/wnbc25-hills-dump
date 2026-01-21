@@ -1,0 +1,167 @@
+---
+## Collect all object from ASA
+- name: ASA-MULTIPLE - "{{ context.context }}" - collect network info
+  asa_command:
+    commands:
+      - show run object network in-line
+    context: "{{ context.context }}"
+  register: asa_multiple_network_objects
+
+## Collect all network groups from ASA
+- name: ASA-MULTIPLE - "{{ context.context }}" - collect network info
+  asa_command:
+    commands:
+      - show run object-group network
+    context: "{{ context.context }}"
+  register: asa_multiple_network_object_groups
+
+## Parse the object data from above and place in to a relevent object fact
+- name: ASA-MULTIPLE - "{{ context.context }}" - parse command output - network objects
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_objects_network.yml
+    content: "{{ asa_multiple_network_objects.stdout.0 }}"
+
+## Parse the network group names out
+- name: ASA-MULTIPLE - "{{ context.context }}" - parse command output - network groups split
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_network_split.yml
+    content: "{{ asa_multiple_network_object_groups.stdout.0 }}"
+
+## Parse out details within the group, merge with group name and place in relevent object fact
+- name: ASA-MULTIPLE - "{{ context.context }}" - parse command output - networks groups
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_network.yml
+    content: "{{ network_groups.network_objects.0 }}"
+  loop: "{{ network_objects_groups }}"
+  when: network_objects_groups is defined
+  loop_control:
+    loop_var: network_groups
+    label: "Parsing the configuration of network object-group {{ network_groups.name.matches.0 }}"
+  register: obj_groups
+
+## Collect all services from ASA
+- name: ASA-MULTIPLE - "{{ context.context }}" - collect service objects info
+  asa_command:
+    commands:
+      - show run object service in-line
+    context: "{{ context.context }}"
+  register: asa_multiple_service_objects
+
+## Collects the service object-group running-configuration
+- name: ASA-MULTIPLE - "{{ context.context }}" - Collecting the service object-group configuration
+  asa_command:
+    commands:
+      - show running-config object-group service
+    context: "{{ context.context }}"
+  register: service_object_group_output
+
+## Parse the service data from above and place in to a relevent object fact
+- name: ASA-MULTIPLE - "{{ context.context }}" - parse command output - service objects
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_objects_service.yml
+    content: "{{ asa_multiple_service_objects.stdout.0 }}"
+
+## Passes the results of the previous task to the service object-groups (split) parser, which splits
+## each service object group and exports it back to the play as a variable named 'service_objects_groups'
+- name: ASA-MULTIPLE - "{{ context.context }}" - Parsing (split) the service object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_service_split.yml
+    content: "{{ service_object_group_output.stdout.0 }}"
+
+# Passes the variable from the previous task to the service object-groups parser, which loops through
+# the configuration of each service object-group and presents the data as structured JSON objects
+- name: ASA-MULTIPLE - "{{ context.context }}" - Parsing the service object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_service.yml
+    content: "{{ item.service_objects.0 }}"
+  loop: "{{ service_objects_groups }}"
+  loop_control:
+    label: "Parsing the configuration of service object-group {{ item.name.matches.0 }}"
+  register: service_obj_groups
+
+## Collects the protocol object-group running-configuration
+- name: ASA-MULTIPLE - "{{ context.context }}" - Collecting the protocol object-group configuration
+  asa_command:
+    commands:
+      - show running-config object-group protocol
+    context: "{{ context.context }}"
+  register: protocol_object_group_output
+
+- name: ASA-MULTIPLE - "{{ context.context }}" - Parsing (split) the protocol object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_protocol_split.yml
+    content: "{{ protocol_object_group_output.stdout.0 }}"
+
+# Passes the variable from the previous task to the protocol object-groups parser, which loops through
+# the configuration of each protocol object-group and presents the data as structured JSON objects
+- name: ASA-MULTIPLE - "{{ context.context }}" - Parsing the protocol object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_protocol.yml
+    content: "{{ item.protocol_objects.0 }}"
+  loop: "{{ protocol_objects_groups }}"
+  loop_control:
+    label: "Parsing the configuration of protocol object-group {{ item.name.matches.0 }}"
+  register: protocol_obj_groups
+
+## Import the vmc_acls variables
+- name: Import the vmc_acls variables
+  include_vars:
+    file: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/vmc_acls.yml"
+
+## Iterates through the list of access-lists and collects the access-list configuration for each
+- name: ASA-MULTIPLE - "{{ context.context }}" - Collecting the access-entry configuration of each ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+    context: "{{ context.context }}"
+  loop: "{{ vmc_migrate_acls }}"
+  loop_control:
+    label: "Collecting the access-entry configuration of access-list {{ item }}"
+  register: rules
+
+## Passes the results of the previous task to the access-list parser, which loops through the configuration 
+## of each access-list and presents the data as structured JSON objects
+- name: ASA-MULTIPLE - "{{ context.context }}" - Parsing the ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_acl_to_vmc.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: access_lists
+
+## Confirm Directory Exists
+- name: ASA-MULTIPLE - "{{ context.context }}" - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}"
+    state: directory
+
+## Following task places the details in the SDDC groups yml file 
+- name: ASA-MULTIPLE - "{{ context.context }}" - Generate VMC YAML file - Network Objects (groups)
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_multiple/dfw_sddc_specific_groups_yaml.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_groups.yml"
+
+# Following task places the details in the SDDC ports yml file 
+- name: ASA-MULTIPLE - "{{ context.context }}" - Generate VMC YAML file - Service Objects (ports)
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_multiple/dfw_sddc_specific_ports_yaml.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_ports.yml"
+
+## Convert ASA 'named' ports to 'numbered' ports for VMC
+- name: ASA-MULTIPLE - "{{ context.context }}" - Convert ASA named ports to numbered ports
+  command: "./asa2vmc-port-converter.py -i {{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_ports.yml"
+  args:
+    chdir: "{{ role_path }}/files"
+
+## Calls a Jinja2 template that renders the results of the acl parser task into a host_var SDDC security policy YAML file
+- name: ASA-MULTIPLE - "{{ context.context }}" - Generating the VMC YAML file - Security Policy
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_multiple/dfw_sddc_specific_rules_yaml.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_rules.yml"
+
+### Refresh dfw_sddc_specific_groups variables in order to generate .tf file in the next task
+#- name: Refreshing dfw_sddc_specific_groups variables generated by the above tasks in order to service any subsequent tasks
+#  include_vars:
+#    file: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_sddc_specific_groups.yml"
+#

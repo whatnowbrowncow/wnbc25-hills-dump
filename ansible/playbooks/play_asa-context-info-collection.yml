@@ -1,0 +1,37 @@
+---
+
+- name: Collect ASA Context information and output to yaml and CSV
+  hosts: asa
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: Create firewall backup directory
+      file:
+        path: backup/{{ inventory_hostname }}
+        state: directory
+
+    - name: Create firewall output directory
+      file:
+        path: script-outputs/{{ inventory_hostname }}
+        state: directory
+
+    - name: Gather show run the system
+      asa_command:
+        commands:
+          - "show run"
+        context: "system"
+      register: system_config
+
+    - name: Export config to text file
+      template:
+        src: ./templates/line-by-line.j2
+        dest: ./backup/{{ inventory_hostname }}/system_config.cfg
+      with_items:
+        - "{{ system_config }}"
+        
+    - name: Extract interface info
+      shell: python3 ./scripts/asa_context_extraction.py -i /gitnet/ansible/backup/{{ inventory_hostname }}/system_config.cfg -o /gitnet/ansible/script-outputs/{{ inventory_hostname }}/system_context_output
+      with_items:
+        - "{{ system_config }}"
+        

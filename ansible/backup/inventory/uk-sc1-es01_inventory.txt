@@ -1,0 +1,56 @@
+NAME: "Switch System", DESCR: "Cisco Systems, Inc. WS-C4500X-16 2 slot switch "
+PID:                   , VID:      , SN: JAE163301JY
+
+NAME: "Supervisor(slot 1)", DESCR: "4500X-16 10GE (SFP+)"
+PID: WS-C4500X-16      , VID: V01  , SN: JAE163301JY
+
+NAME: "TenGigabitEthernet1/2", DESCR: "1000BaseT"
+PID: Unspecified       , VID:      , SN: AGM16432367
+
+NAME: "TenGigabitEthernet1/4", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS16440GEW
+
+NAME: "TenGigabitEthernet1/5", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS16440GEN
+
+NAME: "TenGigabitEthernet1/6", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: JUR1836GEHN
+
+NAME: "TenGigabitEthernet1/7", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: JUR1835GJYE
+
+NAME: "TenGigabitEthernet1/8", DESCR: "1000BaseT"
+PID: Unspecified       , VID:      , SN: AGM1643234V
+
+NAME: "TenGigabitEthernet1/10", DESCR: "1000BaseT"
+PID: Unspecified       , VID:      , SN: AGM16432368
+
+NAME: "TenGigabitEthernet1/11", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS16431FEL
+
+NAME: "TenGigabitEthernet1/12", DESCR: "1000BaseT"
+PID: Unspecified       , VID:      , SN: AGM1643236E
+
+NAME: "TenGigabitEthernet1/16", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD1932ACF1
+
+NAME: "Linecard(slot 2)", DESCR: "10GE SFP+"
+PID: C4KX-NM-8         , VID: V01  , SN: JAE164801W1
+
+NAME: "TenGigabitEthernet2/1", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: AVD1932ACCR
+
+NAME: "TenGigabitEthernet2/5", DESCR: "1000BaseT"
+PID: Unspecified       , VID:      , SN: AGM1840259G
+
+NAME: "TenGigabitEthernet2/6", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: JUR1837HBTZ
+
+NAME: "TenGigabitEthernet2/8", DESCR: "SFP-10Gbase-SR"
+PID: SFP-10G-SR        , VID: V03  , SN: FNS16440GEU
+
+NAME: "Power Supply 1", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: ART1607X0WD
+
+NAME: "Power Supply 2", DESCR: "Power Supply ( AC 750W )"
+PID: C4KX-PWR-750AC-R  , VID: V01  , SN: ART1607X03E

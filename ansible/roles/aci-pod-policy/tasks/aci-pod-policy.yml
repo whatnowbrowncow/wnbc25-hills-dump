@@ -1,0 +1,21 @@
+---
+
+- name: Creates the POD policy group for fabric settings. 
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/funcprof/podpgrp-POD{{ pod_id }}.json"
+    content:
+      {
+        "fabricPodPGrp": {
+          "attributes": {
+            "dn": "uni/fabric/funcprof/podpgrp-POD{{ pod_id }}",
+            "name": "POD{{ pod_id }}",
+            "rn": "podpgrp-POD1{{ pod_id }}",
+            "status": "created,modified"
+          },
+        }
+      }    
+    validate_certs: no

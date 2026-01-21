@@ -1,0 +1,9 @@
+---
+
+- name: Build Context firewalls
+  include_tasks: ./asa-contexts.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context_item
+

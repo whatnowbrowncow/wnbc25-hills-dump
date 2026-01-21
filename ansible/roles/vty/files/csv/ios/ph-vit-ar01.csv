@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+ph-vit-ar01,0 4,1,in,15 0,12375043134A3B1D07,ssh,ssh,yes,
+ph-vit-ar01,5 15,1,in,15 0,153C5E58056B1C3D05,ssh,ssh,yes,

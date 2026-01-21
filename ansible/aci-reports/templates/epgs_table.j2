@@ -1,0 +1,7 @@
+# Table of EPGs 
+
+| EPG | BD |
+|----------|----------|
+{% for epg in item.current %}
+| {{ epg.fvAEPg.attributes.name }} | {{ epg.fvAEPg.children.0.fvRsBd.attributes.tRn }} | 
+{% endfor %}

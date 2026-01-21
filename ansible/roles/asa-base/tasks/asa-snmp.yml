@@ -1,0 +1,15 @@
+---
+
+- name: Build context snmp template
+  template:
+    src: snmp.j2
+    dest: ./roles/asa-base/configs/{{ item.context }}_snmp.cfg
+  with_items:
+    - "{{ contexts }}"
+    
+- name: Build snmp on a context
+  asa_config:
+    src: ./roles/asa-base/configs/{{ item.context }}_snmp.cfg
+    context: "{{ item.context }}"
+  with_items:
+    - "{{ contexts }}"

@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-stj-ar01,10.120.163.19,group-vrf,yes,Loopback20
+uk-stj-ar01,10.120.163.20,group-vrf,no,Loopback20

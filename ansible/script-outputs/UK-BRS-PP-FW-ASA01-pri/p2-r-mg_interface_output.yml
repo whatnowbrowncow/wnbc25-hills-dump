@@ -1,0 +1,6 @@
+Port-channel21.2840: {admin-state: up, interface: Port-channel21.2840, ip-add: 10.214.180.1,
+  nameif: retail-web-mgmt, netmask: 255.255.255.128, security-level: '100'}
+Port-channel21.2841: {admin-state: up, interface: Port-channel21.2841, ip-add: 10.214.180.129,
+  nameif: retail-app-mgmt, netmask: 255.255.255.128, security-level: '100'}
+Port-channel21.3083: {admin-state: up, interface: Port-channel21.3083, ip-add: 10.214.161.164,
+  nameif: pp2on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

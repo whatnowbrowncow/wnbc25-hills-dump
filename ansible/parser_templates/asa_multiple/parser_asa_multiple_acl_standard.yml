@@ -1,0 +1,32 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show access-list | exclude ^ "
+    network_os: asa
+
+- name: standard acl match pattern
+  pattern_match:
+    regex: "^access-list +(\\S+) +line +(\\d+) +(?:(?:(remark +(\\S+.*)))?(?:standard +(permit|deny) +(?:(host +(\\d+.\\d+.\\d+.\\d+))?(?:(any4|any|\\d+.\\d+.\\d+.\\d+ +\\d+.\\d+.\\d+.\\d+))?)?)?)"
+    match_all: yes
+  register: standard
+
+- name: Generate standard lines JSON data structure - 
+  json_template:
+    template:
+      - key: name
+        value: "{{ item.matches.0 }}"
+      - key: seq
+        value: "{{ item.matches.1 }}"
+      - key: remark
+        value: "{{ item.matches.3 }}"
+      - key: action
+        value: "{{ item.matches.4 }}"
+      - key: dest_host
+        value: "{{ item.matches.6 }}"
+      - key: dest_network
+        value: "{{ item.matches.7 }}" 
+  loop: "{{ standard }}"
+  export: yes
+  register: acl_standard_facts

@@ -1,0 +1,2 @@
+hostname,local_interface,remote_device_description
+pl-krk-as01-f05,GigabitEthernet3/0/30,PL-KRK-AP01-F05-GigabitEthernet0

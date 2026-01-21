@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+ch-zur-ar02,0 4,1,in,15 0,15175F0F0C3D7F3D,telnet,none,yes,
+ch-zur-ar02,5 15,1,in,15 0,000147050C4C5F1F,ssh,none,yes,

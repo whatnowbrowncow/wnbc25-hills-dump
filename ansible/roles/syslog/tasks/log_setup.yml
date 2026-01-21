@@ -1,0 +1,25 @@
+---
+
+- name: "LOG SETUP - Performing logging preparation"
+  block:
+    - name: "LOG SETUP - Retrieving ansible date/time facts"
+      setup:
+        filter: "ansible_date_time"
+        gather_subset: "!all"
+
+    - name: "LOG SETUP - Storing DTG as fact"
+      set_fact:
+        DTG: "{{ ansible_date_time.iso8601_basic_short }}"
+
+    - name: "LOG SETUP - Ensuring output logging directory exists"
+      file:
+        path: "logs"
+        state: "directory"
+      changed_when: false
+
+    - name: "LOG SETUP - Storing the log directory for this run"
+      set_fact:
+        LOG_PATH: "logs/{{role_name}}_{{ DTG }}/"
+
+  run_once: true
+  delegate_to: "localhost"

@@ -1,0 +1,21 @@
+interface {{ mgmt_interface.interface }}
+ description {{ mgmt_interface.description }}
+ ipv4 address {{ mgmt_interface.ip_addr }} {{ mgmt_interface.mask }}
+{% if mgmt_interface.vrf != ""  %} vrf {{ mgmt_interface.vrf }}
+{% else %}
+{% endif %}
+ no shut
+
+{% if loopback_interfaces %}
+{% for loopback in loopback_interfaces %}
+interface {{ loopback.interface }}
+ description {{ loopback.description }}
+ ipv4 address {{ loopback.ip_addr }} {{ loopback.mask }}
+{% if loopback.vrf != ""  %} vrf {{ loopback.vrf }}
+{% else %}
+{% endif %}
+ no shut
+
+{% endfor %}
+{% else %}
+{% endif %}

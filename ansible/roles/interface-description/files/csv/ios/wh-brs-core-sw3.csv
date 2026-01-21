@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+wh-brs-core-sw3,Vlan99,no_data_in_cdp
+wh-brs-core-sw3,Vlan503,no_data_in_cdp

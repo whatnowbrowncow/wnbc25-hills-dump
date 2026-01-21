@@ -1,0 +1,44 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run | include logging
+    network_os: asa
+
+- name: syslog servers match pattern
+  pattern_match:
+    regex: "^logging host"
+    match_all: yes
+    match_greedy: yes
+  register: syslog_servers
+
+- name: Match syslog server values
+  pattern_group:
+    - name: match syslog ip address
+      pattern_match:
+        regex: "^logging host \\S+ (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address
+
+    - name: match interface
+      pattern_match:
+        regex: "^logging host (\\S+) \\d+.\\d+.\\d+.\\d+"
+        content: "{{ item }}"
+      register: interface 
+
+  loop: "{{ syslog_servers }}"
+  register: syslog_server_values    
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: syslog_servers
+        object:        
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: interface
+            value: "{{ item.interface.matches.0 }}"
+  loop: "{{ syslog_server_values }}"
+  export: yes
+  register: "syslog_server_facts"

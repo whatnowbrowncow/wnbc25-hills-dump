@@ -1,0 +1,11 @@
+---
+
+tacacs_style: {{ aaa_servers_facts[0].aaa_servers.tacacs_style }}
+
+aaa:
+  grp_src_int: "{{ aaa_server_group_facts[0].aaa_server_group.source_interface }}"
+{% if item.aaa_server_group.vrf is none %}
+  grp_vrf: ""
+{% else %}
+  grp_vrf: "{{ aaa_server_group_facts[0].aaa_server_group.vrf }}"
+{% endif %}

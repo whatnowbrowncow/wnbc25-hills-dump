@@ -1,0 +1,23 @@
+hostname,context,ip address,source int,community,poll/trap,version
+uk-ld6-lab-fw05-unit-1-1,lab-wan,,,,,,no SNMP configuration 
+uk-ld6-lab-fw05-unit-1-1,lab-production,10.120.163.59,internal-vrf,m0squ1t0,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-production,10.120.136.15,internal-vrf,wh1LLc0rp,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-production,10.120.163.210,internal-vrf,n1m50ft,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-corp,10.120.163.59,internal-vrf,m0squ1t0,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-corp,10.120.136.15,internal-vrf,wh1LLc0rp,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-corp,10.120.163.210,internal-vrf,n1m50ft,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-retail,10.120.163.59,internal-vrf,m0squ1t0,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-retail,10.120.136.15,internal-vrf,wh1LLc0rp,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-retail,10.120.163.210,internal-vrf,n1m50ft,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-cde-mgmt,10.120.163.59,internal-vrf,m0squ1t0,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-cde-mgmt,10.120.136.15,internal-vrf,wh1LLc0rp,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-cde-mgmt,10.120.163.210,internal-vrf,n1m50ft,both,2c
+uk-ld6-lab-fw05-unit-1-1,nick,,,,,,no SNMP configuration 
+uk-ld6-lab-fw05-unit-1-1,giles,,,,,,no SNMP configuration 
+uk-ld6-lab-fw05-unit-1-1,nick2,,,,,,no SNMP configuration 
+uk-ld6-lab-fw05-unit-1-1,lab-auto-demo,10.120.163.59,internal-vrf,m0squ1t0,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-auto-demo,10.120.136.15,internal-vrf,wh1LLc0rp,both,2c
+uk-ld6-lab-fw05-unit-1-1,lab-auto-demo,10.120.163.210,internal-vrf,n1m50ft,both,2c
+uk-ld6-lab-fw05-unit-1-1,jayjay,,,,,,no SNMP configuration 
+uk-ld6-lab-fw05-unit-1-1,jayjay2,,,,,,no SNMP configuration 
+uk-ld6-lab-fw05-unit-1-1,http-tooling-test,,,,,,no SNMP configuration 

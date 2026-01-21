@@ -1,0 +1,6 @@
+
+## CPU Utilisation
+
+|  5 seconds  |  1 minute  |  5 minutes  |
+|-------------|------------|-------------|
+| {{ item.stdout[0].replace(';', ' ').split()[6] }}  |  {{ item.stdout[0].replace(';', ' ').split()[9] }}  |  {{ item.stdout[0].replace(';', ' ').split()[12] }}  |

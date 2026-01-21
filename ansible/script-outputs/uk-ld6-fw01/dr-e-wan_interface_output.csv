@@ -1,0 +1,4 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.571,10.19.0.132,0200.0101.0101,group-vrf,255.255.255.224,100
+up,,Port-channel1.581,10.109.0.68,,us-vrf,255.255.255.224,100
+up,,Port-channel1.2004,10.112.215.204,0200.0101.0101,internal-vrf,255.255.255.248,100

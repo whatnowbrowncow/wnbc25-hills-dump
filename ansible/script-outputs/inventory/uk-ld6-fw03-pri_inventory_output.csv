@@ -1,0 +1,4 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-ld6-fw03-pri,ASA 5545-X/5555-X AC Power Supply,power supply 1,ASA-PWR-AC,48M1T9,N/A
+uk-ld6-fw03-pri,ASA 5545-X/5555-X AC Power Supply,power supply 0,ASA-PWR-AC,48V121,N/A
+uk-ld6-fw03-pri,ASA 5555-X with SW,Chassis,ASA5555,FGL183940YE,V02

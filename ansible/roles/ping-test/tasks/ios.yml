@@ -1,0 +1,92 @@
+---
+
+### Create host output folder if it doesn't already exist
+- file:
+    path: "./roles/ping-test/outputs/{{ inventory_hostname }}"
+    state: directory
+
+
+- name: Performing pings
+  ios_command:
+    commands:
+## My IP
+      - "ping vrf {{ ping_vrf }} 10.1.82.64"
+## LD6 NS01 IP
+      - "ping vrf {{ ping_vrf }} 10.112.208.11"
+## LD6 NS02 IP
+      - "ping vrf {{ ping_vrf }} 10.112.208.12"
+## LD6 LDAP IP
+      - "ping vrf {{ ping_vrf }} 10.112.12.20"
+  register: reg_pings
+
+
+## Debug outputs
+#- name: Output ping results
+#  debug:
+#    msg: 
+#      - "{{ reg_pings }}"
+
+ 
+## Debug outputs
+#- name: Output ping results
+#  debug:
+## Grab the last line of the ping output
+#    msg: 
+#      - "Access to me: {{ reg_pings.stdout_lines[0][-1].split(',')[0] }}"
+#      - "Access to LD6 NS01: {{ reg_pings.stdout_lines[1][-1].split(',')[0] }}"
+#      - "Access to LD6 NS02: {{ reg_pings.stdout_lines[2][-1].split(',')[0] }}"
+#      - "Access to LD6 LDAP: {{ reg_pings.stdout_lines[3][-1].split(',')[0] }}"
+
+
+- name: "Record {{ ping_state }} output to file"
+  template:
+    src: "ios_ping_template.j2"
+    dest: "./roles/ping-test/outputs/{{ inventory_hostname }}/{{ snapshot_description }}_{{ ping_state }}_results.txt"
+  
+  
+- name: Register pre-ping stats
+  stat:
+    path: "./roles/ping-test/outputs/{{ inventory_hostname }}/{{ snapshot_description }}_pre-ping_results.txt"
+  register: pre_ping
+
+      
+- name: Register post-ping stats
+  stat:
+    path: "./roles/ping-test/outputs/{{ inventory_hostname }}/{{ snapshot_description }}_post-ping_results.txt"
+  register: post_ping
+
+
+### Debug the pre/post-ping variables
+##- name: output the pre_ping variables
+##  debug:
+##    msg:
+##      - "Pre_ping var = {{ pre_ping | default('No varible info') }}"
+## 
+##- name: output the post_ping variables
+##  debug:
+##    msg:
+##      - "Post_ping var = {{ post_ping | default('No varible info') }}"
+
+
+- name: Compare pre-change pings to post-change ones - Success
+  debug:
+    msg:
+      - "Pre-change and post-change pings match!!!"
+      - "Everything looks ok here."
+      - "The ping files can be found here, prefixed with the change reference:"
+      - "./roles/ping-test/outputs/{{ inventory_hostname }}/"
+# Check that this is the post-ping run
+# Compare the md5 checksum of the pre and post-ping files
+  when: (ping_state == "post-ping")and (pre_ping.stat.checksum == post_ping.stat.checksum)
+      
+- name: Compare pre-change pings to post-change ones - Failure
+  debug:
+    msg:
+      - "Pre-change and post-change pings don't match!"
+      - "Double check the pings and roll back if necessary."
+      - "The ping files can be found here, prefixed with the change reference:"
+      - "./roles/ping-test/outputs/{{ inventory_hostname }}/"
+# Check that this is the post-ping run
+# Compare the md5 checksum of the pre and post-ping files
+  when: (ping_state == "post-ping") and (pre_ping.stat.checksum != post_ping.stat.checksum)
+

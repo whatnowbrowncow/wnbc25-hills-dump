@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+uk-cwk-as02-f03,Vlan98,no_data_in_cdp
+uk-cwk-as02-f03,Port-channel32,no_data_in_cdp

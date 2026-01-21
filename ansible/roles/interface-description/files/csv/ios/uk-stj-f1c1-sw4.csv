@@ -1,0 +1,11 @@
+hostname,local_interface,remote_device_description
+uk-stj-f1c1-sw4,GigabitEthernet4/0/1,IP_Phone_SEP00082F1A52C0-Port1
+uk-stj-f1c1-sw4,GigabitEthernet4/0/3,no_data_in_cdp
+uk-stj-f1c1-sw4,GigabitEthernet4/0/7,IP_Phone_SEP00082F1A554D-Port1
+uk-stj-f1c1-sw4,GigabitEthernet4/0/15,no_data_in_cdp
+uk-stj-f1c1-sw4,GigabitEthernet4/0/17,UK-STJ-AP02-F01-GigabitEthernet0
+uk-stj-f1c1-sw4,GigabitEthernet4/0/19,UK-STJ-AP01-F01-GigabitEthernet0
+uk-stj-f1c1-sw4,GigabitEthernet4/0/21,UK-STJ-AP05-F01-GigabitEthernet0
+uk-stj-f1c1-sw4,GigabitEthernet4/0/23,UK-STJ-AP04-F01-GigabitEthernet0
+uk-stj-f1c1-sw4,GigabitEthernet4/0/25,UK-STJ-AP03-F01-GigabitEthernet0
+uk-stj-f1c1-sw4,GigabitEthernet4/0/27,UK-STJ-AP06-F01-GigabitEthernet0

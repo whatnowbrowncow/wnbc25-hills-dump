@@ -1,0 +1,39 @@
+hostname,Interface Type,Interface,mgmt interface?,Description,IP Address,Subnet mask,vrf,no IP redirects,no IP unreachables,no proxy arp, no IP directed-broadcast, no IP mask-reply
+{% if mgmt129_int_facts is defined %}
+{% for item in mgmt129_int_facts %}
+{{ inventory_hostname }},.129 IP Interface,{{ item.management_interface.interface }},yes,{{ item.management_interface.description }},{{ item.management_interface.ip_address }},{{ item.management_interface.mask }},{{ item.management_interface.vrf }},{% if item.management_interface.ip_redirects_config == "no ip redirects" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_unreachables_config == "no ip unreachables" %}yes{% else %}not configured{% endif %},{% if item.management_interface.proxy_arp_config =="no ip proxy-arp" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_directed_broadcast_config == "no ip directed-broadcast" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_mask_reply_config == "no ip mask-reply" %}yes{% else %}not configured{% endif %}
+
+{% endfor %}
+{% else %}
+{% endif %}
+{% if mgmt0_int_facts is defined %}
+{% for item in mgmt0_int_facts %}
+{{ inventory_hostname }},Mgmt0 Interface,{{ item.management_interface.interface }},{% if mgmt129_int_facts is defined %}no{% else %}yes{% endif %},{{ item.management_interface.description }},{{ item.management_interface.ip_address }},{{ item.management_interface.mask }},{{ item.management_interface.vrf }},{% if item.management_interface.ip_redirects_config == "no ip redirects" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_unreachables_config == "no ip unreachables" %}yes{% else %}not configured{% endif %},{% if item.management_interface.proxy_arp_config =="no ip proxy-arp" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_directed_broadcast_config == "no ip directed-broadcast" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_mask_reply_config == "no ip mask-reply" %}yes{% else %}not configured{% endif %}
+
+{% endfor %}
+{% else %}
+{% endif %}
+{% if loopbacks_facts.results is defined %}
+{% for item in loopbacks_facts.results %}
+{% if item.ansible_facts is defined %}
+{{ inventory_hostname }},Loopback Interface,{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.interface }},{% if mgmt129_int_facts is defined %}no{% elif mgmt0_int_facts is defined %}no{% elif item.ansible_facts.loopback_int_facts[0].loopback_interface.interface == "Loopback20" %}yes{% else %}no{% endif %},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.description }},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.ip_address }},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.mask }},{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.vrf }},{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.ip_redirects_config == "no ip redirects" %}yes{% else %}not configured{% endif %},{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.ip_unreachables_config == "no ip unreachables" %}yes{% else %}not configured{% endif %},{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.proxy_arp_config =="no ip proxy-arp" %}yes{% else %}not configured{% endif %},{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.ip_directed_broadcast_config == "no ip directed-broadcast" %}yes{% else %}not configured{% endif %},{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.ip_mask_reply_config == "no ip mask-reply" %}yes{% else %}not configured{% endif %}
+
+{% else %}
+{% endif %}
+{% endfor %}
+{% else %}
+{% endif %}
+{% if vlan99_int_facts is defined %}
+{% for item in vlan99_int_facts %}
+{{ inventory_hostname }},vlan99 Interface,{{ item.management_interface.interface }},{% if mgmt129_int_facts is defined %}no{% elif mgmt0_int_facts is defined %}no{% elif loopbacks_facts.results[0].ansible_facts is defined %}no{% else %}yes{% endif %},{{ item.management_interface.description }},{{ item.management_interface.ip_address }},{{ item.management_interface.mask }},{{ item.management_interface.vrf }},{% if item.management_interface.ip_redirects_config == "no ip redirects" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_unreachables_config == "no ip unreachables" %}yes{% else %}not configured{% endif %},{% if item.management_interface.proxy_arp_config =="no ip proxy-arp" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_directed_broadcast_config == "no ip directed-broadcast" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_mask_reply_config == "no ip mask-reply" %}yes{% else %}not configured{% endif %}
+
+{% endfor %}
+{% else %}
+{% endif %}
+{% if mgmt_tacacs_int_facts is defined %}
+{% for item in mgmt_tacacs_int_facts %}
+{{ inventory_hostname }},Tacacs Source Interface,{{ item.management_interface.interface }},{% if mgmt129_int_facts is defined %}no{% elif mgmt0_int_facts is defined %}no{% elif vlan99_int_facts is defined %}no{% elif loopbacks_facts.results[0].ansible_facts is defined %}no{% else %}yes{% endif %},{{ item.management_interface.description }},{{ item.management_interface.ip_address }},{{ item.management_interface.mask }},{{ item.management_interface.vrf }},{% if item.management_interface.ip_redirects_config == "no ip redirects" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_unreachables_config == "no ip unreachables" %}yes{% else %}not configured{% endif %},{% if item.management_interface.proxy_arp_config =="no ip proxy-arp" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_directed_broadcast_config == "no ip directed-broadcast" %}yes{% else %}not configured{% endif %},{% if item.management_interface.ip_mask_reply_config == "no ip mask-reply" %}yes{% else %}not configured{% endif %}
+
+{% endfor %}
+{% else %}
+{% endif %}

@@ -1,0 +1,29 @@
+--- 
+
+- name: include role
+  include_role:
+    name: ansible-network.network-engine
+
+- name: IOS - ssh report task
+  include_tasks: ./ios-report.yml
+  when: ansible_network_os == "ios"
+
+- name: IOS - ssh YAML creation task
+  include_tasks: ./ios-yaml.yml
+  when: ansible_network_os == "ios"
+
+#- name: IOS - ssh config task
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios"
+
+- name: IOS-XR - ssh report task
+  include_tasks: ./iosxr-report.yml
+  when: ansible_network_os == "iosxr"
+
+- name: IOS-XR - ssh YAML creation task
+  include_tasks: ./iosxr-yaml.yml
+  when: ansible_network_os == "iosxr"
+
+#- name: IOS-XR - ssh config task
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"

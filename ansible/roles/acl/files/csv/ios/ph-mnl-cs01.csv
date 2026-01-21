@@ -1,0 +1,210 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+ph-mnl-cs01,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+ph-mnl-cs01,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+ph-mnl-cs01,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+ph-mnl-cs01,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+ph-mnl-cs01,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+ph-mnl-cs01,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+ph-mnl-cs01,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+ph-mnl-cs01,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+ph-mnl-cs01,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+ph-mnl-cs01,solarwinds-new,Standard,100,deny,,any log,,,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,10,permit,udp,any,host 255.255.255.255,bootps
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,20,permit,udp,any,any,bootps
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,30,permit,udp,10.123.36.0 0.0.0.255,host 10.210.193.235,domain
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,40,permit,udp,10.123.36.0 0.0.0.255,host 10.210.193.235,bootps
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,50,permit,udp,10.123.36.0 0.0.0.255,host 10.210.193.236,domain
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,60,permit,udp,10.123.36.0 0.0.0.255,host 10.210.193.236,bootps
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,70,permit,udp,10.123.36.0 0.0.0.255,host 10.120.193.235,domain
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,80,permit,udp,10.123.36.0 0.0.0.255,host 10.120.193.235,bootps
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,90,permit,udp,10.123.36.0 0.0.0.255,host 10.120.193.236,domain
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,100,permit,udp,10.123.36.0 0.0.0.255,host 10.120.193.236,bootps
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,110,permit,udp,10.123.36.0 0.0.0.255,host 10.120.193.238,domain
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,120,permit,udp,10.123.36.0 0.0.0.255,host 10.120.193.239,domain
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,130,permit,tcp,10.123.36.0 0.0.0.255,host 192.168.9.102,8080
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,140,permit,udp,10.123.36.0 0.0.0.255,host 192.168.9.102,isakmp
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,150,permit,udp,10.123.36.0 0.0.0.255,host 192.168.9.102,non500-isakmp
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,160,permit,ip,10.123.36.0 0.0.0.255,host 141.138.129.40,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,170,permit,ip,10.123.36.0 0.0.0.255,host 95.131.184.37,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,180,permit,tcp,10.123.36.0 0.0.0.255,0.1.28.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,190,permit,tcp,10.123.36.0 0.0.0.255,0.1.28.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,200,permit,tcp,10.123.36.0 0.0.0.255,211.36.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,210,permit,tcp,10.123.36.0 0.0.0.255,211.36.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,220,permit,tcp,10.123.36.0 0.0.0.255,212.36.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,230,permit,tcp,10.123.36.0 0.0.0.255,212.36.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,240,permit,tcp,10.123.36.0 0.0.0.255,213.36.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,250,permit,tcp,10.123.36.0 0.0.0.255,213.36.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,260,permit,tcp,10.123.36.0 0.0.0.255,214.36.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,270,permit,tcp,10.123.36.0 0.0.0.255,214.36.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,280,permit,tcp,10.123.36.0 0.0.0.255,215.36.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,290,permit,tcp,10.123.36.0 0.0.0.255,215.36.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,300,permit,tcp,10.123.36.0 0.0.0.255,216.36.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,310,permit,tcp,10.123.36.0 0.0.0.255,216.36.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,320,permit,tcp,10.123.36.0 0.0.0.255,211.43.0 0.0.0.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,330,permit,tcp,10.123.36.0 0.0.0.255,211.43.0 0.0.0.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,340,permit,tcp,10.123.36.0 0.0.0.255,212.43.0 0.0.0.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,350,permit,tcp,10.123.36.0 0.0.0.255,212.43.0 0.0.0.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,360,permit,tcp,10.123.36.0 0.0.0.255,213.43.0 0.0.0.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,370,permit,tcp,10.123.36.0 0.0.0.255,213.43.0 0.0.0.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,380,permit,tcp,10.123.36.0 0.0.0.255,214.43.0 0.0.0.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,390,permit,tcp,10.123.36.0 0.0.0.255,214.43.0 0.0.0.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,400,permit,tcp,10.123.36.0 0.0.0.255,215.43.0 0.0.0.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,410,permit,tcp,10.123.36.0 0.0.0.255,215.43.0 0.0.0.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,420,permit,tcp,10.123.36.0 0.0.0.255,216.43.0 0.0.0.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,430,permit,tcp,10.123.36.0 0.0.0.255,216.43.0 0.0.0.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,440,permit,tcp,10.123.36.0 0.0.0.255,211.66.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,450,permit,tcp,10.123.36.0 0.0.0.255,211.66.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,460,permit,tcp,10.123.36.0 0.0.0.255,212.66.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,470,permit,tcp,10.123.36.0 0.0.0.255,212.66.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,480,permit,tcp,10.123.36.0 0.0.0.255,213.66.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,490,permit,tcp,10.123.36.0 0.0.0.255,213.66.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,500,permit,tcp,10.123.36.0 0.0.0.255,214.66.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,510,permit,tcp,10.123.36.0 0.0.0.255,214.66.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,520,permit,tcp,10.123.36.0 0.0.0.255,215.66.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,530,permit,tcp,10.123.36.0 0.0.0.255,215.66.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,540,permit,tcp,10.123.36.0 0.0.0.255,216.66.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,550,permit,tcp,10.123.36.0 0.0.0.255,216.66.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,560,permit,tcp,10.123.36.0 0.0.0.255,1.216.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,570,permit,tcp,10.123.36.0 0.0.0.255,1.216.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,580,permit,tcp,10.123.36.0 0.0.0.255,2.216.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,590,permit,tcp,10.123.36.0 0.0.0.255,2.216.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,600,permit,tcp,10.123.36.0 0.0.0.255,3.216.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,610,permit,tcp,10.123.36.0 0.0.0.255,3.216.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,620,permit,tcp,10.123.36.0 0.0.0.255,4.216.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,630,permit,tcp,10.123.36.0 0.0.0.255,4.216.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,640,permit,tcp,10.123.36.0 0.0.0.255,5.216.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,650,permit,tcp,10.123.36.0 0.0.0.255,5.216.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,660,permit,tcp,10.123.36.0 0.0.0.255,6.216.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,670,permit,tcp,10.123.36.0 0.0.0.255,6.216.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,680,permit,tcp,10.123.36.0 0.0.1.255,0.200.0 0.0.1.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,690,permit,tcp,10.123.36.0 0.0.1.255,0.200.0 0.0.1.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,700,permit,tcp,10.123.36.0 0.0.1.255,0.200.0 0.0.1.255,8080
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,710,permit,tcp,10.123.36.0 0.0.1.255,0.200.0 0.0.1.255,7072
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,720,permit,tcp,10.123.36.0 0.0.1.255,0.200.0 0.0.1.255,22
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,730,permit,tcp,10.123.36.0 0.0.0.255,host 212.36.187.235,45454
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,740,permit,tcp,10.123.36.0 0.0.0.255,host 212.36.187.239,45454
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,750,permit,tcp,10.123.36.0 0.0.0.255,host 212.36.187.241,45454
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,760,permit,tcp,10.123.36.0 0.0.0.255,220.43.0 0.0.0.255,www
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,770,permit,tcp,10.123.36.0 0.0.0.255,220.43.0 0.0.0.255,443
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,780,permit,tcp,10.123.36.0 0.0.0.255,220.43.0 0.0.0.255,8080
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,790,deny,ip,10.123.36.0 0.0.0.255,168.0.0 0.0.255.255,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,800,deny,ip,10.123.36.0 0.0.0.255,2.16.0.0 0.15.255.255,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,810,deny,ip,10.123.36.0 0.0.0.255,0.0.0.0 0.255.255.255,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,820,permit,tcp,10.123.36.0 0.0.0.255,any,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,830,permit,udp,10.123.36.0 0.0.0.255,any,
+ph-mnl-cs01,FROM-MNL-TESTWIFI,Extended,840,permit,ip,10.123.36.0 0.0.0.255,any,
+ph-mnl-cs01,VSL-BFD,Extended,10,permit,udp,any,any,3784
+ph-mnl-cs01,VSL-DHCP-CLIENT-TO-SERVER,Extended,10,permit,udp,any,any,bootps
+ph-mnl-cs01,VSL-DHCP-SERVER-TO-CLIENT,Extended,10,permit,udp,any,any,bootpc
+ph-mnl-cs01,VSL-DHCP-SERVER-TO-SERVER,Extended,10,permit,udp,any,any,bootps
+ph-mnl-cs01,VSL-IPV4-ROUTING,Extended,10,permit,ip,any,4.0.0.0 0.0.0.255,
+ph-mnl-cs01,acl-wifi-testing,Extended,10,permit,udp,any,host 10.1.34.10,domain
+ph-mnl-cs01,acl-wifi-testing,Extended,20,permit,udp,any,host 10.64.72.10,domain
+ph-mnl-cs01,acl-wifi-testing,Extended,30,permit,udp,host 10.1.103.10,host 10.1.34.10,bootps
+ph-mnl-cs01,acl-wifi-testing,Extended,40,permit,udp,host 10.1.103.10,host 10.64.72.10,bootps
+ph-mnl-cs01,acl-wifi-testing,Extended,50,permit,ip,any,host 10.1.28.22,
+ph-mnl-cs01,acl-wifi-testing,Extended,60,permit,icmp,any,host 10.1.28.22,
+ph-mnl-cs01,acl-wifi-testing,Extended,70,deny,ip,any,any,
+ph-mnl-cs01,aus-wifi-block,Extended,10,permit,ip,0.0.0.0 7.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,20,permit,ip,8.0.0.0 1.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,30,permit,ip,11.0.0.0 0.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,40,permit,ip,12.0.0.0 3.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,50,permit,ip,16.0.0.0 15.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,60,permit,ip,32.0.0.0 31.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,70,permit,ip,64.0.0.0 63.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,80,permit,ip,128.0.0.0 31.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,90,permit,ip,160.0.0.0 7.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,100,permit,ip,168.0.0.0 3.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,110,permit,ip,172.0.0.0 0.15.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,120,permit,ip,172.32.0.0 0.31.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,130,permit,ip,172.64.0.0 0.63.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,140,permit,ip,172.128.0.0 0.127.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,150,permit,ip,173.0.0.0 0.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,160,permit,ip,174.0.0.0 1.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,170,permit,ip,176.0.0.0 15.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,180,permit,ip,192.0.0.0 0.127.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,190,permit,ip,192.128.0.0 0.31.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,200,permit,ip,192.160.0.0 0.7.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,210,permit,ip,192.169.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,220,permit,ip,192.170.0.0 0.1.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,230,permit,ip,192.172.0.0 0.3.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,240,permit,ip,192.176.0.0 0.15.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,250,permit,ip,192.192.0.0 0.63.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,260,permit,ip,193.0.0.0 0.0.0.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,270,permit,ip,194.0.0.0 1.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,280,permit,ip,196.0.0.0 3.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,290,permit,ip,200.0.0.0 7.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,300,permit,ip,208.0.0.0 15.255.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,310,permit,ip,10.123.18.0 0.0.1.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,320,permit,ip,10.132.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,330,permit,ip,10.133.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,340,permit,ip,10.134.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,350,permit,ip,10.137.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,360,permit,ip,10.138.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,370,permit,ip,10.139.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,380,permit,ip,10.141.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,390,permit,ip,10.142.0.0 0.0.255.255,any,
+ph-mnl-cs01,aus-wifi-block,Extended,400,deny,ip,any,any,
+ph-mnl-cs01,iolan_fix_aaa,Extended,10,deny,tcp,host 10.123.14.9,any,tacacs
+ph-mnl-cs01,iolan_fix_aaa,Extended,20,permit,ip,any,any,
+ph-mnl-cs01,1,Standard,10,permit,,10.120.163.210,,,
+ph-mnl-cs01,1,Standard,20,permit,,10.1.74.66,,,
+ph-mnl-cs01,1,Standard,30,permit,,10.112.12.126,,,
+ph-mnl-cs01,1,Standard,40,permit,,10.112.12.125,,,
+ph-mnl-cs01,1,Standard,50,permit,,10.180.163.18,,,
+ph-mnl-cs01,1,Standard,60,permit,,10.120.163.151,,,
+ph-mnl-cs01,1,Standard,70,permit,,10.210.163.60,,,
+ph-mnl-cs01,1,Standard,80,permit,,10.120.163.152,,,
+ph-mnl-cs01,1,Standard,90,permit,,10.1.74.29,,,
+ph-mnl-cs01,1,Standard,100,permit,,10.120.163.143,,,
+ph-mnl-cs01,1,Standard,110,permit,,10.120.163.142,,,
+ph-mnl-cs01,1,Standard,120,permit,,10.112.13.17,,,
+ph-mnl-cs01,1,Standard,130,permit,,10.1.74.48,,,
+ph-mnl-cs01,1,Standard,140,permit,,10.1.74.57,,,
+ph-mnl-cs01,1,Standard,150,permit,,10.1.74.61,,,
+ph-mnl-cs01,1,Standard,160,permit,,10.120.163.123,,,
+ph-mnl-cs01,1,Standard,170,permit,,10.120.163.122,,,
+ph-mnl-cs01,1,Standard,180,permit,,10.120.195.31,,,
+ph-mnl-cs01,1,Standard,190,permit,,10.120.143.70,,,
+ph-mnl-cs01,1,Standard,200,permit,,10.1.74.128,,,
+ph-mnl-cs01,1,Standard,210,permit,,10.180.142.230,,,
+ph-mnl-cs01,1,Standard,220,permit,,10.112.12.144,,,
+ph-mnl-cs01,1,Standard,230,permit,,10.120.163.37,,,
+ph-mnl-cs01,1,Standard,240,permit,,10.112.12.142,,,
+ph-mnl-cs01,1,Standard,250,permit,,10.112.12.143,,,
+ph-mnl-cs01,1,Standard,260,permit,,10.1.82.64 0.0.0.31,,,
+ph-mnl-cs01,1,Standard,270,permit,,10.1.22.0 0.0.0.255,,,
+ph-mnl-cs01,1,Standard,280,permit,,192.168.2.0 0.0.1.255,,,
+ph-mnl-cs01,1,Standard,290,permit,,10.210.141.40 0.0.0.7,,,
+ph-mnl-cs01,1,Standard,300,permit,,10.180.141.40 0.0.0.7,,,
+ph-mnl-cs01,1,Standard,310,permit,,10.120.141.40 0.0.0.7,,,
+ph-mnl-cs01,1,Standard,320,permit,,100.79.0.0 0.0.127.255,,,
+ph-mnl-cs01,1,Standard,330,deny,,any log,,,
+ph-mnl-cs01,10,Standard,10,permit,,10.120.163.210,,,
+ph-mnl-cs01,10,Standard,70,permit,,10.112.12.126,,,
+ph-mnl-cs01,10,Standard,60,permit,,10.112.12.125,,,
+ph-mnl-cs01,10,Standard,50,permit,,10.120.163.123,,,
+ph-mnl-cs01,10,Standard,40,permit,,10.120.163.122,,,
+ph-mnl-cs01,10,Standard,20,permit,,10.120.163.59,,,
+ph-mnl-cs01,10,Standard,30,permit,,10.110.163.59,,,
+ph-mnl-cs01,11,Standard,14,permit,,10.112.12.126,,,
+ph-mnl-cs01,11,Standard,13,permit,,10.112.12.125,,,
+ph-mnl-cs01,11,Standard,10,permit,,10.120.136.140,,,
+ph-mnl-cs01,11,Standard,12,permit,,10.120.163.123,,,
+ph-mnl-cs01,11,Standard,11,permit,,10.120.163.122,,,
+ph-mnl-cs01,11,Standard,20,permit,,10.50.3.140,,,
+ph-mnl-cs01,11,Standard,30,deny,,any log,,,
+ph-mnl-cs01,12,Standard,10,permit,,10.220.163.112,,,
+ph-mnl-cs01,12,Standard,20,permit,,10.220.163.111,,,
+ph-mnl-cs01,12,Standard,30,permit,,10.180.163.112,,,
+ph-mnl-cs01,12,Standard,40,permit,,10.180.163.111,,,
+ph-mnl-cs01,12,Standard,50,permit,,10.120.163.112,,,
+ph-mnl-cs01,12,Standard,60,permit,,10.110.163.111,,,
+ph-mnl-cs01,12,Standard,70,permit,,10.110.163.112,,,
+ph-mnl-cs01,12,Standard,80,permit,,10.120.163.111,,,
+ph-mnl-cs01,12,Standard,90,deny,,any log,,,
+ph-mnl-cs01,16,Standard,10,permit,,10.120.163.206,,,
+ph-mnl-cs01,22,Standard,10,permit,,10.112.12.119,,,
+ph-mnl-cs01,22,Standard,40,permit,,10.210.143.80,,,
+ph-mnl-cs01,22,Standard,30,permit,,10.120.143.80,,,
+ph-mnl-cs01,22,Standard,20,permit,,10.180.142.232,,,

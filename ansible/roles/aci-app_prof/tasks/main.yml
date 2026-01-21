@@ -1,0 +1,6 @@
+---
+
+- name: Build Application Profiles
+  import_tasks: ./aci-app_profs.yml
+  when: ansible_network_os == "aci"
+

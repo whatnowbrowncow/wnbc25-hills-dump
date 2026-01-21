@@ -1,0 +1,16 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+ shutdown,,Port-channel1.250,10.180.96.1,,backoffice-tier,255.255.255.224,100
+ shutdown,,Port-channel1.251,10.180.96.33,,web-tier,255.255.255.224,100
+ shutdown,,Port-channel1.252,10.180.96.65,,applications-tier,255.255.255.224,100
+up,,Port-channel1.253,10.180.96.97,,rng-arcade,255.255.255.224,100
+up,,Port-channel1.254,10.180.96.129,,rng-retail,255.255.255.224,100
+up,,Port-channel1.255,10.180.96.161,,f1x2-web-bottom,255.255.255.224,100
+up,,Port-channel1.256,10.180.96.193,,f1x2-app,255.255.255.224,100
+up,,Port-channel1.260,10.180.98.1,,database-tier,255.255.255.0,100
+up,,Port-channel1.261,10.180.99.1,,applications-tier-new,255.255.255.0,100
+up,rng-arcade,Port-channel1.262,10.180.100.1,,noncde-rng-arcade,255.255.255.0,100
+up,,Port-channel1.374,10.180.160.130,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.409,10.180.165.33,,test-network,255.255.255.224,100
+up,,Port-channel1.230,10.180.73.1,,caerus-apps,255.255.255.0,100
+up,,Port-channel1.220,10.180.70.1,,backoffice-tier-new,255.255.255.0,100
+up,,Port-channel1.221,10.180.71.1,,web-tier-new,255.255.255.0,100

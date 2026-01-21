@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+uk-bfa-cs01,TenGigabitEthernet1/1/10,no_data_in_cdp
+uk-bfa-cs01,Vlan1,no_data_in_cdp

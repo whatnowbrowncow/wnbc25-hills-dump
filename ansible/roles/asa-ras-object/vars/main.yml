@@ -1,0 +1,22 @@
+---
+# vars file for asa-vpn
+ras_cfg: deploy
+yml_dir: group_vars/ras
+role_root: /gitnet/ansible/roles
+wh_net_tools_path: "/gitnet/automation-tools/wh_net_python_toolset/"
+
+date: "{{ now().strftime('%Y_%m_%d') | string }}"
+time: "{{ now().strftime('%H-%M-%S') | string }}"
+
+
+backup_dir: "/gitnet/ras-processed/changes/{{ inventory_hostname }}"
+changes_dir: "{{ backup_dir }}/{{ date }}"
+logs_dir: "/gitnet/ras-processed/logs"
+config_dir: "/gitnet/ras-processed/config/{{ inventory_hostname }}/{{ date }}"
+pre_conf_file: "{{ changes_dir }}/objects_pre_change.conf"
+post_conf_file: "{{ changes_dir }}/objects_post_change.conf"
+ld6_sync_group: "{{ ansible_limit }}-sync-ld6"
+sc1_sync_group: "{{ ansible_limit }}-sync-sc1"
+config_file_object: "{{ config_dir }}/{{ timestamp }}_object_"
+channel_id: "'C026PND9MEH'"
+slack_message: "'RAS OBJECT AUTOMATION FAILED TO DEPLOY - PLEASE CONFIRM BEFORE ANY FURTHER DEPLOYMENTS'"

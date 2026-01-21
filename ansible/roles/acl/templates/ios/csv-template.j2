@@ -1,0 +1,26 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+{% for acl in access_lists.results %}
+{%   for type in acl.ansible_facts.acl_type %}
+{%     if 'Standard' == type.matches  %}
+{%       if acl.ansible_facts.access_lists_facts is defined %}
+{%         for aces in acl.ansible_facts.access_lists_facts %}
+{%           if (aces.ace.src_wildcard is defined) and aces.ace.src_wildcard %}
+{{ inventory_hostname }},{{ acl.item.item }},{{ type.matches }},{{ aces.ace.seq_num }},{{ aces.ace.action }},,{{ aces.ace.src }} {{ aces.ace.src_wildcard }},,,
+{%           else %}
+{{ inventory_hostname }},{{ acl.item.item }},{{ type.matches }},{{ aces.ace.seq_num }},{{ aces.ace.action }},,{{ aces.ace.src }},,,
+{%           endif %}
+{%         endfor %}
+{%       else %}
+{{ inventory_hostname }},{{ acl.item.item }},HAS,NO,LINE,ITEMS,DEFINED,,,
+{%       endif %}
+{%     else %}
+{%       if acl.ansible_facts.ext_access_lists_facts is defined %}
+{%         for ext_aces in acl.ansible_facts.ext_access_lists_facts %}
+{{ inventory_hostname }},{{ acl.item.item }},{{ type.matches }},{{ ext_aces.ext_ace.seq_num }},{{ ext_aces.ext_ace.action }},{{ ext_aces.ext_ace.protocol }},{{ ext_aces.ext_ace.src }},{{ ext_aces.ext_ace.dest }},{{ ext_aces.ext_ace.ports }}
+{%         endfor %}
+{%       else %}
+{{ inventory_hostname }},{{ acl.item.item }},HAS,NO,LINE,ITEMS,DEFINED,,,
+{%       endif %}
+{%     endif %}
+{%   endfor %}
+{% endfor %}

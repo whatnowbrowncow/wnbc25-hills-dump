@@ -1,0 +1,8 @@
+Port-channel1.382: {admin-state: ' shutdown', interface: Port-channel1.382, ip-add: 10.180.161.129,
+  nameif: monitoring-int, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.383: {admin-state: up, interface: Port-channel1.383, ip-add: 10.180.161.164,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.398: {admin-state: up, interface: Port-channel1.398, ip-add: 10.180.162.1,
+  nameif: build-network, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.399: {admin-state: up, interface: Port-channel1.399, ip-add: 10.180.163.1,
+  nameif: monitoring, netmask: 255.255.255.0, security-level: '100'}

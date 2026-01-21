@@ -1,0 +1,2 @@
+device,timeout,auth_retries,source-interface,version,server-algorithm,client-algorithm
+GH_WGS_4TH,60,,Vlan99,,,

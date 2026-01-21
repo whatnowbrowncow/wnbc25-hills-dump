@@ -1,0 +1,4 @@
+hostname,local_interface,remote_device_description
+uk-ld6-os02,Ethernet1/30,no_data_in_cdp
+uk-ld6-os02,Ethernet1/33,no_data_in_cdp
+uk-ld6-os02,Vlan300,no_data_in_cdp

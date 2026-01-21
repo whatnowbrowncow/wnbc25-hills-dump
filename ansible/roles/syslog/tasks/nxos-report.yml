@@ -1,0 +1,25 @@
+---
+
+- name: NX-OS - collect syslog info
+  ios_command:
+    commands:
+      - show run | inc logging
+  register: nxos_syslog_output
+
+# Debug commands to check output
+- name: Display output
+  debug: var=nxos_syslog_output
+
+- name: NX-OS - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/nxos/parser_nxos_syslog.yml
+    content: "{{ nxos_syslog_output.stdout.0 }}"
+
+# Debug commands to check output
+- name: Display JSON output
+  debug: var=syslog_server_facts
+
+- name: IOS - Generate csv report
+  template:
+    src: /gitnet/ansible/roles/syslog/templates/nxos/csv-template.j2
+    dest: /gitnet/ansible/roles/syslog/files/csv/nxos/{{ inventory_hostname }}.csv

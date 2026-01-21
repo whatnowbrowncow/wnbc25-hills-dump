@@ -1,0 +1,4 @@
+hostname,ip address,vrf,preferred,source interface
+gib-wp5-vacc1,10.180.193.235,,yes,
+gib-wp5-vacc1,10.120.193.235,,no,
+gib-wp5-vacc1,10.180.193.236,,no,

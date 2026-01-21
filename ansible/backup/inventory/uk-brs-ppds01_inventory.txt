@@ -1,0 +1,35 @@
+NAME: "Chassis", DESCR: "Nexus5548 Chassis"
+PID: N5K-C5548UP       , VID: V01 , SN: SSI183706JS
+
+NAME: "Module 1", DESCR: "O2 32X10GE/Modular Universal Platform Supervisor"
+PID: N5K-C5548UP       , VID: V01 , SN: FOC18483GPF
+
+NAME: "Fan 1", DESCR: "Chassis fan module"
+PID: N5548P-FAN        , VID: N/A , SN: N/A
+
+NAME: "Fan 2", DESCR: "Chassis fan module"
+PID: N5548P-FAN        , VID: N/A , SN: N/A
+
+NAME: "Power supply 1", DESCR: "AC power supply"
+PID: N55-PAC-750W      , VID: V02 , SN: ART184410XY
+
+NAME: "Power supply 2", DESCR: "AC power supply"
+PID: N55-PAC-750W      , VID: V02 , SN: ART18451048
+
+NAME: "Module 3", DESCR: "O2 Non L3 Daughter Card"
+PID: N55-DL2           , VID: V02 , SN: FOC18479NQX
+
+NAME: "FEX 103 CHASSIS", DESCR: "N2K-C2248TP-1GE  CHASSIS"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: FOX1847G00B
+
+NAME: "FEX 103 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: FOC18475MW7
+
+NAME: "FEX 103 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN     , VID: N/A , SN: N/A
+
+NAME: "FEX 103 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: LIT18411B9A
+
+NAME: "FEX 103 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: LIT18420F86

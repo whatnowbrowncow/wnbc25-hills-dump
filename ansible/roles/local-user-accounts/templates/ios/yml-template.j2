@@ -1,0 +1,9 @@
+---
+local_user_accounts:
+{% for item in ios_local_accounts_facts %}
+  - username: "{{ item.user_account.username }}"
+    privilege: "{{ item.user_account.privilege }}"
+    password_type: {{ item.user_account.password_type}}
+    encryption: "{{ item.user_account.encryption }}"
+    password_string: "{{ item.user_account.password_string }}"
+{% endfor %}

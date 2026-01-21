@@ -1,0 +1,15 @@
+---
+# vars file for asa-vpn
+ras_cfg: deploy
+yml_dir: group_vars/ras
+role_root: ansible/roles
+
+date: "{{ now().strftime('%Y_%m_%d') | string }}"
+time: "{{ now().strftime('%H-%M-%S') | string }}"
+
+backup_dir: "/gitnet/ras-processed/changes/obj-sync/{{ inventory_hostname }}"
+changes_dir: "{{ backup_dir }}/{{ date }}"
+pre_conf_file: "{{ changes_dir }}/ras_objects_pre_change.conf"
+post_conf_file: "{{ changes_dir }}/ras_objects_post_change.conf"
+ld6_sync_group: "{{ ansible_limit }}-sync-ld6"
+sc1_sync_group: "{{ ansible_limit }}-sync-sc1"

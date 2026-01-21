@@ -1,0 +1,16 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show run object-group network"
+    network_os: asa
+
+- name: network object-group match pattern
+  pattern_match:
+    regex: "^object-group network \\S+"
+    match_all: yes
+    match_greedy: yes
+  export: yes
+  register: network_objects_groups
+

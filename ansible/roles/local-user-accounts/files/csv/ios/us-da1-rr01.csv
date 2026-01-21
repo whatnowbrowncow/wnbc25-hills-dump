@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+us-da1-rr01,netadmin,15,secret,5,$1$qy.5$EyxiOMWkPaSJ5TwQenwUK0
+us-da1-rr01,svcnetworkauto,15,secret,5,$1$FOHZ$7j743f5a341Y/mg/mrXHH.

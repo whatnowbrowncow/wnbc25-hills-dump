@@ -1,0 +1,65 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run | i ntp
+    network_os: ios
+
+- name: NTP servers match pattern
+  pattern_match:
+    regex: "^.*ntp server"
+    match_all: yes
+    match_greedy: yes
+  register: ntp_servers
+
+- name: NTP source match pattern
+  pattern_match:
+    regex: "^ntp source (\\S+)"
+  register: ntp_source_interface
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: interface
+        value: "{{ ntp_source_interface.matches.0 }}"       
+  export: yes
+  register: ntp_source_interface_facts
+
+- name: Match NTP server values
+  pattern_group:
+    - name: match vrf
+      pattern_match:
+        regex: "^.* vrf (\\S+)"
+        content: "{{ item }}"
+      register: vrf
+
+    - name: match ip address
+      pattern_match:
+        regex: "^[^*]*?(\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address 
+
+    - name: match preference
+      pattern_match:
+        regex: "^.* (prefer)"
+        content: "{{ item }}"
+      register: preference    
+
+  loop: "{{ ntp_servers }}"
+  register: ntp_server_values    
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: ntp_servers
+        object:
+          - key: vrf
+            value: "{{ item.vrf.matches.0 }}"          
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: preference
+            value: "{{ item.preference.matches.0 }}"
+  loop: "{{ ntp_server_values }}"
+  export: yes
+  register: ntp_server_facts

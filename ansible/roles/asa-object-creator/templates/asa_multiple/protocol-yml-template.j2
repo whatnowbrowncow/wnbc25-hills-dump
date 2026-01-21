@@ -1,0 +1,26 @@
+---
+
+{% if protocol_obj_groups.results is defined %}
+protocol_object_groups:
+{% for item in protocol_obj_groups.results %}
+  - name: "{{ item.ansible_facts.object_group[0].name }}"
+{% if item.ansible_facts.object_group_description is defined %}
+    description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{% else %}
+{% endif %}
+    objects:
+{% if item.ansible_facts.objects is defined %}
+{% for group in item.ansible_facts.objects %}
+      - object_name: "{{ group.object_name }}"
+{% endfor %}
+{% else %}
+{% endif %}
+    group_objects:
+{% if item.ansible_facts.group_objects is defined %}
+{% for group in item.ansible_facts.group_objects %}
+      - group_object_name: "{{ group.group_object_name }}"
+{% endfor %}
+{% else %}
+{% endif %}
+{% endfor %}
+{% endif %}

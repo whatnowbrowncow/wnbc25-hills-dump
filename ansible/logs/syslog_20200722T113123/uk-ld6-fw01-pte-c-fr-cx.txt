@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: uk-ld6-fw01-pte-c-fr-cx @ 20200722T113123 ---!
+!
+logging host pte-internal-vrf 10.112.12.111
+!
+!--- END UPDATES: uk-ld6-fw01-pte-c-fr-cx @ 20200722T113123 ---!
+}

@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+bg-dat-cs01,10.53.98.16,,no,Vlan243
+bg-dat-cs01,10.120.193.235,,no,Vlan243

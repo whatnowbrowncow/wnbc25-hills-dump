@@ -1,0 +1,2 @@
+device,timeout,auth_retries,source-interface,version,server-algorithm,client-algorithm
+uk-brs-er02,60,,mgmt0,2,,

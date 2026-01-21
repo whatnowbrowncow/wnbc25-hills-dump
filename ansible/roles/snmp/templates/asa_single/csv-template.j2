@@ -1,0 +1,8 @@
+hostname,ip address,source int,community,poll/trap,version
+{% if snmp_configuration_facts is defined %}
+{%   for item in snmp_configuration_facts %}
+{{ inventory_hostname }},{{ item.snmp.ip_address }},{{ item.snmp.source_int }},{{ item.snmp.community_string }},{{ item.snmp.poll_trap }},{{ item.snmp.snmp_version }}
+{%   endfor %}
+{% else %}
+{{ inventory_hostname }},,,,,,no SNMP configuration 
+{% endif %}

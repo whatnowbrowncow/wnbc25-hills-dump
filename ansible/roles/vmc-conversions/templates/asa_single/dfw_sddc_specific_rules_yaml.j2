@@ -1,0 +1,83 @@
+resources:
+  security_policy:
+
+{% for acl in access_lists.results %}
+    - access_list: {{ acl.item.item }}
+      rules:
+{% set remark_list = [] %}
+{%   for ace in acl.ansible_facts.access_entry_facts %}
+{%     if ace.remark is defined and ace.remark %}
+{% set remark_list = remark_list.append( ace.remark ) %}
+{%     elif ace.action %}
+
+        - rule_description: "{{ acl.item.item }}_{{ ace.position }}"
+          change_ref: "{% for remark in remark_list %}{% if loop.first %}{{ remark }}{% else %} ,{{ remark }}{% endif %}{% endfor %}"
+          action: "{{ ace.action }}"
+          source:
+{%       if ace.src_host %}
+            - "ip_{{ ace.src_host | regex_replace ("\.","-") }}"
+{%       elif ace.src_network is defined and ace.src_network %}
+{%         if ace.src_network != "any" and ace.src_network != "any4" %}
+            - "ip_{{ ace.src_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%         elif ace.src_network == "any" or ace.src_network == "any4" %}
+            - "any"
+{%         endif %}
+{%       elif ace.src_network_obj %}
+            - "{{ ace.src_network_obj | regex_replace ("\.","-") |lower }}"
+{%       elif ace.src_network_obj_grp %}
+            - "{{ ace.src_network_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+{%       else %}
+            - ""
+{%       endif %}
+          destination:
+{%       if ace.dest_host %}
+            - "ip_{{ ace.dest_host | regex_replace ("\.","-") }}"
+{%       elif ace.dest_network is defined and ace.dest_network %}
+{%         if ace.dest_network != "any" and ace.dest_network != "any4" %}
+            - "ip_{{ ace.dest_network | regex_replace (" ","/") | ipaddr('net') | regex_replace ("/","s") | regex_replace ("\.","-") }}"
+{%         elif ace.dest_network == "any" or ace.dest_network == "any4" %}
+            - "any"
+{%         endif %}
+{%       elif ace.dest_network_obj %}
+            - "{{ ace.dest_network_obj | regex_replace ("\.","-") |lower }}"
+{%       elif ace.dest_network_obj_grp %}
+            - "{{ ace.dest_network_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+{%       else %}
+            - ""
+{%       endif %}
+          service:
+{%       if ace.protocol and ace.dest_port %}
+            - "{{ ace.protocol }}-{{ ace.dest_port }}"
+{%       elif ace.protocol and ace.dest_port_obj_grp %}
+            - "{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+{%       elif ace.protocol and ace.dest_port_range %}
+            - "{{ ace.protocol }}_{{ ace.dest_port_range | regex_replace (" ","-") }}"
+{%       elif ace.protocol %}
+            - "{{ ace.protocol |lower }}-any"
+{%       elif ace.src_service_obj_grp and ace.dest_port %}
+            - "{{ ace.dest_port }}"
+{%       elif ace.src_service_obj_grp and ace.dest_port_obj_grp %}
+            - "{{ ace.dest_port_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+{%       elif ace.src_service_obj_grp and ace.dest_port_range %}
+            - "{{ ace.dest_port_range | regex_replace (" ","-") }}"
+{%       elif ace.src_service_obj %}
+            - "{{ ace.src_service_obj | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"            
+{%       elif ace.src_service_obj_grp %}
+{%         for protocol_obj_group in protocol_obj_groups.results %}
+{%           if ace.src_service_obj_grp == protocol_obj_group.ansible_facts.object_group[0].name %}
+            - "{{ ace.src_service_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}-any"
+{%           endif %}
+{%         endfor %}
+{%         for service_obj_group in service_obj_groups.results %}
+{%           if ace.src_service_obj_grp == service_obj_group.ansible_facts.object_group[0].name %}
+            - "{{ ace.src_service_obj_grp | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") |lower }}"
+{%           endif %}
+{%         endfor %}
+{%       else %}
+            - ""
+{%       endif %}
+{% set remark_list = remark_list.clear() %}
+{%     endif %}
+{%   endfor %}
+
+{% endfor %}

@@ -1,0 +1,5 @@
+---
+
+- name: Creation of the maintenance and firmware policies and groups required for a fabric upgrade. 
+  import_tasks: ./aci-firmware-policy.yml
+  when: ansible_network_os == "aci"

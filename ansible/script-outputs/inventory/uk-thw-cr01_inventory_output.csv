@@ -1,0 +1,22 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-thw-cr01,SFP Transceiver 1000BaseSX Te5/9,Transceiver Te5/9,GLC-SX-MMD,AGA1737RC82,V01
+uk-thw-cr01,SFP Transceiver 1000BaseSX Te5/7,Transceiver Te5/7,SFP-GE-S,AGM1541P0FR,V01
+uk-thw-cr01,AC power supply,PS 1 C6880-X-3KW-AC,C6880-X-3KW-AC,ART211570LB,V02
+uk-thw-cr01,AC power supply,PS 2 C6880-X-3KW-AC,C6880-X-3KW-AC,ART211570LF,V02
+uk-thw-cr01,SFP Transceiver 1000BaseLH Te5/6,Transceiver Te5/6,GLC-LH-SMD,AVJ205230C7,V01
+uk-thw-cr01,C6880-X Fan Tray 1,C6880-X-FAN 1,C6880-X-FAN,DCH2114F9YP,V02
+uk-thw-cr01,SFP Transceiver 1000BaseSX Te5/14,Transceiver Te5/14,SFP-GE-S,FNS1426209U,V01
+uk-thw-cr01,SFP+ Transceiver 10Gbase-SR Te5/16,Transceiver Te5/16,SFP-10G-SR,FNS211610WG,V03
+uk-thw-cr01,SFP+ Transceiver 10Gbase-SR Te5/10,Transceiver Te5/10,SFP-10G-SR,FNS211610X3,V03
+uk-thw-cr01,SFP+ Transceiver 10Gbase-SR Te5/4,Transceiver Te5/4,SFP-10G-SR,FNS211610XH,V03
+uk-thw-cr01,SFP+ Transceiver 10Gbase-SR Te5/13,Transceiver Te5/13,SFP-10G-SR,FNS211610XN,V03
+uk-thw-cr01,SFP+ Transceiver 10Gbase-SR Te5/2,Transceiver Te5/2,SFP-10G-SR,FNS211610XP,V03
+uk-thw-cr01,SFP+ Transceiver 10Gbase-SR Te5/15,Transceiver Te5/15,SFP-10G-SR,FNS211618Y9,V03
+uk-thw-cr01,SFP+ Transceiver 10Gbase-LR Te5/12,Transceiver Te5/12,SFP-10G-LR,FNS212118FG,V02
+uk-thw-cr01,SFP Transceiver 10/100/1000BaseT Te5/1,Transceiver Te5/1,Unspecified,MTC161801Q1,Unspecified
+uk-thw-cr01,SFP Transceiver 10/100/1000BaseT Te5/11,Transceiver Te5/11,Unspecified,MTC18080X57,Unspecified
+uk-thw-cr01,C6880-X-PFC Policy Feature Card 4 Rev. 1.2,C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5,C6880-X-PFC,SAL211500LD,none
+uk-thw-cr01,Cisco Systems,C6880-X,C6880-X,SAL211501AV,V01
+uk-thw-cr01,C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.3,5,C6880-X-SUP,SAL2115021T,none
+uk-thw-cr01,SFP Transceiver 1000BaseLH Te5/3,Transceiver Te5/3,SFP-GE-L,SPC161305PW,V01
+uk-thw-cr01,SFP Transceiver 1000BaseLH Te5/5,Transceiver Te5/5,SFP-GE-L,SPC161308RQ,V01

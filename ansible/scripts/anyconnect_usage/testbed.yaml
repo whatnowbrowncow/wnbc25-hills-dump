@@ -1,0 +1,27 @@
+---
+
+testbed:
+  name: wh-devices
+  credentials:
+      default:
+          username: svcnetworkauto
+          password: "%ENC{gAAAAABgbX_U6EJqIX23BCR57nLBrcCvFKMAFQvzTq8Q8SnlnsltBw2azQ_rUCI5F77Np_mw9IVH9QK2aeLBbNtSza28arRHbg==}"
+      enable:
+          password: "%ENC{gAAAAABgbX_U6EJqIX23BCR57nLBrcCvFKMAFQvzTq8Q8SnlnsltBw2azQ_rUCI5F77Np_mw9IVH9QK2aeLBbNtSza28arRHbg==}"
+
+devices:
+
+    uk-ld6-fw04:
+      type: firewall
+      os: asa
+      connections:
+        cli:
+          protocol: ssh
+          ip: 10.112.129.19
+    uk-sc1-fw04:
+      type: firewall
+      os: asa
+      connections:
+        cli:
+          protocol: ssh
+          ip: 10.120.129.19

@@ -1,0 +1,2 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Management0/0,10.112.129.180,,management,255.255.255.0,0

@@ -1,0 +1,75 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/3,Chassis 1 Transceiver Te1/4/3,X2-10GB-SR,AGA1237XQGG,V03
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/2,Chassis 1 Transceiver Te1/4/2,X2-10GB-SR,AGA1237XRKJ,V03
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/5,Chassis 1 Transceiver Te1/5/5,X2-10GB-SR,AGA1238XTYV,V03
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/4,Chassis 1 Transceiver Te1/4/4,X2-10GB-SR,AGA1238XUJZ,V03
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/4,Chassis 1 Transceiver Te1/5/4,X2-10GB-SR,AGA1240X11B,V03
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/3,Chassis 2 Transceiver Te2/4/3,X2-10GB-SR,AGA1241X2WA,V03
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/4,Chassis 2 Transceiver Te2/4/4,X2-10GB-SR,AGA1241XZZ8,V03
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/1,Chassis 1 Transceiver Te1/4/1,X2-10GB-SR,AGA1306XWFP,V03
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/2,Chassis 2 Transceiver Te2/4/2,X2-10GB-SR,AGA1306XX3Q,V03
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/1,Chassis 2 Transceiver Te2/4/1,X2-10GB-SR,AGA1306XX78,V03
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/5,Chassis 2 Transceiver Te2/4/5,X2-10GB-SR,AGA1336X98E,V03
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/6,Chassis 2 Transceiver Te2/4/6,X2-10GB-SR,AGA1336X9HC,V03
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/6,Chassis 1 Transceiver Te1/4/6,X2-10GB-SR,AGA1336X9ML,V03
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/5,Chassis 1 Transceiver Te1/4/5,X2-10GB-SR,AGA1336X9YQ,V03
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/8,Chassis 2 Transceiver Te2/4/8,X2-10GB-SR,AGA1429XW3Y,V04
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/4/7,Chassis 2 Transceiver Te2/4/7,X2-10GB-SR,AGA1444XWCN,V04
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/7,Chassis 1 Transceiver Te1/4/7,X2-10GB-SR,AGA1445XYMF,V04
+gib-vcore1,Chassis 1 AC power supply,Chassis 1 PS 2 WS-CAC-3000W,WS-CAC-3000W,AZS11490E0F,V01
+gib-vcore1,Chassis 1 AC power supply,Chassis 1 PS 1 WS-CAC-3000W,WS-CAC-3000W,AZS13330DE4,V01
+gib-vcore1,Chassis 1 Enhanced 9-slot Fan Tray 1,Chassis 1 WS-C6509-E-FAN 1,WS-C6509-E-FAN,DCH11454349,V03
+gib-vcore1,Chassis 2 Enhanced 9-slot Fan Tray 1,Chassis 2 WS-C6509-E-FAN 1,WS-C6509-E-FAN,DCH1819005L,V05
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/4/8,Chassis 1 Transceiver Te1/4/8,X2-10GB-SR,FNS14280RRT,V04
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/8,Chassis 2 Transceiver Te2/3/8,X2-10GB-SR,FNS17020KRT,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/8,Chassis 1 Transceiver Te1/3/8,X2-10GB-SR,FNS17020KZX,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/3,Chassis 1 Transceiver Te1/3/3,X2-10GB-SR,FNS17381X62,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/1,Chassis 1 Transceiver Te1/3/1,X2-10GB-SR,FNS18050EN6,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/2,Chassis 1 Transceiver Te1/3/2,X2-10GB-SR,FNS18050ENF,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/2,Chassis 2 Transceiver Te2/3/2,X2-10GB-SR,FNS18050ENL,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/1,Chassis 2 Transceiver Te2/3/1,X2-10GB-SR,FNS18050ENP,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/5,Chassis 1 Transceiver Te1/3/5,X2-10GB-SR,FNS1853012D,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/5,Chassis 2 Transceiver Te2/3/5,X2-10GB-SR,FNS1853012N,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/3,Chassis 2 Transceiver Te2/3/3,X2-10GB-SR,FNS1853012U,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/7,Chassis 1 Transceiver Te1/3/7,X2-10GB-SR,FNS1853014V,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/4,Chassis 2 Transceiver Te2/5/4,X2-10GB-SR,FNS18530156,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/5,Chassis 2 Transceiver Te2/5/5,X2-10GB-SR,FNS18530177,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/4,Chassis 1 Transceiver Te1/3/4,X2-10GB-SR,FNS1853017F,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/4,Chassis 2 Transceiver Te2/3/4,X2-10GB-SR,FNS19020LAM,V06
+gib-vcore1,Chassis 1 X2 Transceiver 10Gbase-SR Te1/3/6,Chassis 1 Transceiver Te1/3/6,X2-10GB-SR,FNS19020M2P,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/7,Chassis 2 Transceiver Te2/3/7,X2-10GB-SR,FNS19020M2T,V06
+gib-vcore1,Chassis 2 X2 Transceiver 10Gbase-SR Te2/3/6,Chassis 2 Transceiver Te2/3/6,X2-10GB-SR,FNS19020M2Y,V06
+gib-vcore1,Chassis 1 ACE20-MOD-K9 1 ports Application Control Engine Module Rev. 2.3,Chassis 1 8,ACE20-MOD-K9,SAD1202076R,V02
+gib-vcore1,Chassis 2 ACE20-MOD-K9 1 ports Application Control Engine Module Rev. 2.3,Chassis 2 8,ACE20-MOD-K9,SAD12020770,V02
+gib-vcore1,Chassis 1 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 2.6,Chassis 1 1,WS-X6748-GE-TX,SAL1151AQHT,V02
+gib-vcore1,Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.0,Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 1,WS-F6700-CFC,SAL1201C5XC,V05
+gib-vcore1,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.2,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 4,WS-F6700-DFC3C,SAL1312M33W,V02
+gib-vcore1,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.2,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 4,WS-F6700-DFC3C,SAL1313M8WG,V02
+gib-vcore1,Chassis 1 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 3.1,Chassis 1 5,VS-S720-10G,SAL1313M95S,V04
+gib-vcore1,Chassis 1 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 1.1,Chassis 1 msfc sub-module of 5,VS-F6K-MSFC3,SAL1313MANC,V02
+gib-vcore1,Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.0,Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5,VS-F6K-PFC3C,SAL1313MCXX,V01
+gib-vcore1,Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 1.6,Chassis 2 4,WS-X6708-10GE,SAL1313MDBN,V06
+gib-vcore1,Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 1.6,Chassis 1 4,WS-X6708-10GE,SAL1313MDD7,V06
+gib-vcore1,Chassis 2 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.6,Chassis 2 3,WS-X6708-10GE,SAL1652V4LG,V12
+gib-vcore1,Chassis 1 WS-X6708-10GE CEF720 8 port 10GE with DFC Rev. 3.6,Chassis 1 3,WS-X6708-10GE,SAL1653VE54,V12
+gib-vcore1,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.6,Chassis 2 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 3,WS-F6700-DFC3C,SAL1653VMX4,V04
+gib-vcore1,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 Rev. 1.6,Chassis 1 WS-F6700-DFC3C Distributed Forwarding Card 3 sub-module of 3,WS-F6700-DFC3C,SAL1653VQD7,V04
+gib-vcore1,Chassis 2 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 5.2,Chassis 2 msfc sub-module of 5,VS-F6K-MSFC3,SAL18391KR4,V06
+gib-vcore1,Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.3,Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5,VS-F6K-PFC3C,SAL18526X6W,V02
+gib-vcore1,Chassis 2 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 4.3,Chassis 2 5,VS-S720-10G,SAL185270M2,V06
+gib-vcore1,Chassis 2 WS-F6700-CFC Centralized Forwarding Card Rev. 4.2,Chassis 2 WS-F6700-CFC Centralized Forwarding Card sub-module of 1,WS-F6700-CFC,SAL190281HJ,V06
+gib-vcore1,Chassis 2 WS-X6748-GE-TX CEF720 48 port 10/100/1000mb Ethernet Rev. 4.6,Chassis 2 1,WS-X6748-GE-TX,SAL190384ZK,V06
+gib-vcore1,Chassis 1 Cisco Systems Catalyst 6500 9-slot Chassis System,Chassis 1 WS-C6509-E,WS-C6509-E,SMC11480030,V04
+gib-vcore1,Chassis 2 Cisco Systems,Chassis 2 WS-C6509-E,WS-C6509-E,SMC1846002K,V06
+gib-vcore1,Chassis 1 OSR-7600 Clock FRU 1,Chassis 1 CLK-7600 1,CLK-7600,SMT1136P369,none
+gib-vcore1,Chassis 1 OSR-7600 Clock FRU 2,Chassis 1 CLK-7600 2,CLK-7600,SMT1136P369,none
+gib-vcore1,Chassis 1 VTT-E FRU 1,Chassis 1 WS-C6K-VTT-E 1,WS-C6K-VTT-E,SMT1140B258,none
+gib-vcore1,Chassis 1 VTT-E FRU 3,Chassis 1 WS-C6K-VTT-E 3,WS-C6K-VTT-E,SMT1140B266,none
+gib-vcore1,Chassis 1 VTT-E FRU 2,Chassis 1 WS-C6K-VTT-E 2,WS-C6K-VTT-E,SMT1140B282,none
+gib-vcore1,Chassis 2 OSR-7600 Clock FRU 1,Chassis 2 CLK-7600 1,CLK-7600,SMT1747A889,none
+gib-vcore1,Chassis 2 OSR-7600 Clock FRU 2,Chassis 2 CLK-7600 2,CLK-7600,SMT1747A889,none
+gib-vcore1,Chassis 2 VTT-E FRU 3,Chassis 2 WS-C6K-VTT-E 3,WS-C6K-VTT-E,SMT1810C338,none
+gib-vcore1,Chassis 2 VTT-E FRU 2,Chassis 2 WS-C6K-VTT-E 2,WS-C6K-VTT-E,SMT1810D058,none
+gib-vcore1,Chassis 2 VTT-E FRU 1,Chassis 2 WS-C6K-VTT-E 1,WS-C6K-VTT-E,SMT1810D059,none
+gib-vcore1,Chassis 2 AC power supply,Chassis 2 PS 2 WS-CAC-3000W,WS-CAC-3000W,SNI1845AY8R,V03
+gib-vcore1,Chassis 2 AC power supply,Chassis 2 PS 1 WS-CAC-3000W,WS-CAC-3000W,SNI1845AY98,V03

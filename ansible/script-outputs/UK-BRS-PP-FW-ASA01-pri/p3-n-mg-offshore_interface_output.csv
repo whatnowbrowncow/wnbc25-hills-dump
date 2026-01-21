@@ -1,0 +1,8 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.3541,10.215.145.1,,web-tier,255.255.255.0,100
+up,,Port-channel21.3542,10.215.146.1,,applications-tier,255.255.255.0,100
+up,,Port-channel21.3544,10.215.148.1,,backoffice-tier,255.255.255.0,100
+up,,Port-channel21.3561,10.215.158.1,,caerus-apps-man-2,255.255.255.0,100
+up,,Port-channel21.3566,10.215.159.129,,rng-retail-tier,255.255.255.224,100
+up,,Port-channel21.3569,10.215.159.225,,caerus-app-tier,255.255.255.224,100
+up,,Port-channel21.3576,10.215.160.196,,pp3off-internal-vrf,255.255.255.224,100

@@ -1,0 +1,17 @@
+---
+
+- name: Build context syslog template
+  template:
+    src: syslog.j2
+    dest: ./roles/asa-base/configs/{{ item.context }}_syslog.cfg
+  with_items:
+    - "{{ contexts }}"
+  tags:
+    - syslog
+    
+- name: Add syslog to a context
+  asa_config:
+    src: ./roles/asa-base/configs/{{ item.context }}_syslog.cfg
+    context: "{{ item.context }}"
+  with_items:
+    - "{{ contexts }}"

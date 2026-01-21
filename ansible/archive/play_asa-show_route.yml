@@ -1,0 +1,59 @@
+---
+# This play should probably be re-written to utilise the ansible-network config-parser
+
+- hosts: asa
+  connection: local
+  gather_facts: false
+  
+  vars:
+    syslog_id: "10.61.12.111"
+  
+  tasks:
+    - name: Collect show route output
+      asa_command:
+        commands:
+          - show route
+        context: lab-retail
+        provider: "{{ provider_cli }}"
+      register: reg_output
+      
+#    - name: Display the default route interface name
+#      debug:
+#        ###The below takes the show route output, collects list position 10 (default route), splits this on a comma, then strips whitespace
+#        msg: "{{ reg_output.stdout_lines.0.10.split(',').1.strip() }}"
+        
+#    - name: Collect route for specific interface
+#      asa_command:
+#        commands:
+#          - "show route {{ reg_output.stdout_lines.0.10.split(',').1.strip() }}"
+#        context: lab-retail
+#        provider: "{{ provider_cli }}"
+#      register: reg_route_output
+#      
+#    - name: Display route for specific interface
+#      debug:
+#        msg: "{{ reg_route_output.stdout_lines }}"
+    
+    - name: Collect route for {{ syslog_id }}
+      asa_command:
+        commands:
+          - "show route {{ syslog_id }}"
+        context: lab-retail
+        provider: "{{ provider_cli }}"
+      register: reg_syslog_route_output
+      
+    
+    - name: Lack of specific route debug
+      debug:
+        msg: 
+        - "There is no specific route to the {{ syslog_id }} syslog server"
+        - "The route used will be '{{ reg_output.stdout_lines.0.10.split(',').0.strip('S*    ') }}', via interface {{ reg_output.stdout_lines.0.10.split(',').1.strip() }}"
+      when: reg_syslog_route_output.stdout_lines.0.1 == '% Subnet not in table'
+    - name: Specific route debug
+      debug:
+        ###
+        msg:
+        - "The interface to access syslog server {{ syslog_id }} is {{ reg_syslog_route_output.stdout_lines.0.4.split().4 }}"
+        - "The routing entry is '{{ reg_syslog_route_output.stdout_lines.0.1 }}'"
+      when: reg_syslog_route_output.stdout_lines.0.1 != '% Subnet not in table'
+      ignore_errors: True

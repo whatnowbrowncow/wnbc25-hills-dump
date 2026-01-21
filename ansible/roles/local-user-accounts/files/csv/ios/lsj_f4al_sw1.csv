@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+lsj_f4al_sw1,netadmin,15,secret,5,$1$u4Q1$AQ6UcCJN1tLZTQhPUyDxd1
+lsj_f4al_sw1,svcnetworkauto,15,secret,5,$1$LAZh$P.SJDSr81NnfFHRf7jdkB0

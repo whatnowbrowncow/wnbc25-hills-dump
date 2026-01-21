@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+gi-mpl-es02,netadmin,15,secret,5,$1$pO48$QN72RkBhNEDMd3g2ukP5M.
+gi-mpl-es02,svcnetworkauto,15,secret,5,$1$FT/1$wEZ9IqL1niUDs9AN3UFsi.

@@ -1,0 +1,31 @@
+---
+  - name: Clear interface counters
+    hosts: uk-cwk-lab-ar01, uk-cwk-lab-cr01, uk-wak-ar01
+    connection: network_cli
+    strategy: free
+    gather_facts: no
+    
+
+    tasks:
+    - name: Clear IOS interface counters
+      ios_command:
+        commands:
+          - command: "clear counters"
+            prompt: 'Clear "show interface" counters on all interfaces \[confirm\]'
+            answer: "\r"
+      when: ansible_network_os == "ios"
+
+    - name: Clear NXOS interface counters
+      nxos_command:
+        commands:
+          - "clear counters interface all"
+      when: ansible_network_os == "nxos"
+
+    - name: Clear IOS-XR interface counters
+      iosxr_command:
+        commands:
+          - command: "clear counters"
+            prompt: 'Clear "show interface" counters on all interfaces \[confirm\]'
+            answer: "\r"
+      when: ansible_network_os == "iosxr"
+

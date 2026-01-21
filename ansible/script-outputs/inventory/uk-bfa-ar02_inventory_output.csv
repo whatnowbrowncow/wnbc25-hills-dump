@@ -1,0 +1,12 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-bfa-ar02,GE SX,subslot 0/0 transceiver 2,GLC-SX-MMD,FNS21340V13,A
+uk-bfa-ar02,GE SX,subslot 0/0 transceiver 4,GLC-SX-MMD,FNS21340V3B,A
+uk-bfa-ar02,GE SX,subslot 0/0 transceiver 3,GLC-SX-MMD,FNS21340V3G,A
+uk-bfa-ar02,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS2133Q17J,V03
+uk-bfa-ar02,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE21380AXJ,V03
+uk-bfa-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT21302D7N,V01
+uk-bfa-ar02,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT21302DD6,V01
+uk-bfa-ar02,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+uk-bfa-ar02,Built-in GE SPA with 2 port 10G and 6 port 1G Interfaces,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+uk-bfa-ar02,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+uk-bfa-ar02,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

@@ -1,0 +1,131 @@
+---
+# task to retrieve the active configuration that includes logging parameters
+- name: ASA-MULTIPLE - Retrieving the active logging configuration
+  asa_command:
+    commands:
+      - "show run all | inc logging"
+  register: activelogging
+
+# calling a jinja2 template to format the variable parsed above "activelogging", into configuration lines to use as the active configuration for comparison
+- name: ASA-MULTIPLE - Constructing (for comparison) the active logging configuration
+  set_fact:
+    activelogging: "{{ lookup('template', 'templates/asa_multiple/config-active-template.j2') }}"
+
+# collecting routed interface for each syslog iP address    
+- name: Collect routed interface for syslog servers
+  asa_command:
+    commands:
+      - "show route {{ item.ip_addr }}"
+    context: "{{ contexts.context }}"
+  loop: "{{ syslog }}"
+  register: "routed_interface"
+
+# collecting the default route interface incase the routed interface task yields no results
+- name: Collect default routed interface
+  asa_command:
+    commands:
+      - "show route 0.0.0.0"
+    context: "{{ contexts.context }}"
+  register: "default_routed_interface"
+
+#clearing the syslog interfaces list otherwise it will contain data from previous loops
+- name: ASA - Register syslog_interfaces as a blank list
+  set_fact:
+    syslog_interfaces: []
+  loop: "{{ routed_interface.results }}"
+  loop_control:
+    label: "[{{ contexts.context }}] Register syslog_interfaces as a blank list"
+
+# adding routing information to syslog interfaces list
+- name: ASA - Register routed interfaces as a variable
+  set_fact:
+    syslog_interfaces: "{{ syslog_interfaces|default([]) + [ {'syslog_svr_ip_addr': item.invocation.module_args.commands[0] | regex_search('show route (?P<ip>\\S+)','\\g<ip>'), 'interface': item.stdout[0] | regex_search('.*\\*.*, via (?P<interface>\\S+)','\\g<interface>'), 'next_hop': item.stdout[0] | regex_search('.*\\* (?P<nexthop>\\d+\\.\\d+\\.\\d+\\.\\d+)','\\g<nexthop>')} ] }}"
+  loop: "{{ routed_interface.results }}"
+  loop_control:
+    label: "[{{ contexts.context }}] Register syslog_interfaces as a variable"
+
+# collecting routed interface for each next hop iP address where dynamic routing is used    
+- name: Collect routed interface for next hop syslog servers
+  asa_command:
+    commands:
+      - "show route {{ item.next_hop[0] }}"
+    context: "{{ contexts.context }}"
+  loop: "{{ syslog_interfaces }}"
+  register: "nexthop_interface"
+  when: item.next_hop[0] is defined
+
+#clearing the nexthop interfaces list otherwise it will contain data from previous loops
+- name: ASA - Register nexthop_interfaces as a blank list
+  set_fact:
+    nexthop_interfaces: []
+  loop: "{{ nexthop_interface.results }}"
+  loop_control:
+    label: "[{{ contexts.context }}] Register nexthop_interfaces as a blank list"
+
+# adding routing information to syslog interfaces list
+- name: ASA - Register next hop interfaces as a variable
+  set_fact:
+    nexthop_interfaces: "{{ nexthop_interfaces|default([]) + [ {'syslog_svr_ip_addr': item.item.syslog_svr_ip_addr, 'interface': item.stdout[0] | regex_search('.*\\*.*, via (?P<interface>\\S+)','\\g<interface>')} ] }}"
+  loop: "{{ nexthop_interface.results }}"
+  loop_control:
+    label: "[{{ contexts.context }}] Register nexthop_interfaces as a variable"
+  when: syslog_interfaces[0].next_hop[0] is defined
+
+# register default route interface as a variable
+- name: ASA - Register routed interfaces as a variable
+  set_fact:
+    default_interface: "{{ default_routed_interface.stdout[0] | regex_search('.*, via (?P<interface>\\S+)','\\g<interface>') }}"
+
+# Debug commands to check syslog_interfaces
+#- name: Display interface data
+#  block:
+#    - name: Display syslog interface data 
+#      debug:
+#        msg: 
+#        - "For syslog server {{ item.syslog_svr_ip_addr[0] }} context {{ contexts.context }} will use interface {{ item.interface }}"
+#      when: item.interface == ""
+#      loop: "{{ syslog_interfaces }}"
+#
+#    - name: Display syslog interface data 
+#      debug:
+#        msg: 
+#        - "For syslog server {{ item.syslog_svr_ip_addr[0] }} context {{ contexts.context }} will use the default route interface {{ default_interface }}"
+#      when: item.interface != ""
+#      loop: "{{ syslog_interfaces }}"
+
+# calling a jinja2 template to produce syslog configuration lines to use as the desired configuration for comparison
+- name: ASA-MULTIPLE - Constructing (for application) the updated syslog configuration
+  set_fact:
+    syslogconfig: "{{ lookup('template', 'templates/asa_multiple/config-template.j2')|from_yaml }}"
+
+# configuration task that compares the active and desired configurations and adds any missing entries, this will only run when a valid route is available for the IP
+- name: ASA-MULTIPLE - Applying the updated syslog configuration
+  asa_config:
+    lines: "{{ syslogconfig[0].lines }}"
+    match: line
+    config: "{{ activelogging }}"
+  register: loggingUPDATE
+  changed_when: "loggingUPDATE.updates is defined"
+  notify: "asa multiple updates exist"
+  when: contexts.context == "admin" or syslog_interfaces[0].interface is defined or (syslog_interfaces[0].interface is not defined and default_interface[0] is defined)
+
+# Identify if any contexts do not run because valid routing does not exist
+- name: Notify any skipped contexts
+  debug:
+    msg: 
+    - "Context {{ contexts.context }} has been skipped because no routing has been defined so syslog configuration is not possible"
+  when: contexts.context != "admin" and syslog_interfaces[0].interface is not defined and default_interface[0] is not defined
+
+# final task that saves the running configuration if any changes were registered in the configuration task above
+#- name: ASA-MULTIPLE - Saving the configuration (when changed)
+#  asa_config:
+#    save: yes
+#  when: 'loggingUPDATE.changed'
+
+# finally create a current_context variable to include in the logs and fluch handlers to kick of the log creation on each loop (context)  
+- name: ASA-MULTIPLE - set context fact to allow log labelling
+  set_fact:
+    current_context: "{{ contexts.context }}"
+
+- name: Flush handlers to force log creation before moving onto the next role
+  meta: flush_handlers

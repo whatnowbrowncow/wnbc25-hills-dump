@@ -1,0 +1,23 @@
+---
+
+- name: ASA MULTIPLE - collect local user account info
+  asa_command:
+    commands:
+      - show run | i username
+    context: admin
+  register: asa_multiple_local_accounts_output
+
+- name: ASA MULTIPLE  - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_asa_multiple_local_user_accounts.yml"
+    content: "{{ asa_multiple_local_accounts_output.stdout.0 }}"
+
+- name: ASA MULTIPLE  - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: ASA MULTIPLE  - Generate YAML file
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/local-user-accounts.yml"

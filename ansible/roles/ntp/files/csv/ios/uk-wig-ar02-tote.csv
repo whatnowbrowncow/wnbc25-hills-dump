@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-wig-ar02-tote,10.120.163.19,group-vrf,no,Loopback20
+uk-wig-ar02-tote,10.120.163.20,group-vrf,no,Loopback20

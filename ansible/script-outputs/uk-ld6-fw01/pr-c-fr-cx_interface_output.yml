@@ -1,0 +1,124 @@
+Port-channel1.2005: {admin-state: up, interface: Port-channel1.2005, ip-add: 10.112.215.188,
+  mac-address: 0200.0101.0101, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.2275: {admin-state: up, interface: Port-channel1.2275, ip-add: 10.119.16.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan09, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2276: {admin-state: up, interface: Port-channel1.2276, ip-add: 10.119.17.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan10, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2277: {admin-state: up, interface: Port-channel1.2277, ip-add: 10.119.18.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan11, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2278: {admin-state: up, interface: Port-channel1.2278, ip-add: 10.119.19.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan12, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2279: {admin-state: up, interface: Port-channel1.2279, ip-add: 10.119.20.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan13, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2280: {admin-state: up, interface: Port-channel1.2280, ip-add: 10.119.21.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan14, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2281: {admin-state: up, interface: Port-channel1.2281, ip-add: 10.119.22.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan15, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2282: {admin-state: up, interface: Port-channel1.2282, ip-add: 10.119.23.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan16, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2298: {admin-state: up, interface: Port-channel1.2298, ip-add: 10.119.80.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app4-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.2299: {admin-state: up, interface: Port-channel1.2299, ip-add: 10.119.81.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app5-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.2300: {admin-state: up, interface: Port-channel1.2300, ip-add: 10.119.82.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app6-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.2301: {admin-state: up, interface: Port-channel1.2301, ip-add: 10.119.83.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app7-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.2302: {admin-state: up, interface: Port-channel1.2302, ip-add: 10.119.84.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app8-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.2303: {admin-state: up, interface: Port-channel1.2303, ip-add: 10.119.85.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app9-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.2304: {admin-state: up, interface: Port-channel1.2304, ip-add: 10.119.86.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app10-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.2305: {admin-state: up, interface: Port-channel1.2305, ip-add: 10.119.87.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app11-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.384: {admin-state: ' shutdown', interface: Port-channel1.384, mac-address: 0200.0101.0101,
+  'no': ip, ospf: mtu-ignore, security-level: '100'}
+Port-channel1.708: {admin-state: up, interface: Port-channel1.708, ip-add: 10.119.1.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-deployment-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.709: {admin-state: up, interface: Port-channel1.709, ip-add: 10.119.2.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-web1-lan, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.710: {admin-state: up, interface: Port-channel1.710, ip-add: 10.119.3.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-app1-lan, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.711: {admin-state: up, interface: Port-channel1.711, ip-add: 10.119.4.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-internal-presentation, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.712: {admin-state: up, interface: Port-channel1.712, ip-add: 10.119.5.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-api-integration, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.713: {admin-state: up, interface: Port-channel1.713, ip-add: 10.119.6.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-ext-pres-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.714: {admin-state: up, interface: Port-channel1.714, ip-add: 10.119.7.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-ext-api, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.715: {admin-state: up, interface: Port-channel1.715, ip-add: 10.119.8.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan02, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.716: {admin-state: up, interface: Port-channel1.716, ip-add: 10.119.9.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan03, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.717: {admin-state: up, interface: Port-channel1.717, ip-add: 10.119.10.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-front-cx-mgmt, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.718: {admin-state: up, interface: Port-channel1.718, ip-add: 10.119.11.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan04, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.719: {admin-state: up, interface: Port-channel1.719, ip-add: 10.119.12.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan05, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.720: {admin-state: up, interface: Port-channel1.720, ip-add: 10.119.13.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan06, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.721: {admin-state: up, interface: Port-channel1.721, ip-add: 10.119.14.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan07, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.722: {admin-state: up, interface: Port-channel1.722, ip-add: 10.119.15.1,
+  mac-address: 0200.0101.0101, nameif: ld6-cde-lan08, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.758: {admin-state: up, interface: Port-channel1.758, ip-add: 10.119.65.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-deployment-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.759: {admin-state: up, interface: Port-channel1.759, ip-add: 10.119.66.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-web1-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.760: {admin-state: up, interface: Port-channel1.760, ip-add: 10.119.67.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app1-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.761: {admin-state: up, interface: Port-channel1.761, ip-add: 10.119.68.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan01, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.762: {admin-state: up, interface: Port-channel1.762, ip-add: 10.119.69.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan02, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.763: {admin-state: up, interface: Port-channel1.763, ip-add: 10.119.70.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan03, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.764: {admin-state: up, interface: Port-channel1.764, ip-add: 10.119.71.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan04, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.765: {admin-state: up, interface: Port-channel1.765, ip-add: 10.119.72.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan05, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.766: {admin-state: up, interface: Port-channel1.766, ip-add: 10.119.73.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan06, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.767: {admin-state: up, interface: Port-channel1.767, ip-add: 10.119.74.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan07, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.768: {admin-state: up, interface: Port-channel1.768, ip-add: 10.119.75.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan08, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.769: {admin-state: up, interface: Port-channel1.769, ip-add: 10.119.76.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan09, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.770: {admin-state: up, interface: Port-channel1.770, ip-add: 10.119.77.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app-lan10, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.771: {admin-state: up, interface: Port-channel1.771, ip-add: 10.119.78.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app2-lan, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.772: {admin-state: up, interface: Port-channel1.772, ip-add: 10.119.79.1,
+  mac-address: 0200.0101.0101, nameif: ld6-noncde-app3-lan, netmask: 255.255.255.0,
+  security-level: '100'}

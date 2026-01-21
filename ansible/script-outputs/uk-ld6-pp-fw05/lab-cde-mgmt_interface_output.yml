@@ -1,0 +1,12 @@
+Port-channel1.1650: {admin-state: up, interface: Port-channel1.1650, ip-add: 10.61.215.196,
+  mac-address: 0200.0101.0501, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.2122: {admin-state: up, interface: Port-channel1.2122, ip-add: 10.61.10.1,
+  mac-address: 0200.0101.0501, nameif: server-mgmt, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.2123: {admin-state: up, interface: Port-channel1.2123, ip-add: 10.61.13.1,
+  mac-address: 0200.0101.0501, nameif: mano, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2124: {admin-state: up, interface: Port-channel1.2124, ip-add: 10.61.12.1,
+  mac-address: 0200.0101.0501, nameif: core-services, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.2125: {admin-state: up, interface: Port-channel1.2125, ip-add: 10.61.15.1,
+  mac-address: 0200.0101.0501, nameif: jumphosts, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.30: {admin-state: up, interface: Port-channel1.30, ip-add: 10.61.8.1,
+  mac-address: 0200.0101.0501, nameif: vsphere, netmask: 255.255.254.0, security-level: '100'}

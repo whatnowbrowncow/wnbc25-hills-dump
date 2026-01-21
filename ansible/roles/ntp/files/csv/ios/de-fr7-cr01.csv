@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+de-fr7-cr01,10.120.193.235,group-vrf,yes,Loopback20
+de-fr7-cr01,10.120.193.236,group-vrf,no,Loopback20

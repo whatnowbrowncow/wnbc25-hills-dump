@@ -1,0 +1,16 @@
+- lines:
+{% for syslog_svr in syslog_interfaces %}
+{% if syslog_svr.next_hop[0] is defined %}
+{% for syslog_svr_nh in nexthop_interfaces %}
+{% if syslog_svr.syslog_svr_ip_addr[0] == syslog_svr_nh.syslog_svr_ip_addr[0] %}
+    - logging host {{ syslog_svr_nh.interface[0] }} {{ syslog_svr_nh.syslog_svr_ip_addr[0] }}
+{% else %}
+{% endif %}
+{% endfor %}
+{% elif syslog_svr.interface[0] is defined %}
+    - logging host {{ syslog_svr.interface[0] }} {{ syslog_svr.syslog_svr_ip_addr[0] }}
+{% elif default_interface[0] is defined %}
+    - logging host {{ default_interface[0] }} {{ syslog_svr.syslog_svr_ip_addr[0] }}
+{% else %}
+{% endif %}
+{% endfor %}

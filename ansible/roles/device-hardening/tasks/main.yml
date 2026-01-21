@@ -1,0 +1,22 @@
+---
+
+# Apply Deploying Router Specific Hardening  on IOS
+- name: IOS - Deploying Hardening Configuration if individual device configuration
+  include_tasks: ./ios-individual-commands.yml
+  when: ansible_network_os == "ios"
+
+# Apply global Configuration on IOS
+- name: IOS - Deploying Service Hardening Configuration
+  include_tasks: ./ios-config.yml
+  when: ansible_network_os == "ios"
+
+# Apply Deploying Router Specific Hardening  on NXOS
+- name: NXOS - Deploying Hardening Configuration if individual device configuration
+  include_tasks: ./nxos-individual-commands.yml
+  when: ansible_network_os == "nxos"
+
+# Apply relevant Configuration on NXOS
+- name: NXOS - Deploying Service Hardening Configuration
+  include_tasks: ./nxos-config.yml
+  when: ansible_network_os == "nxos"
+

@@ -1,0 +1,23 @@
+---
+
+## Create directory structure in case it doesn't already exist.
+- file:
+    path: roles/pfx_list/configs/{{ inventory_hostname }}
+    state: directory
+
+## Generate the prefix-lists using a template and register the outcome.
+- name: "Generate prefix-list configuration for {{ inventory_hostname }}"
+  template:
+    src: "pfx_list.j2"
+    dest: "roles/pfx_list/configs/{{ inventory_hostname }}/pfx_list.cfg"
+  tags:
+    - pfx_list
+  register: pfx_generation
+  
+
+## Compare the generated prefix-list against the running config and apply if different   
+- name: "Deploy prefix-list to {{ inventory_hostname }}"
+  ios_config:
+    src: "roles/pfx_list/configs/{{ inventory_hostname }}/pfx_list.cfg"
+  register: acl_output
+

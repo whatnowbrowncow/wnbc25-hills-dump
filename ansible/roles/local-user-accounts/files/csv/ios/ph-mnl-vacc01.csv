@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+ph-mnl-vacc01,netadmin,15,secret,5,$1$k8Si$me9P9xj44tmna8ljRK.AT0
+ph-mnl-vacc01,svcnetworkauto,15,secret,5,$1$IBJO$NhC5EXm5Zq3LI1y20xrkO/

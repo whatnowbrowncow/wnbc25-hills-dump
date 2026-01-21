@@ -1,0 +1,10 @@
+hostname,context,ip address,source int,community,poll/trap,version
+{% for context in snmp_facts.results %}
+{%   if context.ansible_facts.snmp_configuration_facts is defined %}
+{%     for item in context.ansible_facts.snmp_configuration_facts %}
+{{ inventory_hostname }},{{ context.item.item.context }},{{ item.snmp.ip_address }},{{ item.snmp.source_int }},{{ item.snmp.community_string }},{{ item.snmp.poll_trap }},{{ item.snmp.snmp_version }}
+{%     endfor %}
+{%   else %}
+{{ inventory_hostname }},{{ context.item.item.context }},,,,,,no SNMP configuration 
+{%   endif %}
+{% endfor %}

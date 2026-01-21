@@ -1,0 +1,4 @@
+hostname,username,privilege,encryption,password_string
+uk-ld6-lab-fw05-unit-2-1,svcnetworkauto,15,pbkdf2,$sha512$5000$riXGK/4yDA5wD1iQdbrFeQ==$V8OYCXtmIaF9Fbig694opA==
+uk-ld6-lab-fw05-unit-2-1,netsec,15,encrypted,WQYcFC1y7UoTjqWu
+uk-ld6-lab-fw05-unit-2-1,netadmin,15,pbkdf2,$sha512$5000$6orRBP/XjOrTqkVMQotfSw==$zfFuq65lHAs2DEtIA8Xibw==

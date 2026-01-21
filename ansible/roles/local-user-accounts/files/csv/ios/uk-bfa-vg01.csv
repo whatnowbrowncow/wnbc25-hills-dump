@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-bfa-vg01,netsec,15,secret,4,8Kb2slRmQI6xd7qwkxLjCRKlIHuVOj1ax/8vyMkB6Tg
+uk-bfa-vg01,ddsupport,15,secret,4,qAO85P77synjN.QYF7oqHyOjFr6uIVZ0DQns63Fzu9Q
+uk-bfa-vg01,netadmin,15,secret,5,$1$fXaR$i41r5KOSyzFnSDtw.dkLu.
+uk-bfa-vg01,svcnetworkauto,15,secret,5,$1$iis2$r7PZPXfUxd4/kCEEhiUqB.

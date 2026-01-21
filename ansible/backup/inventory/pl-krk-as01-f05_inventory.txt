@@ -1,0 +1,26 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PD     , VID: V04  , SN: FDO2046E1Q2
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V04  , SN: FDO2046E1Q2
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2050BFVZ
+
+NAME: "TenGigabitEthernet1/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR         , VID: V03  , SN: AVD212490CH    
+
+NAME: "Switch 2", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V04  , SN: FDO2046E1QF
+
+NAME: "Switch 2 - Power Supply A", DESCR: "Switch 2 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2050BFW1
+
+NAME: "Switch 3", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V04  , SN: FDO2046Q0NY
+
+NAME: "Switch 3 - Power Supply A", DESCR: "Switch 3 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2050BFVL
+
+NAME: "TenGigabitEthernet3/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR         , VID: V03  , SN: AVD212490BC

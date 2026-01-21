@@ -1,0 +1,2 @@
+hostname,name,type,seq number,remark,action,src_service_obj,src_service_obj_grp,protocol,src_host,src_network_obj,src_network_obj_grp,src_network,dest_host,dest_network_obj,dest_network_obj_grp,dest_network,dest_port,dest_port_obj_grp,dest_port_range,logging_level,logging_interval,status
+uk-ld6-lab-fw05,global,extended,1,,permit,,,ip,,,,any,,,,any,,,,informational,300,active

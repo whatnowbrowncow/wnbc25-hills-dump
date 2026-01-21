@@ -1,0 +1,23 @@
+---
+
+- name: ASA-MULTIPLE - Collecting the SNMP configuration
+  asa_command:
+    commands:
+      - more disk0:/{{ item.context }}.cfg | i community
+    context: system
+  with_items:
+    - "{{ contexts }}"
+  register: raw_output
+
+- name: ASA-MULTIPLE - Parsing the SNMP configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_snmp.yml"
+    content: "{{ item.stdout.0 }}"
+  with_items:
+    - "{{ raw_output.results }}"
+  register: "snmp_facts"
+
+- name: ASA-MULTIPLE - Generating the YAML file
+  template:
+    src: "/gitnet/ansible/roles/snmp/templates/asa_multiple/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/snmp.yml"

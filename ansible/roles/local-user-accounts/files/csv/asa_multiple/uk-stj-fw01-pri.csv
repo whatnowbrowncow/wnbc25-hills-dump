@@ -1,0 +1,4 @@
+hostname,username,privilege,encryption,password_string
+uk-stj-fw01-pri,svcnetworkauto,15,pbkdf2,$sha512$5000$+Ck0d8BJ1LYKbgZ8F2Pjyw==$esIRLLRR6+dd0dem7WRtsQ==
+uk-stj-fw01-pri,netsec,,,$sha512$5000$qF3fuJT9wpYGOvRjnyR++w==$j9FtKuVlqvHqV7kJMZKwJg==
+uk-stj-fw01-pri,netadmin,15,pbkdf2,$sha512$5000$XC2oq/s20e9gA/U8ki4tgw==$Bek4hfZB39KCujIvWfvU7w==

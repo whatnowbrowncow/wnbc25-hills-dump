@@ -1,0 +1,8 @@
+NAME: "CISCO3945-CHASSIS", DESCR: "CISCO3945-CHASSIS"
+PID: CISCO3945-CHASSIS , VID: V02, SN: FCZ162970R1
+
+NAME: "Cisco Services Performance Engine 150 for Cisco 3900 ISR on Slot 0", DESCR: "Cisco Services Performance Engine 150 for Cisco 3900 ISR"
+PID: C3900-SPE150/K9   , VID: V05 , SN: FOC162704EA
+
+NAME: "C3900 AC Power Supply 1", DESCR: "C3900 AC Power Supply 1"
+PID: PWR-3900-AC       , VID: V03 , SN: QCS1614P042

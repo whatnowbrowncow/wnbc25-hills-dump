@@ -1,0 +1,49 @@
+
+  - app_prof: 'pr-e-wan'
+    tenant: 'production'
+    vrf: 'pr-e-wan'
+    bds:
+      - bd: 'pr-e-wan_internal-vrf'
+        network: '10.120.161.96'
+        gateway: '10.120.161.100'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-wan_internal-vrf'
+            encap_id: '381'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-e-wan_wan-vrf'
+        network: '10.120.184.64'
+        gateway: '10.120.184.68'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-wan_wan-vrf'
+            encap_id: '502'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-e-wan_us-vrf'
+        network: '10.109.1.64'
+        gateway: '10.109.1.66'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-wan_us-vrf'
+            encap_id: '507'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-e-wan_group-vrf'
+        network: '10.120.193.96'
+        gateway: '10.120.193.100'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-wan_group-vrf'
+            encap_id: '571'
+            vcenter_dynamic_vlan: true

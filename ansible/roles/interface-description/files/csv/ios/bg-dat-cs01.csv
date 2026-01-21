@@ -1,0 +1,2 @@
+hostname,local_interface,remote_device_description
+bg-dat-cs01,Vlan243,no_data_in_cdp

@@ -1,0 +1,2 @@
+Port-channel1.1680: {admin-state: ' shutdown', interface: Port-channel1.1680, nameif: inside,
+  'no': ip, security-level: '100'}

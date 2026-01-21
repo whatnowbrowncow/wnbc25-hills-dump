@@ -1,0 +1,113 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2142Q1XZ
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2142E12Q
+
+NAME: "StackPort1/1", DESCR: "StackPort1/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GE08
+
+NAME: "StackPort1/2", DESCR: "StackPort1/2"
+PID: STACK-T2-3M       , VID: V03  , SN: LRM2133302D
+
+NAME: "StackAdapter1/1", DESCR: "StackAdapter1/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO213832FM
+
+NAME: "StackAdapter1/2", DESCR: "StackAdapter1/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO213831FQ
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B2HL
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B2HF
+
+NAME: "Te1/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR          , VID: V03  , SN: AVD212590YB     
+
+NAME: "Switch 2", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2142E12L
+
+NAME: "StackPort2/1", DESCR: "StackPort2/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GE3C
+
+NAME: "StackPort2/2", DESCR: "StackPort2/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GE08
+
+NAME: "StackAdapter2/1", DESCR: "StackAdapter2/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO213830QN
+
+NAME: "StackAdapter2/2", DESCR: "StackAdapter2/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO2138289Z
+
+NAME: "Switch 2 - Power Supply A", DESCR: "Switch 2 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B1ZX
+
+NAME: "Switch 2 - Power Supply B", DESCR: "Switch 2 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B1ZT
+
+NAME: "Switch 3", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2142V0WH
+
+NAME: "StackPort3/1", DESCR: "StackPort3/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GDX8
+
+NAME: "StackPort3/2", DESCR: "StackPort3/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GE3C
+
+NAME: "StackAdapter3/1", DESCR: "StackAdapter3/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO213828AX
+
+NAME: "StackAdapter3/2", DESCR: "StackAdapter3/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO213827H9
+
+NAME: "Switch 3 - Power Supply A", DESCR: "Switch 3 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B2UG
+
+NAME: "Switch 3 - Power Supply B", DESCR: "Switch 3 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B2JG
+
+NAME: "Switch 4", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2142V0VY
+
+NAME: "StackPort4/1", DESCR: "StackPort4/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GE91
+
+NAME: "StackPort4/2", DESCR: "StackPort4/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GDX8
+
+NAME: "StackAdapter4/1", DESCR: "StackAdapter4/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO213827HD
+
+NAME: "StackAdapter4/2", DESCR: "StackAdapter4/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO213827HF
+
+NAME: "Switch 4 - Power Supply A", DESCR: "Switch 4 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B20B
+
+NAME: "Switch 4 - Power Supply B", DESCR: "Switch 4 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B20F
+
+NAME: "Switch 5", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2142Q1XZ
+
+NAME: "StackPort5/1", DESCR: "StackPort5/1"
+PID: STACK-T2-3M       , VID: V03  , SN: LRM2133302D
+
+NAME: "StackPort5/2", DESCR: "StackPort5/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2131GE91
+
+NAME: "StackAdapter5/1", DESCR: "StackAdapter5/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411NEN
+
+NAME: "StackAdapter5/2", DESCR: "StackAdapter5/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411NFS
+
+NAME: "Switch 5 - Power Supply A", DESCR: "Switch 5 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B1YJ
+
+NAME: "Switch 5 - Power Supply B", DESCR: "Switch 5 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2139B1Y6
+
+NAME: "Te5/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR          , VID: V03  , SN: AVD212594JL

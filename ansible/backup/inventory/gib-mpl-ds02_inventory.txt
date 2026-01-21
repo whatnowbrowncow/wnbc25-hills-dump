@@ -1,0 +1,68 @@
+NAME: "Chassis", DESCR: "Nexus5548 Chassis"
+PID: N5K-C5548UP       , VID: V01 , SN: SSI184502KH
+
+NAME: "Module 1", DESCR: "O2 32X10GE/Modular Universal Platform Supervisor"
+PID: N5K-C5548UP       , VID: V01 , SN: FOC1903014B
+
+NAME: "Module 2", DESCR: "O2 16 port flexible GEM"
+PID: N55-M16UP         , VID: V01 , SN: FOC1849394T
+
+NAME: "Fan 1", DESCR: "Chassis fan module"
+PID: N5548P-FAN-B      , VID: N/A , SN: N/A
+
+NAME: "Fan 2", DESCR: "Chassis fan module"
+PID: N5548P-FAN-B      , VID: N/A , SN: N/A
+
+NAME: "Power supply 1", DESCR: "AC power supply"
+PID: N55-PAC-750W-B    , VID: V02 , SN: ART1839101X
+
+NAME: "Power supply 2", DESCR: "AC power supply"
+PID: N55-PAC-750W-B    , VID: V02 , SN: ART1839101Y
+
+NAME: "Module 3", DESCR: "O2 Non L3 Daughter Card"
+PID: N55-DL2           , VID: V02 , SN: FOC19020KWH
+
+NAME: "FEX 110 CHASSIS", DESCR: "N2K-C2248TP-E-1GE  CHASSIS"
+PID: N2K-C2248TP-E-1GE , VID: V02 , SN: FOX1852GG5M
+
+NAME: "FEX 110 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-E-1GE , VID: V02 , SN: FOC19030M4M
+
+NAME: "FEX 110 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN     , VID: N/A , SN: N/A
+
+NAME: "FEX 110 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: DTN1850P0JH
+
+NAME: "FEX 110 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: DTN1850P0JB
+
+NAME: "FEX 112 CHASSIS", DESCR: "N2K-C2248TP-E-1GE  CHASSIS"
+PID: N2K-C2248TP-E-1GE , VID: V02 , SN: FOX1901G0AR
+
+NAME: "FEX 112 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-E-1GE , VID: V02 , SN: FOC19030M6A
+
+NAME: "FEX 112 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN     , VID: N/A , SN: N/A
+
+NAME: "FEX 112 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: DTN1850P0KH
+
+NAME: "FEX 112 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: DTN1850P0KG
+
+NAME: "FEX 114 CHASSIS", DESCR: "N2K-C2248TP-E-1GE  CHASSIS"
+PID: N2K-C2248TP-E-1GE , VID: V02 , SN: FOX1902G0EL
+
+NAME: "FEX 114 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-E-1GE , VID: V02 , SN: FOC19030M4Q
+
+NAME: "FEX 114 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN     , VID: N/A , SN: N/A
+
+NAME: "FEX 114 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: DTN1850P294
+
+NAME: "FEX 114 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: DTN1850P290

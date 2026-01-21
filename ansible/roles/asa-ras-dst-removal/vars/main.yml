@@ -1,0 +1,12 @@
+---
+# vars file for asa-tag-removal
+
+date: "{{ now().strftime('%Y_%m_%d') | string }}"
+time: "{{ now().strftime('%H-%M-%S') | string }}"
+
+
+backup_dir: "/gitnet/ras-processed"
+changes_dir: "{{ backup_dir }}/changes/{{ inventory_hostname }}/dst/{{ date }}_removal_changes"
+pre_conf_file: "{{ changes_dir }}/dst_removal_pre_change.conf"
+post_conf_file: "{{ changes_dir }}/dst_removal_post_change.conf"
+configs_dir: "{{ backup_dir }}/configs/{{ inventory_hostname }}/dst"

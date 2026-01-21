@@ -1,0 +1,16 @@
+
+  - app_prof: 'admin'
+    tenant: 'production'
+    vrf: 'admin'
+    bds:
+      - bd: 'admin_management'
+        network: '10.180.129.0'
+        gateway: '10.180.129.220'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'admin_management'
+            encap_id: 'Ethernet1/8'
+            vcenter_dynamic_vlan: true

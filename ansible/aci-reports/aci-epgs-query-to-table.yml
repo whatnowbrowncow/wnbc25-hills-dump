@@ -1,0 +1,28 @@
+---
+
+  - name: PLAY - EPG query
+    hosts: aci
+    connection: local
+    gather_facts: no
+
+
+    tasks:
+    
+    - name: Query EPGs
+      aci_epg:
+        hostname: '{{ ansible_host }}'
+        username: '{{ aci_user }}'
+        private_key: '{{ aci_key }}'
+        state: query
+        validate_certs: no
+        
+      register: imdata_epgs
+
+      
+    - name: Output to table
+      template:
+        src: ./templates/epgs_table.j2
+        dest: ./reports/epg-query_{{ inventory_hostname }}.md
+      with_items:
+        - "{{ imdata_epgs }} "
+

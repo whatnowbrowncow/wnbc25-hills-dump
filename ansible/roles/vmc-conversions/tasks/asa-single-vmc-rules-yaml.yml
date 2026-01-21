@@ -1,0 +1,94 @@
+---
+
+## Collects the access-list running-configuration
+- name: ASA-SINGLE - Collecting the ACL configuration
+  asa_command:
+    commands:
+      - "show running-config access-list"
+  register: acl_output
+
+## Uses stdout of the previous task to create a list of each access-list configured
+- name: ASA-SINGLE - Collecting the name of each ACL
+  set_fact:
+    acls: "{{ acl_output.stdout[0] | regex_findall('^access-list +(?!global_mpc)(\\S+)','\\g<acls>') | unique }}"
+
+## Iterates through the list of access-lists and collects the access-list configuration for each
+- name: ASA-SINGLE - Collecting the access-entry configuration of each ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ acls }}"
+  loop_control:
+    label: "Collecting the access-entry configuration of access-list {{ item }}"
+  register: rules
+
+## Passes the results of the previous task to the access-list parser, which loops through the configuration 
+## of each access-list and presents the data as structured JSON objects
+- name: ASA-SINGLE - Parsing the ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_acl_to_vmc.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: access_lists
+
+## Collects the service object-group running-configuration
+- name: ASA-SINGLE - Collecting the service object-group configuration
+  asa_command:
+    commands:
+      - show running-config object-group service
+  register: service_object_group_output
+
+## Passes the results of the previous task to the service object-groups (split) parser, which splits
+## each service object group and exports it back to the play as a variable named 'service_objects_groups'
+- name: ASA-SINGLE - Parsing (split) the service object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_service_split.yml
+    content: "{{ service_object_group_output.stdout.0 }}"
+
+## Passes the variable from the previous task to the service object-groups parser, which loops through
+## the configuration of each service object-group and presents the data as structured JSON objects
+- name: ASA-SINGLE - Parsing the service object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_service.yml
+    content: "{{ item.service_objects.0 }}"
+  loop: "{{ service_objects_groups }}"
+  loop_control:
+    label: "Parsing the configuration of service object-group {{ item.name.matches.0 }}"
+  register: service_obj_groups
+
+## Collects the protocol object-group running-configuration
+- name: ASA-SINGLE - Collecting the protocol object-group configuration
+  asa_command:
+    commands:
+      - show running-config object-group protocol
+  register: protocol_object_group_output
+
+- name: ASA-SINGLE - Parsing (split) the protocol object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_object_groups_protocol_split.yml
+    content: "{{ protocol_object_group_output.stdout.0 }}"
+
+## Passes the variable from the previous task to the protocol object-groups parser, which loops through
+## the configuration of each protocol object-group and presents the data as structured JSON objects
+- name: ASA-SINGLE - Parsing the protocol object-group configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_protocol.yml
+    content: "{{ item.protocol_objects.0 }}"
+  loop: "{{ protocol_objects_groups }}"
+  loop_control:
+    label: "Parsing the configuration of protocol object-group {{ item.name.matches.0 }}"
+  register: protocol_obj_groups
+
+## Confirms the host directory exists prior to the template rendering task
+- name: ASA-SINGLE - Creating a directory for YAML files (if not present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+## Calls a Jinja2 template that renders the results of the parser task into a host_var SDDC security policy YAML file
+- name: ASA-SINGLE - Generating the VMC YAML file - Security Policy
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_single/dfw_sddc_specific_rules_yaml.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/dfw_sddc_specific_rules.yml"

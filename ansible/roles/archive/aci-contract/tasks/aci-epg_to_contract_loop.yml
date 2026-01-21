@@ -1,0 +1,26 @@
+---
+
+- name: Associate contract to EPG provider
+  aci_epg_to_contract:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ contract_item.tenant }}"
+    ap: "{{ contract_item.provider.app_prof }}"
+    epg: "{{ contract_item.provider.provider }}"
+    contract: "{{ contract_item.contract }}"
+    contract_type: "provider"
+    validate_certs: no
+    
+- name: Associate contract to EPG consumer
+  aci_epg_to_contract:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ contract_item.tenant }}"
+    ap: "{{ contract_item.consumer.app_prof }}"
+    epg: "{{ contract_item.consumer.consumer }}"
+    contract: "{{ contract_item.contract }}"
+    contract_type: "consumer"
+    validate_certs: no
+    

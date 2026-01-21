@@ -1,0 +1,76 @@
+---
+- name: Import network parser role
+  include_role:
+    name: ansible-network.network-engine
+
+- name: "Interfaces - Performing logging preparation if 'log' is true"
+  include_tasks: "./log_setup.yml"
+  when: "log"
+
+- name: ASA - CONTEXT - Running 'asa-contexts-yaml' task to update device contexts information
+  include_role:
+    name: asa-contexts
+    tasks_from: asa-contexts-non-clustered.yml
+  when: context_mode == "multiple" and cluster == false
+
+- name: ASA - CONTEXT - Running 'asa-contexts-yaml' task to update device contexts information
+  include_role:
+    name: asa-contexts
+    tasks_from: asa-contexts-clustered.yml
+  when: context_mode == "multiple" and cluster == true
+
+#- name: IOS - Syslog report task
+#  include_tasks: ./ios-report.yml
+#  when: ansible_network_os == "ios"
+
+#- name: IOS - Syslog config standardisation task
+#  include_tasks: ./ios-standardise.yml
+#  when: ansible_network_os == "ios"
+#
+#- name: IOS - Syslog config task
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios"
+
+#- name: IOS-XR - Syslog report task
+#  include_tasks: ./iosxr-report.yml
+#  when: ansible_network_os == "iosxr" 
+
+#- name: IOSXR - Syslog config standardisation task
+#  include_tasks: ./iosxr-standardise.yml
+#  when: ansible_network_os == "iosxr"
+#
+#- name: IOS-XR - Syslog config task
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"
+
+#- name: NX-OS - Syslog report task
+#  include_tasks: ./nxos-report.yml
+#  when: ansible_network_os == "nxos"
+
+#- name: NXOS - Syslog config standardisation task
+#  include_tasks: ./nxos-standardise.yml
+#  when: ansible_network_os == "nxos"
+##
+#- name: NX-OS - Syslog config task
+#  include_tasks: ./nxos-config.yml
+#  when: ansible_network_os == "nxos"
+
+#- name: ASA-SINGLE - Syslog report task
+#  include_tasks: ./asa-single-report.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+- name: ASA-SINGLE - Syslog config task
+  include_tasks: ./asa-single-config.yml
+  when: ansible_network_os == "asa" and context_mode == "single"
+
+#- name: ASA-MULTIPLE - Syslog report task
+#  include_tasks: ./asa-multiple-report.yml
+#  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+- name: ASA-MULTIPLE - Syslog config task
+  include_tasks: ./asa-multiple-config.yml
+  when: ansible_network_os == "asa" and context_mode == "multiple" and contexts.context is defined
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: "contexts"

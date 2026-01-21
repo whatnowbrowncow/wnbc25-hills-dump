@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+bg-sof-cs01,0 4,1,in,15 0,02041D0F05561C24,ssh,ssh,yes,
+bg-sof-cs01,5 15,1,in,15 0,02041D0F05561C24,ssh,,yes,

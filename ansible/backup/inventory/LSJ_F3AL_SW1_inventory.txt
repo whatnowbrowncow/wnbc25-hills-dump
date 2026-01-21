@@ -1,0 +1,119 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2130E1SW
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2130E1T0
+
+NAME: "StackPort1/1", DESCR: "StackPort1/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM2124R0LJ
+
+NAME: "StackPort1/2", DESCR: "StackPort1/2"
+PID: STACK-T2-1M       , VID: V03  , SN: LCC2043GF29
+
+NAME: "StackAdapter1/1", DESCR: "StackAdapter1/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO205103WT
+
+NAME: "StackAdapter1/2", DESCR: "StackAdapter1/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO2051048D
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302JMD
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2127B41F
+
+NAME: "Te1/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR          , VID: V03  , SN: FNS19480045     
+
+NAME: "Switch 2", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2130Q1L2
+
+NAME: "StackPort2/1", DESCR: "StackPort2/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM2124108Z
+
+NAME: "StackPort2/2", DESCR: "StackPort2/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM2124R0LJ
+
+NAME: "StackAdapter2/1", DESCR: "StackAdapter2/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO21321UJ0
+
+NAME: "StackAdapter2/2", DESCR: "StackAdapter2/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO21321UGX
+
+NAME: "Switch 2 - Power Supply A", DESCR: "Switch 2 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT213027HG
+
+NAME: "Switch 2 - Power Supply B", DESCR: "Switch 2 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2127B3ZL
+
+NAME: "Gi2/1/2", DESCR: "10/100/1000BaseTX SFP"
+PID:                     , VID:      , SN: MTC173107Y7     
+
+NAME: "Switch 3", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2131V0E0
+
+NAME: "StackPort3/1", DESCR: "StackPort3/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2036G484
+
+NAME: "StackPort3/2", DESCR: "StackPort3/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM2124108Z
+
+NAME: "StackAdapter3/1", DESCR: "StackAdapter3/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO20491A0H
+
+NAME: "StackAdapter3/2", DESCR: "StackAdapter3/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO205101XM
+
+NAME: "Switch 3 - Power Supply A", DESCR: "Switch 3 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT20423CHA
+
+NAME: "Switch 3 - Power Supply B", DESCR: "Switch 3 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2123B2DK
+
+NAME: "Switch 4", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2130E1SW
+
+NAME: "StackPort4/1", DESCR: "StackPort4/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2036G460
+
+NAME: "StackPort4/2", DESCR: "StackPort4/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2036G484
+
+NAME: "StackAdapter4/1", DESCR: "StackAdapter4/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO205101GQ
+
+NAME: "StackAdapter4/2", DESCR: "StackAdapter4/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO205102JV
+
+NAME: "Switch 4 - Power Supply A", DESCR: "Switch 4 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT213027LT
+
+NAME: "Switch 4 - Power Supply B", DESCR: "Switch 4 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302JFD
+
+NAME: "Gi4/1/2", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD          , VID: V01  , SN: AGA1737RLAH     
+
+NAME: "Switch 5", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2132E1XE
+
+NAME: "StackPort5/1", DESCR: "StackPort5/1"
+PID: STACK-T2-1M       , VID: V03  , SN: LCC2043GF29
+
+NAME: "StackPort5/2", DESCR: "StackPort5/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LCC2036G460
+
+NAME: "StackAdapter5/1", DESCR: "StackAdapter5/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO213311FN
+
+NAME: "StackAdapter5/2", DESCR: "StackAdapter5/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO2133134C
+
+NAME: "Switch 5 - Power Supply A", DESCR: "Switch 5 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2131B2TL
+
+NAME: "Switch 5 - Power Supply B", DESCR: "Switch 5 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT20423CH7
+
+NAME: "Te5/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR          , VID: V03  , SN: FNS19480239

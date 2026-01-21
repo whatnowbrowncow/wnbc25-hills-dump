@@ -1,0 +1,34 @@
+---
+- name: Creating snapshot Data
+  block:
+    - name: Creating Timestamp
+      set_fact:
+        timestamp: "{{ time }}"
+      check_mode: no
+
+    - name: ASA-RAS - Creating a changes directory for Object configuration 'diff' files
+      file:
+        path: "{{ changes_dir }}"
+        state: directory
+      check_mode: no
+
+    # Retrieves current RAS ACLs and Group Policy Information
+    - name: ASA-RAS - Retrieving the pre-change Object configuration
+      asa_command:
+        commands:
+          - "show running-config object"
+          - "show running-config object-group"
+      register: activeobj
+
+
+    #  Places information gathered in the task above into a temporary  file for use later on
+    - name: ASA-RAS - Taking a snapshot of the pre_change Object configuration
+      template:
+        src: "{{ role_path }}/templates/backup-template.j2"
+        dest: "{{ pre_conf_file }}"
+      changed_when: false
+  rescue:
+      - name: End playbook due to failure
+        fail:
+          msg: "############################################ \nThere has been a deployment Failure on {{ inventory_hostname }}, Please Check ############################################"
+        notify: "asa-ras-object:fail_executed"

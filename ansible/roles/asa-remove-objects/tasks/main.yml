@@ -1,0 +1,6 @@
+---
+
+- name: Removal of objects from contexts 
+  include_tasks: ./asa-remove-objects.yml
+
+#  import_tasks: ./asa-remove-objects.yml

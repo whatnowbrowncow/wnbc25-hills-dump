@@ -1,0 +1,9 @@
+---
+
+#This is loop step two. Don't run on its own
+
+- include_tasks: aci-epg-epgs.yml
+  with_items: 
+    - "{{ app_prof_item.bds }}"
+  loop_control:
+    loop_var: bd_item

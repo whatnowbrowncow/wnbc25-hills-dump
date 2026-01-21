@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-gsh-as01-f00,0 4,1,in,5 0,09621B5D1844200B26,telnet ssh,,no,synchronous
+uk-gsh-as01-f00,5 15,1,in,5 0,10605C4D0456251221,telnet ssh,,no,synchronous

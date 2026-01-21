@@ -1,0 +1,53 @@
+---
+
+- name: "ASA MULTIPLE LOG WRITE - Logging changes to disk"
+  block:
+    - name: "LOG WRITE - Printing updates written to device to stdout"
+      listen: "asa multiple updates exist"
+      debug:
+        msg: 
+        - "Updates applied to context {{ current_context }}......."
+        - "{{ loggingUPDATE.updates }}"
+        
+
+    - name: "LOG WRITE - Building logging directory"
+      listen: "asa multiple updates exist"
+      file:
+        path: "{{ LOG_PATH }}"
+        state: "directory"
+      changed_when: false
+
+    - name: "LOG WRITE - Printing updates written to device to log file"
+      listen: "asa multiple updates exist"
+      template:
+        src: "templates/sysloglog.j2"
+        dest: "{{ LOG_PATH }}{{ inventory_hostname }}-{{ current_context }}.txt"
+        newline_sequence: '\r\n'
+
+  delegate_to: "localhost"
+
+- name: "ASA SINGLE LOG WRITE - Logging changes to disk"
+  block:
+    - name: "LOG WRITE - Printing updates written to device to stdout"
+      listen: "asa single updates exist"
+      debug:
+        msg: 
+        - "Updates applied to {{ inventory_hostname }}......."
+        - "{{ loggingUPDATE.updates }}"
+        
+
+    - name: "LOG WRITE - Building logging directory"
+      listen: "asa single updates exist"
+      file:
+        path: "{{ LOG_PATH }}"
+        state: "directory"
+      changed_when: false
+
+    - name: "LOG WRITE - Printing updates written to device to log file"
+      listen: "asa single updates exist"
+      template:
+        src: "templates/sysloglog.j2"
+        dest: "{{ LOG_PATH }}{{ inventory_hostname }}.txt"
+        newline_sequence: '\r\n'
+
+  delegate_to: "localhost"

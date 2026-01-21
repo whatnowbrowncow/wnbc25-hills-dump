@@ -1,0 +1,17 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48TD     , VID: V03  , SN: FDO2029E12L
+
+NAME: "Switch 1", DESCR: "WS-C3650-48TD"
+PID: WS-C3650-48TD     , VID: V03  , SN: FDO2029E12L
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-250WAC     , VID: V03  , SN: LIT20310MSH
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-250WAC     , VID: V03  , SN: LIT20310NHX
+
+NAME: "GigabitEthernet1/1/1", DESCR: "10/100/1000BaseTX SFP"
+PID:                    , VID:      , SN: MTC1520017P    
+
+NAME: "GigabitEthernet1/1/2", DESCR: "10/100/1000BaseTX SFP"
+PID:                    , VID:      , SN: AGM1643204A

@@ -1,0 +1,4 @@
+---
+
+- name: LOGGING - Performing logging preparation
+  include_tasks: ./log_setup.yml

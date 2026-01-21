@@ -1,0 +1,36 @@
+---
+
+- name: IOS - collect local user account info
+  ios_command:
+    commands:
+      - show run | i username
+  register: ios_local_accounts_output
+
+- name: IOS - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_ios_local_user_accounts.yml"
+    content: "{{ ios_local_accounts_output.stdout.0 }}"
+
+- name: IOS - Confirm netadmin user exits and reset password
+  ios_user:
+    name: "{{ local_admin_account }}"
+    privilege: 15 
+    configured_password: "{{ local_admin_password }}"
+    update_password: always
+
+- name: IOS - Configure svcnetauto user account on device
+  ios_user:
+    name: "{{ ansible_user }}"
+    privilege: 15 
+    configured_password: "{{ ansible_password }}"
+    update_password: always
+
+- name: IOS - Remove all local user accounts that are not on the approved list
+  ios_user:
+    name: "{{ item.user_account.username }}"
+    state: absent  
+  with_items:
+    - "{{ ios_local_accounts_facts }}"
+  when: 
+    - "item.user_account.username not in master_local_user_accounts"
+    - (host_local_user_accounts is not defined) or (item.user_account.username not in host_local_user_accounts)

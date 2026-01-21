@@ -1,0 +1,5 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.3950,10.216.96.1,,backoffice-tier,255.255.255.224,100
+up,,Port-channel21.3951,10.216.96.33,,web-tier,255.255.255.224,100
+ shutdown,,Port-channel21.3952,10.216.96.65,,oxi-tier,255.255.255.224,100
+up,,Port-channel21.4074,10.216.160.132,,pp3on-internal-vrf,255.255.255.224,100

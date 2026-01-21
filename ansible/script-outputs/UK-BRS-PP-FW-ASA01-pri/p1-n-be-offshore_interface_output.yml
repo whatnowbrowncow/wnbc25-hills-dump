@@ -1,0 +1,16 @@
+Port-channel21.1430: {admin-state: up, interface: Port-channel21.1430, ip-add: 10.211.73.1,
+  nameif: caerus-app-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.1450: {admin-state: up, interface: Port-channel21.1450, ip-add: 10.211.96.1,
+  nameif: backoffice-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1451: {admin-state: up, interface: Port-channel21.1451, ip-add: 10.211.96.33,
+  nameif: web-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1452: {admin-state: up, interface: Port-channel21.1452, ip-add: 10.211.96.65,
+  nameif: applications-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1454: {admin-state: up, interface: Port-channel21.1454, ip-add: 10.211.96.129,
+  nameif: rng-retail-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.1460: {admin-state: up, interface: Port-channel21.1460, ip-add: 10.211.98.1,
+  nameif: database-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.1462: {admin-state: up, interface: Port-channel21.1462, ip-add: 10.211.100.1,
+  nameif: rng-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.1574: {admin-state: up, interface: Port-channel21.1574, ip-add: 10.211.160.132,
+  nameif: pp1off-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

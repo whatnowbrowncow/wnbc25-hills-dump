@@ -1,0 +1,6 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.2950,10.214.96.1,,backoffice-tier,255.255.255.224,100
+up,,Port-channel21.2951,10.214.96.33,,web-tier,255.255.255.224,100
+ shutdown,,Port-channel21.2952,10.214.96.65,,oxi-tier,255.255.255.224,100
+up,,Port-channel21.2953,10.214.96.97,,openbet-code-deployment,255.255.255.248,100
+up,,Port-channel21.3074,10.214.160.132,,pp2on-internal-vrf,255.255.255.224,100

@@ -1,0 +1,8 @@
+Port-channel21.3079: {admin-state: ' shutdown', interface: Port-channel21.3079, ip-add: 10.214.161.36,
+  nameif: pp2on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3258: {admin-state: up, interface: Port-channel21.3258, nameif: pp2on-noncde-deployment-lan,
+  'no': ip, security-level: '100'}
+Port-channel21.3259: {admin-state: up, interface: Port-channel21.3259, nameif: pp2on-noncde-web1-lan,
+  'no': ip, security-level: '100'}
+Port-channel21.3260: {admin-state: up, interface: Port-channel21.3260, nameif: pp2on-noncde-app1-lan,
+  'no': ip, security-level: '100'}

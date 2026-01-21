@@ -1,0 +1,74 @@
+---
+# This points ansible to the newly created data in the task above
+- name: Pointing Role to Data Directory to Retrieve New ACLs
+  include_vars:
+    dir: '/gitnet/ras-processed/data'
+  check_mode: no
+
+# Apply ALL Network Objects to device (Where these are the same they will ignored)
+- name: ASA-RAS - Applying the network objects to firewall
+  asa_config:
+   src: "{{ role_root }}/asa-object-creator/templates/asa_single/network-object-config-template.j2"
+   match: line
+  notify: "updates_exist_obj"
+  register: net_obj_output
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+
+# Apply ALL Network Object Groups to device (Where these are the same they will ignored)
+- name: ASA-RAS - Applying the network object groups to firewall
+  asa_config:
+   src: "{{ role_root }}/asa-object-creator/templates/asa_single/network-object-group-config-template.j2"
+   match: line
+  notify: "updates_exist_obj"
+  register: net_obj_grp_output
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+
+# Apply ALL Protocols to device (Where these are the same they will ignored)
+- name: ASA-RAS - Applying the new protocol object groups to firewall
+  asa_config:
+   src: "{{ role_root }}/asa-object-creator/templates/asa_single/protocol-object-group-config-template.j2"
+   match: line
+  notify: "updates_exist_obj"
+  register: proto_grp_output
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Apply ALL Service Objects to device (Where these are the same they will ignored)
+- name: ASA-RAS - Applying the new service objects to firewall
+  asa_config:
+   src: "{{ role_root }}/asa-object-creator/templates/asa_single/service-object-config-template.j2"
+   match: line
+  register: srv_obj_output
+  notify: "updates_exist_obj"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Apply ALL Service Object Groups to device (Where these are the same they will ignored)
+- name: ASA-RAS - Applying the new service object groups to firewall
+  asa_config:
+   src: "{{ role_root }}/asa-object-creator/templates/asa_single/service-object-group-config-template.j2"
+   match: line
+  register: srv_grp_output
+  notify: "updates_exist_obj"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+
+- name: Executing Handlers
+  meta: flush_handlers
+
+# Output message if objects have changed
+- name: ASA-RAS - Check if  objects have changed, Skipped = no changes
+  shell: "echo '\e[1;32m ############################################ Objects/Groups on {{ inventory_hostname }} have been updated ############################################ \e[0m'"
+  check_mode: no
+  changed_when: false
+  when: srv_grp_output.changed == true or srv_obj_output.changed == true or proto_grp_output.changed == true or net_obj_grp_output.changed == true or net_obj_output.changed == true

@@ -1,0 +1,84 @@
+---
+
+- name: IOS - Retrieving the management ACL name/number
+  ios_command:   
+    commands:  
+      - "show run | b line vty"
+  register: name
+
+- name: IOS - Establishing if the management ACL is a named or numbered ACL (required for diff)
+  set_fact:
+    aclNAMED: "{{ name.stdout[0] | regex_search('access-class +(?P<aclnamed>[a-zA-Z-]+).*','\\g<aclnamed>') }}"
+    aclNUMBERED: "{{ name.stdout[0] | regex_search('access-class +(?P<aclnumbered>\\d+).*','\\g<aclnumbered>') }}"
+
+- name: IOS - Registering the management ACL name/number as a variable
+  set_fact: 
+    aclNAME: "{% if aclNUMBERED is defined and aclNUMBERED %}{{ aclNUMBERED }}{% else %}{{ aclNAMED }}{% endif %}"
+
+- name: IOS - Ending the play for devices with no management ACL configured
+  meta: end_host
+  when: aclNAME == ""
+
+- name: IOS - Retrieving the management ACL type (Standard|Extended)
+  ios_command:   
+    commands:  
+      - "show access-lists {{ aclNAME[0] }}"
+  register: configuration
+
+- name: IOS - Registering the management ACL type (Standard|Extended) as a variable
+  set_fact:
+    aclTYPE: "{{ configuration.stdout[0] | regex_search('(?P<acltype>Standard|Extended)','\\g<acltype>' ) }}"
+
+- name: IOS - Building and Applying configuration for a standard management ACL
+  block:
+
+    - name: IOS (Standard Numbered ACL) - Applying configuration
+      ios_config:
+        src: /gitnet/ansible/roles/mgmt-acl-updater/templates/config-template-ios-standard-numbered.j2
+        before:
+          - ip access-list standard {{ aclNAME[0] }}
+          - no deny any
+          - exit
+        after:
+          - ip access-list standard {{ aclNAME[0] }}
+          - deny any log
+      register: numberedaclUPDATED
+      notify: "updates exist"
+      when: "aclNUMBERED is defined and aclNUMBERED != '' and aclNUMBERED != None"
+
+    - name: IOS (Standard Named ACL) - Applying configuration
+      ios_config:
+        src: /gitnet/ansible/roles/mgmt-acl-updater/templates/config-template-ios-standard-named.j2
+        before:
+          - ip access-list standard {{ aclNAME[0] }}
+          - no deny any
+        after:
+          - deny any log
+      register: namedaclUPDATED
+      notify: "updates exist"
+      when: "aclNAMED is defined and aclNAMED != '' and aclNAMED != 'None'"
+  when: '"Standard" in aclTYPE'
+
+- name: IOS - Building and Applying configuration for an extennded management ACL
+  block:
+
+    - name: IOS (Extended ACL) - Applying configuration
+      ios_config:
+        src: /gitnet/ansible/roles/mgmt-acl-updater/templates/config-template-ios-extended.j2
+        before:
+          - ip access-list extended {{ aclNAME[0] }}
+          - no deny ip any any
+        after:
+          - deny ip any any log
+      register: extaclUPDATED
+      notify: "updates exist"
+  when: '"Standard" not in aclTYPE'
+
+- name: IOS - Resequencing the management ACL and saving the configuration
+  ios_config:
+    lines:
+      - ip access-list resequence {{ aclNAME[0] }} 10 10
+    save_when: changed
+  register: aclRESEQUENCED
+  notify: "updates exist"
+  when: 'numberedaclUPDATED.changed or namedaclUPDATED.changed or extaclUPDATED.changed'

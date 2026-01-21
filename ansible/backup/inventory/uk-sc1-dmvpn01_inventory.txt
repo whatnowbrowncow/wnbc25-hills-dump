@@ -1,0 +1,2 @@
+NAME: "2821 chassis", DESCR: "2821 chassis"
+PID: CISCO2821         , VID:   NA, SN: FHK0902F1A2

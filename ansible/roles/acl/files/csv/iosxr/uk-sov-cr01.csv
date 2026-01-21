@@ -1,0 +1,103 @@
+hostname,acl-name,seq number,action
+uk-sov-cr01,acl-ncs,10,permit ipv4 host 10.112.12.126 any
+uk-sov-cr01,acl-ncs,20,permit ipv4 host 10.112.12.125 any
+uk-sov-cr01,acl-ncs,30,permit ipv4 host 10.120.136.140 any
+uk-sov-cr01,acl-ncs,40,permit ipv4 host 10.120.163.123 any
+uk-sov-cr01,acl-ncs,50,permit ipv4 host 10.120.163.122 any
+uk-sov-cr01,acl-ncs,60,permit ipv4 host 10.50.3.140 any
+uk-sov-cr01,acl-ncs,70,deny ipv4 any any log
+uk-sov-cr01,acl-cacti,10,permit udp host 10.120.163.210 any eq snmp
+uk-sov-cr01,acl-cacti,20,permit udp host 10.112.12.126 any eq snmp
+uk-sov-cr01,acl-cacti,30,permit udp host 10.112.12.125 any eq snmp
+uk-sov-cr01,acl-cacti,40,permit udp host 10.120.163.123 any eq snmp
+uk-sov-cr01,acl-cacti,50,permit udp host 10.120.163.122 any eq snmp
+uk-sov-cr01,acl-cacti,60,permit udp host 10.120.163.59 any eq snmp
+uk-sov-cr01,acl-cacti,70,deny ipv4 any any log
+uk-sov-cr01,cisco-csp,10,permit ipv4 host 10.112.129.45 any
+uk-sov-cr01,cisco-csp,20,permit ipv4 host 10.120.129.45 any
+uk-sov-cr01,cisco-csp,30,deny ipv4 any any log
+uk-sov-cr01,acl-nimsoft,10,permit udp host 10.110.163.111 any eq snmp
+uk-sov-cr01,acl-nimsoft,20,permit udp host 10.110.163.112 any eq snmp
+uk-sov-cr01,acl-nimsoft,30,permit udp host 10.120.163.111 any eq snmp
+uk-sov-cr01,acl-nimsoft,40,permit udp host 10.120.163.112 any eq snmp
+uk-sov-cr01,acl-nimsoft,50,permit udp host 10.180.163.111 any eq snmp
+uk-sov-cr01,acl-nimsoft,60,permit udp host 10.180.163.112 any eq snmp
+uk-sov-cr01,acl-nimsoft,70,deny ipv4 any any log
+uk-sov-cr01,acl-smartnet,10,permit udp host 10.120.129.45 any eq snmp
+uk-sov-cr01,acl-smartnet,20,permit udp host 10.112.129.45 any eq snmp
+uk-sov-cr01,acl-smartnet,30,deny ipv4 any any log
+uk-sov-cr01,acl-management,10,remark Permit SSH from these addresses
+uk-sov-cr01,acl-management,20,remark Netbrain
+uk-sov-cr01,acl-management,30,permit ipv4 host 10.120.163.210 any
+uk-sov-cr01,acl-management,40,remark Tufin
+uk-sov-cr01,acl-management,50,permit ipv4 host 10.120.163.37 any
+uk-sov-cr01,acl-management,60,permit ipv4 host 10.180.163.18 any
+uk-sov-cr01,acl-management,70,permit ipv4 host 10.210.163.60 any
+uk-sov-cr01,acl-management,80,permit ipv4 host 10.112.13.17 any
+uk-sov-cr01,acl-management,90,remark Nessus - SCC, GIB
+uk-sov-cr01,acl-management,100,permit ipv4 host 10.120.143.70 any
+uk-sov-cr01,acl-management,110,permit ipv4 host 10.180.142.230 any
+uk-sov-cr01,acl-management,120,remark Adnan-DoS-Box
+uk-sov-cr01,acl-management,130,permit ipv4 host 10.120.195.31 any
+uk-sov-cr01,acl-management,140,remark CWK Network Ops
+uk-sov-cr01,acl-management,150,permit ipv4 10.1.82.64 0.0.0.31 any
+uk-sov-cr01,acl-management,160,remark CWK Server Ops
+uk-sov-cr01,acl-management,170,permit ipv4 10.1.82.160 0.0.0.31 any
+uk-sov-cr01,acl-management,180,remark Gib IT
+uk-sov-cr01,acl-management,190,permit ipv4 host 10.17.100.187 any
+uk-sov-cr01,acl-management,200,remark STJ IT
+uk-sov-cr01,acl-management,210,permit ipv4 10.1.22.0 0.0.0.255 any
+uk-sov-cr01,acl-management,220,remark STJ Network and Servers Ops
+uk-sov-cr01,acl-management,230,permit ipv4 host 10.1.74.29 any
+uk-sov-cr01,acl-management,240,permit ipv4 host 10.1.74.61 any
+uk-sov-cr01,acl-management,250,permit ipv4 host 10.1.74.48 any
+uk-sov-cr01,acl-management,260,permit ipv4 host 10.1.74.57 any
+uk-sov-cr01,acl-management,270,permit ipv4 host 10.1.74.66 any
+uk-sov-cr01,acl-management,280,permit ipv4 host 10.1.74.128 any
+uk-sov-cr01,acl-management,290,remark Sofia Support team
+uk-sov-cr01,acl-management,300,permit ipv4 host 10.53.32.93 any
+uk-sov-cr01,acl-management,310,permit ipv4 host 10.53.32.107 any
+uk-sov-cr01,acl-management,320,permit ipv4 host 10.53.32.110 any
+uk-sov-cr01,acl-management,330,permit ipv4 host 10.53.32.133 any
+uk-sov-cr01,acl-management,340,permit ipv4 host 10.53.33.56 any
+uk-sov-cr01,acl-management,350,permit ipv4 host 10.53.33.119 any
+uk-sov-cr01,acl-management,360,permit ipv4 host 10.53.33.120 any
+uk-sov-cr01,acl-management,370,remark VPN Subnets
+uk-sov-cr01,acl-management,380,permit ipv4 172.16.41.208 0.0.0.15 any
+uk-sov-cr01,acl-management,390,permit ipv4 172.16.64.16 0.0.0.7 any
+uk-sov-cr01,acl-management,400,permit ipv4 192.168.2.0 0.0.1.255 any
+uk-sov-cr01,acl-management,410,permit ipv4 host 10.120.129.70 any
+uk-sov-cr01,acl-management,420,remark Skybox-Appliances
+uk-sov-cr01,acl-management,430,permit ipv4 host 10.120.163.151 any
+uk-sov-cr01,acl-management,440,permit ipv4 host 10.120.163.152 any
+uk-sov-cr01,acl-management,450,remark Solarwinds
+uk-sov-cr01,acl-management,460,permit ipv4 host 10.120.163.122 any
+uk-sov-cr01,acl-management,470,permit ipv4 host 10.120.163.142 any
+uk-sov-cr01,acl-management,480,permit ipv4 host 10.120.163.143 any
+uk-sov-cr01,acl-management,490,permit ipv4 host 10.112.12.142 any
+uk-sov-cr01,acl-management,500,permit ipv4 host 10.112.12.143 any
+uk-sov-cr01,acl-management,510,permit ipv4 host 10.112.12.144 any
+uk-sov-cr01,acl-management,520,permit ipv4 host 10.120.163.123 any
+uk-sov-cr01,acl-management,530,permit ipv4 host 10.112.12.125 any
+uk-sov-cr01,acl-management,540,permit ipv4 host 10.112.12.126 any
+uk-sov-cr01,acl-management,550,remark Bomgar-Jumphosts
+uk-sov-cr01,acl-management,560,permit ipv4 10.210.141.40 0.0.0.7 any
+uk-sov-cr01,acl-management,570,permit ipv4 10.180.141.40 0.0.0.7 any
+uk-sov-cr01,acl-management,580,permit ipv4 10.120.141.40 0.0.0.7 any
+uk-sov-cr01,acl-management,590,remark AWS
+uk-sov-cr01,acl-management,600,permit ipv4 100.79.0.0 0.0.127.255 any
+uk-sov-cr01,acl-management,610,deny ipv4 any any log
+uk-sov-cr01,acl-servicenow,10,permit ipv4 host 10.112.12.119 any
+uk-sov-cr01,acl-servicenow,20,permit ipv4 host 10.210.143.80 any
+uk-sov-cr01,acl-servicenow,30,permit ipv4 host 10.120.143.80 any
+uk-sov-cr01,acl-servicenow,40,permit ipv4 host 10.180.142.232 any
+uk-sov-cr01,acl-servicenow,50,deny ipv4 any any log
+uk-sov-cr01,solarwinds-new,10,permit udp host 10.120.163.122 any eq snmp
+uk-sov-cr01,solarwinds-new,20,permit udp host 10.120.163.123 any eq snmp
+uk-sov-cr01,solarwinds-new,30,permit udp host 10.120.163.142 any eq snmp
+uk-sov-cr01,solarwinds-new,40,permit udp host 10.120.163.143 any eq snmp
+uk-sov-cr01,solarwinds-new,50,permit udp host 10.112.12.125 any eq snmp
+uk-sov-cr01,solarwinds-new,60,permit udp host 10.112.12.126 any eq snmp
+uk-sov-cr01,solarwinds-new,70,permit udp host 10.112.12.142 any eq snmp
+uk-sov-cr01,solarwinds-new,80,permit udp host 10.112.12.143 any eq snmp
+uk-sov-cr01,solarwinds-new,90,permit udp host 10.112.12.144 any eq snmp

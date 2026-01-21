@@ -1,0 +1,48 @@
+---
+
+- name: IOS - Retrieving the management ACL name/number
+  ios_command:   
+    commands:  
+      - "show run | b line vty"
+  register: name
+
+- name: IOS - Registering the management ACL name/number as a variable
+  set_fact: 
+    aclNAME: "{{ name.stdout[0] | regex_search('access-class +(?P<aclname>\\S+).*','\\g<aclname>') }}"
+
+- name: IOS - Ending the play for devices with no management ACL configured
+  meta: end_host
+  when: aclNAME == ""
+
+- name: IOS - Retrieving the management ACL
+  ios_command:   
+    commands:  
+      - "show access-lists {{ aclNAME[0] }}"
+  register: mgmtACL
+
+- name: IOS - Registering the management ACL type (Standard|Extended) and the access-entries that are to be removed
+  set_fact:
+    aclTYPE: "{{ mgmtACL.stdout[0] | regex_search('(Standard|Extended)') | lower }}"
+    aclMATCH: "{{ mgmtACL.stdout[0] | regex_findall('((\\d+) +permit +(?:10.120.163.*|\\S+ +host +10.120.163.*))') }}"
+
+#- name: IOS - Building the configuration for testing purposes
+#  template:
+#    src: "{{ role_path }}/templates/ios-deletions.j2"
+#    dest: "{{ role_path }}/files/configs/ios/{{ inventory_hostname }}.cfg"
+#  when: aclMATCH
+#
+- name: IOS - Building and applying the configuration
+  ios_config:
+    src: "{{ role_path }}/templates/ios-deletions.j2"
+  register: aclUPDATED
+  notify: "updates exist"
+  when: aclMATCH
+
+- name: IOS - Resequencing the management ACL and saving the configuration
+  ios_config:
+    lines:
+      - ip access-list resequence {{ aclNAME[0] }} 10 10
+    save_when: always
+  register: aclRESEQUENCED
+  notify: "updates exist"
+  when: aclUPDATED.changed

@@ -1,0 +1,25 @@
+---
+
+- name: IOS - collect syslog info
+  ios_config:
+    commands:
+      - exit
+#  register: ios_syslog_output
+
+## Debug commands to check output
+#- name: Display output
+#  debug: var=ios_syslog_output
+#
+#- name: IOS - parse command output
+#  command_parser:
+#    file: /gitnet/ansible/parser_templates/ios/parser_ios_syslog.yml
+#    content: "{{ ios_syslog_output.stdout.0 }}"
+#
+## Debug commands to check output
+#- name: Display JSON output
+#  debug: var=syslog_server_facts
+#
+#- name: IOS - Generate csv report
+#  template:
+#    src: /gitnet/ansible/roles/syslog/templates/ios/csv-template.j2
+#    dest: /gitnet/ansible/roles/syslog/files/csv/ios/{{ inventory_hostname }}.csv

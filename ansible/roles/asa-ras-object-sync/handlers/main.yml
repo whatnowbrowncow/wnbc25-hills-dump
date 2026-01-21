@@ -1,0 +1,73 @@
+---
+- name: Creating Timestamp
+  set_fact:
+    timestamp_obj: "{{ time }}"
+  listen:
+    - "updates_exist_obj"
+
+- name: ASA-RAS - Saving the post-change configuration
+  asa_config:
+    save: yes
+  listen:
+    - "updates_exist_obj"
+
+- name: ASA-RAS - Retrieving the post-change Object configuration
+  asa_command:
+    commands:
+      - "show running-config object"
+      - "show running-config object-group"
+  listen:
+      - "updates_exist_obj"
+  register: activeobj
+
+- name: ASA-RAS - Taking a snapshot of the post-change, committed Object configuration (for diff)
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ post_conf_file }}"
+  listen:
+    - "updates_exist_obj"
+  register: config_results
+
+- name: ASA-RAS - Creating a changes directory for Object configuration 'diff' files
+  file:
+    path: "{{ changes_dir }}"
+    state: directory
+  listen:
+    - "updates_exist_obj"
+
+- name: ASA-RAS - Saving a 'diff' of the pre_change snapshot and the new committed Object configuration
+  shell: diff {{ pre_conf_file }} {{ post_conf_file }} > {{ changes_dir }}/object_changes.conf
+  register: diff_result
+  failed_when: diff_result.rc > 1
+  listen:
+    - "updates_exist_obj"
+
+- name: Delete Tempoary Files for Obejcts
+  file:
+    state: absent
+    path: "{{ foldernames }}"
+  loop:
+    - "{{ pre_conf_file }}"
+    - "{{ post_conf_file }}"
+  loop_control:
+    loop_var: foldernames
+    label: "Removing Directory and contents of {{ foldernames }}"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "updates_exist_obj"
+
+- name: Recreate empty Processed Files Directory
+  file:
+    state: directory
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+  loop_control:
+    loop_var: foldernames
+    label: "Creating Directory {{ foldernames }}"
+  check_mode: no
+  run_once: true
+  delegate_to: localhost
+  listen:
+    - "updates_exist_obj"

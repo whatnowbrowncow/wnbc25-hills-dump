@@ -1,0 +1,4 @@
+roles test config
+hostname {{ item.hostname }}
+end of roles test config
+

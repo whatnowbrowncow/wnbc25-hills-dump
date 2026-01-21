@@ -1,0 +1,2 @@
+Name: "module 0", DESCR: "Firepower 2110 Appliance, 1RU, 12 GE, 4 xSFP, 1 MGMT"
+PID: FPR-2110          , VID: V01     , SN: JMX2148Y03V

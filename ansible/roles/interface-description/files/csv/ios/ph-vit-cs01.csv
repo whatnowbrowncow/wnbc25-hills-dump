@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+ph-vit-cs01,GigabitEthernet1/0/20,no_data_in_cdp
+ph-vit-cs01,Loopback20,no_data_in_cdp

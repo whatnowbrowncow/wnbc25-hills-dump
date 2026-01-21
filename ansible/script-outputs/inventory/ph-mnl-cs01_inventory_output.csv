@@ -1,0 +1,24 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+ph-mnl-cs01,1000BaseT,TenGigabitEthernet2/1/2,GLC-TE,AVC212622Q9,V01
+ph-mnl-cs01,1000BaseT,TenGigabitEthernet2/1/4,GLC-TE,AVC212622QA,V01
+ph-mnl-cs01,1000BaseT,TenGigabitEthernet1/1/2,GLC-TE,AVC212622QC,V01
+ph-mnl-cs01,1000BaseT,TenGigabitEthernet1/1/4,GLC-TE,AVC212622QE,V01
+ph-mnl-cs01,1000BaseT,TenGigabitEthernet1/1/16,GLC-TE,AVC212622R5,V01
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/7,SFP-10G-SR,AVD212594K5,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/7,SFP-10G-SR,AVD212597D7,V03
+ph-mnl-cs01,4500X-16 10GE (SFP+),Switch1 Supervisor 1 (virtual slot 1),WS-C4500X-16,JAE213606Z3,V05
+ph-mnl-cs01,Cisco Systems,Switch1 System,,JAE213606Z3,none
+ph-mnl-cs01,4500X-16 10GE (SFP+),Switch2 Supervisor 1 (virtual slot 11),WS-C4500X-16,JAE213708GJ,V05
+ph-mnl-cs01,Cisco Systems,Switch2 System,,JAE213708GJ,none
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/3,SFP-10G-SR,JUR2129G020,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/1,SFP-10G-SR,JUR2129G022,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/5,SFP-10G-SR,JUR2129G025,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/1,SFP-10G-SR,JUR2129G026,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/6,SFP-10G-SR,JUR2129G02K,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/3,SFP-10G-SR,JUR2129G02M,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/6,SFP-10G-SR,JUR2129G02V,V03
+ph-mnl-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/5,SFP-10G-SR,JUR2129G0BT,V03
+ph-mnl-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 2,C4KX-PWR-750AC-R,QCS21243BNW,V01
+ph-mnl-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 1,C4KX-PWR-750AC-R,QCS21243C9E,V01
+ph-mnl-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 2,C4KX-PWR-750AC-R,QCS21243CDJ,V01
+ph-mnl-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 1,C4KX-PWR-750AC-R,QCS21243CXR,V01

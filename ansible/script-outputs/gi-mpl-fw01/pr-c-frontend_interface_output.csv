@@ -1,0 +1,15 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.56,10.180.25.33,,voip-recorder,255.255.255.240,100
+ shutdown,,Port-channel1.100,10.180.32.1,,cde-web,255.255.255.224,100
+ shutdown,,Port-channel1.102,,,,,
+ shutdown,,Port-channel1.110,10.180.33.1,,cde-backoffice,255.255.255.224,100
+up,,Port-channel1.113,10.180.33.97,,data-analytics,255.255.255.224,100
+up,,Port-channel1.114,10.180.33.129,,citrix,255.255.255.224,100
+up,,Port-channel1.115,10.180.33.161,,mailhosts,255.255.255.224,100
+up,,Port-channel1.120,10.180.36.1,,cde-web-sportsbook,255.255.255.0,100
+up,,Port-channel1.121,10.180.37.1,,cde-proxy-topend,255.255.255.0,100
+up,,Port-channel1.122,10.180.38.1,,cde-backoffice-new,255.255.255.0,100
+up,,Port-channel1.134,10.180.44.1,,int-lb,255.255.254.0,100
+up,,Port-channel1.140,10.180.46.1,,storage_data,255.255.255.128,100
+up,,Port-channel1.371,10.180.160.34,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.421,10.180.166.129,,cag,255.255.255.128,100

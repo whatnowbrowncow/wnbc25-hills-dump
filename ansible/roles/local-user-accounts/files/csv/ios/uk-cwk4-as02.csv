@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-cwk4-as02,netadmin,15,secret,5,$1$pCAZ$xM72uwwxLIDPxA4nk0vD3/
+uk-cwk4-as02,svcnetworkauto,15,secret,5,$1$lvBa$nQ9SjFfLWMuIMi5sCKXnq/

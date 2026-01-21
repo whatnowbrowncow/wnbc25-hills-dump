@@ -1,0 +1,214 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run aaa
+    network_os: iosxr
+
+- name: AAA servers
+  pattern_match:
+    regex: "^tacacs-server"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_servers
+
+- name: AAA servers values
+  pattern_group:
+    - name: ip_address
+      pattern_match:
+        regex: "tacacs-server host (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address
+
+    - name: encryption_key
+      pattern_match:
+        regex: "key \\d+ (\\S+)"
+        content: "{{ item }}"
+      register: encryption_key       
+
+  loop: "{{ aaa_servers }}"
+  register: aaa_servers_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_servers
+        object:
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: encryption_key
+            value: "{{ item.encryption_key.matches.0 }}"                  
+  loop: "{{ aaa_servers_values }}"
+  export: yes
+  register: aaa_servers_facts
+
+- name: AAA server group
+  pattern_match:
+    regex: "^aaa group server"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_server_group
+
+- name: AAA server group values
+  pattern_group:
+    - name: group_name
+      pattern_match:
+        regex: "aaa group server tacacs\\+ (\\S+)"
+        content: "{{ item }}"
+      register: group_name
+
+    - name: vrf
+      pattern_match:
+        regex: "vrf (\\S+)"
+        content: "{{ item }}"
+      register: vrf
+
+  loop: "{{ aaa_server_group }}"
+  register: aaa_server_group_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_server_group
+        object:
+          - key: group_name
+            value: "{{ item.group_name.matches.0 }}"
+          - key: vrf
+            value: "{{ item.vrf.matches.0 }}"
+  loop: "{{ aaa_server_group_values }}"
+  export: yes
+  register: aaa_server_group_facts
+
+- name: AAA server group servers
+  pattern_match:
+    regex: "^.*server \\d+.\\d+.\\d+.\\d+"
+    match_all: yes
+    match_greedy: yes
+  register: aaa_server_group_servers
+
+- name: AAA server group servers values
+  pattern_group:
+    - name: server
+      pattern_match:
+        regex: "server (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: server
+
+  loop: "{{ aaa_server_group_servers }}"
+  register: aaa_server_group_servers_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_server_group_servers
+        object:
+          - key: server
+            value: "{{ item.server.matches.0 }}" 
+  loop: "{{ aaa_server_group_servers_values }}"              
+  export: yes
+  register: aaa_server_group_servers_facts
+
+- name: AAA source interface
+  pattern_match:
+    regex: "^tacacs source-interface.*"
+    match_greedy: yes
+  register: aaa_source
+
+- name: AAA source interface values
+  pattern_group:
+    - name: source_interface
+      pattern_match:
+        regex: "^tacacs source-interface (\\S+)"
+        content: "{{ item }}"
+      register: source_interface
+
+    - name: source_vrf
+      pattern_match:
+        regex: "^tacacs source-interface \\S+ vrf (\\S+)"
+        content: "{{ item }}"
+      register: source_vrf
+
+  loop: "{{ aaa_source }}"
+  register: aaa_source_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_source
+        object:
+          - key: source_interface
+            value: "{{ item.source_interface.matches.0 }}"
+          - key: source_vrf
+            value: "{{ item.source_vrf.matches.0 }}"
+  loop: "{{ aaa_source_values }}"              
+  export: yes
+  register: aaa_source_facts
+
+- name: AAA method lists
+  pattern_match:
+    regex: "^aaa authentication.*|aaa authorization.*|aaa accounting.*"
+    match_greedy: yes
+  register: aaa_method_lists
+
+- name: AAA method lists values
+  pattern_group:
+    - name: authentication login server-group
+      pattern_match:
+        regex: "^aaa authentication login default group (\\S+)"
+        content: "{{ item }}"
+      register: authentication_login
+
+    - name: authorisation exec server-group
+      pattern_match:
+        regex: "^aaa authorization exec default group (\\S+)"
+        content: "{{ item }}"
+      register: authorisation_exec
+
+    - name: authorisation commands server-group
+      pattern_match:
+        regex: "^aaa authorization commands default group (\\S+)"
+        content: "{{ item }}"
+      register: authorisation_commands
+
+    - name: accounting exec server-group
+      pattern_match:
+        regex: "^aaa accounting exec default start-stop group (\\S+)"
+        content: "{{ item }}"
+      register: accounting_exec
+
+    - name: accounting commands server-group
+      pattern_match:
+        regex: "^aaa accounting commands default start-stop group (\\S+)"
+        content: "{{ item }}"
+      register: accounting_commands
+
+    - name: accounting system server-group
+      pattern_match:
+        regex: "^aaa accounting system default start-stop group (\\S+)"
+        content: "{{ item }}"
+      register: accounting_system
+
+  loop: "{{ aaa_method_lists }}"
+  register: aaa_method_lists_values
+
+- name: generate JSON data structure
+  json_template:
+    template:
+      - key: aaa_method_lists
+        object:
+          - key: authentication_login
+            value: "{{ item.authentication_login.matches.0 }}"                
+          - key: authorisation_exec
+            value: "{{ item.authorisation_exec.matches.0 }}"
+          - key: authorisation_commands
+            value: "{{ item.authorisation_commands.matches.0 }}"
+          - key: accounting_exec
+            value: "{{ item.accounting_exec.matches.0 }}"                   
+          - key: accounting_commands
+            value: "{{ item.accounting_commands.matches.0 }}"
+          - key: accounting_system
+            value: "{{ item.accounting_system.matches.0 }}"            
+  loop:  "{{ aaa_method_lists_values }}"
+  export: yes
+  register: aaa_method_lists_facts

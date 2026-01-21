@@ -1,0 +1,20 @@
+hostname,name,type,seq number,remark,action,src_service_obj,src_service_obj_grp,protocol,src_host,src_network_obj,src_network_obj_grp,src_network,dest_host,dest_network_obj,dest_network_obj_grp,dest_network,dest_port,dest_port_obj_grp,dest_port_range,logging_level,logging_interval,status
+{% for acl in access_lists %}
+{%   if acl.ansible_facts.acl_extended_facts is defined %}
+{%     for aces in acl.ansible_facts.acl_extended_facts %}
+{%       if aces.remark is defined and aces.remark %}
+{{ inventory_hostname }},{{ acl.item.item }},extended,{{ aces.seq }},{{ aces.remark }},,,,,,,,,,,,,,,,,,
+{%       else %}
+{{ inventory_hostname }},{{ acl.item.item }},extended,{{ aces.seq }},,{{ aces.action }},{{ aces.src_service_obj }},{{ aces.src_service_obj_grp }},{{ aces.protocol }},{{ aces.src_host }},{{ aces.src_network_obj }},{{ aces.src_network_obj_grp }},{{ aces.src_network }},{{ aces.dest_host }},{{ aces.dest_network_obj }},{{ aces.dest_network_obj_grp }},{{ aces.dest_network }},{{ aces.dest_port }},{{ aces.dest_port_obj_grp }},{{ aces.dest_port_range }},{{ aces.logging_level }},{{ aces.logging_interval }},{{ aces.status }}
+{%       endif %}
+{%     endfor %}
+{%   elif acl.ansible_facts.acl_standard_facts is defined %}
+{%     for aces in acl.ansible_facts.acl_standard_facts %}
+{%       if aces.remark is defined and aces.remark %}
+{{ inventory_hostname }},{{ acl.item.item }},standard,{{ aces.seq }},{{ aces.remark }},,,,,,,,,,,,,,,,,,
+{%       else %}
+{{ inventory_hostname }},{{ acl.item.item }},standard,{{ aces.seq }},,{{ aces.action }},,,,,,,,{{ aces.dest_host }},,,{{ aces.dest_network }},,,,,,
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}

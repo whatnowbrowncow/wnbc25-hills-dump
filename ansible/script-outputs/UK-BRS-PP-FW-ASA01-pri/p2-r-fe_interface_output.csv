@@ -1,0 +1,5 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.73,10.64.73.4,,wan,255.255.255.224,100
+up,,Port-channel21.2896,10.214.183.1,,retail-web,255.255.255.224,100
+up,,Port-channel21.2946,10.214.172.1,,retail-ssbt,255.255.255.0,100
+up,,Port-channel21.3084,10.214.161.196,,pp2on-internal-vrf,255.255.255.224,100

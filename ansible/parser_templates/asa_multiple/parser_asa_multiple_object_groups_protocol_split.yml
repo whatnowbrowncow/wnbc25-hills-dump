@@ -1,0 +1,33 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show running-config object-group protocol"
+    network_os: asa
+
+- name: protocol object-group match pattern
+  pattern_match:
+    regex: "^object-group protocol \\S+"
+    match_all: yes
+    match_greedy: yes
+  register: section
+
+- name: match protocol object-group values
+  pattern_group:
+    - name: match name    
+      pattern_match:
+        regex: "^object-group protocol (\\S+)"
+        content: "{{ item }}"
+      register: name
+
+    - name: protocol object-group match pattern
+      pattern_match:
+        regex: "(.*)"
+        match_greedy: yes
+        content: "{{ item }}"
+      register: protocol_objects
+
+  loop: "{{ section }}"
+  export: yes
+  register: protocol_objects_groups

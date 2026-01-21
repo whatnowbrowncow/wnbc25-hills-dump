@@ -1,0 +1,8 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.1900,10.212.64.1,,non-cde-web-tier,255.255.255.224,100
+up,,Port-channel21.1901,10.212.64.33,,noncde-backoffice,255.255.255.224,100
+up,,Port-channel21.1902,10.212.64.65,,noncde-app,255.255.255.224,100
+up,,Port-channel21.1907,10.212.64.225,,non-cde-app2,255.255.255.224,100
+up,,Port-channel21.1931,10.212.74.1,,int-lb,255.255.254.0,100
+up,,Port-channel21.1962,10.212.100.1,,noncde-ods,255.255.255.0,100
+up,,Port-channel21.2077,10.212.160.228,,pp1on-internal-vrf,255.255.255.224,100

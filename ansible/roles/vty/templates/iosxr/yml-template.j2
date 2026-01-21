@@ -1,0 +1,16 @@
+---
+vty:
+{% for item in iosxr_vty_line_facts %}
+  - line_template: "{{ item.line.line }}"
+    access_class: "{{ item.line.access_class }}"
+    access_class_direction: "{{ item.line.access_class_direction }}"
+    exec_timeout: "{{ item.line.exec_timeout }}"
+    transport_input: "{{ item.line.transport_input }}"
+    transport_output: "{{ item.line.transport_output }}"
+{% endfor %}
+vty_pools:
+{% for item in iosxr_vty_pool_facts %}
+  - pool_name: "{{ item.pool.pool_name }}"
+    line_range: "{{ item.pool.line_range }}"
+    line_template: "{{ item.pool.line_template }}"
+{% endfor %}

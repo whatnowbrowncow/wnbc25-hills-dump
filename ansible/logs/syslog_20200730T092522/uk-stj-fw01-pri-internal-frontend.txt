@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: uk-stj-fw01-pri-internal-frontend @ 20200730T092522 ---!
+!
+logging host group-vrf 10.120.163.126
+!
+!--- END UPDATES: uk-stj-fw01-pri-internal-frontend @ 20200730T092522 ---!
+}

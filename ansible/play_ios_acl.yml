@@ -1,0 +1,7 @@
+- name: PLAY - IOS ACL Deployment
+  hosts: all
+  connection: network_cli
+  gather_facts: yes
+
+  roles:
+    - acl

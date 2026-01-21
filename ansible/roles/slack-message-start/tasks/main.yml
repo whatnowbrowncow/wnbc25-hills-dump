@@ -1,0 +1,7 @@
+---
+
+- name: Send message to slack
+  import_tasks: ./slack-message-start.yml
+  tags:
+    - slack_message-start
+

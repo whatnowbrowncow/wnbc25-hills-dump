@@ -1,0 +1,18 @@
+---
+
+- name: PLAY - ACI test play
+  hosts: aci
+  connection: local
+  gather_facts: no
+  
+  vars_prompt:
+    - name: "snapshot_description"
+      prompt: "Provide the change ref. This will be used for the slack message and/or snapshots:"
+      default: "ansible pre-change backup"
+      private: no            
+
+  roles:   
+    - slack-message-start
+    - aci-snapshot
+    - aci-access-ifpolicies
+    - slack-message-end

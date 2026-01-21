@@ -1,0 +1,11 @@
+---
+- name: Template Basic - From Mastering Python Networking
+  hosts: localhost
+  
+  tasks:
+    - name: DDoS config creation
+      template:
+        src=templates/ddos_template_v2.j2
+        dest=config-outputs/{{ item.key }}.conf
+      with_dict: "{{ ddos_device }}"
+

@@ -1,0 +1,68 @@
+!
+interface Tunnel500
+ description {{ item.value.THRDPTY_to_WH_THRDPTY_DC_NAME }} - {{ item.value.THRDPTY_to_WH_THRDPTY_DC_Tunnel_Ref }}
+ ip address {{ item.value.THRDPTY_to_WH_WH_TUN_IP }} {{ item.value.THRDPTY_to_WH_WH_TUN_netmask }}
+ no ip redirects
+ ip tcp adjust-mss 1436
+ logging event link-status
+ load-interval {{ item.value.THRDPTY_to_WH_WH_TUN_GRE_Load_Interval }}
+ keepalive {{ item.value.THRDPTY_to_WH_GRE_keepalive_timer }} {{ item.value.THRDPTY_to_WH_GRE_keepalive_retires }}
+ tunnel source {{ item.value.THRDPTY_to_WH_TUN_SRC_IFC_IP }}
+ tunnel destination {{ item.value.THRDPTY_to_WH_TUN_DST_IFC_IP }}
+ hold-queue 1024 in
+ hold-queue 1024 out
+!
+
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_in }} seq 100 deny 0.0.0.0/0 le 32
+!
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 100 permit 141.138.130.0/24
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 101 permit 141.138.131.0/24
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 102 permit 141.138.129.0/24
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 103 permit 141.138.134.0/24
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 104 permit 141.138.135.0/24
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 105 permit 141.138.133.0/24
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 106 permit 141.138.132.0/24
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 1000 deny 0.0.0.0/0 le 32
+!
+ip prefix-list brs-frontend-prefix seq 10 permit 141.138.131.0/24
+ip prefix-list brs-frontend-prefix seq 20 permit 141.138.129.0/24
+ip prefix-list brs-frontend-prefix seq 30 permit 141.138.133.0/24
+ip prefix-list brs-frontend-prefix seq 40 permit 141.138.134.0/24
+ip prefix-list brs-frontend-prefix seq 50 permit 141.138.135.0/24
+ip prefix-list brs-frontend-prefix seq 60 permit 141.138.132.0/24
+!
+ip prefix-list scc-frontend-prefix seq 10 permit 141.138.130.0/24
+!
+
+
+route-map {{ item.value.THRDPTY_to_WH_RM_in }} deny 10
+!
+route-map {{ item.value.THRDPTY_to_WH_RM_out }} permit 10
+ match ip address prefix-list brs-frontend-prefix
+ set community {{ item.value.THRDPTY_to_WH_BRS_NETS_COMMUNITY }}
+!
+route-map {{ item.value.THRDPTY_to_WH_RM_out }} permit 20
+ match ip address prefix-list scc-frontend-prefix
+ set community {{ item.value.THRDPTY_to_WH_SCC_NETS_COMMUNITY }}
+!
+
+
+!
+router bgp 57002
+
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} peer-group
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} remote-as {{ item.value.THRDPTY_BGP_AS_num }}
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} password {{ item.value.THRDPTY_BGP_password }}
+ neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} timers {{ item.value.THRDPTY_BGP_keepalive_timer }} {{ item.value.THRDPTY_BGP_hold_timer }}
+ neighbor {{ item.value.THRDPTY_to_WH_THRDPTY_TUN_IP }} peer_group {{ item.value.THRDPTY_to_WH_PG_NAME }}
+ neighbor {{ item.value.THRDPTY_to_WH_THRDPTY_TUN_IP }} description {{ item.value.THRDPTY_to_WH_BGP_NEIG_DESCRIPTION }}
+
+address-family ipv4
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} send-community
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_in }} in
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} out
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} route-map {{ item.value.THRDPTY_to_WH_RM_in }} in
+  neighbor {{ item.value.THRDPTY_to_WH_PG_NAME }} route-map {{ item.value.THRDPTY_to_WH_RM_out }} out
+  neighbor {{ item.value.THRDPTY_to_WH_THRDPTY_TUN_IP }} activate
+ exit-address-family
+!

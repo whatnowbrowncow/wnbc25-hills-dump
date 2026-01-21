@@ -1,0 +1,13 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-border2,Cisco ASR1002 AC Power Supply,Power Supply Module 0,ASR1002-PWR-AC,ART1302U04C,V01
+gib-border2,Cisco ASR1002 AC Power Supply,Power Supply Module 1,ASR1002-PWR-AC,ART1302U04H,V01
+gib-border2,Cisco ASR1002 Chassis,Chassis,ASR1002,FOX1303GTWE,V02
+gib-border2,2-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/1,SPA-2X1GE-V2,JAE13083FWW,V01
+gib-border2,Cisco ASR1002 Route Processor 1,module R0,ASR1002-RP1,JAE13136CK2,V02
+gib-border2,Cisco ASR1000 Embedded Services Processor,module F0,ASR1000-ESP10,JAE17480HSA,V06
+gib-border2,GE T,subslot 0/0 transceiver 1,N/A,MTC130801XD,E
+gib-border2,GE T,subslot 0/0 transceiver 0,N/A,MTC131002KE,E
+gib-border2,GE LX,subslot 0/0 transceiver 2,N/A,OPC12512747,A1B
+gib-border2,GE LX,subslot 0/0 transceiver 3,SFP-GE-L,SPC161305PX,A
+gib-border2,4-port Gigabit Ethernet Shared Port Adapter,SPA subslot 0/0,4XGE-BUILT-IN,none,none
+gib-border2,Cisco ASR1002 SPA Interface Processor 10,module 0,ASR1002-SIP10,none,none

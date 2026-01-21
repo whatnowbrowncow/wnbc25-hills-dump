@@ -1,0 +1,84 @@
+"l3extLNodeP": {
+    "attributes": {
+        "descr": "",
+        "dn": "uni/tn-common/out-default-fatl3out/lnodep-default-fatl3out_np",
+        "name": "default-fatl3out_np",
+        "status": "created,modified"
+    },
+    "children": [
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "default_lab-wan_np_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-1620",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[uk-ld6-fw05-data_polgrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.61.160.65/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.61.160.67/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.61.160.66/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.61.160.67/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    ]
+}

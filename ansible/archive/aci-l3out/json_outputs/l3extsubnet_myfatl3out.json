@@ -1,0 +1,26 @@
+"l3extInstP": {
+    "attributes": {
+        "dn": "uni/tn-ant-tenant/out-myfatl3out/instP-myfatl3out",
+        "name": "myfatl3out",
+        "status": "created,modified"
+    },
+    "children": [
+        {
+        "l3extSubnet": {
+            "attributes": {
+                "aggregate": "",
+                "ip": "2.2.2.2/32",
+                "scope": "export-rtctrl,import-security,shared-rtctrl,shared-security",
+            }
+        }
+    },
+    {
+        "l3extSubnet": {
+            "attributes": {
+                "aggregate": "",
+                "ip": "3.3.3.3/32",
+                "scope": "export-rtctrl,import-security,shared-rtctrl,shared-security",
+            }
+        }
+    },
+]}

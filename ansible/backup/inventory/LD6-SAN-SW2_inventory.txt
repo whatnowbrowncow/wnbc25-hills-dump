@@ -1,0 +1,23 @@
+NAME: "Chassis",  DESCR: "MDS 9148S 16G 48 FC (1 Slot) Chassis " 
+PID: DS-C9148S-K9        ,  VID: V02 ,  SN: JPG211800GH          
+
+NAME: "Slot 1",  DESCR: "2/4/8/16 Gbps FC/Supervisor"           
+PID: DS-C9148S-K9-SUP    ,  VID: V02 ,  SN: JAE2118031W          
+
+NAME: "Slot 2",  DESCR: "MDS 9148S 16G 48 FC (1 Slot) Chassis Power Supply"
+PID: DS-C48S-300AC       ,  VID: V00 ,  SN: QCS21122N2M          
+
+NAME: "Slot 3",  DESCR: "MDS 9148S 16G 48 FC (1 Slot) Chassis Power Supply"
+PID: DS-C48S-300AC       ,  VID: V00 ,  SN: QCS21122NW7          
+
+NAME: "Slot 4",  DESCR: "MDS 9148S 16G 48 FC (1 Slot) Chassis Fan Module"
+PID:                     ,  VID: V00 ,  SN:                      
+
+NAME: "Slot 5",  DESCR: "MDS 9148S 16G 48 FC (1 Slot) Chassis Fan Module"
+PID:                     ,  VID: V00 ,  SN:                      
+
+NAME: "Slot 6",  DESCR: "MDS 9148S 16G 48 FC (1 Slot) Chassis Fan Module"
+PID:                     ,  VID: V00 ,  SN:                      
+
+NAME: "Slot 7",  DESCR: "MDS 9148S 16G 48 FC (1 Slot) Chassis Fan Module"
+PID:                     ,  VID: V00 ,  SN:

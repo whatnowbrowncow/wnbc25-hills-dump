@@ -1,0 +1,108 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run interface
+    network_os: ios
+
+- name: loopback interface config pattern match
+  pattern_match:
+    regex: "^interface"
+    match_all: yes
+    match_greedy: yes
+  register: loopback_int_config
+
+- name: Match management interface values
+  pattern_group:
+    - name: match interfaces
+      pattern_match:
+        regex: "^interface (\\S+)"
+        content: "{{ item }}"
+      register: interface
+
+    - name: match description
+      pattern_match:
+        regex: "^ description (.*)\n"
+        content: "{{ item }}"
+      register: description 
+
+    - name: match ip address
+      pattern_match:
+        regex: "^ ip address (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address 
+
+    - name: match mask
+      pattern_match:
+        regex: "^ ip address \\d+.\\d+.\\d+.\\d+ (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: mask  
+
+    - name: match vrf
+      pattern_match:
+        regex: "^ ip vrf forwarding (\\S+)"
+        content: "{{ item }}"
+      register: vrf
+
+    - name: match no ip redirects
+      pattern_match:
+        regex: "^ (no ip redirects)"
+        content: "{{ item }}"
+      register: redirects
+
+    - name: match no ip unreachables
+      pattern_match:
+        regex: "^ (no ip unreachables)"
+        content: "{{ item }}"
+      register: unreachables
+
+    - name: match no ip proxy-arp
+      pattern_match:
+        regex: "^ (no ip proxy-arp)"
+        content: "{{ item }}"
+      register: proxy_arp
+
+    - name: match no ip directed-broadcast
+      pattern_match:
+        regex: "^ (no ip directed-broadcast)"
+        content: "{{ item }}"
+      register: directed_broadcast
+
+    - name: match no ip mask-reply
+      pattern_match:
+        regex: "^ (no ip mask-reply)"
+        content: "{{ item }}"
+      register: mask_reply
+
+  loop: "{{ loopback_int_config }}"
+  register: loopback_int_values    
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: loopback_interface
+        object:
+          - key: interface
+            value: "{{ item.interface.matches.0 }}"  
+          - key: description
+            value: "{{ item.description.matches.0 }}"        
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: mask
+            value: "{{ item.mask.matches.0 }}"
+          - key: vrf
+            value: "{{ item.vrf.matches.0 }}"          
+          - key: ip_redirects_config
+            value: "{{ item.redirects.matches.0 }}"
+          - key: ip_unreachables_config
+            value: "{{ item.unreachables.matches.0 }}"
+          - key: proxy_arp_config
+            value: "{{ item.proxy_arp.matches.0 }}"          
+          - key: ip_directed_broadcast_config
+            value: "{{ item.directed_broadcast.matches.0 }}"
+          - key: ip_mask_reply_config
+            value: "{{ item.mask_reply.matches.0 }}"
+  loop: "{{ loopback_int_values }}"
+  export: yes
+  register: loopback_int_facts

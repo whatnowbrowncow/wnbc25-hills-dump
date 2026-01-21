@@ -1,0 +1,29 @@
+---
+
+- name: Import Network Parser role
+  include_role:
+    name: ansible-network.network-engine
+
+- name: IOS - NTP CSV reporting task
+  include_tasks: ./ios-report.yml
+  when: ansible_network_os == "ios"
+
+- name: IOS - NTP YAML creation task
+  include_tasks: ./ios-yaml.yml
+  when: ansible_network_os == "ios"
+
+#- name: IOS - NTP configuration task
+#  include_tasks: ./ios-config.yml
+#  when: ansible_network_os == "ios"
+
+- name: IOS-XR - NTP CSV reporting task
+  include_tasks: ./iosxr-report.yml
+  when: ansible_network_os == "iosxr"  
+
+- name: IOS-XR - NTP YAML creation task
+  include_tasks: ./iosxr-yaml.yml
+  when: ansible_network_os == "iosxr"
+
+#- name: IOS-XR - NTP configuration task
+#  include_tasks: ./iosxr-config.yml
+#  when: ansible_network_os == "iosxr"

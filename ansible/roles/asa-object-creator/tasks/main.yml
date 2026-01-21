@@ -1,0 +1,24 @@
+---
+- name: Import network parser role
+  include_role:
+    name: ansible-network.network-engine
+    
+#- name: ASA-SINGLE - object parser YAML creation task.
+#  include_tasks: ./asa-single-yaml.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+#- name: ASA-SINGLE - network object creation task.
+#  include_tasks: ./asa-single-config.yml
+#  when: ansible_network_os == "asa" and context_mode == "single"
+
+#- name: ASA-MULTIPLE -  object parser YAML creation task.
+#  include_tasks: ./asa-multiple-yaml.yml
+#  with_items:
+#    - "{{ contexts }}"
+#  when: ansible_network_os == "asa" and context_mode == "multiple"
+
+#- name: ASA-MULTIPLE - network object creation task.
+#  include_tasks: ./asa-multiple-config.yml
+#  with_items:
+#    - "{{ contexts }}"
+#  when: ansible_network_os == "asa" and context_mode == "multiple"

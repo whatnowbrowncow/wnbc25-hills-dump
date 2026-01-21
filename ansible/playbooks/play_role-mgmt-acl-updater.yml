@@ -1,0 +1,9 @@
+---
+
+- name: PLAY - Adds new IP(s) to the Management ACLs on IOS, IOS-XR and NXOS devices
+  hosts: ios,iosxr,nxos
+  gather_facts: no
+  connection: network_cli
+
+  roles:
+    - mgmt-acl-updater

@@ -1,0 +1,13 @@
+{# Produce the RAS Group Policy Config, using a lookup of the YML RAS ACL data #}
+{% for loop_data in changed_acls  %}
+{%-   for item in lookup('vars', 'ra_vpn_filters_'+loop_data.ansible_facts.ra_vpn_access_lists[0].name | replace ("-","_")) -%}
+group-policy {{ item.group_policy }} attributes
+        vpn-filter value {{ loop_data.ansible_facts.ra_vpn_access_lists[0].name }}{% if loop_data.ansible_facts.ra_vpn_access_lists[0].version is number %}_v{% endif %}{{ loop_data.ansible_facts.ra_vpn_access_lists[0].version }}
+
+{#{%    if loop_data.ansible_facts.ra_vpn_access_lists[0].name == item.split_tunnel_filter %}
+        split-tunnel-network-list value {{ loop_data.ansible_facts.ra_vpn_access_lists[0].split_tunnel_filter }}_v{{ loop_data.ansible_facts.ra_vpn_access_lists[0].version }}
+        
+{%    endif %}#}
+
+{%    endfor %}
+{% endfor %}

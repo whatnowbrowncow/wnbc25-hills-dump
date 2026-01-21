@@ -1,0 +1,59 @@
+--- 
+
+# This is to retrieve the Version from the YML of the dst 
+- name: "{{ comment_title }} - {{ dst_data.name }} Retrieving YML Version" 
+  set_fact: 
+    yml_version: "{{ dst_data.version }}" 
+
+#This is to confirm that the version on the YML is equal to current version on the device, if not it will display a message and end the playbook.  
+- name: "{{ comment_title }} - {{ dst_data.name }} - Confirm that yml version on dst {{ dst_data.name }} are same as the current installed version on the device" 
+  fail: 
+     msg: > 
+      " 
+
+      ################ Yaml Version (Version #: {{ yml_version }}) for dst {{ dst_data.name }} to be removed are not equal to device (Version #: {{  loop_dsts.device_version }}). Please confirm! ################ 
+
+      " 
+  when: (loop_dsts.device_version | int  ) != (yml_version | int) 
+
+# This is to retrieve all the versions of the dst currently deployed on the device 
+- name: "{{ comment_title }} - {{ dst_data.name }} - Export dsts Version from Device" 
+  set_fact: 
+    deployed_dsts_ver: "{{ dsts.stdout[0] | regex_findall('anyconnect-custom-data dynamic-split-include-domains ' + dst_data.name + '_v(\\d+)') | map('int') | unique | sort}}" 
+
+#This is to confirm that all deployed dsts are less than or equal to the current version assigned to the RAS, if not it will display a message and end the playbook.  
+- name: "{{ comment_title }} - {{ dst_data.name }} - Confirm that all version of dst {{ dst_data.name }} on the device are less than current version assigned to the RAS group policy" 
+  fail: 
+     msg: > 
+      " 
+
+      ################ dst Version {{ loop_deployed_version }} exists, yet assigned RAS dst version is {{  loop_dsts.device_version | int }} . Please confirm! ################ 
+
+      " 
+  when: ( loop_dsts.device_version | int  ) < (loop_deployed_version) 
+  loop: "{{ deployed_dsts_ver }}" 
+  loop_control: 
+    loop_var: loop_deployed_version 
+    label: "Checking version {{ loop_deployed_version }} is not grater than assigned RAS version" 
+
+# This is to take all deployed versions and collate all versions less than the keep_versions setting 
+- name: "{{ comment_title }} - {{ dst_data.name }} - Compile Old dst List" 
+  set_fact: 
+    versions_to_remove: "{{ versions_to_remove|default([]) + [dst_data.name + '_v' + loop_version | string] }}" 
+  loop: "{{ deployed_dsts_ver }}" 
+  loop_control: 
+    loop_var: loop_version 
+    index_var: loop_index 
+    label: "Check if Version: {{ loop_version }} needs adding to the removal list" 
+  when:  
+    - loop_version != []   
+    - loop_version not in deployed_dsts_ver[-keep_versions:]  
+
+# These are to clear the variables ready for the next dst run 
+- name: "{{ comment_title }} - {{ dst_data.name }} - Clear Deployed dst Count" 
+  set_fact: 
+    deployed_dsts_ver: [] 
+
+- name: "{{ comment_title }} - {{ dst_data.name }} - Clear YML Version Variable" 
+  set_fact: 
+    yml_version: "" 

@@ -1,0 +1,38 @@
+---
+
+## Check the config directory exists in <role path>/files/config/<device name>/
+- name: ASA-SINGLE - Create directory for Config files if not present
+  file:
+    path: "{{ role_path }}/files/configs/asa_single/{{ inventory_hostname }}"
+    state: directory
+
+## Create the ASA config for network objects and place in a file called network_objects.cfg in the relevent directory using the template
+- name: ASA-SINGLE - Build configuration network objects
+  template:
+    src: "{{ role_path }}/templates/asa_single/network-object-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_single/{{ inventory_hostname }}/network_objects.cfg"
+
+## Create the ASA config network object groups and place in a file called network_objects_groups.cfg in the relevent directory using the template
+- name: ASA-SINGLE - Build configuration network object groups
+  template:
+    src: "{{ role_path }}/templates/asa_single/network-object-group-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_single/{{ inventory_hostname }}/network_object-groups.cfg"
+
+## Create the ASA config for service objects and place in a file called service_objects.cfg in the relevent directory using the template
+- name: ASA-SINGLE - Build configuration service objects
+  template:
+    src: "{{ role_path }}/templates/asa_single/service-object-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_single/{{ inventory_hostname }}/service_objects.cfg"
+
+## Create the ASA config for protocol groups and place in a file called service_object_groups.cfg in the relevent directory using the template 
+- name: ASA-SINGLE - Build configuration service object groups
+  template:
+    src: "{{ role_path }}/templates/asa_single/service-object-group-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_single/{{ inventory_hostname }}/service_object-groups.cfg"
+
+## Create the ASA config for protocol groups and place in a file called protocol_object_groups.cfg in the relevent directory using the template 
+- name: ASA-SINGLE - Build configuration protocol object groups
+  template:
+    src: "{{ role_path }}/templates/asa_single/protocol-object-group-config-template.j2"
+    dest: "{{ role_path }}/files/configs/asa_single/{{ inventory_hostname }}/protocol_object-groups.cfg"
+

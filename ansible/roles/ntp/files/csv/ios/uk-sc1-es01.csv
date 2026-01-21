@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-sc1-es01,10.120.193.235,mgmtVrf,yes,
+uk-sc1-es01,10.120.193.236,mgmtVrf,no,

@@ -1,0 +1,47 @@
+---
+# Overview: Playbook to merge individual, host-specific CSV's for a particular configuration into a single CSV.
+#
+# To locate the source directory of the individiual CSV's to be merged, the playbook requires two variables to be passed into it:
+# 
+#   {{ role }}: used to locate the directory for the configuration type
+#   {{ software }}: used to locate the software type directory from within the above configuration type directory
+#
+# These variables can be passed into the playbook at runtime using the --extra-vars (or -e) argument.
+#
+# Example Playbook Run: 'ansible-playbook play_report-assembler.yml -e "role=ntp software=ios"'
+#
+# The assembled, time-stamped CSV report is then saved to gitnet/ansible/reports/
+#
+- name: Play - CSV Report Assembler
+  hosts: localhost
+  gather_facts: yes
+  connection: local
+
+  vars:
+    systime: "{{ ansible_date_time.time | replace(':', '-') }}"
+    timestamp: "{{ ansible_date_time.date }}"
+    report_file: "/gitnet/ansible/reports/{{ role }}_{{ software }}_{{ timestamp }}.csv"
+
+  tasks:
+
+  - name: Locating the source directory
+    set_fact:
+      report_dir: "/gitnet/ansible/roles/{{ role }}/files/csv/{{ software }}"
+
+  - name: Assembling the report
+    assemble:
+      src: "{{ report_dir }}"
+      dest: "{{ report_file }}"
+
+  - name: Removing duplicate headers
+    shell: awk '!a[$0]++' "{{ report_file }}" > "{{ report_file }}-v1"
+    
+  - name: IOS - Cleaning - Deleting Original Report file 
+    file:
+      path: "{{ report_file }}" 
+      state: absent
+
+  post_tasks:
+    - debug:
+        msg:
+        - Report "{{ role }}_{{ software }}_{{ timestamp }}.csv" has been generated in /gitnet/ansible/reports/

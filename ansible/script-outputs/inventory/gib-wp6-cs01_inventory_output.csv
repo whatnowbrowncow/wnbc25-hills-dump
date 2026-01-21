@@ -1,0 +1,43 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-wp6-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 2,C4KX-PWR-750AC-R,ART2038X0JS,V01
+gib-wp6-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 1,C4KX-PWR-750AC-R,ART2039X1E4,V01
+gib-wp6-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 2,C4KX-PWR-750AC-R,ART2039X1EY,V01
+gib-wp6-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 1,C4KX-PWR-750AC-R,ART2039X1EZ,V01
+gib-wp6-cs01,1000BaseT,TenGigabitEthernet1/1/24,GLC-TE,AVC2217246H,V01
+gib-wp6-cs01,1000BaseT,TenGigabitEthernet1/1/17,GLC-TE,AVC22172470,V01
+gib-wp6-cs01,1000BaseT,TenGigabitEthernet2/1/27,GLC-TE,AVC22172478,V01
+gib-wp6-cs01,1000BaseT,TenGigabitEthernet2/1/24,GLC-TE,AVC2217247E,V01
+gib-wp6-cs01,1000BaseT,TenGigabitEthernet2/1/17,GLC-TE,AVC2217247M,V01
+gib-wp6-cs01,1000BaseT,TenGigabitEthernet1/1/27,GLC-TE,AVC2217249C,V01
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/1,SFP-10G-SR,AVD1819A38K,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/3,SFP-10G-SR,AVD1819A8RL,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/21,SFP-10G-SR,AVD2220ACJY,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/16,SFP-10G-SR,AVD2220ACK4,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/29,SFP-10G-SR,AVD2220ACKE,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/14,SFP-10G-SR,AVD2220ACKV,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/16,SFP-10G-SR,AVD2220ACLE,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/21,SFP-10G-SR,AVD222190FM,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/30,SFP-10G-SR,AVD2221926S,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/32,SFP-10G-SR,AVD2221926X,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/20,SFP-10G-SR,AVD222192A4,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/19,SFP-10G-SR,AVD222192DB,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/13,SFP-10G-SR,AVD2221972W,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/29,SFP-10G-SR,AVD2221973B,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/20,SFP-10G-SR,AVD22219742,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/32,SFP-10G-SR,AVD2221974F,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/22,SFP-10G-SR,AVD2221974Z,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/19,SFP-10G-SR,AVD2221975H,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/15,SFP-10G-SR,AVD222197R2,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/13,SFP-10G-SR,AVD22219F6P,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/30,SFP-10G-SR,AVD22219F7L,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/22,SFP-10G-SR,AVD22219F7S,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/15,SFP-10G-SR,AVD22219F9N,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/14,SFP-10G-SR,AVD22219REZ,V03
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/1,SFP-10G-SR,FNS17031JQJ,V04
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/2,SFP-10G-SR,FNS17031JRC,V04
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/2,SFP-10G-SR,FNS17091YJ4,V04
+gib-wp6-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/3,SFP-10G-SR,FNS17091ZKS,V04
+gib-wp6-cs01,4500X-32 10GE (SFP+),Switch1 Supervisor 1 (virtual slot 1),WS-C4500X-32,JAE203706L7,V06
+gib-wp6-cs01,Cisco Systems,Switch1 System,,JAE203706L7,none
+gib-wp6-cs01,4500X-32 10GE (SFP+),Switch2 Supervisor 1 (virtual slot 11),WS-C4500X-32,JAE203706NV,V06
+gib-wp6-cs01,Cisco Systems,Switch2 System,,JAE203706NV,none

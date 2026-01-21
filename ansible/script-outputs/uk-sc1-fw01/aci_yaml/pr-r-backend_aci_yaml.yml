@@ -1,0 +1,60 @@
+
+  - app_prof: 'pr-r-backend'
+    tenant: 'production'
+    vrf: 'pr-r-backend'
+    bds:
+      - bd: 'pr-r-backend_internal-vrf'
+        network: '10.120.161.64'
+        gateway: '10.120.161.68'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-backend_internal-vrf'
+            encap_id: '380'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-backend_web-btm'
+        network: '10.120.173.0'
+        gateway: '10.120.173.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-backend_web-btm'
+            encap_id: '460'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-backend_3rd-party-bottom'
+        network: '10.120.173.128'
+        gateway: '10.120.173.129'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-backend_3rd-party-bottom'
+            encap_id: '461'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-backend_app-top'
+        network: '10.120.177.0'
+        gateway: '10.120.177.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-backend_app-top'
+            encap_id: '480'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-r-backend_ces-connect'
+        network: '10.120.187.232'
+        gateway: '10.120.187.234'
+        mask: '255.255.255.248'
+        cidr_mask: '29'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-r-backend_ces-connect'
+            encap_id: '539'
+            vcenter_dynamic_vlan: true

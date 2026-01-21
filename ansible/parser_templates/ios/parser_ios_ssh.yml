@@ -1,0 +1,74 @@
+---
+
+- name: Parser Metadata
+  parser_metadata:
+    version: 1.0
+    command: show run | include ip ssh
+    network_os: ios
+
+- name: Match Sections
+  pattern_match:
+    regex: "^ip ssh"
+    match_all: no
+    match_greedy: yes
+  register: section
+  export: yes
+
+
+
+- name: Match IOS SSH Config
+  pattern_group:
+    - name: Match time-out
+      pattern_match:
+        regex: "^ip ssh time-out (\\d+)"
+        content: "{{ item }}"
+      register: timeout
+    - name: Match auth-retries
+      pattern_match:
+        regex: "^ip ssh authentication-retries (\\d+)"
+        content: "{{ item }}"
+      register: retries
+    - name: Match source-interface
+      pattern_match:
+        regex: "^ip ssh source-interface (\\w+)"
+        content: "{{ item }}"
+      register: sinterface
+    - name: Match version
+      pattern_match:
+        regex: "^ip ssh version (\\d+)"
+        content: "{{ item }}"
+      register: version
+    - name: Match server algorithm encryption
+      pattern_match:
+        regex: "^ip ssh server algorithm encryption (.*$)"
+        content: "{{ item }}"
+      register: server_algorithm
+    - name: Match client algorithm encryption
+      pattern_match:
+        regex: "^ip ssh client algorithm encryption (.*$)"
+        content: "{{ item }}"
+      register: client_algorithm
+  loop: "{{ section }}"
+  register: ssh_config
+
+- name: Generate JSON Data Structure
+  json_template:
+    template:
+      - key: ssh
+        object:
+          - key: timeout
+            value: "{{ item.timeout.matches.0 }}"
+          - key: retries
+            value: "{{ item.retries.matches.0 }}"
+          - key: sinterface
+            value: "{{ item.sinterface.matches.0 }}"
+          - key: version
+            value: "{{ item.version.matches.0 }}"
+          - key: server_algorithm
+            value: "{{ item.server_algorithm.matches.0 }}"
+          - key: client_algorithm
+            value: "{{ item.client_algorithm.matches.0 }}"
+  loop: "{{ ssh_config }}"
+  ##use export to display to screen
+  export: yes
+  register: ios_ssh_facts

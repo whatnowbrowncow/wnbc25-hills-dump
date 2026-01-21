@@ -1,0 +1,62 @@
+---
+
+- name: Add inspection to context
+  asa_config:
+    lines:
+      - inspect ftp
+      - inspect tftp
+      - inspect icmp
+      - inspect icmp error
+    before: ['policy-map global_policy', 'no class inspection_default']
+    match: exact
+    context: "{{ item.context }}"
+    parents: ['policy-map global_policy', 'class inspection_default']
+    replace: block
+  with_items:
+    - "{{ contexts }}"
+  tags:
+    - inspection
+ 
+ 
+- name: Add global ACL to context
+  asa_config:
+    lines:
+      - access-list global_mpc extended permit tcp any any
+    match: line
+    context: "{{ item.context }}"
+    replace: line
+  with_items:
+    - "{{ contexts }}"
+  tags:
+    - inspection
+    
+    
+- name: Add global class-map to context
+  asa_config:
+    lines:
+      - match access-list global_mpc
+    match: strict
+    #before: ['class-map global-class', 'no match access-list global_mpc']
+    parents: ['class-map global-class']
+    context: "{{ item.context }}"
+    replace: block
+  with_items:
+    - "{{ contexts }}"
+  tags:
+    - inspection
+ 
+    
+- name: Add DCD inspection to context
+  asa_config:
+    lines:
+      - set connection timeout idle 1:00:00 dcd 0:00:10 3
+    #before: ['policy-map global_policy', 'no class global-class']
+    match: strict
+    context: "{{ item.context }}"
+    parents: ['policy-map global_policy', 'class global-class']
+    replace: block
+  with_items:
+    - "{{ contexts }}"
+  tags:
+    - inspection
+    

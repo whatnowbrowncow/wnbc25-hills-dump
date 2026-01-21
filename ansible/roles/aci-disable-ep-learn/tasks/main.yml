@@ -1,0 +1,5 @@
+---
+
+- name: Disable ep learn fabric wide. 
+  import_tasks: ./aci-disable-ep-learn.yml
+  when: ansible_network_os == "aci"

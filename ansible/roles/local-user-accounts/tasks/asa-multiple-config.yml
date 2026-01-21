@@ -1,0 +1,21 @@
+---
+
+- name: ASA MUTLIPLE - Configure local user accounts with privilege defined
+  asa_config:
+    lines:
+      - username {{ item.username }} password {{ item.password_string }} {{ item.encryption }} privilege {{ item.privilege }} 
+    context: admin
+  with_items:
+    - "{{ local_user_accounts }}"
+  when: 
+    - "item.privilege != ''"
+
+- name: ASA MUTLIPLE - Configure local user accounts with privilege undefined
+  asa_config:
+    lines:
+      - username {{ item.username }} password {{ item.password_string }} {{ item.encryption }}
+    context: admin
+  with_items:
+    - "{{ local_user_accounts }}"
+  when: 
+    - "item.privilege == ''"

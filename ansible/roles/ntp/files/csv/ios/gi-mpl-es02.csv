@@ -1,0 +1,2 @@
+hostname,ip address,vrf,preferred,source interface
+gi-mpl-es02,10.180.163.19,mgmtVrf,no,

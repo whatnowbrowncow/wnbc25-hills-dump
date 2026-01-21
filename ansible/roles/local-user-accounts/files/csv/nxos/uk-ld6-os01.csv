@@ -1,0 +1,3 @@
+hostname,username,password,encryption,role
+uk-ld6-os01,admin,$5$bfNj8WH0$Ttesy/KriHbb.HMRLotZx8K1cmM1irT2XmoiKOuVcC8,5,network-admin
+uk-ld6-os01,netadmin,$5$sVyGo.k5$MWnyT9FJbzI/2xZkLLAExIBfWrptWYZxDkboaOZIcR9,5,network-admin

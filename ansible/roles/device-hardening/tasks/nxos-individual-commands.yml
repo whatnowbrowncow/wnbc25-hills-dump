@@ -1,0 +1,19 @@
+---
+# Collecting Facts for NXOS Devices
+- name: "NXOS - Gathering NXOS Facts"
+  nxos_facts:
+    gather_subset:
+      - config
+
+# Check for DHCP configuration and if not remove DHCP service
+- name: "NXOS - Removing DHCP Service Config on relevent devices"
+  nxos_config:
+    defaults: yes
+    lines:
+      - no feature dhcp
+  when: ("feature dhcp" in ansible_net_config and "ip dhcp relay address" not in ansible_net_config)
+  register: nxosconfig
+
+#Recording and Saving Config
+- name: NXOS-Record Config
+  include_tasks: ./nxos-report-output.yml

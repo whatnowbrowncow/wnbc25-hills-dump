@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-brs-es01,netadmin,15,secret,5,$1$nDX9$i1vX.LquVF6AVoKNyu50D0
+uk-brs-es01,svcnetworkauto,15,secret,5,$1$noTJ$bBPz9RIwOieriMtEGaDd3/

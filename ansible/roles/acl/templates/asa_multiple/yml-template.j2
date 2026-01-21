@@ -1,0 +1,128 @@
+---
+
+access_groups:
+{% if access_group_facts is defined and (access_group_facts and access_group_facts) %}
+{%   for item in access_group_facts %}
+
+{%     if item.direction == 'global' %}
+  - interface: global
+    access_list: {{ item.access_list }}
+    direction: in
+{%     else%}
+  - interface: {{ item.interface }}
+    access_list: {{ item.access_list }}
+    direction: {{ item.direction }}
+{%     endif %}
+{%   endfor %}
+{% endif %}
+
+access_lists:
+
+{% for acl in access_lists %}
+  - name: "{{ acl.item.item }}"
+{%   if acl.ansible_facts.acl_extended_facts is defined %}
+    type: extended
+    version: 1
+    rules:
+
+{%     for aces in acl.ansible_facts.acl_extended_facts %}
+{%       if aces.remark is defined and aces.remark %}
+      - line_no: "{{ aces.seq }}"
+        remark: "{{ aces.remark | regex_replace('"','') }}"
+
+{%       else %}
+      - line_no: "{{ aces.seq }}"
+        action: "{{ aces.action }}"
+        service:
+{%         if aces.protocol is defined and aces.protocol %}
+          name: "{{ aces.protocol }}"
+          type: protocol
+{%         endif %}
+{%         if aces.src_service_obj is defined and aces.src_service_obj %}
+          name: "{{ aces.src_service_obj }}"
+          type: svc_obj
+{%         endif %}
+{%         if aces.src_service_obj_grp is defined and aces.src_service_obj_grp %}
+          name: "{{ aces.src_service_obj_grp }}"
+          type: svc_obj_grp
+{%         endif %}
+        source:
+{%         if aces.src_host is defined and aces.src_host %}
+          name: "{{ aces.src_host }}"
+          type: host
+{%         endif %}
+{%         if aces.src_network_obj is defined and aces.src_network_obj %}
+          name: "{{ aces.src_network_obj }}"
+          type: net_obj
+{%         endif %}
+{%         if aces.src_network_obj_grp is defined and aces.src_network_obj_grp %}
+          name: "{{ aces.src_network_obj_grp }}"
+          type: net_obj_grp
+{%         endif %}
+{%         if aces.src_network is defined and aces.src_network %}
+          name: "{{ aces.src_network }}"
+          type: network
+{%         endif %}
+        destination:
+{%         if aces.dest_host is defined and aces.dest_host %}
+          name: "{{ aces.dest_host }}"
+          type: host
+{%         endif %}
+{%         if aces.dest_network_obj is defined and aces.dest_network_obj %}
+          name: "{{ aces.dest_network_obj }}"
+          type: net_obj
+{%         endif %}
+{%         if aces.dest_network_obj_grp is defined and aces.dest_network_obj_grp %}
+          name: "{{ aces.dest_network_obj_grp }}"
+          type: net_obj_grp
+{%         endif %}
+{%         if aces.dest_network is defined and aces.dest_network %}
+          name: "{{ aces.dest_network }}"
+          type: network
+{%         endif %}
+{%         if aces.dest_port is defined and aces.dest_port %}
+        port:
+          name: "{{ aces.dest_port }}"
+          type: port
+{%         endif %}
+{%         if aces.dest_port_obj_grp is defined and aces.dest_port_obj_grp %}
+        port:
+          name: "{{ aces.dest_port_obj_grp }}"
+          type: svc_obj_grp
+{%         endif %}
+{%         if aces.logging_level is defined and aces.logging_level %}
+        logging:
+          level: "{{ aces.logging_level }}"
+          interval: "{{ aces.logging_interval }}"
+{%         endif %}
+        status: "{{ aces.status|default('active') }}"
+
+{%       endif %}
+{%     endfor -%}
+{%   elif  acl.ansible_facts.acl_standard_facts is defined %}
+    type: standard
+    version: 1
+    rules:
+
+{%     for aces in acl.ansible_facts.acl_standard_facts %}
+{%       if aces.remark is defined and aces.remark %}
+      - line_no: "{{ aces.seq }}"
+        remark: "{{ aces.remark | regex_replace('"','') }}"
+
+{%       else %}
+      - line_no: "{{ aces.seq }}"
+        action: "{{ aces.action }}"
+        destination:
+{%         if aces.dest_host is defined and aces.dest_host %}
+          name: "{{ aces.dest_host }}"
+          type: host
+{%         endif %}
+{%         if aces.dest_network is defined and aces.dest_network %}
+          name: "{{ aces.dest_network }}"
+          type: network
+{%         endif %}
+
+{%       endif %}
+{%     endfor -%}
+{%   endif %}
+{% endfor %}

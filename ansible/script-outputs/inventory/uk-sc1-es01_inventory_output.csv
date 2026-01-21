@@ -1,0 +1,20 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-sc1-es01,1000BaseT,TenGigabitEthernet1/8,Unspecified,AGM1643234V,none
+uk-sc1-es01,1000BaseT,TenGigabitEthernet1/2,Unspecified,AGM16432367,none
+uk-sc1-es01,1000BaseT,TenGigabitEthernet1/10,Unspecified,AGM16432368,none
+uk-sc1-es01,1000BaseT,TenGigabitEthernet1/12,Unspecified,AGM1643236E,none
+uk-sc1-es01,1000BaseT,TenGigabitEthernet2/5,Unspecified,AGM1840259G,none
+uk-sc1-es01,Power Supply ( AC 750W ),Power Supply 2,C4KX-PWR-750AC-R,ART1607X03E,V01
+uk-sc1-es01,Power Supply ( AC 750W ),Power Supply 1,C4KX-PWR-750AC-R,ART1607X0WD,V01
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet2/1,SFP-10G-SR,AVD1932ACCR,V03
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet1/16,SFP-10G-SR,AVD1932ACF1,V03
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet1/11,SFP-10G-SR,FNS16431FEL,V03
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet1/5,SFP-10G-SR,FNS16440GEN,V03
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet2/8,SFP-10G-SR,FNS16440GEU,V03
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet1/4,SFP-10G-SR,FNS16440GEW,V03
+uk-sc1-es01,4500X-16 10GE (SFP+),Supervisor(slot 1),WS-C4500X-16,JAE163301JY,V01
+uk-sc1-es01,Cisco Systems,Switch System,,JAE163301JY,none
+uk-sc1-es01,10GE SFP+,Linecard(slot 2),C4KX-NM-8,JAE164801W1,V01
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet1/7,SFP-10G-SR,JUR1835GJYE,V03
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet1/6,SFP-10G-SR,JUR1836GEHN,V03
+uk-sc1-es01,SFP-10Gbase-SR,TenGigabitEthernet2/6,SFP-10G-SR,JUR1837HBTZ,V03

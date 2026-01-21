@@ -1,0 +1,40 @@
+---
+
+- name: NXOS - Retrieving the management ACL name/number
+  nxos_command:   
+    commands:  
+      - "show run | section line"
+  register: name
+      
+- name: NXOS - Registering the management ACL name/number as a variable
+  set_fact:
+    aclNAME: "{{ name.stdout[0] | regex_search('access-class\\s+(?P<aclname>\\S+).*','\\g<aclname>') }}"
+
+- name: NXOS - Ending the play for devices with no management ACL configured
+  meta: end_host
+  when: aclNAME == ""
+
+#- name: NXOS - Building configuration for testing purposes
+#  template:
+#    src: /gitnet/ansible/roles/mgmt-acl-updater/templates/config-template-nxos.j2
+#    dest: /gitnet/ansible/roles/mgmt-acl-updater/files/configs/nxos/{{ inventory_hostname }}.cfg
+
+- name: NXOS - Applying configuration
+  nxos_config:
+    src: /gitnet/ansible/roles/mgmt-acl-updater/templates/config-template-nxos.j2
+    before: 
+      - ip access-list {{ aclNAME[0] }}
+      - no deny ip any any log
+    after:
+      - deny ip any any log
+  register: aclUPDATED
+  notify: "updates exist"
+
+- name: NXOS - Resequencing the management ACL and saving the configuration
+  nxos_config:
+    lines:
+      - resequence ip access-list {{ aclNAME[0] }} 10 10
+    save_when: changed
+  register: aclRESEQUENCED
+  notify: "updates exist"
+  when: aclUPDATED.changed

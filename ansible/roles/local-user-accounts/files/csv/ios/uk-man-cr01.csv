@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-man-cr01,whill,15,secret,4,9tDyfqJjCgrlEqVyrVkW0Nc7LNiyJKHkmzpkYSWrfZA
+uk-man-cr01,netadmin,15,secret,5,$1$sBVT$Keew5SzgGY/gk81bdZsbQ1
+uk-man-cr01,svcnetworkauto,15,secret,5,$1$pU0L$d2N1w9uoYDHyo6fVZ1jhM0

@@ -1,0 +1,8 @@
+Name: "Chassis", DESCR: "ASA 5555-X with SW, 8 GE Data, 1 GE Mgmt"
+PID: ASA5555           , VID: V02     , SN: FGL183740KX
+
+Name: "power supply 0", DESCR: "ASA 5545-X/5555-X AC Power Supply"
+PID: ASA-PWR-AC        , VID: N/A     , SN: 48M1A8
+
+Name: "power supply 1", DESCR: "ASA 5545-X/5555-X AC Power Supply"
+PID: ASA-PWR-AC        , VID: N/A     , SN: 48M1CS

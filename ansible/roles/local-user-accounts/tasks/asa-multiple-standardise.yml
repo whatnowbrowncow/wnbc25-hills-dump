@@ -1,0 +1,36 @@
+---
+
+- name: ASA - collect local user account info
+  asa_command:
+    commands:
+      - show run | i username
+    context: admin
+  register: asa_multiple_local_accounts_output
+
+- name: ASA MULTIPLE - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_asa_multiple_local_user_accounts.yml"
+    content: "{{ asa_multiple_local_accounts_output.stdout.0 }}"
+
+- name: ASA MULTIPLE - Confirm netadmin user exits and reset password
+  asa_config:
+    lines:
+      - username {{ local_admin_account }} password {{ local_admin_password }} privilege 15
+    context: admin
+
+- name: ASA MULTIPLE - Configure svcnetauto user account on device
+  asa_config:
+    lines:
+      - username {{ ansible_user }} password {{ ansible_password }} privilege 15
+    context: admin
+
+- name: ASA MULTIPLE - Remove all local user accounts that are not on the approved list
+  asa_config:
+    lines:
+      - no username {{ item.user_account.username }} 
+    context: admin 
+  with_items:
+    - "{{ asa_multiple_local_accounts_facts }}"
+  when: 
+    - "item.user_account.username not in master_local_user_accounts"
+    - (host_local_user_accounts is not defined) or (item.user_account.username not in host_local_user_accounts)

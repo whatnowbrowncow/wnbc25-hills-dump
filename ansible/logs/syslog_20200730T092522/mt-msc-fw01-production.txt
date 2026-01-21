@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: mt-msc-fw01-production @ 20200730T092522 ---!
+!
+logging host internal-vrf 10.120.163.126
+!
+!--- END UPDATES: mt-msc-fw01-production @ 20200730T092522 ---!
+}

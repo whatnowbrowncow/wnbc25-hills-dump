@@ -1,0 +1,5 @@
+Ping output:
+Ping to me: Success rate is 100 percent (5/5)
+Ping to NS01: Success rate is 100 percent (5/5)
+Ping to NS02: Success rate is 100 percent (5/5)
+Ping to LDAP svr: Success rate is 100 percent (5/5)

@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+wh-brs-core-sw3,0 4,1,in,15 0,045E5F0507361857,ssh,none,no,synchronous
+wh-brs-core-sw3,5 15,1,in,15 0,045E5F0507361857,ssh,none,no,

@@ -1,0 +1,16 @@
+{# ANY CHANGES TO THIS MAY AFFECT THE asa-ras-object ROLE, SO TESTING WITH BOTH ROLES IS NEEDED  #}
+{% for object_group in service_object_groups['group_with_objects'] %}
+{% if object_group.protocol is defined %}
+object-group service {{ object_group.group_name }} {{ object_group.protocol }}
+{% else %}
+object-group service {{ object_group.group_name }}
+{% endif %}
+{% if object_group.description is defined %}
+ description {{ object_group.description }}
+{% endif %}
+{% if object_group.objects is iterable %}
+{% for object in object_group.objects %}
+ service-object object {{ object.object_name }}
+{% endfor %}
+{% endif %}
+{% endfor %}

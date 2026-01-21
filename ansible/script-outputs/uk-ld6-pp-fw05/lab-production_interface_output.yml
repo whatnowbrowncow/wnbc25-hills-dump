@@ -1,0 +1,22 @@
+Port-channel1.1609: {admin-state: up, interface: Port-channel1.1609, ip-add: 10.61.215.172,
+  mac-address: 0200.0101.0501, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.1610: {admin-state: up, interface: Port-channel1.1610, ip-add: 10.62.64.1,
+  mac-address: 0200.0101.0501, nameif: cde_ext-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1611: {admin-state: up, interface: Port-channel1.1611, ip-add: 10.62.72.1,
+  mac-address: 0200.0101.0501, nameif: cde_int-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1612: {admin-state: up, interface: Port-channel1.1612, ip-add: 10.62.80.1,
+  mac-address: 0200.0101.0501, nameif: cde_int-lb, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1613: {admin-state: up, interface: Port-channel1.1613, ip-add: 10.62.88.1,
+  mac-address: 0200.0101.0501, nameif: cde_app, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1614: {admin-state: up, interface: Port-channel1.1614, ip-add: 10.62.96.1,
+  mac-address: 0200.0101.0501, nameif: cde_db, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1615: {admin-state: up, interface: Port-channel1.1615, ip-add: 10.62.128.1,
+  mac-address: 0200.0101.0501, nameif: ncde_ext-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1616: {admin-state: up, interface: Port-channel1.1616, ip-add: 10.62.136.1,
+  mac-address: 0200.0101.0501, nameif: ncde_int-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1617: {admin-state: up, interface: Port-channel1.1617, ip-add: 10.62.144.1,
+  mac-address: 0200.0101.0501, nameif: ncde_int-lb, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1618: {admin-state: up, interface: Port-channel1.1618, ip-add: 10.62.152.1,
+  mac-address: 0200.0101.0501, nameif: ncde_app, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.1619: {admin-state: up, interface: Port-channel1.1619, ip-add: 10.62.160.2,
+  mac-address: 0200.0101.0501, nameif: ncde_db, netmask: 255.255.248.0, security-level: '100'}

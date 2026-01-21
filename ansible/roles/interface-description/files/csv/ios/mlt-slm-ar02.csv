@@ -1,0 +1,2 @@
+hostname,local_interface,remote_device_description
+mlt-slm-ar02,GigabitEthernet0,mt-sil-or01.network.williamhill.plc-GigabitEthernet0/1/2

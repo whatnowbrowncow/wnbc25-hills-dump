@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+uk-scc-sbc,SE0/4/0,no_data_in_cdp
+uk-scc-sbc,GigabitEthernet0,uk-sc1-ds04.network.williamhill.plc(FOX1750GTUM)-Ethernet112/1/32

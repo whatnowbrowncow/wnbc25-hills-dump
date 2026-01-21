@@ -1,0 +1,13 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+us-ny1-cr01,SFP Transceiver 1000BaseLH Te5/12,Transceiver Te5/12,Unspecified,17706510595,Unspecified
+us-ny1-cr01,SFP Transceiver 1000BaseLH Te5/10,Transceiver Te5/10,Unspecified,17B00851372,Unspecified
+us-ny1-cr01,SFP+ Transceiver 10Gbase-LR Te5/6,Transceiver Te5/6,SFP-10G-LR,AVD2207K7Y4,V02
+us-ny1-cr01,SFP+ Transceiver 10Gbase-LR Te5/14,Transceiver Te5/14,SFP-10G-LR,AVD2207K7YH,V02
+us-ny1-cr01,SFP+ Transceiver 10Gbase-LR Te5/4,Transceiver Te5/4,SFP-10G-LR,AVD2207K7Z1,V02
+us-ny1-cr01,C6880-X Fan Tray 1,C6880-X-FAN 1,C6880-X-FAN,DCH2211R5KC,V02
+us-ny1-cr01,AC power supply,PS 2 C6880-X-3KW-AC,C6880-X-3KW-AC,DTM22170037,V02
+us-ny1-cr01,AC power supply,PS 1 C6880-X-3KW-AC,C6880-X-3KW-AC,DTM22170056,V02
+us-ny1-cr01,SFP Transceiver 1000BaseSX Te5/2,Transceiver Te5/2,GLC-SX-MMD,FNS22200KQM,V01
+us-ny1-cr01,C6880-X-PFC Policy Feature Card 4 Rev. 1.2,C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5,C6880-X-PFC,JAE214800KQ,none
+us-ny1-cr01,C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.3,5,C6880-X-SUP,JAE220907UV,none
+us-ny1-cr01,Cisco Systems,C6880-X,C6880-X,SAL221600K4,V02

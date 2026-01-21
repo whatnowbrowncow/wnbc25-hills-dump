@@ -1,0 +1,6 @@
+---
+
+- name: Configure SNMP
+  import_tasks: ./aci-snmp.yml
+  when: ansible_network_os == "aci"
+  

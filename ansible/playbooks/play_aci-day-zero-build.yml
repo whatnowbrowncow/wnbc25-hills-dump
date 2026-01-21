@@ -1,0 +1,67 @@
+---
+######################################################
+#
+# This playbook performs a "day-zero" build of ACI.
+# No traffic passing configuration is performed by
+# this playbook, it is purely to configure mgmt 
+# base-build elements.
+# Running this playbook requires the use of the local
+# admin account credentials
+#
+######################################################
+
+     # Minimum Ansible Version: 2.8.1
+     # Control machine must be integrated LastPass with access to the 'Shared-Network' team share. Minimum version: LastPass CLI v1.0.0
+
+     # Execute this playbook by running the following command (don't include the single quotation marks):
+     # 'ansible-playbook play_aci-day-zero-build.yml -i environments/<env>/inventory_<env> --limit <aci instance> --ask-vault-pass' 
+     # The 'ask-vault-pass' condition triggers the 'Vault password:' prompt for the password of the 'svcnetworkauto' AD account.
+     # This is stored in the Network Team share in LastPass under 'Network Automation AD service account'.
+     # The 'Vault password:' prompt will occur immediately upon execution of the playbook. 
+     # See the 'aci-user-cert-auth' role README for more info. 
+
+- name: This play rolls out a base build to the API. It performs switch discovery and configures essential management functions.
+  hosts: aci
+  connection: local
+  gather_facts: no
+
+     # When the APIC cluster is configured for the very first time the 'netadmin'/'netsec' password is applied to ACI's default 'admin' account.
+     # There is no pompt for username and password, so use extra vars in the playbook command to pass the local admin username and password to the first role.  
+     # E.g: ansible-playbook -i environments/prod/inventory_prod play_aci-day-zero-build.yml -e "ansible_user=admin ansible_password=N54....." --limit gib_aci  
+     # If this playbook is being executed against an instance of ACI for the very first time please enter the credentials for the 'admin' account.
+     # You may be running this playbook at a later stage in the ACI build (for example to add more fabric switches or change the NTP server etc).
+     # If so, a different authentication process may be in place (e.g specific user account or external authentication system).
+     # Please ensure to enter credentials relevant to the build at time of execution.
+
+  vars_prompt:
+    - name: "snapshot_description"
+      prompt: "Press enter to save a post-run snapshot:"
+      default: "ansible post day zero backup"
+      private: no
+  
+  roles:
+
+     # Ansible configuration of ACI utilises 'cert based authentication' to reduce execution time of playbooks.  
+     # The first role in this playbook 'aci-user-cert-auth' configures cert-based authentication.  
+     # As this role applies the actual cert-based auth configuration we must use 'username/password' authentication to execute this role.  
+     # There is no pompt for username and password, so use extra vars in the playbook command to pass the local admin username and password to the first role.  
+     # E.g: ansible-playbook -i environments/prod/inventory_prod play_aci-day-zero-build.yml -e "ansible_user=admin ansible_password=N54....." --limit gib_aci  
+     # All following roles in this play use cert-based auth.  
+     # Control machine must be logged into LastPass prior to execution of the 'aci-backup' role. See the role README for further information.   
+
+   - aci-user-cert-auth    
+   - aci-pod-policy
+   - aci-geolocation
+   - aci-fabric-membership
+   - aci-fabric-mgmt-ips
+   - aci-oob-contract
+   - aci-dns
+   - aci-ntp
+   - aci-scheduler
+   - aci-backup
+   - aci-firmware-policy
+   - aci-snmp
+   - aci-syslog
+   - aci-disable-ep-learn
+   - aci-bgp-route-reflectors    
+   - aci-snapshot    

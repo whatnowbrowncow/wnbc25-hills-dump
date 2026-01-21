@@ -1,0 +1,6 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.486,10.120.180.129,,app-mgmt,255.255.255.128,100
+up,,Port-channel1.378,10.120.161.4,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.485,10.120.180.1,,web-mgmt,255.255.255.128,100
+up,,Port-channel1.452,10.120.171.1,,retail-dc-mgmt,255.255.255.224,100
+up,,Port-channel1.492,10.120.183.1,,server-ilo,255.255.255.224,100

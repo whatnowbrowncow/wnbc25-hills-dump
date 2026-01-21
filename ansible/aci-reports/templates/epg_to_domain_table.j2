@@ -1,0 +1,7 @@
+# Table of EPG to Domain associations
+
+| EPG | Deployment Imm. | Resolution Imm. | Domain |
+|----------|----------|----------|----------|
+{% for epg in item.current %}
+| {{ epg.fvRsDomAtt.attributes.dn.split('/').3 }} | {{ epg.fvRsDomAtt.attributes.instrImedcy }} | {{ epg.fvRsDomAtt.attributes.resImedcy }} | {{ epg.fvRsDomAtt.attributes.tDn }} |
+{% endfor %}

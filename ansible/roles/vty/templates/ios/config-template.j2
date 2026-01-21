@@ -1,0 +1,24 @@
+{% for item in vty %}
+line vty {{ item.line_range }}
+ access-class {{ item.access_class }} {{ item.access_class_direction }} {{ item.vrf }}
+{% if item.exec_timeout != "" %}
+ exec-timeout {{ item.exec_timeout }}
+{% else %}
+{% endif %}
+{% if item.password != "" %}
+ password 7 {{ item.password }}
+{% else %}
+{% endif %}
+{% if item.logging != "" %}
+ logging {{ item.logging }}
+{% else %}
+{% endif %}
+{% if item.transport_input != "" %}
+ transport input {{ item.transport_input }}
+{% else %}
+{% endif %}
+{% if item.transport_output != "" %}
+ transport output {{ item.transport_output }}
+{% else %}
+{% endif %}
+{% endfor %}

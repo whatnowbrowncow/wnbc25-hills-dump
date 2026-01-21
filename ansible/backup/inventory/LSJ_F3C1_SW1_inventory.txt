@@ -1,0 +1,113 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2152E2DJ
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2152E2DJ
+
+NAME: "StackPort1/1", DESCR: "StackPort1/1"
+PID: STACK-T2-1M       , VID: V03  , SN: LCC2125GHUE
+
+NAME: "StackPort1/2", DESCR: "StackPort1/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211DZ
+
+NAME: "StackAdapter1/1", DESCR: "StackAdapter1/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411MKZ
+
+NAME: "StackAdapter1/2", DESCR: "StackAdapter1/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411MS5
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EK2
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455ELF
+
+NAME: "Te1/1/3", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD          , VID: V01  , SN: FNS19130310     
+
+NAME: "Switch 2", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2152Q227
+
+NAME: "StackPort2/1", DESCR: "StackPort2/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211DZ
+
+NAME: "StackPort2/2", DESCR: "StackPort2/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211H5
+
+NAME: "StackAdapter2/1", DESCR: "StackAdapter2/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO21410E8P
+
+NAME: "StackAdapter2/2", DESCR: "StackAdapter2/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO21410DK8
+
+NAME: "Switch 2 - Power Supply A", DESCR: "Switch 2 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EJT
+
+NAME: "Switch 2 - Power Supply B", DESCR: "Switch 2 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EQ7
+
+NAME: "Switch 3", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2152Q248
+
+NAME: "StackPort3/1", DESCR: "StackPort3/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211H5
+
+NAME: "StackPort3/2", DESCR: "StackPort3/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211Q6
+
+NAME: "StackAdapter3/1", DESCR: "StackAdapter3/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411PQ9
+
+NAME: "StackAdapter3/2", DESCR: "StackAdapter3/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411PDP
+
+NAME: "Switch 3 - Power Supply A", DESCR: "Switch 3 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EKC
+
+NAME: "Switch 3 - Power Supply B", DESCR: "Switch 3 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455ELJ
+
+NAME: "Switch 4", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2152E2CS
+
+NAME: "StackPort4/1", DESCR: "StackPort4/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211Q6
+
+NAME: "StackPort4/2", DESCR: "StackPort4/2"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211KU
+
+NAME: "StackAdapter4/1", DESCR: "StackAdapter4/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO21400FA3
+
+NAME: "StackAdapter4/2", DESCR: "StackAdapter4/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411N53
+
+NAME: "Switch 4 - Power Supply A", DESCR: "Switch 4 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EGZ
+
+NAME: "Switch 4 - Power Supply B", DESCR: "Switch 4 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EQE
+
+NAME: "Switch 5", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2152E2EG
+
+NAME: "StackPort5/1", DESCR: "StackPort5/1"
+PID: STACK-T2-50CM     , VID: V03  , SN: LRM214211KU
+
+NAME: "StackPort5/2", DESCR: "StackPort5/2"
+PID: STACK-T2-1M       , VID: V03  , SN: LCC2125GHUE
+
+NAME: "StackAdapter5/1", DESCR: "StackAdapter5/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411MXK
+
+NAME: "StackAdapter5/2", DESCR: "StackAdapter5/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO21411NGC
+
+NAME: "Switch 5 - Power Supply A", DESCR: "Switch 5 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EKL
+
+NAME: "Switch 5 - Power Supply B", DESCR: "Switch 5 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21455EN2
+
+NAME: "Te5/1/3", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD          , VID: V01  , SN: FNS17100QKU

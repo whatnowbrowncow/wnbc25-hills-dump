@@ -1,0 +1,5 @@
+hostname,username,password_type,encryption,password_string,user_group_1,user_group_2,user_group_3
+{% for item in iosxr_local_accounts_facts %}
+{{ inventory_hostname }},{{ item.user_account.username }},{{ item.user_account.password_type }},{{ item.user_account.encryption }},{{ item.user_account.password_string }},{% for item in item.user_account.user_groups.user_group_list%}{{ item.matches }},{% endfor %}
+
+{% endfor %}

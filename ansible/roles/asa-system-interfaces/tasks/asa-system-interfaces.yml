@@ -1,0 +1,11 @@
+---
+
+- name: Build system interfaces template
+  template:
+    src: system-interfaces.j2
+    dest: ./asa/{{ inventory_hostname }}_system-interfaces.cfg
+    
+- name: Build interfaces on the system context
+  asa_config:
+    src: ./asa/{{ inventory_hostname }}_system-interfaces.cfg
+    context: system

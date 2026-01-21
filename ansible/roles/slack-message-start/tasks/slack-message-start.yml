@@ -1,0 +1,7 @@
+- name: Slack start message
+  slack:
+    token: "{{ slack_token }}"
+    msg: 'Starting change: {{ snapshot_description }}. The target of this play is {{ inventory_hostname }}'
+    channel: '#ansible-playbook-log'
+    color: good
+    username: 'Ansible@LD6'

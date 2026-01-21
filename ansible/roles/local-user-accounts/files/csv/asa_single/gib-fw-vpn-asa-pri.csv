@@ -1,0 +1,3 @@
+hostname,username,privilege,encryption,password_string
+gib-fw-vpn-asa-pri,svcnetworkauto,15,encrypted,Z7iYuCiC3M3XfnGu
+gib-fw-vpn-asa-pri,netadmin,15,encrypted,i2TRJYv6De0o1ekb

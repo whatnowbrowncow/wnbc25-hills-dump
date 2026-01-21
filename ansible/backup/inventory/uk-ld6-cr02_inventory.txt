@@ -1,0 +1,59 @@
+NAME: "C6880-X", DESCR: "Cisco Systems, Inc. Catalyst 6880 5-slot Chassis System"
+PID: C6880-X           ,                     VID: V02, SN: SAL21420214
+
+NAME: "5", DESCR: "C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.3"
+PID: C6880-X-SUP       ,                     VID:    , SN: JAE2131043Y
+
+NAME: "C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5", DESCR: "C6880-X-PFC Policy Feature Card 4 Rev. 1.2"
+PID: C6880-X-PFC       ,                     VID:    , SN: JAE2131047D
+
+NAME: "Transceiver Te5/2", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/2"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: FNS211612NR     
+
+NAME: "Transceiver Te5/3", DESCR: "SFP Transceiver 1000BaseSX Te5/3"
+PID: Unspecified       ,                     VID: Unspecified, SN: FNS0947K35N     
+
+NAME: "Transceiver Te5/4", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/4"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: FNS211612P7     
+
+NAME: "Transceiver Te5/5", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/5"
+PID: GLC-TE             ,                     VID: V01 , SN: MTC21190B3H     
+
+NAME: "Transceiver Te5/6", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/6"
+PID: GLC-TE             ,                     VID: V01 , SN: MTC22120RNM     
+
+NAME: "Transceiver Te5/7", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/7"
+PID: GLC-TE             ,                     VID: V01 , SN: MTC211902H4     
+
+NAME: "Transceiver Te5/8", DESCR: "SFP+ Transceiver 10Gbase-LR Te5/8"
+PID: SFP-10G-LR         ,                     VID: V02 , SN: OPM22220HPB     
+
+NAME: "Transceiver Te5/9", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/9"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: FNS211612QH     
+
+NAME: "Transceiver Te5/10", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/10"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: FNS21200QBQ     
+
+NAME: "Transceiver Te5/12", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/12"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: JUR1835GBCH     
+
+NAME: "Transceiver Te5/13", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/13"
+PID: GLC-TE             ,                     VID: V01 , SN: MTC22120QQ0     
+
+NAME: "Transceiver Te5/14", DESCR: "SFP+ Transceiver 10Gbase-LR Te5/14"
+PID: SFP-10G-LR         ,                     VID: V02 , SN: AVD2117KBEU     
+
+NAME: "Transceiver Te5/15", DESCR: "SFP Transceiver 10/100/1000BaseT Te5/15"
+PID: GLC-TE             ,                     VID: V01 , SN: MTC22120R4F     
+
+NAME: "Transceiver Te5/16", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/16"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1842A4KF     
+
+NAME: "C6880-X-FAN 1", DESCR: "C6880-X Fan Tray 1"
+PID: C6880-X-FAN       ,                     VID: V02, SN: DCH2114F9WE
+
+NAME: "PS 1 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 1"
+PID: C6880-X-3KW-AC    ,                     VID: V02, SN: ART211570LE
+
+NAME: "PS 2 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 2"
+PID: C6880-X-3KW-AC    ,                     VID: V02, SN: ART211570L8

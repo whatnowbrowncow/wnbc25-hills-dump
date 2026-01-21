@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+LSJ_F6AL_SW1,0 4,1,in,15 0,070A754F461E4D1C,ssh,none,yes,synchronous
+LSJ_F6AL_SW1,5 15,1,in,15 0,1412460804137E32,ssh,none,yes,synchronous

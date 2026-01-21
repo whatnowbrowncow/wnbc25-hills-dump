@@ -1,0 +1,43 @@
+!--- User <{{ lookup('env','USER') }}> executing the Ansible role <{{ role_name }}> ---!
+{% if aclMATCH is defined %}
+!--- ACCESS-ENTRIES TO BE DELETED: {{ inventory_hostname }} ---!
+!
+{% for item in aclMATCH -%}
+{{ item[0] }}
+{% endfor %}
+!
+{% endif %}
+!--- BEGIN UPDATES: {{ inventory_hostname }} @ {{ DTG }} ---!
+!
+{% if numberedaclUPDATED.updates is defined %}
+{% for item in numberedaclUPDATED.updates -%}
+{{ item }}
+{% endfor %}
+{% endif %}
+{% if namedaclUPDATED.updates is defined %}
+{% for item in namedaclUPDATED.updates -%}
+{{ item }}
+{% endfor %}
+{% endif %}
+{% if extaclUPDATED.updates is defined %}
+{% for item in extaclUPDATED.updates -%}
+{{ item }}
+{% endfor %}
+{% endif %}
+{% if aclUPDATED.updates is defined %}
+{% for item in aclUPDATED.updates -%}
+{{ item }}
+{% endfor %}
+{% endif %}
+{% if aclRESEQUENCED.updates is defined %}
+{% for item in aclRESEQUENCED.updates -%}
+{{ item }}
+{% endfor %}
+{% endif %}
+{% if mgmtUPDATED.updates is defined %}
+{% for item in mgmtUPDATED.updates -%}
+{{ item }}
+{% endfor %}
+{% endif %}
+!
+!--- END UPDATES: {{ inventory_hostname }} @ {{ DTG }} ---!

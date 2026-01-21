@@ -1,0 +1,86 @@
+NAME: "Chassis", DESCR: "Nexus 5596 Chassis"
+PID: N5K-C5596UP       , VID: V01 , SN: FOX1750GTUM
+
+NAME: "Module 1", DESCR: "O2 48X10GE/Modular Supervisor"
+PID: N5K-C5596UP       , VID: V01 , SN: FOC17503RLA
+
+NAME: "Module 2", DESCR: "O2 16 port flexible GEM"
+PID: N55-M16UP         , VID: V01 , SN: FOC192999YG
+
+NAME: "Fan 4", DESCR: "Chassis fan module"
+PID: N5596UP-FAN-B     , VID: N/A , SN: N/A
+
+NAME: "Fan 3", DESCR: "Chassis fan module"
+PID: N5596UP-FAN-B     , VID: N/A , SN: N/A
+
+NAME: "Fan 2", DESCR: "Chassis fan module"
+PID: N5596UP-FAN-B     , VID: N/A , SN: N/A
+
+NAME: "Fan 1", DESCR: "Chassis fan module"
+PID: N5596UP-FAN-B     , VID: N/A , SN: N/A
+
+NAME: "Power supply 1", DESCR: "AC power supply"
+PID: N55-PAC-1100W-B   , VID: V01 , SN: POG17216L59
+
+NAME: "Power supply 2", DESCR: "AC power supply"
+PID: N55-PAC-1100W-B   , VID: V01 , SN: POG17216L20
+
+NAME: "FEX 110 CHASSIS", DESCR: "N2K-C2248TP-1GE  CHASSIS"
+PID: N2K-C2248TP-1GE   , VID: V03 , SN: SSI17020BHH
+
+NAME: "FEX 110 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-1GE   , VID: V03 , SN: FOC17084ERN
+
+NAME: "FEX 110 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN     , VID: N/A , SN: N/A
+
+NAME: "FEX 110 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V04 , SN: DTN1704P3HK
+
+NAME: "FEX 110 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V04 , SN: DTN1705P0KK
+
+NAME: "FEX 112 CHASSIS", DESCR: "N2K-C2248TP-1GE  CHASSIS"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: SSI173405Z1
+
+NAME: "FEX 112 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: FOC17455MZ6
+
+NAME: "FEX 112 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN-B   , VID: N/A , SN: N/A
+
+NAME: "FEX 112 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W-B  , VID: V02 , SN: LIT17191P5C
+
+NAME: "FEX 112 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W-B  , VID: V02 , SN: LIT17191P91
+
+NAME: "FEX 114 CHASSIS", DESCR: "N2K-C2248TP-1GE  CHASSIS"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: SSI173405YZ
+
+NAME: "FEX 114 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: FOC17455NT6
+
+NAME: "FEX 114 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN     , VID: N/A , SN: N/A
+
+NAME: "FEX 114 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V04 , SN: DTN1739P10A
+
+NAME: "FEX 114 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V04 , SN: DTN1739P107
+
+NAME: "FEX 116 CHASSIS", DESCR: "N2K-C2248TP-1GE  CHASSIS"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: SSI173401JR
+
+NAME: "FEX 116 Module 1", DESCR: "Fabric Extender Module: 48x1GE, 4x10GE Supervisor"
+PID: N2K-C2248TP-1GE   , VID: V04 , SN: FOC17455MZ2
+
+NAME: "FEX 116 Fan 1", DESCR: "Fabric Extender Fan module"
+PID: N2K-C2248-FAN     , VID: N/A , SN: N/A
+
+NAME: "FEX 116 Power Supply 1", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V04 , SN: DTN1739P05V
+
+NAME: "FEX 116 Power Supply 2", DESCR: "Fabric Extender AC power supply"
+PID: N2200-PAC-400W    , VID: V05 , SN: LIT184810QN

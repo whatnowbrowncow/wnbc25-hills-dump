@@ -1,0 +1,49 @@
+
+  - app_prof: 'pr-t-mgmt'
+    tenant: 'production'
+    vrf: 'pr-t-mgmt'
+    bds:
+      - bd: 'pr-t-mgmt_internal-vrf'
+        network: '10.180.161.32'
+        gateway: '10.180.161.36'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-mgmt_internal-vrf'
+            encap_id: '380'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-mgmt_external-web'
+        network: '10.180.180.0'
+        gateway: '10.180.180.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-mgmt_external-web'
+            encap_id: '485'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-mgmt_internal-web'
+        network: '10.180.180.128'
+        gateway: '10.180.180.129'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-mgmt_internal-web'
+            encap_id: '486'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-t-mgmt_trading-app'
+        network: '10.180.181.0'
+        gateway: '10.180.181.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-t-mgmt_trading-app'
+            encap_id: '487'
+            vcenter_dynamic_vlan: true

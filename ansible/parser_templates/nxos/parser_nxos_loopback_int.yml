@@ -1,0 +1,68 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run interface
+    network_os: nxos
+
+- name: loopback interface config pattern match
+  pattern_match:
+    regex: "^interface"
+    match_all: yes
+    match_greedy: yes
+  register: loopback_int_config
+
+- name: Match management interface values
+  pattern_group:
+    - name: match interfaces
+      pattern_match:
+        regex: "^interface (\\S+)"
+        content: "{{ item }}"
+      register: interface
+
+    - name: match description
+      pattern_match:
+        regex: "^  description (.*)\n"
+        content: "{{ item }}"
+      register: description 
+
+    - name: match ip address
+      pattern_match:
+        regex: "^  ip address (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_address 
+
+    - name: match cidr
+      pattern_match:
+        regex: "^  ip address \\d+.\\d+.\\d+.\\d+(\\/\\d+)"
+        content: "{{ item }}"
+      register: cidr  
+
+    - name: match vrf
+      pattern_match:
+        regex: "^  vrf member (\\S+)"
+        content: "{{ item }}"
+      register: vrf
+
+  loop: "{{ loopback_int_config }}"
+  register: loopback_int_values    
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: loopback_interface
+        object:
+          - key: interface
+            value: "{{ item.interface.matches.0 }}"  
+          - key: description
+            value: "{{ item.description.matches.0 }}"        
+          - key: ip_address
+            value: "{{ item.ip_address.matches.0 }}"
+          - key: cidr
+            value: "{{ item.cidr.matches.0 }}"
+          - key: vrf
+            value: "{{ item.vrf.matches.0 }}"          
+  loop: "{{ loopback_int_values }}"
+  export: yes
+  register: loopback_int_facts

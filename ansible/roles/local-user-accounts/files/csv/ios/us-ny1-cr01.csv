@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+us-ny1-cr01,netadmin,15,secret,5,$1$Io2b$LMgLT6.Tm9qkrO5SUV0Jf0
+us-ny1-cr01,svcnetworkauto,15,secret,5,$1$05s5$EbQ2O0qRBg4PUof9GHWnB.

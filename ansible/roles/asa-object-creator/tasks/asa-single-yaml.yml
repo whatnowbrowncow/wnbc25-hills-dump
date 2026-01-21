@@ -1,0 +1,128 @@
+################## NOTE: This task is used by the asa-ras-object role so BOTH need testing ##################
+---
+- name: ASA-SINGLE/RAS - Set File Location VPN
+  set_fact:
+    yml_dir: >- 
+       {%- if type is defined and type == 'ras' -%}
+       group_vars/ras
+       {%- else -%}
+       host_vars/{{ inventory_hostname }}
+       {%- endif -%}
+
+- name: ASA-SINGLE/RAS - collect network object information
+  asa_command:
+    commands:
+      - show run object network in-line
+  register: asa_single_network_objects
+
+- name: ASA-SINGLE/RAS - collect network group information
+  asa_command:
+    commands:
+      - show run object-group network
+  register: asa_single_network_object_groups
+
+- name: ASA-SINGLE/RAS - collect service objects information
+  asa_command:
+    commands:
+      - show run object service in-line
+  register: asa_single_service_objects
+
+- name: ASA-SINGLE/RAS - collect service group information
+  asa_command:
+    commands:
+      - show run object-group service
+  register: asa_single_service_object_groups
+
+- name: ASA-SINGLE/RAS - collect protocol object-group information
+  asa_command:
+    commands:
+      - show run object-group protocol
+  register: asa_single_protocol_object_groups
+
+- name: ASA-SINGLE/RAS - parse command output for objects
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_objects_network.yml
+    content: "{{ asa_single_network_objects.stdout.0 }}"
+
+- name: ASA-SINGLE/RAS - collect network object information
+  asa_command:
+    commands:
+      - show run object network in-line
+  register: asa_single_network_objects
+
+- name: ASA-SINGLE/RAS - parse command output network object group names
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_network_split.yml
+    content: "{{ asa_single_network_object_groups.stdout.0 }}"
+
+- name: ASA-SINGLE/RAS - parse command output network object details
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_network.yml
+    content: "{{ item }}"
+  with_items: "{{ network_objects_groups }}"
+  loop_control:
+    extended: yes
+    label: "Parsing Network Object Group {{ indexnum + 1 }} of {{ ansible_loop.length }}"
+    index_var: indexnum
+  register: obj_groups
+
+- name: ASA-SINGLE/RAS - parse command output service objects
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_objects_service.yml
+    content: "{{ asa_single_service_objects.stdout.0 }}"
+
+- name: ASA-SINGLE/RAS - parse command output service object group names
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_service_split.yml
+    content: "{{ asa_single_service_object_groups.stdout.0 }}"
+
+- name: ASA-SINGLE/RAS - parse command output service object group details
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_service.yml
+    content: "{{ item }}"
+  with_items: "{{ service_objects_groups }}"
+  loop_control:
+    extended: yes
+    label: "Parsing Service Object Group {{ indexnum + 1 }} of {{ ansible_loop.length }}"
+    index_var: indexnum
+  register: service_obj_groups
+
+- name: ASA-SINGLE/RAS - parse command output protocol group names
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_protocol_split.yml
+    content: "{{ asa_single_protocol_object_groups.stdout.0 }}"
+
+- name: ASA-SINGLE/RAS - parse command output protocol group object details
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_object_groups_protocol.yml
+    content: "{{ item }}"
+  with_items: "{{ protocol_objects_groups }}"
+  loop_control:
+    extended: yes
+    label: "Parsing Protocol Object {{ indexnum + 1}} of {{ ansible_loop.length }}"
+    index_var: indexnum
+  register: protocol_obj_groups
+
+- name: ASA-SINGLE/RAS - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/{{ yml_dir }}"
+    state: directory
+  check_mode: no
+
+- name: ASA-SINGLE/RAS - Generate YAML file for network objects
+  template:
+    src: "{{ role_path }}/templates/asa_single/yml-template.j2"
+    dest: "{{ inventory_dir }}/{{ yml_dir }}/network_objects.yml"
+  check_mode: no
+
+- name: ASA-SINGLE/RAS - Generate YAML file for service objects
+  template:
+    src: "{{ role_path }}/templates/asa_single/svc-yml-template.j2"
+    dest: "{{ inventory_dir }}/{{ yml_dir }}/svc_objects.yml"
+  check_mode: no
+
+- name: ASA-SINGLE/RAS - Generate YAML file for protocol objects
+  template:
+    src: "{{ role_path }}/templates/asa_single/protocol-yml-template.j2"
+    dest: "{{ inventory_dir }}/{{ yml_dir }}/protocol_objects.yml"
+  check_mode: no

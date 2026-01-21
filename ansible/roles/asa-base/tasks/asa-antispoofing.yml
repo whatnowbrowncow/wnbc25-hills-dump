@@ -1,0 +1,15 @@
+---
+
+- name: Build context Antispoofing template
+  template:
+    src: antispoofing.j2
+    dest: ./roles/asa-base/configs/{{ item.context }}_antispoofing.cfg
+  with_items:
+    - "{{ contexts }}"
+    
+- name: Build Antispoofing on a context
+  asa_config:
+    src: ./roles/asa-base/configs/{{ item.context }}_antispoofing.cfg
+    context: "{{ item.context }}"
+  with_items:
+    - "{{ contexts }}"

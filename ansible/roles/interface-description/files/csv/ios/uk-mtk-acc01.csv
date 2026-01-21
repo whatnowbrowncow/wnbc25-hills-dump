@@ -1,0 +1,6 @@
+hostname,local_interface,remote_device_description
+uk-mtk-acc01,Vlan202,no_data_in_cdp
+uk-mtk-acc01,Vlan204,no_data_in_cdp
+uk-mtk-acc01,Vlan532,no_data_in_cdp
+uk-mtk-acc01,Vlan533,no_data_in_cdp
+uk-mtk-acc01,Loopback20,no_data_in_cdp

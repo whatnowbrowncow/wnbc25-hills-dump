@@ -1,0 +1,6 @@
+hostname,context,ip address,source int,community,poll/trap,version
+uk-stj-fw01-pri,Internet,10.1.14.123,corporate,1ns3ct,both,2c
+uk-stj-fw01-pri,Internet,10.1.14.129,corporate,1ns3ct,both,2c
+uk-stj-fw01-pri,Internet,10.1.14.16,corporate,1ns3ct,both,2c
+uk-stj-fw01-pri,Internet,10.120.163.59,corporate,1ns3ct,both,2c
+uk-stj-fw01-pri,internal-frontend,,,,,,no SNMP configuration 

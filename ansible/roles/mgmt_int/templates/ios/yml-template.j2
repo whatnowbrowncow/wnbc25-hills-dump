@@ -1,0 +1,121 @@
+---
+
+mgmt_interface:
+{% if mgmt129_int_facts is defined %}  
+  interface: "{{ mgmt129_int_facts[0].management_interface.interface }}"
+  description: "{{ mgmt129_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ mgmt129_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ mgmt129_int_facts[0].management_interface.mask }}"
+{% if mgmt129_int_facts[0].management_interface.interface == "mgmt0" %}
+  vrf: "management"
+{% else %}
+  vrf: "{{ mgmt129_int_facts[0].management_interface.vrf }}"
+{% endif %}
+{% elif mgmt0_int_facts is defined %}
+  interface: "{{ mgmt0_int_facts[0].management_interface.interface }}"
+  description: "{{ mgmt0_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ mgmt0_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ mgmt0_int_facts[0].management_interface.mask }}"
+  vrf: "management"
+{% elif loopbacks_facts.results[0].ansible_facts is defined %}
+{% for item in loopbacks_facts.results %}
+{% if item.ansible_facts is defined %}
+{% if item.ansible_facts.loopback_int_facts[0].loopback_interface.interface == "Loopback20" %}
+  interface: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.interface }}"
+  description: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.description }}"
+  ip_addr: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.ip_address }}"
+  mask: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.mask }}"
+  vrf: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.vrf }}"
+{% else %}
+{% endif %}
+{% else %}
+{% endif %}
+{% endfor %}
+{% elif vlan99_int_facts is defined %}
+  interface: "{{ vlan99_int_facts[0].management_interface.interface }}"
+  description: "{{ vlan99_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ vlan99_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ vlan99_int_facts[0].management_interface.mask }}"
+  vrf: "{{ vlan99_int_facts[0].management_interface.vrf }}"
+{% elif mgmt_tacacs_int_facts is defined %}
+{% for item in mgmt_tacacs_int_facts %}
+  interface: "{{ mgmt_tacacs_int_facts[0].management_interface.interface }}"
+  description: "{{ mgmt_tacacs_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ mgmt_tacacs_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ mgmt_tacacs_int_facts[0].management_interface.mask }}"
+  vrf: "{{ mgmt_tacacs_int_facts[0].management_interface.vrf }}"   
+{% endfor %}
+{% else %}
+{% endif %}
+
+loopback_interfaces:
+
+{% if loopbacks_facts.results is defined %}
+{% for item in loopbacks_facts.results %}
+{% if item.ansible_facts is defined %}
+  - interface: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.interface }}"
+    description: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.description }}"
+    ip_addr: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.ip_address }}"
+    mask: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.mask }}"
+    vrf: "{{ item.ansible_facts.loopback_int_facts[0].loopback_interface.vrf }}"
+
+{% else %}
+{% endif %}
+{% endfor %}
+{% endif %}
+mgmt129_interface:
+
+{% if mgmt129_int_facts is defined %}
+{% for item in mgmt129_int_facts %}
+  interface: "{{ mgmt129_int_facts[0].management_interface.interface }}"
+  description: "{{ mgmt129_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ mgmt129_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ mgmt129_int_facts[0].management_interface.mask }}"
+{% if mgmt129_int_facts[0].management_interface.interface == "mgmt0" %}
+  vrf: "management"
+{% else %}
+  vrf: "{{ mgmt129_int_facts[0].management_interface.vrf }}"
+{% endif %}
+
+{% endfor %}
+{% else %}
+{% endif %}
+mgmt0_interface:
+
+{% if mgmt0_int_facts is defined %}
+{% for item in mgmt0_int_facts %}
+  interface: "{{ mgmt0_int_facts[0].management_interface.interface }}"
+  description: "{{ mgmt0_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ mgmt0_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ mgmt0_int_facts[0].management_interface.mask }}"
+  vrf: "management"
+
+{% endfor %}
+{% else %}
+{% endif %}
+vlan99_interface:
+
+{% if vlan99_int_facts is defined %}
+{% for item in vlan99_int_facts %}
+  interface: "{{ vlan99_int_facts[0].management_interface.interface }}"
+  description: "{{ vlan99_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ vlan99_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ vlan99_int_facts[0].management_interface.mask }}"
+  vrf: "{{ vlan99_int_facts[0].management_interface.vrf }}"
+
+{% endfor %}
+{% else %}
+{% endif %}
+tacacs_source_interface:
+
+{% if mgmt_tacacs_int_facts is defined %}
+{% for item in mgmt_tacacs_int_facts %}
+  interface: "{{ mgmt_tacacs_int_facts[0].management_interface.interface }}"
+  description: "{{ mgmt_tacacs_int_facts[0].management_interface.description }}"
+  ip_addr: "{{ mgmt_tacacs_int_facts[0].management_interface.ip_address }}"
+  mask: "{{ mgmt_tacacs_int_facts[0].management_interface.mask }}"
+  vrf: "{{ mgmt_tacacs_int_facts[0].management_interface.vrf }}" 
+
+{% endfor %}
+{% else %}
+{% endif %}

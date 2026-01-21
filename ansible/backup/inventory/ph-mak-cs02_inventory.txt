@@ -1,0 +1,20 @@
+NAME: "c3xxx Stack", DESCR: "c3xxx Stack"
+PID: WS-C3650-48PS     , VID: V02  , SN: FDO1916E115
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PS"
+PID: WS-C3650-48PS     , VID: V02  , SN: FDO1916E115
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V01  , SN: LIT191302MV
+
+NAME: "GigabitEthernet1/1/1", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: FNS19140D90    
+
+NAME: "GigabitEthernet1/1/2", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: FNS19140D9A    
+
+NAME: "GigabitEthernet1/1/3", DESCR: "10/100/1000BaseTX SFP"
+PID: GLC-T              , VID: V04  , SN: MTC19090DFL    
+
+NAME: "GigabitEthernet1/1/4", DESCR: "10/100/1000BaseTX SFP"
+PID: SFP-GE-T           , VID: V02  , SN: MTC194903K5

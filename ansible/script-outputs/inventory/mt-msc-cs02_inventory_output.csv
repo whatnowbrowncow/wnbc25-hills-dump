@@ -1,0 +1,9 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+mt-msc-cs02,Nexus9000 C93108TC-FX Chassis Power Supply,Power Supply 2,NXA-PAC-500W-PE,DCC2225701P,V01
+mt-msc-cs02,Nexus9000 C93108TC-FX Chassis Power Supply,Power Supply 1,NXA-PAC-500W-PE,DCC2225729S,V01
+mt-msc-cs02,Nexus9000 C93108TC-FX Chassis,Chassis,N9K-C93108TC-FX,FDO22350MSK,V03
+mt-msc-cs02,48x1/10GT + 6x40G/100G Ethernet Module,Slot 1,N9K-C93108TC-FX,FDO22350MSK,V03
+mt-msc-cs02,Nexus9000 C93108TC-FX Chassis Fan Module,Fan 1,NXA-FAN-30CFM-F,N/A,V01
+mt-msc-cs02,Nexus9000 C93108TC-FX Chassis Fan Module,Fan 2,NXA-FAN-30CFM-F,N/A,V01
+mt-msc-cs02,Nexus9000 C93108TC-FX Chassis Fan Module,Fan 3,NXA-FAN-30CFM-F,N/A,V01
+mt-msc-cs02,Nexus9000 C93108TC-FX Chassis Fan Module,Fan 4,NXA-FAN-30CFM-F,N/A,V01

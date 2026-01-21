@@ -1,0 +1,170 @@
+
+  - app_prof: 'pr-n-mgmt'
+    tenant: 'production'
+    vrf: 'pr-n-mgmt'
+    bds:
+      - bd: 'pr-n-mgmt_server-ilo'
+        network: '10.180.144.0'
+        gateway: '10.180.144.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_server-ilo'
+            encap_id: '340'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_web-tier'
+        network: '10.180.145.0'
+        gateway: '10.180.145.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_web-tier'
+            encap_id: '341'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_applications-tier'
+        network: '10.180.146.0'
+        gateway: '10.180.146.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_applications-tier'
+            encap_id: '342'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_rng-arcade'
+        network: '10.180.147.0'
+        gateway: '10.180.147.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_rng-arcade'
+            encap_id: '343'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_backoffice-tier'
+        network: '10.180.148.0'
+        gateway: '10.180.148.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_backoffice-tier'
+            encap_id: '344'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_noncde-jumphosts'
+        network: '10.180.151.0'
+        gateway: '10.180.151.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_noncde-jumphosts'
+            encap_id: '347'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_gib-noncde-jumphost'
+        network: '10.180.157.224'
+        gateway: '10.180.157.225'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_gib-noncde-jumphost'
+            encap_id: '360'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_caerus-apps-man-2'
+        network: '10.180.158.0'
+        gateway: '10.180.158.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_caerus-apps-man-2'
+            encap_id: '361'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_edge-mgmt'
+        network: '10.180.159.0'
+        gateway: '10.180.159.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_edge-mgmt'
+            encap_id: '362'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_webscreen-mgmt'
+        network: '10.180.159.64'
+        gateway: '10.180.159.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_webscreen-mgmt'
+            encap_id: '364'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_rng-retail'
+        network: '10.180.159.128'
+        gateway: '10.180.159.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_rng-retail'
+            encap_id: '366'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_f1x2-web'
+        network: '10.180.159.160'
+        gateway: '10.180.159.161'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_f1x2-web'
+            encap_id: '367'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_f1x2-app'
+        network: '10.180.159.192'
+        gateway: '10.180.159.193'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_f1x2-app'
+            encap_id: '368'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_caerus-apps-man'
+        network: '10.180.159.224'
+        gateway: '10.180.159.225'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_caerus-apps-man'
+            encap_id: '369'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgmt_internal-vrf'
+        network: '10.180.160.192'
+        gateway: '10.180.160.194'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgmt_internal-vrf'
+            encap_id: '376'
+            vcenter_dynamic_vlan: true

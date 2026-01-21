@@ -1,0 +1,18 @@
+---
+
+snmp_info:
+  contact: Network Services
+  communities:
+    - community: public
+      snmp_svr: "10.120.163.59"
+      type: ro
+    - community: private
+      snmp_svr: "10.120.163.59"
+      type: rw
+
+syslog_info:
+  syslog_svr: "10.112.13.17"
+
+ssh_info:
+  ssh_timeout: "5"
+  ssh_ver: "2"

@@ -1,0 +1,44 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-bfa-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 1,C4KX-PWR-750AC-R,ART2126X1JB,V01
+uk-bfa-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 2,C4KX-PWR-750AC-R,ART2126X1JJ,V01
+uk-bfa-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 1,C4KX-PWR-750AC-R,ART2126X1K1,V01
+uk-bfa-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 2,C4KX-PWR-750AC-R,ART2126X1K8,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet2/1/14,GLC-TE,AVC212924JM,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/14,GLC-TE,AVC212924JN,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet2/1/11,GLC-TE,AVC2129250R,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/11,GLC-TE,AVC2129250S,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet2/1/2,GLC-TE,AVC2129250T,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/10,GLC-TE,AVC2129250V,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet2/1/10,GLC-TE,AVC2129250W,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/13,GLC-TE,AVC2129250X,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/9,GLC-TE,AVC2129250Y,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/2,GLC-TE,AVC2129250Z,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet2/1/12,GLC-TE,AVC21292510,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/8,GLC-TE,AVC21292511,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/12,GLC-TE,AVC21292512,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet1/1/20,GLC-TE,AVC21292513,V01
+uk-bfa-cs01,1000BaseT,TenGigabitEthernet2/1/13,GLC-TE,AVC21292514,V01
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/1,SFP-10G-SR,AVD21249KA0,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/30,SFP-10G-SR,AVD21249KAM,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/29,SFP-10G-SR,AVD21249KAN,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/28,SFP-10G-SR,AVD21249KAS,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/32,SFP-10G-SR,AVD21249KAU,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/26,SFP-10G-SR,AVD21249PCU,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/26,SFP-10G-SR,AVD21249SSJ,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/31,SFP-10G-SR,AVD2125991T,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/3,SFP-10G-SR,AVD21259923,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/27,SFP-10G-SR,AVD2125992R,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/28,SFP-10G-SR,AVD2125992X,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/30,SFP-10G-SR,AVD21259931,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/32,SFP-10G-SR,AVD2125993J,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/3,SFP-10G-SR,AVD2125994W,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/1,SFP-10G-SR,AVD21259DTW,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/29,SFP-10G-SR,AVD21259EG0,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/31,SFP-10G-SR,AVD21259EJJ,V03
+uk-bfa-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/27,SFP-10G-SR,AVD21259J71,V03
+uk-bfa-cs01,1000BaseSX,TenGigabitEthernet2/1/4,GLC-SX-MMD,FNS213403ZA,V01
+uk-bfa-cs01,1000BaseSX,TenGigabitEthernet1/1/4,GLC-SX-MMD,FNS21340405,V01
+uk-bfa-cs01,4500X-32 10GE (SFP+),Switch1 Supervisor 1 (virtual slot 1),WS-C4500X-32,JAE2141055Z,V06
+uk-bfa-cs01,Cisco Systems,Switch1 System,,JAE2141055Z,none
+uk-bfa-cs01,4500X-32 10GE (SFP+),Switch2 Supervisor 1 (virtual slot 11),WS-C4500X-32,JAE214105BF,V06
+uk-bfa-cs01,Cisco Systems,Switch2 System,,JAE214105BF,none

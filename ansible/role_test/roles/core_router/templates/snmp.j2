@@ -1,0 +1,3 @@
+{% for community in item.snmp.communities %}
+snmp-server community {{ community.community }} {{ community.type | upper }} {{ community.acl }}
+{% endfor %}

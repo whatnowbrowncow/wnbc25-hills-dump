@@ -1,0 +1,12 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: bg-sof-fw01-pri @ 20200722T092551 ---!
+!
+no logging console
+logging facility 20
+logging trap wh_syslog_log_list
+logging history informational
+logging host inside 10.120.163.134
+!
+!--- END UPDATES: bg-sof-fw01-pri @ 20200722T092551 ---!
+}

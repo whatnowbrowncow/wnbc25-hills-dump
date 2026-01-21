@@ -1,0 +1,9 @@
+---
+
+- name: Add host entries to Infoblox 
+  include_tasks: ./asa-interfaces_gather_vlans.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context_item
+    

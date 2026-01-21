@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-ld6-rr01,10.120.163.19,group-vrf,yes,Loopback20
+uk-ld6-rr01,10.120.163.20,group-vrf,no,Loopback20

@@ -1,0 +1,6 @@
+hostname,username,password_type,encryption,password_string,user_group_1,user_group_2,user_group_3
+uk-ld6-cr01-new,netadmin,secret,5,$1$4rae$fVVudTyTNCMS63fM85zZT1,root-lr,cisco-support,
+uk-ld6-cr02-new,netadmin,secret,5,$1$4rae$fVVudTyTNCMS63fM85zZT1,root-lr,cisco-support,
+uk-sc1-cr01-new,netadmin,secret,5,$1$1UJx$/AC0LwdHpqGPmz/kexYuM.,root-lr,cisco-support,
+uk-sc1-cr02-new,netadmin,secret,5,$1$njky$TTLWk/QeIRGxOldd4Ta/D0,root-lr,cisco-support,
+uk-sov-cr01-new,netadmin,secret,5,$1$pFwo$OXgVw4OhNIOm8XwtHxTfc0,root-lr,cisco-support,

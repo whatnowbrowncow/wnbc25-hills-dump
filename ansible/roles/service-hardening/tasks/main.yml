@@ -1,0 +1,5 @@
+---
+
+- name: Service Hardening
+  include_tasks: service-hardening.yml
+

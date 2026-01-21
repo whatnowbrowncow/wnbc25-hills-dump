@@ -1,0 +1,27 @@
+Port-channel1.100: {admin-state: ' shutdown', interface: Port-channel1.100, ip-add: 10.180.32.1,
+  nameif: cde-web, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.102: {admin-state: ' shutdown', interface: Port-channel1.102, 'no': ip}
+Port-channel1.110: {admin-state: ' shutdown', interface: Port-channel1.110, ip-add: 10.180.33.1,
+  nameif: cde-backoffice, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.113: {admin-state: up, interface: Port-channel1.113, ip-add: 10.180.33.97,
+  nameif: data-analytics, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.114: {admin-state: up, interface: Port-channel1.114, ip-add: 10.180.33.129,
+  nameif: citrix, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.115: {admin-state: up, interface: Port-channel1.115, ip-add: 10.180.33.161,
+  nameif: mailhosts, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.120: {admin-state: up, interface: Port-channel1.120, ip-add: 10.180.36.1,
+  nameif: cde-web-sportsbook, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.121: {admin-state: up, interface: Port-channel1.121, ip-add: 10.180.37.1,
+  nameif: cde-proxy-topend, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.122: {admin-state: up, interface: Port-channel1.122, ip-add: 10.180.38.1,
+  nameif: cde-backoffice-new, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.134: {admin-state: up, interface: Port-channel1.134, ip-add: 10.180.44.1,
+  nameif: int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.140: {admin-state: up, interface: Port-channel1.140, ip-add: 10.180.46.1,
+  nameif: storage_data, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.371: {admin-state: up, interface: Port-channel1.371, ip-add: 10.180.160.34,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.421: {admin-state: up, interface: Port-channel1.421, ip-add: 10.180.166.129,
+  nameif: cag, netmask: 255.255.255.128, security-level: '100'}
+Port-channel1.56: {admin-state: up, interface: Port-channel1.56, ip-add: 10.180.25.33,
+  nameif: voip-recorder, netmask: 255.255.255.240, security-level: '100'}

@@ -1,0 +1,17 @@
+"l3extInstP": {
+    "attributes": {
+        "dn": "uni/tn-ant-tenant/out-ant-vrf_fatl3out/instP-ant-vrf_fatl3out",
+        "name": "ant-vrf_fatl3out",
+        "status": "created,modified"
+    },
+    "children": [
+        {
+        "l3extSubnet": {
+            "attributes": {
+                "aggregate": "export-rtctrl",
+                "ip": "0.0.0.0/0",
+                "scope": "export-rtctrl,import-security",
+            }
+        }
+    },
+]}

@@ -1,0 +1,26 @@
+---
+- name: Generate core router config files
+  template:
+    src=core_router.j2
+    dest=/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/{{ item.hostname }}.cfg
+  with_items: "{{ core_routers }}"
+
+
+#- name: Generate SNMP configurations
+#  template:
+#    src: "snmp.j2"
+#    dest: "/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/snmp/{{ item.hostname }}.cfg"
+#  with_items:
+#    - "{{ core_routers }}"
+#
+  
+- name: Generate SNMP config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/tasks/snmp.yml
+- name: Generate Line VTY config files
+  import_tasks: /home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/tasks/line_vty.yml
+
+- name: Combine config parts to whole
+  assemble:
+    src="/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/{{ item.hostname }}"
+    dest="/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/full-config/{{ item.hostname }}.cfg"
+  with_items: "{{ core_routers }}"

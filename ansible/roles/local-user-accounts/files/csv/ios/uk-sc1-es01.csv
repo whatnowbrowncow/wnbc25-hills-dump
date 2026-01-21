@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-sc1-es01,netadmin,15,secret,5,$1$qOP.$Cr.SkwGQQ4.cuorpcTDIm.
+uk-sc1-es01,svcnetworkauto,15,secret,5,$1$/vaH$8zFrPAhaEY1LcXBt3pKon/

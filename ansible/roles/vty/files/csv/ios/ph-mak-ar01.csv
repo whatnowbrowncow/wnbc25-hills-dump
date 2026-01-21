@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+ph-mak-ar01,0 4,1,in,15 0,013D53505A4A31160C,ssh,none,yes,
+ph-mak-ar01,5 15,1,in,15 0,013D53505A4A31160C,ssh,none,yes,

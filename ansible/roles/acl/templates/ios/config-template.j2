@@ -1,0 +1,11 @@
+{% for item in access_lists %}
+- acl:
+  name: {{item['name']}}
+  type: {{item['type']}}
+  lines:
+{%   if item.rules %}
+{%     for line in item.rules %}
+    - {{ line.line_no }} {{ line.rule }}
+{%     endfor %}
+{%   endif %}
+{% endfor %}

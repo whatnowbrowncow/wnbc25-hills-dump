@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+it-rom-ar02-sogei,rtosco2,,password,7,011E090A541B395A75
+it-rom-ar02-sogei,netadmin,15,secret,5,$1$keBt$KLFAzl6VVNeXj5rPHyJ8A0
+it-rom-ar02-sogei,svcnetworkauto,15,secret,5,$1$Qmkg$crJTEgKMwVykrpkp.iy/i1

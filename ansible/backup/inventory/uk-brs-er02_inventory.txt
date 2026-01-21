@@ -1,0 +1,32 @@
+NAME: "C6880-X", DESCR: "Cisco Systems, Inc. Catalyst 6880 5-slot Chassis System"
+PID: C6880-X           ,                     VID: V01, SN: SAL1935N6YN
+
+NAME: "5", DESCR: "C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.2"
+PID: C6880-X-SUP       ,                     VID:    , SN: SAL1932LYSB
+
+NAME: "C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5", DESCR: "C6880-X-PFC Policy Feature Card 4 Rev. 1.2"
+PID: C6880-X-PFC       ,                     VID:    , SN: SAL1930L1BS
+
+NAME: "Transceiver Te5/1", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/1"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932AEPU     
+
+NAME: "Transceiver Te5/2", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/2"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ACE4     
+
+NAME: "Transceiver Te5/3", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/3"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932ABPY     
+
+NAME: "Transceiver Te5/5", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/5"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: AVD1932AENN     
+
+NAME: "Transceiver Te5/9", DESCR: "SFP+ Transceiver 10Gbase-SR Te5/9"
+PID: SFP-10G-SR         ,                     VID: V03 , SN: JUR1930GYM2     
+
+NAME: "C6880-X-FAN 1", DESCR: "C6880-X Fan Tray 1"
+PID: C6880-X-FAN       ,                     VID: V01, SN: FOX1931XG9R
+
+NAME: "PS 1 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 1"
+PID: C6880-X-3KW-AC    ,                     VID: V01, SN: DTM193200Q7
+
+NAME: "PS 2 C6880-X-3KW-AC", DESCR: "AC power supply, 3000 watt 2"
+PID: C6880-X-3KW-AC    ,                     VID: V01, SN: DTM1932011U

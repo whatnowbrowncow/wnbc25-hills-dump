@@ -1,0 +1,17 @@
+---
+
+- name: ASA-SINGLE - Collecting the SNMP configuration
+  asa_command:
+    commands:
+      - more system:running-config | include snmp-server
+  register: raw_output
+
+- name: ASA-SINGLE - Parsing the SNMP configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/asa_single/parser_asa_single_snmp.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+- name: ASA-SINGLE - Generating the CSV report
+  template:
+    src: "/gitnet/ansible/roles/snmp/templates/asa_single/csv-template.j2"
+    dest: "/gitnet/ansible/roles/snmp/files/csv/asa_single/{{ inventory_hostname }}.csv"

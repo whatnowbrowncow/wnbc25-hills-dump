@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+pl-krk-as03-f01,10.210.193.235,,no,Vlan99
+pl-krk-as03-f01,10.120.193.235,,yes,Vlan99
+pl-krk-as03-f01,10.120.193.236,,no,Vlan99
+pl-krk-as03-f01,10.210.193.236,,no,Vlan99

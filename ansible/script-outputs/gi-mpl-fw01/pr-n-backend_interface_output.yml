@@ -1,0 +1,30 @@
+Port-channel1.220: {admin-state: up, interface: Port-channel1.220, ip-add: 10.180.70.1,
+  nameif: backoffice-tier-new, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.221: {admin-state: up, interface: Port-channel1.221, ip-add: 10.180.71.1,
+  nameif: web-tier-new, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.230: {admin-state: up, interface: Port-channel1.230, ip-add: 10.180.73.1,
+  nameif: caerus-apps, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.250: {admin-state: ' shutdown', interface: Port-channel1.250, ip-add: 10.180.96.1,
+  nameif: backoffice-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.251: {admin-state: ' shutdown', interface: Port-channel1.251, ip-add: 10.180.96.33,
+  nameif: web-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.252: {admin-state: ' shutdown', interface: Port-channel1.252, ip-add: 10.180.96.65,
+  nameif: applications-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.253: {admin-state: up, interface: Port-channel1.253, ip-add: 10.180.96.97,
+  nameif: rng-arcade, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.254: {admin-state: up, interface: Port-channel1.254, ip-add: 10.180.96.129,
+  nameif: rng-retail, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.255: {admin-state: up, interface: Port-channel1.255, ip-add: 10.180.96.161,
+  nameif: f1x2-web-bottom, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.256: {admin-state: up, interface: Port-channel1.256, ip-add: 10.180.96.193,
+  nameif: f1x2-app, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.260: {admin-state: up, interface: Port-channel1.260, ip-add: 10.180.98.1,
+  nameif: database-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.261: {admin-state: up, interface: Port-channel1.261, ip-add: 10.180.99.1,
+  nameif: applications-tier-new, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.262: {admin-state: up, description: rng-arcade, interface: Port-channel1.262,
+  ip-add: 10.180.100.1, nameif: noncde-rng-arcade, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.374: {admin-state: up, interface: Port-channel1.374, ip-add: 10.180.160.130,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.409: {admin-state: up, interface: Port-channel1.409, ip-add: 10.180.165.33,
+  nameif: test-network, netmask: 255.255.255.224, security-level: '100'}

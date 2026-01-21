@@ -1,0 +1,19 @@
+---
+
+access_lists:
+
+{% for acl in access_lists.results %}
+  - name: "{{ acl.item.item }}"
+    rules:
+{%   if acl.ansible_facts.access_lists_facts is defined %}
+{%     for aces in acl.ansible_facts.access_lists_facts %}
+    - line_no: "{{ aces.ace.seq_num }}"
+{%       if aces.ace.remark is defined and aces.ace.remark %}
+      remark: "{{ aces.ace.remark }}"
+{%       else %}
+      rule: "{{ aces.ace.rule }}"
+{%       endif %}
+{%     endfor %}
+
+{%   endif %}
+{% endfor %}

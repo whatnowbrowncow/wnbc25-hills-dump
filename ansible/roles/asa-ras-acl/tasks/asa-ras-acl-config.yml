@@ -1,0 +1,40 @@
+---
+#Apply new ACL config in the changed_acls to the device line by line
+- name: ASA-RAS - Creating a changes directory for ACL configuration files
+  ansible.builtin.file:
+    path: "{{ config_dir }}"
+    state: directory
+  check_mode: false
+
+# Apply new group policy configuration in the changed_acl data to the device line by line
+- name: ASA-RAS - Producing File Containing Configuration required - ACL
+  ansible.builtin.template:
+    src: "{{ role_path }}/templates/acl-config-template.j2"
+    dest: "{{ config_file_acl }}"
+  check_mode: false
+
+# Apply new group policy configuration in the changed_acl data to the device line by line
+- name: ASA-RAS - Producing File Containing configuration required - Group Policy
+  ansible.builtin.template:
+    src: "{{ role_path }}/templates/acl-group-policy-template.j2"
+    dest: "{{ config_file_gp }}"
+  check_mode: false
+
+- name: ASA-RAS - Applying the new RAS ACLs that have been Amended to firewall
+  cisco.asa.asa_config:
+    src: "{{ role_path }}/templates/acl-config-template.j2"
+    match: none
+  notify: asa-ras-acl:updates_exist
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+#Apply new group policy configuration in the changed_acls to the device line by line
+- name: ASA-RAS - Applying the new RAS Group Policys for Amended ACLs to firewall
+  cisco.asa.asa_config:
+    src: "{{ role_path }}/templates/acl-group-policy-template.j2"
+    match: line
+  notify: asa-ras-acl:updates_exist
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200

@@ -1,0 +1,3 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.1671,10.1.0.10,,giles-external-vrf,255.255.255.0,100
+up,,Port-channel1.1672,10.2.0.10,,giles-internal-vrf,255.255.255.0,100

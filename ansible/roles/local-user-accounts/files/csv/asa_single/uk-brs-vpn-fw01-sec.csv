@@ -1,0 +1,5 @@
+hostname,username,privilege,encryption,password_string
+uk-brs-vpn-fw01-sec,csmars,,,v98MyPf5XavcXU20
+uk-brs-vpn-fw01-sec,svcnetworkauto,15,encrypted,Z7iYuCiC3M3XfnGu
+uk-brs-vpn-fw01-sec,dr_admin,15,encrypted,ujVgRVNG5Lbya78.
+uk-brs-vpn-fw01-sec,netadmin,15,encrypted,i2TRJYv6De0o1ekb

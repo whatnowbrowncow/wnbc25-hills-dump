@@ -1,0 +1,4 @@
+hostname,community,role,access-list
+{% for item in snmp_configuration_facts %}
+{{ inventory_hostname }},{{ item.snmp.community_string }},{{ item.snmp.user_role }},{{ item.snmp.access_list }}
+{% endfor %}

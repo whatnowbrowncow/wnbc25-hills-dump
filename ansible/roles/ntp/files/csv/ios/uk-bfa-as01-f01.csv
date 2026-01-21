@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-bfa-as01-f01,10.120.193.235,,yes,Vlan99
+uk-bfa-as01-f01,10.120.193.236,,no,Vlan99

@@ -1,0 +1,11 @@
+NAME: "2821 chassis", DESCR: "2821 chassis"
+PID: CISCO2821         , VID: V01 , SN: FCZ09277575
+
+NAME: "Two port E1 voice interface daughtercard", DESCR: "Two port E1 voice interface daughtercard"
+PID: VWIC-2MFT-E1=     , VID: 1.0, SN: 35150676   
+
+NAME: "PVDMII DSP SIMM with Two DSPs", DESCR: "PVDMII DSP SIMM with Two DSPs"
+PID: PVDM2-32          , VID: V01 , SN: FOC13280R2V
+
+NAME: "PVDMII DSP SIMM with Two DSPs", DESCR: "PVDMII DSP SIMM with Two DSPs"
+PID: PVDM2-32          , VID: V01 , SN: FOC135311CM

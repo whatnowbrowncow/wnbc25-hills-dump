@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+it-rom-ar01-sogei,netadmin,15,secret,5,$1$14vf$.dH/FhQjle9QwDfl6EwnU1
+it-rom-ar01-sogei,svcnetworkauto,15,secret,5,$1$sYZI$j.Kaa3pOTf0/.KdVuVde7/

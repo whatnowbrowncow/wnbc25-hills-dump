@@ -1,0 +1,10 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-cwk-vacc01,4x1G Uplink Module,Switch 1 FRU Uplink Module 1,C3850-NM-4-1G,FOC1733245P,V01
+uk-cwk-vacc01,4x1G Uplink Module,Switch 2 FRU Uplink Module 1,C3850-NM-4-1G,FOC173324X9,V01
+uk-cwk-vacc01,WS-C3850-48P,Switch 2,WS-C3850-48P,FOC1736U0A3,V02
+uk-cwk-vacc01,WS-C3850-48P,Switch 1,WS-C3850-48P,FOC1736X0LN,V02
+uk-cwk-vacc01,c38xx Stack,c38xx Stack,WS-C3850-48P,FOC1736X0LN,V02
+uk-cwk-vacc01,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C1-1100WAC,LIT17300XU2,V01
+uk-cwk-vacc01,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C1-1100WAC,LIT17300XV3,V01
+uk-cwk-vacc01,10/100/1000BaseTX SFP,GigabitEthernet1/1/1,GLC-T,MTC173418HA,none
+uk-cwk-vacc01,10/100/1000BaseTX SFP,GigabitEthernet2/1/1,SFP-GE-T,MTC18470CT9,V02

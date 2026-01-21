@@ -1,0 +1,3 @@
+hostname,username,privilege,encryption,password_string
+uk-brs-asa-01-admin-act,svcnetworkauto,15,encrypted,Z7iYuCiC3M3XfnGu
+uk-brs-asa-01-admin-act,netadmin,15,encrypted,i2TRJYv6De0o1ekb

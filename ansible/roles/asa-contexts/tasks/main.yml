@@ -1,0 +1,34 @@
+---
+
+- name: Import Network Parser role
+  include_role:
+    name: ansible-network.network-engine
+
+- name: ASA - YAML Context Mode (single|multiple) Creation
+  include_tasks: ./asa-context-mode.yml
+  when: ansible_network_os == "asa"
+
+- name: ASA - YAML Cluster Mode (true|false) Creation
+  include_tasks: ./asa-cluster-mode.yml
+  when: ansible_network_os == "asa"
+
+- name: ASA SINGLE - YAML Failover State (active|standby) Creation
+  include_tasks: ./asa-failover-state.yml
+  when:
+    - ansible_network_os == "asa"
+    - context_mode == "single"
+    - cluster == false
+
+- name: ASA MULTIPLE (Active|Standby) - YAML Contexts List Creation
+  include_tasks: ./asa-contexts-non-clustered.yml
+  when:
+    - ansible_network_os == "asa"
+    - context_mode == "multiple"
+    - cluster == false
+
+- name: ASA MULTIPLE (Clustered) - YAML Contexts List Creation
+  include_tasks: ./asa-contexts-clustered.yml
+  when:
+    - ansible_network_os == "asa"
+    - context_mode == "multiple"
+    - cluster == true

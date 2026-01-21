@@ -1,0 +1,150 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+bg-sof-cs01,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+bg-sof-cs01,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+bg-sof-cs01,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+bg-sof-cs01,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+bg-sof-cs01,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+bg-sof-cs01,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+bg-sof-cs01,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+bg-sof-cs01,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+bg-sof-cs01,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+bg-sof-cs01,solarwinds-new,Standard,100,deny,,any log,,,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,10,permit,udp,any,host 255.255.255.255,bootps
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,20,permit,udp,any,any,bootps
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,30,permit,udp,10.53.228.0 0.0.0.255,host 10.210.193.235,domain
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,40,permit,udp,10.53.228.0 0.0.0.255,host 10.210.193.235,bootps
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,50,permit,udp,10.53.228.0 0.0.0.255,host 10.210.193.236,domain
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,60,permit,udp,10.53.228.0 0.0.0.255,host 10.210.193.236,bootps
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,70,permit,udp,10.53.228.0 0.0.0.255,host 10.120.193.235,domain
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,80,permit,udp,10.53.228.0 0.0.0.255,host 10.120.193.235,bootps
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,90,permit,udp,10.53.228.0 0.0.0.255,host 10.120.193.236,domain
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,100,permit,udp,10.53.228.0 0.0.0.255,host 10.120.193.236,bootps
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,110,permit,udp,10.53.228.0 0.0.0.255,host 10.120.193.238,domain
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,120,permit,udp,10.53.228.0 0.0.0.255,host 10.120.193.239,domain
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,130,permit,tcp,10.53.228.0 0.0.0.255,host 192.168.9.102,8080
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,140,permit,udp,10.53.228.0 0.0.0.255,host 192.168.9.102,isakmp
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,150,permit,udp,10.53.228.0 0.0.0.255,host 192.168.9.102,non500-isakmp
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,160,permit,ip,10.53.228.0 0.0.0.255,host 141.138.129.40,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,170,permit,ip,10.53.228.0 0.0.0.255,host 95.131.184.37,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,180,permit,tcp,10.53.228.0 0.0.0.255,0.1.28.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,190,permit,tcp,10.53.228.0 0.0.0.255,0.1.28.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,200,permit,tcp,10.53.228.0 0.0.0.255,211.36.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,210,permit,tcp,10.53.228.0 0.0.0.255,211.36.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,220,permit,tcp,10.53.228.0 0.0.0.255,212.36.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,230,permit,tcp,10.53.228.0 0.0.0.255,212.36.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,240,permit,tcp,10.53.228.0 0.0.0.255,213.36.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,250,permit,tcp,10.53.228.0 0.0.0.255,213.36.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,260,permit,tcp,10.53.228.0 0.0.0.255,214.36.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,270,permit,tcp,10.53.228.0 0.0.0.255,214.36.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,280,permit,tcp,10.53.228.0 0.0.0.255,215.36.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,290,permit,tcp,10.53.228.0 0.0.0.255,215.36.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,300,permit,tcp,10.53.228.0 0.0.0.255,216.36.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,310,permit,tcp,10.53.228.0 0.0.0.255,216.36.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,320,permit,tcp,10.53.228.0 0.0.0.255,211.43.0 0.0.0.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,330,permit,tcp,10.53.228.0 0.0.0.255,211.43.0 0.0.0.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,340,permit,tcp,10.53.228.0 0.0.0.255,212.43.0 0.0.0.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,350,permit,tcp,10.53.228.0 0.0.0.255,212.43.0 0.0.0.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,360,permit,tcp,10.53.228.0 0.0.0.255,213.43.0 0.0.0.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,370,permit,tcp,10.53.228.0 0.0.0.255,213.43.0 0.0.0.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,380,permit,tcp,10.53.228.0 0.0.0.255,214.43.0 0.0.0.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,390,permit,tcp,10.53.228.0 0.0.0.255,214.43.0 0.0.0.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,400,permit,tcp,10.53.228.0 0.0.0.255,215.43.0 0.0.0.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,410,permit,tcp,10.53.228.0 0.0.0.255,215.43.0 0.0.0.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,420,permit,tcp,10.53.228.0 0.0.0.255,216.43.0 0.0.0.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,430,permit,tcp,10.53.228.0 0.0.0.255,216.43.0 0.0.0.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,440,permit,tcp,10.53.228.0 0.0.0.255,211.66.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,450,permit,tcp,10.53.228.0 0.0.0.255,211.66.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,460,permit,tcp,10.53.228.0 0.0.0.255,212.66.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,470,permit,tcp,10.53.228.0 0.0.0.255,212.66.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,480,permit,tcp,10.53.228.0 0.0.0.255,213.66.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,490,permit,tcp,10.53.228.0 0.0.0.255,213.66.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,500,permit,tcp,10.53.228.0 0.0.0.255,214.66.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,510,permit,tcp,10.53.228.0 0.0.0.255,214.66.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,520,permit,tcp,10.53.228.0 0.0.0.255,215.66.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,530,permit,tcp,10.53.228.0 0.0.0.255,215.66.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,540,permit,tcp,10.53.228.0 0.0.0.255,216.66.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,550,permit,tcp,10.53.228.0 0.0.0.255,216.66.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,560,permit,tcp,10.53.228.0 0.0.0.255,1.216.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,570,permit,tcp,10.53.228.0 0.0.0.255,1.216.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,580,permit,tcp,10.53.228.0 0.0.0.255,2.216.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,590,permit,tcp,10.53.228.0 0.0.0.255,2.216.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,600,permit,tcp,10.53.228.0 0.0.0.255,3.216.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,610,permit,tcp,10.53.228.0 0.0.0.255,3.216.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,620,permit,tcp,10.53.228.0 0.0.0.255,4.216.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,630,permit,tcp,10.53.228.0 0.0.0.255,4.216.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,640,permit,tcp,10.53.228.0 0.0.0.255,5.216.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,650,permit,tcp,10.53.228.0 0.0.0.255,5.216.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,660,permit,tcp,10.53.228.0 0.0.0.255,6.216.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,670,permit,tcp,10.53.228.0 0.0.0.255,6.216.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,680,permit,tcp,10.1.228.0 0.0.1.255,0.200.0 0.0.1.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,690,permit,tcp,10.1.228.0 0.0.1.255,0.200.0 0.0.1.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,700,permit,tcp,10.1.228.0 0.0.1.255,0.200.0 0.0.1.255,8080
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,710,permit,tcp,10.1.228.0 0.0.1.255,0.200.0 0.0.1.255,7072
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,720,permit,tcp,10.1.228.0 0.0.1.255,0.200.0 0.0.1.255,22
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,730,permit,tcp,10.53.228.0 0.0.0.255,host 212.36.187.235,45454
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,740,permit,tcp,10.53.228.0 0.0.0.255,host 212.36.187.239,45454
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,750,permit,tcp,10.53.228.0 0.0.0.255,host 212.36.187.241,45454
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,760,permit,tcp,10.53.228.0 0.0.0.255,220.43.0 0.0.0.255,www
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,770,permit,tcp,10.53.228.0 0.0.0.255,220.43.0 0.0.0.255,443
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,780,permit,tcp,10.53.228.0 0.0.0.255,220.43.0 0.0.0.255,8080
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,790,deny,ip,10.53.228.0 0.0.0.255,168.0.0 0.0.255.255,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,800,deny,ip,10.53.228.0 0.0.0.255,2.16.0.0 0.15.255.255,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,810,deny,ip,10.53.228.0 0.0.0.255,0.0.0.0 0.255.255.255,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,820,permit,tcp,10.53.228.0 0.0.0.255,any,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,830,permit,udp,10.53.228.0 0.0.0.255,any,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,840,permit,ip,10.53.228.0 0.0.0.255,any,
+bg-sof-cs01,FROM-SOF-TESTWIFI,Extended,850,deny,ip,any,any,
+bg-sof-cs01,1,Standard,10,permit,,10.120.163.210,,,
+bg-sof-cs01,1,Standard,20,permit,,10.1.74.66,,,
+bg-sof-cs01,1,Standard,30,permit,,10.112.12.126,,,
+bg-sof-cs01,1,Standard,40,permit,,10.112.12.125,,,
+bg-sof-cs01,1,Standard,50,permit,,10.180.163.18,,,
+bg-sof-cs01,1,Standard,60,permit,,10.53.33.56,,,
+bg-sof-cs01,1,Standard,70,permit,,10.53.32.93,,,
+bg-sof-cs01,1,Standard,80,permit,,10.210.163.60,,,
+bg-sof-cs01,1,Standard,90,permit,,10.220.163.37,,,
+bg-sof-cs01,1,Standard,100,permit,,10.1.74.29,,,
+bg-sof-cs01,1,Standard,110,permit,,10.53.33.120,,,
+bg-sof-cs01,1,Standard,120,permit,,10.53.33.119,,,
+bg-sof-cs01,1,Standard,130,permit,,10.1.74.48,,,
+bg-sof-cs01,1,Standard,140,permit,,10.53.32.110,,,
+bg-sof-cs01,1,Standard,150,permit,,10.53.32.107,,,
+bg-sof-cs01,1,Standard,160,permit,,10.1.74.57,,,
+bg-sof-cs01,1,Standard,170,permit,,10.1.74.61,,,
+bg-sof-cs01,1,Standard,180,permit,,10.53.32.133,,,
+bg-sof-cs01,1,Standard,190,permit,,10.120.163.123,,,
+bg-sof-cs01,1,Standard,200,permit,,10.120.163.122,,,
+bg-sof-cs01,1,Standard,210,permit,,10.120.195.31,,,
+bg-sof-cs01,1,Standard,220,permit,,10.120.143.70,,,
+bg-sof-cs01,1,Standard,230,permit,,10.220.142.230,,,
+bg-sof-cs01,1,Standard,240,permit,,10.1.74.128,,,
+bg-sof-cs01,1,Standard,250,permit,,10.17.100.187,,,
+bg-sof-cs01,1,Standard,260,permit,,10.180.142.230,,,
+bg-sof-cs01,1,Standard,270,permit,,10.120.163.37,,,
+bg-sof-cs01,1,Standard,280,permit,,10.1.82.64 0.0.0.31,,,
+bg-sof-cs01,1,Standard,290,permit,,10.1.82.160 0.0.0.31,,,
+bg-sof-cs01,1,Standard,300,permit,,10.1.22.0 0.0.0.255,,,
+bg-sof-cs01,1,Standard,310,permit,,172.16.41.208 0.0.0.15,,,
+bg-sof-cs01,1,Standard,320,permit,,172.16.64.16 0.0.0.7,,,
+bg-sof-cs01,1,Standard,330,permit,,192.168.2.0 0.0.1.255,,,
+bg-sof-cs01,1,Standard,340,permit,,any,,,
+bg-sof-cs01,1,Standard,350,permit,,100.79.0.0 0.0.127.255,,,
+bg-sof-cs01,1,Standard,360,deny,,any log,,,
+bg-sof-cs01,10,Standard,10,permit,,10.120.163.210,,,
+bg-sof-cs01,10,Standard,20,permit,,10.120.163.59,,,
+bg-sof-cs01,10,Standard,30,deny,,any log,,,
+bg-sof-cs01,11,Standard,50,permit,,10.112.12.126,,,
+bg-sof-cs01,11,Standard,40,permit,,10.112.12.125,,,
+bg-sof-cs01,11,Standard,10,permit,,10.120.136.140,,,
+bg-sof-cs01,11,Standard,30,permit,,10.120.163.123,,,
+bg-sof-cs01,11,Standard,20,permit,,10.120.163.122,,,
+bg-sof-cs01,11,Standard,60,deny,,any log,,,
+bg-sof-cs01,12,Standard,10,permit,,10.220.163.112,,,
+bg-sof-cs01,12,Standard,20,permit,,10.220.163.111,,,
+bg-sof-cs01,12,Standard,30,permit,,10.180.163.112,,,
+bg-sof-cs01,12,Standard,40,permit,,10.180.163.111,,,
+bg-sof-cs01,12,Standard,50,permit,,10.120.163.112,,,
+bg-sof-cs01,12,Standard,60,permit,,10.110.163.111,,,
+bg-sof-cs01,12,Standard,70,permit,,10.110.163.112,,,
+bg-sof-cs01,12,Standard,80,permit,,10.120.163.111,,,
+bg-sof-cs01,12,Standard,90,deny,,any log,,,

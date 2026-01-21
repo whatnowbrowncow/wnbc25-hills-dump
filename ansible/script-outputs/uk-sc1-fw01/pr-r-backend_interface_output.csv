@@ -1,0 +1,6 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.460,10.120.173.1,,web-btm,255.255.255.128,100
+up,,Port-channel1.380,10.120.161.68,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.461,10.120.173.129,,3rd-party-bottom,255.255.255.128,100
+up,,Port-channel1.539,10.120.187.234,,ces-connect,255.255.255.248,100
+up,,Port-channel1.480,10.120.177.1,,app-top,255.255.255.128,100

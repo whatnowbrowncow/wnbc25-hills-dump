@@ -1,0 +1,9 @@
+hostname,community,access,access-list
+uk-stj-as01-f04,m0squ1t0,RO,10
+uk-stj-as01-f04,0p3nv13wNNm,RO,12
+uk-stj-as01-f04,whn4ccam01,RO,13
+uk-stj-as01-f04,whn4ccam02,RW,13
+uk-stj-as01-f04,c1sc0,RO,19
+uk-stj-as01-f04,wh1LLc0rp,RW,11
+uk-stj-as01-f04,$n0Wd5c4nN3r,RO,22
+uk-stj-as01-f04,5wUxlDGU,RW,solarwinds-new

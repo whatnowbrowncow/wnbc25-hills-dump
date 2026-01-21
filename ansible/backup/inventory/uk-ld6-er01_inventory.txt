@@ -1,0 +1,26 @@
+NAME: "module 0/RSP0/CPU0", DESCR: "ASR 9001, Route Switch Processor with 8GB memory"
+PID: ASR9001-RP, VID: V01 , SN: FOC2124NKSW
+
+NAME: "module 0/0/CPU0", DESCR: "ASR 9001, Modular Line Card"
+PID: ASR9001-LC, VID: V01 , SN: FOC2124NL2X
+
+NAME: "module 0/0/0", DESCR: "ASR 9000 4-port 10GE Modular Port Adapter"
+PID: A9K-MPA-4X10GE, VID: V06, SN: FOC2125NHAU
+
+NAME: "module mau 0/0/0/0", DESCR: "Multirate 10GBASE-SR, SMF"
+PID: XFP-10G-MM-SR       , VID: V03 , SN: FNS213314EV     
+
+NAME: "module 0/0/2", DESCR: "ASR 9000 Virtual Module"
+PID: A9K-MODULEv, VID: N/A, SN: N/A
+
+NAME: "module mau 0/0/2/0", DESCR: "10GBASE-SR SFP+ Module for MMF"
+PID: SFP-10G-SR          , VID: V03 , SN: AVD211597E6     
+
+NAME: "module mau 0/0/2/1", DESCR: "10GBASE-SR SFP+ Module for MMF"
+PID: SFP-10G-SR          , VID: V03 , SN: AVD211596U9     
+
+NAME: "module mau 0/0/2/2", DESCR: "10GBASE-LR SFP+ Module for SMF"
+PID: SFP-10G-LR          , VID: V02 , SN: FNS21310852     
+
+NAME: "module mau 0/0/2/3", DESCR: "10GBASE-SR SFP+ Module for MMF"
+PID: SFP-10G-SR          , VID: V03 , SN: AVD21159HU8

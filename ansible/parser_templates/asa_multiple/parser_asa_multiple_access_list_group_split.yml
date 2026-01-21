@@ -1,0 +1,15 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show access-list {{ item }} | exclude ^ "
+    network_os: asa
+
+- name: access-list line match pattern
+  pattern_match:
+    regex: "((?:access-list +\\S+ +line +\\d+ +remark.*(?:[\n\r]|.)*?)access-list +\\S+ +line +\\d+ +extended.*|access-list +\\S+ +line +\\d+ +extended.*)"
+    match_all: yes
+    match_greedy: yes
+  export: yes
+  register: access_list_groups_facts

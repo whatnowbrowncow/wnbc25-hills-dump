@@ -1,0 +1,5 @@
+---
+
+- name: Build Vlan pools
+  include_tasks: ./aci-vlan-pool.yml
+  when: ansible_network_os == "aci"

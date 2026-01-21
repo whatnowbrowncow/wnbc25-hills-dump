@@ -1,0 +1,12 @@
+Port-channel21.2300: {admin-state: up, interface: Port-channel21.2300, ip-add: 10.213.32.1,
+  nameif: cde-web-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2310: {admin-state: up, interface: Port-channel21.2310, ip-add: 10.213.33.1,
+  nameif: cde-backoffice-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2323: {admin-state: up, interface: Port-channel21.2323, ip-add: 10.213.39.1,
+  nameif: cde-citrix-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.2334: {admin-state: up, interface: Port-channel21.2334, ip-add: 10.213.44.1,
+  nameif: int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel21.2501: {admin-state: up, interface: Port-channel21.2501, ip-add: 10.213.129.42,
+  nameif: management, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.2571: {admin-state: up, interface: Port-channel21.2571, ip-add: 10.213.160.36,
+  nameif: pp2off-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

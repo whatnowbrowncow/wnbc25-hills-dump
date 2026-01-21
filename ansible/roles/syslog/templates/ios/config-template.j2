@@ -1,0 +1,17 @@
+service timestamps debug datetime msec localtime show-timezone
+service timestamp log datetime msec localtime show-timezone
+logging buffered 8192 informational
+no logging console
+logging trap informational
+{% for syslog_svr in syslog %}
+{% if mgmt_interface.vrf != "" %}
+logging host {{ syslog_svr.ip_addr }} vrf {{ mgmt_interface.vrf }}
+{% elif mgmt_interface.vrf == "" %}
+logging host {{ syslog_svr.ip_addr }}
+{% endif %}
+{% endfor %}
+{% if mgmt_interface.vrf != "" %}
+logging source-interface {{ mgmt_interface.interface }} vrf {{ mgmt_interface.vrf }}
+{% elif mgmt_interface.vrf == "" %}
+logging source-interface {{ mgmt_interface.interface }}
+{% endif %}

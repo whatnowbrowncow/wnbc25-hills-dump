@@ -1,0 +1,26 @@
+- name: Full build of ASA Contexts
+  hosts: asa
+  connection: network_cli
+  gather_facts: no
+
+  vars_prompt:
+    - name: "snapshot_description"
+      prompt: "Provide the change ref. This will be used for the slack message:"
+      default: "ansible pre-change backup"
+      private: no
+
+  roles:
+    - slack-message-start
+    - role: "ping-test"
+      vars:
+        ping_state: "pre-ping"
+    - asa-system-interfaces
+    - asa-contexts
+    - asa-interfaces
+    - asa-routes
+    - asa-base
+    - asa-objects
+    - role: "ping-test"
+      vars:
+        ping_state: "post-ping"
+    - slack-message-end

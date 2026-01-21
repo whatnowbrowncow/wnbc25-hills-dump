@@ -1,0 +1,88 @@
+---
+
+- name: "Capture remote location password from lastpass and set as variable"
+  set_fact:
+    location_passw: "{{ lookup('lastpass', '{{ item.lpass_entry }}', field='password') }}"
+  with_items: 
+    - "{{ storage_locations }}"
+
+- name: "Create remote location"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/path-{{ item.dest }}.json"
+    content:
+      {
+        "fileRemotePath": {
+          "attributes": {
+            "dn": "uni/fabric/path-{{ item.dest }}",
+            "remotePort": "{{ item.port }}",
+            "name": "{{ item.dest }}",
+            "host": "{{ item.dest }}",
+            "protocol": "{{ item.protocol }}",
+            "remotePath": "{{ item.path }}",
+            "userName": "{{ item.user }}",
+            "userPasswd": "{{ location_passw }}",
+            "rn": "{{ item.dest }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "fileRsARemoteHostToEpg": {
+                "attributes": {
+                  "tDn": "uni/tn-mgmt/mgmtp-default/oob-default",
+                  "status": "created,modified"
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      }       
+    validate_certs: no
+  with_items: 
+    - "{{ storage_locations }}"
+
+- name: "Configure export policy"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/configexp-{{ item.export_name }}.json"
+    content:
+      {
+        "configExportP": {
+          "attributes": {
+            "dn": "uni/fabric/configexp-{{ item.export_name }}",
+            "name": "{{ item.export_name }}",
+            "rn": "configexp-{{ item.export_name }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "configRsExportScheduler": {
+                "attributes": {
+                  "tnTrigSchedPName": "{{ item.export_sched }}",
+                  "status": "created,modified"
+                },
+                "children": []
+              }
+            },
+            {
+              "configRsRemotePath": {
+                "attributes": {
+                  "tnFileRemotePathName": "{{ item.dest }}",
+                  "status": "created,modified"
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      }    
+    validate_certs: no
+  with_items: 
+    - "{{ storage_locations }}"

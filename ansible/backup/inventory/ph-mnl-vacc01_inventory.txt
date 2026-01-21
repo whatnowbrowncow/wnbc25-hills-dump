@@ -1,0 +1,62 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PD     , VID: R0   , SN: FDO2138E15Q
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2138E15Q
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302KFN
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT213026LN
+
+NAME: "TenGigabitEthernet1/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR         , VID: V03  , SN: JUR2129G5WT    
+
+NAME: "Switch 2", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2131E1DN
+
+NAME: "Switch 2 - Power Supply A", DESCR: "Switch 2 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302JTE
+
+NAME: "Switch 2 - Power Supply B", DESCR: "Switch 2 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT213024WW
+
+NAME: "Switch 3", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2138Q11X
+
+NAME: "Switch 3 - Power Supply A", DESCR: "Switch 3 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302545
+
+NAME: "Switch 3 - Power Supply B", DESCR: "Switch 3 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302556
+
+NAME: "Switch 4", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2138Q0XD
+
+NAME: "Switch 4 - Power Supply A", DESCR: "Switch 4 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302772
+
+NAME: "Switch 4 - Power Supply B", DESCR: "Switch 4 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT21302M4R
+
+NAME: "Switch 5", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2138E10A
+
+NAME: "Switch 5 - Power Supply A", DESCR: "Switch 5 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT2130253T
+
+NAME: "Switch 5 - Power Supply B", DESCR: "Switch 5 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT213025ZH
+
+NAME: "Switch 6", DESCR: "WS-C3650-48PD-S"
+PID: WS-C3650-48PD-S   , VID: V05  , SN: FDO2138Q11R
+
+NAME: "Switch 6 - Power Supply A", DESCR: "Switch 6 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V03  , SN: LIT213027EC
+
+NAME: "Switch 6 - Power Supply B", DESCR: "Switch 6 - Power Supply B"
+PID: PWR-C2-640WAC     , VID: V03  , SN: DCB2129B0YW
+
+NAME: "TenGigabitEthernet6/1/3", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR         , VID: V03  , SN: JUR2129G02P

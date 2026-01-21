@@ -1,0 +1,46 @@
+---
+
+- name: "Create Leaf Port Selectors (step 3/3)"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/accportprof-{{ item.0.leaf_prof }}/hports-{{ item.1.name }}-typ-range.json"
+    content:
+      {
+        "infraHPortS": {
+          "attributes": {
+            "dn": "uni/infra/accportprof-{{ item.0.leaf_prof }}/hports-{{ item.1.name }}-typ-range",
+            "name": "{{ item.1.name }}",
+            "rn": "hports-{{ item.1.name }}-typ-range",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "infraPortBlk": {
+                "attributes": {
+                  "dn": "uni/infra/accportprof-{{ item.0.leaf_prof }}/hports-{{ item.1.name }}-typ-range/portblk-block{{ item.1.blk_no }}",
+                  "fromPort": "{{ item.1.port }}",
+                  "toPort": "{{ item.1.port }}",
+                  "name": "block{{ item.1.blk_no }}",
+                  "rn": "portblk-block{{ item.1.blk_no }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "infraRsAccBaseGrp": {
+                "attributes": {
+                  "tDn": "uni/infra/funcprof/acc{{ item.1.type }}-{{ item.1.polgrp }}",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_subelements:
+    - "{{ if_selectors }}"
+    - leaf_int_selection

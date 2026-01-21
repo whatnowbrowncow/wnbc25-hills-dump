@@ -1,0 +1,23 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: bg-dat-fw01 @ 20200722T092551 ---!
+!
+no logging console
+logging facility 20
+logging list wh_syslog_log_list level notifications
+logging list wh_syslog_log_list message 611101-611102
+logging list wh_syslog_log_list message 721001-721003
+logging list wh_syslog_log_list message 748008-748009
+logging list wh_syslog_log_list message 109001-109036
+logging list wh_syslog_log_list message 113003-113017
+logging list wh_syslog_log_list message 778001-778007
+logging list wh_syslog_log_list message 606001-606004
+logging list wh_syslog_log_list message 305011
+logging list wh_syslog_log_list message 106015
+logging list wh_syslog_log_list message 106100
+logging trap wh_syslog_log_list
+logging history informational
+logging host DC-Transit 10.120.163.134
+!
+!--- END UPDATES: bg-dat-fw01 @ 20200722T092551 ---!
+}

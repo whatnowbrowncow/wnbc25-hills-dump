@@ -1,0 +1,22 @@
+---
+
+- name: NX-OS - Collecting the SNMP configuration
+  nxos_command:
+    commands:
+      - show snmp community
+  register: raw_output
+
+- name: NX-OS - Parsing the SNMP configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/nxos/parser_nxos_snmp.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+- name: NX-OS - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: NX-OS - Generating the YAML file
+  template:
+    src: "/gitnet/ansible/roles/snmp/templates/nxos/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/snmp.yml"

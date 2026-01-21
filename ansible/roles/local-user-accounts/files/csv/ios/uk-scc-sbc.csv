@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-scc-sbc,netsec,15,secret,4,8Kb2slRmQI6xd7qwkxLjCRKlIHuVOj1ax/8vyMkB6Tg
+uk-scc-sbc,ddsupport,15,secret,4,qAO85P77synjN.QYF7oqHyOjFr6uIVZ0DQns63Fzu9Q
+uk-scc-sbc,netadmin,15,secret,5,$1$3.7Z$2F4RCunrdJm7RpgWuPSma/
+uk-scc-sbc,svcnetworkauto,15,secret,5,$1$gJ6p$t3NnUFImzz4LM8i9oPYLV0

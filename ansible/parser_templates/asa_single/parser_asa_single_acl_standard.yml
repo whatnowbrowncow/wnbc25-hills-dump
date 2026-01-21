@@ -1,0 +1,58 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show access-list | exclude ^ | elements"
+    network_os: asa
+
+- name: standard acl match pattern
+  pattern_match:
+    regex: "^access-list .+ +line \\d+ (?:standard)?.+"
+    match_all: yes
+    match_greedy: yes
+  register: standard
+
+
+- name: Match ACL configuration
+  pattern_group:
+    - name: Match ACL Name
+      pattern_match:
+        regex: "^access-list (\\S+(?=_)|\\S+\\s+)"
+        content: "{{ item }}"
+      register: name
+    
+    - name: Match ACL Version
+      pattern_match:
+        regex: "^access-list \\S+_v(\\d+)"
+        content: "{{ item }}"
+      register: version
+
+    - name: Match ACL Details
+      pattern_match:
+        regex: "^access-list \\S+ +line +(\\d+) +(?:(?:(remark +(\\S+.*)))?(?:standard +(permit|deny) +(?:(host +(\\d+.\\d+.\\d+.\\d+))?(?:(any4|any|\\d+.\\d+.\\d+.\\d+ +\\d+.\\d+.\\d+.\\d+))?)?)?)"
+        content: "{{ item }}"
+      register: details
+  loop: "{{ standard }}"
+  register: std_acl_configration
+
+- name: Generate standard lines JSON data structure - 
+  json_template:
+    template:
+      - key: name
+        value: "{{ item.name.matches.0 }}"
+      - key: version
+        value: "{{ item.version.matches.0 }}"
+      - key: seq
+        value: "{{ item.details.matches.0 }}"
+      - key: remark
+        value: "{{ item.details.matches.1 }}"
+      - key: action
+        value: "{{ item.details.matches.3 }}"
+      - key: dest_host
+        value: "{{ item.details.matches.5 }}"
+      - key: dest_network
+        value: "{{ item.details.matches.6 }}" 
+  loop: "{{ std_acl_configration }}"
+  export: yes
+  register: acl_standard_facts

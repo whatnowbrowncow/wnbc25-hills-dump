@@ -1,0 +1,12 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-bfa-vg01,450W AC Power Supply for Cisco ISR4450,Power Supply Module 0,PWR-4450-AC,DCA2133XBE7,V02
+uk-bfa-vg01,Cisco ISR4351 Route Processor,module R0,ISR4351/K9,FDO21412F5Q,V04
+uk-bfa-vg01,Cisco ISR4351 Chassis,Chassis,ISR4351/K9,FDO2142A24X,V04
+uk-bfa-vg01,NIM-2CE1T1-PRI - T1/E1 Serial Module,NIM subslot 0/1,NIM-2CE1T1-PRI,FOC213660FB,V04
+uk-bfa-vg01,PVDM4-64 Voice DSP Module,subslot 0/1 db module 0,PVDM4-64,FOC21474ZFA,V02
+uk-bfa-vg01,Front Panel 3 ports Gigabitethernet Module,NIM subslot 0/0,ISR4351-3x1GE,JAB092709EL,V01
+uk-bfa-vg01,Cisco ISR4450,Fan Tray,ACS-4450-FANASSY,none,none
+uk-bfa-vg01,Cisco ISR4351 Built-In NIM controller,module 0,ISR4351/K9,none,none
+uk-bfa-vg01,Cisco ISR4351 Built-In SM controller,module 1,ISR4351/K9,none,none
+uk-bfa-vg01,Cisco ISR4351 Built-In SM controller,module 2,ISR4351/K9,none,none
+uk-bfa-vg01,Cisco ISR4351 Forwarding Processor,module F0,ISR4351/K9,none,none

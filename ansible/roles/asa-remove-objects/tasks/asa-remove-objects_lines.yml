@@ -1,0 +1,14 @@
+---
+
+
+- name: Remove objects on context {{ context_item.context }}
+  asa_config:
+    lines:
+      - "no object network {{ item.nameif }}"
+    match: line
+    context: "{{ context_item.context }}"
+  with_items:
+    - "{{ context_interfaces_item }}"
+
+
+

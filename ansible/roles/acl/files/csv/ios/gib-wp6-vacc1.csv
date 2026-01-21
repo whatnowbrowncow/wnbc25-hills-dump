@@ -1,0 +1,201 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+gib-wp6-vacc1,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+gib-wp6-vacc1,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+gib-wp6-vacc1,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+gib-wp6-vacc1,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+gib-wp6-vacc1,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+gib-wp6-vacc1,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+gib-wp6-vacc1,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+gib-wp6-vacc1,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+gib-wp6-vacc1,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+gib-wp6-vacc1,solarwinds-new,Standard,100,deny,,any log,,,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,10,permit,udp,any,host 255.255.255.255,bootps
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,20,permit,udp,any,any,bootps
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,30,permit,udp,10.180.120.0 0.0.0.255,host 10.210.193.235,domain
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,40,permit,udp,10.180.120.0 0.0.0.255,host 10.210.193.235,bootps
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,50,permit,udp,10.180.120.0 0.0.0.255,host 10.210.193.236,domain
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,60,permit,udp,10.180.120.0 0.0.0.255,host 10.210.193.236,bootps
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,70,permit,udp,10.180.120.0 0.0.0.255,host 10.120.193.235,domain
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,80,permit,udp,10.180.120.0 0.0.0.255,host 10.120.193.235,bootps
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,90,permit,udp,10.180.120.0 0.0.0.255,host 10.120.193.236,domain
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,100,permit,udp,10.180.120.0 0.0.0.255,host 10.120.193.236,bootps
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,110,permit,udp,10.180.120.0 0.0.0.255,host 10.120.193.238,domain
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,120,permit,udp,10.180.120.0 0.0.0.255,host 10.120.193.239,domain
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,130,permit,ip,10.180.120.0 0.0.0.255,host 141.138.129.40,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,140,permit,ip,10.180.120.0 0.0.0.255,host 95.131.184.37,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,150,permit,tcp,10.180.120.0 0.0.0.255,0.1.28.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,160,permit,tcp,10.180.120.0 0.0.0.255,0.1.28.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,170,permit,tcp,10.180.120.0 0.0.0.255,213.36.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,180,permit,tcp,10.180.120.0 0.0.0.255,214.36.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,190,permit,tcp,10.180.120.0 0.0.0.255,214.36.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,200,permit,tcp,10.180.120.0 0.0.0.255,215.36.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,210,permit,tcp,10.180.120.0 0.0.0.255,215.36.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,220,permit,tcp,10.180.120.0 0.0.0.255,216.36.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,230,permit,tcp,10.180.120.0 0.0.0.255,216.36.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,240,permit,tcp,10.180.120.0 0.0.0.255,211.38.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,250,permit,tcp,10.180.120.0 0.0.0.255,211.38.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,260,permit,tcp,10.180.120.0 0.0.0.255,212.38.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,270,permit,tcp,10.180.120.0 0.0.0.255,212.38.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,280,permit,tcp,10.180.120.0 0.0.0.255,213.38.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,290,permit,tcp,10.180.120.0 0.0.0.255,213.38.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,300,permit,tcp,10.180.120.0 0.0.0.255,214.38.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,310,permit,tcp,10.180.120.0 0.0.0.255,214.38.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,320,permit,tcp,10.180.120.0 0.0.0.255,215.38.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,330,permit,tcp,10.180.120.0 0.0.0.255,215.38.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,340,permit,tcp,10.180.120.0 0.0.0.255,216.38.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,350,permit,tcp,10.180.120.0 0.0.0.255,216.38.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,360,permit,tcp,10.180.120.0 0.0.0.255,211.43.0 0.0.0.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,370,permit,tcp,10.180.120.0 0.0.0.255,211.43.0 0.0.0.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,380,permit,tcp,10.180.120.0 0.0.0.255,212.43.0 0.0.0.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,390,permit,tcp,10.180.120.0 0.0.0.255,212.43.0 0.0.0.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,400,permit,tcp,10.180.120.0 0.0.0.255,213.43.0 0.0.0.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,410,permit,tcp,10.180.120.0 0.0.0.255,213.43.0 0.0.0.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,420,permit,tcp,10.180.120.0 0.0.0.255,214.43.0 0.0.0.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,430,permit,tcp,10.180.120.0 0.0.0.255,214.43.0 0.0.0.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,440,permit,tcp,10.180.120.0 0.0.0.255,215.43.0 0.0.0.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,450,permit,tcp,10.180.120.0 0.0.0.255,215.43.0 0.0.0.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,460,permit,tcp,10.180.120.0 0.0.0.255,216.43.0 0.0.0.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,470,permit,tcp,10.180.120.0 0.0.0.255,216.43.0 0.0.0.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,480,permit,tcp,10.180.120.0 0.0.0.255,211.66.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,490,permit,tcp,10.180.120.0 0.0.0.255,211.66.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,500,permit,tcp,10.180.120.0 0.0.0.255,212.66.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,510,permit,tcp,10.180.120.0 0.0.0.255,212.66.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,520,permit,tcp,10.180.120.0 0.0.0.255,213.66.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,530,permit,tcp,10.180.120.0 0.0.0.255,213.66.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,540,permit,tcp,10.180.120.0 0.0.0.255,214.66.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,550,permit,tcp,10.180.120.0 0.0.0.255,214.66.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,560,permit,tcp,10.180.120.0 0.0.0.255,215.66.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,570,permit,tcp,10.180.120.0 0.0.0.255,215.66.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,580,permit,tcp,10.180.120.0 0.0.0.255,216.66.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,590,permit,tcp,10.180.120.0 0.0.0.255,216.66.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,600,permit,tcp,10.180.120.0 0.0.0.255,1.216.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,610,permit,tcp,10.180.120.0 0.0.0.255,1.216.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,620,permit,tcp,10.180.120.0 0.0.0.255,2.216.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,630,permit,tcp,10.180.120.0 0.0.0.255,2.216.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,640,permit,tcp,10.180.120.0 0.0.0.255,3.216.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,650,permit,tcp,10.180.120.0 0.0.0.255,3.216.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,660,permit,tcp,10.180.120.0 0.0.0.255,4.216.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,670,permit,tcp,10.180.120.0 0.0.0.255,4.216.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,680,permit,tcp,10.180.120.0 0.0.0.255,5.216.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,690,permit,tcp,10.180.120.0 0.0.0.255,5.216.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,700,permit,tcp,10.180.120.0 0.0.0.255,6.216.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,710,permit,tcp,10.180.120.0 0.0.0.255,6.216.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,720,permit,tcp,10.180.120.0 0.0.1.255,0.200.0 0.0.1.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,730,permit,tcp,10.180.120.0 0.0.1.255,0.200.0 0.0.1.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,740,permit,tcp,10.180.120.0 0.0.1.255,0.200.0 0.0.1.255,8080
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,750,permit,tcp,10.180.120.0 0.0.1.255,0.200.0 0.0.1.255,7072
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,760,permit,tcp,10.180.120.0 0.0.1.255,0.200.0 0.0.1.255,22
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,770,permit,tcp,10.180.120.0 0.0.0.255,host 212.36.187.235,45454
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,780,permit,tcp,10.180.120.0 0.0.0.255,host 212.36.187.239,45454
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,790,permit,tcp,10.180.120.0 0.0.0.255,host 212.36.187.241,45454
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,800,permit,tcp,10.180.120.0 0.0.0.255,220.43.0 0.0.0.255,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,810,permit,tcp,10.180.120.0 0.0.0.255,220.43.0 0.0.0.255,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,820,permit,tcp,10.180.120.0 0.0.0.255,220.43.0 0.0.0.255,8080
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,830,permit,tcp,10.180.120.0 0.0.0.255,host 10.180.66.20,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,840,permit,tcp,10.180.120.0 0.0.0.255,host 10.180.38.80,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,850,permit,tcp,10.180.120.0 0.0.0.255,host 10.180.66.10,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,860,permit,tcp,10.180.120.0 0.0.0.255,host 10.181.4.100,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,870,permit,tcp,10.180.120.0 0.0.0.255,host 10.180.37.191,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,880,permit,tcp,10.180.120.0 0.0.0.255,host 10.1.29.232,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,890,permit,tcp,10.180.120.0 0.0.0.255,host 10.120.66.30,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,900,permit,tcp,10.180.120.0 0.0.0.255,host 10.120.149.229,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,910,permit,tcp,10.180.120.0 0.0.0.255,host 10.120.66.20,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,920,permit,tcp,10.180.120.0 0.0.0.255,host 10.120.67.51,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,930,permit,tcp,10.180.120.0 0.0.0.255,host 10.120.66.90,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,940,permit,tcp,10.180.120.0 0.0.0.255,host 10.180.66.120,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,950,permit,tcp,10.180.120.0 0.0.0.255,host 10.181.4.170,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,960,permit,tcp,10.180.120.0 0.0.0.255,host 10.201.230.17,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,970,permit,tcp,10.180.120.0 0.0.0.255,host 10.1.29.43,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,980,permit,tcp,10.180.120.0 0.0.0.255,host 10.1.29.115,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,990,permit,tcp,10.180.120.0 0.0.0.255,host 10.241.4.125,443
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1000,permit,tcp,10.180.120.0 0.0.0.255,host 10.180.66.110,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1010,permit,tcp,10.180.120.0 0.0.0.255,host 10.110.168.20,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1020,permit,tcp,10.180.120.0 0.0.0.255,host 10.180.169.140,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1030,permit,tcp,10.180.120.0 0.0.0.255,host 10.120.72.20,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1040,permit,tcp,10.180.120.0 0.0.0.255,host 10.121.4.108,www
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1050,deny,ip,10.180.120.0 0.0.0.255,168.0.0 0.0.255.255,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1060,deny,ip,10.180.120.0 0.0.0.255,2.16.0.0 0.15.255.255,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1070,deny,ip,10.180.120.0 0.0.0.255,0.0.0.0 0.255.255.255,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1080,permit,tcp,10.180.120.0 0.0.0.255,any,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1090,permit,udp,10.180.120.0 0.0.0.255,any,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1100,permit,ip,10.180.120.0 0.0.0.255,any,
+gib-wp6-vacc1,FROM-GIB-TEST-WIFI,Extended,1110,deny,ip,any,any,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,5,permit,ip,host 10.180.25.172,host 10.180.163.112,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,10,permit,ip,host 10.180.25.172,0.25.168 0.0.0.7,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,11,permit,ip,host 10.180.25.172,host 10.180.193.235,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,12,permit,ip,host 10.180.25.172,host 10.180.193.236,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,14,permit,ip,host 10.180.25.172,host 10.180.163.74,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,15,permit,ip,host 10.180.25.172,host 10.180.163.61,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,16,permit,ip,host 10.180.25.172,host 10.180.163.62,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,17,permit,ip,host 10.180.25.172,host 10.180.163.63,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,18,permit,ip,host 10.180.25.172,host 10.180.163.64,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,20,deny,ip,host 10.180.25.172,180.0.0 0.0.255.255,
+gib-wp6-vacc1,acl-darktrace-mgmt-in,Extended,30,permit,ip,any,any,
+gib-wp6-vacc1,acl-wifi-testing,Extended,10,permit,udp,any,host 10.1.34.10,domain
+gib-wp6-vacc1,acl-wifi-testing,Extended,20,permit,udp,any,host 10.64.72.10,domain
+gib-wp6-vacc1,acl-wifi-testing,Extended,30,permit,udp,host 10.1.103.10,host 10.1.34.10,bootps
+gib-wp6-vacc1,acl-wifi-testing,Extended,40,permit,udp,host 10.1.103.10,host 10.64.72.10,bootps
+gib-wp6-vacc1,acl-wifi-testing,Extended,50,permit,ip,any,host 10.1.28.22,
+gib-wp6-vacc1,acl-wifi-testing,Extended,60,permit,icmp,any,host 10.1.28.22,
+gib-wp6-vacc1,acl-wifi-testing,Extended,70,deny,ip,any,any,
+gib-wp6-vacc1,1,Standard,10,permit,,10.120.163.210,,,
+gib-wp6-vacc1,1,Standard,20,permit,,10.1.74.66,,,
+gib-wp6-vacc1,1,Standard,30,permit,,10.112.12.126,,,
+gib-wp6-vacc1,1,Standard,40,permit,,10.112.12.125,,,
+gib-wp6-vacc1,1,Standard,50,permit,,10.180.163.18,,,
+gib-wp6-vacc1,1,Standard,60,permit,,10.120.163.151,,,
+gib-wp6-vacc1,1,Standard,70,permit,,10.210.163.60,,,
+gib-wp6-vacc1,1,Standard,80,permit,,10.120.163.152,,,
+gib-wp6-vacc1,1,Standard,90,permit,,10.1.74.29,,,
+gib-wp6-vacc1,1,Standard,100,permit,,10.120.163.143,,,
+gib-wp6-vacc1,1,Standard,110,permit,,10.120.163.142,,,
+gib-wp6-vacc1,1,Standard,120,permit,,10.112.13.17,,,
+gib-wp6-vacc1,1,Standard,130,permit,,10.1.74.48,,,
+gib-wp6-vacc1,1,Standard,140,permit,,10.1.74.57,,,
+gib-wp6-vacc1,1,Standard,150,permit,,10.1.74.61,,,
+gib-wp6-vacc1,1,Standard,160,permit,,10.120.163.123,,,
+gib-wp6-vacc1,1,Standard,170,permit,,10.120.163.122,,,
+gib-wp6-vacc1,1,Standard,180,permit,,10.120.195.31,,,
+gib-wp6-vacc1,1,Standard,190,permit,,10.120.143.70,,,
+gib-wp6-vacc1,1,Standard,200,permit,,10.1.74.128,,,
+gib-wp6-vacc1,1,Standard,210,permit,,10.180.142.230,,,
+gib-wp6-vacc1,1,Standard,220,permit,,10.112.12.144,,,
+gib-wp6-vacc1,1,Standard,230,permit,,10.120.163.37,,,
+gib-wp6-vacc1,1,Standard,240,permit,,10.112.12.142,,,
+gib-wp6-vacc1,1,Standard,250,permit,,10.112.12.143,,,
+gib-wp6-vacc1,1,Standard,260,permit,,10.1.82.64 0.0.0.31,,,
+gib-wp6-vacc1,1,Standard,270,permit,,10.1.22.0 0.0.0.255,,,
+gib-wp6-vacc1,1,Standard,280,permit,,192.168.2.0 0.0.1.255,,,
+gib-wp6-vacc1,1,Standard,290,permit,,10.210.141.40 0.0.0.7,,,
+gib-wp6-vacc1,1,Standard,300,permit,,10.180.141.40 0.0.0.7,,,
+gib-wp6-vacc1,1,Standard,310,permit,,10.120.141.40 0.0.0.7,,,
+gib-wp6-vacc1,1,Standard,320,permit,,100.79.0.0 0.0.127.255,,,
+gib-wp6-vacc1,1,Standard,330,deny,,any log,,,
+gib-wp6-vacc1,10,Standard,30,permit,,10.120.163.210,,,
+gib-wp6-vacc1,10,Standard,70,permit,,10.112.12.126,,,
+gib-wp6-vacc1,10,Standard,60,permit,,10.112.12.125,,,
+gib-wp6-vacc1,10,Standard,50,permit,,10.120.163.123,,,
+gib-wp6-vacc1,10,Standard,40,permit,,10.120.163.122,,,
+gib-wp6-vacc1,10,Standard,10,permit,,10.120.163.59,,,
+gib-wp6-vacc1,10,Standard,20,permit,,10.110.163.59,,,
+gib-wp6-vacc1,11,Standard,14,permit,,10.112.12.126,,,
+gib-wp6-vacc1,11,Standard,13,permit,,10.112.12.125,,,
+gib-wp6-vacc1,11,Standard,10,permit,,10.120.136.140,,,
+gib-wp6-vacc1,11,Standard,12,permit,,10.120.163.123,,,
+gib-wp6-vacc1,11,Standard,11,permit,,10.120.163.122,,,
+gib-wp6-vacc1,11,Standard,20,permit,,10.50.3.140,,,
+gib-wp6-vacc1,11,Standard,30,deny,,any log,,,
+gib-wp6-vacc1,12,Standard,10,permit,,10.180.163.13,,,
+gib-wp6-vacc1,12,Standard,20,permit,,10.180.163.15,,,
+gib-wp6-vacc1,12,Standard,30,permit,,10.180.163.112,,,
+gib-wp6-vacc1,12,Standard,40,permit,,10.180.163.111,,,
+gib-wp6-vacc1,12,Standard,50,permit,,10.1.14.0 0.0.0.255,,,
+gib-wp6-vacc1,14,Standard,10,permit,,10.180.129.202,,,
+gib-wp6-vacc1,14,Standard,20,permit,,10.180.129.201,,,
+gib-wp6-vacc1,19,Standard,10,permit,,172.16.41.192 0.0.0.31,,,
+gib-wp6-vacc1,19,Standard,20,permit,,10.1.82.64 0.0.0.31,,,
+gib-wp6-vacc1,20,Standard,10,permit,,10.180.163.120,,,
+gib-wp6-vacc1,22,Standard,10,permit,,10.112.12.119,,,
+gib-wp6-vacc1,22,Standard,40,permit,,10.210.143.80,,,
+gib-wp6-vacc1,22,Standard,30,permit,,10.120.143.80,,,
+gib-wp6-vacc1,22,Standard,20,permit,,10.180.142.232,,,

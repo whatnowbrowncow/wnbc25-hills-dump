@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-bfa-as03-f01,netadmin,15,secret,5,$1$4DeB$iZp07pNeeAajMUlCkFSS6.
+uk-bfa-as03-f01,svcnetworkauto,15,secret,5,$1$1gr9$poeqpddRuMLgye8ClUiGr/

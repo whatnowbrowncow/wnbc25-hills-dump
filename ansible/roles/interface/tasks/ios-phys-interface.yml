@@ -1,0 +1,27 @@
+---
+
+## Create directory structure in case it doesn't already exist.
+- file:
+    path: roles/interface/configs/{{ inventory_hostname }}
+    state: directory
+
+#- name: Debug interface list
+#  debug:
+#    msg: "{{ item }}"
+#  with_items:
+#    - "{{ interfaces }}"
+
+- name: Generate interfaces configurations
+  template:
+    src: "ios-phys-interface_list.j2"
+    dest: "roles/interface/configs/{{ inventory_hostname }}/{{ item.type}}_{{ item.mod }}{{ item.port}}.cfg"
+  with_items:
+    - "{{ interfaces }}"
+    
+
+- name: "Deploy interfaces to {{ inventory_hostname }}"
+  ios_config:
+    src: "roles/interface/configs/{{ inventory_hostname }}/{{ item.type}}_{{ item.mod }}{{ item.port}}.cfg"
+  with_items:
+    - "{{ interfaces }}"
+    

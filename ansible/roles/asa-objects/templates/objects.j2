@@ -1,0 +1,10 @@
+{% for object in objects %}
+object network ld6-{{ object.name }}
+{# Check if object type is network #}
+{% if object.type == "network" %}
+ subnet {{ object.ip_addr }} {{ object.netmask}}
+{# Check if object type is a host #}
+{% elif object.type == "host" %}
+ host {{ object.ip_addr }}
+{% endif %}
+{% endfor %}

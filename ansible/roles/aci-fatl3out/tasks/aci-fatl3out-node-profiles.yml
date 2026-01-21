@@ -1,0 +1,26 @@
+--- 
+
+- name: Create Logical Node Profiles (fatl3out task 3)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.fatl3out }}/lnodep-{{ item.np }}_np.json"
+    content:
+      {
+        "l3extLNodeP": {
+          "attributes": {
+            "dn": "uni/tn-{{ item.tenant }}/out-{{ item.fatl3out }}/lnodep-{{ item.np }}_np",
+            "name": "{{ item.np }}_np",
+            "rn": "lnodep-{{ item.np }}_np",
+            "status": "created,modified"
+          },
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ node_profiles }}"
+
+- name: Move to Create Logical Interface Profiles
+  include_tasks: ./aci-fatl3out-interface-profiles.yml

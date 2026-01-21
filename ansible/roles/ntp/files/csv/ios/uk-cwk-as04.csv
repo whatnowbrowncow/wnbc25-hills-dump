@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+uk-cwk-as04,10.120.193.235,,no,Vlan98
+uk-cwk-as04,10.210.193.235,,no,Vlan98
+uk-cwk-as04,10.120.193.236,,no,Vlan98
+uk-cwk-as04,10.210.193.236,,no,Vlan98

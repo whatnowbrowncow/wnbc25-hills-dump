@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface,source vrf
+uk-ld6-cr02-new,10.120.163.19,management,yes,MgmtEth0/RSP0/CPU0/0,management
+uk-ld6-cr02-new,10.120.163.20,management,no,MgmtEth0/RSP0/CPU0/0,management

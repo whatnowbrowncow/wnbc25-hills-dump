@@ -1,0 +1,34 @@
+# {{ inventory_hostname }}
+
+## Facts
+
+Model:  {{ ansible_net_model }}
+
+Serial Number: {{ ansible_net_serialnum }}
+
+OS Version:   {{ ansible_net_version }}
+
+
+## Table of device facts
+
+| Fact | Value |
+|----------|----------|
+| Model | {{ ansible_net_model }} |
+| Serial Number | {{ ansible_net_serialnum }} |
+| OS Version | {{ ansible_net_version }} |
+
+
+## Neighbors
+
+| Device | Local Interface | Neighbor | Neighbor Interface |
+|--------|-----------------|----------|--------------------|
+{% for interface, neighbors in ansible_net_neighbors.items() %}
+{% for neighbor in neighbors %}
+| {{ inventory_hostname }} | {{ interface }} | {{ neighbor.host }} | {{ neighbor.port }} |
+{% endfor %}
+{% endfor %}
+
+## Interface List
+{% for interface in ansible_net_interfaces.keys() %}
+  - {{ interface }}
+{% endfor %}

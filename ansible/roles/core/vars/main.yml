@@ -1,0 +1,79 @@
+---
+
+#provider_cli:
+#  username: agittins
+#  password: !vault |
+#          $ANSIBLE_VAULT;1.1;AES256
+#          31303763306236316665626562303031356263393166383765326264366331643061373566663733
+#          3864316335353131393963376565633730393639656364640a396162666135653962313063633462
+#          61383038343166393936356535316232633461613130383133626333626431343264333832623238
+#          3761393433663061620a646233306332303163333839623230323664366230343031613732643732
+#          35616631353131363136393030623066666634313837333663356431653439346162
+#  host: "{{ ansible_host }}"
+#
+#snmp:
+#  communities:
+#    - community: "m0squ1t0"
+#      snmp_svr: "10.120.163.59"
+#      type: "ro"
+#      acl: "10"
+#    - community: "wh1LLc0rp"
+#      snmp_svr: "10.120.163.59"
+#      type: "rw"
+#      acl: "11"
+#    - community: "n1m50ft"
+#      snmp_svr: "10.120.163.59"
+#      type: "ro"
+#      acl: "12"
+#
+#line_vty:
+#  line_num:
+#    - "0 4"
+#    - "5 15"
+#  vty_acl: "1"
+#  timeout_mins: "15"
+#  transport_input: "ssh"
+#
+#ssh:
+#  ssh_timeout: "5"
+#  ssh_ver: "2"
+#
+#
+#local_admin:
+#  name: "netadmin"
+#  secret_5: "$1$0z2p$jbtbcHYIh7rq7MdERPNjp/"
+#
+#
+#enable_secret_5: "$1$sYrB$EJIkMToVDrVW6JL0b96WW."
+#
+#
+#aaa:
+#  group:
+#    - name: "WH-ACS-TACACS"
+#      type: "tacacs+"
+#      vrf: "group-vrf"
+#      source_int: "Loopback20"
+#      server_list:
+#        - name: SCC-ACS
+#          type: tacacs
+#          addr: "10.120.163.26"
+#          key_7 : "023F014A2A282519646602183C27015806"
+#        - name: BRS-ACS
+#          type: tacacs
+#          addr: "10.210.163.26"
+#          key_7 : "04620E172E0F667621310E162B3B1F5720"
+#
+#ntp:
+#  source_int: "Loopback20"
+#  server:
+#    - vrf: "group-vrf"
+#      addr: "10.120.163.20"
+#    - vrf: "group-vrf"
+#      addr: "10.120.163.20"
+#      
+#boot_image:
+#  #Ordered list
+#  - c6880x-adventerprisek9-mz.SPA.152-1.SY4.bin
+#  - c6880x-adventerprisek9-mz.SPA.152-1.SY2.bin
+#  
+#

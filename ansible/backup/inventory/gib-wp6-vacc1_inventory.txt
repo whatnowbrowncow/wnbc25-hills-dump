@@ -1,0 +1,68 @@
+NAME: "1", DESCR: "WS-C3750V2-48PS"
+PID: WS-C3750V2-48PS-S , VID: V09  , SN: FDO1634X21F
+
+NAME: "GigabitEthernet1/0/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: AGM120716GR     
+
+NAME: "GigabitEthernet1/0/2", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: OPA12254772     
+
+NAME: "GigabitEthernet1/0/3", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: FNS16310HX9     
+
+NAME: "GigabitEthernet1/0/4", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: AGM1602L8HV     
+
+NAME: "2", DESCR: "WS-C3750V2-48PS"
+PID: WS-C3750V2-48PS-S , VID: V09  , SN: FDO1634X203
+
+NAME: "GigabitEthernet2/0/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: FNS16310JC1     
+
+NAME: "GigabitEthernet2/0/2", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: AGM1602L8JD     
+
+NAME: "GigabitEthernet2/0/3", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: FNS16311Q52     
+
+NAME: "GigabitEthernet2/0/4", DESCR: "10/100/1000BaseTX SFP"
+PID: Unspecified       , VID:      , SN: MTC130802FF     
+
+NAME: "3", DESCR: "WS-C3750V2-48PS"
+PID: WS-C3750V2-48PS-S , VID: V09  , SN: FDO1634X1Z0
+
+NAME: "GigabitEthernet3/0/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: FNS16310JCU     
+
+NAME: "GigabitEthernet3/0/2", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: OPA12254471     
+
+NAME: "GigabitEthernet3/0/3", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD          , VID: V01  , SN: FNS17511RV9     
+
+NAME: "GigabitEthernet3/0/4", DESCR: "10/100/1000BaseTX SFP"
+PID: Unspecified       , VID:      , SN: MTC130802GG     
+
+NAME: "4", DESCR: "WS-C3750V2-48PS"
+PID: WS-C3750V2-48PS-S , VID: V09  , SN: FDO1634X26N
+
+NAME: "GigabitEthernet4/0/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: AGM120713BY     
+
+NAME: "GigabitEthernet4/0/2", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD          , VID: V01  , SN: FNS17511U8V     
+
+NAME: "GigabitEthernet4/0/4", DESCR: "10/100/1000BaseTX SFP"
+PID: GLC-TE              , VID: V01  , SN: AVC2217247F     
+
+NAME: "5", DESCR: "WS-C3750V2-48PS"
+PID: WS-C3750V2-48PS-S , VID: V09  , SN: FDO1627X0DD
+
+NAME: "GigabitEthernet5/0/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: AGM115016Q0     
+
+NAME: "GigabitEthernet5/0/3", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: AGM120715GX     
+
+NAME: "GigabitEthernet5/0/4", DESCR: "10/100/1000BaseTX SFP"
+PID: GLC-TE              , VID: V01  , SN: AVC2217248T

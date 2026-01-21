@@ -1,0 +1,10 @@
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_in }} seq 100 deny 0.0.0.0/0 le 32
+!
+{% for net in item.value.THRDPTY_to_WH_PFX_filter_out_permit_nets %}
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} permit {{ net }}
+{% endfor %}
+
+{% for net in item.value.THRDPTY_to_WH_PFX_filter_out_deny_nets %}
+ip prefix-list {{ item.value.THRDPTY_to_WH_PFX_filter_out }} seq 1000 deny {{ net }} le 32
+{% endfor %}
+!

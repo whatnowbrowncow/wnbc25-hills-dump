@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+lsj_f3al_pod,netsec,15,secret,5,$1$owin$tGrn08hZGGvd6WRfUwZGE.
+lsj_f3al_pod,netadmin,15,secret,5,$1$RzQt$GZOXbF28i/csH51nqd06j0
+lsj_f3al_pod,svcnetworkauto,15,secret,5,$1$R6x0$/wCt/61jXq0PyiT/fcVPk.

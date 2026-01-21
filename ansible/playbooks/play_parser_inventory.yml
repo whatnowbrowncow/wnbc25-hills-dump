@@ -1,0 +1,26 @@
+---
+
+- name: PLAY - IOS inventory parser 
+  hosts: ios
+  gather_facts: no
+  connection: network_cli
+
+
+  roles:
+    - ansible-network.network-engine
+
+  tasks:
+  - name: Collect inventory info
+    ios_command:
+      commands:
+        - show inventory
+    register: ios_inventory_output
+
+  - name: Display output
+    debug: var=ios_inventory_output.stdout
+
+  - name: Parse output
+    command_parser:
+      file: "parser_templates/ios/show_inventory.yml"
+      content: "{{ ios_inventory_output.stdout.0 }}"
+

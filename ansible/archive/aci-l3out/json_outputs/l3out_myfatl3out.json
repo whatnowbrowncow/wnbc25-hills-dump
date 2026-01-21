@@ -1,0 +1,26 @@
+"l3extOut": {
+    "attributes": {
+        "dn": "uni/tn-ant-tenant/out-myfatl3out",
+        "name": "myfatl3out",
+        "rn": "out-myfatl3out",
+        "status": "created,modified"
+    },
+    "children": [{
+        "l3extRsEctx": {
+            "attributes": {
+                "tnFvCtxName": "ant-vrf",
+                "status": "created,modified"
+            },
+            "children": []
+        }
+    },
+    {
+        "l3extRsL3DomAtt": {
+            "attributes": {
+                "tDn": "uni/l3dom-core-router",
+                "status": "created,modified"
+            },
+            "children": []
+        }
+    }]
+}

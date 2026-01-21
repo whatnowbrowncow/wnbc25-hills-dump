@@ -1,0 +1,45 @@
+"l3extLNodeP": {
+    "attributes": {
+        "descr": "",
+        "dn": "uni/tn-ant-tenant/out-myfatl3out/lnodep-myfatl3out_np",
+        "name": "myfatl3out_np",
+        "status": "created,modified"
+    },
+    "children": [
+    {
+        "l3extRsNodeL3OutAtt": {
+            "attributes": {
+                "dn": "uni/tn-ant-tenant/out-myfatl3out/lnodep-myfatl3out_np/rsnodeL3OutAtt-[topology/pod-1/node-101]",
+                "rtrId": "101.101.101.101",
+                "rtrIdLoopBack": "no",
+                "tDn": "topology/pod-1/node-101"
+            },
+            "children": [{
+                "l3extInfraNodeP": {
+                    "attributes": {
+                        "fabricExtCtrlPeering": "false",
+                        "status": "created,modified"
+                    }
+                }
+            }]
+        }
+    },
+    {
+        "l3extRsNodeL3OutAtt": {
+            "attributes": {
+                "dn": "uni/tn-ant-tenant/out-myfatl3out/lnodep-myfatl3out_np/rsnodeL3OutAtt-[topology/pod-1/node-102]",
+                "rtrId": "102.102.102.102",
+                "rtrIdLoopBack": "no",
+                "tDn": "topology/pod-1/node-102"
+            },
+            "children": [{
+                "l3extInfraNodeP": {
+                    "attributes": {
+                        "fabricExtCtrlPeering": "false",
+                        "status": "created,modified"
+                    }
+                }
+            }]
+        }
+    },
+]}

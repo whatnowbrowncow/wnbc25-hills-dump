@@ -1,0 +1,16 @@
+Port-channel21.3004: {admin-state: up, interface: Port-channel21.3004, ip-add: 10.214.132.1,
+  nameif: applications-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3005: {admin-state: up, interface: Port-channel21.3005, ip-add: 10.214.133.1,
+  nameif: db-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3009: {admin-state: up, interface: Port-channel21.3009, ip-add: 10.214.136.1,
+  nameif: proxy-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3010: {admin-state: up, interface: Port-channel21.3010, ip-add: 10.214.137.1,
+  nameif: backoffice-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3020: {admin-state: up, interface: Port-channel21.3020, ip-add: 10.214.140.1,
+  nameif: Stingray-ADS-Management, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3033: {admin-state: up, interface: Port-channel21.3033, ip-add: 10.214.143.33,
+  nameif: sftp-int-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3034: {admin-state: up, interface: Port-channel21.3034, ip-add: 10.214.143.65,
+  nameif: sftp-ext-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.3075: {admin-state: up, interface: Port-channel21.3075, ip-add: 10.214.160.164,
+  nameif: pp2on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

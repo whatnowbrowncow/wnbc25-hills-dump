@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+LSJ_F4AL_SW1,0 4,,,5 0,044C03285A605E7A3E,telnet ssh,,no,
+LSJ_F4AL_SW1,5 15,,,5 0,105901375056003F3B,telnet ssh,,no,

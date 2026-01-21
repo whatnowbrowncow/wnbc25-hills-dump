@@ -1,0 +1,5 @@
+hostname,local_interface,remote_device_description
+lsj_f5c1_sw1,GigabitEthernet4/0/7,IP_Phone_SEP68CAE461EC94-Port1
+lsj_f5c1_sw1,GigabitEthernet4/0/25,IP_Phone_SEP68CAE461EDAC-Port1
+lsj_f5c1_sw1,GigabitEthernet4/0/39,SEP10B3D5CD53F8-Eth0
+lsj_f5c1_sw1,GigabitEthernet4/0/45,IP_Phone_SEP00082F1AF69F-Port1

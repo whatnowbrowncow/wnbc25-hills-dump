@@ -1,0 +1,11 @@
+NAME: "c3xxx Stack", DESCR: "c3xxx Stack"
+PID: WS-C3650-24TS     , VID: V03  , SN: FDO2012E04Q
+
+NAME: "Switch 1", DESCR: "WS-C3650-24TS"
+PID: WS-C3650-24TS     , VID: V03  , SN: FDO2012E04Q
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-250WAC     , VID: V02  , SN: LIT2006064T
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C2-250WAC     , VID: V02  , SN: LIT2006025S

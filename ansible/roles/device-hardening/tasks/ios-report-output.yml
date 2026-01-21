@@ -1,0 +1,21 @@
+---
+# Create local files directory if it does not exist
+- name: Create a directory if it does not exist
+  file:
+    path: "{{ log_files }}"
+    state: directory
+  check_mode: no
+  run_once: true
+  changed_when: false
+
+#Writing any changes to file
+- name: Output Changes to File
+  lineinfile:
+      insertbefore: BOF
+      line: "{{ lookup('pipe', 'date +%H:%M')}} | {{ item.split(',')[0] }}"
+      path: "{{ log_files }}/{{ inventory_hostname }}-{{ lookup('pipe', 'date +%d-%b-%Y') }}.cfg"
+      create: yes
+  when: "(iosconfig.changed == true)"
+  with_items:
+      - "{{ iosconfig.updates }}"
+  check_mode: no

@@ -1,0 +1,9 @@
+---
+
+- name: PLAY - Save Running-Config
+  hosts: ios,nxos,asa
+  gather_facts: no
+  connection: network_cli
+  
+  roles:
+    - x-save-configs

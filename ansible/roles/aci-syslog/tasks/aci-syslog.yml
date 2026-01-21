@@ -1,0 +1,203 @@
+---
+
+## Note: Ensure that your Out-of-Band -or- Inband Contracts permit UDP Port 514.
+## If you have not yet configured Out-of-band Management for your ACI Fabric, do that first.
+## Best instructions I have found on this:
+## https://unofficialaciguide.com/2018/08/11/configuring-syslog-for-aci/
+
+- name: Create a SYSLOG Destination
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/slgroup-{{ item.group }}.json"
+    content:
+      {
+        "syslogGroup": {
+          "attributes": {
+            "dn": "uni/fabric/slgroup-{{ item.group }}",
+            "name": "{{ item.group }}",
+            "rn": "slgroup-{{ item.group }}",
+          },
+          "children": [
+            {
+              "syslogConsole": {
+                "attributes": {
+                  "dn": "uni/fabric/slgroup-{{ item.group }}/console",
+                  "rn": "console",
+                }
+              }
+            },
+            {
+              "syslogFile": {
+                "attributes": {
+                  "dn": "uni/fabric/slgroup-{{ item.group }}/file",
+                  "rn": "file",
+                }
+              }
+            },
+            {
+              "syslogProf": {
+                "attributes": {
+                  "dn": "uni/fabric/slgroup-{{ item.group }}/prof",
+                  "rn": "prof",
+                }
+              }
+            },
+            {
+              "syslogRemoteDest": {
+                "attributes": {
+                  "dn": "uni/fabric/slgroup-{{ item.group }}/rdst-{{ item.ip_addr }}",
+                  "host": "{{ item.ip_addr }}",
+                  "name": "{{ item.name }}",
+                  "severity": "information",
+                  "rn": "rdst-{{ item.ip_addr }}",
+                },
+                "children": [
+                  {
+                    "fileRsARemoteHostToEpg": {
+                      "attributes": {
+                        "tDn": "uni/tn-mgmt/mgmtp-default/oob-default",
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }    
+    validate_certs: no
+  with_items:
+    - "{{ syslog }}"
+
+- name: Configure ACI SYSLOG Sources - Part 1/4 - Fabric-level (common)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/moncommon/slsrc-fabric-common-{{ item.group }}.json"
+    content:
+      {
+        "syslogSrc": {
+          "attributes": {
+            "dn": "uni/fabric/moncommon/slsrc-fabric-common-{{ item.group }}",
+            "name": "fabric-common-{{ item.group }}",
+            "minSev": "information",
+            "incl": "audit,events,faults,session",
+            "rn": "slsrc-fabric-common-{{ item.group }}",
+          },
+          "children": [
+            {
+              "syslogRsDestGroup": {
+                "attributes": {
+                  "tDn": "uni/fabric/slgroup-{{ item.group }}",
+                }
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ syslog }}"
+
+- name: Configure ACI SYSLOG Sources - Part 2/4 - Fabric-level (default)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/monfab-default/slsrc-fabric-default-{{ item.group }}.json"
+    content:
+      {
+        "syslogSrc": {
+          "attributes": {
+            "dn": "uni/fabric/monfab-default/slsrc-fabric-default-{{ item.group }}",
+            "name": "fabric-default-{{ item.group }}",
+            "incl": "audit,events,faults,session",
+            "minSev": "information",
+            "rn": "slsrc-fabric-default-{{ item.group }}",
+          },
+          "children": [
+            {
+              "syslogRsDestGroup": {
+                "attributes": {
+                  "tDn": "uni/fabric/slgroup-{{ item.group }}",
+                }
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ syslog }}"
+
+- name: Configure ACI SYSLOG Sources - Part 3/4 - Access-level
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/moninfra-default/slsrc-fabric-access-{{ item.group }}.json"
+    content:
+      {
+        "syslogSrc": {
+          "attributes": {
+            "dn": "uni/infra/moninfra-default/slsrc-fabric-access-{{ item.group }}",
+            "name": "fabric-access-{{ item.group }}",
+            "incl": "audit,events,faults,session",
+            "minSev": "information",
+            "rn": "slsrc-fabric-access-{{ item.group }}",
+          },
+          "children": [
+            {
+              "syslogRsDestGroup": {
+                "attributes": {
+                  "tDn": "uni/fabric/slgroup-{{ item.group }}",
+                }
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ syslog }}"
+
+- name: Configure ACI SYSLOG Sources - Part 4/4 - Tenant-level (Setup a default monitoring policy in common Tenant)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-common/monepg-default/slsrc-tenant-common-{{ item.group }}.json"
+    content:
+      {
+        "syslogSrc": {
+          "attributes": {
+            "dn": "uni/tn-common/monepg-default/slsrc-tenant-common-{{ item.group }}",
+            "name": "tenant-common-{{ item.group }}",
+            "incl": "audit,events,faults,session",
+            "minSev": "information",
+            "rn": "slsrc-tenant-common-{{ item.group }}",
+          },
+          "children": [
+            {
+              "syslogRsDestGroup": {
+                "attributes": {
+                  "tDn": "uni/fabric/slgroup-{{ item.group }}",
+                }
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items:
+    - "{{ syslog }}"
+
+#  when: item.tenant != "common"

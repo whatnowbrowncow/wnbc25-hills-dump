@@ -1,0 +1,6 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,BVI0,,,,,
+up,,Port-channel1.381,10.120.161.100,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.571,10.120.193.100,,group-vrf,255.255.255.224,100
+up,,Port-channel1.502,10.120.184.68,,wan-vrf,255.255.255.224,100
+up,,Port-channel1.507,10.109.1.66,,us-vrf,255.255.255.224,100

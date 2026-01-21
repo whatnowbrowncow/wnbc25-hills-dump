@@ -1,0 +1,14 @@
+---
+
+  - name: Generate SNMP configurations
+    hosts: all
+    connection: local
+    gather_facts: no
+    
+    tasks:
+    
+      - name: Generate configs for each OS
+        template:
+          src: "./templates/snmp/{{os}}.j2"
+          dest: "./config-outputs/snmp/{{ inventory_hostname }}.cfg"
+          

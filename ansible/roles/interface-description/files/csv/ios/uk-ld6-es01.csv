@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+uk-ld6-es01,Vlan1,no_data_in_cdp
+uk-ld6-es01,Vlan20,no_data_in_cdp

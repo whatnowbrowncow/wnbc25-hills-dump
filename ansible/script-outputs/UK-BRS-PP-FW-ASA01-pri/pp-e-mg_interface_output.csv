@@ -1,0 +1,10 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.137,10.1.94.36,,Corporate,255.255.255.224,100
+up,,Port-channel21.915,10.210.8.1,,HCI-Hypervisor-ILO,255.255.254.0,100
+up,,Port-channel21.916,10.210.10.1,,HCI-Hypervisor-Mgmt,255.255.254.0,100
+up,,Port-channel21.930,10.201.224.4,,PreProd-network-mgmt,255.255.255.224,100
+up,,Port-channel21.938,10.201.225.1,,PreProd-ILO,255.255.255.0,100
+up,,Port-channel21.939,10.201.226.1,,PreProd-server-mgmt,255.255.255.0,100
+up,,Port-channel21.941,10.201.239.100,,pp-external-vrf,255.255.255.224,100
+up,,Port-channel21.943,10.201.230.1,,PreProd-contx-mgmt,255.255.255.0,100
+ shutdown,,Port-channel21.944,,,PreProd-contx-frontend,,100

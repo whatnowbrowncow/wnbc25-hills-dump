@@ -1,0 +1,8 @@
+---
+
+- name: Generate qos configurations
+  template:
+    src: "qos.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/roles/core/configs/{{ inventory_hostname }}/qos.cfg"
+  tags:
+    - qos

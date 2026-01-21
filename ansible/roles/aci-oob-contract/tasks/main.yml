@@ -1,0 +1,5 @@
+---
+
+- name: Configure OOB Contract
+  include_tasks: ./aci-oob-contract.yml
+  when: ansible_network_os == "aci"

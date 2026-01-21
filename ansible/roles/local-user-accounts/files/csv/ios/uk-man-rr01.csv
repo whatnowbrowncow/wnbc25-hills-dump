@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-man-rr01,netsec,15,secret,5,$1$Suby$oHiLEl37ytDqxkqmcfSXP.
+uk-man-rr01,nessus,15,password,7,032E7F4F540E32454103110B1143215F452B38
+uk-man-rr01,netadmin,15,secret,5,$1$K5/5$pIU17mSB72F9rTH6yrUoQ.
+uk-man-rr01,svcnetworkauto,15,secret,5,$1$Tqvm$c0/6I..Sh1fwZQCCGqfWc.

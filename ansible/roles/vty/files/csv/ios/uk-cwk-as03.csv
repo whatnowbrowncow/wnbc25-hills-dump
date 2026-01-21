@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-cwk-as03,0 4,1,in,60 0,,ssh,none,yes,
+uk-cwk-as03,5 15,1,in,60 0,,ssh,none,yes,

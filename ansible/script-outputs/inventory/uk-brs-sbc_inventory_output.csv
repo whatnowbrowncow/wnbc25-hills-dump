@@ -1,0 +1,9 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-brs-sbc,Cisco ISR4431 Chassis,Chassis,ISR4431/K9,FCZ2215406V,V04
+uk-brs-sbc,Cisco ISR4431 Route Processor,module R0,ISR4431/K9,FOC2210733D,V04
+uk-brs-sbc,PVDM4-64 Voice DSP Module,PVDM subslot 0/4,PVDM4-64,FOC22115532,V02
+uk-brs-sbc,Front Panel 4 ports Gigabitethernet Module,NIM subslot 0/0,ISR4431-X-4x1GE,JAB092709EL,V01
+uk-brs-sbc,250W AC Power Supply for Cisco ISR4430,Power Supply Module 1,PWR-4430-AC,LIT21502ZVH,V02
+uk-brs-sbc,Cisco ISR4430 Fan Assembly,Fan Tray,ACS-4430-FANASSY,none,none
+uk-brs-sbc,Cisco ISR4431 Built-In NIM controller,module 0,ISR4431/K9,none,none
+uk-brs-sbc,Cisco ISR4431 Forwarding Processor,module F0,ISR4431/K9,none,none

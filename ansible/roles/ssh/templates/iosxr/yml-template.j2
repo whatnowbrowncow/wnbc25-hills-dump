@@ -1,0 +1,11 @@
+ssh:
+{% for item in iosxr_ssh_facts %}
+{% if item.ssh.vrf is none %}
+{% else %}
+  - vrf: "{{ item.ssh.vrf }}"
+{% endif %}
+{% if item.ssh.acl is none %}
+{% else %}
+    acl: "{{ item.ssh.acl }}"
+{% endif %}
+{% endfor %}

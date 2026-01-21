@@ -1,0 +1,19 @@
+{% for item in vty %}
+{% if item.line_template == "default" %}
+line {{ item.line_template }}
+{% else %}
+line template {{ item.line_template }}
+{% endif %}
+ timestamp disable
+ exec-timeout {{ item.exec_timeout }}
+ access-class {{ item.access_class_direction }} {{ item.access_class }}
+ transport input {{ item.transport_input }}
+{% if item.transport_output != "" %}
+ transport output {{ item.transport_output }}
+{% else %}
+{% endif %}
+{% endfor %}
+
+{% for item in vty_pools %}
+vty-pool {{ item.pool_name }} {{ item.line_range }} line-template {{ item.line_template }}
+{% endfor %}

@@ -1,0 +1,2 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+gib-wp6-cs01,0 4,1,in,15 0,,ssh,all,yes,

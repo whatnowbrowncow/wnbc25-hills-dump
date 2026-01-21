@@ -1,0 +1,10 @@
+---
+
+- name: "Perform Service Hardening on {{ inventory_hostname }}"
+  ios_config:
+    commands:
+      - "{{ item }}"
+    defaults: yes
+  with_items:
+    - "{{ service_hardening }}"
+

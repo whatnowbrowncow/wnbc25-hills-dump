@@ -1,0 +1,16 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show run object-group service"
+    network_os: asa
+
+- name: service object-group match pattern
+  pattern_match:
+    regex: "^object-group service \\S+"
+    match_all: yes
+    match_greedy: yes
+  export: yes
+  register: service_objects_groups
+

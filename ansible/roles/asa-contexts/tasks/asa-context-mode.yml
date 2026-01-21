@@ -1,0 +1,33 @@
+---
+
+- name: ASA - Collecting the ASA's context mode (single | multiple)
+  asa_command:
+    commands:
+      - "show mode"
+  register: mode
+  
+- name: ASA - Registering the ASA's context mode (single | multiple) as a variable
+  set_fact:
+    contextMODE: "{{ mode.stdout[0] | regex_search('mode:\\s+(?P<contextmode>\\S+)','\\g<contextmode>') }}"
+
+- name: ASA - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: ASA - Generating the 'hostname.yml' host var file (if not already present) and adding the 'context_mode:single|multiple' variable
+  template:
+    src: "{{ role_path }}/templates/context-mode-yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"
+    force: no
+
+- name: ASA - Adding the 'context_mode:single|multiple' variable (if not already present)
+  lineinfile:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"
+    regexp: '^context_mode:'
+    insertafter: '^---'
+    line: "context_mode: {{ contextMODE[0] }}"
+
+- name: ASA - Refreshing the host variables for subsequent task evaluations
+  include_vars:
+    file: "{{ inventory_dir}}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"

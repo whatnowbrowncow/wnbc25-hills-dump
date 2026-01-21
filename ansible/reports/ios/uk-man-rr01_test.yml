@@ -1,0 +1,29 @@
+---
+# BEGIN LOCAL ACCOUNT INFORMATION
+local_usr_accts:
+  - username: "netsec"
+    privilege: "15"
+    password_type: "secret"
+    encryption: "5"
+    password_string: "$1$Suby$oHiLEl37ytDqxkqmcfSXP."
+  - username: "nessus"
+    privilege: "15"
+    password_type: "password"
+    encryption: "7"
+    password_string: "032E7F4F540E32454103110B1143215F452B38"
+  - username: "netadmin"
+    privilege: "15"
+    password_type: "secret"
+    encryption: "5"
+    password_string: "$1$cwn1$xwKutIjk2mPXp6psS.BMr1"
+# END LOCAL ACCOUNT INFORMATION
+
+
+snmp:
+  - name: "Solarwinds"
+    comm_str: "S0l@rw1nd5"
+    ips:
+    - ip_addr: "10.120.163.122"
+    - ip_addr: "10.120.163.123"
+    - ip_addr: "10.112.12.125"
+    - ip_addr: "10.112.12.126"

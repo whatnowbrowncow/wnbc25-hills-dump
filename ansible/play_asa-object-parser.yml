@@ -1,0 +1,9 @@
+---
+
+- name: PLAY - Parse, report  object and group configuration
+  hosts: asa
+  gather_facts: no
+  connection: network_cli
+
+  roles:
+    - asa-object-creator

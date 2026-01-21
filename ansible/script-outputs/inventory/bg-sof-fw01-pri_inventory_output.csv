@@ -1,0 +1,3 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+bg-sof-fw01-pri,ASA/IPS 180W AC Power Supply,power supply,ASA-180W-PWR-AC,DTN153182UV,V03
+bg-sof-fw01-pri,ASA 5520 Adaptive Security Appliance,Chassis,ASA5520,JMX1541X1MQ,V08

@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-mtk-ar01,netsec,15,secret,4,8Kb2slRmQI6xd7qwkxLjCRKlIHuVOj1ax/8vyMkB6Tg
+uk-mtk-ar01,netadmin,15,secret,4,mKij449iJ8grD6NGYBhUQKZtDNnBt203/Qu7AyDAEXc
+uk-mtk-ar01,svcnetworkauto,15,secret,4,vvhhtIPAqxiJjbycSPTNazk4qwXF2yqCsZCDYzkVTHs

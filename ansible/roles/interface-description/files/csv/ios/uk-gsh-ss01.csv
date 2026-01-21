@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+uk-gsh-ss01,GigabitEthernet1/0/7,no_data_in_cdp
+uk-gsh-ss01,GigabitEthernet1/0/14,no_data_in_cdp

@@ -1,0 +1,32 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-bfa-as01-f02,SFP-10GBase-SR,Te4/1/3,SFP-10G-SR,AVD2125992E,V03
+uk-bfa-as01-f02,SFP-10GBase-SR,Te1/1/3,SFP-10G-SR,AVD2125994A,V03
+uk-bfa-as01-f02,StackAdapter1/1,StackAdapter1/1,C3650-STACK,FDO21390EHX,V01
+uk-bfa-as01-f02,StackAdapter1/2,StackAdapter1/2,C3650-STACK,FDO21390EXC,V01
+uk-bfa-as01-f02,StackAdapter3/2,StackAdapter3/2,C3650-STACK,FDO21390F25,V01
+uk-bfa-as01-f02,StackAdapter4/2,StackAdapter4/2,C3650-STACK,FDO21390F2V,V01
+uk-bfa-as01-f02,StackAdapter4/1,StackAdapter4/1,C3650-STACK,FDO21390FJZ,V01
+uk-bfa-as01-f02,StackAdapter3/1,StackAdapter3/1,C3650-STACK,FDO21390G73,V01
+uk-bfa-as01-f02,StackAdapter2/2,StackAdapter2/2,C3650-STACK,FDO21390GZB,V01
+uk-bfa-as01-f02,StackAdapter2/1,StackAdapter2/1,C3650-STACK,FDO21390H19,V01
+uk-bfa-as01-f02,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2141E2E6,V05
+uk-bfa-as01-f02,WS-C3650-48PD-S,Switch 4,WS-C3650-48PD-S,FDO2141E2E8,V05
+uk-bfa-as01-f02,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2141Q23U,V05
+uk-bfa-as01-f02,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2141Q23Y,V05
+uk-bfa-as01-f02,c36xx Stack,c36xx Stack,WS-C3650-48PD-S,FDO2141Q23Y,V05
+uk-bfa-as01-f02,StackPort1/2,StackPort1/2,STACK-T2-1M,LCC2125GCEA,V03
+uk-bfa-as01-f02,StackPort4/1,StackPort4/1,STACK-T2-1M,LCC2125GCEA,V03
+uk-bfa-as01-f02,StackPort3/1,StackPort3/1,STACK-T2-1M,LCC2126G0MV,V03
+uk-bfa-as01-f02,StackPort4/2,StackPort4/2,STACK-T2-1M,LCC2126G0MV,V03
+uk-bfa-as01-f02,StackPort2/1,StackPort2/1,STACK-T2-1M,LCC2126G0MX,V03
+uk-bfa-as01-f02,StackPort3/2,StackPort3/2,STACK-T2-1M,LCC2126G0MX,V03
+uk-bfa-as01-f02,StackPort1/1,StackPort1/1,STACK-T2-1M,LCC2126G1AK,V03
+uk-bfa-as01-f02,StackPort2/2,StackPort2/2,STACK-T2-1M,LCC2126G1AK,V03
+uk-bfa-as01-f02,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,LIT21293FSZ,V03
+uk-bfa-as01-f02,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,LIT21293FTZ,V03
+uk-bfa-as01-f02,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,LIT21293FVN,V03
+uk-bfa-as01-f02,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-640WAC,LIT21293FW5,V03
+uk-bfa-as01-f02,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-640WAC,LIT21293FWD,V03
+uk-bfa-as01-f02,Switch 4 - Power Supply A,Switch 4 - Power Supply A,PWR-C2-640WAC,LIT21293FXQ,V03
+uk-bfa-as01-f02,Switch 3 - Power Supply B,Switch 3 - Power Supply B,PWR-C2-640WAC,LIT21293FY7,V03
+uk-bfa-as01-f02,Switch 4 - Power Supply B,Switch 4 - Power Supply B,PWR-C2-640WAC,LIT21293H3Z,V03

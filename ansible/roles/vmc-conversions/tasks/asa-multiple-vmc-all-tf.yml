@@ -1,0 +1,40 @@
+---
+
+## Confirms the host directory exists prior to the template rendering task
+- name: ASA-MULTIPLE - "{{ context.context }}" - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}"
+    state: directory
+
+## Import the dfw_sddc_specific_groups variables if running this task standalone
+- name: Import the dfw_sddc_specific_groups variables if running this task standalone
+  include_vars:
+    file: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_groups.yml"
+
+## Calls a Jinja2 template that renders the host_var SDDC groups YAML file into a host_var SDDC groups Terraform file 
+- name: ASA-MULTIPLE - "{{ context.context }}" - Generate VMC Terraform file - Network Objects (groups)
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_multiple/dfw_sddc_specific_groups_tf.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_groups.tf"
+
+## Import the dfw_sddc_specific_ports variables if running this task standalone
+- name: Import the dfw_sddc_specific_ports variables if running this task standalone
+  include_vars:
+    file: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_ports.yml"
+
+## Calls a Jinja2 template that renders the host_var SDDC ports YAML file into a host_var SDDC ports Terraform file 
+- name: ASA-MULTIPLE - "{{ context.context }}" - Generate VMC Terraform file - Service and Protocol Objects (ports)
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_multiple/dfw_sddc_specific_ports_tf.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_ports.tf"
+
+## Import the dfw_sddc_specific_rules variables if running this task standalone
+- name: Import the dfw_sddc_specific_rules variables if running this task standalone
+  include_vars:
+    file: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_rules.yml"
+
+## Calls a Jinja2 template that renders the host_var SDDC security policy YAML file into a host_var SDDC security policy Terraform file
+- name: ASA-MULTIPLE - "{{ context.context }}" - Generating the VMC Terraform file - Security Policy
+  template:
+    src: /gitnet/ansible/roles/vmc-conversions/templates/asa_multiple/dfw_sddc_specific_rules_tf.j2
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts/{{ context.context }}/dfw_{{ context.context }}_rules.tf"

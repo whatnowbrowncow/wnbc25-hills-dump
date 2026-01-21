@@ -1,0 +1,7 @@
+Port-channel1.2004: {admin-state: up, interface: Port-channel1.2004, ip-add: 10.112.215.204,
+  mac-address: 0200.0101.0101, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.571: {admin-state: up, interface: Port-channel1.571, ip-add: 10.19.0.132,
+  mac-address: 0200.0101.0101, nameif: group-vrf, netmask: 255.255.255.224, ospf: mtu-ignore,
+  security-level: '100'}
+Port-channel1.581: {admin-state: up, interface: Port-channel1.581, ip-add: 10.109.0.68,
+  nameif: us-vrf, netmask: 255.255.255.224, security-level: '100'}

@@ -1,0 +1,2 @@
+device,timeout,auth_retries,source-interface,version,server-algorithm,client-algorithm
+bg-dat-cs01,60,,Vlan243,2,,

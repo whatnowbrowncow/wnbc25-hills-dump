@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+gib-wp6-vacc1,10.180.163.19,,no,
+gib-wp6-vacc1,10.180.163.20,,no,

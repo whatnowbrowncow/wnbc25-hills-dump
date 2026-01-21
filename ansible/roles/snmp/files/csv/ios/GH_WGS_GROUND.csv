@@ -1,0 +1,8 @@
+hostname,community,access,access-list
+GH_WGS_GROUND,whn4ccam01,RO,13
+GH_WGS_GROUND,whn4ccam02,RW,13
+GH_WGS_GROUND,c1sc0,RO,19
+GH_WGS_GROUND,m0squ1t0,RO,10
+GH_WGS_GROUND,wh1LLc0rp,RW,11
+GH_WGS_GROUND,$n0Wd5c4nN3r,RO,22
+GH_WGS_GROUND,5wUxlDGU,RW,solarwinds-new

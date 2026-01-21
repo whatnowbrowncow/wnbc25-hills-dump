@@ -1,0 +1,8 @@
+{% for dst in changed_dst %}
+{% for policy in ra_dst %}
+{% if policy.name == dst.name %}
+group-policy {{ policy.policy }} attributes
+    anyconnect-custom dynamic-split-include-domains value {{ dst.name }}_v{{ dst.version }}
+{% endif %}
+{% endfor %}
+{% endfor %}

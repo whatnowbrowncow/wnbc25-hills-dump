@@ -1,0 +1,25 @@
+---
+
+- name: "Add DNS servers to the default DNS profile."
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/fabric/dnsp-default/prov-[{{ item.ip_addr }}].json"
+    content:
+      {
+        "dnsProv": {
+          "attributes": {
+            "dn": "uni/fabric/dnsp-default/prov-[{{ item.ip_addr }}]",
+            "addr": "{{ item.ip_addr }}",
+            "status": "created,modified",
+            "preferred": "{{ item.preferred | default ('false') }}",
+            "rn": "prov-[{{ item.ip_addr }}]"
+          },
+          "children": []
+        }
+      }     
+    validate_certs: no
+  with_items: 
+    - "{{ dns_servers }}"

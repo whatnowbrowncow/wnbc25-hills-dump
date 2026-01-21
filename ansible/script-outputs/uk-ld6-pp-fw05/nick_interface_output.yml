@@ -1,0 +1,6 @@
+Port-channel1.1669: {admin-state: up, interface: Port-channel1.1669, ip-add: 10.19.0.100,
+  nameif: external-vrf, netmask: 255.255.255.224, ospf: mtu-ignore, security-level: '100'}
+Port-channel1.1670: {admin-state: up, interface: Port-channel1.1670, ip-add: 10.61.101.1,
+  nameif: servers, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1673: {admin-state: up, interface: Port-channel1.1673, ip-add: 10.3.0.10,
+  nameif: internal-vrf, netmask: 255.255.255.0, ospf: mtu-ignore, security-level: '100'}

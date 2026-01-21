@@ -1,0 +1,4 @@
+---
+
+- name: Boot config task
+  include_tasks: ./boot.yml

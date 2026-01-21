@@ -1,0 +1,28 @@
+payload{
+	"l3extOut": {
+		"attributes": {
+			"dn": "uni/tn-{{tenant}}/out-{{l3out_name}}",
+			"name": "{{l3out_name}}",
+			"rn": "out-{{l3out_name}}",
+			"status": "created"
+		},
+		"children": [{
+			"l3extRsEctx": {
+				"attributes": {
+					"tnFvCtxName": "{{context}}",
+					"status": "created,modified"
+				},
+				"children": []
+			}
+		},
+		{
+			"l3extRsL3DomAtt": {
+				"attributes": {
+					"tDn": "uni/l3dom-{{l3_domain}}",
+					"status": "created"
+				},
+				"children": []
+			}
+		}]
+	}
+}

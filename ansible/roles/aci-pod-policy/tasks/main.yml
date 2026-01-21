@@ -1,0 +1,5 @@
+---
+
+- name: Creates the POD policy group for fabric settings.
+  import_tasks: ./aci-pod-policy.yml
+  when: ansible_network_os == "aci"

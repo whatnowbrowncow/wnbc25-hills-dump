@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-gs2-ar01,netsec,,secret,5,$1$.rIo$gR0i5K/MH4Ucnns/SL5oX1
+uk-gs2-ar01,netadmin,15,secret,5,$1$DFtf$Ekyohy8P2xL6xLV.uBMDR.
+uk-gs2-ar01,whillsup,,secret,5,$1$5jfs$kB.lyoRa/VG6c14hWlQ3h0
+uk-gs2-ar01,svcnetworkauto,15,secret,5,$1$1zL5$lQ/P80oNzVTPQV3.r3ass1

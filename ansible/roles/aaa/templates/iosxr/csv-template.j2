@@ -1,0 +1,4 @@
+hostname,svr-grp name,svr-grp vrf,source int,source vrf,svr ip address,svr encryption key,authn-login,auths-exec,auths-commands,acc-exec,acc-commands,acc-system
+{% for item in aaa_servers_facts %}
+{{ inventory_hostname }},{{ aaa_server_group_facts[0].aaa_server_group.group_name }},{{ aaa_server_group_facts[0].aaa_server_group.vrf }},{{ aaa_source_facts[0].aaa_source.source_interface }},{{ aaa_source_facts[0].aaa_source.source_vrf }},{{ item.aaa_servers.ip_address }},{{ item.aaa_servers.encryption_key }},{{ aaa_method_lists_facts[0].aaa_method_lists.authentication_login }},{{ aaa_method_lists_facts[0].aaa_method_lists.authorisation_exec }},{{ aaa_method_lists_facts[0].aaa_method_lists.authorisation_commands }},{{ aaa_method_lists_facts[0].aaa_method_lists.accounting_exec }},{{ aaa_method_lists_facts[0].aaa_method_lists.accounting_commands }},{{ aaa_method_lists_facts[0].aaa_method_lists.accounting_system }}
+{% endfor %}

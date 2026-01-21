@@ -1,0 +1,16 @@
+---
+
+- name: Build route template
+  template:
+    src: routes.j2
+    dest: ./asa/{{ item.context }}_routes.cfg
+  with_items:
+    - "{{ contexts }}"
+
+- name: Add routes to context
+  asa_config:
+    src: ./asa/{{ item.context }}_routes.cfg
+    context: "{{ item.context }}"
+  with_items:
+    - "{{ contexts }}"
+

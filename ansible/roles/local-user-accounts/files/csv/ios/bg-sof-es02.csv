@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+bg-sof-es02,netadmin,15,secret,5,$1$FbmN$3IDVhkUfZB1sJA.TYQrQH1
+bg-sof-es02,svcnetworkauto,15,secret,5,$1$MGPV$eWx9xCoFq7dLHTJYvrhxE.

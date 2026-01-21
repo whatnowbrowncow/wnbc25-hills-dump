@@ -1,0 +1,13 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+ph-mnl-vacc02,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2137Q0ZH,V05
+ph-mnl-vacc02,c36xx Stack,c36xx Stack,WS-C3650-48PD,FDO2137Q0ZH,V05
+ph-mnl-vacc02,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2138Q0XF,V05
+ph-mnl-vacc02,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2138Q0XJ,V05
+ph-mnl-vacc02,SFP-10GBase-SR,TenGigabitEthernet3/1/3,SFP-10G-SR,JUR2129G4PS,V03
+ph-mnl-vacc02,SFP-10GBase-SR,TenGigabitEthernet1/1/3,SFP-10G-SR,JUR2129G5WE,V03
+ph-mnl-vacc02,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-640WAC,LIT213024XC,V03
+ph-mnl-vacc02,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,LIT213024ZA,V03
+ph-mnl-vacc02,Switch 3 - Power Supply B,Switch 3 - Power Supply B,PWR-C2-640WAC,LIT21302592,V03
+ph-mnl-vacc02,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,LIT213026XG,V03
+ph-mnl-vacc02,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,LIT21302KFU,V03
+ph-mnl-vacc02,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-640WAC,LIT21302LNX,V03

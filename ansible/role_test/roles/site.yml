@@ -1,0 +1,11 @@
+---
+- name: Generate router config files
+  #hosts: localhost
+  hosts: all
+  gather_facts: no
+  
+
+  roles:
+    - core_router
+    - edge_router
+

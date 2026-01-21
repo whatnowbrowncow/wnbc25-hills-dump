@@ -1,0 +1,18 @@
+---
+
+- name: Build Contexts
+  aci_vrf:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    vrf: "{{ item.1.vrf }}"
+    tenant: "{{ item.0.tenant }}"
+    state: present
+    validate_certs: no
+  with_subelements:
+    - "{{ tenants }}"
+    - vrfs
+  register: imdata_vrfs
+  
+#- debug:
+#    msg: "The response was: {{ imdata_vrfs }}"

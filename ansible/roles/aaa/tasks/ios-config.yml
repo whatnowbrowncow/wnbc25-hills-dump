@@ -1,0 +1,5 @@
+---
+
+- name: IOS - Applying the AAA configuration (new-style tacacs)
+  ios_config:
+    src: "/gitnet/ansible/roles/aaa/templates/ios/config-template.j2"

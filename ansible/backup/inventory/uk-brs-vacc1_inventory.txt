@@ -1,0 +1,8 @@
+NAME: "1", DESCR: "WS-C3750G-48PS"
+PID: WS-C3750G-48PS-S  , VID: V05, SN: FOC1035Y2GV
+
+NAME: "GigabitEthernet1/0/49", DESCR: "1000BaseSX SFP"
+PID:                     , VID:     , SN: FNS1033Q163     
+
+NAME: "GigabitEthernet1/0/51", DESCR: "1000BaseSX SFP"
+PID:                     , VID:     , SN: FNS1033Q10C

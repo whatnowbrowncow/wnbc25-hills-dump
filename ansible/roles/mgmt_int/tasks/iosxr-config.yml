@@ -1,0 +1,10 @@
+---
+
+- name: IOSXR - Build configuration for testing purposes
+  template:
+    src: /gitnet/ansible/roles/mgmt_int/templates/iosxr/config-template.j2
+    dest: /gitnet/ansible/roles/mgmt_int/files/configs/iosxr/{{ inventory_hostname }}.cfg
+
+#- name: IOS-XR - Apply configuration
+#  iosxr_config:
+#    src: /gitnet/ansible/roles/mgmt_int/templates/iosxr/config-template.j2

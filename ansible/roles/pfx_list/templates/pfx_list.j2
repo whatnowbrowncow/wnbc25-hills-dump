@@ -1,0 +1,5 @@
+{% for pfx in pfx_list %}
+{% for seq in pfx.pfx_seq %}
+ip prefix-list {{ pfx.pfx_name }} seq {{ seq.seq_num }} {{ seq.action }} {{ seq.subnet }}
+{% endfor %}
+{% endfor %}

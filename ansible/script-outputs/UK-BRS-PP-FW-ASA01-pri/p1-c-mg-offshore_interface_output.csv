@@ -1,0 +1,10 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.1503,10.211.131.1,,web-tier,255.255.255.0,100
+up,,Port-channel21.1504,10.211.132.1,,applications-tier,255.255.255.0,100
+up,,Port-channel21.1505,10.211.133.1,,database-tier,255.255.255.0,100
+up,,Port-channel21.1506,10.211.134.1,,citrix-tier,255.255.255.128,100
+up,,Port-channel21.1510,10.211.137.1,,backoffice-tier,255.255.255.0,100
+up,,Port-channel21.1520,10.211.140.1,,Stingray-ADS-Servers,255.255.255.0,100
+up,,Port-channel21.1534,10.211.143.65,,sftp-tier,255.255.255.224,100
+up,,Port-channel21.1538,10.211.143.193,,crypto-tier,255.255.255.224,100
+up,,Port-channel21.1575,10.211.160.164,,pp1off-internal-vrf,255.255.255.224,100

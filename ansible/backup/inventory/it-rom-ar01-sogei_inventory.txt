@@ -1,0 +1,5 @@
+NAME: "2821 chassis", DESCR: "2821 chassis"
+PID: CISCO2821         , VID: V08 , SN: FCZ144670CL
+
+NAME: "WAN Interface Card - HWIC Serial 1T", DESCR: "WAN Interface Card - HWIC Serial 1T"
+PID: HWIC-1T           , VID: V03 , SN: FOC14444SXK

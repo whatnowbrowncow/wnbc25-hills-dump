@@ -1,0 +1,2 @@
+hostname,username,privilege,password_type,encryption,password_string
+bg-dat-cs01,netadmin,15,secret,5,$1$3fKs$1bXh9BbVlYhSSBFnDpNi.0

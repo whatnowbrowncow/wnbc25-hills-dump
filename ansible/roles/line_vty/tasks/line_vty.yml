@@ -1,0 +1,20 @@
+---
+
+## Create directory structure in case it doesn't already exist.
+- file:
+    path: roles/line_vty/configs/{{ inventory_hostname }}
+    state: directory
+
+    
+- name: Generate Line VTY configurations
+  template:
+    src: "line_vty.j2"
+    dest: "roles/line_vty/configs/{{ inventory_hostname }}/line_vty.cfg"
+  tags:
+    - line_vty
+    
+
+- name: "Deploy Line VTY to {{ inventory_hostname }}"
+  ios_config:
+    src: "roles/line_vty/configs/{{ inventory_hostname }}/line_vty.cfg"
+    

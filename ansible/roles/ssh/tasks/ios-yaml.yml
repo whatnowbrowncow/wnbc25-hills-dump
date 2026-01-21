@@ -1,0 +1,31 @@
+---
+
+- name: IOS - Collect SSH Config
+  ios_command:
+    commands:
+      - show run | include ip ssh
+  register: ios_ssh_output
+
+#- name: Display Output
+#  debug: var=ios_ssh_output
+
+- name: IOS - Parse Output
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/ios/parser_ios_ssh.yml"
+    content: "{{ ios_ssh_output.stdout.0 }}"
+
+#- name: Display RAW output
+#  debug: var=section
+
+#- name: Display JSON Output
+#  debug: var=ios_ssh_facts
+
+- name: IOS - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS - Generate YAML File
+  template:
+    src: "/gitnet/ansible/roles/ssh/templates/ios/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/ssh.yml"

@@ -1,0 +1,4 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+STJ,Two port E1 voice interface daughtercard,Two port E1 voice interface daughtercard,VWIC-2MFT-E1=,35150676,1.0
+STJ,2821 chassis,2821 chassis,CISCO2821,FCZ09277575,V01
+STJ,PVDMII DSP SIMM with Two DSPs,PVDMII DSP SIMM with Two DSPs,PVDM2-32,FOC135311CM,V01

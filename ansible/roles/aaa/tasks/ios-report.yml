@@ -1,0 +1,17 @@
+---
+
+- name: IOS - Collecting the AAA configuration
+  ios_command:
+    commands:
+      - show run
+  register: raw_output
+
+- name: IOS - Parsing the AAA configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/ios/parser_ios_aaa.yml"
+    content: "{{ raw_output.stdout.0 }}"
+
+- name: IOS - Generating the CSV report
+  template:
+    src: "/gitnet/ansible/roles/aaa/templates/ios/csv-template.j2"
+    dest: "/gitnet/ansible/roles/aaa/files/csv/ios/{{ inventory_hostname }}.csv"

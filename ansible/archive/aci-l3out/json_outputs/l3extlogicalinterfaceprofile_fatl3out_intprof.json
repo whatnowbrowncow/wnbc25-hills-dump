@@ -1,0 +1,1505 @@
+"l3extLNodeP": {
+    "attributes": {
+        "descr": "",
+        "dn": "uni/tn-ant-tenant/out-fatl3out/lnodep-fatl3out_np",
+        "name": "fatl3out_np",
+        "status": "created,modified"
+    },
+    "children": [
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "ant-test_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-101",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.65/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.69/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.66/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.69/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.114.160.67",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "dr-c-frontend_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-371",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.33/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.37/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.34/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.37/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.114.160.35",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "dr-n-frontend_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-422",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.224.1/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.224.6/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.224.2/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.224.6/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.114.224.4",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "pte-c-frontend_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-1671",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.33/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.37/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.34/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.37/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.115.160.35",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "pte-n-frontend_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-1677",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.225/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.229/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.226/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.229/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.115.160.227",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "dr-c-mgmt_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-375",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.161/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.165/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.162/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.165/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.114.160.163",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "dr-n-mgmt_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-376",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.193/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.197/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.194/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.197/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.114.160.195",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "pte-c-mgmt_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-1675",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.161/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.165/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.162/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.165/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.115.160.163",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "pte-n-mgmt_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-1676",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.193/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.198/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.115.160.194/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.198/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.115.160.196",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "pr-c-fr-cx_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-384",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW01-Data_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.161.193/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.197/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.161.194/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.115.160.197/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.114.161.195",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "pte-external_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-370",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-101-102/pathep-[FW02-PRI-DATA_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.1/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.3/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.114.160.2/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.114.160.3/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.114.160.4",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64570",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "64603",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "uk-ld6-cr01_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-528",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-103-104/pathep-[uk-ld6-cr01-po1_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.89.0.2/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.89.0.4/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.89.0.3/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.89.0.4/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.89.0.1",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64606",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "57002",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "uk-ld6-cr02_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-529",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-103-104/pathep-[uk-ld6-cr02-po1_PolGrp]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.89.0.34/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.89.0.36/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "10.89.0.35/27",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "10.89.0.36/27",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "10.89.0.33",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "64606",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "57002",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+                    ]
+                }
+            }
+            ]
+        }
+    },
+    ]
+}

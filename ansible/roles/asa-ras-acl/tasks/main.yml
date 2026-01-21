@@ -1,0 +1,80 @@
+---
+- name: ASA-RAS-ACL - Starting Deployment of ACLS
+  block:
+    - name: ASA-RAS-ACL - Check Which Device is Live
+      ansible.builtin.command: dig +short vpn.williamhillplc.com
+      register: vpn_nslookup
+      check_mode: false
+      run_once: true
+
+    - name: Set primary_host
+      ansible.builtin.set_fact:
+        primary_host: "{% if (vpn_nslookup.stdout.startswith('10.120') or vpn_nslookup.stdout.startswith('141.138')) %}{{ groups[lookup('vars', 'ma3_sync_group')][0]
+          }}{% else %}{{ groups[lookup('vars', 'ld6_sync_group')][0] }}{% endif %}"
+      run_once: true
+
+    - name: Remove unwanted hosts from play_hosts
+      ansible.builtin.meta: end_host
+      when: inventory_hostname != primary_host
+
+    - name: Refresh inventory
+      ansible.builtin.meta: refresh_inventory
+
+    # Import Network Parser Role Required for future tasks
+    - name: Import Network Parser role
+      ansible.builtin.include_role:
+        name: ansible-network.network-engine
+
+    # Call task to create ACL yaml files where the device is a RAS device
+    # (WARNING: Only run this in extreme circumstances as it will overwrite dependent data and prevent the role from running)
+    # - name: ASA-RAS - VPN YAML creation task
+    #   include_tasks: asa-ras-acl-yaml.yml
+    #   when:
+    #     - type == "ras"
+
+    # Identify all RAS ACLs and collate the information. It then place all this in a fact called changed_acl. This will contain only the ACLs that have changed.
+    - name: ASA-RAS - Identifying ACLs version within YML and device
+      ansible.builtin.include_tasks: acl-ras-version-checks.yml
+      when:
+        - type is defined and type == "ras" and inventory_hostname == primary_host
+
+    # Takes each ACL defined in the changed_acl fact, extracts each of the required parent and children ACLs. Then it confirms that the relevant information has been updated. If this check fails, the whole playbook will end with an error describing which ACLs are out of sync.
+    - name: ASA-RAS - Identifying Dependent ACLs and check hierarchical changes
+      ansible.builtin.include_tasks: acl-ras-hierarchy-checks.yml
+      loop: "{{ changed_acls }}"
+      loop_control:
+        loop_var: loop_changed_acls
+        label: Collating Dependent Rules for {{ loop_changed_acls }}
+      when:
+        - type is defined and type == "ras" and inventory_hostname == primary_host and changed_acls is defined
+
+    # This takes a snapshot of the ACLs and group policy configuration and places in a temporary file. It is then used to identify what has changed.
+    - name: ASA-RAS - Taking pre-change snapshot
+      ansible.builtin.include_tasks: pre-change-snapshot.yml
+      when:
+        - type is defined and type == "ras" and inventory_hostname == primary_host and changed_acls is defined
+
+    # Apply new RAS configuration to the devices, then produces a text file output showing what has changed
+    - name: ASA-RAS - Apply configuration to device for RAS ACLs (CFG files if enabled)
+      ansible.builtin.include_tasks: asa-ras-acl-config.yml
+      when:
+        - type is defined and type == "ras" and inventory_hostname == primary_host and changed_acls is defined
+
+    - name: ASA-RAS - Message if just objects changed
+      ansible.builtin.shell: "echo '\e[1;31m############## NOTE: Only Objects Have been Modifed, No New ACL Entries ##############
+        \e[0m' > /dev/tty"
+      check_mode: false
+      when:
+        - hostvars[inventory_hostname]['objects_changed'] and changed_acls is not defined
+      notify: asa-ras-acl:objects_changed
+
+  rescue:
+    - name: For Run of Cleanup after Failure
+      ansible.builtin.shell: "echo '\e[1;31m############## Starting Failure Handling Process ##############
+        \e[0m'"
+      notify: asa-ras-acl:fail_executed
+      check_mode: false
+
+    - name: Force Handlers Run
+      ansible.builtin.meta: flush_handlers
+      check_mode: false

@@ -1,0 +1,16 @@
+---
+
+- name: Debug host variable
+  debug: var="{{ inventory_hostname }}"
+  
+- name: Debug var SNMP variable
+  debug: var="{{ item.value }}"
+  with_dict: "{{ snmp }}"
+
+
+- name: Generate SNMP configurations
+  template:
+    src: "snmp.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/snmp/{{ inventory_hostname }}.cfg"
+  with_items: "{{ snmp }}"
+

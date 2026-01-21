@@ -1,0 +1,79 @@
+---
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run
+    network_os: iosxr
+                            
+- name: match sections
+  pattern_match:
+    regex: "^username"
+    match_all: yes
+    match_greedy: yes
+  register: section
+                            
+                            
+- name: match local user accounts
+  pattern_group:
+    - name: match username
+      pattern_match:
+        regex: "^username (\\S+)"
+        content: "{{ item }}"
+      register: username
+
+    - name: match groups
+      pattern_match:
+        regex: "^ group (\\S+)"
+        match_all: yes
+        content: "{{ item }}"
+      register: user_groups
+                     
+    - name: match privilege
+      pattern_match:
+        regex: "^username \\S+ privilege (\\d+)"
+        content: "{{ item }}"
+      register: privilege
+                                                                                                               
+    - name: match password type
+      pattern_match:
+        regex: "^ (secret)"
+        content: "{{ item }}"
+      register: password_type
+                                                                                                                          
+    - name: match encryption
+      pattern_match:
+        regex: "^ secret (\\d)"
+        content: "{{ item }}"
+      register: encryption 
+
+    - name: password_string
+      pattern_match:
+        regex: "^ secret \\d (\\S+)"
+        content: "{{ item }}"
+      register: password_string
+
+  loop: "{{ section }}"
+  #export: yes
+  register: local_accounts
+
+- name: generate json data structure
+  json_template:
+    template:
+      - key: user_account
+        object:
+          - key: username
+            value: "{{ item.username.matches.0 }}"
+          - key: password_type
+            value: "{{ item.password_type.matches.0 }}"
+          - key: encryption
+            value: "{{ item.encryption.matches.0 }}"
+          - key: password_string
+            value: "{{ item.password_string.matches.0 }}"
+          - key: user_groups
+            object:
+              - key: user_group_list
+                value: "{{ item.user_groups }}"
+  loop: "{{ local_accounts }}"
+  ##use export to display to screen
+  export: yes
+  register: iosxr_local_accounts_facts

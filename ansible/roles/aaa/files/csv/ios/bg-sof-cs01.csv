@@ -1,0 +1,3 @@
+hostname,tacacs-style,svr-grp name,svr-grp source int,svr-grp vrf,svr name,svr ip address,svr encryption key,authn-login,authn-enable,auths-exec,auths-commands,acc-exec,acc-connection,acc-commands,acc-system
+bg-sof-cs01,new,WH-ACS-TACACS,Vlan243,group-vrf,SCC_ACS,10.120.163.26,112A32351023535A327C6F317E19670E,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,,,,
+bg-sof-cs01,new,WH-ACS-TACACS,Vlan243,group-vrf,BRS_ACS,10.210.163.26,04782036081014183F4F410244215E28,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,WH-ACS-TACACS,,,,

@@ -1,0 +1,52 @@
+---
+
+- name: IOS-XR - collect local user account info
+  iosxr_command:
+    commands:
+      - show run
+  register: iosxr_local_accounts_output
+
+- name: IOS-XR - parse command output
+  command_parser:
+    file: "{{ role_path }}/files/parser_templates/parser_iosxr_local_user_accounts.yml"
+    content: "{{ iosxr_local_accounts_output.stdout.0 }}"
+    
+- name: IOS-XR - Confirm netadmin user exits and reset password
+  iosxr_user:
+    name: "{{ local_admin_account }}"
+    configured_password: "{{ local_admin_password }}"
+    state: present
+    update_password: always
+
+- name: IOS-XR - Configure svcnetauto user account on device
+  iosxr_user:
+    name: "{{ ansible_user }}"
+    configured_password: "{{ ansible_password }}"
+    state: present
+    update_password: always
+
+- name: IOS-XR - Add users to root-lr group 
+  iosxr_user:
+    aggregate:
+      - name: "{{ local_admin_account }}"
+      - name: "{{ ansible_user }}"
+    group: root-lr
+    state: present
+
+- name: IOS-XR - Add users to cisco-support group
+  iosxr_user:
+    aggregate:
+      - name: "{{ local_admin_account }}"
+      - name: "{{ ansible_user }}"
+    group: cisco-support 
+    state: present
+
+- name: IOS-XR - Remove all local user accounts that are not on the approved list
+  iosxr_user:
+    name: "{{ item.user_account.username }}"
+    state: absent  
+  with_items:
+    - "{{ iosxr_local_accounts_facts }}"
+  when: 
+    - "item.user_account.username not in master_local_user_accounts"
+    - (host_local_user_accounts is not defined) or (item.user_account.username not in host_local_user_accounts)

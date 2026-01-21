@@ -1,0 +1,10 @@
+---
+- name: "IOS - NXOS - Check and Deploy Service Hardening on IOS and NX-OS"
+  hosts: ios,nxos
+  gather_facts: no
+  connection: network_cli
+  ignore_errors: true
+  # This applies all device hardening configuration to IOS and NX-OS 
+
+  roles:
+    - role: device-hardening

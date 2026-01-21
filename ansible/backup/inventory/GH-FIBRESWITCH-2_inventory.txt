@@ -1,0 +1,44 @@
+NAME: "c3xxx Stack", DESCR: "c3xxx Stack"
+PID: WS-C3850-12S      , VID: V02  , SN: FCW1942F00G
+
+NAME: "Switch 1", DESCR: "WS-C3850-12S"
+PID: WS-C3850-12S      , VID: V02  , SN: FCW1942F00G
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C1-350WAC     , VID: V01  , SN: LIT193515UN
+
+NAME: "Switch 1 - Power Supply B", DESCR: "Switch 1 - Power Supply B"
+PID: PWR-C1-350WAC     , VID: V01  , SN: ART1934F58Q
+
+NAME: "GigabitEthernet1/0/1", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932RB0Y    
+
+NAME: "GigabitEthernet1/0/2", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932R50C    
+
+NAME: "GigabitEthernet1/0/3", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932RB0U    
+
+NAME: "GigabitEthernet1/0/4", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932R4AJ    
+
+NAME: "GigabitEthernet1/0/5", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932R74Y    
+
+NAME: "GigabitEthernet1/0/6", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932RB0W    
+
+NAME: "GigabitEthernet1/0/7", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932R8LT    
+
+NAME: "GigabitEthernet1/0/8", DESCR: "1000BaseSX SFP"
+PID:                    , VID:      , SN: FNS11441MS9    
+
+NAME: "GigabitEthernet1/0/9", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932RB17    
+
+NAME: "GigabitEthernet1/0/10", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD         , VID: V01  , SN: AGJ1932R8SM    
+
+NAME: "GigabitEthernet1/0/12", DESCR: "10/100/1000BaseTX SFP"
+PID:                    , VID:      , SN: AGM19374C9V

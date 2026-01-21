@@ -1,0 +1,17 @@
+---
+
+
+- name: Build context base template
+  template:
+    src: base.j2
+    dest: ./asa/{{ item.context }}_base.cfg
+  with_items:
+    - "{{ contexts }}"
+
+- name: Add base config to context
+  asa_config:
+    src: ./asa/{{ item.context }}_base.cfg
+    context: "{{ item.context }}"
+    provider: "{{ provider_cli }}"
+  with_items:
+    - "{{ contexts }}"

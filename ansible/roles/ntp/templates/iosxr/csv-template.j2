@@ -1,0 +1,7 @@
+hostname,ip address,vrf,preferred,source interface,source vrf
+{% for item in ntp_server_facts %}
+{{ inventory_hostname }},{{ item.ntp_servers.ip_address }},{{ item.ntp_servers.vrf }},{% if item.ntp_servers.preference == "prefer" %}yes{% else %}no{% endif %},{% for item in ntp_source_interface_facts %}{{ item.ntp_source_interface.interface }},{{ item.ntp_source_interface.vrf }}
+{% endfor %}
+{%- if not loop.last %}
+{% endif %}
+{% endfor %}

@@ -1,0 +1,170 @@
+
+  - app_prof: 'pr-n-backend'
+    tenant: 'production'
+    vrf: 'pr-n-backend'
+    bds:
+      - bd: 'pr-n-backend_backoffice-tier-new'
+        network: '10.180.70.0'
+        gateway: '10.180.70.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_backoffice-tier-new'
+            encap_id: '220'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_web-tier-new'
+        network: '10.180.71.0'
+        gateway: '10.180.71.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_web-tier-new'
+            encap_id: '221'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_caerus-apps'
+        network: '10.180.73.0'
+        gateway: '10.180.73.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_caerus-apps'
+            encap_id: '230'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_backoffice-tier'
+        network: '10.180.96.0'
+        gateway: '10.180.96.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_backoffice-tier'
+            encap_id: '250'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_web-tier'
+        network: '10.180.96.32'
+        gateway: '10.180.96.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_web-tier'
+            encap_id: '251'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_applications-tier'
+        network: '10.180.96.64'
+        gateway: '10.180.96.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_applications-tier'
+            encap_id: '252'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_rng-arcade'
+        network: '10.180.96.96'
+        gateway: '10.180.96.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_rng-arcade'
+            encap_id: '253'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_rng-retail'
+        network: '10.180.96.128'
+        gateway: '10.180.96.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_rng-retail'
+            encap_id: '254'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_f1x2-web-bottom'
+        network: '10.180.96.160'
+        gateway: '10.180.96.161'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_f1x2-web-bottom'
+            encap_id: '255'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_f1x2-app'
+        network: '10.180.96.192'
+        gateway: '10.180.96.193'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_f1x2-app'
+            encap_id: '256'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_database-tier'
+        network: '10.180.98.0'
+        gateway: '10.180.98.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_database-tier'
+            encap_id: '260'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_applications-tier-new'
+        network: '10.180.99.0'
+        gateway: '10.180.99.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_applications-tier-new'
+            encap_id: '261'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_noncde-rng-arcade'
+        network: '10.180.100.0'
+        gateway: '10.180.100.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_noncde-rng-arcade'
+            encap_id: '262'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_internal-vrf'
+        network: '10.180.160.128'
+        gateway: '10.180.160.130'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_internal-vrf'
+            encap_id: '374'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-backend_test-network'
+        network: '10.180.165.32'
+        gateway: '10.180.165.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-backend_test-network'
+            encap_id: '409'
+            vcenter_dynamic_vlan: true

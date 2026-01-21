@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+bg-dat-cs01,0 4,1,in,15 0,00060A520A0B1803,ssh,ssh,yes,
+bg-dat-cs01,5 15,1,in,15 0,05091F5B2F1C5D0C,ssh,ssh,yes,

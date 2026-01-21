@@ -1,0 +1,12 @@
+Port-channel1.1640: {admin-state: up, interface: Port-channel1.1640, ip-add: 10.61.215.180,
+  mac-address: 0200.0101.0501, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.1641: {admin-state: up, interface: Port-channel1.1641, ip-add: 10.62.208.1,
+  mac-address: 0200.0101.0501, nameif: corp_ext-web, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1642: {admin-state: up, interface: Port-channel1.1642, ip-add: 10.62.210.1,
+  mac-address: 0200.0101.0501, nameif: corp_int-web, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1643: {admin-state: up, interface: Port-channel1.1643, ip-add: 10.62.212.1,
+  mac-address: 0200.0101.0501, nameif: corp_int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1644: {admin-state: up, interface: Port-channel1.1644, ip-add: 10.62.214.1,
+  mac-address: 0200.0101.0501, nameif: corp_app, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1645: {admin-state: up, interface: Port-channel1.1645, ip-add: 10.62.216.1,
+  mac-address: 0200.0101.0501, nameif: corp_db, netmask: 255.255.254.0, security-level: '100'}

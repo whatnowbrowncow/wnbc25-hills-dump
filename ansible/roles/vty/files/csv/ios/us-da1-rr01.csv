@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+us-da1-rr01,0 4,,,15 0,,ssh,telnet ssh,no,
+us-da1-rr01,5 15,,,15 0,,ssh,telnet ssh,no,

@@ -1,0 +1,10 @@
+"l3extLNodeP": {
+    "attributes": {
+        "descr": "",
+        "dn": "uni/tn-ant-tenant/out-myfatl3out/lnodep-myfatl3out_np",
+        "name": "myfatl3out_np",
+        "status": "created,modified"
+    },
+    "children": [
+    ]
+}

@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+gib-vcore1,10.180.193.235,mgmt-vrf,no,Vlan301
+gib-vcore1,10.180.193.236,mgmt-vrf,no,Vlan301

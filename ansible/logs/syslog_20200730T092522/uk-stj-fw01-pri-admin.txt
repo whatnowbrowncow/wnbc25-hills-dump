@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: uk-stj-fw01-pri-admin @ 20200730T092522 ---!
+!
+logging host management 10.120.163.126
+!
+!--- END UPDATES: uk-stj-fw01-pri-admin @ 20200730T092522 ---!
+}

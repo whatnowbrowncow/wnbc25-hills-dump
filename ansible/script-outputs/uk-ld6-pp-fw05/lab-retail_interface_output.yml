@@ -1,0 +1,11 @@
+Port-channel1.1630: {admin-state: up, interface: Port-channel1.1630, ip-add: 10.61.215.164,
+  mac-address: 0200.0101.0501, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.1631: {admin-state: up, interface: Port-channel1.1631, ip-add: 10.62.192.1,
+  mac-address: 0200.0101.0501, nameif: retail_ext-web, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1632: {admin-state: up, interface: Port-channel1.1632, ip-add: 10.62.194.1,
+  mac-address: 0200.0101.0501, nameif: retail_int-web, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1633: {admin-state: up, interface: Port-channel1.1633, ip-add: 10.62.196.1,
+  mac-address: 0200.0101.0501, nameif: retail_int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.1634: {admin-state: up, interface: Port-channel1.1634, ip-add: 10.62.200.1,
+  mac-address: 0200.0101.0501, nameif: retail_production, netmask: 255.255.254.0,
+  security-level: '100'}

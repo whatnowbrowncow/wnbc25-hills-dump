@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-cwk4-studio,netsec,,secret,5,$1$EJkX$uncCxP7LLH6Ul/1GEkjPC1
+uk-cwk4-studio,netadmin,15,secret,5,$1$j7xA$NrmJDKxajWVF3JnOB6IGZ0
+uk-cwk4-studio,svcnetworkauto,15,secret,5,$1$u5J9$uC.Asi54L3MiFlMt4LLiV.

@@ -1,0 +1,22 @@
+---
+#This is the last loop step
+
+- name: Build EPG - {{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}
+  aci_epg:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    tenant: "{{ app_prof_item.tenant }}"
+    ap: "{{ app_prof_item.app_prof }}"
+    bd: "{{ bd_item.bd }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}"
+    epg: "{{ epg_item.epg }}-{{ bd_item.network }}s{{ bd_item.cidr_mask}}"
+    state: present
+    validate_certs: no
+
+
+- name: Move to EPG to domain loop
+  include_tasks: ./aci-epg_to_domain_loop.yml
+#  with_items:
+#    - "{{ epg_item.domains }}"
+#  loop_control:
+#    loop_var: domain_item

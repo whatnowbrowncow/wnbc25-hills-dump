@@ -1,0 +1,11 @@
+hostname,local_interface,remote_device_description
+uk-brs-pp-ds02,Ethernet1/1,uk-brs-pp-ds01.network.williamhill.plc(SSI183706JS)-Ethernet1/1
+uk-brs-pp-ds02,Ethernet1/10,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet1/11,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet1/13,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet1/14,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet1/18,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet1/19,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet104/1/6,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet104/1/7,no_data_in_cdp
+uk-brs-pp-ds02,Ethernet104/1/8,no_data_in_cdp

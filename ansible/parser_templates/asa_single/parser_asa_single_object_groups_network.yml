@@ -1,0 +1,227 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: "show run object-group network"
+    network_os: asa
+
+- name: network-object group_name match pattern
+  pattern_match:
+    regex: "^object-group network \\S+"
+    match_all: yes
+    match_greedy: yes
+  register: group_name
+
+- name: network-object object match pattern
+  pattern_match:
+    regex: "^ network-object object \\S+"
+    match_all: yes
+    match_greedy: yes
+  register: network_object_objects
+
+- name: network-object network match pattern
+  pattern_match:
+    regex: "^ network-object \\d+.\\d+.\\d+.\\d+ \\d+.\\d+.\\d+.\\d+"
+    match_all: yes
+    match_greedy: yes
+  register: network_object_networks
+
+- name: network-object host match pattern
+  pattern_match:
+    regex: "^ network-object host \\d+.\\d+.\\d+.\\d+"
+    match_all: yes
+    match_greedy: yes
+  register: network_object_hosts
+
+- name: network-object group-object match pattern
+  pattern_match:
+    regex: "^ group-object \\S+"
+    match_all: yes
+    match_greedy: yes
+  register: network_object_group_objects
+
+- name: network-object fqdn match pattern
+  pattern_match:
+    regex: "^ fqdn v\\d+ \\S+"
+    match_all: yes
+    match_greedy: yes
+  register: network_fqdn_objects
+
+- name: description match pattern
+  pattern_match:
+    regex: "^ description \\S+"
+    match_all: yes
+    match_greedy: yes
+  register: group_description
+
+- name: Match object-group name
+  pattern_group:
+    - name: match name
+      pattern_match:
+        regex: "^object-group network (\\S+)"
+        content: "{{ item }}"
+      register: name
+
+  loop: "{{ group_name }}"
+  register: object_group_name 
+
+- name: Match object-group description
+  pattern_group:
+    - name: match name
+      pattern_match:
+        regex: "^ description (.*)\\n"
+        content: "{{ item }}"
+      register: description
+
+  loop: "{{ group_description }}"
+  register: group_description_value
+
+- name: Match network-object object values
+  pattern_group:
+    - name: match name
+      pattern_match:
+        regex: "^ network-object object (\\S+)"
+        content: "{{ item }}"
+      register: name
+
+  loop: "{{ network_object_objects }}"
+  register: network_object_objects_group    
+
+- name: Match network-object networks values
+  pattern_group:
+
+    - name: match network
+      pattern_match:
+        regex: "^ network-object (\\d+.\\d+.\\d+.\\d+) \\d+.\\d+.\\d+.\\d+"
+        content: "{{ item }}"
+      register: ip_addr
+
+    - name: match mask
+      pattern_match:
+        regex: "^ network-object \\d+.\\d+.\\d+.\\d+ (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: mask
+
+  loop: "{{ network_object_networks }}"
+  register: network_object_networks_group  
+
+- name: Match network-object host values
+  pattern_group:
+
+    - name: match ip address
+      pattern_match:
+        regex: "^ network-object host (\\d+.\\d+.\\d+.\\d+)"
+        content: "{{ item }}"
+      register: ip_addr
+
+    - name: match type
+      pattern_match:
+        regex: "^ network-object (host) \\d+.\\d+.\\d+.\\d+"
+        content: "{{ item }}"
+      register: type
+
+  loop: "{{ network_object_hosts }}"
+  register: network_object_hosts_group  
+
+- name: Match network-object group-object values
+  pattern_group:
+    - name: match name
+      pattern_match:
+        regex: "^ group-object (\\S+)"
+        content: "{{ item }}"
+      register: name
+
+    - name: match type
+      pattern_match:
+        regex: "^ (group)-object \\S+"
+        content: "{{ item }}"
+      register: type
+
+  loop: "{{ network_object_group_objects }}"
+  register: network_object_group_objects_group  
+
+- name: Match network-object fqdn values
+  pattern_group:
+    - name: match version
+      pattern_match:
+        regex: "^ fqdn v(\\d+) \\S+"
+        content: "{{ item }}"
+      register: version
+
+    - name: match type
+      pattern_match:
+        regex: "^ fqdn v\\d+ (\\S+)"
+        content: "{{ item }}"
+      register: fqdn
+
+  loop: "{{ network_fqdn_objects }}"
+  register: network_object_fqdn_group  
+
+
+- name: Generate group name JSON data structure - 
+  json_template:
+    template:
+      - key: name
+        value: "{{ item.name.matches.0 }}"       
+  loop: "{{ object_group_name }}"
+  export: yes
+  register: object_group
+
+- name: Generate group name JSON data structure - 
+  json_template:
+    template:
+      - key: description
+        value: "{{ item.description.matches.0 }}"       
+  loop: "{{ group_description_value }}"
+  export: yes
+  register: object_group_description
+
+- name: Generate group-object object JSON data structure - 
+  json_template:
+    template:       
+      - key: object_name
+        value: "{{ item.name.matches.0 }}"
+  loop: "{{ network_object_objects_group }}"
+  export: yes
+  register: objects
+
+- name: Generate group-object subnet JSON data structure - 
+  json_template:
+    template: 
+      - key: ip_addr
+        value: "{{ item.ip_addr.matches.0 }}"
+      - key: mask
+        value: "{{ item.mask.matches.0 }}"
+  loop: "{{ network_object_networks_group }}"
+  export: yes
+  register: networks
+
+- name: Generate group-object host JSON data structure - 
+  json_template:
+    template:       
+      - key: ip_addr
+        value: "{{ item.ip_addr.matches.0 }}"
+  loop: "{{ network_object_hosts_group }}"
+  export: yes
+  register: hosts
+
+- name: Generate group-object JSON data structure - 
+  json_template:
+    template:        
+      - key: group_object_name
+        value: "{{ item.name.matches.0 }}"
+  loop: "{{ network_object_group_objects_group }}"
+  export: yes
+  register: group_objects
+
+- name: Generate group-object JSON data structure - 
+  json_template:
+    template:        
+      - key: fqdn
+        value: "{{ item.fqdn.matches.1 }}"
+      - key: version
+        value: "{{ item.version.matches.0 }}"
+  loop: "{{ network_object_fqdn_group }}"
+  export: yes
+  register: fqdn_objects

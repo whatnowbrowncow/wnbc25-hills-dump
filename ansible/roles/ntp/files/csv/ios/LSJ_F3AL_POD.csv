@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+LSJ_F3AL_POD,10.120.193.235,,yes,
+LSJ_F3AL_POD,10.120.193.236,,no,

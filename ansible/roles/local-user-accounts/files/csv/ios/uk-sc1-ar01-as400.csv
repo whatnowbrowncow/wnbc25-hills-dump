@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-sc1-ar01-as400,netsec,15,secret,4,8Kb2slRmQI6xd7qwkxLjCRKlIHuVOj1ax/8vyMkB6Tg
+uk-sc1-ar01-as400,netadmin,15,secret,5,$1$XAaR$maScGMvEhK5KcTGpdRMVx0
+uk-sc1-ar01-as400,svcnetworkauto,15,secret,5,$1$WcXS$mzKmYLSewMlWTicYFsoKB0

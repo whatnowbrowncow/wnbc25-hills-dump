@@ -1,0 +1,7 @@
+hostname,community,role,access-list
+uk-brs-ds01,md9IGovWFs,network-admin,hp-oneview
+uk-brs-ds01,whM0n1T0r,network-operator,cacti
+uk-brs-ds01,$n0Wd5c4nN3r,network-operator,servicenow-discovery
+uk-brs-ds01,wh1LLc0rp,network-admin,ncs
+uk-brs-ds01,5&prU$pAtu!H,network-admin,solarwinds
+uk-brs-ds01,5wUxlDGU,network-operator,solarwinds-new

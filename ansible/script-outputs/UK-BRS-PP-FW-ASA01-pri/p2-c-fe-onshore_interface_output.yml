@@ -1,0 +1,12 @@
+Port-channel21.2800: {admin-state: up, interface: Port-channel21.2800, ip-add: 10.214.32.1,
+  nameif: cde-web-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2801: {admin-state: up, interface: Port-channel21.2801, ip-add: 10.214.32.33,
+  nameif: cde-backoffice, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2802: {admin-state: up, interface: Port-channel21.2802, ip-add: 10.214.32.65,
+  nameif: cde-app, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2834: {admin-state: up, interface: Port-channel21.2834, ip-add: 10.214.44.1,
+  nameif: int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel21.2862: {admin-state: up, interface: Port-channel21.2862, ip-add: 10.214.52.1,
+  nameif: database, netmask: 255.255.255.0, security-level: '100'}
+Port-channel21.3071: {admin-state: up, interface: Port-channel21.3071, ip-add: 10.214.160.36,
+  nameif: pp2on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

@@ -1,0 +1,65 @@
+{# ANY CHANGES TO THIS MAY AFFECT THE asa-ras-object ROLE, SO TESTING WITH BOTH ROLES IS NEEDED  #}
+---
+
+service_objects:
+
+{% for item in service_objects_facts %}
+  - name: "{{ item.object.name }}"
+    description: "{{ item.object.description }}"
+    protocol: "{{ item.object.protocol }}"
+    direction: "{{ item.object.direction }}"
+    port_type: "{{ item.object.port_type }}"
+    port: "{{ item.object.port }}"
+    range_start: "{{ item.object.range_start }}"
+    range_end: "{{ item.object.range_end }}"
+{% endfor %}
+
+service_object_groups:
+{% for item in service_obj_groups.results %}
+  - name: "{{ item.ansible_facts.object_group[0].name }}"
+{% if item.ansible_facts.object_group[0].protocol is defined %}
+    protocol: "{{ item.ansible_facts.object_group[0].protocol }}"
+{% else %}
+{% endif %}
+{% if item.ansible_facts.object_group_description is defined %}
+    description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{% else %}
+{% endif %}
+    objects:
+{% if item.ansible_facts.objects is defined %}
+{% for group in item.ansible_facts.objects %}
+      - object_name: "{{ group.object_name }}"
+{% endfor %}
+{% else %}
+{% endif %}
+    services:
+{% if item.ansible_facts.services is defined %}
+{% for group in item.ansible_facts.services %}
+      - protocol: "{{ group.protocol }}"
+        direction: "{{ group.direction }}"
+        port_type: "{{ group.port_type }}"
+        port: "{{ group.port }}"
+        range_start: "{{ group.range_start }}"
+        range_end: "{{ group.range_end }}"
+{% endfor %}
+{% else %}
+{% endif %}
+    port_objects:
+{% if item.ansible_facts.port_objects is defined and item.ansible_facts.services is not defined and item.ansible_facts.objects is not defined %}
+{% for group in item.ansible_facts.port_objects%}
+      - port_type: "{{ group.port_type }}"
+        port: "{{ group.port }}"
+        range_start: "{{ group.range_start }}"
+        range_end: "{{ group.range_end }}"
+{% endfor %}
+{% else %}
+{% endif %}
+    group_objects:
+{% if item.ansible_facts.group_objects is defined %}
+{% for group in item.ansible_facts.group_objects %}
+      - group_object_name: "{{ group.group_object_name }}"
+{% endfor %}
+{% else %}
+{% endif %}
+
+{% endfor %}

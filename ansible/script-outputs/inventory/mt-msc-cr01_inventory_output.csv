@@ -1,0 +1,13 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+mt-msc-cr01,Cisco ASR1001-X Chassis,Chassis,ASR1001-X,FXS2236Q37S,V03
+mt-msc-cr01,Cisco ASR1001-X Route Processor,module R0,ASR1001-X,JAE224209SP,V03
+mt-msc-cr01,Cisco ASR1001-X AC Power Supply,Power Supply Module 1,ASR1001-X-PWR-AC,LIT22283KML,V02
+mt-msc-cr01,Cisco ASR1001-X AC Power Supply,Power Supply Module 0,ASR1001-X-PWR-AC,LIT22283KMP,V02
+mt-msc-cr01,GE T,subslot 0/0 transceiver 2,GLC-TE,MTC22240FXK,V01
+mt-msc-cr01,GE T,subslot 0/0 transceiver 5,GLC-TE,MTC22240FY1,V01
+mt-msc-cr01,GE T,subslot 0/0 transceiver 3,GLC-TE,MTC22240J6W,V01
+mt-msc-cr01,GE SX,subslot 0/0 transceiver 4,GLC-SX-MMD,OPM22280JZ4,V01
+mt-msc-cr01,Cisco ASR1001-X Fan Tray,Fan Tray,ASR1001-X-FANTRAY,none,none
+mt-msc-cr01,Built-in GE SPA with 2 port 10G and 6 port 1G Interfaces,SPA subslot 0/0,BUILT-IN-2T+6X1GE,none,none
+mt-msc-cr01,Cisco ASR1001-X SPA Interface Processor,module 0,ASR1001-X,none,none
+mt-msc-cr01,Cisco ASR1001-X Embedded Services Processor,module F0,ASR1001-X,none,none

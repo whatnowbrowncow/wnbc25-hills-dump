@@ -1,0 +1,20 @@
+---
+
+#- name: Debug loop list
+#  debug:
+#    msg: "The context is {{ context_item.context }} on interface: {{ item.nameif }}"
+#  with_items:
+#    - "{{ context_interfaces_item }}"
+
+- name: Building interface on context {{ context_item.context }}
+  asa_config:
+    lines:
+      - "mac-address {{ cluster_mac }}"
+      - "nameif {{ item.nameif }}"
+      - "security-level {{ item.sec_level}}"
+      - "ip address {{ item.addr }} {{ item.netmask}}"
+    parents: ["interface Port-channel1.{{ item.vlan }}"]
+    match: line
+    context: "{{ context_item.context }}"
+  with_items:
+    - "{{ context_interfaces_item }}"

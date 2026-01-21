@@ -1,0 +1,52 @@
+---
+
+- name: IOS-XR - collect syslog info
+  ios_command:
+    commands:
+      - show run
+  register: iosxr_syslog_output
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=iosxr_syslog_output
+
+- name: IOS-XR - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/iosxr/parser_iosxr_syslog.yml
+    content: "{{ iosxr_syslog_output.stdout.0 }}"
+
+# Debug commands to check output
+- name: Display JSON output
+  debug: var=syslog_server_facts
+
+# Debug commands to check output
+- name: Display JSON output
+  debug: var=syslog_source_facts
+
+- name: remove all syslog hosts that do not match data in YAML structure with vrf defined
+  iosxr_config:
+    lines: no logging {{ item.syslog_servers.ip_address }} vrf {{ item.syslog_servers.vrf }}
+  with_items: 
+    - "{{ syslog_server_facts }}"
+  when: (item.syslog_servers.ip_address != syslog[0].ip_addr and item.syslog_servers.vrf != None) or (item.syslog_servers.ip_address == syslog[0].ip_addr and item.syslog_servers.vrf != None and item.syslog_servers.vrf != mgmt_interface.vrf)
+
+- name: remove all syslog hosts that do not match data in YAML structure with vrf NOT defined
+  iosxr_config:
+    lines: no logging {{ item.syslog_servers.ip_address }}
+  with_items: 
+    - "{{ syslog_server_facts }}"
+  when: (item.syslog_servers.ip_address != syslog[0].ip_addr and item.syslog_servers.vrf == None) or (item.syslog_servers.ip_address == syslog[0].ip_addr and item.syslog_servers.vrf == None and mgmt_interface.vrf != "")
+
+- name: remove all syslog source interface config that does not match the mgmt_int of the device with vrf defined
+  iosxr_config:
+    lines: no logging source-interface {{ item.syslog_source.interface }} vrf {{ item.syslog_source.vrf }}
+  with_items: 
+    - "{{ syslog_source_facts }}"
+  when: (item.syslog_source.interface != mgmt_interface.interface and item.syslog_source.vrf != None)
+
+- name: remove all syslog source interface config that does not match the mgmt_int of the device with vrf NOT defined
+  iosxr_config:
+    lines: no logging source-interface {{ item.syslog_source.interface }}
+  with_items: 
+    - "{{ syslog_source_facts }}"
+  when: (item.syslog_source.interface != mgmt_interface.interface and item.syslog_source.vrf == None)

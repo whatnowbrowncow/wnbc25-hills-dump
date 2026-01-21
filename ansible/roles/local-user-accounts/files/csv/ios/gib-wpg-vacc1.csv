@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+gib-wpg-vacc1,netadmin,15,secret,5,$1$LBjh$64J.kcVDyzAGfZksTHnWX/
+gib-wpg-vacc1,svcnetworkauto,15,secret,5,$1$gKHY$ilFG4l/8Ze.FduLYNZAfb/

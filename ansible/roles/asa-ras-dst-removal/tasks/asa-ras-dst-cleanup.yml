@@ -1,0 +1,58 @@
+---
+#This is to combine all the dst entries and the group_policy information into one dictionary 
+- name: ASA-RAS - Adding Keys to Device output for entries and group_policy 
+  set_fact:
+    device_configuration: "{{ device_configuration | default({}) | combine({'dst_entries': activedst.stdout[0], 'group_policy_output': activedst.stdout[1] }) }}"
+
+# This is to extract all the dst names and current installed version from the configuration 
+- name: ASA-RAS - Identifying the name and version configured within the group policy for each DST 
+  set_fact:
+    dst_device_info_temp: "{{ device_configuration.group_policy_output | regex_findall('anyconnect-custom dynamic-split-include-domains value (\\S+)_v(\\d+)?') | unique }}"
+  
+# Adds `name` and `device_version` keys to extracted information from the previous tasks 
+- name: ASA-RAS - Adding Keys to Device Information 
+  set_fact :
+    dst_device_info: "{{ dst_device_info | default([]) + [{'name': loop_device_temp.0,'device_version': loop_device_temp.1}] }}"
+  loop: "{{ dst_device_info_temp }}"
+  loop_control:
+    loop_var: loop_device_temp
+    label: "Adding keys to {{ loop_device_temp.0 }} for deployed device DSTs ({{inventory_hostname }})"
+
+
+# This is to collate all the versions required for removal for each of the dsts (calls another yml file) 
+- name: ASA-RAS - Calls Compile Version List Tasks 
+  include_tasks: asa-compile-old-dsts.yml
+  vars:
+    dsts: "{{ activedst }}"
+    comment_title: "ASA-RAS"
+    dst_data: "{{ lookup('vars', loop_dsts.name) }}"
+  loop: "{{ dst_device_info }}"
+  loop_control:
+    loop_var: loop_dsts
+
+# Creates the code for dst versions to be removed 
+- name: ASA-RAS - Create Code for removal of DST and produce CFG 
+  template:
+    src: "{{ role_path }}/templates/dst-removal-confg-template.j2"
+    dest: "{{ configs_dir }}/dst-removal.cfg"
+  when: 
+    - versions_to_remove is defined
+    - versions_to_remove != []
+  check_mode: no
+
+# Removed the dst versions from the device 
+- name: ASA-RAS - Remove Old DSTs from Device 
+  asa_config:
+    src: "{{ configs_dir }}/dst-removal.cfg"
+    match: line
+  notify: "dst_removed"
+  when: 
+    - versions_to_remove is defined
+    - versions_to_remove != []
+
+# Clears the versions list 
+- name: ASA-RAS - Clearing out variables 
+  set_fact: 
+    versions_to_remove: []
+
+

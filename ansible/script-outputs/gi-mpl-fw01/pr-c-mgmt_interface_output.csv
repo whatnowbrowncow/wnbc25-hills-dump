@@ -1,0 +1,24 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.300,10.180.128.2,,management,255.255.255.0,100
+up,,Port-channel1.302,10.180.130.1,,server-ilo,255.255.255.0,100
+up,,Port-channel1.303,10.180.131.1,,web-tier,255.255.255.0,100
+up,,Port-channel1.304,10.180.132.1,,applications-tier,255.255.255.0,100
+up,,Port-channel1.305,10.180.133.1,,database-tier,255.255.255.0,100
+up,,Port-channel1.306,10.180.134.1,,citrix,255.255.255.128,100
+up,,Port-channel1.307,10.180.134.129,,firewall-ilo,255.255.255.128,100
+up,,Port-channel1.309,10.180.136.1,,proxy-tier,255.255.255.0,100
+up,,Port-channel1.310,10.180.137.1,,backoffice-tier,255.255.255.0,100
+up,,Port-channel1.311,10.180.138.1,,vmware-esx,255.255.255.0,100
+up,,Port-channel1.314,10.180.139.65,,silvertail-poc-tier,255.255.255.224,100
+up,,Port-channel1.316,10.180.139.129,,hdr-tier,255.255.255.224,100
+up,,Port-channel1.318,10.180.139.193,,proofpoint-manager,255.255.255.224,100
+up,,Port-channel1.319,10.180.139.225,,san-mgmt2,255.255.255.224,100
+up,,Port-channel1.320,10.180.140.1,,Stingray-Mgt,255.255.255.0,100
+up,,Port-channel1.321,10.180.141.1,,cde-jumphosts,255.255.255.0,100
+up,,Port-channel1.323,10.180.80.1,,server-ilo-10.180.80.0slash24,255.255.255.0,100
+up,,Port-channel1.329,10.180.142.161,,emc-monitoring-dmz,255.255.255.224,100
+ shutdown,,Port-channel1.330,10.180.142.193,,gib-cde-jumphost,255.255.255.224,100
+up,,Port-channel1.331,10.180.142.225,,scanning-dmz,255.255.255.224,100
+up,,Port-channel1.334,10.180.143.65,,sftp-tier,255.255.255.224,100
+up,,Port-channel1.337,10.180.143.161,,san-mgmt,255.255.255.224,100
+up,,Port-channel1.375,10.180.160.162,,internal-vrf,255.255.255.224,100

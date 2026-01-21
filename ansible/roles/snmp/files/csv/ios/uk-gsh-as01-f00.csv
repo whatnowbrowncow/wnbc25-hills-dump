@@ -1,0 +1,8 @@
+hostname,community,access,access-list
+uk-gsh-as01-f00,whn4ccam01,RO,13
+uk-gsh-as01-f00,whn4ccam02,RW,13
+uk-gsh-as01-f00,c1sc0,RO,19
+uk-gsh-as01-f00,m0squ1t0,RO,10
+uk-gsh-as01-f00,wh1LLc0rp,RW,11
+uk-gsh-as01-f00,$n0Wd5c4nN3r,RO,22
+uk-gsh-as01-f00,5wUxlDGU,RW,solarwinds-new

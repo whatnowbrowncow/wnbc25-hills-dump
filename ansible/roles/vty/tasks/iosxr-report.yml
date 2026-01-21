@@ -1,0 +1,32 @@
+---
+
+- name: IOS-XR - collect VTY info
+  iosxr_command:
+    commands:
+      - show run
+  register: iosxr_vty_output
+
+# Debug commands to check output
+#- name: Display output
+#  debug: var=iosxr_vty_output
+
+- name: IOS-XR - parse command output
+  command_parser:
+    file: /gitnet/ansible/parser_templates/iosxr/vty.yml
+    content: "{{ iosxr_vty_output.stdout.0 }}"
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=iosxr_vty_pool_facts
+#
+#- name: Display JSON output
+#  debug: var=iosxr_vty_line_facts
+
+# Debug commands to check output
+#- name: Display JSON output
+#  debug: var=ansible_facts.iosxr_vty_pool_facts
+
+- name: IOS-XR - Generate csv report
+  template:
+    src: /gitnet/ansible/roles/vty/templates/iosxr/csv-template.j2
+    dest: /gitnet/ansible/roles/vty/files/csv/iosxr/{{ inventory_hostname }}.csv

@@ -1,0 +1,4 @@
+hostname,community,role,access-list
+uk-ld6-os01,wh1LLc0rp,network-admin,SNMP-NCS-ACCESS
+uk-ld6-os01,5wUxlDGU,network-operator,solarwinds-new
+uk-ld6-os01,juzusl4e11crIphigAQl,network-operator,acl-smartnet

@@ -1,0 +1,17 @@
+hostname,syslog ip address,interface
+bg-sof-fw01-pri,10.120.163.11,Sec-ISP
+bg-sof-fw01-pri,10.120.163.37,Sec-ISP
+gib-fw-vpn-asa-pri,10.180.129.205,Management
+gib-fw-vpn-asa-pri,10.180.163.18,Internal-VRF
+gib-fw-vpn-asa-pri,10.180.163.57,Internal-VRF
+gib-fw-vpn-asa-sec,10.180.129.205,Management
+gib-fw-vpn-asa-sec,10.180.163.18,Internal-VRF
+gib-fw-vpn-asa-sec,10.180.163.57,Internal-VRF
+uk-ld6-fw03-pri,10.112.12.111,internal-vrf
+uk-ld6-fw03-pri,10.112.13.17,internal-vrf
+uk-ld6-fw03-sec,10.112.12.111,internal-vrf
+uk-ld6-fw03-sec,10.112.13.17,internal-vrf
+uk-sc1-vpn-asa-pri,10.120.163.37,internal-vrf
+uk-sc1-vpn-asa-pri,10.120.163.77,internal-vrf
+uk-sc1-vpn-asa-sec,10.120.163.37,internal-vrf
+uk-sc1-vpn-asa-sec,10.120.163.77,internal-vrf

@@ -1,0 +1,6 @@
+hostname,name,type,seq number,remark,action,src_service_obj,src_service_obj_grp,protocol,src_host,src_network_obj,src_network_obj_grp,src_network,dest_host,dest_network_obj,dest_network_obj_grp,dest_network,dest_port,dest_port_obj_grp,dest_port_range,logging_level,logging_interval,status
+uk-ld6-lab-fw05,global_access,extended,1,,deny,,,ip,,,,any,,,,any,,,,informational,300,active
+uk-ld6-lab-fw05,auto-demo_app_access,extended,1,,permit,,,ip,,,,10.65.214.0 255.255.254.0,,,,10.65.216.0 255.255.254.0,,,,informational,300,active
+uk-ld6-lab-fw05,auto-demo_app_access,extended,2,,permit,,,ip,,,,10.65.220.0 255.255.254.0,,,,10.65.222.0 255.255.254.0,,,,informational,300,active
+uk-ld6-lab-fw05,auto-demo_app_access,extended,3,,deny,,,ip,,,,any,,,,any,,,,informational,300,active
+uk-ld6-lab-fw05,auto-demo_app_access,extended,4,,permit,,,ip,,,,10.65.230.0 255.255.254.0,,,,10.65.232.0 255.255.254.0,,,,informational,300,active

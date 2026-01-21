@@ -1,0 +1,131 @@
+"l3extLNodeP": {
+    "attributes": {
+        "descr": "",
+        "dn": "uni/tn-{{ item.0.tenant }}/out-{{item.0.context}}_fatl3out/lnodep-{{ item.0.context }}_{{ item.1.peer_device }}_np",
+        "name": "{{ item.0.context }}_{{ item.1.peer_device }}_np",
+        "status": "created,modified"
+    },
+    "children": [
+{% if item.1 %}
+{% for l3intprof in item.1 %}
+    {
+        "l3extLIfP": {
+            "attributes": {
+                "descr": "",
+                "name": "{{ l3intprof.name }}_intprof",
+                "ownerKey": "",
+                "ownerTag": "",
+                "tag": "yellow-green",
+                "status": "created,modified"
+            },
+            "children": [
+            {
+                "l3extRsPathL3OutAtt": {
+                    "attributes": {
+                        "addr": "0.0.0.0",
+                        "descr": "",
+                        "encap": "vlan-{{ l3intprof.svi.encapvl }}",
+                        "encapScope": "local",
+                        "ifInstT": "ext-svi",
+                        "llAddr": "0.0.0.0",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mode": "regular",
+                        "mtu": "inherit",
+                        "tDn": "topology/pod-1/protpaths-{{ l3intprof.svi.vpc_path.vpc_switches }}/pathep-[{{ l3intprof.svi.vpc_path.policy_group }}]",
+                        "targetDscp": "unspecified",
+                        "status": "created,modified"
+                    },
+                    "children": [
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "{{ l3intprof.svi.node_a_ip }}/{{ l3intprof.svi.node_cidr_mask }}",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "A"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "{{ l3intprof.svi.node_sec_ip }}/{{ l3intprof.svi.node_cidr_mask }}",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+                    {
+                        "l3extMember": {
+                            "attributes": {
+                                "addr": "{{ l3intprof.svi.node_b_ip }}/{{ l3intprof.svi.node_cidr_mask }}",
+                                "descr": "",
+                                "llAddr": "",
+                                "name": "",
+                                "side": "B"
+                            },
+                            "children": [{
+                                "l3extIp": {
+                                    "attributes": {
+                                        "addr": "{{ l3intprof.svi.node_sec_ip }}/{{ l3intprof.svi.node_cidr_mask }}",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    },
+{% if l3intprof.svi.bgp is defined %}
+                    {
+                        "bgpPeerP": {
+                            "attributes": {
+                                "addr": "{{ l3intprof.svi.bgp.peer_ip }}",
+                                "allowedSelfAsCnt": "3",
+                                "ctrl": "allow-self-as,send-com,send-ext-com",
+                                "descr": "",
+                                "name": "",
+                                "peerCtrl": "",
+                                "privateASctrl": "",
+                                "ttl": "1",
+                                "weight": "0"
+                            },
+                            "children": [{
+                                "bgpRsPeerPfxPol": {
+                                    "attributes": {
+                                        "tnBgpPeerPfxPolName": ""
+                                    }
+                                }
+                            },
+                            {
+                                "bgpLocalAsnP": {
+                                    "attributes": {
+                                        "asnPropagate": "none",
+                                        "descr": "",
+                                        "localAsn": "{{ l3intprof.svi.bgp.local_as }}",
+                                        "name": "",
+                                    }
+                                }
+                            },
+                            {
+                                "bgpAsP": {
+                                    "attributes": {
+                                        "asn": "{{ l3intprof.svi.bgp.remote_as }}",
+                                        "descr": "",
+                                        "name": "",
+                                    }
+                                }
+                            }]
+                        }
+                    }
+{% endif %}
+                    ]
+                }
+            }
+            ]
+        }
+    },
+{% endfor %}
+{% endif %}
+    ]
+}

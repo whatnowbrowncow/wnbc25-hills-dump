@@ -1,0 +1,37 @@
+Port-channel1.114: {admin-state: up, interface: Port-channel1.114, ip-add: 10.114.33.129,
+  mac-address: 0200.0101.0101, nameif: citrix, netmask: 255.255.255.224, security-level: '0'}
+Port-channel1.115: {admin-state: up, interface: Port-channel1.115, ip-add: 10.114.33.161,
+  mac-address: 0200.0101.0101, nameif: mailhosts, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.120: {admin-state: up, interface: Port-channel1.120, ip-add: 10.114.36.1,
+  mac-address: 0200.0101.0101, nameif: cde-web-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.121: {admin-state: up, interface: Port-channel1.121, ip-add: 10.114.37.1,
+  mac-address: 0200.0101.0101, nameif: cde-cms-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.122: {admin-state: up, interface: Port-channel1.122, ip-add: 10.114.38.1,
+  mac-address: 0200.0101.0101, nameif: cde-backoffice, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.134: {admin-state: up, interface: Port-channel1.134, ip-add: 10.114.44.1,
+  mac-address: 0200.0101.0101, nameif: int-lb, netmask: 255.255.254.0, security-level: '100'}
+Port-channel1.150: {admin-state: up, interface: Port-channel1.150, ip-add: 10.114.48.1,
+  mac-address: 0200.0101.0101, nameif: proxy-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.153: {admin-state: up, interface: Port-channel1.153, ip-add: 10.114.48.97,
+  mac-address: 0200.0101.0101, nameif: sftp-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.154: {admin-state: up, interface: Port-channel1.154, ip-add: 10.114.48.129,
+  mac-address: 0200.0101.0101, nameif: hdr-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.155: {admin-state: up, interface: Port-channel1.155, ip-add: 10.114.48.161,
+  mac-address: 0200.0101.0101, nameif: crypto-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.160: {admin-state: up, interface: Port-channel1.160, ip-add: 10.114.50.1,
+  mac-address: 0200.0101.0101, nameif: application-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.161: {admin-state: up, interface: Port-channel1.161, ip-add: 10.114.51.1,
+  mac-address: 0200.0101.0101, nameif: authpro-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.162: {admin-state: up, interface: Port-channel1.162, ip-add: 10.114.52.1,
+  mac-address: 0200.0101.0101, nameif: database-tier, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.163: {admin-state: up, interface: Port-channel1.163, ip-add: 10.114.53.1,
+  mac-address: 0200.0101.0101, nameif: performancedb-tier, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.199: {admin-state: up, interface: Port-channel1.199, ip-add: 10.114.63.225,
+  mac-address: 0200.0101.0101, nameif: hdr-perftest-tier, netmask: 255.255.255.224,
+  security-level: '100'}
+Port-channel1.371: {admin-state: up, interface: Port-channel1.371, ip-add: 10.114.160.36,
+  mac-address: 0200.0101.0101, nameif: internal-vrf, netmask: 255.255.255.224, ospf: mtu-ignore,
+  security-level: '100'}
+Port-channel1.421: {admin-state: up, interface: Port-channel1.421, ip-add: 10.114.166.129,
+  mac-address: 0200.0101.0101, nameif: cag, netmask: 255.255.255.128, security-level: '100'}

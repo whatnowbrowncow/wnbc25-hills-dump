@@ -1,0 +1,10 @@
+hostname,name,type,seq number,remark,action,src_service_obj,src_service_obj_grp,protocol,src_host,src_network_obj,src_network_obj_grp,src_network,dest_host,dest_network_obj,dest_network_obj_grp,dest_network,dest_port,dest_port_obj_grp,dest_port_range,logging_level,logging_interval,status
+uk-ld6-lab-fw05,global_access,extended,1,,permit,,,ip,,,,any,,,,10.210.154.0 255.255.255.0,,,,informational,300,active
+uk-ld6-lab-fw05,global_access,extended,2,,permit,,,ip,,,,10.210.154.0 255.255.255.0,,,,any4,,,,informational,300,active
+uk-ld6-lab-fw05,global_access,extended,3,CHG0142417 -  wide access on prem due to specific rules in sddc,,,,,,,,,,,,,,,,,,
+uk-ld6-lab-fw05,global_access,extended,4,,permit,,,ip,,,vmc-sddcs,,,,all_wh_dc_nets,,,,,informational,300,active
+uk-ld6-lab-fw05,global_access,extended,5,,permit,,,ip,,,all_wh_dc_nets,,,,vmc-sddcs,,,,,informational,300,active
+uk-ld6-lab-fw05,nt_cap,extended,1,,deny,,,ip,,,vmc-sddcs,,,,all_wh_dc_nets,,,,,informational,300,active
+uk-ld6-lab-fw05,nt_cap,extended,2,,deny,,,ip,,,all_wh_dc_nets,,,,vmc-sddcs,,,,,informational,300,active
+uk-ld6-lab-fw05,nt_cap,extended,3,,permit,,,ip,,,vmc-sddcs,,,,,any4,,,,informational,300,active
+uk-ld6-lab-fw05,nt_cap,extended,4,,permit,,,ip,,,,any4,,,vmc-sddcs,,,,,informational,300,active

@@ -1,0 +1,14 @@
+---
+
+ntp:
+    source_interface: "{{ ntp_source_interface_facts.interface }}"
+    ntp_servers:
+{% for item in ntp_server_facts %}
+    - ip_addr: "{{ item.ntp_servers.ip_address }}"
+      vrf: "{{ item.ntp_servers.vrf }}"
+{% if item.ntp_servers.preference is none %}
+      preferred: ""
+{% else %}
+      preferred: "{{ item.ntp_servers.preference }}"
+{% endif %}
+{% endfor %}

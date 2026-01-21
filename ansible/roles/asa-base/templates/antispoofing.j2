@@ -1,0 +1,3 @@
+{% for interface in item.vlans %}
+ip verify reverse-path interface {{ interface.nameif }}
+{% endfor %}

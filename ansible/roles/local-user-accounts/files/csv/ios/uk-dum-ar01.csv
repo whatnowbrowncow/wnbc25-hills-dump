@@ -1,0 +1,2 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-dum-ar01,svcnetworkauto,15,secret,4,vvhhtIPAqxiJjbycSPTNazk4qwXF2yqCsZCDYzkVTHs

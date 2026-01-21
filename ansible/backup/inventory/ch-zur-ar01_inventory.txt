@@ -1,0 +1,8 @@
+NAME: "CISCO1941/K9", DESCR: "CISCO1941/K9 chassis, Hw Serial#: FCZ1708C3L9, Hw Revision: 1.0"
+PID: CISCO1941/K9      , VID: V05 , SN: FCZ1708C3L9
+
+NAME: "4 Port GE Non-POE EHWIC Switch on Slot 0 SubSlot 0", DESCR: "4 Port GE Non-POE EHWIC Switch"
+PID: EHWIC-4ESG        , VID: V01 , SN: FOC17054STW
+
+NAME: "C1941/C2901 AC Power Supply", DESCR: "C1941/C2901 AC Power Supply"
+PID: PWR-1941-2901-AC  , VID:    , SN:

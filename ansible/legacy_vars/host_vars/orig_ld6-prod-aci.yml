@@ -1,0 +1,657 @@
+---
+
+tenants:
+  - tenant: "production"
+    contexts:
+      - context: "production"
+      - context: "retail"
+      - context: "corp"
+      - context: "whc"
+  - tenant: "common"
+    contexts:
+      - context: "internal-vrf"
+      - context: "retail-vrf"
+      - context: "sis-vrf"
+      - context: "tote-vrf"
+      - context: "cde-mgmt-vrf"
+
+domains:
+  network_devices:
+    domain: "network-devices"
+    domain_type: "phys"
+  enclosures:
+    domain: "enclosures"
+    domain_type: "phys"
+  vmware:
+    domain: "vmware"
+    domain_type: "vmm"
+
+    
+alt_domains:
+  - domain: "network-devices"
+    domain_type: "phys"
+  - domain: "enclosures"
+    domain_type: "phys"
+  - domain: "vmware"
+    domain_type: "vmm"
+
+
+vmm_domain: "LD6PRDDvSRES02"
+
+pod_id: "1"
+    
+app_profs:
+  - app_prof: "prod-cde"
+    tenant: "production"
+    context: "production"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "cde_ext-web"
+        network: "10.118.64.0"
+        gateway: "10.118.64.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_ext-web"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_int-web"
+        network: "10.118.72.0"
+        gateway: "10.118.72.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_int-web"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_int-lb"
+        network: "10.118.80.0"
+        gateway: "10.118.80.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_int-lb"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_app"
+        network: "10.118.88.0"
+        gateway: "10.118.88.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_app"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_db"
+        network: "10.118.96.0"
+        gateway: "10.118.96.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_db"
+            vcenter_dynamic_vlan: true
+      - bd: "cde_rss_db"
+        network: "10.118.104.0"
+        gateway: "10.118.104.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "cde_rss_db"
+            vcenter_dynamic_vlan: true
+  - app_prof: "prod-ncde"
+    tenant: "production"
+    context: "production"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "ncde_ext-web"
+        network: "10.118.128.0"
+        gateway: "10.118.128.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_ext-web"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_int-web"
+        network: "10.118.136.0"
+        gateway: "10.118.136.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_int-web"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_int-lb"
+        network: "10.118.144.0"
+        gateway: "10.118.144.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_int-lb"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_app"
+        network: "10.118.152.0"
+        gateway: "10.118.152.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_app"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_db"
+        network: "10.118.160.0"
+        gateway: "10.118.160.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "shared"
+        epgs:
+          - epg: "ncde_db"
+            vcenter_dynamic_vlan: true
+  - app_prof: "retail"
+    tenant: "production"
+    context: "retail"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "retail_ext-web"
+        network: "10.118.192.0"
+        gateway: "10.118.192.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "retail_ext-web"
+            vcenter_dynamic_vlan: true
+      - bd: "retail_int-web"
+        network: "10.118.194.0"
+        gateway: "10.118.194.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "retail_int-web"
+            vcenter_dynamic_vlan: true
+      - bd: "retail_int-lb"
+        network: "10.118.196.0"
+        gateway: "10.118.196.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "retail_int-lb"
+            vcenter_dynamic_vlan: true
+      - bd: "retail_prod"
+        network: "10.118.200.0"
+        gateway: "10.118.200.1"
+        mask: "255.255.252.0"
+        cidr_mask: "22"
+        scope: "shared"
+        epgs:
+          - epg: "retail_prod"
+            vcenter_dynamic_vlan: true
+
+  - app_prof: "corp"
+    tenant: "production"
+    context: "corp"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "corp_ext-web"
+        network: "10.118.208.0"
+        gateway: "10.118.208.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_ext-web"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_int-web"
+        network: "10.118.210.0"
+        gateway: "10.118.210.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_int-web"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_int-lb"
+        network: "10.118.212.0"
+        gateway: "10.118.212.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_int-lb"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_app"
+        network: "10.118.214.0"
+        gateway: "10.118.214.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_app"
+            vcenter_dynamic_vlan: true
+      - bd: "corp_db"
+        network: "10.118.216.0"
+        gateway: "10.118.216.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "shared"
+        epgs:
+          - epg: "corp_db"
+            vcenter_dynamic_vlan: true
+  - app_prof: "whc"
+    tenant: "production"
+    context: "production"
+    firewall_connected: true
+    l2_unknown_unicast: "flood"
+    arp_flooding: "True"
+    bds:
+      - bd: "whc_cde-api-integration"
+        network: "10.119.5.0"
+        gateway: "10.119.5.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-api-integration"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-app1-lan"
+        network: "10.119.3.0"
+        gateway: "10.119.3.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-app1-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-deployment-lan"
+        network: "10.119.1.0"
+        gateway: "10.119.1.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-deployment-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-ext-api"
+        network: "10.119.7.0"
+        gateway: "10.119.7.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-ext-api"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-ext-pres-lan"
+        network: "10.119.6.0"
+        gateway: "10.119.6.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-ext-pres-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-front-cx-mgmt"
+        network: "10.119.10.0"
+        gateway: "10.119.10.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-front-cx-mgmt"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-internal-presentation"
+        network: "10.119.4.0"
+        gateway: "10.119.4.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-internal-presentation"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-lan02"
+        network: "10.119.8.0"
+        gateway: "10.119.8.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-lan02"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-lan03"
+        network: "10.119.9.0"
+        gateway: "10.119.9.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-lan03"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-lan04"
+        network: "10.119.11.0"
+        gateway: "10.119.11.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-lan04"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-lan05"
+        network: "10.119.12.0"
+        gateway: "10.119.12.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-lan05"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-lan06"
+        network: "10.119.13.0"
+        gateway: "10.119.13.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-lan06"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-lan07"
+        network: "10.119.14.0"
+        gateway: "10.119.14.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-lan07"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-lan08"
+        network: "10.119.15.0"
+        gateway: "10.119.15.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-lan08"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_cde-web1-lan"
+        network: "10.119.2.0"
+        gateway: "10.119.2.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_cde-web1-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app1-lan"
+        network: "10.119.67.0"
+        gateway: "10.119.67.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app1-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app2-lan"
+        network: "10.119.78.0"
+        gateway: "10.119.78.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app2-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app3-lan"
+        network: "10.119.79.0"
+        gateway: "10.119.79.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app3-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan01"
+        network: "10.119.68.0"
+        gateway: "10.119.68.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan01"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan02"
+        network: "10.119.69.0"
+        gateway: "10.119.69.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan02"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan03"
+        network: "10.119.70.0"
+        gateway: "10.119.70.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan03"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan04"
+        network: "10.119.71.0"
+        gateway: "10.119.71.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan04"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan05"
+        network: "10.119.72.0"
+        gateway: "10.119.72.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan05"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan06"
+        network: "10.119.73.0"
+        gateway: "10.119.73.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan06"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan07"
+        network: "10.119.74.0"
+        gateway: "10.119.74.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan07"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan08"
+        network: "10.119.75.0"
+        gateway: "10.119.75.0.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan08"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan09"
+        network: "10.119.76.0"
+        gateway: "10.119.76.0.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan09"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-app-lan10"
+        network: "10.119.77.0"
+        gateway: "10.119.77.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-app-lan10"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-deployment-lan"
+        network: "10.119.65.0"
+        gateway: "10.119.65.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-deployment-lan"
+            vcenter_dynamic_vlan: true
+      - bd: "whc_noncde-web1-lan"
+        network: "10.119.66.0"
+        gateway: "10.119.66.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "shared"
+        epgs:
+          - epg: "whc_noncde-web1-lan"
+            vcenter_dynamic_vlan: true
+  
+  - app_prof: "internal"
+    tenant: "common"
+    context: "internal-vrf"
+    firewall_connected: false
+    bds:
+      - bd: "infoblox"
+        network: "10.112.208.0"
+        gateway: "10.112.208.1"
+        mask: "255.255.255.224"
+        cidr_mask: "27"
+        scope: "public"
+        epgs:
+          - epg: "infoblox"
+            vcenter_dynamic_vlan: true
+      - bd: "build"
+        network: "10.112.209.0"
+        gateway: "10.112.209.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "public"
+        epgs:
+          - epg: "build"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_storage-data"
+        network: "10.112.214.0"
+        gateway: "10.112.214.1"
+        mask: "255.255.255.128"
+        cidr_mask: "25"
+        scope: "public"
+        epgs:
+          - epg: "ncde_storage-data"
+            vcenter_dynamic_vlan: true
+      - bd: "ext-pres"
+        network: "10.112.216.0"
+        gateway: "10.112.216.1"
+        mask: "255.255.248.0"
+        cidr_mask: "21"
+        scope: "public"
+        epgs:
+          - epg: "ext-pres"
+            vcenter_dynamic_vlan: true
+      - bd: "ncde_jumphosts"
+        network: "10.112.210.0"
+        gateway: "10.112.210.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "public"
+        epgs:
+          - epg: "ncde_jumphosts"
+            vcenter_dynamic_vlan: true
+      
+
+  - app_prof: "cde-mgmt"
+    tenant: "common"
+    context: "cde-mgmt-vrf"
+    firewall_connected: true
+    bds:
+      - bd: "vsphere"
+        network: "10.112.8.0"
+        gateway: "10.112.8.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "private"
+        epgs:
+          - epg: "vsphere"
+            encap_id: "1105"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1105"
+      - bd: "server-mgmt"
+        network: "10.112.10.0"
+        gateway: "10.112.10.1"
+        mask: "255.255.254.0"
+        cidr_mask: "23"
+        scope: "private"
+        epgs:
+          - epg: "server-mgmt"
+            encap_id: "2122"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1106"
+      - bd: "core-services"
+        network: "10.112.12.0"
+        gateway: "10.112.12.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "private"
+        epgs:
+          - epg: "core-services"
+            encap_id: "2124"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1108"
+      - bd: "mano"
+        network: "10.112.13.0"
+        gateway: "10.112.13.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "private"
+        epgs:
+          - epg: "mano"
+            encap_id: "2123"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1107"
+      - bd: "jumphosts"
+        network: "10.112.15.0"
+        gateway: "10.112.15.1"
+        mask: "255.255.255.0"
+        cidr_mask: "24"
+        scope: "private"
+        epgs:
+          - epg: "jumphosts"
+            encap_id: "2125"
+            vcenter_dynamic_vlan: false
+            vcenter_vlan_mode: "auto"
+            vcenter_vlan: "1109"
+      #- bd: "cde_storage-data"
+      #  network: "10.112.46.0"
+      #  gateway: "10.112.46.1"
+      #  mask: "255.255.255.128"
+      #  cidr_mask: "25"
+      #  scope: "private"
+      #  epgs:
+      #    - epg: "cde_storage-data"
+      #      vcenter_dynamic_vlan: true
+      

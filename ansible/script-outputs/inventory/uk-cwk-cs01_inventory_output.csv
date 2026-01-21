@@ -1,0 +1,34 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-cwk-cs01,1000BaseSX,TenGigabitEthernet2/1/4,GLC-SX-MMD,AGA1721R1S3,V01
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/2,SFP-10G-SR,AGD165142MH,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/2,SFP-10G-SR,AGD16514462,V03
+uk-cwk-cs01,1000BaseSX,TenGigabitEthernet2/1/5,Unspecified,AGM1539L443,none
+uk-cwk-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 2,C4KX-PWR-750AC-R,ART1831X08G,V01
+uk-cwk-cs01,Power Supply ( AC 750W ),Switch2 Power Supply 1,C4KX-PWR-750AC-R,ART1831X090,V01
+uk-cwk-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 2,C4KX-PWR-750AC-R,ART1831X0CM,V01
+uk-cwk-cs01,Power Supply ( AC 750W ),Switch1 Power Supply 1,C4KX-PWR-750AC-R,ART1831X0FZ,V01
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/11,SFP-10G-SR,AVD2041APTU,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/11,SFP-10G-SR,AVD223399X8,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/10,SFP-10G-SR,AVD223399Y1,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/10,SFP-10G-SR,AVD223399YM,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/3,SFP-10G-SR,AVD223399Z1,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/3,SFP-10G-SR,AVD223399Z2,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet1/1/1,SFP-10G-SR,FNS162208WG,V03
+uk-cwk-cs01,SFP-10Gbase-SR,TenGigabitEthernet2/1/1,SFP-10G-SR,FNS1709275N,V04
+uk-cwk-cs01,1000BaseSX,TenGigabitEthernet1/1/5,GLC-SX-MMD,FNS17450N3H,V01
+uk-cwk-cs01,1000BaseSX,TenGigabitEthernet2/1/7,GLC-SX-MMD,FNS1914062V,V01
+uk-cwk-cs01,1000BaseSX,TenGigabitEthernet1/1/4,GLC-SX-MMD,FNS20031584,V01
+uk-cwk-cs01,1000BaseSX,TenGigabitEthernet1/1/7,GLC-SX-MMD,FNS204400XT,V01
+uk-cwk-cs01,10GE SFP+,Switch1 Linecard 2 (virtual slot 2),C4KX-NM-8,JAE18440287,V04
+uk-cwk-cs01,10GE SFP+,Switch2 Linecard 2 (virtual slot 12),C4KX-NM-8,JAE1844029T,V04
+uk-cwk-cs01,4500X-16 10GE (SFP+),Switch2 Supervisor 1 (virtual slot 11),WS-C4500X-16,JAE184500CV,V03
+uk-cwk-cs01,Cisco Systems,Switch2 System,,JAE184500CV,none
+uk-cwk-cs01,4500X-16 10GE (SFP+),Switch1 Supervisor 1 (virtual slot 1),WS-C4500X-16,JAE184500VX,V03
+uk-cwk-cs01,Cisco Systems,Switch1 System,,JAE184500VX,none
+uk-cwk-cs01,1000BaseT,TenGigabitEthernet2/1/8,Unspecified,MTC173107PA,none
+uk-cwk-cs01,1000BaseT,TenGigabitEthernet1/1/8,Unspecified,MTC173108AZ,none
+uk-cwk-cs01,1000BaseT,TenGigabitEthernet1/2/7,Unspecified,MTC173108FD,none
+uk-cwk-cs01,1000BaseT,TenGigabitEthernet1/1/9,Unspecified,MTC173108KP,none
+uk-cwk-cs01,1000BaseT,TenGigabitEthernet1/2/2,GLC-T,MTC173418EP,none
+uk-cwk-cs01,1000BaseT,TenGigabitEthernet2/2/2,Unspecified,MTC174106SG,none
+uk-cwk-cs01,1000BaseT,TenGigabitEthernet2/1/9,SFP-GE-T,MTC184708T9,V02

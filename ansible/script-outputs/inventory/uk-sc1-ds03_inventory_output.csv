@@ -1,0 +1,30 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 109 Power Supply 1,N2200-PAC-400W,DTN1705P272,V04
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 109 Power Supply 2,N2200-PAC-400W,DTN1705P274,V04
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 115 Power Supply 2,N2200-PAC-400W,DTN1739P089,V04
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 113 Power Supply 2,N2200-PAC-400W,DTN1739P097,V04
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 113 Power Supply 1,N2200-PAC-400W,DTN1739P09W,V04
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 115 Power Supply 1,N2200-PAC-400W,DTN1739P0QZ,V04
+uk-sc1-ds03,Fabric Extender Module,FEX 109 Module 1,N2K-C2248TP-1GE,FOC17061VFU,V03
+uk-sc1-ds03,Fabric Extender Module,FEX 113 Module 1,N2K-C2248TP-1GE,FOC17435EDT,V04
+uk-sc1-ds03,Fabric Extender Module,FEX 115 Module 1,N2K-C2248TP-1GE,FOC17455ND3,V04
+uk-sc1-ds03,Fabric Extender Module,FEX 111 Module 1,N2K-C2248TP-1GE,FOC17455NSS,V04
+uk-sc1-ds03,O2 48X10GE/Modular Supervisor,Module 1,N5K-C5596UP,FOC17500MXV,V01
+uk-sc1-ds03,O2 16 port flexible GEM,Module 2,N55-M16UP,FOC19442015,V01
+uk-sc1-ds03,Nexus 5596 Chassis,Chassis,N5K-C5596UP,FOX1750GTUF,V01
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 111 Power Supply 1,N2200-PAC-400W-B,LIT17191P4R,V02
+uk-sc1-ds03,Fabric Extender AC power supply,FEX 111 Power Supply 2,N2200-PAC-400W-B,LIT17191P4U,V02
+uk-sc1-ds03,Fabric Extender Fan module,FEX 109 Fan 1,N2K-C2248-FAN,N/A,N/A
+uk-sc1-ds03,Fabric Extender Fan module,FEX 111 Fan 1,N2K-C2248-FAN-B,N/A,N/A
+uk-sc1-ds03,Fabric Extender Fan module,FEX 113 Fan 1,N2K-C2248-FAN,N/A,N/A
+uk-sc1-ds03,Fabric Extender Fan module,FEX 115 Fan 1,N2K-C2248-FAN,N/A,N/A
+uk-sc1-ds03,Chassis fan module,Fan 1,N5596UP-FAN-B,N/A,N/A
+uk-sc1-ds03,Chassis fan module,Fan 2,N5596UP-FAN-B,N/A,N/A
+uk-sc1-ds03,Chassis fan module,Fan 3,N5596UP-FAN-B,N/A,N/A
+uk-sc1-ds03,Chassis fan module,Fan 4,N5596UP-FAN-B,N/A,N/A
+uk-sc1-ds03,AC power supply,Power supply 2,N55-PAC-1100W-B,POG17216L29,V01
+uk-sc1-ds03,AC power supply,Power supply 1,N55-PAC-1100W-B,POG17216L8K,V01
+uk-sc1-ds03,N2K-C2248TP-1GE  CHASSIS,FEX 109 CHASSIS,N2K-C2248TP-1GE,SSI16520DB9,V03
+uk-sc1-ds03,N2K-C2248TP-1GE  CHASSIS,FEX 113 CHASSIS,N2K-C2248TP-1GE,SSI173405RV,V04
+uk-sc1-ds03,N2K-C2248TP-1GE  CHASSIS,FEX 111 CHASSIS,N2K-C2248TP-1GE,SSI173405YX,V04
+uk-sc1-ds03,N2K-C2248TP-1GE  CHASSIS,FEX 115 CHASSIS,N2K-C2248TP-1GE,SSI17340DWT,V04

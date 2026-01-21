@@ -1,0 +1,21 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-ld6-cr02,AC power supply,PS 2 C6880-X-3KW-AC,C6880-X-3KW-AC,ART211570L8,V02
+uk-ld6-cr02,AC power supply,PS 1 C6880-X-3KW-AC,C6880-X-3KW-AC,ART211570LE,V02
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-SR Te5/16,Transceiver Te5/16,SFP-10G-SR,AVD1842A4KF,V03
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-LR Te5/14,Transceiver Te5/14,SFP-10G-LR,AVD2117KBEU,V02
+uk-ld6-cr02,C6880-X Fan Tray 1,C6880-X-FAN 1,C6880-X-FAN,DCH2114F9WE,V02
+uk-ld6-cr02,SFP Transceiver 1000BaseSX Te5/3,Transceiver Te5/3,Unspecified,FNS0947K35N,Unspecified
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-SR Te5/2,Transceiver Te5/2,SFP-10G-SR,FNS211612NR,V03
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-SR Te5/4,Transceiver Te5/4,SFP-10G-SR,FNS211612P7,V03
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-SR Te5/9,Transceiver Te5/9,SFP-10G-SR,FNS211612QH,V03
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-SR Te5/10,Transceiver Te5/10,SFP-10G-SR,FNS21200QBQ,V03
+uk-ld6-cr02,C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.3,5,C6880-X-SUP,JAE2131043Y,none
+uk-ld6-cr02,C6880-X-PFC Policy Feature Card 4 Rev. 1.2,C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5,C6880-X-PFC,JAE2131047D,none
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-SR Te5/12,Transceiver Te5/12,SFP-10G-SR,JUR1835GBCH,V03
+uk-ld6-cr02,SFP Transceiver 10/100/1000BaseT Te5/7,Transceiver Te5/7,GLC-TE,MTC211902H4,V01
+uk-ld6-cr02,SFP Transceiver 10/100/1000BaseT Te5/5,Transceiver Te5/5,GLC-TE,MTC21190B3H,V01
+uk-ld6-cr02,SFP Transceiver 10/100/1000BaseT Te5/13,Transceiver Te5/13,GLC-TE,MTC22120QQ0,V01
+uk-ld6-cr02,SFP Transceiver 10/100/1000BaseT Te5/15,Transceiver Te5/15,GLC-TE,MTC22120R4F,V01
+uk-ld6-cr02,SFP Transceiver 10/100/1000BaseT Te5/6,Transceiver Te5/6,GLC-TE,MTC22120RNM,V01
+uk-ld6-cr02,SFP+ Transceiver 10Gbase-LR Te5/8,Transceiver Te5/8,SFP-10G-LR,OPM22220HPB,V02
+uk-ld6-cr02,Cisco Systems,C6880-X,C6880-X,SAL21420214,V02

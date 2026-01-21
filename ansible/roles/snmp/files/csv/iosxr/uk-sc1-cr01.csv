@@ -1,0 +1,7 @@
+hostname,community,access,type,access-list
+uk-sc1-cr01,n1m50ft,RO,IPv4,acl-nimsoft
+uk-sc1-cr01,5wUxlDGU,RO,IPv4,solarwinds-new
+uk-sc1-cr01,m0squ1t0,RO,IPv4,acl-cacti
+uk-sc1-cr01,wh1LLc0rp,RW,IPv4,acl-ncs
+uk-sc1-cr01,$n0Wd5c4nN3r,RO,IPv4,acl-servicenow
+uk-sc1-cr01,juzusl4e11crIphigAQl,RO,IPv4,cisco-csp

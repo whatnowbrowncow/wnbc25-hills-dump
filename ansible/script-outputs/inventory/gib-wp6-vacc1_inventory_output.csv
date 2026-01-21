@@ -1,0 +1,24 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet5/0/1,Unspecified,AGM115016Q0,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet4/0/1,Unspecified,AGM120713BY,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet5/0/3,Unspecified,AGM120715GX,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet1/0/1,Unspecified,AGM120716GR,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet1/0/4,Unspecified,AGM1602L8HV,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet2/0/2,Unspecified,AGM1602L8JD,none
+gib-wp6-vacc1,10/100/1000BaseTX SFP,GigabitEthernet4/0/4,GLC-TE,AVC2217247F,V01
+gib-wp6-vacc1,10/100/1000BaseTX SFP,GigabitEthernet5/0/4,GLC-TE,AVC2217248T,V01
+gib-wp6-vacc1,WS-C3750V2-48PS,5,WS-C3750V2-48PS-S,FDO1627X0DD,V09
+gib-wp6-vacc1,WS-C3750V2-48PS,3,WS-C3750V2-48PS-S,FDO1634X1Z0,V09
+gib-wp6-vacc1,WS-C3750V2-48PS,2,WS-C3750V2-48PS-S,FDO1634X203,V09
+gib-wp6-vacc1,WS-C3750V2-48PS,1,WS-C3750V2-48PS-S,FDO1634X21F,V09
+gib-wp6-vacc1,WS-C3750V2-48PS,4,WS-C3750V2-48PS-S,FDO1634X26N,V09
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet1/0/3,Unspecified,FNS16310HX9,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet2/0/1,Unspecified,FNS16310JC1,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet3/0/1,Unspecified,FNS16310JCU,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet2/0/3,Unspecified,FNS16311Q52,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet3/0/3,GLC-SX-MMD,FNS17511RV9,V01
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet4/0/2,GLC-SX-MMD,FNS17511U8V,V01
+gib-wp6-vacc1,10/100/1000BaseTX SFP,GigabitEthernet2/0/4,Unspecified,MTC130802FF,none
+gib-wp6-vacc1,10/100/1000BaseTX SFP,GigabitEthernet3/0/4,Unspecified,MTC130802GG,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet3/0/2,Unspecified,OPA12254471,none
+gib-wp6-vacc1,1000BaseSX SFP,GigabitEthernet1/0/2,Unspecified,OPA12254772,none

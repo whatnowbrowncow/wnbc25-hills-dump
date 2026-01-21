@@ -1,0 +1,9 @@
+---
+
+- name: PLAY - ASA to VMC objects and rules conversion 
+  hosts: asa
+  gather_facts: no
+  connection: network_cli
+
+  roles:
+    - vmc-conversions

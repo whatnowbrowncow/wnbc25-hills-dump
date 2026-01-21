@@ -1,0 +1,47 @@
+---
+
+- name: NXOS - Retrieving the management ACL name/number
+  nxos_command:   
+    commands:  
+      - "show run | section line"
+  register: name
+      
+- name: NXOS - Registering the management ACL name/number as a variable
+  set_fact:
+    aclNAME: "{{ name.stdout[0] | regex_search('access-class\\s+(?P<aclname>\\S+).*','\\g<aclname>') }}"
+
+- name: NXOS - Ending the play for devices with no management ACL configured
+  meta: end_host
+  when: aclNAME == ""
+
+- name: NXOS  - Retrieving the management ACL
+  nxos_command:   
+    commands:  
+      - "show access-lists {{ aclNAME[0] }}"
+  register: mgmtACL
+
+- name: NXOS - Registering the sequence numbers that are to be removed
+  set_fact:
+    aclMATCH: "{{ mgmtACL.stdout[0] | regex_findall('((\\d+) +permit +\\S+ +10.120.163.*)') }}"
+
+#- name: NXOS - Building configuration for testing purposes
+#  template:
+#    src: "{{ role_path }}/templates/nxos-deletions.j2"
+#    dest: "{{ role_path }}/files/configs/nxos/{{ inventory_hostname }}.cfg"
+#  when: aclMATCH
+
+- name: NXOS - Building and applying the configuration
+  nxos_config:
+    src: "{{ role_path }}/templates/nxos-deletions.j2"
+  register: aclUPDATED
+  notify: "updates exist"
+  when: aclMATCH
+
+- name: NXOS - Resequencing the management ACL and saving the configuration
+  nxos_config:
+    lines:
+      - resequence ip access-list {{ aclNAME[0] }} 10 10
+    save_when: always
+  register: aclRESEQUENCED
+  notify: "updates exist"
+  when: aclUPDATED.changed

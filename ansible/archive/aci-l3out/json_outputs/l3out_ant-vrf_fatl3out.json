@@ -1,0 +1,26 @@
+"l3extOut": {
+    "attributes": {
+        "dn": "uni/tn-ant-tenant/out-ant-vrf_fatl3out",
+        "name": "ant-vrf_fatl3out",
+        "rn": "out-ant-vrf_fatl3out",
+        "status": "created,modified"
+    },
+    "children": [{
+        "l3extRsEctx": {
+            "attributes": {
+                "tnFvCtxName": "ant-vrf",
+                "status": "created,modified"
+            },
+            "children": []
+        }
+    },
+    {
+        "l3extRsL3DomAtt": {
+            "attributes": {
+                "tDn": "uni/l3dom-network-devices",
+                "status": "created,modified"
+            },
+            "children": []
+        }
+    }]
+}

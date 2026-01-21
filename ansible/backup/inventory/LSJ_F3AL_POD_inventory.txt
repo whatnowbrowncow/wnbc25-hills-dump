@@ -1,0 +1,20 @@
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PS-S   , VID: V01  , SN: FDO1902E18T
+
+NAME: "Switch 1", DESCR: "WS-C3650-48PS-S"
+PID: WS-C3650-48PS-S   , VID: V01  , SN: FDO1902E18T
+
+NAME: "StackAdapter1/1", DESCR: "StackAdapter1/1"
+PID: C3650-STACK       , VID: V01  , SN: FDO184907YL
+
+NAME: "StackAdapter1/2", DESCR: "StackAdapter1/2"
+PID: C3650-STACK       , VID: V01  , SN: FDO184909BQ
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-640WAC     , VID: V01  , SN: DCB1846B0K6
+
+NAME: "Gi1/1/1", DESCR: "10/100/1000BaseTX SFP"
+PID: SFP-GE-T            , VID: V02  , SN: MTC18470E21     
+
+NAME: "Gi1/1/4", DESCR: "1000BaseSX SFP"
+PID: GLC-SX-MMD          , VID: V01  , SN: AGJ1817R3UH

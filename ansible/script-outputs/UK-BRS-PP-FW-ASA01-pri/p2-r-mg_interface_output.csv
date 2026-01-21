@@ -1,0 +1,4 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel21.2840,10.214.180.1,,retail-web-mgmt,255.255.255.128,100
+up,,Port-channel21.2841,10.214.180.129,,retail-app-mgmt,255.255.255.128,100
+up,,Port-channel21.3083,10.214.161.164,,pp2on-internal-vrf,255.255.255.224,100

@@ -1,0 +1,5 @@
+---
+
+- name: Configure site information including rack ids.
+  import_tasks: ./aci-geolocation.yml
+  when: ansible_network_os == "aci"

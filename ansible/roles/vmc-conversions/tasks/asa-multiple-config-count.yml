@@ -1,0 +1,25 @@
+---
+
+- name: ASA-MULTIPLE - "{{ context.context }}" - Collecting the configuration
+  asa_command:
+    commands:
+      - "show running-config access-list"
+      - "show running-config object network in-line"
+      - "show running-config object-group network"
+      - "show running-config object service in-line"
+      - "show running-config object-group service"
+      - "show running-config object-group protocol"
+    context: "{{ context.context }}"
+  register: config_output
+
+- name: ASA-MULTIPLE - "{{ context.context }}" - Collecting each unique ACL name
+  set_fact:
+    acls: "{{ config_output.stdout[0] | regex_findall('^access-list +(?!global_mpc)(\\S+) +extended','\\g<acls>') | unique }}"
+    net_obj_grps: "{{ config_output.stdout[2] | regex_findall('object-group') }}"
+    svc_obj_grps: "{{ config_output.stdout[4] | regex_findall('object-group') }}"
+    proto_obj_grps: "{{ config_output.stdout[5] | regex_findall('object-group') }}"
+
+- name: ASA-MULTIPLE - Build configuration for testing purposes
+  template:
+    src: "{{ role_path }}/templates/asa_multiple/config-count-template.j2"
+    dest: "{{ role_path }}/files/{{ inventory_hostname }}_{{ context.context }}_config-summary.yml"

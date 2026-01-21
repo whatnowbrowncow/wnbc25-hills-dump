@@ -1,0 +1,37 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-wpg-vacc1,1000BaseSX SFP,Gi5/1/1,,AGM120715GY,none
+gib-wpg-vacc1,Switch 5 - Power Supply B,Switch 5 - Power Supply B,PWR-C2-640WAC,DCB2139B30T,V03
+gib-wpg-vacc1,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,DCB2139B30V,V03
+gib-wpg-vacc1,Switch 4 - Power Supply A,Switch 4 - Power Supply A,PWR-C2-640WAC,DCB2139B30X,V03
+gib-wpg-vacc1,Switch 5 - Power Supply A,Switch 5 - Power Supply A,PWR-C2-640WAC,DCB2139B30Y,V03
+gib-wpg-vacc1,Switch 4 - Power Supply B,Switch 4 - Power Supply B,PWR-C2-640WAC,DCB2139B310,V03
+gib-wpg-vacc1,Switch 3 - Power Supply B,Switch 3 - Power Supply B,PWR-C2-640WAC,DCB2139B311,V03
+gib-wpg-vacc1,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,DCB2139B34G,V03
+gib-wpg-vacc1,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-640WAC,DCB2139B34N,V03
+gib-wpg-vacc1,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-640WAC,DCB2139B34P,V03
+gib-wpg-vacc1,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,DCB2139B34U,V03
+gib-wpg-vacc1,StackAdapter2/1,StackAdapter2/1,C3650-STACK,FDO21411MUV,V01
+gib-wpg-vacc1,StackAdapter4/2,StackAdapter4/2,C3650-STACK,FDO21411MUW,V01
+gib-wpg-vacc1,StackAdapter3/1,StackAdapter3/1,C3650-STACK,FDO21411P7T,V01
+gib-wpg-vacc1,StackAdapter3/2,StackAdapter3/2,C3650-STACK,FDO214213Y9,V01
+gib-wpg-vacc1,StackAdapter1/2,StackAdapter1/2,C3650-STACK,FDO2142140T,V01
+gib-wpg-vacc1,StackAdapter1/1,StackAdapter1/1,C3650-STACK,FDO21421410,V01
+gib-wpg-vacc1,StackAdapter2/2,StackAdapter2/2,C3650-STACK,FDO21421411,V01
+gib-wpg-vacc1,StackAdapter5/2,StackAdapter5/2,C3650-STACK,FDO2142143E,V01
+gib-wpg-vacc1,StackAdapter4/1,StackAdapter4/1,C3650-STACK,FDO214216A1,V01
+gib-wpg-vacc1,StackAdapter5/1,StackAdapter5/1,C3650-STACK,FDO214216AN,V01
+gib-wpg-vacc1,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2147E10B,V05
+gib-wpg-vacc1,WS-C3650-48PD-S,Switch 5,WS-C3650-48PD-S,FDO2147E11K,V05
+gib-wpg-vacc1,WS-C3650-48PD-S,Switch 4,WS-C3650-48PD-S,FDO2147Q0TQ,V05
+gib-wpg-vacc1,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2147V12S,V05
+gib-wpg-vacc1,c36xx Stack,c36xx Stack,WS-C3650-48PD-S,FDO2147V12S,V05
+gib-wpg-vacc1,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2147V15C,V05
+gib-wpg-vacc1,1000BaseSX SFP,Gi1/1/1,,FNS15130ZEG,none
+gib-wpg-vacc1,StackPort1/1,StackPort1/1,STACK-T2-50CM,LCC2133G8MK,V03
+gib-wpg-vacc1,StackPort2/2,StackPort2/2,STACK-T2-50CM,LCC2133G8MK,V03
+gib-wpg-vacc1,StackPort4/1,StackPort4/1,STACK-T2-50CM,LCC2133GCHH,V03
+gib-wpg-vacc1,StackPort5/2,StackPort5/2,STACK-T2-50CM,LCC2133GCHH,V03
+gib-wpg-vacc1,StackPort2/1,StackPort2/1,STACK-T2-50CM,LCC2133GERN,V03
+gib-wpg-vacc1,StackPort3/2,StackPort3/2,STACK-T2-50CM,LCC2133GERN,V03
+gib-wpg-vacc1,StackPort3/1,StackPort3/1,STACK-T2-50CM,LCC2133GET3,V03
+gib-wpg-vacc1,StackPort4/2,StackPort4/2,STACK-T2-50CM,LCC2133GET3,V03

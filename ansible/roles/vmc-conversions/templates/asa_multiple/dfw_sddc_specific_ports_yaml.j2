@@ -1,0 +1,364 @@
+{% set existing_ports = [] %}
+{% set existing_objects = [] %}
+{% set existing_protocols = [] %}
+{% set existing_svc_object_groups = [] %}
+{% set created = [] %}
+resources:
+
+  port_obj_groups:
+{# =========================================== GATHER PORTS DEFINED IN ACLS =========================================== #}
+{% for acl in access_lists.results %}
+{%   if acl.ansible_facts.access_entry_facts is defined %}
+{%     for ace in acl.ansible_facts.access_entry_facts %}
+{%       if ace.hit_count|int > 0 %}
+{%         if ace.dest_port is defined and ace.dest_port %}
+{%           if ace.protocol is defined and ace.protocol %}
+{%             if [ace.protocol, ace.dest_port]|join('-') not in existing_ports %}
+
+  - name: "{{ context.context }}_{{ [ace.protocol, ace.dest_port]|join('-') }}_eq"
+    description: "{{ [ace.protocol, ace.dest_port]|join('-') }}_eq"
+    port_obj:
+    - protocol: "{{ ace.protocol }}"
+      port: "{{ ace.dest_port }}"
+      direction: "destination"
+{%             do existing_ports.append([ace.protocol, ace.dest_port]|join('-')) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_port_range is defined and ace.dest_port_range %}
+{%           if ace.protocol is defined and ace.protocol %}
+{%             if [ace.protocol, ace.dest_port_range]|join('-') not in existing_ports %}
+
+  - name: "{{ context.context }}_{{ ace.protocol }}-{{ ace.dest_port_range | regex_replace (" ","-") }}_eq"
+    description: "{{ ace.protocol }}-{{ ace.dest_port_range | regex_replace (" ","-") }}_eq"
+    port_obj:
+    - protocol: "{{ ace.protocol }}"
+      port: "{{ ace.dest_port_range | regex_replace (" ","@") }}"
+      direction: "destination"
+{%             do existing_ports.append([ace.protocol, ace.dest_port_range]|join('-')) %}
+{%             endif %}
+{%           endif %}
+{%         endif %}
+{%         if ace.src_service_obj is defined and ace.src_service_obj %}
+{%           for item in service_objects_facts %}
+{%             if item.object.name == ace.src_service_obj %}
+{%               if ace.src_service_obj not in existing_objects %}
+
+  - name: "{{ context.context }}_{{ item.object.name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+    description: "{{ item.object.description }}"
+    port_obj:
+    - protocol: "{{ item.object.protocol }}"
+{%                 if item.object.port_type == 'range' %}
+      port: "{{ item.object.range_start }}@{{ item.object.range_end }}"
+{%                 else %}
+      port: "{{ item.object.port }}"
+{%                 endif %}
+      direction: "{{ item.object.direction }}"
+{%               do existing_objects.append(ace.src_service_obj) %}
+{%               endif %}
+{%             endif %}
+{%           endfor %}
+{%         endif %}
+{%         if ace.src_service_obj_grp is defined and ace.src_service_obj_grp %}
+{%           if ace.dest_port is defined and ace.dest_port %}
+{%             for protocol_obj_group in protocol_obj_groups.results %}
+{%               if ace.src_service_obj_grp == protocol_obj_group.ansible_facts.object_group[0].name %}
+{%                 if [protocol_obj_group.ansible_facts.object_group[0].name, ace.dest_port]|join('-') not in existing_ports %}
+
+  - name: "{{ context.context }}_{{ protocol_obj_group.ansible_facts.object_group[0].name |lower }}-{{ ace.dest_port }}"
+    description: ""
+    port_obj:
+{%                   for object in protocol_obj_group.ansible_facts.objects %}
+    - protocol: "{{ object.object_name }}"
+      port: "{{ ace.dest_port }}"
+      direction: "destination"
+{%                   endfor %}
+{%                 do existing_ports.append([protocol_obj_group.ansible_facts.object_group[0].name, ace.dest_port]|join('-')) %}
+{%                 endif %}
+{%               endif %}
+{%             endfor %}
+{%           elif ace.dest_port_range is defined and ace.dest_port_range %}
+{%             for protocol_obj_group in protocol_obj_groups.results %}
+{%               if ace.src_service_obj_grp == protocol_obj_group.ansible_facts.object_group[0].name %}
+{%                 if [protocol_obj_group.ansible_facts.object_group[0].name, ace.dest_port_range]|join('-') not in existing_ports %}
+
+  - name: "{{ context.context }}_{{ protocol_obj_group.ansible_facts.object_group[0].name |lower }}-{{ ace.dest_port_range | regex_replace (" ","-") }}"
+    description: ""
+    port_obj:
+{%                   for object in protocol_obj_group.ansible_facts.objects %}
+    - protocol: "{{ object.object_name }}"
+      port: "{{ ace.dest_port_range | regex_replace (" ","@") }}"
+      direction: "destination"
+{%                   endfor %}
+{%                 do existing_ports.append([protocol_obj_group.ansible_facts.object_group[0].name, ace.dest_port_range]|join('-')) %}
+{%                 endif %}
+{%               endif %}
+{%             endfor %}
+{%           else %}
+{%             for protocol_obj_group in protocol_obj_groups.results %}
+{%               if ace.src_service_obj_grp == protocol_obj_group.ansible_facts.object_group[0].name %}
+{%                 if protocol_obj_group.ansible_facts.object_group[0].name not in existing_protocols %}
+
+  - name: "{{ context.context }}_{{ protocol_obj_group.ansible_facts.object_group[0].name |lower }}"
+    description: ""
+    protocol_obj:
+{%                   for object in protocol_obj_group.ansible_facts.objects %}
+    - protocol: "{{ object.object_name }}"
+{%                   endfor %}
+{%                 do existing_protocols.append(protocol_obj_group.ansible_facts.object_group[0].name) %}
+{%                 endif %}
+{%               endif %}
+{%             endfor %}
+{%             for item in service_obj_groups.results %}
+{%               if item.ansible_facts.object_group[0].name == ace.src_service_obj_grp %}
+{%                 if item.ansible_facts.object_group[0].name not in created %}
+{%                   if [context.context, '_', item.ansible_facts.object_group[0].name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in existing_svc_object_groups  %}
+
+  - name: "{{ context.context }}_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%                     if item.ansible_facts.object_group_description is defined %}
+    description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{%                     else %}
+    description: ""
+{%                     endif %}
+{%                     do existing_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                   else %}
+
+  - name: "{{ context.context }}_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_dupe"
+{%                     if item.ansible_facts.object_group_description is defined %}
+    description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{%                     else %}
+    description: ""
+{%                     endif %}
+{%                     do existing_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name, '_dupe']|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                   endif %}
+    port_obj:
+{%                   if item.ansible_facts.objects is defined %}
+{%                     for group in item.ansible_facts.objects %}
+{%                       for object in service_objects_facts %}
+{%                         if object.object.name == group.object_name %}
+    - protocol: "{{ object.object.protocol }}"
+{%                           if object.object.port_type == 'range' %}
+      port: "{{ object.object.range_start }}@{{ object.object.range_end }}"
+{%                           else %}
+      port: "{{ object.object.port }}"
+{%                           endif %}
+      direction: "{{ object.object.direction }}"
+{%                         endif %}
+{%                       endfor %}
+{%                     endfor %}
+{%                   else %}
+{%                   endif %}
+{%                   if item.ansible_facts.port_objects is defined %}
+{%                     for group in item.ansible_facts.port_objects %}
+{%                       if item.ansible_facts.object_group[0].protocol is defined %}
+    - protocol: "{{ item.ansible_facts.object_group[0].protocol }}"
+{%                       else %}
+{%                       endif %}
+{%                       if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                       else %}
+      port: "{{ group.port }}"
+{%                       endif %}
+      direction: "destination"
+{%                     endfor %}
+{%                   else %}
+{%                   endif %}
+{%                   if item.ansible_facts.services is defined %}
+{%                     for group in item.ansible_facts.services %}
+    - protocol: "{{ group.protocol }}"
+{%                       if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                       else %}
+      port: "{% if group.port is defined and group.port %}{{ group.port }}{% else %}any{% endif %}"
+{%                       endif %}
+      direction: "{{ group.direction }}"
+{%                     endfor %}
+{%                   else %}
+{%                   endif %}
+{%                   if item.ansible_facts.group_objects is defined %}
+{%                     for group_name in item.ansible_facts.group_objects %}
+{%                       for x in service_obj_groups.results %}
+{%                         if group_name.group_object_name == x.ansible_facts.object_group[0].name %}
+{%                           if x.ansible_facts.objects is defined %}
+{%                             for group in x.ansible_facts.objects %}
+{%                               for object in service_objects_facts %}
+{%                                 if object.object.name == group.object_name %}
+    - protocol: "{{ object.object.protocol }}"
+{%                                   if object.object.port_type == 'range' %}
+      port: "{{ object.object.range_start }}@{{ object.object.range_end }}"
+{%                                   else %}
+      port: "{{ object.object.port }}"
+{%                                   endif %}
+      direction: "{{ object.object.direction }}"
+{%                                 endif %}
+{%                               endfor %}
+{%                             endfor %}
+{%                           else %}
+{%                           endif %}
+{%                           if x.ansible_facts.port_objects is defined %}
+{%                             for group in x.ansible_facts.port_objects %}
+{%                               if x.ansible_facts.object_group[0].protocol is defined %}
+    - protocol: "{{ x.ansible_facts.object_group[0].protocol }}"
+{%                               else %}
+{%                               endif %}
+{%                               if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                               else %}
+      port: "{{ group.port }}"
+{%                               endif %}
+      direction: "destination"
+{%                             endfor %}
+{%                           else %}
+{%                           endif %}
+{%                           if x.ansible_facts.services is defined %}
+{%                             for group in x.ansible_facts.services %}
+    - protocol: "{{ group.protocol }}"
+{%                               if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                               else %}
+      port: "{{ group.port }}"
+{%                               endif %}
+      direction: "{{ group.direction }}"
+{%                             endfor %}
+{%                           else %}
+{%                           endif %}
+{%                         else %}
+{%                         endif%}
+{%                       endfor %}
+{%                     endfor %}
+{%                   else %}
+{%                   endif %}
+{%                 do created.append(item.ansible_facts.object_group[0].name)%}
+{%                 endif %}
+{%               endif %}
+{%             endfor %}
+{%           endif %}
+{%         endif %}
+{%         if ace.dest_port_obj_grp %}
+{%           for item in service_obj_groups.results %}
+{%             if item.ansible_facts.object_group[0].name == ace.dest_port_obj_grp %}
+{%               if item.ansible_facts.object_group[0].name not in created %}
+{%                 if [context.context, '_', item.ansible_facts.object_group[0].name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower not in existing_svc_object_groups  %}
+
+  - name: "{{ context.context }}_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}"
+{%                   if item.ansible_facts.object_group_description is defined %}
+    description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{%                   else %}
+    description: ""
+{%                   endif %}
+{%                   do existing_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name]|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                 else %}
+  - name: "{{ context.context }}_{{ item.ansible_facts.object_group[0].name | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower }}_dupe"
+{%                   if item.ansible_facts.object_group_description is defined %}
+    description: "{{ item.ansible_facts.object_group_description[0].description }}"
+{%                   else %}
+    description: ""
+{%                   endif %}
+{%                   do existing_svc_object_groups.append([context.context, '_', item.ansible_facts.object_group[0].name, '_dupe']|join('') | regex_replace ("\.","-") | regex_replace ("DM_INLINE_","scc-migrated_") | regex_replace ("[^A-Za-z0-9-_]","") |lower) %}
+{%                 endif %}
+    port_obj:
+{%                 if item.ansible_facts.objects is defined %}
+{%                   for group in item.ansible_facts.objects %}
+{%                     for object in service_objects_facts %}
+{%                       if object.object.name == group.object_name %}
+    - protocol: "{{ object.object.protocol }}"
+{%                         if object.object.port_type == 'range' %}
+      port: "{{ object.object.range_start }}@{{ object.object.range_end }}"
+{%                         else %}
+      port: "{{ object.object.port }}"
+{%                         endif %}
+      direction: "{{ object.object.direction }}"
+{%                       endif %}
+{%                     endfor %}
+{%                   endfor %}
+{%                 else %}
+{%                 endif %}
+{%                 if item.ansible_facts.port_objects is defined %}
+{%                   for group in item.ansible_facts.port_objects %}
+{%                     if item.ansible_facts.object_group[0].protocol is defined %}
+    - protocol: "{{ item.ansible_facts.object_group[0].protocol }}"
+{%                     else %}
+{%                     endif %}
+{%                     if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                     else %}
+      port: "{{ group.port }}"
+{%                     endif %}
+      direction: "destination"
+{%                   endfor %}
+{%                 else %}
+{%                 endif %}
+{%                 if item.ansible_facts.services is defined %}
+{%                   for group in item.ansible_facts.services %}
+    - protocol: "{{ group.protocol }}"
+{%                     if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                     else %}
+      port: "{% if group.port is defined and group.port %}{{ group.port }}{% else %}any{% endif %}"
+{%                     endif %}
+      direction: "{{ group.direction }}"
+{%                   endfor %}
+{%                 else %}
+{%                 endif %}
+{%                 if item.ansible_facts.group_objects is defined %}
+{%                   for group_name in item.ansible_facts.group_objects %}
+{%                     for x in service_obj_groups.results %}
+{%                       if group_name.group_object_name == x.ansible_facts.object_group[0].name %}
+{%                         if x.ansible_facts.objects is defined %}
+{%                           for group in x.ansible_facts.objects %}
+{%                             for object in service_objects_facts %}
+{%                               if object.object.name == group.object_name %}
+    - protocol: "{{ object.object.protocol }}"
+{%                                 if object.object.port_type == 'range' %}
+      port: "{{ object.object.range_start }}@{{ object.object.range_end }}"
+{%                                 else %}
+      port: "{{ object.object.port }}"
+{%                                 endif %}
+      direction: "{{ object.object.direction }}"
+{%                               endif %}
+{%                             endfor %}
+{%                           endfor %}
+{%                         else %}
+{%                         endif %}
+{%                         if x.ansible_facts.port_objects is defined %}
+{%                           for group in x.ansible_facts.port_objects %}
+{%                             if x.ansible_facts.object_group[0].protocol is defined %}
+    - protocol: "{{ x.ansible_facts.object_group[0].protocol }}"
+{%                             else %}
+{%                             endif %}
+{%                             if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                             else %}
+      port: "{{ group.port }}"
+{%                             endif %}
+      direction: "destination"
+{%                           endfor %}
+{%                         else %}
+{%                         endif %}
+{%                         if x.ansible_facts.services is defined %}
+{%                           for group in x.ansible_facts.services %}
+    - protocol: "{{ group.protocol }}"
+{%                             if group.port_type == 'range' %}
+      port: "{{ group.range_start }}@{{ group.range_end }}"
+{%                             else %}
+      port: "{{ group.port }}"
+{%                             endif %}
+      direction: "{{ group.direction }}"
+{%                           endfor %}
+{%                         else %}
+{%                         endif %}
+{%                       else %}
+{%                       endif%}
+{%                     endfor %}
+{%                   endfor %}
+{%                 else %}
+{%                 endif %}
+{%               do created.append(item.ansible_facts.object_group[0].name)%}
+{%               endif %}
+{%             endif %}
+{%           endfor %}
+{%         endif %}
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}

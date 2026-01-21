@@ -1,0 +1,4 @@
+hostname,username,privilege,encryption,password_string
+uk-ld6-fw04-pri,svcnetworkauto,15,encrypted,Z7iYuCiC3M3XfnGu
+uk-ld6-fw04-pri,netsec,15,encrypted,WQYcFC1y7UoTjqWu
+uk-ld6-fw04-pri,netadmin,15,encrypted,i2TRJYv6De0o1ekb

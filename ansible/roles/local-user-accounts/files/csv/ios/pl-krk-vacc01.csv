@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+pl-krk-vacc01,netadmin,15,secret,5,$1$7Olc$lQIIcVfw.z5ZVda6myOx/1
+pl-krk-vacc01,svcnetworkauto,15,secret,5,$1$cXik$xEweUllf./huSlf6eU1y80

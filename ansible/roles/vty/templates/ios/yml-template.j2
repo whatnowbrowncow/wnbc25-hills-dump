@@ -1,0 +1,13 @@
+---
+vty:
+{% for item in ios_vty_facts %}
+  - line_range: "{{ item.config.line_range }}"
+    access_class: "{{ item.config.access_class }}"
+    access_class_direction: "{{ item.config.access_class_direction }}"
+    exec_timeout: "{{ item.config.exec_timeout }}"
+    password: "{{ item.config.password }}"
+    transport_input: "{{ item.config.transport_input }}"
+    transport_output: "{{ item.config.transport_output }}"
+    vrf: "{{ item.config.vrf_also }}"
+    logging: "{{ item.config.logging }}"
+{% endfor %}

@@ -1,0 +1,4 @@
+---
+
+- name: LOGGING - Writing logs to disk
+  include: ./log_write.yml

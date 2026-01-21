@@ -1,0 +1,101 @@
+---
+
+- name: "Create link-level interface policies"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/hintfpol-{{ item.name }}.json"
+    content:
+      {
+        "fabricHIfPol": {
+          "attributes": {
+            "dn": "uni/infra/hintfpol-{{ item.name }}",
+            "name": "{{ item.name }}",
+            "speed": "{{ item.speed }}",
+            "rn": "hintfpol-{{ item.name }}",
+            "status": "created,modified"
+          },
+        }
+      }      
+    validate_certs: no
+  with_items: 
+    - "{{ link_level_policy }}"
+ 
+- name: "Create CDP interface policies"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/cdpIfP-{{ item.name }}.json"
+    content:
+      {
+        "cdpIfPol": {
+          "attributes": {
+            "dn": "uni/infra/cdpIfP-{{ item.name }}",
+            "name": "{{ item.name }}", 
+            "adminSt": "{{ item.state }}",
+            "rn": "cdpIfP-{{ item.name }}",
+            "status": "created,modified"
+          },
+        }
+      }    
+    validate_certs: no
+  with_items: 
+    - "{{ cdp_policy }}"
+
+
+- name: "Create LLDP interface policies"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/lldpIfP-{{ item.name }}.json"
+    content:
+      {
+        "lldpIfPol": {
+          "attributes": {
+            "dn": "uni/infra/lldpIfP-{{ item.name }}",
+            "adminRxSt": "{{ item.rxstate }}",
+            "adminTxSt": "{{ item.txstate }}",
+            "name": "{{ item.name }}",
+            "rn": "lldpIfP-{{ item.name }}",
+            "status": "created,modified"
+          },
+        }
+      }  
+    validate_certs: no
+  with_items: 
+    - "{{ lldp_policy }}"
+
+
+- name: "Create LACP interface policies"
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/infra/lacplagp-{{ item.name }}.json"
+    content:
+      {
+        "lacpLagPol": {
+          "attributes": {
+            "dn": "uni/infra/lacplagp-{{ item.name }}",
+            "name": "{{ item.name }}",
+            "ctrl": "{{ item.ctrl }}",
+            "mode": "{{ item.mode }}",
+            "rn": "lacplagp-{{ item.name }}",
+            "status": "created,modified"
+          },
+        }
+      }
+    validate_certs: no
+  with_items: 
+    - "{{ lacp_policy }}"
+
+
+- name: "Move to interface policy group task"
+  include_tasks: ./aci-access-if-policy-groups.yml

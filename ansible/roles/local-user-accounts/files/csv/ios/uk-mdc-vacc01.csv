@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-mdc-vacc01,netsec,15,secret,5,$1$oq2l$Bbz3UnnCSaijFxo05UQra0
+uk-mdc-vacc01,netadmin,15,secret,4,mKij449iJ8grD6NGYBhUQKZtDNnBt203/Qu7AyDAEXc
+uk-mdc-vacc01,svcnetworkauto,15,secret,4,vvhhtIPAqxiJjbycSPTNazk4qwXF2yqCsZCDYzkVTHs

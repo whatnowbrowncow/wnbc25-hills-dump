@@ -1,0 +1,5 @@
+{% for community in snmp.communities %}
+snmp-server community {{ community.community }} {{ community.type | upper }} {{ community.acl }}
+{% endfor %}
+snmp-server ifindex persist
+snmp ifmib ifindex persist

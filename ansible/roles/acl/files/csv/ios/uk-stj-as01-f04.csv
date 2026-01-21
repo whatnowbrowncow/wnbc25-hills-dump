@@ -1,0 +1,113 @@
+hostname,acl-name,acl-type,seq number,action,protocol,source,destination,ports
+uk-stj-as01-f04,solarwinds-new,Standard,10,permit,,10.112.12.126,,,
+uk-stj-as01-f04,solarwinds-new,Standard,20,permit,,10.112.12.125,,,
+uk-stj-as01-f04,solarwinds-new,Standard,30,permit,,10.120.163.143,,,
+uk-stj-as01-f04,solarwinds-new,Standard,40,permit,,10.120.163.142,,,
+uk-stj-as01-f04,solarwinds-new,Standard,50,permit,,10.120.163.123,,,
+uk-stj-as01-f04,solarwinds-new,Standard,60,permit,,10.120.163.122,,,
+uk-stj-as01-f04,solarwinds-new,Standard,70,permit,,10.112.12.144,,,
+uk-stj-as01-f04,solarwinds-new,Standard,80,permit,,10.112.12.142,,,
+uk-stj-as01-f04,solarwinds-new,Standard,90,permit,,10.112.12.143,,,
+uk-stj-as01-f04,solarwinds-new,Standard,100,deny,,any log,,,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,10,permit,tcp,any,any,22
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,20,permit,tcp,any,any,465
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,30,permit,tcp,any,any,143
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,40,permit,tcp,any,any,993
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,50,permit,tcp,any,any,995
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,60,permit,tcp,any,any,1914
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,70,permit,tcp,any,any,ftp
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,80,permit,tcp,any,any,ftp-data
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,90,permit,tcp,any,any,smtp
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Bulk-Data,Extended,100,permit,tcp,any,any,pop3
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-MultiEnhanced-Conf,Extended,10,permit,udp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-MultiEnhanced-Conf,Extended,20,permit,tcp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,10,permit,tcp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,20,permit,udp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,30,permit,tcp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,40,permit,tcp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,50,permit,tcp,any,any,1214
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,60,permit,udp,any,any,1214
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,70,permit,tcp,any,any,3689
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,80,permit,udp,any,any,3689
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Scavanger,Extended,90,permit,tcp,any,any,11999
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Signaling,Extended,10,permit,tcp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Signaling,Extended,20,permit,tcp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Signaling,Extended,30,permit,udp,any,any,
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,10,permit,tcp,any,any,443
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,20,permit,tcp,any,any,1521
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,30,permit,udp,any,any,1521
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,40,permit,tcp,any,any,1526
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,50,permit,udp,any,any,1526
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,60,permit,tcp,any,any,1575
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,70,permit,udp,any,any,1575
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,80,permit,tcp,any,any,1630
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,90,permit,udp,any,any,1630
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,100,permit,tcp,any,any,1527
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,110,permit,tcp,any,any,6200
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,120,permit,tcp,any,any,3389
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,130,permit,tcp,any,any,5985
+uk-stj-as01-f04,AutoQos-4.0-wlan-Acl-Transactional-Data,Extended,140,permit,tcp,any,any,8080
+uk-stj-as01-f04,1,Standard,10,permit,,10.120.163.210,,,
+uk-stj-as01-f04,1,Standard,20,permit,,10.1.74.66,,,
+uk-stj-as01-f04,1,Standard,30,permit,,10.112.12.126,,,
+uk-stj-as01-f04,1,Standard,40,permit,,10.112.12.125,,,
+uk-stj-as01-f04,1,Standard,50,permit,,10.180.163.18,,,
+uk-stj-as01-f04,1,Standard,60,permit,,10.120.163.151,,,
+uk-stj-as01-f04,1,Standard,70,permit,,10.210.163.60,,,
+uk-stj-as01-f04,1,Standard,80,permit,,10.120.163.152,,,
+uk-stj-as01-f04,1,Standard,90,permit,,10.1.74.29,,,
+uk-stj-as01-f04,1,Standard,100,permit,,10.120.163.143,,,
+uk-stj-as01-f04,1,Standard,110,permit,,10.120.163.142,,,
+uk-stj-as01-f04,1,Standard,120,permit,,10.112.13.17,,,
+uk-stj-as01-f04,1,Standard,130,permit,,10.1.74.48,,,
+uk-stj-as01-f04,1,Standard,140,permit,,10.1.74.57,,,
+uk-stj-as01-f04,1,Standard,150,permit,,10.1.74.61,,,
+uk-stj-as01-f04,1,Standard,160,permit,,10.120.163.123,,,
+uk-stj-as01-f04,1,Standard,170,permit,,10.120.163.122,,,
+uk-stj-as01-f04,1,Standard,180,permit,,10.120.195.31,,,
+uk-stj-as01-f04,1,Standard,190,permit,,10.120.143.70,,,
+uk-stj-as01-f04,1,Standard,200,permit,,10.1.74.128,,,
+uk-stj-as01-f04,1,Standard,210,permit,,10.180.142.230,,,
+uk-stj-as01-f04,1,Standard,220,permit,,10.112.12.144,,,
+uk-stj-as01-f04,1,Standard,230,permit,,10.120.163.37,,,
+uk-stj-as01-f04,1,Standard,240,permit,,10.112.12.142,,,
+uk-stj-as01-f04,1,Standard,250,permit,,10.112.12.143,,,
+uk-stj-as01-f04,1,Standard,260,permit,,10.1.82.64 0.0.0.31,,,
+uk-stj-as01-f04,1,Standard,270,permit,,10.1.22.0 0.0.0.255,,,
+uk-stj-as01-f04,1,Standard,280,permit,,192.168.2.0 0.0.1.255,,,
+uk-stj-as01-f04,1,Standard,290,permit,,10.210.141.40 0.0.0.7,,,
+uk-stj-as01-f04,1,Standard,300,permit,,10.180.141.40 0.0.0.7,,,
+uk-stj-as01-f04,1,Standard,310,permit,,10.120.141.40 0.0.0.7,,,
+uk-stj-as01-f04,1,Standard,320,permit,,100.79.0.0 0.0.127.255,,,
+uk-stj-as01-f04,1,Standard,330,deny,,any log,,,
+uk-stj-as01-f04,10,Standard,10,permit,,10.112.12.126,,,
+uk-stj-as01-f04,10,Standard,20,permit,,10.112.12.125,,,
+uk-stj-as01-f04,10,Standard,30,permit,,10.120.163.123,,,
+uk-stj-as01-f04,10,Standard,40,permit,,10.120.163.122,,,
+uk-stj-as01-f04,10,Standard,50,permit,,10.120.163.59,,,
+uk-stj-as01-f04,10,Standard,60,permit,,10.110.163.59,,,
+uk-stj-as01-f04,11,Standard,10,permit,,10.112.12.126,,,
+uk-stj-as01-f04,11,Standard,20,permit,,10.112.12.125,,,
+uk-stj-as01-f04,11,Standard,30,permit,,10.120.136.140,,,
+uk-stj-as01-f04,11,Standard,40,permit,,10.120.163.123,,,
+uk-stj-as01-f04,11,Standard,50,permit,,10.120.163.122,,,
+uk-stj-as01-f04,11,Standard,60,permit,,10.50.3.140,,,
+uk-stj-as01-f04,11,Standard,70,deny,,any log,,,
+uk-stj-as01-f04,12,Standard,10,permit,,10.220.163.112,,,
+uk-stj-as01-f04,12,Standard,20,permit,,10.220.163.111,,,
+uk-stj-as01-f04,12,Standard,30,permit,,10.180.163.112,,,
+uk-stj-as01-f04,12,Standard,40,permit,,10.180.163.111,,,
+uk-stj-as01-f04,12,Standard,50,permit,,10.1.14.120,,,
+uk-stj-as01-f04,12,Standard,60,permit,,10.120.163.112,,,
+uk-stj-as01-f04,12,Standard,70,permit,,10.110.163.111,,,
+uk-stj-as01-f04,12,Standard,80,permit,,10.110.163.112,,,
+uk-stj-as01-f04,12,Standard,90,permit,,10.120.163.111,,,
+uk-stj-as01-f04,12,Standard,100,deny,,any log,,,
+uk-stj-as01-f04,13,Standard,10,permit,,192.168.1.165,,,
+uk-stj-as01-f04,19,Standard,10,permit,,172.16.41.192 0.0.0.31,,,
+uk-stj-as01-f04,19,Standard,20,permit,,10.1.82.64 0.0.0.31,,,
+uk-stj-as01-f04,20,Standard,10,permit,,10.1.99.1,,,
+uk-stj-as01-f04,22,Standard,10,permit,,10.112.12.119,,,
+uk-stj-as01-f04,22,Standard,20,permit,,10.210.143.80,,,
+uk-stj-as01-f04,22,Standard,30,permit,,10.120.143.80,,,
+uk-stj-as01-f04,22,Standard,40,permit,,10.180.142.232,,,

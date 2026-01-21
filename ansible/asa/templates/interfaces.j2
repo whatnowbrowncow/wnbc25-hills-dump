@@ -1,0 +1,7 @@
+{% for vlan in item.vlans %}
+interface Port-channel1.{{ vlan.vlan }}
+ nameif {{ vlan.nameif }}
+ security-level {{ vlan.sec_level}}
+ ip address {{ vlan.addr }} {{ vlan.netmask}}
+!
+{% endfor %}

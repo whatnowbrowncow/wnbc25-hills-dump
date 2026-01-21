@@ -1,0 +1,6 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+up,,Port-channel1.60,10.180.25.161,,eggcloud,255.255.255.248,10
+up,,Port-channel1.381,10.180.161.98,,internal-vrf,255.255.255.224,100
+up,,Port-channel1.524,10.180.186.130,,wan-vrf,255.255.255.224,100
+up,,Port-channel1.536,10.180.187.193,,tote-vrf,255.255.255.224,50
+up,,Port-channel1.571,10.180.193.100,,group-vrf,255.255.255.224,100

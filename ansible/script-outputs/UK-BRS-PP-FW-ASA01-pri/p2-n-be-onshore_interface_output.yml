@@ -1,0 +1,10 @@
+Port-channel21.2950: {admin-state: up, interface: Port-channel21.2950, ip-add: 10.214.96.1,
+  nameif: backoffice-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2951: {admin-state: up, interface: Port-channel21.2951, ip-add: 10.214.96.33,
+  nameif: web-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2952: {admin-state: ' shutdown', interface: Port-channel21.2952, ip-add: 10.214.96.65,
+  nameif: oxi-tier, netmask: 255.255.255.224, security-level: '100'}
+Port-channel21.2953: {admin-state: up, interface: Port-channel21.2953, ip-add: 10.214.96.97,
+  nameif: openbet-code-deployment, netmask: 255.255.255.248, security-level: '100'}
+Port-channel21.3074: {admin-state: up, interface: Port-channel21.3074, ip-add: 10.214.160.132,
+  nameif: pp2on-internal-vrf, netmask: 255.255.255.224, security-level: '100'}

@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+gib-wp3-vacc1,whill,,secret,5,$1$KDi/$falF5AR2MAkEQfYnfjUb91
+gib-wp3-vacc1,netadmin,15,secret,5,$1$K0Pf$/RFzEqvPoDyuowjqt29Z60
+gib-wp3-vacc1,svcnetworkauto,15,secret,5,$1$NXuQ$B/vVVdml5JkgK5eeiV5Pj1

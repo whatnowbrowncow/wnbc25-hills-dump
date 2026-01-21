@@ -1,0 +1,5 @@
+hostname,ip address,vrf,preferred,source interface
+GH_WGS_4TH,10.120.193.235,,yes,Vlan99
+GH_WGS_4TH,10.180.193.235,,no,Vlan99
+GH_WGS_4TH,10.220.193.235,,no,Vlan99
+GH_WGS_4TH,10.210.193.235,,no,Vlan99

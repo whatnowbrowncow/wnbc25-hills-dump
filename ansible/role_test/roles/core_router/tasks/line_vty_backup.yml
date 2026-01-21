@@ -1,0 +1,8 @@
+---
+
+- name: Generate Line VTY configurations
+  template:
+    src: "line_vty.j2"
+    dest: "/home/ubuntu/vagrant_data/ansible/role_test/roles/core_router/configs/line_vty/{{ item.hostname }}.cfg"
+  with_items: "{{ core_routers }}"
+

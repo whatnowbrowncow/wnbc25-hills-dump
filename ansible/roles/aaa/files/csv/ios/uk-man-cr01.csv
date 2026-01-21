@@ -1,0 +1,3 @@
+hostname,tacacs-style,svr-grp name,svr-grp source int,svr-grp vrf,svr name,svr ip address,svr encryption key,authn-login,authn-enable,auths-exec,auths-commands,acc-exec,acc-connection,acc-commands,acc-system
+uk-man-cr01,new,ACS-TACACS,,group-vrf,SCC_ACS,10.120.163.26,03060A005701704E42081A0E,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS
+uk-man-cr01,new,ACS-TACACS,,group-vrf,BRS_ACS,10.210.163.26,0006420D55555A0403204F45,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS,ACS-TACACS

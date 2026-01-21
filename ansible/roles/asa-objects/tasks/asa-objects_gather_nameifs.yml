@@ -1,0 +1,11 @@
+---
+
+- name: Gather object nameifs for object name
+  include_tasks: ./asa-objects_builder.yml
+  with_items:
+    - "{{ objects }}"
+  loop_control:
+    loop_var: objects_item
+    
+#- debug:
+#    msg: "{{ objects.nameif }}"

@@ -1,0 +1,60 @@
+---
+
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run | i snmp
+    network_os: iosxr
+
+- name: SNMP configuration match pattern
+  pattern_match:
+    regex: "^.*snmp-server community"
+    match_all: yes
+    match_greedy: yes
+  register: snmp_configuration
+
+- name: Match SNMP configuration values
+  pattern_group:
+    - name: match community string
+      pattern_match:
+        regex: "^.* community (\\S+)"
+        content: "{{ item }}"
+      register: community_string
+
+    - name: match access rights (RO/RW)
+      pattern_match:
+        regex: "^.* community \\S+ (RO|RW)"
+        content: "{{ item }}"
+      register: access
+
+    - name: match access type (IPv4/IPv6)
+      pattern_match:
+        regex: "^.* community \\S+ (?:RO|RW) (IPv4|IPv6)"
+        content: "{{ item }}"
+      register: type      
+
+    - name: match access-list (if any)
+      pattern_match:
+        regex: "^.* community \\S+ (?:RO|RW) (?:IPv4|IPv6) (\\S+)"
+        content: "{{ item }}"
+      register: access_list   
+
+  loop: "{{ snmp_configuration }}"
+  register: snmp_configuration_values  
+
+- name: Generate JSON data structure
+  json_template:
+    template:
+      - key: snmp
+        object:
+          - key: community_string
+            value: "{{ item.community_string.matches.0 }}"          
+          - key: access
+            value: "{{ item.access.matches.0 }}"
+          - key: type
+            value: "{{ item.type.matches.0 }}"            
+          - key: access_list
+            value: "{{ item.access_list.matches.0 }}"
+  loop: "{{ snmp_configuration_values }}"
+  export: yes
+  register: snmp_configuration_facts

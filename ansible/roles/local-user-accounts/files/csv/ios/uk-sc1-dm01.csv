@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-sc1-dm01,netadmin,15,secret,4,mKij449iJ8grD6NGYBhUQKZtDNnBt203/Qu7AyDAEXc
+uk-sc1-dm01,svcnetworkauto,15,secret,4,vvhhtIPAqxiJjbycSPTNazk4qwXF2yqCsZCDYzkVTHs

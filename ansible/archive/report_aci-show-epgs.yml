@@ -1,0 +1,35 @@
+---
+- name: PLAY - Query EPGs Only (dev)
+  hosts: ld6-pte-aci
+  connection: local
+  remote_user: "{{ user_username }}"
+  gather_facts: no
+
+  vars_prompt:
+    - name: "user_username"
+      prompt: "Please enter your username"
+      private: no
+    - name: "user_password"
+      prompt: "Please enter your password"
+      private: yes
+
+  tasks:
+    - name: Query EPGs
+      aci_epg:
+        hostname: '{{ ansible_host }}'
+        username: '{{ provider_cli.username }}'
+        password: '{{ provider_cli.password }}'
+        validate_certs: no
+        state: query
+      register: query_result
+
+    - name: Export query_result to Text File
+      template:
+        src: ./templates/line-by-line-v2.j2
+        dest: ./script-outputs/dev/ld6-epgs/ld6-epg-query-data.txt
+      with_items:
+        - "{{ query_result }}"
+
+    - name: Extract & Parse query_result Data
+      shell: python3 ./scripts/epg_query_parser.py
+      run_once: true

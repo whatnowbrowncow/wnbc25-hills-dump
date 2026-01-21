@@ -1,0 +1,60 @@
+---
+- name: parser meta data
+  parser_metadata:
+    version: 1.0
+    command: show run | in username.*password
+    network_os: nxos
+                            
+- name: match sections
+  pattern_match:
+    regex: "^username.*password"
+    match_all: yes
+    match_greedy: yes
+  register: section
+                            
+                            
+- name: match local user accounts
+  pattern_group:
+    - name: match username
+      pattern_match:
+        regex: "^username (\\S+)"
+        content: "{{ item }}"
+      register: username
+                                                                                                               
+    - name: match password
+      pattern_match:
+        regex: "^.* password \\d+ (\\S+)"
+        content: "{{ item }}"
+      register: password
+
+    - name: match encryption
+      pattern_match:
+        regex: "^.* password (\\d+)"
+        content: "{{ item }}"
+      register: encryption
+                                                                                                                          
+    - name: match role
+      pattern_match:
+        regex: "^.* role (\\S+)"
+        content: "{{ item }}"
+      register: role
+
+  loop: "{{ section }}"
+  register: local_accounts
+
+- name: generate json data structure
+  json_template:
+    template:
+      - key: user_account
+        object:
+          - key: username
+            value: "{{ item.username.matches.0 }}"
+          - key: password
+            value: "{{ item.password.matches.0 }}"
+          - key: encryption
+            value: "{{ item.encryption.matches.0 }}"
+          - key: role
+            value: "{{ item.role.matches.0 }}"
+  loop: "{{ local_accounts }}"
+  export: yes
+  register: nxos_local_accounts_facts

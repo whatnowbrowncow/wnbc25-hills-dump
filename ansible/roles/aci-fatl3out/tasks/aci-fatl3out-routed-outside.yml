@@ -1,0 +1,53 @@
+--- 
+
+- name: Create Routed Outside (fatl3out task 1)
+  aci_rest:
+    hostname: '{{ ansible_host }}'
+    username: '{{ aci_user }}'
+    private_key: '{{ aci_key }}'
+    method: post
+    path: "/api/node/mo/uni/tn-{{ item.tenant }}/out-{{ item.l3out_name }}.json"
+    content:
+      {
+        "l3extOut": {
+          "attributes": {
+            "dn": "uni/tn-{{ item.tenant }}/out-{{ item.l3out_name }}",
+            "name": "{{ item.l3out_name }}",
+            "rn": "out-{{ item.l3out_name }}",
+            "status": "created,modified"
+          },
+          "children": [
+            {
+              "bgpExtP": {
+                "attributes": {
+                  "dn": "uni/tn-{{ item.tenant }}/out-{{ item.l3out_name }}/bgpExtP",
+                  "rn": "bgpExtP",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "l3extRsEctx": {
+                "attributes": {
+                  "tnFvCtxName": "{{ item.vrf }}",
+                  "status": "created,modified"
+                },
+              }
+            },
+            {
+              "l3extRsL3DomAtt": {
+                "attributes": {
+                  "tDn": "uni/l3dom-{{ item.l3_domain }}",
+                  "status": "created,modified"
+                },
+              }
+            }
+          ]
+        }
+      }
+    validate_certs: no
+  with_items: 
+    - "{{ fatl3outs }}"
+
+- name: Move to Create External Networks
+  include_tasks: ./aci-fatl3out-networks.yml

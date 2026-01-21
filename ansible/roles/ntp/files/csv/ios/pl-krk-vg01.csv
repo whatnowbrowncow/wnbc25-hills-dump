@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+pl-krk-vg01,10.210.193.235,,no,
+pl-krk-vg01,10.120.193.235,,yes,

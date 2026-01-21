@@ -1,0 +1,11 @@
+---
+- name: Template Basic - From Mastering Python Networking
+  hosts: localhost
+  
+  tasks:
+    - name: Tunnnel Interface setup
+      template:
+        src=templates/ddos_tun_template.j2
+        dest=config-templates/{{ item.key }}.conf
+      with_dict: "{{ ddos_device }}"
+

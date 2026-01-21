@@ -1,0 +1,7 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+bg-sof-ar02,CISCO3945-CHASSIS,CISCO3945-CHASSIS,CISCO3945-CHASSIS,FCZ16406063,V02
+bg-sof-ar02,Clear/Subrate T3/E3 WAN,Clear/Subrate T3/E3 WAN on Slot 1,NM-1T3/E3=,FOC16313B3K,V01
+bg-sof-ar02,Network Module Adapter for SM Slot,Network Module Adapter for SM Slot on Slot 1,SM-NM-ADPTR,FOC1634DQYY,V01
+bg-sof-ar02,Cisco Services Performance Engine 150 for Cisco 3900 ISR,Cisco Services Performance Engine 150 for Cisco 3900 ISR on Slot 0,C3900-SPE150/K9,FOC16365B8S,V05
+bg-sof-ar02,C3900 AC Power Supply 2,C3900 AC Power Supply 2,PWR-3900-AC,QCS1619P399,V03
+bg-sof-ar02,C3900 AC Power Supply 1,C3900 AC Power Supply 1,PWR-3900-AC,QCS1619P3CN,V03

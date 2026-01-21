@@ -1,0 +1,23 @@
+---
+
+- name: PLAY - Router base build
+  hosts: ios
+  gather_facts: no
+  connection: network_cli
+
+  vars_prompt:
+    - name: "enable_pass"
+      prompt: "Please enter the enable password"
+      private: yes
+
+  roles:
+    - ssh
+    - service-hardening
+    - banner
+    - line_vty
+    - mgmt_acl
+    - snmp_acl
+    - snmp
+    - interface
+    - aaa
+

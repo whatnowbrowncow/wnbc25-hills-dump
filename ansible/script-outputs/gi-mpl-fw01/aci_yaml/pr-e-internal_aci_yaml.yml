@@ -1,0 +1,49 @@
+
+  - app_prof: 'pr-e-internal'
+    tenant: 'production'
+    vrf: 'pr-e-internal'
+    bds:
+      - bd: 'pr-e-internal_monitoring-int'
+        network: '10.180.161.128'
+        gateway: '10.180.161.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-internal_monitoring-int'
+            encap_id: '382'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-e-internal_internal-vrf'
+        network: '10.180.161.160'
+        gateway: '10.180.161.164'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-internal_internal-vrf'
+            encap_id: '383'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-e-internal_build-network'
+        network: '10.180.162.0'
+        gateway: '10.180.162.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-internal_build-network'
+            encap_id: '398'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-e-internal_monitoring'
+        network: '10.180.163.0'
+        gateway: '10.180.163.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-e-internal_monitoring'
+            encap_id: '399'
+            vcenter_dynamic_vlan: true

@@ -1,0 +1,31 @@
+---
+
+- name: IOS-XR - Collect SSH Config
+  iosxr_command:
+    commands:
+      - show run ssh
+  register: iosxr_ssh_output
+
+#- name: Display Output
+#  debug: var=iosxr_ssh_output
+
+- name: IOS-XR - Parse Output
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/iosxr/parser_iosxr_ssh.yml"
+    content: "{{ iosxr_ssh_output.stdout.0 }}"
+
+#- name: Display RAW output
+#  debug: var=section
+
+#- name: Display JSON Output
+#  debug: var=iosxr_ssh_facts
+
+- name: IOS-XR - Create directory for YAML files if not present
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: IOS-XR - Generate YAML File
+  template:
+    src: "/gitnet/ansible/roles/ssh/templates/iosxr/yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/ssh.yml"

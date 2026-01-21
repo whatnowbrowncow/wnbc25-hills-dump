@@ -1,0 +1,7 @@
+{% for item in activedst.stdout %}
+{%   if loop.last %}
+{{ item }} 
+{%   else %}
+{{ item }}
+{%   endif %}
+{% endfor %}

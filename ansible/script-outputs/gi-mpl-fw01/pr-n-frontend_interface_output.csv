@@ -1,0 +1,11 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+ shutdown,,Port-channel1.101,10.180.32.33,,noncde-web,255.255.255.224,100
+ shutdown,,Port-channel1.111,10.180.33.33,,noncde-backoffice,255.255.255.224,100
+ shutdown,,Port-channel1.203,10.180.64.97,,cobain,255.255.255.224,100
+up,,Port-channel1.210,10.180.66.1,,noncde-backoffice-new,255.255.255.0,100
+up,,Port-channel1.211,10.180.67.1,,noncde-web-new,255.255.255.0,100
+up,,Port-channel1.212,10.180.68.1,,iptv,255.255.255.224,100
+up,,Port-channel1.215,10.180.68.99,,noncde-cobain,255.255.255.224,100
+up,,Port-channel1.219,10.180.69.193,,citrix_netscaler,255.255.255.224,100
+up,,Port-channel1.231,10.180.74.1,,int-lb,255.255.254.0,100
+up,,Port-channel1.422,10.180.224.4,,internal-vrf,255.255.255.0,100

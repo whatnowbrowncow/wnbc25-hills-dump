@@ -1,0 +1,3 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+uk-stj-vacc02,0 4,,,15 0,151012580A7A3821,ssh,telnet ssh,no,
+uk-stj-vacc02,5 15,,,15 0,151012580A7A3821,ssh,telnet,no,

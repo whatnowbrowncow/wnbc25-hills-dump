@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+uk-sc1-ds04,Ethernet110/1/15,no_data_in_cdp
+uk-sc1-ds04,Ethernet110/1/18,no_data_in_cdp

@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-ld6-or01,10.120.193.235,Mgmt-intf,no,GigabitEthernet0
+uk-ld6-or01,10.120.193.236,Mgmt-intf,no,GigabitEthernet0

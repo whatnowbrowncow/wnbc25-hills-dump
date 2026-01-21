@@ -1,0 +1,5 @@
+---
+
+- name: Line VTY config task
+  include_tasks: ./line_vty.yml
+

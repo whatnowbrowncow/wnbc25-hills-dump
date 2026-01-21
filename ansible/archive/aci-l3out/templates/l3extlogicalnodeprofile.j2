@@ -1,0 +1,29 @@
+"l3extLNodeP": {
+    "attributes": {
+        "descr": "",
+        "dn": "uni/tn-{{ item.0.tenant }}/out-{{item.0.context}}_fatl3out/lnodep-{{ item.0.context }}_{{ item.1.peer_device }}_np",
+        "name": "{{ item.0.context }}_{{ item.1.peer_device }}_np",
+        "status": "created,modified"
+    },
+    "children": [
+{% for l3np in item.1.node_profile %}
+    {
+        "l3extRsNodeL3OutAtt": {
+            "attributes": {
+                "dn": "uni/tn-{{ item.0.tenant }}/out-{{ item.0.l3out_name }}/lnodep-{{ item.0.context }}_{{ item.1.peer_device }}_np/rsnodeL3OutAtt-[topology/pod-1/node-{{ l3np.node_id }}]",
+                "rtrId": "{{ l3np.rtr_id}}",
+                "rtrIdLoopBack": "{{ l3np.rtr_loopback }}",
+                "tDn": "topology/pod-1/node-{{ l3np.node_id }}"
+            },
+            "children": [{
+                "l3extInfraNodeP": {
+                    "attributes": {
+                        "fabricExtCtrlPeering": "false",
+                        "status": "created,modified"
+                    }
+                }
+            }]
+        }
+    },
+{% endfor %}
+]}

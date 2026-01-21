@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-mdc-ar02,whill,15,secret,4,9tDyfqJjCgrlEqVyrVkW0Nc7LNiyJKHkmzpkYSWrfZA
+uk-mdc-ar02,netsec,15,secret,4,8Kb2slRmQI6xd7qwkxLjCRKlIHuVOj1ax/8vyMkB6Tg
+uk-mdc-ar02,netadmin,15,secret,4,mKij449iJ8grD6NGYBhUQKZtDNnBt203/Qu7AyDAEXc
+uk-mdc-ar02,svcnetworkauto,15,secret,4,vvhhtIPAqxiJjbycSPTNazk4qwXF2yqCsZCDYzkVTHs

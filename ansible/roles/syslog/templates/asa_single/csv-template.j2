@@ -1,0 +1,8 @@
+hostname,interface,syslog ip address
+{% if syslog_server_facts is defined %}
+{% for item in syslog_server_facts %}
+{{ inventory_hostname }},{{ item.syslog_servers.interface }},{{ item.syslog_servers.ip_address }}
+{% endfor %}
+{% else %}
+{{ inventory_hostname }},NO SYSLOG CONFIG FOUND,NO SYSLOG CONFIG FOUND
+{% endif %}

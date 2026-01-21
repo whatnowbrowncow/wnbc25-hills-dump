@@ -1,0 +1,8 @@
+hostname,community,role,access-list
+gib-mpl-ds04,whM0n1T0r,network-operator,cacti
+gib-mpl-ds04,$n0Wd5c4nN3r,network-operator,servicenow-discovery
+gib-mpl-ds04,DrgsY2ZvSaftVyx83A4S,network-operator,
+gib-mpl-ds04,wh1LLc0rp,network-admin,ncs
+gib-mpl-ds04,md9IGovWFs,network-admin,hp-oneview
+gib-mpl-ds04,5wUxlDGU,network-operator,solarwinds-new
+gib-mpl-ds04,5&prU$pAtu!H,network-operator,solarwinds

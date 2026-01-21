@@ -1,0 +1,39 @@
+---
+
+- name: Infoblox search/report playbook
+  hosts: nios
+  connection: local
+
+# vars_prompt:
+#   - name: "user_username"
+#     prompt: "Please enter your username"
+#     private: no
+#   - name: "user_password"
+#     prompt: "Please enter your password"
+#     private: yes  
+  
+  tasks:
+
+  - name: fetch hosts
+    set_fact:
+      host: "{{ lookup('nios', 'record:host', provider=nios_provider) }}"
+    register: host_output
+
+  - name: Only output entries that match the search
+    debug:
+      msg: "{{ item.name }}"
+    when:
+      - item.name | search("pp3.williamhill.plc")
+    with_items:
+      - "{{ host_output.ansible_facts.host }}"
+
+#  - name: fetch hosts
+#    set_fact:
+#      host: "{{ lookup('nios', 'record:host', filter={ 'name': 'po1_1650.uk-ld6-fw05-lab-cde-mgmt.network.williamhill.plc' }, provider=nios_provider) }}"
+#    register: host_output
+#  - debug: var=host_output
+
+# The below doesn't work
+#  - name: fetch hosts
+#    set_fact:
+#      host: "{{ lookup('nios', 'record:host', filter={ 'name': 'search('pp3.williamhill.plc')' }, provider=nios_provider) }}"

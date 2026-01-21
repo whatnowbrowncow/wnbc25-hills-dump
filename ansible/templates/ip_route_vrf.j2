@@ -1,0 +1,3 @@
+{% for route in item.value.routes %}
+ip route vrf {{route.vrf}} {{route.route}} {{route.nh}} name {{route.name}}
+{% endfor %}

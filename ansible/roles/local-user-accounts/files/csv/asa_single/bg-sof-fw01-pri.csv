@@ -1,0 +1,4 @@
+hostname,username,privilege,encryption,password_string
+bg-sof-fw01-pri,svcnetworkauto,15,pbkdf2,$sha512$5000$HGQTMAj7uBya6KkQ1AKe2w==$Bhx4h78bLusAR/ZHzeNA7w==
+bg-sof-fw01-pri,netsec,,,$sha512$5000$DwYIF+joUq0S1UFWQEwtjA==$nBk+HYmFN3E4w2PJzbtGTA==
+bg-sof-fw01-pri,netadmin,15,pbkdf2,$sha512$5000$bngHNT7p7MwW2gS5N0xJ1A==$gZavkw3bgRfKxXZ+CsryIQ==

@@ -1,0 +1,11 @@
+---
+
+- name: Add routes to contexts
+  include_tasks: ./asa-routes_lines.yml
+  tags:
+    - asa-routes
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context_item
+

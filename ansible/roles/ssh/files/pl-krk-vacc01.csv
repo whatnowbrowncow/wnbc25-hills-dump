@@ -1,0 +1,2 @@
+device,timeout,auth_retries,source-interface,version,server-algorithm,client-algorithm
+pl-krk-vacc01,60,,Vlan99,2,,

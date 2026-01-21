@@ -1,0 +1,68 @@
+---
+
+- name: ASA - Setting the default cluster mode to 'false'
+  set_fact:
+    clusterMODE: false
+
+- name: ASA Single - Cluster Tasks Block
+  block:
+    - name: ASA Single - Obtaining the cluster state (configured | not configured)
+      asa_command:
+        commands:
+          - "show cluster info | in Cluster.*On|configured"
+      register: clusteroutput
+      
+    - name: ASA Single - Parsing (regex) the cluster state (configured | not configured)
+      set_fact:
+        clustersetting: "{{ clusteroutput.stdout[0] | regex_search('^Cluster +\\S+ +(?P<clustersetting>On)','\\g<clustersetting>') }}"
+
+    - name: ASA Single - Setting the cluster state to 'true' (if configured)
+      set_fact:
+          clusterMODE: true
+      when: 
+        - clustersetting != ""
+        - clustersetting[0] == "On"
+
+  when: context_mode == "single"
+
+- name: ASA Multiple - Cluster Tasks Block
+  block:
+    - name: ASA Multiple - Obtaining the cluster state (configured | not configured)
+      asa_command:
+        commands:
+          - "show cluster info | in Cluster.*On|configured"
+        context: system
+      register: clusteroutput
+          
+    - name: ASA Multiple - Parsing (regex) the cluster state (configured | not configured)
+      set_fact:
+        clustersetting: "{{ clusteroutput.stdout[0] | regex_search('^Cluster +\\S+ +(?P<clustersetting>On)','\\g<clustersetting>') }}"
+
+    - name: ASA Multiple - Setting the cluster state to 'true' (if configured)
+      set_fact:
+          clusterMODE: true
+      when: 
+        - clustersetting != ""
+        - clustersetting[0] == "On"
+      
+  when: context_mode == "multiple"
+
+- name: ASA - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: ASA - Generating the 'hostname.yml' host var file (if not already present) and adding the 'cluster:true|false' boolean variable
+  template:
+    src: "{{ role_path }}/templates/cluster-mode-yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"
+    force: no
+
+- name: ASA - Adding the 'cluster:true|false' boolean variable (if not already present)
+  lineinfile:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"
+    line: "cluster: {{ clusterMODE | to_nice_json }}"
+
+- name: ASA - Refreshing the host variables for subsequent task evaluations
+  include_vars:
+    file: "{{ inventory_dir}}/host_vars/{{ inventory_hostname }}/{{ inventory_hostname }}.yml"

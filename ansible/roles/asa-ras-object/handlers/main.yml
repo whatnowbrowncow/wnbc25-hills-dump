@@ -1,0 +1,194 @@
+---
+- name: ASA-RAS - Creating a changes directory for Object configuration 'diff' files
+  file:
+    path: "{{ logs_dir }}"
+    state: directory
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:fail_executed"
+    - "asa-ras-object:updates_exist"
+
+- name: Find all files older that 28 days in changes directory
+  find:
+    paths:
+      - "{{ backup_dir }}"
+      - "{{ config_dir }}"
+      - "{{ logs_dir }}"
+    age: 28d
+    recurse: yes
+  register: filesOlderThan28d
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- name: ASA-RAS - Saving the post-change configuration
+  asa_config:
+    save_when: always
+  listen:
+    - "asa-ras-object:updates_exist"
+  check_mode: no
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Extracting all the current anyconnect Object Configuration
+- name: ASA-RAS - Retrieving the post-change Object configuration
+  asa_command:
+    commands:
+      - "show running-config object"
+      - "show running-config object-group"
+  check_mode: no
+  listen:
+      - "asa-ras-object:updates_exist"
+  register: activeobj
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Create a directory to store configuration files in
+- name: ASA-RAS - Creating a changes directory for Object configuration 'diff' files
+  file:
+    path:
+      - "{{ changes_dir }}"
+      - "{{ backup_dir }}"
+    state: directory
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- name: ASA-RAS - Taking a snapshot of the post-change, committed Object configuration (for diff)
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ post_conf_file }}"
+  check_mode: no
+  register: config_results
+  listen:
+    - "asa-ras-object:updates_exist"
+
+# Take post change data and place in a file
+- name: ASA-RAS - Saving a 'diff' of the pre_change snapshot and the new committed Object configuration
+  shell: diff {{ pre_conf_file }} {{ post_conf_file }} > {{ changes_dir }}/{{ timestamp }}_object_changes.conf
+  register: diff_result
+  failed_when: diff_result.rc > 1
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- name: Delete Temporary Files for Objects
+  file:
+    state: absent
+    path: "{{ foldernames }}"
+  loop:
+    - "{{ pre_conf_file }}"
+    - "{{ post_conf_file }}"
+  loop_control:
+    loop_var: foldernames
+    label: "Removing Directory and contents of {{ foldernames }}"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- name: Recreate empty Processed Files Directory
+  file:
+    state: directory
+    path: "{{ foldernames }}"
+  loop:
+    - /gitnet/ras-processed/data/
+    - "{{ logs_dir }}"
+  loop_control:
+    loop_var: foldernames
+    label: "Creating Directory {{ foldernames }}"
+  check_mode: no
+  run_once: true
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- name: Move Ansible Log to Log Files
+  command: "mv $HOME/ansible.log {{ logs_dir }}/{{ date }}_{{ time }}_ansible.log"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:fail_executed"
+    - "asa-ras-object:updates_exist"
+
+- name: Run Log Collection on Fail
+  shell: "{{ wh_net_tools_path }}/ras_log_retrieval.sh > /dev/tty"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:fail_executed"
+
+# - name: Send Slack Message Informing Of Failure
+#   shell: "python {{ playbook_dir }}/scripts/send_slack_message.py -lp $HOME/slack_message.log -bt {{ ns_slack_bottoken }} -c {{ channel_id }} -m {{ slack_message }} "
+#   check_mode: no
+#   delegate_to: localhost
+#   listen:
+#     - "asa-ras-object:fail_executed"
+
+- name: Wait on User Prompt in failure
+  ansible.builtin.pause:
+    prompt: "\n############################################ There has been a deployment Failure on {{ inventory_hostname }}, type 'yes' to allow you to investigate ############################################"
+  check_mode: false
+  register: user_input
+  until: user_input.user_input == "yes"
+  retries: 10000
+  listen:
+    - "asa-ras-object:fail_executed"
+
+- name: End playbook due to failure
+  ansible.builtin.fail:
+    msg: "\n############################################ To Resolve Failure you can Check \n LOGS that are found in ~/Ras_automation_logs.zip \n ############################################"
+  check_mode: false
+  listen:
+    - "asa-ras-object:fail_executed"
+
+- name: End playbook due to failure
+  fail:
+    msg: "############## There has been a deployment Failure on {{ inventory_hostname }}, Please Check LOGS CAN BE FOUND IN ~/Ras_automation_logs.zip ##############"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:fail_executed"
+
+- name: Remove all files found that are older than 28 days in changes directory
+  file:
+    path: "{{ filename.path }}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: "Removing old change file {{ filename.path }}"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- name: Remove all associated directories in changes directory
+  file:
+    path: "{{ filename.path | dirname}}"
+    state: absent
+  loop: "{{ filesOlderThan28d.files }}"
+  loop_control:
+    loop_var: filename
+    label: "Removing old directory {{ filename.path | dirname }}"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- name: Update Objects Changed Flag
+  set_fact:
+    objects_changed: true
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"
+
+- shell: "echo '\e[1;32m ############## Changed that were made to the Devices Can be found in {{ changes_dir }} ##############\e[0m' > /dev/tty"
+  check_mode: no
+  delegate_to: localhost
+  listen:
+    - "asa-ras-object:updates_exist"

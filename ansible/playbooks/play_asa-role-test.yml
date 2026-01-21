@@ -1,0 +1,25 @@
+---
+
+- name: Test roles for ASA Contexts
+  hosts: asa
+  connection: network_cli
+  gather_facts: no
+
+  vars_prompt:
+    - name: "snapshot_description"
+      prompt: "Provide the change ref. This will be used for the slack message and/or snapshots:"
+      default: "ansible pre-change backup"
+      private: no
+
+  roles:
+    - slack-message-start
+    - role: ping-test
+      vars:
+        ping_state: "pre-ping"
+#    - asa-system-interfaces
+#    - asa-interfaces
+    - role: ping-test
+      vars:
+        ping_state: "post-ping"
+    - slack-message-end
+

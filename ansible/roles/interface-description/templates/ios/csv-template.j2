@@ -1,0 +1,6 @@
+hostname,local_interface,remote_device_description
+{% if final_state is iterable %}
+{% 	for item in final_state %}
+{{ inventory_hostname }},{{ item.interface }},{{ item.interface_description }}
+{%  endfor %}
+{% endif %}

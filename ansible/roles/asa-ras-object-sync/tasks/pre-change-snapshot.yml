@@ -1,0 +1,28 @@
+---
+- name: ASA-RAS - Creating a changes directory for Object configuration 'diff' files
+  file:
+    path: "{{ changes_dir }}"
+    state: directory
+
+# Retrieves current RAS ACLs and Group Policy Information
+- name: ASA-RAS - Retrieving the pre-change Object configuration
+  asa_command:
+    commands:
+      - "show running-config object"
+      - "show running-config object-group"
+  register: activeobj
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200   
+
+
+
+#  Places information gathered in the task above into a temporary file for use later on
+- name: ASA-RAS - Taking a snapshot of the pre_change Object configuration
+  template:
+    src: "{{ role_path }}/templates/backup-template.j2"
+    dest: "{{ pre_conf_file }}"
+  changed_when: false
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200   

@@ -1,0 +1,17 @@
+Name: "module 0", DESCR: "ASA 5585-X Security Services Processor-20 with 8GE"
+PID: ASA5585-SSP-20    , VID: V05     , SN: JAD170600RH
+
+Name: "Chassis", DESCR: "ASA 5585-X"
+PID: ASA5585           , VID: V03     , SN: JMX170880H0
+
+Name: "TenGigabitEthernet0/8", DESCR: "10G Based-SR"
+PID: SFP-10G-SR        , VID: V02 , SN: FNS15290A9Q     
+
+Name: "TenGigabitEthernet0/9", DESCR: "10G Based-SR"
+PID: SFP-10G-SR        , VID: V02 , SN: FNS15290A5Z     
+
+Name: "power supply 0", DESCR: "ASA 5585-X AC Power Supply"
+PID: ASA5585-PWR-AC    , VID: V05     , SN: POG164900BT
+
+Name: "power supply 1", DESCR: "ASA 5585-X AC Power Supply"
+PID: ASA5585-PWR-AC    , VID: V05     , SN: POG171100G3

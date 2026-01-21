@@ -1,0 +1,57 @@
+---
+# This is to collect the all the ACL configuration  from the device
+- name: ASA-RAS - Collecting the RAS ACL configuration
+  asa_command:
+    commands:
+      - "show running-config access-list | in .*ras.*_v"
+  register: acl_output
+
+# This is to collect all the vpn filter configuration where a ras ACl exists
+- name: ASA-RAS - Collecting the Group policy configuration
+  asa_command:
+    commands:
+      - "show running-config group-policy | in .*ras.*_v"
+  register: group_policy_output
+
+# This is to extract all the acl names from the configuration
+- name: ASA-RAS - Define all ASA ACLs on Device
+  set_fact:
+    acl_names: "{{ acl_output.stdout[0] | regex_findall('access-list (ras\\S+)_v\\d+') | unique }}"
+
+# This is run the collate all the version required for removal for each of the ACLS extracted from the previous task (calls another yml file)
+- name: ASA-RAS - Call Compile Version List Tasks
+  include_tasks: asa-compile-old-acls.yml
+  vars:
+    device_version: "{{ group_policy_output.stdout[0] | regex_findall('vpn-filter value ' + loop_acls + '_v(\\d+)') }}"
+    acls: "{{ acl_output }}"
+    comment_title: "ASA-RAS"
+  loop: "{{ acl_names }}"
+  loop_control:
+    loop_var: loop_acls
+
+# Creates the code to for ACL versions to be removed
+- name: ASA-RAS - Create Code for removal of ACL and produce CFG
+  template:
+    src: "{{ role_path }}/templates/access-list-confg-template.j2"
+    dest: "{{ changes_dir }}/acl-removal.cfg"
+  when: 
+    - versions_to_remove is defined
+    - versions_to_remove != []
+  check_mode: no
+
+# Removed the ACL versions from the device
+- name: ASA-RAS - Remove Old Access Lists
+  asa_config:
+    src: "{{ changes_dir }}/acl-removal.cfg"
+    match: line
+  notify: "acl_removed"
+  when: 
+    - versions_to_remove is defined
+    - versions_to_remove != []
+
+# Clears the versions list
+- name: ASA-RAS - Clear old acl Fact
+  set_fact: 
+    versions_to_remove: []
+
+

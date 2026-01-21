@@ -1,0 +1,6 @@
+hostname,context,ip address,source int,community,poll/trap,version
+uk-ld6-fw02-sec,pte-external,10.120.136.15,pte-internal-vrf,q1wlheMBV5py,poll,2c
+uk-ld6-fw02-sec,pte-external,10.120.163.206,pte-internal-vrf,q1wlheMBV5py,both,2c
+uk-ld6-fw02-sec,pte-external,10.120.163.210,pte-internal-vrf,q1wlheMBV5py,poll,2c
+uk-ld6-fw02-sec,pte-external,10.120.163.59,pte-internal-vrf,m0squ1t0,both,2c
+uk-ld6-fw02-sec,production-external,10.120.163.59,inside,m0squ1t0,both,2c

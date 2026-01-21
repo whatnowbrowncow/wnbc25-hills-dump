@@ -1,0 +1,39 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-cwk3-as01,SFP-10GBase-SR,Te5/1/3,SFP-10G-SR,AVD223398HR,V03
+uk-cwk3-as01,SFP-10GBase-SR,Te1/1/3,SFP-10G-SR,AVD223399YX,V03
+uk-cwk3-as01,StackAdapter5/1,StackAdapter5/1,C3650-STACK,FDO21391M32,V01
+uk-cwk3-as01,StackAdapter4/1,StackAdapter4/1,C3650-STACK,FDO21391NUS,V01
+uk-cwk3-as01,StackAdapter2/1,StackAdapter2/1,C3650-STACK,FDO21410D4C,V01
+uk-cwk3-as01,StackAdapter1/2,StackAdapter1/2,C3650-STACK,FDO21410DBZ,V01
+uk-cwk3-as01,StackAdapter3/2,StackAdapter3/2,C3650-STACK,FDO21410G6Z,V01
+uk-cwk3-as01,StackAdapter4/2,StackAdapter4/2,C3650-STACK,FDO21411Q6L,V01
+uk-cwk3-as01,StackAdapter5/2,StackAdapter5/2,C3650-STACK,FDO214214XC,V01
+uk-cwk3-as01,StackAdapter1/1,StackAdapter1/1,C3650-STACK,FDO214308CE,V01
+uk-cwk3-as01,StackAdapter2/2,StackAdapter2/2,C3650-STACK,FDO21442DEG,V01
+uk-cwk3-as01,StackAdapter3/1,StackAdapter3/1,C3650-STACK,FDO21450U3B,V01
+uk-cwk3-as01,WS-C3650-48PD-S,Switch 2,WS-C3650-48PD-S,FDO2152E2DZ,V05
+uk-cwk3-as01,WS-C3650-48PD-S,Switch 4,WS-C3650-48PD-S,FDO2152E2E0,V05
+uk-cwk3-as01,WS-C3650-48PD-S,Switch 1,WS-C3650-48PD-S,FDO2152E2EH,V05
+uk-cwk3-as01,c36xx Stack,c36xx Stack,WS-C3650-48PD-S,FDO2152E2EH,V05
+uk-cwk3-as01,WS-C3650-48PD-S,Switch 3,WS-C3650-48PD-S,FDO2152Q21V,V05
+uk-cwk3-as01,WS-C3650-48PD-S,Switch 5,WS-C3650-48PD-S,FDO2152Q242,V05
+uk-cwk3-as01,StackPort1/2,StackPort1/2,STACK-T2-1M,LCC1841G4CC,V01
+uk-cwk3-as01,StackPort5/1,StackPort5/1,STACK-T2-1M,LCC1841G4CC,V01
+uk-cwk3-as01,Switch 5 - Power Supply A,Switch 5 - Power Supply A,PWR-C2-640WAC,LIT21455DHA,V03
+uk-cwk3-as01,Switch 5 - Power Supply B,Switch 5 - Power Supply B,PWR-C2-640WAC,LIT21455DJF,V03
+uk-cwk3-as01,Switch 4 - Power Supply A,Switch 4 - Power Supply A,PWR-C2-640WAC,LIT21455EEU,V03
+uk-cwk3-as01,Switch 3 - Power Supply B,Switch 3 - Power Supply B,PWR-C2-640WAC,LIT21455EHR,V03
+uk-cwk3-as01,Switch 1 - Power Supply A,Switch 1 - Power Supply A,PWR-C2-640WAC,LIT21455EJ4,V03
+uk-cwk3-as01,Switch 2 - Power Supply A,Switch 2 - Power Supply A,PWR-C2-640WAC,LIT21455EJ9,V03
+uk-cwk3-as01,Switch 3 - Power Supply A,Switch 3 - Power Supply A,PWR-C2-640WAC,LIT21455ELH,V03
+uk-cwk3-as01,Switch 2 - Power Supply B,Switch 2 - Power Supply B,PWR-C2-640WAC,LIT21455ELP,V03
+uk-cwk3-as01,Switch 4 - Power Supply B,Switch 4 - Power Supply B,PWR-C2-640WAC,LIT21455ELT,V03
+uk-cwk3-as01,Switch 1 - Power Supply B,Switch 1 - Power Supply B,PWR-C2-640WAC,LIT21455EM4,V03
+uk-cwk3-as01,StackPort1/1,StackPort1/1,STACK-T2-50CM,LRM18210693,V01
+uk-cwk3-as01,StackPort2/2,StackPort2/2,STACK-T2-50CM,LRM18210693,V01
+uk-cwk3-as01,StackPort3/1,StackPort3/1,STACK-T2-50CM,LRM214211HN,V03
+uk-cwk3-as01,StackPort4/2,StackPort4/2,STACK-T2-50CM,LRM214211HN,V03
+uk-cwk3-as01,StackPort2/1,StackPort2/1,STACK-T2-50CM,LRM214211NV,V03
+uk-cwk3-as01,StackPort3/2,StackPort3/2,STACK-T2-50CM,LRM214211NV,V03
+uk-cwk3-as01,StackPort4/1,StackPort4/1,STACK-T2-50CM,LRM214211PQ,V03
+uk-cwk3-as01,StackPort5/2,StackPort5/2,STACK-T2-50CM,LRM214211PQ,V03

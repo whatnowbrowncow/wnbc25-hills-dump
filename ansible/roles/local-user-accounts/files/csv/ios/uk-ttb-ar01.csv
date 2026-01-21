@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-ttb-ar01,netsec,,secret,5,$1$.rIo$gR0i5K/MH4Ucnns/SL5oX1
+uk-ttb-ar01,netadmin,15,secret,5,$1$twR6$JOjSSYYo3BWr50BZiYD150
+uk-ttb-ar01,whillsup,,secret,5,$1$vDQz$qzWPz8tIivmHShSbLlexn/
+uk-ttb-ar01,svcnetworkauto,15,secret,5,$1$9Drg$pLnVbhCNpVlAhnGJvjdRr0

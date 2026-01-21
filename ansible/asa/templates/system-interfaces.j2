@@ -1,0 +1,5 @@
+{% for interface in interfaces %}
+interface Port-channel1.{{ interface.vlan }}
+ vlan {{ interface.vlan }}
+!
+{% endfor %}

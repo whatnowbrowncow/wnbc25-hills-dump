@@ -1,0 +1,9 @@
+BVI0: {admin-state: up, interface: BVI0, 'no': ip}
+Port-channel1.381: {admin-state: up, interface: Port-channel1.381, ip-add: 10.120.161.100,
+  nameif: internal-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.502: {admin-state: up, interface: Port-channel1.502, ip-add: 10.120.184.68,
+  nameif: wan-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.507: {admin-state: up, interface: Port-channel1.507, ip-add: 10.109.1.66,
+  nameif: us-vrf, netmask: 255.255.255.224, security-level: '100'}
+Port-channel1.571: {admin-state: up, interface: Port-channel1.571, ip-add: 10.120.193.100,
+  nameif: group-vrf, netmask: 255.255.255.224, security-level: '100'}

@@ -1,0 +1,4 @@
+hostname,local_interface,remote_device_description
+uk-cwk-vacc01,Vlan82,no_data_in_cdp
+uk-cwk-vacc01,Vlan98,no_data_in_cdp
+uk-cwk-vacc01,Port-channel10,no_data_in_cdp

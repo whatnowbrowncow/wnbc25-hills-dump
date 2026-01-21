@@ -1,0 +1,20 @@
+interface {{ mgmt_interface.interface }}
+ description {{ mgmt_interface.description }}
+ ip address {{ mgmt_interface.ip_addr }} {{ mgmt_interface.cidr }}
+{% if mgmt_interface.vrf != ""  %} vrf member {{ mgmt_interface.vrf }}
+{% else %}
+{% endif %}
+ no shut
+
+{% if loopback_interfaces %}
+{% for loopback in loopback_interfaces %}
+interface {{ loopback.interface }}
+ description {{ loopback.description }}
+ ip address {{ loopback.ip_addr }} {{ loopback.cidr }}
+{% if loopback.vrf != ""  %} vrf member {{ loopback.vrf }}
+{% else %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+{% endif %}

@@ -1,0 +1,71 @@
+---
+
+- name: ASA-SINGLE - Collecting the ACL configuration
+  asa_command:
+    commands:
+      - "show running-config | include access-list"
+      - "show running-config | include access-group"
+  register: acl_output
+
+- name: ASA-SINGLE - Parsing the access-group configuration
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/asa_single/parser_asa_single_acl_access_groups.yml"
+    content: "{{ acl_output.stdout.1 }}"
+
+- name: ASA-SINGLE - Collecting the names of extended ACLs
+  set_fact:
+    ext_acls: "{{ acl_output.stdout[0] | regex_findall('^access-list +(?!global_mpc|ras-)(\\S+) +extended','\\g<#ext_acls>') | unique }}"
+
+- name: ASA-SINGLE - Collecting the configuration lines of each extended ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ ext_acls }}"
+  loop_control:
+    label: "Collecting the configuration of access-list {{ item }}"
+  register: rules
+
+- name: ASA-SINGLE - Parsing the extended ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_acl_extended.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: extended_access_lists
+
+- name: ASA-SINGLE - Collecting the names of standard ACLs
+  set_fact:
+    std_acls: "{{ acl_output.stdout[0] | regex_findall('^access-list +(\\S+) +standard','\\g<std_acls>') | unique }}"
+
+- name: ASA-SINGLE - Collecting the configuration lines of each standard ACL
+  asa_command:
+    commands:
+      - "show access-list {{ item }} | exclude ^ "
+  loop: "{{ std_acls }}"
+  loop_control:
+    label: "Collecting the configuration of access-list {{ item }}"
+  register: rules
+
+- name: ASA-SINGLE - Parsing the standard ACL configuration
+  command_parser:
+    file: /gitnet/ansible/parser_templates/asa_single/parser_asa_single_acl_standard.yml
+    content: "{{ item.stdout.0 }}"
+  loop: "{{ rules.results }}"
+  loop_control:
+    label: "Parsing the configuration of access-list {{ item.item }}"
+  register: standard_access_lists
+
+- name: ASA-SINGLE - Joining the ACLs (extended | standard) for YAML templating
+  set_fact:
+    access_lists: "{{ extended_access_lists.results + standard_access_lists.results }}"
+
+- name: ASA-SINGLE - Creating a host directory for YAML files (if not already present)
+  file:
+    path: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}"
+    state: directory
+
+- name: ASA-SINGLE - Generating the YAML file
+  template:
+    src: "{{ role_path }}/templates/asa_single/yml-template.j2"
+    dest: "{{ inventory_dir }}//host_vars/{{ inventory_hostname }}/acl.yml"

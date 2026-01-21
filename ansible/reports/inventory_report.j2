@@ -1,0 +1,20 @@
+## System targeted:
+
+{{ inventory_hostname }}
+
+
+## Facts:
+
+Model:  {{ ansible_net_model }}
+
+Serial Number: {{ ansible_net_serialnum }}
+
+OS Version:   {{ ansible_net_version }}
+
+# Inventory information:
+
+| Hostname | Model | Serial No. | OS version | Inventory info |
+| ----- | ----- | ----- | ----- |----- |
+{% for line in item %}
+| {{ inventory_hostname }} | {{ ansible_net_model }} | {{ ansible_net_serialnum }} | {{ ansible_net_version }} | {{ line }} |
+{% endfor %}

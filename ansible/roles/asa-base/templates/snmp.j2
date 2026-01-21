@@ -1,0 +1,4 @@
+{% for host in snmp.communities %}
+snmp-server host internal-vrf {{ host.snmp_svr }} community {{ host.community }} version 2c
+{% endfor %}
+snmp-server enable traps snmp linkup linkdown coldstart

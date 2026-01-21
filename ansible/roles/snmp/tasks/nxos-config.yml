@@ -1,0 +1,27 @@
+---
+
+- name: NX-OS - Build and Apply configuration
+  block:
+#    - name: NX-OS - Build configuration for testing purposes
+#      template:
+#        src: /gitnet/ansible/roles/snmp/templates/nxos/config-template-9k.j2
+#        dest: /gitnet/ansible/roles/snmp/files/configs/nxos/{{ inventory_hostname }}.cfg
+       
+    - name: NX-OS - Apply configuration (Nexus 9K)
+      nxos_config:
+        src: /gitnet/ansible/roles/snmp/templates/nxos/config-template-9k.j2
+        save_when: changed
+  when: "'nxos-9k' in group_names"
+
+- name: NX-OS - Build and Apply configuration
+  block:
+#    - name: NX-OS - Build configuration for testing purposes
+#      template:
+#        src: /gitnet/ansible/roles/snmp/templates/nxos/config-template-misc.j2
+#        dest: /gitnet/ansible/roles/snmp/files/configs/nxos/{{ inventory_hostname }}.cfg
+       
+    - name: NX-OS - Apply configuration (Nexus non-9K)
+      nxos_config:
+        src: /gitnet/ansible/roles/snmp/templates/nxos/config-template-misc.j2
+        save_when: changed
+  when: "'nxos-misc' in group_names"

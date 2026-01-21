@@ -1,0 +1,16 @@
+Port-channel1.1603: {admin-state: up, interface: Port-channel1.1603, ip-add: 10.115.131.1,
+  mac-address: 0200.0101.0101, nameif: web-mgt, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1604: {admin-state: up, interface: Port-channel1.1604, ip-add: 10.115.132.1,
+  mac-address: 0200.0101.0101, nameif: app-mgt, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1605: {admin-state: up, interface: Port-channel1.1605, ip-add: 10.115.133.1,
+  mac-address: 0200.0101.0101, nameif: db-mgt, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1609: {admin-state: up, interface: Port-channel1.1609, ip-add: 10.115.136.1,
+  mac-address: 0200.0101.0101, nameif: bladelogic-dmz, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1610: {admin-state: up, interface: Port-channel1.1610, ip-add: 10.115.137.1,
+  mac-address: 0200.0101.0101, nameif: cde-backoffice-mgt, netmask: 255.255.255.0,
+  security-level: '100'}
+Port-channel1.1620: {admin-state: up, interface: Port-channel1.1620, ip-add: 10.115.140.1,
+  mac-address: 0200.0101.0101, nameif: Stingray-Mgt, netmask: 255.255.255.0, security-level: '100'}
+Port-channel1.1675: {admin-state: up, interface: Port-channel1.1675, ip-add: 10.115.160.164,
+  mac-address: 0200.0101.0101, nameif: pte-internal-vrf, netmask: 255.255.255.224,
+  ospf: mtu-ignore, security-level: '100'}

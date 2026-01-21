@@ -1,0 +1,309 @@
+- name: Create network
+  nios_network:
+    network: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{item.dns_network.3}}{{"/"}}{{item.dns_network_mask_len}}'
+    network_view: 'default'
+    comment: '{{item.dns_comment}}'
+    extattrs:
+      Environment: '{{item.dns_environment}}'
+#      NetworkName: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{"V"}}{{item.dns_vlan}}'
+      NetworkName: '{{item.dns_networkname}}'
+      Site: '{{item.dns_site}}'
+      VLAN: '{{item.dns_vlan}}'
+    state: present
+    provider: '{{ infoblox_provider }}'
+  with_items: "{{ network_add_list }}"
+  register: infoblox_info
+
+- meta: end_play
+  when: reserve_ips != "y"
+
+- name: Add first reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host1."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 1 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 2nd reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host2."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 2 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 3rd reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host3."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 3 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 4th reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host4."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 4 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 5th reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host5."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 5 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 6th reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host6."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 6 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 7th reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host7."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 7 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 8th reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host8."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 8 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 9th reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host9."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 9 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+
+- name: Add 10th reserved host to each network (if subnet mask < /28)
+  block:
+    - nios_host_record:
+        state: present
+        view: default
+        name: '{{"autores-host10."}}{{item.dns_network.0}}{{"-"}}{{item.dns_network.1}}{{"-"}}{{item.dns_network.2}}{{"-"}}{{item.dns_network.3}}{{"S"}}{{item.dns_network_mask_len}}{{".network.williamhill.plc"}}'
+        ipv4:
+          - address: '{{item.dns_network.0}}{{"."}}{{item.dns_network.1}}{{"."}}{{item.dns_network.2}}{{"."}}{{ item.dns_network.3 + 10 }}'
+        provider: "{{ infoblox_provider }}"
+      with_items: "{{ network_add_list }}"
+      when: ( item.dns_network_mask_len | int ) < 28
+      register: infobloxresult
+      ignore_errors: yes
+    - set_fact:
+        resultsmsg: "OK"
+      when: infobloxresult.results[0].msg is not defined
+    - set_fact:
+        resultsmsg: "{{ infobloxresult.results[0].msg }}"
+      when: infobloxresult.results[0].msg is defined
+    - debug:
+        var: resultsmsg
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - fail:
+        msg: "Failed to add the Host. This is not caused by the Host already existing"
+      when: resultsmsg.find('already exists') == -1 and resultsmsg.find('OK') == -1
+    - debug:
+        msg: 'skip reason Host already exists'
+      when: resultsmsg.find('already exists') != -1
+

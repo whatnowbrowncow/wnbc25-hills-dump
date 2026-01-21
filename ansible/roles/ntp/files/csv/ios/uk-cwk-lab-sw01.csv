@@ -1,0 +1,3 @@
+hostname,ip address,vrf,preferred,source interface
+uk-cwk-lab-sw01,10.10.10.1,,yes,GigabitEthernet1/0/1
+uk-cwk-lab-sw01,10.10.10.2,,no,GigabitEthernet1/0/1

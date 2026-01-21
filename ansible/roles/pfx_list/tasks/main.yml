@@ -1,0 +1,5 @@
+---
+
+- name: Prefix-list task
+  include_tasks: ./pfx_list.yml
+

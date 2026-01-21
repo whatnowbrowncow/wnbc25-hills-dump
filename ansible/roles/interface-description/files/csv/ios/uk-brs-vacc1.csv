@@ -1,0 +1,3 @@
+hostname,local_interface,remote_device_description
+uk-brs-vacc1,Vlan99,no_data_in_cdp
+uk-brs-vacc1,GigabitEthernet1/0/7,IP_Phone_SEP00082F1A587B-Port1

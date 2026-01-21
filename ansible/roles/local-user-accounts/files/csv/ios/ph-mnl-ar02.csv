@@ -1,0 +1,5 @@
+hostname,username,privilege,password_type,encryption,password_string
+ph-mnl-ar02,netsec,15,secret,5,$1$hyrL$pAWCAtYB2.vZwihFBGzHc.
+ph-mnl-ar02,nessus,15,secret,5,$1$.n1T$JAhvcXoS5gFNw7.xVdDwG/
+ph-mnl-ar02,netadmin,15,secret,5,$1$sk7x$CKmGLA4ooyqoO8INryEBh/
+ph-mnl-ar02,svcnetworkauto,15,secret,5,$1$xMRz$rPKXGW2rTWLNw8rf6ma.S.

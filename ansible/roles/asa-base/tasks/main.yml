@@ -1,0 +1,55 @@
+---
+
+#- name: Confirm base variables
+#  debug: var={{ item }}
+#  with_items:
+#    - "{{ base }}"
+
+- name: Syslog build
+  import_tasks: ./asa-syslog.yml
+  tags:
+    - syslog
+    
+- name: Syslog-host build
+  include_tasks: ./asa-syslog-host_loop.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: contexts_item
+  tags:
+    - syslog-host
+    
+- name: Inspection build
+  import_tasks: ./asa-inspection.yml
+  tags:
+    - inspection
+
+- name: Antispoofing build
+  import_tasks: ./asa-antispoofing.yml
+  tags:
+    - antispoofing
+    
+#- name: Antispoofing_lines build
+#  include_tasks: ./asa-antispoofing_lines.yml
+#  with_items:
+#    - "{{ contexts }}"
+#  loop_control:
+#    loop_var: context_item
+#  tags:
+#    - anti_lines
+    
+- name: icmp build
+  import_tasks: ./asa-icmp.yml
+  tags:
+    - icmp
+    
+- name: snmp build
+  import_tasks: ./asa-snmp.yml
+  tags:
+    - snmp
+    
+- name: Add base build to context
+  import_tasks: ./asa-base.yml
+  tags:
+    - base
+

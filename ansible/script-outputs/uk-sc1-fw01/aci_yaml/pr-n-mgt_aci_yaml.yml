@@ -1,0 +1,170 @@
+
+  - app_prof: 'pr-n-mgt'
+    tenant: 'production'
+    vrf: 'pr-n-mgt'
+    bds:
+      - bd: 'pr-n-mgt_server-ilo'
+        network: '10.120.144.0'
+        gateway: '10.120.144.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_server-ilo'
+            encap_id: '340'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_web-tier'
+        network: '10.120.145.0'
+        gateway: '10.120.145.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_web-tier'
+            encap_id: '341'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_app-tier'
+        network: '10.120.146.0'
+        gateway: '10.120.146.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_app-tier'
+            encap_id: '342'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_app2-tier'
+        network: '10.120.147.0'
+        gateway: '10.120.147.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_app2-tier'
+            encap_id: '343'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_backoffice-tier'
+        network: '10.120.148.0'
+        gateway: '10.120.148.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_backoffice-tier'
+            encap_id: '344'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_ods-mgmt'
+        network: '10.120.149.0'
+        gateway: '10.120.149.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_ods-mgmt'
+            encap_id: '345'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_sc1-noncde-jumphost-lan'
+        network: '10.120.151.0'
+        gateway: '10.120.151.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_sc1-noncde-jumphost-lan'
+            encap_id: '347'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_noncde-cf-web-mgmt'
+        network: '10.120.152.0'
+        gateway: '10.120.152.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_noncde-cf-web-mgmt'
+            encap_id: '348'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_noncde-cf-app-mgmt'
+        network: '10.120.153.0'
+        gateway: '10.120.153.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_noncde-cf-app-mgmt'
+            encap_id: '349'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_webcache-mgmt'
+        network: '10.120.157.0'
+        gateway: '10.120.157.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_webcache-mgmt'
+            encap_id: '353'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_edge-mgmt'
+        network: '10.120.159.0'
+        gateway: '10.120.159.1'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_edge-mgmt'
+            encap_id: '362'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_webscreen-mgmt'
+        network: '10.120.159.64'
+        gateway: '10.120.159.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_webscreen-mgmt'
+            encap_id: '364'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_vc-mgmt'
+        network: '10.120.159.96'
+        gateway: '10.120.159.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_vc-mgmt'
+            encap_id: '365'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_email-mgmt'
+        network: '10.120.159.192'
+        gateway: '10.120.159.193'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_email-mgmt'
+            encap_id: '368'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-n-mgt_internal-vrf'
+        network: '10.120.160.192'
+        gateway: '10.120.160.196'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-n-mgt_internal-vrf'
+            encap_id: '376'
+            vcenter_dynamic_vlan: true

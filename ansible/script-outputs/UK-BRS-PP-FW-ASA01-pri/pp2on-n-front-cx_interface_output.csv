@@ -1,0 +1,5 @@
+admin-state,description,interface,ip-add,mac-address,nameif,netmask,security-level
+ shutdown,,Port-channel21.3079,10.214.161.36,,pp2on-internal-vrf,255.255.255.224,100
+up,,Port-channel21.3258,,,pp2on-noncde-deployment-lan,,100
+up,,Port-channel21.3259,,,pp2on-noncde-web1-lan,,100
+up,,Port-channel21.3260,,,pp2on-noncde-app1-lan,,100

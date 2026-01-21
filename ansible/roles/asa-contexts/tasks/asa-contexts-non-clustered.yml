@@ -1,0 +1,58 @@
+---
+
+- name: ASA MULTIPLE - Collecting the context infomation
+  asa_command:
+    commands:
+      - show run context | inc ^context|join-fail
+    context: system
+  register: asa_multiple_context_output
+
+- name: ASA MULTIPLE - Parsing the command output
+  command_parser:
+    file: "/gitnet/ansible/parser_templates/asa_multiple/parser_asa_multiple_context_group.yml"
+    content: "{{ asa_multiple_context_output.stdout.0 }}"
+
+- name: ASA MULTIPLE - Collecting the failover group infomation
+  asa_command:
+    commands:
+      - show failover state | ex Link
+    context: system
+  register: asa_multiple_failover_groups
+
+- name: ASA MULTIPLE - Setting the failover group state information
+  set_fact:
+    failover_group_1: "{{ asa_multiple_failover_groups.stdout[0] | regex_search ('(Group \\d+)?\\s+(?P<failover_group_1>(Standby|Active|Disabled)).*(\\n)?(.*\\n)?Other','\\g<failover_group_1>')}}"
+    failover_group_2: "{{ asa_multiple_failover_groups.stdout[0] | regex_search ('.*This host\\s+-\\s+\\S+\\n(.*Group 1\\s+(Active|Standby|Disabled).*\\n)?(.*(\\n.*\\n)?.*(Group 2)?\\s+(?P<failover_group_2>Active|Standby|Disabled).*\\n)?Other','\\g<failover_group_2>')}}"
+
+- name: ASA MULTIPLE - Creating the active context fact
+  set_fact: 
+    active_contexts: []
+
+- name: ASA MULTIPLE - Populating the active context list for Failover Group 1
+  set_fact: 
+    active_contexts: "{{ active_contexts + [loop_context.name] }}"
+  when: 
+    - failover_group_1[0] == 'Active'
+    - loop_context.group == '1'
+  loop: "{{ asa_context_failover_group_facts }}"
+  loop_control:
+    loop_var: loop_context
+
+- name: ASA MULTIPLE - Populating the active context list for Failover Group 2
+  set_fact: 
+    active_contexts: "{{ active_contexts + [loop_context.name] }}"
+  when: 
+    - failover_group_2[0] == 'Active'
+    - loop_context.group == '2'
+  loop: "{{ asa_context_failover_group_facts }}"
+  loop_control:
+    loop_var: loop_context
+
+- name: ASA-MULTIPLE - Generating the 'contexts.yml' host variable file
+  template:
+    src: "{{role_path }}/templates/contexts-list-yml-template.j2"
+    dest: "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}/contexts.yml"
+
+- name: ASA-MULTIPLE - Refreshing the 'contexts.yml' list
+  include_vars:
+    file: "{{ inventory_dir}}/host_vars/{{ inventory_hostname }}/contexts.yml"

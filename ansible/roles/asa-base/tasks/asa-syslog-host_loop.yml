@@ -1,0 +1,75 @@
+- name: Collect show route output for {{ contexts_item.context }}
+  asa_command:
+    commands:
+      - show route
+    context: "{{ contexts_item.context }}" 
+  register: reg_output
+
+#- name: Debug the routing table
+#  debug:
+#    msg:
+#      - "The routing table of {{ contexts_item.context }} is:"
+#      - "{{ reg_output }}"
+  
+    
+- name: Collect route for syslog servers on {{ contexts_item.context }}
+  asa_command:
+    commands:
+      - "show route {{ item }}"
+    context: "{{ contexts_item.context }}" 
+  register: reg_syslog_route_output
+  with_items:
+    - "{{ syslog_svrs }}"
+
+
+#- name: Output the syslog route for {{ contexts_item.context }}
+#  debug:
+#    msg:
+#    - "The syslog-id is {{ item.item }}"
+#    - "The routing table is:"
+#    - "{{ item.stdout_lines }}"
+#  with_items:
+#    - "{{ reg_syslog_route_output.results }}"
+
+#- name: Lack of specific route debug on {{ contexts_item.context }}
+#  debug:    
+#    msg:    
+#    - "There is no specific route to the {{ item.item }} syslog server"    
+#    - "The route used will be '{{ reg_output.stdout_lines.0.10.split(',').0.strip('S*    ') }}', via interface {{ reg_output.stdout_lines.0.10.split(',').1.strip() }}"    
+#    - "The config applied will be 'logging host {{ reg_output.stdout_lines.0.10.split(',').1.strip() }} {{ item.item }}'"
+#  when: item.stdout_lines.0.1 == '% Subnet not in table'    
+#  with_items:
+#    - "{{ reg_syslog_route_output.results }}"
+
+- name: Add syslog host config to {{ contexts_item.context }} using default route interface
+  asa_config:
+    lines:
+      - "logging host {{ reg_output.stdout_lines.0.10.split(',').1.strip() }} {{ item.item }}"
+    context: "{{ contexts_item.context }}"
+  when: item.stdout_lines.0.1 == '% Subnet not in table'    
+  with_items:
+    - "{{ reg_syslog_route_output.results }}"
+    
+    
+#- name: Specific route debug on {{ contexts_item.context }}
+#  debug:
+#    ###
+#    msg:
+#    - "The interface to access syslog server {{ item.item }} is {{ item.stdout_lines.0.4.split().4 }}"
+#    - "The routing entry is '{{ item.stdout_lines.0.1 }}'"
+#    - "The config applied will be 'logging host {{ item.stdout_lines.0.4.split().4 }} {{ item.item }}'"
+#  when: item.stdout_lines.0.1 != '% Subnet not in table'
+#  with_items:
+#    - "{{ reg_syslog_route_output.results }}"   
+#  ignore_errors: True
+
+
+- name: Add syslog host config to {{ contexts_item.context }} using known routed interface
+  asa_config:
+    lines:
+      - "logging host {{ item.stdout_lines.0.4.split().4 }} {{ item.item }}"
+    context: "{{ contexts_item.context }}"
+  when: item.stdout_lines.0.1 != '% Subnet not in table'    
+  with_items:
+    - "{{ reg_syslog_route_output.results }}"
+  ignore_errors: True

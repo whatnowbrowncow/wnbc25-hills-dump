@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-old-sg-ar01,netsec,15,secret,5,$1$W5DJ$Se0/RL6DTH/KPAuDApTD61
+uk-old-sg-ar01,whill,,secret,5,$1$As4K$9KwCzUMMRC4uuL4stOjQ6.

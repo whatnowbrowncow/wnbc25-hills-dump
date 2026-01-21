@@ -1,0 +1,20 @@
+{% if context_mode == "multiple" %}}
+!--- User {{ lookup('env','USER') }} executing the Ansible role {{ role_name }} ---!
+!--- BEGIN UPDATES: {{ inventory_hostname }}-{{ current_context }} @ {{ DTG }} ---!
+!
+{% for item in loggingUPDATE.updates -%}
+{{ item }}
+{% endfor %}
+!
+!--- END UPDATES: {{ inventory_hostname }}-{{ current_context }} @ {{ DTG }} ---!
+{% elif context_mode == "single" %}}
+!--- User {{ lookup('env','USER') }} executing the Ansible role {{ role_name }} ---!
+!--- BEGIN UPDATES: {{ inventory_hostname }} @ {{ DTG }} ---!
+!
+{% for item in loggingUPDATE.updates -%}
+{{ item }}
+{% endfor %}
+!
+!--- END UPDATES: {{ inventory_hostname }} @ {{ DTG }} ---!
+{% else %}}
+{% endif %}}

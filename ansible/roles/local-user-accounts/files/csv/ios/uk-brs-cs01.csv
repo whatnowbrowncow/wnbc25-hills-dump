@@ -1,0 +1,6 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-brs-cs01,btinet,15,secret,5,$1$/Bgg$PGWLijq77M5NOIYi9Dd0V0
+uk-brs-cs01,cs-mars,,secret,5,$1$1D5D$X4sCdvQwiOXg38cRS7fiT/
+uk-brs-cs01,anm-sw,15,secret,5,$1$qr1W$rbEJ57waQo.pv9YeMwZRQ/
+uk-brs-cs01,netadmin,15,secret,5,$1$AvhA$tBroAZs3YSZg5lwEH9Xpn.
+uk-brs-cs01,svcnetworkauto,15,secret,5,$1$QJxs$C3m0IxZ6KirYOySiAy2o3.

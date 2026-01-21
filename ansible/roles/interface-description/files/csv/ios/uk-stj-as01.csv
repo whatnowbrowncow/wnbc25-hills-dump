@@ -1,0 +1,13 @@
+hostname,local_interface,remote_device_description
+uk-stj-as01,Vlan99,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/25,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/27,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/32,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/37,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/38,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/39,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/40,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/41,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/42,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/44,no_data_in_cdp
+uk-stj-as01,GigabitEthernet1/0/45,no_data_in_cdp

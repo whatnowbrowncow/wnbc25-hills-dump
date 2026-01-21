@@ -1,0 +1,29 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+gib-mpl-ds03,AC power supply,Power supply 2,N55-PAC-750W-B,ART173810K0,V02
+gib-mpl-ds03,AC power supply,Power supply 1,N55-PAC-750W-B,ART173810KF,V02
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 103 Power Supply 2,N2200-PAC-400W,DTN1735P0TE,V04
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 103 Power Supply 1,N2200-PAC-400W,DTN1735P0TF,V04
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 105 Power Supply 2,N2200-PAC-400W,DTN1735P0TJ,V04
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 105 Power Supply 1,N2200-PAC-400W,DTN1735P0TK,V04
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 107 Power Supply 1,N2200-PAC-400W,DTN1736P06T,V04
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 107 Power Supply 2,N2200-PAC-400W,DTN1736P06Y,V04
+gib-mpl-ds03,O2 32X10GE/Modular Universal Platform Supervisor,Module 1,N5K-C5548UP,FOC17172P35,V01
+gib-mpl-ds03,Fabric Extender Module,FEX 101 Module 1,N2K-C2248TP-E-1GE,FOC17436SZJ,V02
+gib-mpl-ds03,Fabric Extender Module,FEX 105 Module 1,N2K-C2248TP-E-1GE,FOC17436T09,V02
+gib-mpl-ds03,Fabric Extender Module,FEX 107 Module 1,N2K-C2248TP-E-1GE,FOC17436T1N,V02
+gib-mpl-ds03,Fabric Extender Module,FEX 103 Module 1,N2K-C2248TP-E-1GE,FOC17436T8S,V02
+gib-mpl-ds03,O2 16 port flexible GEM,Module 2,N55-M16UP,FOC17459XHH,V01
+gib-mpl-ds03,O2 Non L3 Daughter Card,Module 3,N55-DL2,FOC17513NXT,V02
+gib-mpl-ds03,N2K-C2248TP-E-1GE  CHASSIS,FEX 101 CHASSIS,N2K-C2248TP-E-1GE,FOX1741GZPA,V02
+gib-mpl-ds03,N2K-C2248TP-E-1GE  CHASSIS,FEX 103 CHASSIS,N2K-C2248TP-E-1GE,FOX1744G5TA,V02
+gib-mpl-ds03,N2K-C2248TP-E-1GE  CHASSIS,FEX 105 CHASSIS,N2K-C2248TP-E-1GE,FOX1744G5TS,V02
+gib-mpl-ds03,N2K-C2248TP-E-1GE  CHASSIS,FEX 107 CHASSIS,N2K-C2248TP-E-1GE,FOX1744G5W8,V02
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 101 Power Supply 1,N2200-PAC-400W-B,LIT17191NRD,V02
+gib-mpl-ds03,Fabric Extender AC power supply,FEX 101 Power Supply 2,N2200-PAC-400W-B,LIT17191NRE,V02
+gib-mpl-ds03,Fabric Extender Fan module,FEX 101 Fan 1,N2K-C2248-FAN-B,N/A,N/A
+gib-mpl-ds03,Fabric Extender Fan module,FEX 103 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds03,Fabric Extender Fan module,FEX 105 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds03,Fabric Extender Fan module,FEX 107 Fan 1,N2K-C2248-FAN,N/A,N/A
+gib-mpl-ds03,Chassis fan module,Fan 1,N5548P-FAN-B,N/A,N/A
+gib-mpl-ds03,Chassis fan module,Fan 2,N5548P-FAN-B,N/A,N/A
+gib-mpl-ds03,Nexus5548 Chassis,Chassis,N5K-C5548UP,SSI17130FE7,V01

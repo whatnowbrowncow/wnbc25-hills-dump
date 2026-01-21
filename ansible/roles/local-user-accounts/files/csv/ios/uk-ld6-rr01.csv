@@ -1,0 +1,3 @@
+hostname,username,privilege,password_type,encryption,password_string
+uk-ld6-rr01,netadmin,15,secret,5,$1$xw6Z$7Mjv2E8XBrRkZ.JwdWQsR0
+uk-ld6-rr01,svcnetworkauto,15,secret,5,$1$l6wM$y/xW9rz0iFs2CZbYh2Amc1

@@ -1,0 +1,8 @@
+}
+!--- User dbu executing the Ansible role syslog ---!
+!--- BEGIN UPDATES: gib-fw-vpn-asa-pri @ 20200722T102922 ---!
+!
+logging host Internal-VRF 10.180.163.54
+!
+!--- END UPDATES: gib-fw-vpn-asa-pri @ 20200722T102922 ---!
+}

@@ -1,0 +1,4 @@
+hostname,username,privilege,password_type,encryption,password_string
+gib-mpl-ar02,netadmin,15,secret,5,$1$Cj0H$o7Pt1NJXczTSVAjlbFjP3/
+gib-mpl-ar02,netsec,15,secret,5,$1$X0r2$Mnsmo1EgE.CnoS7ab4UsI/
+gib-mpl-ar02,svcnetworkauto,15,secret,5,$1$XK/u$EH/qSUoYdovlNqRsS9CvO/

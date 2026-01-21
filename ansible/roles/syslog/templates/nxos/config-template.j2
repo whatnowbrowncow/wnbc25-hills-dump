@@ -1,0 +1,8 @@
+no logging console
+{% for syslog_svr in syslog %}
+{% if mgmt_interface.vrf != "" %}
+logging server {{ syslog_svr.ip_addr }} 6 use-vrf {{ mgmt_interface.vrf }}
+{% elif mgmt_interface.vrf == "" %}
+logging server {{ syslog_svr.ip_addr }}
+{% endif %}
+{% endfor %}

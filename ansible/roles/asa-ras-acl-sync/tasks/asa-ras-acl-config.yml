@@ -1,0 +1,51 @@
+---
+# Create Directory for Configuration files
+- name: ASA-RAS - Creating a changes directory for ACL configuration files
+  file:
+    path: "{{ config_dir }}"
+    state: directory
+  check_mode: no
+  vars:
+    ansible_command_timeout: 1000
+    ansible_conenct_timeout: 200
+
+# Apply new group policy configuration in the change acl data to the device line by line
+- name: ASA-RAS - Producing File Containing Configuration required - ACL
+  template:
+   src: "{{ role_path }}/templates/acl-config-template.j2"
+   dest: "{{ config_file_acl }}"
+  check_mode: no
+
+# Apply new group policy configuration in the change acl data to the device line by line
+- name: ASA-RAS - Producing File Containing configuration required - Group Policy
+  template:
+   src: "{{ role_path }}/templates/acl-group-policy-template.j2"
+   dest: "{{ config_file_gp }}"
+  check_mode: no
+
+# Apply new ACL config in the changed_acls to the device line by line
+- name: ASA-RAS - Applying the new RAS ACLs that have been Amended to firewall
+  asa_config:
+   src: "{{ role_path }}/templates/acl-config-template.j2"
+   match: none
+  notify:
+    - "updates_exist_acl"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+
+# Apply new group policy configuration in the changed_acls to the device line by line
+- name: ASA-RAS - Applying the new RAS Group Polices for Amended ACLs to firewall
+  asa_config:
+   src: "{{ role_path }}/templates/acl-group-policy-template.j2"
+   match: line
+  notify:
+    - "updates_exist_acl"
+  vars:
+    ansible_command_timeout: 1000
+    ansible_connect_timeout: 200
+
+# Force running of Handlers
+- name: Executing Handlers
+  meta: flush_handlers

@@ -1,0 +1,4 @@
+hostname,vty line range,access-class,access-class direction,exec_timeout,password,transport input,transport output,vrf-also defined,logging
+{% for item in ios_vty_facts %}
+{{ inventory_hostname }},{{ item.config.line_range }},{{ item.config.access_class }},{{ item.config.access_class_direction }},{{ item.config.exec_timeout }},{{ item.config.password }},{{ item.config.transport_input }},{{ item.config.transport_output }},{% if item.config.vrf_also == "vrf-also" %}yes{% else %}no{% endif %},{{ item.config.logging }}
+{% endfor %}

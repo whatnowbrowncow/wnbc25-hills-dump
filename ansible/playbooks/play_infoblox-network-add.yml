@@ -1,0 +1,32 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars_prompt:
+    - name: "username"
+      prompt: "Infoblox Username: "
+      private: no
+    - name: "password"
+      prompt: "Infoblox Password: "
+      private: yes
+    - name: "netfile"
+      prompt: "Please enter the name of the network yaml file in the roles/infoblox-network-add/vars/ directory "
+      private: no
+    - name: "reserve_ips"
+      prompt: "Create reserved network IPs at begining of range ? y/n: "
+      private: no
+      
+  vars_files:
+    - roles/infoblox-network-add/vars/{{netfile}}
+
+  vars:
+    infoblox_provider:
+      username: "{{ username }}"
+      password: "{{ password }}"
+      host: '10.120.193.240'
+      wapi_version: '2.1'
+
+  roles:
+  - name: The only role needed
+    role: infoblox-network-add
+      

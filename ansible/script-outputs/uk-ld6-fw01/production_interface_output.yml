@@ -1,0 +1,24 @@
+Port-channel1.2000: {admin-state: up, interface: Port-channel1.2000, ip-add: 10.112.215.172,
+  mac-address: 0200.0101.0101, nameif: internal-vrf, netmask: 255.255.255.248, security-level: '100'}
+Port-channel1.2200: {admin-state: up, interface: Port-channel1.2200, ip-add: 10.118.64.1,
+  mac-address: 0200.0101.0101, nameif: cde_ext-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2201: {admin-state: up, interface: Port-channel1.2201, ip-add: 10.118.72.1,
+  mac-address: 0200.0101.0101, nameif: cde_int-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2202: {admin-state: up, interface: Port-channel1.2202, ip-add: 10.118.80.1,
+  mac-address: 0200.0101.0101, nameif: cde_int-lb, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2203: {admin-state: up, interface: Port-channel1.2203, ip-add: 10.118.88.1,
+  mac-address: 0200.0101.0101, nameif: cde_app, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2204: {admin-state: up, interface: Port-channel1.2204, ip-add: 10.118.96.1,
+  mac-address: 0200.0101.0101, nameif: cde_db, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2205: {admin-state: up, interface: Port-channel1.2205, ip-add: 10.118.104.1,
+  mac-address: 0200.0101.0101, nameif: cde_rss_db, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2210: {admin-state: up, interface: Port-channel1.2210, ip-add: 10.118.128.1,
+  mac-address: 0200.0101.0101, nameif: ncde_ext-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2211: {admin-state: up, interface: Port-channel1.2211, ip-add: 10.118.136.1,
+  mac-address: 0200.0101.0101, nameif: ncde_int-web, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2212: {admin-state: up, interface: Port-channel1.2212, ip-add: 10.118.144.1,
+  mac-address: 0200.0101.0101, nameif: ncde_int-lb, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2213: {admin-state: up, interface: Port-channel1.2213, ip-add: 10.118.152.1,
+  mac-address: 0200.0101.0101, nameif: ncde_app, netmask: 255.255.248.0, security-level: '100'}
+Port-channel1.2214: {admin-state: up, interface: Port-channel1.2214, ip-add: 10.118.160.1,
+  mac-address: 0200.0101.0101, nameif: ncde_db, netmask: 255.255.248.0, security-level: '100'}

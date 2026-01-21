@@ -1,0 +1,6 @@
+---
+
+- name: Snapshot the ACI
+  import_tasks: ./aci-create-snapshot.yml
+  when: ansible_network_os == "aci"
+

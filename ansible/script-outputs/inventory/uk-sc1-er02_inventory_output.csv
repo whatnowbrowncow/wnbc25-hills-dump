@@ -1,0 +1,13 @@
+HOSTNAME,DESCR,NAME,PID,SN,VID
+uk-sc1-er02,SFP+ Transceiver 10Gbase-SR Te5/1,Transceiver Te5/1,SFP-10G-SR,AVD1932AC7E,V03
+uk-sc1-er02,SFP+ Transceiver 10Gbase-SR Te5/3,Transceiver Te5/3,SFP-10G-SR,AVD1932AC9L,V03
+uk-sc1-er02,SFP+ Transceiver 10Gbase-SR Te5/9,Transceiver Te5/9,SFP-10G-SR,AVD1932ACA2,V03
+uk-sc1-er02,SFP+ Transceiver 10Gbase-SR Te5/12,Transceiver Te5/12,SFP-10G-SR,AVD1932ACCM,V03
+uk-sc1-er02,SFP+ Transceiver 10Gbase-SR Te5/2,Transceiver Te5/2,SFP-10G-SR,AVD1932ACCP,V03
+uk-sc1-er02,AC power supply,PS 2 C6880-X-3KW-AC,C6880-X-3KW-AC,DTM193200WK,V01
+uk-sc1-er02,AC power supply,PS 1 C6880-X-3KW-AC,C6880-X-3KW-AC,DTM193201KP,V01
+uk-sc1-er02,SFP+ Transceiver 10Gbase-LR Te5/5,Transceiver Te5/5,SFP-10G-LR,FNS193710BW,V02
+uk-sc1-er02,C6880-X Fan Tray 1,C6880-X-FAN 1,C6880-X-FAN,FOX1929XFZN,V01
+uk-sc1-er02,C6880-X-PFC Policy Feature Card 4 Rev. 1.2,C6880-X-PFC Policy Feature Card 4 EARL 1 sub-module of 5,C6880-X-PFC,SAL1932LVAW,none
+uk-sc1-er02,C6880-X-SUP 20 ports 6880-X 16P SFP+ Multi-Rate Rev. 1.2,5,C6880-X-SUP,SAL1932LYTZ,none
+uk-sc1-er02,Cisco Systems,C6880-X,C6880-X,SAL1935N6ZG,V01

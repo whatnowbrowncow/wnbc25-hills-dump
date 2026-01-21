@@ -1,0 +1,225 @@
+
+  - app_prof: 'pr-c-mgt'
+    tenant: 'production'
+    vrf: 'pr-c-mgt'
+    bds:
+      - bd: 'pr-c-mgt_management'
+        network: '10.120.128.0'
+        gateway: '10.120.128.4'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_management'
+            encap_id: '300'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_server-ilo'
+        network: '10.120.130.0'
+        gateway: '10.120.130.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_server-ilo'
+            encap_id: '302'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_web-mgt'
+        network: '10.120.131.0'
+        gateway: '10.120.131.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_web-mgt'
+            encap_id: '303'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_app-mgt'
+        network: '10.120.132.0'
+        gateway: '10.120.132.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_app-mgt'
+            encap_id: '304'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_db-mgt'
+        network: '10.120.133.0'
+        gateway: '10.120.133.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_db-mgt'
+            encap_id: '305'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_vmhost-mgt'
+        network: '10.120.134.0'
+        gateway: '10.120.134.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_vmhost-mgt'
+            encap_id: '306'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_firewall-ilo'
+        network: '10.120.135.0'
+        gateway: '10.120.135.1'
+        mask: '255.255.255.128'
+        cidr_mask: '25'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_firewall-ilo'
+            encap_id: '307'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_bladelogic-dmz'
+        network: '10.120.136.0'
+        gateway: '10.120.136.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_bladelogic-dmz'
+            encap_id: '309'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_cde-backoffice-mgt'
+        network: '10.120.137.0'
+        gateway: '10.120.137.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_cde-backoffice-mgt'
+            encap_id: '310'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_san-mgmt2'
+        network: '10.120.139.224'
+        gateway: '10.120.139.225'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_san-mgmt2'
+            encap_id: '319'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_Stingray-Mgt'
+        network: '10.120.140.0'
+        gateway: '10.120.140.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_Stingray-Mgt'
+            encap_id: '320'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_sc1-cde-jumphost-lan'
+        network: '10.120.141.0'
+        gateway: '10.120.141.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_sc1-cde-jumphost-lan'
+            encap_id: '321'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_server-ilo2'
+        network: '10.120.80.0'
+        gateway: '10.120.80.1'
+        mask: '255.255.255.0'
+        cidr_mask: '24'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_server-ilo2'
+            encap_id: '323'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_emc-monitoring-dmz'
+        network: '10.120.142.160'
+        gateway: '10.120.142.161'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_emc-monitoring-dmz'
+            encap_id: '329'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_sftp-mgt'
+        network: '10.120.143.32'
+        gateway: '10.120.143.33'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_sftp-mgt'
+            encap_id: '333'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_scanning-dmz'
+        network: '10.120.143.64'
+        gateway: '10.120.143.65'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_scanning-dmz'
+            encap_id: '334'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_hdr-db-mgt'
+        network: '10.120.143.96'
+        gateway: '10.120.143.97'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_hdr-db-mgt'
+            encap_id: '335'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_Universe_Database_Server'
+        network: '10.120.143.128'
+        gateway: '10.120.143.129'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_Universe_Database_Server'
+            encap_id: '336'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_san-mgt'
+        network: '10.120.143.160'
+        gateway: '10.120.143.161'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_san-mgt'
+            encap_id: '337'
+            vcenter_dynamic_vlan: true
+      - bd: 'pr-c-mgt_internal-vrf'
+        network: '10.120.160.160'
+        gateway: '10.120.160.164'
+        mask: '255.255.255.224'
+        cidr_mask: '27'
+        scope: 'shared'
+        l3_ownership: firewall
+        epgs:
+          - epg: 'pr-c-mgt_internal-vrf'
+            encap_id: '375'
+            vcenter_dynamic_vlan: true

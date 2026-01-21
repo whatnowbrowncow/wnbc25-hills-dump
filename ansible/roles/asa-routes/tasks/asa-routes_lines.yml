@@ -1,0 +1,11 @@
+---
+
+- name: "Add routes to context {{ context_item.context }}"
+  asa_config:
+    lines:
+      -  "route {{ item.next_hop_int }} {{ item.addr }} {{ item.netmask }} {{ item.next_hop_addr }} 1" 
+    context: "{{ context_item.context }}"
+  with_items:
+    - "{{ context_item.routes }}"
+  when: context_item.routes is defined
+
