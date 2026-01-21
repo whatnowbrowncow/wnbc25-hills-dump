@@ -1,0 +1,41 @@
+curl --location 'https://gitlab.com/api/v4/projects/67954360/pipeline?private_token=' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: _cfuvid=RNZFPTTM64VPFyNsa3pfW6qnDvAGPb31GBcysWFZFzo-1741879888048-0.0.1.1-604800000' \
+--data '{
+    "ref": "feature/inital_build_test",
+    "variables":
+        [
+            {
+                "key": "cde",
+                "value": "true"
+            },
+            {
+                "key": "site",
+                "value": "mnl"
+            },
+            {
+                "key": "summary",
+                "value": "Test for Networks - 13-02-2025"
+            },
+            {
+                "key": "ticket_ref",
+                "value": "CHANGE_12345"
+            },
+            {
+                "key": "security_group",
+                "value": "TAG_67891"
+            },
+            {
+                "key": "network_name",
+                "value": "NETWORKS-13-02-2025"
+            },
+            {
+                "key": "environment",
+                "value": "staging"
+            },
+            {
+                "key": "hosts",
+                "value": "58 - 121"
+            }
+        ]
+}'

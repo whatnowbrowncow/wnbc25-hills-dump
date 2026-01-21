@@ -1,0 +1,15 @@
+ansible_connection: ansible.netcommon.httpapi
+ansible_python_interpreter: python
+ansible_user: "{{ nd_ansible_user }}"
+ansible_password: "{{ nd_ansible_password }}"
+ansible_httpapi_validate_certs: False
+ansible_httpapi_use_ssl: True
+ansible_httpapi_login_domain: local
+ansible_command_timeout: 1000
+ansible_connect_timeout: 1000
+ansible_network_os: cisco.dcnm.dcnm
+
+
+
+
+

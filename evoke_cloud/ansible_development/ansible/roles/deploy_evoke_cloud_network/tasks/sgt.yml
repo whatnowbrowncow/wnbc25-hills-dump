@@ -1,0 +1,29 @@
+
+- name: Create service policy including all optional objects
+  cisco.dcnm.dcnm_service_policy:
+    fabric: "{{ fabric_name }}"
+    service_fabric: external
+    attach: true
+    deploy: true
+    state: merged
+    config:
+      - name: service_policy_1
+        node_name: it-sn-1
+        rp_name: it-fw-rp1
+        src_vrf: vrf_11
+        dest_vrf: vrf_11
+        src_network: net_11
+        dest_network: net_12
+        next_hop: 192.161.1.100
+        reverse_next_hop: 192.161.2.100
+        reverse: true
+        policy:
+          proto: tcp
+          src_port: any
+          dest_port: 22
+          action: permit
+          next_hop_option:  none
+          acl_name: fwd_acl_10
+          rev_acl_name: rev_acl_10
+          route_map_num: 101
+          rev_route_map_num: 102

@@ -1,0 +1,69 @@
+---
+username: "{{ infoblox_api_user }}"
+password: "{{ infoblox_api_password }}"
+
+infoblox_api_url: https://sc1nsm01.williamhill.plc/wapi/v2.13.1
+#infoblox_test_api: https://192.168.204.2/wapi/v2.13.1
+
+ib_retrieve_next_network:
+    url: "request"
+    request_type: "POST"
+    object": "networkcontainer"
+    data: [
+              {
+                  "assign_state": {
+                      "container_ref": "network"
+                  },
+                  "data": {
+                      "network": "{{ container_network }}"
+                  },
+                  "discard": true,
+                  "method": "GET",
+                  "object": "networkcontainer"
+              },
+              {
+                  "assign_state": {
+                      "network_ref": "_ref",
+                      "networksubnet": "network"
+                  },
+                  "data": {
+                      "comment": "New network",
+                      "extattrs": {
+                          "Change_Reference": {
+                              "value": "{{ change_reference }}"
+                          },
+                          "Environment": {
+                              "value": "{{ environment_name }}"
+                          },
+                          "Owner": {
+                              "value": "{{ owner }}"
+                          },
+                          "Site": {
+                              "value": "{{ site }}"
+                          },
+                          "Summary": {
+                              "value": "{{ tag_data.summary }}"
+                          },
+                          "CardData": {
+                              "value": "{{ cde | string }}"
+                            },
+                          "VRF": {
+                              "value": "{{ enviroment_data[environment_name]['vrf'] | string }}"
+                            },
+                          "Region": {
+                              "value": "{{ enviroment_data['region'] | join(', ') }}"
+                              },
+                          "VLAN": {
+                              "value": "{{ vlan_id }}"
+                            },
+                      },
+                      "network": "func:nextavailablenetwork:##STATE:container_ref:##,{{ cidr }}"
+                  },
+                  "enable_substitution": true,
+                  "method": "POST",
+                  "object": "network"
+              }
+          ]
+
+tag_data:
+    summary: "{{ lookup('env', 'summary' | string ) }}"

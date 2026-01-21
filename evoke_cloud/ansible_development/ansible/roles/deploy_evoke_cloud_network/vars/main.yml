@@ -1,0 +1,9 @@
+---
+# vars file for infoblox
+# This file defines variables used by the deploy_evoke_cloud_network role.
+
+script_log_path: "{{ playbook_dir }}/log"  # Directory where logs will be stored
+log_file_prefix: "{{ '%Y-%m-%d-%HH-%MM-%SS' | ansible.builtin.strftime}}"  # Date prefix for log files
+ansible_log: "evoke_cloud_ansible.log" # Name of Ansible Log
+slack_log: "evoke_cloud_slack.log"  # Name of Slack log
+slack_log_location: "{{ script_log_path }}/{{ slack_log }}" # Slack Log Location

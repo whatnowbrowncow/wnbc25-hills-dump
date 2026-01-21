@@ -1,0 +1,12 @@
+# Playbook to deploy a network using the deploy_evoke_cloud_network role.
+# This playbook runs on localhost and does not gather facts.
+
+- name: PLAY - ND NETWORK DEPLOY
+  hosts: localhost
+  gather_facts: false
+  collections:
+    - cisco.dcnm
+
+  roles:
+    - deploy_evoke_cloud_network
+

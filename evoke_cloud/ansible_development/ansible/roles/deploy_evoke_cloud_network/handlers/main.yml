@@ -1,0 +1,11 @@
+---
+# Handlers for deploy_evoke_cloud_network role.
+# These handlers manage log file renaming, cleanup, and failure notification.
+
+# If the deployment fails, the ansible script is marked as failed
+- name: EVOKE CLOUD - Mark Ansible a failed
+  # Marks the deployment as failed and outputs a message with the log file location.
+  fail:
+    msg: "Deployement of New Network has failed - Check {{ ansible_log }} for details"
+  listen:
+    - evoke_cloud:network_depoly_failed

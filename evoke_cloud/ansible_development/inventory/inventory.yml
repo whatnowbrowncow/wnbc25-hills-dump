@@ -1,0 +1,28 @@
+---
+all:
+  children:
+      enc_dat:
+      ndfc:
+
+infoblox:
+  hosts:
+    localhost:
+      ansible_connection: local
+      ansible_python_interpreter: python
+
+enc_dat:
+  hosts:
+    localhost:
+
+ndfc:
+  hosts:
+    nexusdashboard_dub
+
+
+IE-DB2 - Ireland Dublin DB2 (Equinix):
+  hosts:
+    nexusdashboard_dub:
+      ansible_host: nexusdashboard.williamhill.plc
+
+
+

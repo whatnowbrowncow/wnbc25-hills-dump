@@ -1,0 +1,4 @@
+---
+# defaults file for infoblox
+# This file contains default variables for the deploy_evoke_cloud_network role.
+# Add variable definitions below as needed.

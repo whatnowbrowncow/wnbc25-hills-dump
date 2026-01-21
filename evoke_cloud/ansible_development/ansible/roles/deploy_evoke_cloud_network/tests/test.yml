@@ -1,0 +1,8 @@
+---
+# Test playbook for the deploy_evoke_cloud_network role.
+# This playbook runs the role on localhost for validation.
+
+- hosts: localhost
+  remote_user: root
+  roles:
+    - infoblox

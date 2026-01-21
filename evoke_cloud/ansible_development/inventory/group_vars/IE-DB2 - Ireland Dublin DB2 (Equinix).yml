@@ -1,0 +1,20 @@
+ndfc_host: "{{ ansible_host }}"
+
+enviroment_data:
+  Production:
+    vrf: prod-internal-vrf
+    network: "10.220.128.0/17"
+    vrf_prefix: prod
+  Corporate:
+    vrf: group-vrf
+    network: "10.220.96.0/19"
+    vrf_prefix: corp
+  Development:
+    vrf: dev-internal-vrf
+    network: "10.221.0.0/16"
+    vrf_prefix: dev
+  region:
+      - "DB2"
+      - "DB3"
+fabric_name: "Dublin"
+dashboard: nexusdashboard_dub

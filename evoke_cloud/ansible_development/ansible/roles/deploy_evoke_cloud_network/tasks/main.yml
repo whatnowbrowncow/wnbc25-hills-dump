@@ -1,0 +1,183 @@
+---
+# Main task file for deploying a network to Evoke Cloud Infrastructure.
+# This playbook sets variables, interacts with Infoblox and DCNM, and handles notifications.
+# Create the log directory
+- name: Create Log Directory
+  ansible.builtin.file:
+    path: "{{ script_log_path }}"
+    state: directory
+
+- name: Add network to Evoke Cloud Infrastructure
+  block:
+    # Set all required variables from local environment and static values
+    - name: Set Variables
+      ansible.builtin.set_fact:
+        address_range: "{{ lookup('env', 'hosts') }}"
+        site: "IE-DB2 - Ireland Dublin DB2 (Equinix)"
+        environment_name: "{{ lookup('env', 'environment') }}"
+        security_group: "{{ lookup('env', 'security_group') }}"
+        owner: "{{ lookup('env', 'Owner') }}"
+        change_reference: "{{ lookup('env', 'ticket_ref') }}"
+        cde: "{{ 'cde' if lookup('env', 'cde') == 'True' else 'ncde'  | string }}"
+      check_mode: no
+
+    # Import Site Varibles for localhost
+    - name: Add Site Group to Playbook
+      ansible.builtin.add_host:
+        name: localhost
+        groups:
+          - "{{ site }}"
+          - infoblox
+
+    # Convert the provided hosts/range to a CIDR using a lookup table
+    - name: Convert Hosts to CIDR
+      ansible.builtin.set_fact:
+        cidr: "{{ subnet_cidr.cidr }}"
+      loop: "{{ subnet_converstion }}"
+      loop_control:
+        loop_var: subnet_cidr
+      when: subnet_cidr.range == address_range
+      check_mode: no
+
+    # Retrieve the releivent subnet  for the given site and VRF
+    - name: EVOKE CLOUD - Retrieve Container Network
+      set_fact:
+        container_network: "{{ enviroment_data[environment_name]['network'] }}"
+      check_mode: no
+
+    # Query all ND to find the next free VLAN ID for the new network
+    - name: Find Next Available VLAN ID
+      cisco.dcnm.dcnm_rest:
+        method: GET
+        path: "/appcenter/cisco/ndfc/api/v1/lan-fabric/rest/resource-manager/vlan/{{ fabric_name }}?vlanUsageType=TOP_DOWN_NETWORK_VLAN"
+      register: vlan_info
+      delegate_to: "{{ dashboard }}"
+
+    # Convert VLAN ID to Integer
+    - name: Convert VLAN ID to Integer
+      set_fact:
+        vlan_id: "{{ vlan_info.response.DATA | int }}"
+
+
+    # Implement a new network in Infoblox via API call
+    - name: EVOKE CLOUD - Implement New Network in Infoblox
+      ansible.builtin.uri:
+        url: "{{ infoblox_api_url }}/{{ib_retrieve_next_network['url']}}"
+        user: "{{ username }}"
+        password: "{{ password }}"
+        method: "{{ ib_retrieve_next_network['request_type'] }}"
+        body_format: json
+        body:  "{{ ib_retrieve_next_network['data'] }}"
+        return_content: true
+        force_basic_auth: true
+        validate_certs: false
+        status_code: 201
+      register: network_details
+      check_mode: no
+
+    # Extracts and Stores the relivent details of the new network in a fact for later use
+    - name: EVOKE CLOUD - Retrieve New Network Subnet and Owner
+      set_fact:
+        network_data: {
+          network_subnet: "{{ network_details.json[0].result.network | ansible.utils.ipaddr('net') }}",
+          owner: "{{ owner }}",
+          vrf: "{{ enviroment_data[environment_name]['vrf'] }}",
+          cidr: "{{ cidr }}",
+        }
+      check_mode: no
+
+    # Query all switches in the fabric to determine deployment targets
+    - name: Find Switches to Deploy to
+      cisco.dcnm.dcnm_rest:
+        method: GET
+        path: "/appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/{{ fabric_name }}/inventory/switchesByFabric"
+      register: allSwitches
+      delegate_to: "{{ dashboard }}"
+
+    # Initialise an empty list for switches
+    - name: Initialise Switch List
+      ansible.builtin.set_fact:
+        switches: []
+
+    # Build a list of leaf switches and their ports for network attachment
+    - name: Find Logical Names for Leafs
+      set_fact:
+        switches: "{{ switches + [{'ip_address': switch ,'ports': ['Ethernet1/10']}] }}"
+      loop: "{{ allSwitches.response.DATA | selectattr('switchRole', 'equalto', 'leaf') | map(attribute='ipAddress') | list }}"
+      loop_control:
+        loop_var: switch
+
+    # Convert subnet and VRF names to an accepted format for Cisco Nexus Dashboard
+    - name: Convert Subnet Name
+      set_fact:
+        subnet_name: "{{ network_data.network_subnet  | replace('.', '_') | replace('/', 's') }}"
+        display_vrf_name: "{{ network_data.vrf  | replace('.', '_') | replace('/', 's') }}"
+
+    # Deploy the network to the fabric using Cisco DCNM module
+    - name: Deploy Network
+      cisco.dcnm.dcnm_network:
+        state: merged
+        fabric: "{{ fabric_name }}"
+        config:
+          - net_name: "{{ enviroment_data[environment_name]['vrf_prefix']  }}-{{ subnet_name }}"
+            vlan_name: "{{ enviroment_data[environment_name]['vrf_prefix'] }}:{{ subnet_name }}"
+            # vrf_vlan_name: "{{ network_data.vrf }}:{{ subnet_name }}"
+            vrf_name: "{{ network_data.vrf }}"
+            gw_ip_subnet: '{{ network_data.network_subnet |  ansible.utils.ipaddr("net") | ansible.utils.ipaddr("1") }}'
+            attach: "{{ switches }}"
+            vlan_id: "{{ vlan_id }}"
+            deploy: true
+      register: deployed_network
+      delegate_to: "{{ dashboard }}"
+
+    # Compliles the Sucess Message to be posted back to JSM and Slack
+    - name: Set Success Message Varible
+      ansible.builtin.set_fact:
+        success_message: "New Network {{ deployed_network.diff.0.net_name }}
+            has been deployed with subnet {{ deployed_network.diff.0.gw_ip_subnet | ansible.utils.ipaddr('subnet') }}
+            incorporating gateway {{ deployed_network.diff.0.gw_ip_subnet | ansible.utils.ipaddr('address')}}
+            under vlan {{ deployed_network.diff.0.vlan_id}}
+            for Team {{ network_data.owner }}
+            under {{ change_reference }}"
+
+    # Post the network details JSM (Jira Service Management) as a comment
+    - name: EVOKE CLOUD - Apply Comment Back to JSM
+      ansible.builtin.uri:
+        url: "{{ jira_api_url }}"
+        user: "{{ jsm_username }}"
+        password: "{{ jsm_token }}"
+        method: "POST"
+        body_format: json
+        body:  '{"body": "{{ success_message }}"}'
+        return_content: true
+        force_basic_auth: true
+        validate_certs: false
+        status_code: 201
+      register: network_details
+      check_mode: no
+
+    # If the deployment is a success, a message is sent to the relevent slack channel
+    - name: Send Slack Message on Success
+      shell: python {{ role_path }}/scripts/slack-message.py
+        -l {{ python_log_level }}
+        -lp {{ slack_log_location }}
+        --forcefail
+        --message_detail '{{ success_message }}'
+      check_mode: no
+      delegate_to: localhost
+
+  rescue:
+      # If the deployment fails, a slack message is sent to the network team
+      - name: EVOKE CLOUD - Send Slack Message to Network Team on Failure
+        shell: python {{ role_path }}/scripts/slack-message.py
+          -l {{ python_log_level }}
+          -lp {{ slack_log_location }}
+          --forcefail
+          --message
+            "Deployment of Evoke Cloud Network has failed
+            on task {{ ansible_failed_task.name }}
+            while deploying request for {{ change_reference }}"
+        register: pythonoutput
+        check_mode: no
+        changed_when: true
+        notify: "evoke_cloud:network_depoly_failed"
