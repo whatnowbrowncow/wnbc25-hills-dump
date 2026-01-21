@@ -1,0 +1,12 @@
+---
+exclusions:
+  - type: platform
+    name: fxos
+  - type: platform
+    name: cisco_asa
+  - type: platform
+    name: dell
+  - type: platform
+    name: hp
+  - type: platform
+    name: asa

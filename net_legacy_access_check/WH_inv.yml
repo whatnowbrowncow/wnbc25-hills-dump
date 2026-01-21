@@ -1,0 +1,10 @@
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/gitnet/network_inventory/nornir_inventory/hosts.yaml"
+        group_file: "/gitnet/network_inventory/nornir_inventory/groups.yaml"
+        defaults_file: "/gitnet/network_inventory/nornir_inventory/default.yaml"
+runner:
+    plugin: threaded
+    options:
+        num_workers: 10
