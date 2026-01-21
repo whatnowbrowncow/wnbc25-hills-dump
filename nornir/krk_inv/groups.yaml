@@ -1,0 +1,9 @@
+---
+core:
+  platform: ios
+  data:
+    role: core
+ios:
+  platform: ios
+  data:
+    role: ios

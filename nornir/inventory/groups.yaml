@@ -1,0 +1,38 @@
+---
+core:
+  platform: ios
+  data:
+    role: core
+ios:
+  platform: ios
+  data:
+    role: ios
+iosxr:
+  platform: iosxr
+  data:
+    role: iosxr
+nxos:
+  platform: nxos
+  data:
+    role: nxos
+access:
+  platform: ios
+  data:
+    role: access
+oob:
+  platform: ios
+  data:
+    role: oob
+lab:
+  platform: ios
+  data:
+    role: lab
+
+ras:
+  platform: cisco_asa_ssh
+  data:
+    role: ras
+asa:
+  platform: cisco_asa_ssh
+  data:
+    role: asa

@@ -1,0 +1,1449 @@
+
+ukfw04/pri/act# show run access-list
+access-list split-tunnel-acl standard permit 185.64.0.0 255.255.0.0
+access-list split-tunnel-acl standard permit 54.164.223.0 255.255.255.0
+access-list split-tunnel-acl standard permit 52.5.242.0 255.255.255.0
+access-list split-tunnel-acl standard permit 54.91.220.0 255.255.255.0
+access-list ras-datamgmt-filter_v6 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-datamgmt-filter_v6 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-datamgmt-filter_v6 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-datamgmt-filter_v6 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-datamgmt-filter_v6 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-datamgmt-filter_v6 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-datamgmt-filter_v6 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool object-group aws log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool object-group whus log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool object-group file-shares log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool object-group non-prod log
+access-list ras-datamgmt-filter_v6 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-datamgmt-filter_v6 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-datamgmt-filter_v6 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-datamgmt-filter_v6 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-datamgmt-filter_v6 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-datamgmt-filter_v6 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-datamgmt-filter_v6 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-datamgmt-filter_v6 remark INC1089004
+access-list ras-datamgmt-filter_v6 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-datamgmt-filter_v6 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-datamgmt-filter_v6 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-datamgmt-filter_v6 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-datamgmt-filter_v6 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-datamgmt-filter_v6 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-datamgmt-filter_v6 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-datamgmt-filter_v6 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-datamgmt-filter_v6 remark TASK0279241
+access-list ras-datamgmt-filter_v6 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-datamgmt-filter_v6 remark TASK0279241
+access-list ras-datamgmt-filter_v6 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-datamgmt-filter_v6 remark TASK0286876
+access-list ras-datamgmt-filter_v6 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-datamgmt-filter_v6 extended permit object-group datamgmt-dev-services object-group raspool object-group datamgmt-dev log
+access-list ras-datamgmt-filter_v6 extended permit object-group datamgmt-uno-services object-group raspool object-group datamgmt-uno log
+access-list ras-datamgmt-filter_v6 extended permit object-group datamgmt-dba-services object-group raspool object-group datamgmt-dba log
+access-list ras-datamgmt-filter_v6 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-datamgmt-filter_v6 extended permit object-group us-bet-services object-group raspool object-group us-bet-server log
+access-list ras-datamgmt-filter_v6 extended permit object-group ncde-app-new-services object-group raspool object-group ncde-app-new log
+access-list ras-datamgmt-filter_v6 extended permit object-group datamgmt-fileshares-services object-group raspool object-group datamgmt-fileshares log
+access-list ras-datamgmt-filter_v6 extended permit object-group trading-dmz-services object-group raspool object-group trading-dmz log
+access-list ras-datamgmt-filter_v6 extended permit object-group openbet-rss-services object-group raspool object-group openbet-rss log
+access-list ras-datamgmt-filter_v6 extended permit object-group corpservicessql-services object-group raspool object-group corpservicessql.prod.williamhill.plc log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-ces-albos-services object-group raspool object-group traders-ces-albos log
+access-list ras-datamgmt-filter_v6 extended permit object-group remoteaccess-outbound-services object-group raspool object-group trading-ia-pc log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-nets-02-services object-group raspool object-group traders-nets-02 log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-trs-services object-group raspool object-group traders-trs log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-betmonitor-services object-group raspool object-group traders-betmonitor log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-servers-services object-group raspool object-group traders-servers log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-sc1uxprnap71-services object-group raspool object-group traders-sc1uxprnap71 log
+access-list ras-datamgmt-filter_v6 extended permit object-group traders-api-services object-group raspool object-group traders-api log
+access-list ras-datamgmt-filter_v6 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access
+access-list ras-datamgmt-filter_v6 extended permit object-group spotlight-mssql-services object-group raspool object-group spotlight-mssql log
+access-list ras-datamgmt-filter_v6 extended permit object-group stjux049-mgmt-services object-group raspool object-group stjux049-mgmt log
+access-list ras-datamgmt-filter_v6 extended permit object-group sc1uxprnwb040-services object-group raspool object sc1uxprnwb040 log
+access-list ras-datamgmt-filter_v6 extended permit object-group ld6-uno-services object-group raspool object-group ld6-uno-servers log
+access-list ras-datamgmt-filter_v6 extended permit object-group mds-web-application-services object-group raspool object-group mds-web-application log
+access-list ras-datamgmt-filter_v6 extended permit object-group datamgmt-uno-services object-group raspool object-group ld6-whdp02-servers log
+access-list ras-datamgmt-filter_v6 extended permit object-group ld6wnprnap007-services object-group raspool object-group ld6wnprnap007 log
+access-list ras-datamgmt-filter_v6 extended permit object-group ssrs-services object-group raspool object-group ssrs log
+access-list ras-datamgmt-filter_v6 extended permit object-group ld6prdadcnlb-nets-services object-group raspool object-group ld6prdadcnlb-nets log
+access-list ras-datamgmt-filter_v6 remark TASK0278661
+access-list ras-datamgmt-filter_v6 extended permit object-group mtq-bi-02.mrgreen.local-services-3389 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-datamgmt-filter_v6 extended permit object-group mds-load-balancer-services object-group raspool object-group uno-tabular
+access-list ras-datamgmt-filter_v6 remark RITM0148732
+access-list ras-datamgmt-filter_v6 extended permit object-group uno-present-readonly-services object-group raspool object-group uno-present-readonly log
+access-list ras-datamgmt-filter_v6 remark INC1153660
+access-list ras-datamgmt-filter_v6 extended permit object-group mtq-db-mrg-datamgt-services object-group raspool object-group mtq-db-mrgreen-prod log
+access-list ras-datamgmt-filter_v6 extended permit icmp object-group raspool any
+access-list ras-datamgmt-filter_v6 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-datamgmt-filter_v6 extended permit ip object-group raspool any log
+access-list ras-general-user-filter_v4 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-general-user-filter_v4 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-general-user-filter_v4 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-general-user-filter_v4 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-general-user-filter_v4 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-general-user-filter_v4 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-general-user-filter_v4 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-general-user-filter_v4 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool object-group aws log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool object-group whus log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool object-group file-shares log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool object-group non-prod log
+access-list ras-general-user-filter_v4 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-general-user-filter_v4 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-general-user-filter_v4 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-general-user-filter_v4 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-general-user-filter_v4 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-general-user-filter_v4 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-general-user-filter_v4 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-general-user-filter_v4 remark INC1089004
+access-list ras-general-user-filter_v4 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-general-user-filter_v4 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-general-user-filter_v4 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-general-user-filter_v4 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-general-user-filter_v4 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-general-user-filter_v4 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-general-user-filter_v4 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-general-user-filter_v4 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-general-user-filter_v4 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-general-user-filter_v4 remark TASK0279241
+access-list ras-general-user-filter_v4 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-general-user-filter_v4 remark TASK0279241
+access-list ras-general-user-filter_v4 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-general-user-filter_v4 remark TASK0286876
+access-list ras-general-user-filter_v4 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-general-user-filter_v4 remark INC1154128
+access-list ras-general-user-filter_v4 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-general-user-filter_v4 extended permit icmp object-group raspool any
+access-list ras-general-user-filter_v4 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-general-user-filter_v4 extended permit ip object-group raspool any log
+access-list ras-datamgmt-filter_v7 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-datamgmt-filter_v7 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-datamgmt-filter_v7 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-datamgmt-filter_v7 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-datamgmt-filter_v7 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-datamgmt-filter_v7 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-datamgmt-filter_v7 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool object-group aws log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool object-group whus log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool object-group file-shares log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool object-group non-prod log
+access-list ras-datamgmt-filter_v7 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-datamgmt-filter_v7 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-datamgmt-filter_v7 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-datamgmt-filter_v7 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-datamgmt-filter_v7 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-datamgmt-filter_v7 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-datamgmt-filter_v7 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-datamgmt-filter_v7 remark INC1089004
+access-list ras-datamgmt-filter_v7 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-datamgmt-filter_v7 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-datamgmt-filter_v7 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-datamgmt-filter_v7 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-datamgmt-filter_v7 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-datamgmt-filter_v7 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-datamgmt-filter_v7 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-datamgmt-filter_v7 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-datamgmt-filter_v7 remark TASK0279241
+access-list ras-datamgmt-filter_v7 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-datamgmt-filter_v7 remark TASK0279241
+access-list ras-datamgmt-filter_v7 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-datamgmt-filter_v7 remark TASK0286876
+access-list ras-datamgmt-filter_v7 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-datamgmt-filter_v7 remark INC1154128
+access-list ras-datamgmt-filter_v7 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-datamgmt-filter_v7 extended permit object-group datamgmt-dev-services object-group raspool object-group datamgmt-dev log
+access-list ras-datamgmt-filter_v7 extended permit object-group datamgmt-uno-services object-group raspool object-group datamgmt-uno log
+access-list ras-datamgmt-filter_v7 extended permit object-group datamgmt-dba-services object-group raspool object-group datamgmt-dba log
+access-list ras-datamgmt-filter_v7 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-datamgmt-filter_v7 extended permit object-group us-bet-services object-group raspool object-group us-bet-server log
+access-list ras-datamgmt-filter_v7 extended permit object-group ncde-app-new-services object-group raspool object-group ncde-app-new log
+access-list ras-datamgmt-filter_v7 extended permit object-group datamgmt-fileshares-services object-group raspool object-group datamgmt-fileshares log
+access-list ras-datamgmt-filter_v7 extended permit object-group trading-dmz-services object-group raspool object-group trading-dmz log
+access-list ras-datamgmt-filter_v7 extended permit object-group openbet-rss-services object-group raspool object-group openbet-rss log
+access-list ras-datamgmt-filter_v7 extended permit object-group corpservicessql-services object-group raspool object-group corpservicessql.prod.williamhill.plc log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-ces-albos-services object-group raspool object-group traders-ces-albos log
+access-list ras-datamgmt-filter_v7 extended permit object-group remoteaccess-outbound-services object-group raspool object-group trading-ia-pc log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-nets-02-services object-group raspool object-group traders-nets-02 log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-trs-services object-group raspool object-group traders-trs log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-betmonitor-services object-group raspool object-group traders-betmonitor log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-servers-services object-group raspool object-group traders-servers log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-sc1uxprnap71-services object-group raspool object-group traders-sc1uxprnap71 log
+access-list ras-datamgmt-filter_v7 extended permit object-group traders-api-services object-group raspool object-group traders-api log
+access-list ras-datamgmt-filter_v7 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access
+access-list ras-datamgmt-filter_v7 extended permit object-group spotlight-mssql-services object-group raspool object-group spotlight-mssql log
+access-list ras-datamgmt-filter_v7 extended permit object-group stjux049-mgmt-services object-group raspool object-group stjux049-mgmt log
+access-list ras-datamgmt-filter_v7 extended permit object-group sc1uxprnwb040-services object-group raspool object sc1uxprnwb040 log
+access-list ras-datamgmt-filter_v7 extended permit object-group ld6-uno-services object-group raspool object-group ld6-uno-servers log
+access-list ras-datamgmt-filter_v7 extended permit object-group mds-web-application-services object-group raspool object-group mds-web-application log
+access-list ras-datamgmt-filter_v7 extended permit object-group datamgmt-uno-services object-group raspool object-group ld6-whdp02-servers log
+access-list ras-datamgmt-filter_v7 extended permit object-group ld6wnprnap007-services object-group raspool object-group ld6wnprnap007 log
+access-list ras-datamgmt-filter_v7 extended permit object-group ssrs-services object-group raspool object-group ssrs log
+access-list ras-datamgmt-filter_v7 extended permit object-group ld6prdadcnlb-nets-services object-group raspool object-group ld6prdadcnlb-nets log
+access-list ras-datamgmt-filter_v7 remark TASK0278661
+access-list ras-datamgmt-filter_v7 extended permit object-group mtq-bi-02.mrgreen.local-services-3389 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-datamgmt-filter_v7 extended permit object-group mds-load-balancer-services object-group raspool object-group uno-tabular
+access-list ras-datamgmt-filter_v7 remark RITM0148732
+access-list ras-datamgmt-filter_v7 extended permit object-group uno-present-readonly-services object-group raspool object-group uno-present-readonly log
+access-list ras-datamgmt-filter_v7 remark INC1153660
+access-list ras-datamgmt-filter_v7 extended permit object-group mtq-db-mrg-datamgt-services object-group raspool object-group mtq-db-mrgreen-prod log
+access-list ras-datamgmt-filter_v7 extended permit icmp object-group raspool any
+access-list ras-datamgmt-filter_v7 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-datamgmt-filter_v7 extended permit ip object-group raspool any log
+access-list ras-traders-user-filter_v4 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-traders-user-filter_v4 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-traders-user-filter_v4 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-traders-user-filter_v4 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-traders-user-filter_v4 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-traders-user-filter_v4 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-traders-user-filter_v4 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-traders-user-filter_v4 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool object-group aws log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool object-group whus log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool object-group file-shares log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool object-group non-prod log
+access-list ras-traders-user-filter_v4 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-traders-user-filter_v4 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-traders-user-filter_v4 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-traders-user-filter_v4 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-traders-user-filter_v4 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-traders-user-filter_v4 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-traders-user-filter_v4 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-traders-user-filter_v4 remark INC1089004
+access-list ras-traders-user-filter_v4 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-traders-user-filter_v4 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-traders-user-filter_v4 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-traders-user-filter_v4 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-traders-user-filter_v4 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-traders-user-filter_v4 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-traders-user-filter_v4 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-traders-user-filter_v4 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-traders-user-filter_v4 remark TASK0279241
+access-list ras-traders-user-filter_v4 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-traders-user-filter_v4 remark TASK0279241
+access-list ras-traders-user-filter_v4 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-traders-user-filter_v4 remark TASK0286876
+access-list ras-traders-user-filter_v4 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-traders-user-filter_v4 remark INC1154128
+access-list ras-traders-user-filter_v4 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-nets-02-services object-group raspool object-group traders-nets-02 log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-trs-services object-group raspool object-group traders-trs log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-ces-albos-services object-group raspool object-group traders-ces-albos log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-betmonitor-services object-group raspool object-group traders-betmonitor log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-servers-services object-group raspool object-group traders-servers log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-sc1uxprnap71-services object-group raspool object-group traders-sc1uxprnap71 log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-api-services object-group raspool object-group traders-api log
+access-list ras-traders-user-filter_v4 extended permit object-group remoteaccess-outbound-services object-group raspool object-group trading-ia-pc log
+access-list ras-traders-user-filter_v4 extended permit object-group traders-archive-server-services object-group raspool object-group traders-archive-server-mgmt log
+access-list ras-traders-user-filter_v4 extended permit object-group int-pres-trd-tred.sc1.prod.williamhill.plc-services object-group raspool object-group int-pres-trd-tred.sc1.prod.williamhill.plc log
+access-list ras-traders-user-filter_v4 extended permit object-group cobain.sc1-gib.prod.williamhill.plc-services object-group raspool object-group cobain.sc1-gib.prod.williamhill.plc log
+access-list ras-traders-user-filter_v4 extended permit icmp object-group raspool any
+access-list ras-traders-user-filter_v4 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-traders-user-filter_v4 extended permit ip object-group raspool any log
+access-list group-vrf_access_in extended permit tcp object as400dev-client object sftpdev.oraclecloud.caesars.com eq ssh log time-range ultimo
+access-list group-vrf_access_in extended permit object-group opendns-ports object-group opendns-va-grp object-group opendns_dns_service log
+access-list group-vrf_access_in extended permit object-group opendns-ports object-group opendns-va-grp object-group opendns_ntp log
+access-list group-vrf_access_in extended permit object-group tcpudp object-group opendns-va-grp object-group gopendns_dns_servers eq domain log
+access-list group-vrf_access_in extended permit ip host 10.99.239.227 object-group DM_INLINE_NETWORK_4 log
+access-list group-vrf_access_in extended deny ip any object-group outbound_blacklist-grp log
+access-list group-vrf_access_in remark WH-TESTING SSID to APPLE subnet.
+access-list group-vrf_access_in extended permit ip object 10.55.228.0slash24 17.0.0.0 255.0.0.0 log
+access-list group-vrf_access_in extended permit tcp object-group marketing-pcs object ext-wag-io object-group dm_inline_tcp_1 log
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_2 object mr_green_gitlab eq 222 log
+access-list group-vrf_access_in extended permit tcp object-group bfa-external-users object williamhill.data.netrefer.com object-group dm_inline_tcp_4 log
+access-list group-vrf_access_in remark WIFI Rule - CHG0114873
+access-list group-vrf_access_in extended permit tcp object-group cw-vpn-ranges object ukwc03 object-group dm_inline_tcp_5 log
+access-list group-vrf_access_in extended permit tcp object-group gib-domain_controllers object disthost.umbrella.com eq https log
+access-list group-vrf_access_in extended permit tcp object-group gib-scc-domain_controllers object opendns_cloud eq https log
+access-list group-vrf_access_in extended permit tcp object-group gib-domain_controllers object opendns_178.255.83.1 eq www log
+access-list group-vrf_access_in extended deny ip 10.180.26.0 255.255.255.0 any4 log notifications
+access-list group-vrf_access_in extended permit ip object-group who-office-data object betfair-net log
+access-list group-vrf_access_in extended permit tcp object-group grp-gib-traders object download.rball.com eq www log notifications
+access-list group-vrf_access_in extended permit ip object-group gib-users object-group gib-internet-destinations log notifications
+access-list group-vrf_access_in extended permit tcp object-group adgency-domain-dc object-group opendns object-group webports
+access-list group-vrf_access_in extended permit tcp object-group adgency-domain-dc object-group certificateauthorities object-group webports log notifications
+access-list group-vrf_access_in extended permit object-group bluejeans-service object-group who-office-data object-group bluejeans-external log notifications
+access-list group-vrf_access_in extended permit tcp 10.0.0.0 255.0.0.0 object-group wh_interactive_game_servers object-group tcp_wh_interactive_ports log notifications
+access-list group-vrf_access_in extended permit tcp object-group who-office-data object il-eset1 object-group il-eset1tcp log notifications
+access-list group-vrf_access_in extended permit tcp object-group gib-hosts object-group external-hosts eq 8443 log
+access-list group-vrf_access_in extended permit tcp object-group who-office-data object evolutiongaming object-group evolutiongaming_tcp log notifications
+access-list group-vrf_access_in extended permit tcp object-group who-user-vpn-gib any object-group web-ports-tcp log notifications
+access-list group-vrf_access_in extended permit object-group msn_group object-group gib-internal-ranges any4 log notifications
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_3 object pushtechnology.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group gib-traders-group object don_best_net eq 1111 log notifications
+access-list group-vrf_access_in extended permit udp object-group gib-asterisk-servers any4 object-group iax2 log notifications
+access-list group-vrf_access_in extended permit tcp object-group gib-asterisk-servers any4 object-group webports log notifications
+access-list group-vrf_access_in extended deny ip object-group gib-asterisk-servers any4 log notifications
+access-list group-vrf_access_in extended permit ip host 10.180.24.160 any4 log notifications
+access-list group-vrf_access_in extended permit object-group running-ball-ports object-group grp-gib-traders object-group running-ball log notifications
+access-list group-vrf_access_in extended permit tcp object-group gib-office-sys host 91.213.212.146 object-group gib-office-sys-ports log notifications
+access-list group-vrf_access_in extended permit tcp object-group who-office-data object-group external-hosts-group object-group port-5119-tcp log notifications
+access-list group-vrf_access_in extended permit tcp object-group gib-wifi-ranges any4 object-group webports log notifications
+access-list group-vrf_access_in extended permit object-group opendns-tcp-udp-group object-group who-office-data object-group opendns_dns log
+access-list group-vrf_access_in extended deny object-group tcpudp object-group who-office-data object-group internet-all-subnets eq domain log notifications
+access-list group-vrf_access_in extended permit object-group tcpudp object-group gib_infoblox object-group opendns eq domain log
+access-list group-vrf_access_in extended permit tcp object-group gib_infoblox object-group opendns_https eq https log
+access-list group-vrf_access_in extended permit object-group dns-udp-tcp 10.0.0.0 255.0.0.0 object-group opendns_dns_service log
+access-list group-vrf_access_in extended permit udp object-group unrestricted_users-grp object-group internet-minus-rfc1918 eq domain log
+access-list group-vrf_access_in extended deny object-group dns-udp-tcp 10.0.0.0 255.0.0.0 object-group internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit ip host 10.120.164.194 any
+access-list group-vrf_access_in extended deny object-group block-ports object-group unrestricted_users-grp object-group internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit ip object-group unrestricted_users-grp object-group internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit object-group user_services-grp object-group rfc1918-grp object-group internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit tcp object-group rfc1918-grp object-group gitlab.com eq ssh log
+access-list group-vrf_access_in extended permit object-group playtech-frontend-services object-group rfc1918-grp object-group playtech-frontend-aws log
+access-list group-vrf_access_in extended permit ip object ukwc03 object-group uk-wc-servers log
+access-list group-vrf_access_in extended permit ip object-group testwireless-grp object-group internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit ip object-group rfc1918-grp object-group wh-external-networks-grp log
+access-list group-vrf_access_in extended permit ip object-group rfc1918-grp object-group 3rdparties-grp log
+access-list group-vrf_access_in extended permit tcp object intergration-svr object ob-dev-test object-group tcp_10289_22
+access-list group-vrf_access_in extended permit tcp object stjux049 object-group stjux049-outbound-access eq ssh log
+access-list group-vrf_access_in extended permit ip host 10.120.164.194 object-group uk-wc-servers log
+access-list group-vrf_access_in extended permit object ipnetinfo object krakow_eoc_subnet_wired any
+access-list group-vrf_access_in extended permit tcp object-group krakow-ssh-users object-group krakow_ssh_hosts_internet eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group krakow_ssh_subnets object-group krakow_bitbucket eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group krakow_ssh_subnets object-group aws-subnets eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group private-cloud-users object securetransfer.kpmgprivatecloud.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object lcw-smijaalex object-group aws-hosts object-group aws-host-ports log
+access-list group-vrf_access_in extended permit tcp object-group karolina_krakow host 192.162.147.206 eq 3389 log
+access-list group-vrf_access_in extended permit object-group grp-svc-playtech-mobile-live-dealer object-group playtech-mobile-live object-group grp-ext-playtech-mobile-live-dealer log
+access-list group-vrf_access_in extended permit tcp object-group grp-krk-gaming-team object ec2-13-59-136-158.us-east-2.compute.amazonaws.com object-group http-ssh log
+access-list group-vrf_access_in extended permit tcp object-group onshore-openbet-rss host 10.196.201.171 eq 10051 log
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_6 object transfer.learningpool.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_7 object tkhvsnxbam.database.windows.net eq 1433 log
+access-list group-vrf_access_in extended permit tcp object stj-richardnilan object-group txodds-servers eq 61613 log
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_8 object-group ftp3.omniture.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group servicesupportusers object-group high5games eq 8449 log
+access-list group-vrf_access_in extended permit tcp object-group aws-propman-rdp-users object gsl-ifrs16-propman eq 3389 log
+access-list group-vrf_access_in extended permit tcp object-group bdf-bonuswalletteam object igtadd-in eq https log
+access-list group-vrf_access_in extended permit tcp object gib-danielanthony object aws-promotions eq https log
+access-list group-vrf_access_in extended permit tcp object bfa-hannahandrew object psftp.mrgreen.com-node eq 22022 log
+access-list group-vrf_access_in extended permit tcp object-group lan-krakow-inc-prb-rls object-group dm_inline_network_9 eq https log
+access-list group-vrf_access_in extended permit tcp object-group grp-krk-users object extdev1-fe1.extdev.eu object-group dm_inline_tcp_6 log
+access-list group-vrf_access_in extended permit tcp object lcw-edwinmitchell object-group infosecopsgroup eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_10 object-group DM_INLINE_NETWORK_6 object-group dm_inline_tcp_7 log
+access-list group-vrf_access_in extended permit ip object sc1wnpreap003.group.williamhill.plc object cit-sccm-build-server log
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_11 object quantum-pfe.com eq ssh log
+access-list group-vrf_access_in extended permit object-group dm_inline_service_2 object horizon-vdi-poc object softphone-server log
+access-list group-vrf_access_in extended permit tcp object-group dm_inline_network_12 object live2dmz-frontend.live-hub.net eq 4845 log
+access-list group-vrf_access_in extended permit object-group tcpudp object-group aws-poc-users object aws-workspace eq 4172 log
+access-list group-vrf_access_in extended permit object-group dm_inline_service_3 object horizon-poc-vdi-range object softphone-server log
+access-list group-vrf_access_in extended permit udp object krakowmeetingroom-1a3 object-group webex-cloud eq 5004 log
+access-list group-vrf_access_in extended permit tcp host 10.1.82.187 host 216.172.74.85 log
+access-list group-vrf_access_in extended permit tcp object ba-jyotsnagupta object sftp2.myvisualiq.com eq 9022 log
+access-list group-vrf_access_in extended permit ip object net_10.55.60.0_28 any log
+access-list group-vrf_access_in remark CHG0140992, CHG0145698
+access-list group-vrf_access_in extended permit tcp object-group stj-rosi-vpn any eq 1194 log
+access-list group-vrf_access_in extended permit object tcp-1433 object-group stj-sql-users object tkhvsnxbam.database.windows.net log
+access-list group-vrf_access_in extended permit tcp object-group anatoli-putseyeu object-group ext-office-365 object-group office365 log
+access-list group-vrf_access_in extended permit tcp object-group sc1wnpreap003 object-group raspool object-group dm_inline_tcp_2 log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_3 object-group runningball-destinations object-group runningball-ports log
+access-list group-vrf_access_in extended permit tcp 3.8.37.0 255.255.255.240 object-group DM_INLINE_NETWORK_2 log
+access-list group-vrf_access_in remark INC1113038,CHG0151494
+access-list group-vrf_access_in extended permit object tcp-2018 object-group DM_INLINE_NETWORK_7 object-group scout.betradar.com log
+access-list group-vrf_access_in remark temp
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_10 object-group DM_INLINE_NETWORK_9 host 192.168.13.85 log
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_2 object irewnppeap01.testad.williamhill.plc object-group DM_INLINE_NETWORK_10 log
+access-list group-vrf_access_in extended permit tcp object irewnppeap01.testad.williamhill.plc object-group DM_INLINE_NETWORK_11 object-group highports log
+access-list group-vrf_access_in remark Temp rule to transfer pcap files from Handaq routers
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_1 object-group DM_INLINE_NETWORK_1 object-group DM_INLINE_NETWORK_5 log
+access-list test-split-acl standard permit 10.0.0.0 255.0.0.0
+access-list test-split-acl standard permit 172.16.0.0 255.240.0.0
+access-list test-split-acl standard permit 192.168.0.0 255.255.128.0
+access-list test-split-acl standard permit 100.64.0.0 255.192.0.0
+access-list test-split-acl standard permit 3.8.37.0 255.255.255.240
+access-list test-split-acl standard permit 141.138.128.0 255.255.248.0
+access-list test-split-acl standard permit 95.131.184.0 255.255.248.0
+access-list test-split-acl standard permit 185.119.153.0 255.255.255.0
+access-list test-split-acl standard permit 185.119.155.2 255.255.255.254
+access-list test-split-acl standard permit 80.85.99.64 255.255.255.248
+access-list test-split-acl standard permit 217.168.170.96 255.255.255.224
+access-list test-split-acl standard permit 217.168.162.72 255.255.255.248
+access-list test-split-acl standard permit 80.86.0.0 255.255.0.0
+access-list test-split-acl standard permit 52.94.0.0 255.255.0.0
+access-list test-split-acl standard permit 3.123.0.0 255.255.0.0
+access-list test-split-acl standard permit 18.132.0.0 255.252.0.0
+access-list ras-traders-user-filter_v5 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-traders-user-filter_v5 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-traders-user-filter_v5 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-traders-user-filter_v5 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-traders-user-filter_v5 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-traders-user-filter_v5 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-traders-user-filter_v5 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-traders-user-filter_v5 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool object-group aws log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool object-group whus log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool object-group file-shares log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool object-group non-prod log
+access-list ras-traders-user-filter_v5 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-traders-user-filter_v5 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-traders-user-filter_v5 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-traders-user-filter_v5 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-traders-user-filter_v5 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-traders-user-filter_v5 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-traders-user-filter_v5 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-traders-user-filter_v5 remark INC1089004
+access-list ras-traders-user-filter_v5 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-traders-user-filter_v5 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-traders-user-filter_v5 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-traders-user-filter_v5 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-traders-user-filter_v5 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-traders-user-filter_v5 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-traders-user-filter_v5 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-traders-user-filter_v5 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-traders-user-filter_v5 remark TASK0279241
+access-list ras-traders-user-filter_v5 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-traders-user-filter_v5 remark TASK0279241
+access-list ras-traders-user-filter_v5 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-traders-user-filter_v5 remark TASK0286876
+access-list ras-traders-user-filter_v5 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-traders-user-filter_v5 remark INC1154128
+access-list ras-traders-user-filter_v5 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-traders-user-filter_v5 remark TASK0302521
+access-list ras-traders-user-filter_v5 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-nets-02-services object-group raspool object-group traders-nets-02 log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-trs-services object-group raspool object-group traders-trs log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-ces-albos-services object-group raspool object-group traders-ces-albos log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-betmonitor-services object-group raspool object-group traders-betmonitor log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-servers-services object-group raspool object-group traders-servers log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-sc1uxprnap71-services object-group raspool object-group traders-sc1uxprnap71 log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-api-services object-group raspool object-group traders-api log
+access-list ras-traders-user-filter_v5 extended permit object-group remoteaccess-outbound-services object-group raspool object-group trading-ia-pc log
+access-list ras-traders-user-filter_v5 extended permit object-group traders-archive-server-services object-group raspool object-group traders-archive-server-mgmt log
+access-list ras-traders-user-filter_v5 extended permit object-group int-pres-trd-tred.sc1.prod.williamhill.plc-services object-group raspool object-group int-pres-trd-tred.sc1.prod.williamhill.plc log
+access-list ras-traders-user-filter_v5 extended permit object-group cobain.sc1-gib.prod.williamhill.plc-services object-group raspool object-group cobain.sc1-gib.prod.williamhill.plc log
+access-list ras-traders-user-filter_v5 extended permit icmp object-group raspool any
+access-list ras-traders-user-filter_v5 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-traders-user-filter_v5 extended permit ip object-group raspool any log
+access-list ras-dba-filter_v18 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-dba-filter_v18 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-dba-filter_v18 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-dba-filter_v18 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-dba-filter_v18 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-dba-filter_v18 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-dba-filter_v18 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-dba-filter_v18 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool object-group aws log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool object-group whus log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool object-group file-shares log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool object-group non-prod log
+access-list ras-dba-filter_v18 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-dba-filter_v18 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-dba-filter_v18 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-dba-filter_v18 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-dba-filter_v18 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-dba-filter_v18 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-dba-filter_v18 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-dba-filter_v18 remark INC1089004
+access-list ras-dba-filter_v18 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-dba-filter_v18 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-dba-filter_v18 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-dba-filter_v18 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-dba-filter_v18 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-dba-filter_v18 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-dba-filter_v18 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-dba-filter_v18 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-dba-filter_v18 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-dba-filter_v18 remark TASK0279241
+access-list ras-dba-filter_v18 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-dba-filter_v18 remark TASK0279241
+access-list ras-dba-filter_v18 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-dba-filter_v18 remark TASK0286876
+access-list ras-dba-filter_v18 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-dba-filter_v18 remark INC1154128
+access-list ras-dba-filter_v18 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-dba-filter_v18 remark TASK0302521
+access-list ras-dba-filter_v18 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-dba-filter_v18 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-dba-filter_v18 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-dba-filter_v18 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-dba-filter_v18 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-dba-filter_v18 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-dba-filter_v18 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-dba-filter_v18 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-dba-filter_v18 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-dba-filter_v18 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-dba-filter_v18 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-dba-filter_v18 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log
+access-list ras-dba-filter_v18 extended permit object-group whctraining.cxp.williamhill.plc-services object-group raspool object-group whctraining.cxp.williamhill.plc log
+access-list ras-dba-filter_v18 extended permit object-group apache-switching-proxies-services object-group raspool object-group apache-switching-proxies log
+access-list ras-dba-filter_v18 remark INC1076426
+access-list ras-dba-filter_v18 extended permit object-group cxt-dev-services object-group raspool object-group whc-cas-apache-servers log
+access-list ras-dba-filter_v18 extended permit object-group whdpops01.group.williamhill.plc-services object-group raspool object-group whdpops01.group.williamhill.plc log
+access-list ras-dba-filter_v18 extended permit object-group non-cde-openbet-mgmt-services object-group raspool object-group non-cde-openbet-mgmt log
+access-list ras-dba-filter_v18 extended permit object-group virtual-sports-rng-services object-group raspool object-group virtual-sports-rng log
+access-list ras-dba-filter_v18 remark INC1086569
+access-list ras-dba-filter_v18 extended permit object-group vmc-dev-services object-group raspool object-group vmc-dev log
+access-list ras-dba-filter_v18 extended permit object-group sandbox-portal-services object-group raspool object-group sandbox-portal log
+access-list ras-dba-filter_v18 extended permit object-group rss-services object-group raspool object-group rss log
+access-list ras-dba-filter_v18 remark RITM0147522
+access-list ras-dba-filter_v18 extended permit object-group informix-sqli-ports object-group raspool object-group informix-sqli log
+access-list ras-dba-filter_v18 remark CHG0151289
+access-list ras-dba-filter_v18 extended permit object-group aws-f5-services object-group raspool object-group aws-f5-net log
+access-list ras-dba-filter_v18 remark RITM0155972
+access-list ras-dba-filter_v18 extended permit object-group ssh-only-service object-group raspool object-group gibux409-410 log
+access-list ras-dba-filter_v18 remark RITM0158879
+access-list ras-dba-filter_v18 extended permit object-group vip.prod.williamhill.plc-services object-group raspool object-group spbkdb.prod.williamhill.plc log
+access-list ras-dba-filter_v18 extended permit object-group dba-datamgmt-net-services object-group raspool object-group dba-datamgmt-net log
+access-list ras-dba-filter_v18 extended permit object-group dba-shop-net-services object-group raspool object-group retail-shop-nets log
+access-list ras-dba-filter_v18 extended permit object-group dba-supported-svr-nets-services object-group raspool object-group dba-supported-svr-nets log
+access-list ras-dba-filter_v18 extended permit object-group spotlight-mssql-services object-group raspool object-group spotlight-mssql log
+access-list ras-dba-filter_v18 extended permit object-group openbet-rss-services object-group raspool object-group openbet-rss log
+access-list ras-dba-filter_v18 remark INC1076426
+access-list ras-dba-filter_v18 extended permit object-group commvault-services object-group raspool object-group commvault log
+access-list ras-dba-filter_v18 extended permit object-group sc1wnprnap013-mgmt-services object-group raspool object-group sc1wnprnap013-mgmt log
+access-list ras-dba-filter_v18 extended permit object-group sql_and_rdp object-group raspool object-group retail-sddc-vmc log
+access-list ras-dba-filter_v18 extended permit object-group cv-01.prod.williamhill.plc-services object-group raspool object-group cv-01.prod.williamhill.plc log
+access-list ras-dba-filter_v18 extended permit object-group malta-rss-services object-group raspool object-group malta-rss log
+access-list ras-dba-filter_v18 remark TASK0278662
+access-list ras-dba-filter_v18 extended permit object-group uno-tabular-services object-group raspool object-group uno-tabular log
+access-list ras-dba-filter_v18 extended permit object-group uno-present-readonly-services object-group raspool object-group uno-present-readonly log
+access-list ras-dba-filter_v18 remark INC1153660
+access-list ras-dba-filter_v18 extended permit object-group mtq-db-mrg-dba-services object-group raspool object-group mtq-db-mrgreen-prod log
+access-list ras-dba-filter_v18 remark CHG0152200
+access-list ras-dba-filter_v18 extended permit object-group rdp-only-service object-group raspool object-group rm-finance-servers log
+access-list ras-dba-filter_v18 extended permit icmp object-group raspool any
+access-list ras-dba-filter_v18 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-dba-filter_v18 extended permit ip object-group raspool any log
+access-list ras-autopilot-filter extended permit ip object-group raspool object-group DM_INLINE_NETWORK_8 log
+access-list ras-serviceops-filter_v30 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-serviceops-filter_v30 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-serviceops-filter_v30 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-serviceops-filter_v30 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-serviceops-filter_v30 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-serviceops-filter_v30 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-serviceops-filter_v30 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group aws log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group whus log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group file-shares log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group non-prod log
+access-list ras-serviceops-filter_v30 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-serviceops-filter_v30 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-serviceops-filter_v30 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-serviceops-filter_v30 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-serviceops-filter_v30 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-serviceops-filter_v30 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-serviceops-filter_v30 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-serviceops-filter_v30 remark INC1089004
+access-list ras-serviceops-filter_v30 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-serviceops-filter_v30 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-serviceops-filter_v30 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-serviceops-filter_v30 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-serviceops-filter_v30 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-serviceops-filter_v30 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-serviceops-filter_v30 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-serviceops-filter_v30 remark TASK0279241
+access-list ras-serviceops-filter_v30 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-serviceops-filter_v30 remark TASK0279241
+access-list ras-serviceops-filter_v30 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-serviceops-filter_v30 remark TASK0286876
+access-list ras-serviceops-filter_v30 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-serviceops-filter_v30 remark INC1154128
+access-list ras-serviceops-filter_v30 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-serviceops-filter_v30 remark TASK0302521
+access-list ras-serviceops-filter_v30 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-serviceops-filter_v30 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-serviceops-filter_v30 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-serviceops-filter_v30 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-serviceops-filter_v30 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-serviceops-filter_v30 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-serviceops-filter_v30 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-serviceops-filter_v30 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-serviceops-filter_v30 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-serviceops-filter_v30 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-serviceops-filter_v30 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log
+access-list ras-serviceops-filter_v30 extended permit object-group whctraining.cxp.williamhill.plc-services object-group raspool object-group whctraining.cxp.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group apache-switching-proxies-services object-group raspool object-group apache-switching-proxies log
+access-list ras-serviceops-filter_v30 remark INC1076426
+access-list ras-serviceops-filter_v30 extended permit object-group cxt-dev-services object-group raspool object-group whc-cas-apache-servers log
+access-list ras-serviceops-filter_v30 extended permit object-group whdpops01.group.williamhill.plc-services object-group raspool object-group whdpops01.group.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group non-cde-openbet-mgmt-services object-group raspool object-group non-cde-openbet-mgmt log
+access-list ras-serviceops-filter_v30 extended permit object-group virtual-sports-rng-services object-group raspool object-group virtual-sports-rng log
+access-list ras-serviceops-filter_v30 remark INC1086569
+access-list ras-serviceops-filter_v30 extended permit object-group vmc-dev-services object-group raspool object-group vmc-dev log
+access-list ras-serviceops-filter_v30 extended permit object-group sandbox-portal-services object-group raspool object-group sandbox-portal log
+access-list ras-serviceops-filter_v30 extended permit object-group rss-services object-group raspool object-group rss log
+access-list ras-serviceops-filter_v30 remark RITM0147522
+access-list ras-serviceops-filter_v30 extended permit object-group informix-sqli-ports object-group raspool object-group informix-sqli log
+access-list ras-serviceops-filter_v30 remark CHG0151289
+access-list ras-serviceops-filter_v30 extended permit object-group aws-f5-services object-group raspool object-group aws-f5-net log
+access-list ras-serviceops-filter_v30 remark RITM0155972
+access-list ras-serviceops-filter_v30 extended permit object-group ssh-only-service object-group raspool object-group gibux409-410 log
+access-list ras-serviceops-filter_v30 remark RITM0158879
+access-list ras-serviceops-filter_v30 extended permit object-group vip.prod.williamhill.plc-services object-group raspool object-group spbkdb.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group caerus-activemq-servers-services object-group raspool object-group caerus-activemq-servers log
+access-list ras-serviceops-filter_v30 extended permit object-group retail-sddc-vmc-services object-group raspool object-group retail-sddc-vmc log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group gns3-2-1-21.network.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group vmc-nets-services object-group raspool object-group vmc-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group cde-mgmt-nets-services object-group raspool object-group cde-mgmt-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group ncde-mgmt-nets-services object-group raspool object-group ncde-mgmt-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group retail-mgmt-nets-services object-group raspool object-group retail-mgmt-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group cde-frontend-nets-services object-group raspool object-group cde-frontend-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group ncde-frontend-nets-services object-group raspool object-group ncde-frontend-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group hr-sftp-services object-group raspool object-group hr-sftp-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group jde-net-services object-group raspool object-group jde-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group rsa-services object-group raspool object-group rsa log
+access-list ras-serviceops-filter_v30 extended permit object-group darktrace-services object-group raspool object-group darktrace log
+access-list ras-serviceops-filter_v30 extended permit object-group pure-array-mgmt-services object-group raspool object-group pure-array-mgmt log
+access-list ras-serviceops-filter_v30 extended permit object-group isilon-mgmt-services object-group raspool object-group isilon-mgmt log
+access-list ras-serviceops-filter_v30 extended permit object-group shop-nets-services object-group raspool object-group retail-shop-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group itops-nets-services object-group raspool object-group itops-nets log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group unified_communications log
+access-list ras-serviceops-filter_v30 extended permit object-group brsuxprnft001-services object-group raspool object-group brsuxprnft001 log
+access-list ras-serviceops-filter_v30 extended permit object-group sap-services object-group raspool object-group sap-routers log
+access-list ras-serviceops-filter_v30 extended permit object-group stjux049-mgmt-services object-group raspool object-group stjux049-mgmt log
+access-list ras-serviceops-filter_v30 extended permit object-group sc1uxpremg30-services object-group raspool object-group sc1uxpremg30 log
+access-list ras-serviceops-filter_v30 extended permit object-group iseries-mgmt-console-services object-group raspool object-group iseries-mgmt-console log
+access-list ras-serviceops-filter_v30 extended permit object-group qlikview-data-tier-services object-group raspool object noncde-ods log
+access-list ras-serviceops-filter_v30 extended permit object-group t-and-a-dba-services object-group raspool object-group t-and-a-dba-net log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool object-group network_mgmt-nets log
+access-list ras-serviceops-filter_v30 extended permit object-group tcp-2701 object-group raspool object-group raspool log
+access-list ras-serviceops-filter_v30 extended permit object-group sc1-noncde-cf-web-service object-group raspool object-group sc1-noncde-cf-web log
+access-list ras-serviceops-filter_v30 extended permit object-group softcat-snow-services object-group raspool object-group softcat-snow log
+access-list ras-serviceops-filter_v30 extended permit object-group gibwnprcmg003.prod.williamhill.plc-services object-group raspool object-group gibwnprcmg003.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group gibuxprcmg001.prod.williamhill.plc-services object-group raspool object-group gibuxprcmg001.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group email_management-services object-group raspool object-group email_management log
+access-list ras-serviceops-filter_v30 extended permit object-group fieldservices-mgmt-access object-group raspool object-group fs-depots log
+access-list ras-serviceops-filter_v30 extended permit object-group vmc-dev-services object-group raspool object-group mrg-sddc-vmc-vsphere log
+access-list ras-serviceops-filter_v30 extended permit object-group network-terminal-servers-services object-group raspool object-group network-terminal-servers log
+access-list ras-serviceops-filter_v30 remark CHG0144595
+access-list ras-serviceops-filter_v30 extended permit object-group scc-whc-prod-service-network-services object-group raspool object-group scc-whc-prod-service-network log
+access-list ras-serviceops-filter_v30 remark CHG0144851
+access-list ras-serviceops-filter_v30 extended permit object-group rundeck-db-cluster-services object-group raspool object-group rundeck-db-cluster log
+access-list ras-serviceops-filter_v30 remark CHG0144865
+access-list ras-serviceops-filter_v30 extended permit object-group scc-isilon-ncde-interfaces-services object-group raspool object-group scc-isilon-ncde-interfaces log
+access-list ras-serviceops-filter_v30 extended permit object-group rpa_robots-services object-group raspool object-group rpa_robots log
+access-list ras-serviceops-filter_v30 extended permit object-group wireless-guest-anchors-services object-group raspool object-group wireless-guest-anchors log
+access-list ras-serviceops-filter_v30 extended permit object-group openbet-rss-services object-group raspool object-group openbet-rss log
+access-list ras-serviceops-filter_v30 extended permit object-group vmc-storage-gateways-services object-group raspool object-group vmc-storage-gateways log
+access-list ras-serviceops-filter_v30 extended permit object-group port-mirroring-vmc-server-services object-group raspool object-group port-mirroring-vmc-server log
+access-list ras-serviceops-filter_v30 remark CORPRAS-463
+access-list ras-serviceops-filter_v30 extended permit object-group vmware-idm-connector-services object-group raspool object-group vmware-idm-connector log
+access-list ras-serviceops-filter_v30 extended permit object-group gib-meeting-rooms-services object-group raspool object-group gib-meeting-rooms log
+access-list ras-serviceops-filter_v30 extended permit object-group vmc-scc-traffic-capture-vms-services object-group raspool object-group vmc-scc-traffic-capture-vms log
+access-list ras-serviceops-filter_v30 extended permit object-group ld6-corp-app-services object-group raspool object ld6-corp-app log
+access-list ras-serviceops-filter_v30 extended permit object-group vmc-accurate-server-services object-group raspool object vmc-accurate-servers log
+access-list ras-serviceops-filter_v30 extended permit object-group ext-pres-diagnostics-services object-group raspool object-group ext-pres-diagnostics log
+access-list ras-serviceops-filter_v30 extended permit object-group ld6-uno-services object-group raspool object-group ld6-uno log
+access-list ras-serviceops-filter_v30 remark RITM0144343
+access-list ras-serviceops-filter_v30 extended permit object-group mt-han-fw-fxos-services object-group raspool object-group mt-han-fw-fxos log
+access-list ras-serviceops-filter_v30 extended permit object-group group-finance-sftp-services object-group raspool object-group group-finance-sftp log
+access-list ras-serviceops-filter_v30 extended permit object-group corp-wifi-ap-mgmt-network-services object-group raspool object-group corp-wifi-ap-mgmt-network log
+access-list ras-serviceops-filter_v30 remark TASK0278403
+access-list ras-serviceops-filter_v30 extended permit object-group email-host-servivces object-group raspool object-group brs-email-hosts log
+access-list ras-serviceops-filter_v30 remark TASK0279647
+access-list ras-serviceops-filter_v30 extended permit object-group retail-voice-services object-group raspool object-group retail-voice log
+access-list ras-serviceops-filter_v30 remark RITM0147005
+access-list ras-serviceops-filter_v30 extended permit object-group solarwinds-api-ports object-group raspool object-group solarwinds-api log
+access-list ras-serviceops-filter_v30 remark RITM0145061
+access-list ras-serviceops-filter_v30 extended permit object-group tpam-services-8443 object-group raspool object-group scc-tpam log
+access-list ras-serviceops-filter_v30 remark RITM0147442
+access-list ras-serviceops-filter_v30 extended permit object-group ldap-ports object-group raspool object-group ldap-servers log
+access-list ras-serviceops-filter_v30 remark RITM0147442
+access-list ras-serviceops-filter_v30 extended permit object-group network-lab-services object-group raspool object brs-network-lab log
+access-list ras-serviceops-filter_v30 remark RITM0149983
+access-list ras-serviceops-filter_v30 extended permit object-group stingray-mgmt-services object-group raspool object-group whc-cxd-vtms log
+access-list ras-serviceops-filter_v30 remark RITM0151767
+access-list ras-serviceops-filter_v30 extended permit object-group https-service object-group raspool object-group nsx-manager log
+access-list ras-serviceops-filter_v30 remark RITM0153174
+access-list ras-serviceops-filter_v30 extended permit object-group vmware-db-services object-group raspool object-group vmware-dbs log
+access-list ras-serviceops-filter_v30 remark RITM0148123
+access-list ras-serviceops-filter_v30 extended permit object-group stingray-mgmt-services object-group raspool object-group dr-ext-pres-stingrays log
+access-list ras-serviceops-filter_v30 remark RITM0148123
+access-list ras-serviceops-filter_v30 extended permit object-group mt-slm-and-mrg-msc-fw-internal-mgmt-services object-group raspool object-group mt-slm-and-mrg-msc-fw-internal-mgmt log
+access-list ras-serviceops-filter_v30 remark RITM0154427
+access-list ras-serviceops-filter_v30 extended permit object-group HTTP-SSH object-group raspool object-group Infoblox-Cache-Forwarders log
+access-list ras-serviceops-filter_v30 remark RITM0154193
+access-list ras-serviceops-filter_v30 extended permit object-group scc-retail-jumpbox-services object-group raspool object-group RetailProd-Report-servers log
+access-list ras-serviceops-filter_v30 remark RITM0154302
+access-list ras-serviceops-filter_v30 extended permit object-group scc-retail-jumpbox-services object-group raspool object-group RetailBI-Qlikview-Server log
+access-list ras-serviceops-filter_v30 remark RITM0155700
+access-list ras-serviceops-filter_v30 extended permit object-group cobain.sc1-gib.prod.williamhill.plc-services object-group raspool object-group cobain.sc1-gib.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 remark CHG0152200
+access-list ras-serviceops-filter_v30 extended permit object-group rdp-only-service object-group raspool object-group rm-finance-servers log
+access-list ras-serviceops-filter_v30 remark RITM0158474
+access-list ras-serviceops-filter_v30 extended permit object tcp-3389 object-group raspool object-group brs-wndrnwb88 log
+access-list ras-serviceops-filter_v30 remark RITM0158675
+access-list ras-serviceops-filter_v30 extended permit object tcp-3389 object-group raspool object-group acc-servers log
+access-list ras-serviceops-filter_v30 remark RITM0156876
+access-list ras-serviceops-filter_v30 extended permit object-group rdp-vnc-service object-group raspool object-group broadcast-ndi log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-ces-albos-services object-group raspool object-group traders-ces-albos log
+access-list ras-serviceops-filter_v30 extended permit object-group remoteaccess-outbound-services object-group raspool object-group trading-ia-pc log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-nets-02-services object-group raspool object-group traders-nets-02 log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-trs-services object-group raspool object-group traders-trs log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-betmonitor-services object-group raspool object-group traders-betmonitor log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-servers-services object-group raspool object-group traders-servers log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-sc1uxprnap71-services object-group raspool object-group traders-sc1uxprnap71 log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-api-services object-group raspool object-group traders-api log
+access-list ras-serviceops-filter_v30 extended permit object-group traders-archive-server-services object-group raspool object-group traders-archive-server-mgmt log
+access-list ras-serviceops-filter_v30 extended permit object-group onshore-legacy-rmq-servers-services object-group raspool object-group onshore-legacy-rmq-servers log
+access-list ras-serviceops-filter_v30 extended permit object-group trading-db.prod.williamhill.plc-services object-group raspool object-group trading-db.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group spotlight-mssql-services object-group raspool object-group spotlight-mssql log
+access-list ras-serviceops-filter_v30 remark CHG0144595
+access-list ras-serviceops-filter_v30 extended permit object-group brswnprrjb01.prod.williamhill.plc-services object-group raspool object-group brswnprrjb01.prod.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit object-group retail-polling-servers-system-services object-group raspool object-group retail-polling-servers-system log
+access-list ras-serviceops-filter_v30 remark RITM0142682
+access-list ras-serviceops-filter_v30 extended permit object-group brswn561.williamhill.plc-services object-group raspool object-group brswn561.williamhill.plc log
+access-list ras-serviceops-filter_v30 extended permit icmp object-group raspool any
+access-list ras-serviceops-filter_v30 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-serviceops-filter_v30 extended permit ip object-group raspool any log
+access-list ras-traders-user-filter_v6 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-traders-user-filter_v6 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-traders-user-filter_v6 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-traders-user-filter_v6 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-traders-user-filter_v6 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-traders-user-filter_v6 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-traders-user-filter_v6 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-traders-user-filter_v6 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool object-group aws log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool object-group whus log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool object-group file-shares log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool object-group non-prod log
+access-list ras-traders-user-filter_v6 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-traders-user-filter_v6 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-traders-user-filter_v6 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-traders-user-filter_v6 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-traders-user-filter_v6 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-traders-user-filter_v6 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-traders-user-filter_v6 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-traders-user-filter_v6 remark INC1089004
+access-list ras-traders-user-filter_v6 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-traders-user-filter_v6 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-traders-user-filter_v6 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-traders-user-filter_v6 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-traders-user-filter_v6 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-traders-user-filter_v6 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-traders-user-filter_v6 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-traders-user-filter_v6 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-traders-user-filter_v6 remark TASK0279241
+access-list ras-traders-user-filter_v6 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-traders-user-filter_v6 remark TASK0279241
+access-list ras-traders-user-filter_v6 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-traders-user-filter_v6 remark TASK0286876
+access-list ras-traders-user-filter_v6 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-traders-user-filter_v6 remark INC1154128
+access-list ras-traders-user-filter_v6 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-traders-user-filter_v6 remark TASK0302521
+access-list ras-traders-user-filter_v6 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-traders-user-filter_v6 remark NETAR-350
+access-list ras-traders-user-filter_v6 extended permit object-group sap-services object-group raspool object-group sap-routers log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-nets-02-services object-group raspool object-group traders-nets-02 log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-trs-services object-group raspool object-group traders-trs log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-ces-albos-services object-group raspool object-group traders-ces-albos log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-betmonitor-services object-group raspool object-group traders-betmonitor log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-servers-services object-group raspool object-group traders-servers log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-sc1uxprnap71-services object-group raspool object-group traders-sc1uxprnap71 log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-api-services object-group raspool object-group traders-api log
+access-list ras-traders-user-filter_v6 extended permit object-group remoteaccess-outbound-services object-group raspool object-group trading-ia-pc log
+access-list ras-traders-user-filter_v6 extended permit object-group traders-archive-server-services object-group raspool object-group traders-archive-server-mgmt log
+access-list ras-traders-user-filter_v6 extended permit object-group int-pres-trd-tred.sc1.prod.williamhill.plc-services object-group raspool object-group int-pres-trd-tred.sc1.prod.williamhill.plc log
+access-list ras-traders-user-filter_v6 extended permit object-group cobain.sc1-gib.prod.williamhill.plc-services object-group raspool object-group cobain.sc1-gib.prod.williamhill.plc log
+access-list ras-traders-user-filter_v6 extended permit icmp object-group raspool any
+access-list ras-traders-user-filter_v6 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-traders-user-filter_v6 extended permit ip object-group raspool any log
+access-list ras-whc-filter_v11 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-whc-filter_v11 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-whc-filter_v11 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-whc-filter_v11 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-whc-filter_v11 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-whc-filter_v11 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-whc-filter_v11 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-whc-filter_v11 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool object-group aws log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool object-group whus log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool object-group file-shares log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool object-group non-prod log
+access-list ras-whc-filter_v11 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-whc-filter_v11 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-whc-filter_v11 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-whc-filter_v11 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-whc-filter_v11 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-whc-filter_v11 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-whc-filter_v11 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-whc-filter_v11 remark INC1089004
+access-list ras-whc-filter_v11 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-whc-filter_v11 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-whc-filter_v11 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-whc-filter_v11 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-whc-filter_v11 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-whc-filter_v11 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-whc-filter_v11 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-whc-filter_v11 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-whc-filter_v11 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-whc-filter_v11 remark TASK0279241
+access-list ras-whc-filter_v11 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-whc-filter_v11 remark TASK0279241
+access-list ras-whc-filter_v11 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-whc-filter_v11 remark TASK0286876
+access-list ras-whc-filter_v11 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-whc-filter_v11 remark INC1154128
+access-list ras-whc-filter_v11 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-whc-filter_v11 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-whc-filter_v11 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-whc-filter_v11 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-whc-filter_v11 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-whc-filter_v11 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-whc-filter_v11 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-whc-filter_v11 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-whc-filter_v11 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-whc-filter_v11 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-whc-filter_v11 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-whc-filter_v11 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log
+access-list ras-whc-filter_v11 extended permit object-group whctraining.cxp.williamhill.plc-services object-group raspool object-group whctraining.cxp.williamhill.plc log
+access-list ras-whc-filter_v11 extended permit object-group apache-switching-proxies-services object-group raspool object-group apache-switching-proxies log
+access-list ras-whc-filter_v11 remark INC1076426
+access-list ras-whc-filter_v11 extended permit object-group cxt-dev-services object-group raspool object-group whc-cas-apache-servers log
+access-list ras-whc-filter_v11 extended permit object-group whdpops01.group.williamhill.plc-services object-group raspool object-group whdpops01.group.williamhill.plc log
+access-list ras-whc-filter_v11 extended permit object-group non-cde-openbet-mgmt-services object-group raspool object-group non-cde-openbet-mgmt log
+access-list ras-whc-filter_v11 extended permit object-group virtual-sports-rng-services object-group raspool object-group virtual-sports-rng log
+access-list ras-whc-filter_v11 remark INC1086569
+access-list ras-whc-filter_v11 extended permit object-group vmc-dev-services object-group raspool object-group vmc-dev log
+access-list ras-whc-filter_v11 extended permit object-group sandbox-portal-services object-group raspool object-group sandbox-portal log
+access-list ras-whc-filter_v11 extended permit object-group rss-services object-group raspool object-group rss log
+access-list ras-whc-filter_v11 remark RITM0147522
+access-list ras-whc-filter_v11 extended permit object-group informix-sqli-ports object-group raspool object-group informix-sqli log
+access-list ras-whc-filter_v11 remark CHG0151289
+access-list ras-whc-filter_v11 extended permit object-group aws-f5-services object-group raspool object-group aws-f5-net log
+access-list ras-whc-filter_v11 remark RITM0155972
+access-list ras-whc-filter_v11 extended permit object-group ssh-only-service object-group raspool object-group gibux409-410 log
+access-list ras-whc-filter_v11 extended permit icmp object-group raspool any
+access-list ras-whc-filter_v11 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-whc-filter_v11 extended permit ip object-group raspool any log
+access-list ras-dba-filter_v22 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-dba-filter_v22 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-dba-filter_v22 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-dba-filter_v22 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-dba-filter_v22 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-dba-filter_v22 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-dba-filter_v22 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-dba-filter_v22 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool object-group aws log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool object-group whus log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool object-group file-shares log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool object-group non-prod log
+access-list ras-dba-filter_v22 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-dba-filter_v22 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-dba-filter_v22 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-dba-filter_v22 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-dba-filter_v22 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-dba-filter_v22 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-dba-filter_v22 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-dba-filter_v22 remark INC1089004
+access-list ras-dba-filter_v22 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-dba-filter_v22 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-dba-filter_v22 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-dba-filter_v22 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-dba-filter_v22 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-dba-filter_v22 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-dba-filter_v22 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-dba-filter_v22 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-dba-filter_v22 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-dba-filter_v22 remark TASK0279241
+access-list ras-dba-filter_v22 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-dba-filter_v22 remark TASK0279241
+access-list ras-dba-filter_v22 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-dba-filter_v22 remark TASK0286876
+access-list ras-dba-filter_v22 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-dba-filter_v22 remark INC1154128
+access-list ras-dba-filter_v22 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-dba-filter_v22 remark TASK0302521
+access-list ras-dba-filter_v22 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-dba-filter_v22 remark NETAR-350
+access-list ras-dba-filter_v22 extended permit object-group sap-services object-group raspool object-group sap-routers log
+access-list ras-dba-filter_v22 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-dba-filter_v22 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-dba-filter_v22 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-dba-filter_v22 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-dba-filter_v22 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-dba-filter_v22 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-dba-filter_v22 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-dba-filter_v22 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-dba-filter_v22 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-dba-filter_v22 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-dba-filter_v22 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log
+access-list ras-dba-filter_v22 extended permit object-group whctraining.cxp.williamhill.plc-services object-group raspool object-group whctraining.cxp.williamhill.plc log
+access-list ras-dba-filter_v22 extended permit object-group apache-switching-proxies-services object-group raspool object-group apache-switching-proxies log
+access-list ras-dba-filter_v22 remark INC1076426
+access-list ras-dba-filter_v22 extended permit object-group cxt-dev-services object-group raspool object-group whc-cas-apache-servers log
+access-list ras-dba-filter_v22 extended permit object-group whdpops01.group.williamhill.plc-services object-group raspool object-group whdpops01.group.williamhill.plc log
+access-list ras-dba-filter_v22 extended permit object-group non-cde-openbet-mgmt-services object-group raspool object-group non-cde-openbet-mgmt log
+access-list ras-dba-filter_v22 extended permit object-group virtual-sports-rng-services object-group raspool object-group virtual-sports-rng log
+access-list ras-dba-filter_v22 remark INC1086569
+access-list ras-dba-filter_v22 extended permit object-group vmc-dev-services object-group raspool object-group vmc-dev log
+access-list ras-dba-filter_v22 extended permit object-group sandbox-portal-services object-group raspool object-group sandbox-portal log
+access-list ras-dba-filter_v22 extended permit object-group rss-services object-group raspool object-group rss log
+access-list ras-dba-filter_v22 remark RITM0147522
+access-list ras-dba-filter_v22 extended permit object-group informix-sqli-ports object-group raspool object-group informix-sqli log
+access-list ras-dba-filter_v22 remark CHG0151289
+access-list ras-dba-filter_v22 extended permit object-group aws-f5-services object-group raspool object-group aws-f5-net log
+access-list ras-dba-filter_v22 remark RITM0155972
+access-list ras-dba-filter_v22 extended permit object-group ssh-only-service object-group raspool object-group gibux409-410 log
+access-list ras-dba-filter_v22 remark RITM0158879
+access-list ras-dba-filter_v22 extended permit object-group vip.prod.williamhill.plc-services object-group raspool object-group spbkdb log
+access-list ras-dba-filter_v22 remark RITM0158997
+access-list ras-dba-filter_v22 extended permit object-group spbkdb-services object-group raspool object-group spbkdb log
+access-list ras-dba-filter_v22 extended permit object-group dba-datamgmt-net-services object-group raspool object-group dba-datamgmt-net log
+access-list ras-dba-filter_v22 extended permit object-group dba-shop-net-services object-group raspool object-group retail-shop-nets log
+access-list ras-dba-filter_v22 extended permit object-group dba-supported-svr-nets-services object-group raspool object-group dba-supported-svr-nets log
+access-list ras-dba-filter_v22 extended permit object-group spotlight-mssql-services object-group raspool object-group spotlight-mssql log
+access-list ras-dba-filter_v22 extended permit object-group openbet-rss-services object-group raspool object-group openbet-rss log
+access-list ras-dba-filter_v22 remark INC1076426
+access-list ras-dba-filter_v22 extended permit object-group commvault-services object-group raspool object-group commvault log
+access-list ras-dba-filter_v22 extended permit object-group sc1wnprnap013-mgmt-services object-group raspool object-group sc1wnprnap013-mgmt log
+access-list ras-dba-filter_v22 extended permit object-group sql_and_rdp object-group raspool object-group retail-sddc-vmc log
+access-list ras-dba-filter_v22 extended permit object-group cv-01.prod.williamhill.plc-services object-group raspool object-group cv-01.prod.williamhill.plc log
+access-list ras-dba-filter_v22 extended permit object-group malta-rss-services object-group raspool object-group malta-rss log
+access-list ras-dba-filter_v22 remark TASK0278662
+access-list ras-dba-filter_v22 extended permit object-group uno-tabular-services object-group raspool object-group uno-tabular log
+access-list ras-dba-filter_v22 extended permit object-group uno-present-readonly-services object-group raspool object-group uno-present-readonly log
+access-list ras-dba-filter_v22 remark INC1153660
+access-list ras-dba-filter_v22 extended permit object-group mtq-db-mrg-dba-services object-group raspool object-group mtq-db-mrgreen-prod log
+access-list ras-dba-filter_v22 remark CHG0152200
+access-list ras-dba-filter_v22 extended permit object-group rdp-only-service object-group raspool object-group rm-finance-servers log
+access-list ras-dba-filter_v22 extended permit icmp object-group raspool any
+access-list ras-dba-filter_v22 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-dba-filter_v22 extended permit ip object-group raspool any log
+access-list ras-itops-filter_v34 extended permit tcp object-group raspool host 10.120.163.122 eq ssh
+access-list ras-whc-filter_v15 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-whc-filter_v15 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-whc-filter_v15 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-whc-filter_v15 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-whc-filter_v15 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-whc-filter_v15 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-whc-filter_v15 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-whc-filter_v15 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-whc-filter_v15 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-whc-filter_v15 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-whc-filter_v15 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-whc-filter_v15 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log
+access-list ras-whc-filter_v15 extended permit object-group whctraining.cxp.williamhill.plc-services object-group raspool object-group whctraining.cxp.williamhill.plc log
+access-list ras-whc-filter_v15 extended permit object-group apache-switching-proxies-services object-group raspool object-group apache-switching-proxies log
+access-list ras-whc-filter_v15 remark INC1076426
+access-list ras-whc-filter_v15 extended permit object-group cxt-dev-services object-group raspool object-group whc-cas-apache-servers log
+access-list ras-whc-filter_v15 extended permit object-group whdpops01.group.williamhill.plc-services object-group raspool object-group whdpops01.group.williamhill.plc log
+access-list ras-whc-filter_v15 extended permit object-group non-cde-openbet-mgmt-services object-group raspool object-group non-cde-openbet-mgmt log
+access-list ras-whc-filter_v15 extended permit object-group virtual-sports-rng-services object-group raspool object-group virtual-sports-rng log
+access-list ras-whc-filter_v15 remark INC1086569
+access-list ras-whc-filter_v15 extended permit object-group vmc-dev-services object-group raspool object-group vmc-dev log
+access-list ras-whc-filter_v15 extended permit object-group sandbox-portal-services object-group raspool object-group sandbox-portal log
+access-list ras-whc-filter_v15 extended permit object-group rss-services object-group raspool object-group rss log
+access-list ras-whc-filter_v15 remark RITM0147522
+access-list ras-whc-filter_v15 extended permit object-group informix-sqli-ports object-group raspool object-group informix-sqli log
+access-list ras-whc-filter_v15 remark CHG0151289
+access-list ras-whc-filter_v15 extended permit object-group aws-f5-services object-group raspool object-group aws-f5-net log
+access-list ras-whc-filter_v15 remark RITM0155972
+access-list ras-whc-filter_v15 extended permit object-group ssh-only-service object-group raspool object-group gibux409-410 log
+access-list ras-whc-filter_v15 remark RITM0158879
+access-list ras-whc-filter_v15 extended permit object-group vip.prod.williamhill.plc-services object-group raspool object-group spbkdb log
+access-list ras-whc-filter_v15 remark RITM0158997
+access-list ras-whc-filter_v15 extended permit object-group spbkdb-services object-group raspool object-group spbkdb log
+access-list ras-whc-filter_v15 extended permit icmp object-group raspool any
+access-list ras-whc-filter_v15 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-whc-filter_v15 extended permit ip object-group raspool any log
+access-list ras-retailuser-filter_v7 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-retailuser-filter_v7 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-retailuser-filter_v7 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-retailuser-filter_v7 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-retailuser-filter_v7 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-retailuser-filter_v7 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-retailuser-filter_v7 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-retailuser-filter_v7 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool object-group aws log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool object-group whus log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool object-group file-shares log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool object-group non-prod log
+access-list ras-retailuser-filter_v7 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-retailuser-filter_v7 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-retailuser-filter_v7 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-retailuser-filter_v7 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-retailuser-filter_v7 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-retailuser-filter_v7 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-retailuser-filter_v7 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-retailuser-filter_v7 remark INC1089004
+access-list ras-retailuser-filter_v7 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-retailuser-filter_v7 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-retailuser-filter_v7 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-retailuser-filter_v7 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-retailuser-filter_v7 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-retailuser-filter_v7 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-retailuser-filter_v7 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-retailuser-filter_v7 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-retailuser-filter_v7 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-retailuser-filter_v7 remark TASK0279241
+access-list ras-retailuser-filter_v7 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-retailuser-filter_v7 remark TASK0279241
+access-list ras-retailuser-filter_v7 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-retailuser-filter_v7 remark TASK0286876
+access-list ras-retailuser-filter_v7 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-retailuser-filter_v7 remark INC1154128
+access-list ras-retailuser-filter_v7 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-retailuser-filter_v7 remark TASK0302521
+access-list ras-retailuser-filter_v7 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-retailuser-filter_v7 extended permit object-group leviathan-services object-group raspool object-group leviathan log
+access-list ras-retailuser-filter_v7 extended permit object-group traders-ces-albos-services object-group raspool object-group traders-ces-albos log
+access-list ras-retailuser-filter_v7 extended permit object-group brswnprrjb01.prod.williamhill.plc-services object-group raspool object-group brswnprrjb01.prod.williamhill.plc log
+access-list ras-retailuser-filter_v7 extended permit object-group fieldservices-mgmt-access object-group raspool object-group fs-depots log
+access-list ras-retailuser-filter_v7 extended permit object-group tps-and-ces-db-services object-group raspool object-group tps-and-ces-db log
+access-list ras-retailuser-filter_v7 extended permit object-group shop-nets-services object-group raspool object-group retail-shop-nets log
+access-list ras-retailuser-filter_v7 extended permit object-group vmcwnprdtp02.group.williamhill.plc-services object-group raspool object-group vmcwnprdtp02.group.williamhill.plc log
+access-list ras-retailuser-filter_v7 extended permit object-group vmcwnprdtp01.group.williamhill.plc-services object-group raspool object-group vmcwnprdtp01.group.williamhill.plc log
+access-list ras-retailuser-filter_v7 extended permit object-group corps-as400-services object-group raspool object-group corps-as400 log
+access-list ras-retailuser-filter_v7 extended permit object-group epos-bai-services object-group raspool object-group epos-bai log
+access-list ras-retailuser-filter_v7 remark CHG0145708,CHG0143742, CHG0146984
+access-list ras-retailuser-filter_v7 extended permit object-group retail-till-mgmt object-group raspool object retail-vlan120 log
+access-list ras-retailuser-filter_v7 remark RITM0158696
+access-list ras-retailuser-filter_v7 extended permit object-group retail-sddc-vmc-services object-group raspool object-group retail-sddc-vmc log
+access-list ras-retailuser-filter_v7 extended permit icmp object-group raspool any
+access-list ras-retailuser-filter_v7 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-retailuser-filter_v7 extended permit ip object-group raspool any log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool object-group aws log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool object-group whus log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool object-group file-shares log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool object-group non-prod log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-retail-trading-tech-filter_v18 remark INC1089004
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-retail-trading-tech-filter_v18 remark TASK0279241
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-retail-trading-tech-filter_v18 remark TASK0279241
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-retail-trading-tech-filter_v18 remark TASK0286876
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-retail-trading-tech-filter_v18 remark INC1154128
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-retail-trading-tech-filter_v18 remark TASK0302521
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-retail-trading-tech-filter_v18 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whctraining.cxp.williamhill.plc-services object-group raspool object-group whctraining.cxp.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group apache-switching-proxies-services object-group raspool object-group apache-switching-proxies log
+access-list ras-retail-trading-tech-filter_v18 remark INC1076426
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group cxt-dev-services object-group raspool object-group whc-cas-apache-servers log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whdpops01.group.williamhill.plc-services object-group raspool object-group whdpops01.group.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group non-cde-openbet-mgmt-services object-group raspool object-group non-cde-openbet-mgmt log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group virtual-sports-rng-services object-group raspool object-group virtual-sports-rng log
+access-list ras-retail-trading-tech-filter_v18 remark INC1086569
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group vmc-dev-services object-group raspool object-group vmc-dev log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group sandbox-portal-services object-group raspool object-group sandbox-portal log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group rss-services object-group raspool object-group rss log
+access-list ras-retail-trading-tech-filter_v18 remark RITM0147522
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group informix-sqli-ports object-group raspool object-group informix-sqli log
+access-list ras-retail-trading-tech-filter_v18 remark CHG0151289
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group aws-f5-services object-group raspool object-group aws-f5-net log
+access-list ras-retail-trading-tech-filter_v18 remark RITM0155972
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group ssh-only-service object-group raspool object-group gibux409-410 log
+access-list ras-retail-trading-tech-filter_v18 remark RITM0158879
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group vip.prod.williamhill.plc-services object-group raspool object-group spbkdb.prod.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group scc-retail-jumpbox-services object-group raspool object-group scc-retail-jumpbox log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group vcenter-sddc-vmc-services object-group raspool object-group vcenter-sddc-vmc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group oncall-trading-tech-subnets-services object-group raspool object-group oncall-trading-tech-subnets log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group trading-oracle-db-services object-group raspool object-group trading-oracle-db log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group retail-nets-services object-group raspool object-group retail-nets log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group trading-dmz-services object-group raspool object-group trading-dmz log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group brsuxoemapp01.mgmt.prod.williamhill.plc-services object-group raspool object-group brsuxoemapp01.mgmt.prod.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group ssbt-000666-01.retail.prod.williamhill.plc-services object-group raspool object-group ssbt-000666-01.retail.prod.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 remark CHG0145450
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group vmc-rt1-services object-group raspool object-group vmc-rt1 log
+access-list ras-retail-trading-tech-filter_v18 remark CHG0145450
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group traders-api-services object-group raspool object-group traders-api log
+access-list ras-retail-trading-tech-filter_v18 remark CHG0145708,CHG0143742, CHG0146984
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group retail-till-mgmt object-group raspool object retail-vlan120 log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group backoffice.mrgreen.zone-services-1433 object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group whdppresent02-services object-group raspool object-group whdppresent02.group.williamhill.plc log
+access-list ras-retail-trading-tech-filter_v18 remark RITM0147564, RITM0147707
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group trading-oracle-db-services object-group raspool object-group traders-oracle-db-management log
+access-list ras-retail-trading-tech-filter_v18 remark RITM0156876
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group rdp-vnc-service object-group raspool object-group broadcast-ndi log
+access-list ras-retail-trading-tech-filter_v18 remark CHG0152101
+access-list ras-retail-trading-tech-filter_v18 extended permit object-group vnc-service object-group raspool object-group retail-model-shop-vlan-120 log
+access-list ras-retail-trading-tech-filter_v18 extended permit icmp object-group raspool any
+access-list ras-retail-trading-tech-filter_v18 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-retail-trading-tech-filter_v18 extended permit ip object-group raspool any log
+access-list ras-mars-filter_v14 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-mars-filter_v14 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-mars-filter_v14 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-mars-filter_v14 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-mars-filter_v14 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-mars-filter_v14 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-mars-filter_v14 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-mars-filter_v14 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool object-group aws log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool object-group whus log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool object-group file-shares log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool object-group non-prod log
+access-list ras-mars-filter_v14 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-mars-filter_v14 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-mars-filter_v14 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-mars-filter_v14 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-mars-filter_v14 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-mars-filter_v14 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-mars-filter_v14 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-mars-filter_v14 remark INC1089004
+access-list ras-mars-filter_v14 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-mars-filter_v14 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-mars-filter_v14 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-mars-filter_v14 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-mars-filter_v14 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-mars-filter_v14 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-mars-filter_v14 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-mars-filter_v14 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-mars-filter_v14 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-mars-filter_v14 remark TASK0279241
+access-list ras-mars-filter_v14 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-mars-filter_v14 remark TASK0279241
+access-list ras-mars-filter_v14 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-mars-filter_v14 remark TASK0286876
+access-list ras-mars-filter_v14 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-mars-filter_v14 remark INC1154128
+access-list ras-mars-filter_v14 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-mars-filter_v14 remark TASK0302521
+access-list ras-mars-filter_v14 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-mars-filter_v14 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-mars-filter_v14 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-mars-filter_v14 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-mars-filter_v14 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-mars-filter_v14 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-mars-filter_v14 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-mars-filter_v14 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-mars-filter_v14 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-mars-filter_v14 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-mars-filter_v14 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-mars-filter_v14 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log
+access-list ras-mars-filter_v14 extended permit object-group whctraining.cxp.williamhill.plc-services object-group raspool object-group whctraining.cxp.williamhill.plc log
+access-list ras-mars-filter_v14 extended permit object-group apache-switching-proxies-services object-group raspool object-group apache-switching-proxies log
+access-list ras-mars-filter_v14 remark INC1076426
+access-list ras-mars-filter_v14 extended permit object-group cxt-dev-services object-group raspool object-group whc-cas-apache-servers log
+access-list ras-mars-filter_v14 extended permit object-group whdpops01.group.williamhill.plc-services object-group raspool object-group whdpops01.group.williamhill.plc log
+access-list ras-mars-filter_v14 extended permit object-group non-cde-openbet-mgmt-services object-group raspool object-group non-cde-openbet-mgmt log
+access-list ras-mars-filter_v14 extended permit object-group virtual-sports-rng-services object-group raspool object-group virtual-sports-rng log
+access-list ras-mars-filter_v14 remark INC1086569
+access-list ras-mars-filter_v14 extended permit object-group vmc-dev-services object-group raspool object-group vmc-dev log
+access-list ras-mars-filter_v14 extended permit object-group sandbox-portal-services object-group raspool object-group sandbox-portal log
+access-list ras-mars-filter_v14 extended permit object-group rss-services object-group raspool object-group rss log
+access-list ras-mars-filter_v14 remark RITM0147522
+access-list ras-mars-filter_v14 extended permit object-group informix-sqli-ports object-group raspool object-group informix-sqli log
+access-list ras-mars-filter_v14 remark CHG0151289
+access-list ras-mars-filter_v14 extended permit object-group aws-f5-services object-group raspool object-group aws-f5-net log
+access-list ras-mars-filter_v14 remark RITM0155972
+access-list ras-mars-filter_v14 extended permit object-group ssh-only-service object-group raspool object-group gibux409-410 log
+access-list ras-mars-filter_v14 remark RITM0158879
+access-list ras-mars-filter_v14 extended permit object-group vip.prod.williamhill.plc-services object-group raspool object-group spbkdb.prod.williamhill.plc log
+access-list ras-mars-filter_v14 extended permit object-group mars-nets-services object-group raspool object-group mars-nets log
+access-list ras-mars-filter_v14 extended permit object-group vip.prod.williamhill.plc-services object-group raspool object-group vip.prod.williamhill.plc log
+access-list ras-mars-filter_v14 extended permit icmp object-group raspool any
+access-list ras-mars-filter_v14 extended deny ip object-group raspool object-group rfc1918 log
+access-list ras-mars-filter_v14 extended permit ip object-group raspool any log
+access-list ras-itops-filter_v30 extended permit object-group cxt-dev-services object-group raspool object-group cxt-dev log
+access-list ras-itops-filter_v30 extended permit object-group uno-presentation-services object-group raspool object-group uno-presentation.prod.williamhill.plc log
+access-list ras-itops-filter_v30 extended permit object-group cde-monitoring-services object-group raspool object-group cde-monitoring log
+access-list ras-itops-filter_v30 extended permit object-group capita-net-services object-group raspool object-group capita-network log
+access-list ras-itops-filter_v30 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group raspool log
+access-list ras-itops-filter_v30 extended permit object-group sccm-remoteaccess-outbound-services object-group raspool object-group sc1wnpreap003 log
+access-list ras-itops-filter_v30 extended permit ip object-group aspect-ext object-group raspool log
+access-list ras-itops-filter_v30 extended permit ip object-group raspool object-group aspect-ext log
+access-list ras-itops-filter_v30 extended permit object-group cctv-services object-group raspool object-group cctv log
+access-list ras-itops-filter_v30 extended permit ip object-group raspool object-group corp-shared-services log
+access-list ras-itops-filter_v30 extended permit ip object-group raspool object-group aws log
+access-list ras-itops-filter_v30 extended permit ip object-group raspool object-group whus log
+access-list ras-itops-filter_v30 extended permit ip object-group raspool object-group ncde-jumpboxes log
+access-list ras-itops-filter_v30 extended permit ip object-group raspool object-group file-shares log
+access-list ras-itops-filter_v30 extended permit ip object-group raspool object-group non-prod log
+access-list ras-itops-filter_v30 extended permit object-group cde-access-services object-group raspool object-group cde-access log
+access-list ras-itops-filter_v30 extended permit object-group ncde-backoffice-services object-group raspool object-group ncde-backoffice log
+access-list ras-itops-filter_v30 extended permit object-group stj-bf-proxy.williamhill.local-services object-group raspool object-group stj-bf-proxy.williamhill.local log
+access-list ras-itops-filter_v30 extended permit object-group tpam-services object-group raspool object-group scc-tpam log
+access-list ras-itops-filter_v30 extended permit object-group tpam-services object-group raspool object-group brs-tpam log
+access-list ras-itops-filter_v30 extended permit object-group ncde-fileshares-services object-group raspool object-group ncde-fileshares log
+access-list ras-itops-filter_v30 extended permit object-group jabber-services object-group raspool object-group jabber-uc-voip log
+access-list ras-itops-filter_v30 remark INC1089004
+access-list ras-itops-filter_v30 extended permit object-group banners-v2.sportsbook-services.prod.williamhill.plc-services object-group raspool object-group banners-v2.sportsbook-services.prod.williamhill.plc log
+access-list ras-itops-filter_v30 extended permit object-group accurate-prod-web-server-services object-group raspool object-group accurate-prod-web-server log
+access-list ras-itops-filter_v30 extended permit object-group accurate-prod-batch-server-services object-group raspool object-group accurate-prod-batch-server log
+access-list ras-itops-filter_v30 extended permit object-group jira.mrgreen.zone-services object-group raspool object-group jira.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group toolbox.mrgreen.zone-services object-group raspool object-group toolbox.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group jira-test.mrgreen.zone-services object-group raspool object-group jira-test.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group ci.mrgreen.zone-services object-group raspool object-group ci.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group chef.mrgreen.zone-services object-group raspool object-group chef.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group mrg-admin.apps.mrgreen.zone-services object-group raspool object-group mrg-admin.apps.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group mtq-bi-02.mrgreen.local-services-8000 object-group raspool object-group mtq-bi-02.mrgreen.local log
+access-list ras-itops-filter_v30 extended permit object-group nyxboes.mrgreen.services-services object-group raspool object-group nyxboes.mrgreen.services log
+access-list ras-itops-filter_v30 extended permit object-group backoffice.mrgreen.zone-services-rdp object-group raspool object-group backoffice.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group datahub.mrgreen.zone-services object-group raspool object-group datahub.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group cms.mrgreen.zone-services object-group raspool object-group cms.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group bonusadmin.mrgreen.zone-services object-group raspool object-group bonusadmin.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group bo.customer.kambi.com-services object-group raspool object-group bo.customer.kambi.com log
+access-list ras-itops-filter_v30 extended permit object-group splunk.mrgreen.zone-services object-group raspool object-group splunk.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group featurespace.mrgreen.zone-services object-group raspool object-group featurespace.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group geoblockingadmin.mrgreen.zone-services object-group raspool object-group geoblockingadmin.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group tableau.mrgreen.zone-services object-group raspool object-group tableau.mrgreen.zone log
+access-list ras-itops-filter_v30 extended permit object-group sap-gui-services object-group raspool object-group sap-gui log
+access-list ras-itops-filter_v30 extended permit object-group traders-betticker-services object-group raspool object-group traders-betticker log
+access-list ras-itops-filter_v30 remark TASK0279241
+access-list ras-itops-filter_v30 extended permit object-group as400-ports object-group raspool object-group corps-as400 log
+access-list ras-itops-filter_v30 remark TASK0279241
+access-list ras-itops-filter_v30 extended permit object-group uno-db-readonly-service object-group raspool object-group ld6-uno-servers log
+access-list ras-itops-filter_v30 remark TASK0286876
+access-list ras-itops-filter_v30 extended permit object-group https-service object-group raspool object-group whc-contentstack log
+access-list ras-itops-filter_v30 remark INC1154128
+access-list ras-itops-filter_v30 extended permit object-group whras-services object-group raspool object-group whras log
+access-list ras-itops-filter_v30 remark TASK0302521
+access-list ras-itops-filter_v30 extended permit object-group FS-Kafka-ports object-group raspool object-group FS-Kafka log
+access-list ras-itops-filter_v30 extended deny ip object-group raspool object-group mesos.sc1.prod.williamhill.plc log
+access-list ras-itops-filter_v30 extended permit object-group whc-ext-api-services object-group raspool object-group whc-ext-api log
+access-list ras-itops-filter_v30 extended permit object-group whc-int-api-services object-group raspool object-group whc-int-api log
+access-list ras-itops-filter_v30 extended permit object-group whc-int-pres-services object-group raspool object-group whc-int-pres log
+access-list ras-itops-filter_v30 extended permit object-group whc-mgmt-net-services object-group raspool object-group whc-mgmt-net log
+access-list ras-itops-filter_v30 extended permit object-group whc-f5-access-services object-group raspool object-group whc-f5-access log
+access-list ras-itops-filter_v30 extended permit object-group whapi-mgmt-services object-group raspool object-group whapi-mgmt log
+access-list ras-itops-filter_v30 extended permit object-group whapi-services object-group raspool object-group whapi log
+access-list ras-itops-filter_v30 extended permit object-group stingray-mgmt-services object-group raspool object-group stingray-mgmt log
+access-list ras-itops-filter_v30 extended permit object-group whc-cx-vcloud-cell1-net-services object-group raspool object-group whc-cx-vcloud-cell1-net log
+access-list ras-itops-filter_v30 extended permit object-group whapi-dev-gateways-services object-group raspool object-group whapi-dev-gateways log

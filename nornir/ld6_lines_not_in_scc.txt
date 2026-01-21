@@ -1,0 +1,133 @@
+access-list group-vrf_access_in extended permit object-group OpenDNS-ports object-group OpenDNS-VA-grp object-group OpenDNS_DNS_Service log
+access-list group-vrf_access_in extended permit object-group OpenDNS-ports object-group OpenDNS-VA-grp object-group OpenDNS_NTP log
+access-list group-vrf_access_in extended permit object-group TCPUDP object-group OpenDNS-VA-grp object-group gOpenDNS_DNS_Servers eq domain log
+access-list group-vrf_access_in extended permit ip host 10.99.239.227 192.168.48.0 255.255.240.0 log
+access-list group-vrf_access_in extended deny ip any object-group Outbound_Blacklist-grp log
+access-list group-vrf_access_in extended permit tcp object-group marketing-pcs object ext-wag-io object-group DM_INLINE_TCP_3 log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_3 object MR_Green_Gitlab eq 222 log
+access-list group-vrf_access_in extended permit tcp object-group BFA-External-Users object williamhill.data.netrefer.com object-group DM_INLINE_TCP_5 log
+access-list group-vrf_access_in remark CHG0114873
+access-list group-vrf_access_in extended permit tcp object-group CW-VPN-RANGES object uk-sc1-wc03 object-group WEB-PORTS-TCP log
+access-list group-vrf_access_in extended permit tcp object-group GIB-Domain_Controllers object disthost.umbrella.com eq https log
+access-list group-vrf_access_in extended permit tcp object-group GIB-SCC-DOMAIN_CONTROLLERS object OpenDNS_Cloud eq https log
+access-list group-vrf_access_in extended permit tcp object-group GIB-Domain_Controllers object OpenDNS_178.255.83.1 eq www log
+access-list group-vrf_access_in extended deny ip 10.180.26.0 255.255.255.0 any4 log
+access-list group-vrf_access_in extended permit ip object-group who-office-data object Betfair-Net log
+access-list group-vrf_access_in extended permit tcp object-group grp-gib-traders object download.rball.com eq www log
+access-list group-vrf_access_in extended permit ip object-group gib-users object-group gib-internet-destinations log
+access-list group-vrf_access_in extended permit tcp object-group adgency-domain-dc object-group OpenDNS object-group WebPorts log
+access-list group-vrf_access_in extended permit tcp object-group adgency-domain-dc object-group CertificateAuthorities object-group WebPorts log
+access-list group-vrf_access_in extended permit object-group bluejeans-service object-group who-office-data object-group bluejeans-external log
+access-list group-vrf_access_in extended permit tcp 10.0.0.0 255.0.0.0 object-group WH_Interactive_Game_servers object-group TCP_WH_Interactive_Ports log
+access-list group-vrf_access_in extended permit tcp object-group who-office-data object IL-ESET1 object-group IL-ESET1TCP log
+access-list group-vrf_access_in extended permit tcp object-group GIB-HOSTS object-group External-hosts eq 8443 log
+access-list group-vrf_access_in extended permit tcp object-group who-office-data object EvolutionGaming object-group Evolutiongaming_TCP log
+access-list group-vrf_access_in extended permit tcp object-group WHO-USER-VPN-GIB any object-group WebPorts log
+access-list group-vrf_access_in extended permit object-group MSN_Group object-group GIB-INTERNAL-RANGES any4 log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_4 object pushtechnology.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group GIB-TRADERS-GROUP object Don_Best_Net eq 1111 log
+access-list group-vrf_access_in extended permit udp object-group GIB-ASTERISK-SERVERS any4 object-group IAX2 log
+access-list group-vrf_access_in extended permit tcp object-group GIB-ASTERISK-SERVERS any4 object-group WebPorts log
+access-list group-vrf_access_in extended deny ip object-group GIB-ASTERISK-SERVERS any4 log
+access-list group-vrf_access_in extended permit ip object Host_10.180.24.160 any4 log
+access-list group-vrf_access_in extended permit object-group running-ball-ports object-group grp-gib-traders object-group running-ball log
+access-list group-vrf_access_in extended permit tcp object-group GIB-OFFICE-SYS host 91.213.212.146 object-group GIB-OFFICE-SYS-PORTS log
+access-list group-vrf_access_in extended permit tcp object-group who-office-data object-group EXTERNAL-HOSTS-GROUP object-group PORT-5119-TCP log
+access-list group-vrf_access_in extended permit tcp object-group GIB-WIFI-RANGES any4 object-group WebPorts log
+access-list group-vrf_access_in extended permit object-group OPENDNS-TCP-UDP-GROUP object-group who-office-data object-group OpenDNS_DNS log
+access-list group-vrf_access_in extended deny object-group TCPUDP object-group who-office-data object-group Internet-All-Subnets eq domain log
+access-list group-vrf_access_in extended permit object-group TCPUDP object-group Gib_Infoblox object-group OpenDNS eq domain log
+access-list group-vrf_access_in extended permit tcp object-group Gib_Infoblox object-group OpenDNS_HTTPS eq https log
+access-list group-vrf_access_in extended permit object-group DNS-UDP-TCP 10.0.0.0 255.0.0.0 object-group OpenDNS_DNS_Service log
+access-list group-vrf_access_in extended permit udp object-group Unrestricted_Users-grp object-group Internet-minus-rfc1918 eq domain log
+access-list group-vrf_access_in extended deny object-group DNS-UDP-TCP 10.0.0.0 255.0.0.0 object-group Internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit ip host 10.120.164.194 any log
+access-list group-vrf_access_in extended deny object-group block-ports object-group Unrestricted_Users-grp object-group Internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit ip object-group Unrestricted_Users-grp object-group Internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit object-group User_Services-grp object-group RFC1918-grp object-group Internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit tcp object-group RFC1918-grp object-group gitlab.com eq ssh log
+access-list group-vrf_access_in remark LD6 RAS VPN
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_3 object-group RFC1918-grp host 185.119.152.40 log
+access-list group-vrf_access_in extended permit object-group Playtech-Frontend-Services object-group RFC1918-grp object-group Playtech-Frontend-AWS log
+access-list group-vrf_access_in extended permit ip object uk-sc1-wc03 object-group UK-WC-SERVERS log
+access-list group-vrf_access_in extended permit ip object-group TestWireless-grp object-group Internet-minus-rfc1918 log
+access-list group-vrf_access_in extended permit ip object-group RFC1918-grp object-group WH-External-Networks-grp log
+access-list group-vrf_access_in extended permit ip object-group RFC1918-grp object-group 3rdparties-grp log
+access-list group-vrf_access_in extended permit tcp object intergration-svr object ob-dev-test object-group tcp_10289_22 log
+access-list group-vrf_access_in extended permit tcp object stjux049 object-group stjux049-Outbound-Access eq ssh log
+access-list group-vrf_access_in extended permit ip host 10.120.164.194 object-group UK-WC-SERVERS log
+access-list group-vrf_access_in extended permit object ipnetinfo object Krakow_EOC_Subnet_Wired any log
+access-list group-vrf_access_in extended permit tcp object-group KRAKOW-SSH-USERS object-group Krakow_SSH_Hosts_Internet eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group Krakow_SSH_Subnets object-group Krakow_Bitbucket eq ssh log
+access-list group-vrf_access_in remark RITM0140782
+access-list group-vrf_access_in extended permit tcp host 10.55.224.182 object-group aws-subnets eq 8883 log
+access-list group-vrf_access_in extended permit tcp object-group KRAKOW-SSH-USERS object-group aws-subnets eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group PRIVATE-CLOUD-USERS object securetransfer.kpmgprivatecloud.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object LCW-SmijaAlex object-group AWS-HOSTS object-group AWS-HOST-PORTS log
+access-list group-vrf_access_in extended permit tcp object-group Karolina_Krakow host 192.162.147.206 eq 3389 log
+access-list group-vrf_access_in extended permit object-group grp-svc-playtech-mobile-live-dealer object-group PLAYTECH-MOBILE-LIVE object-group grp-ext-playtech-mobile-live-dealer log
+access-list group-vrf_access_in extended permit object-group HTTP-SSH object-group grp-krk-gaming-team object ec2-13-59-136-158.us-east-2.compute.amazonaws.com log
+access-list group-vrf_access_in extended permit tcp object-group ONSHORE-OPENBET-RSS host 10.196.201.171 eq 10051 log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_7 object transfer.learningpool.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_8 object tkhvsnxbam.database.windows.net eq 1433 log
+access-list group-vrf_access_in extended permit tcp object STJ-RichardNilan object-group TxOdds-Servers eq 6163 log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_9 object-group ftp3.omniture.com eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group ServiceSupportUsers object-group High5Games eq 8449 log
+access-list group-vrf_access_in extended permit tcp object-group AWS-Propman-RDP-Users object GSL-IFRS16-Propman eq 3389 log
+access-list group-vrf_access_in extended permit tcp object-group BDF-BonusWalletTeam object IGTAdd-in eq https log
+access-list group-vrf_access_in extended permit tcp object Gib-DanielAnthony object AWS-Promotions eq https
+access-list group-vrf_access_in extended permit tcp object BFA-HannahAndrew object psftp.mrgreen.com-node eq 22022 log
+access-list group-vrf_access_in extended permit tcp object-group LAN-Krakow-INC-PRB-RLS object-group DM_INLINE_NETWORK_10 eq https log
+access-list group-vrf_access_in extended permit tcp object-group grp-krk-users object extdev1-fe1.extdev.eu object-group DM_INLINE_TCP_6 log
+access-list group-vrf_access_in extended permit tcp object LCW-EdwinMitchell object-group InfosecOpsGroup eq ssh log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_11 object-group DM_INLINE_NETWORK_17 object-group DM_INLINE_TCP_12 log
+access-list group-vrf_access_in extended permit ip object sc1wnpreap003.group.williamhill.plc object CIT-SCCM-Build-Server log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_12 object quantum-pfe.com eq ssh log
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_1 object Horizon-VDI-PoC object Softphone-Server log
+access-list group-vrf_access_in extended permit tcp host 10.155.0.37 host 150.136.1.199 eq ssh log time-range ultimo
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_13 object live2dmz-frontend.live-hub.net eq 4845 log
+access-list group-vrf_access_in extended permit object-group TCPUDP object-group aws-poc-users object aws-workspace eq 4172 log
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_2 object Horizon-POC-VDI-range object Softphone-Server log
+access-list group-vrf_access_in extended permit udp object KrakowMeetingRoom-1A3 object-group WebEx-Cloud eq 5004 log
+access-list group-vrf_access_in extended permit tcp host 10.1.82.187 host 216.172.74.85 log inactive
+access-list group-vrf_access_in extended permit tcp object BA-JyotsnaGupta object sftp2.myvisualiq.com eq 9022 log
+access-list group-vrf_access_in extended permit ip object Net_10.55.60.0_28 any log
+access-list group-vrf_access_in remark CHG0140992
+access-list group-vrf_access_in extended permit tcp object-group STJ-ROSI-VPN any eq 1194 log
+access-list group-vrf_access_in extended permit object tcp-1433 object-group STJ-SQL-USERS object tkhvsnxbam.database.windows.net log
+access-list group-vrf_access_in extended permit tcp object-group Anatoli-Putseyeu object-group ext-office-365 object-group office365 log
+access-list group-vrf_access_in extended permit tcp object-group sc1wnpreap003 object-group raspool object-group DM_INLINE_TCP_2 log
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_5 object-group DM_INLINE_NETWORK_14 object-group RunningBall-Ports log
+access-list group-vrf_access_in extended permit tcp 3.8.37.0 255.255.255.240 object-group DM_INLINE_NETWORK_6 log
+access-list group-vrf_access_in remark INC1109079,CHG0151494
+access-list group-vrf_access_in extended permit tcp object-group DM_INLINE_NETWORK_15 object-group scout.betradar.com eq 2018 log
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_8 object irewnppeap01.testad.williamhill.plc object-group DM_INLINE_NETWORK_28 log
+access-list group-vrf_access_in extended permit tcp object irewnppeap01.testad.williamhill.plc object-group DM_INLINE_NETWORK_29 object-group highports log
+access-list group-vrf_access_in remark Temp rule for image transfer to access switches
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_28 object-group DM_INLINE_NETWORK_25 host 192.168.50.233 log inactive
+access-list group-vrf_access_in remark temp rule to fetch show tech from ukcr02
+access-list group-vrf_access_in extended permit object-group DM_INLINE_SERVICE_6 object-group DM_INLINE_NETWORK_19 object-group DM_INLINE_NETWORK_18 log inactive
+access-list group-vrf_access_in extended permit udp object 10.19.0.100 object 10.112.12.111 eq syslog log inactive
+access-list group-vrf_access_in remark ### Temp direct DNS access ###
+access-list group-vrf_access_in extended permit udp object-group RFC1918-grp any eq domain log inactive
+access-list group-vrf_access_in remark BlueJeans Test
+access-list group-vrf_access_in extended permit object-group BLUEJEANS-PORTGROUP object-group RFC1918-grp object-group gBlueJeans log inactive
+access-list group-vrf_access_in extended deny ip 192.168.64.0 255.255.240.0 object-group RFC1918-grp inactive
+access-list outside_access_in extended deny ip object-group Inbound_Blacklist-grp any log inactive
+access-list split-tunnel-acl standard permit 185.64.253.0 255.255.255.0
+access-list split-tunnel-acl standard permit 185.64.255.0 255.255.255.0
+access-list split-tunnel-acl standard permit host 52.56.165.212
+access-list split-tunnel-acl standard permit 23.209.73.0 255.255.255.0
+access-list split-tunnel-acl standard permit 2.16.170.0 255.255.255.0
+access-list itops-split-acl standard permit host 40.69.36.145
+access-list oob-int-vrf_access_in extended deny ip any any
+access-list oob-ext-vrf_access_in extended deny ip any any
+access-list test-split-tunnel standard permit 10.0.0.0 255.0.0.0
+access-list test-split-tunnel standard permit 172.16.0.0 255.240.0.0
+access-list test-split-tunnel standard permit 192.168.0.0 255.255.128.0
+access-list test-split-tunnel standard permit 100.64.0.0 255.192.0.0
+access-list ras-autopilot-filter extended permit ip object-group raspool object-group DM_INLINE_NETWORK_24 log
+access-list 3rdPartyPoC-filter extended permit udp object-group raspool object sc1apcpein001 eq domain log
+access-list 3rdPartyPoC-filter extended permit icmp object-group raspool any
+access-list 3rdPartyPoC-filter extended deny ip object-group raspool object-group rfc1918 log
+access-list 3rdPartyPoC-filter extended permit ip object-group raspool any log

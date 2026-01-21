@@ -1,0 +1,12 @@
+---
+username: svcnetworkauto
+password: Aut0mat1on
+secret: Aut0mat1on
+## Add scrapli details
+connection_options:
+  scrapli:
+    port: 22
+    extras:
+      ssh_config_file: True
+      auth_strict_key: False
+...

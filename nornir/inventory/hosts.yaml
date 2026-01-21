@@ -1,0 +1,870 @@
+---
+bg-sof-ar01:
+  hostname: 10.99.254.34
+  groups:
+    - ios
+
+bg-sof-ar02:
+  hostname: 10.99.254.35
+  groups:
+    - ios
+
+bg-sof-as01:
+  hostname: 10.53.99.2
+  groups:
+    - ios
+
+bg-sof-as02:
+  hostname: 10.53.99.3
+  groups:
+    - ios
+
+bg-sof-cs01:
+  hostname: 10.53.99.1
+  groups:
+    - ios
+
+bg-sof-es01:
+  hostname: 10.53.113.3
+  groups:
+    - ios
+
+bg-sof-es02:
+  hostname: 10.53.113.4
+  groups:
+    - ios
+
+de-fr7-cr01:
+  hostname: 10.99.253.66
+  groups:
+    - ios
+
+gib-vcore1:
+  hostname: 10.180.129.1
+  groups:
+    - ios
+
+gi-mpl-es01:
+  hostname: 10.180.159.4
+  groups:
+    - ios
+
+gi-mpl-es02:
+  hostname: 10.180.159.5
+  groups:
+    - ios
+
+it-ml2-cr01:
+  hostname: 10.99.253.67
+  groups:
+    - ios
+
+it-rom-ar01-sogei:
+  hostname: 10.99.254.28
+  groups:
+    - ios
+
+it-rom-ar02-sogei:
+  hostname: 10.99.254.29
+  groups:
+    - ios
+
+lsj_f2c1_sw1:
+  hostname: 10.1.99.9
+  groups:
+    - ios
+
+lsj_f2c1_sw2:
+  hostname: 10.1.99.19
+  groups:
+    - ios
+
+lsj_f3al_pod:
+  hostname: 10.1.99.31
+  groups:
+    - ios
+
+lsj_f3al_retail:
+  hostname: 10.1.99.32
+  groups:
+    - ios
+
+lsj_f3al_sw1:
+  hostname: 10.1.99.30
+  groups:
+    - ios
+
+lsj_f3c1_sw1:
+  hostname: 10.1.99.10
+  groups:
+    - ios
+
+lsj_f3c1_sw2:
+  hostname: 10.1.99.74
+  groups:
+    - ios
+
+lsj_f4al_sw1:
+  hostname: 10.1.99.36
+  groups:
+    - ios
+
+uk-stj-as01-f04:
+  hostname: 10.1.99.26
+  groups:
+    - ios
+
+lsj_f5c1_sw1:
+  hostname: 10.1.99.24
+  groups:
+    - ios
+
+lsj_f6al_sw1:
+  hostname: 10.1.99.20
+  groups:
+    - ios
+
+mt-msc-cr01:
+  hostname: 10.99.253.64
+  groups:
+    - ios
+
+mt-msc-cr02:
+  hostname: 10.99.253.65
+  groups:
+    - ios
+
+mlt-slm-ar01:
+  hostname: 10.99.253.68
+  groups:
+    - ios
+
+mlt-slm-ar02:
+  hostname: 10.99.253.69
+  groups:
+    - ios
+
+ph-mnl-ar01:
+  hostname: 10.99.254.48
+  groups:
+    - ios
+
+ph-mnl-ar02:
+  hostname: 10.99.254.49
+  groups:
+    - ios
+
+ph-mnl-cs01:
+  hostname: 10.123.14.1
+  groups:
+    - ios
+
+ph-mnl-vacc01:
+  hostname: 10.123.14.11
+  groups:
+    - ios
+
+ph-mnl-vacc02:
+  hostname: 10.123.14.12
+  groups:
+    - ios
+
+ph-mnl-vacc03:
+  hostname: 10.123.14.13
+  groups:
+    - ios
+
+ph-vit-ar01:
+  hostname: 10.99.254.54
+  groups:
+    - ios
+
+ph-vit-ar02:
+  hostname: 10.99.254.55
+  groups:
+    - ios
+
+ph-vit-cs01:
+  hostname: 10.123.206.2
+  groups:
+    - ios
+
+ph-vit-cs02:
+  hostname: 10.123.206.3
+  groups:
+    - ios
+
+pl-krk-ar01:
+  hostname: 10.99.254.22
+  groups:
+    - ios
+
+pl-krk-ar02:
+  hostname: 10.99.254.23
+  groups:
+    - ios
+
+pl-krk-as01-f01:
+  hostname: 10.55.99.3
+  groups:
+    - ios
+
+pl-krk-as01-f03:
+  hostname: 10.55.99.5
+  groups:
+    - ios
+
+pl-krk-as01-f05:
+  hostname: 10.55.99.7
+  groups:
+    - ios
+
+pl-krk-as02-f01:
+  hostname: 10.55.99.4
+  groups:
+    - ios
+
+pl-krk-as02-f03:
+  hostname: 10.55.99.6
+  groups:
+    - ios
+
+pl-krk-as03-f01:
+  hostname: 10.55.99.10
+  groups:
+    - ios
+
+pl-krk-as03-f03:
+  hostname: 10.55.99.14
+  groups:
+    - ios
+
+pl-krk-as04-f01:
+  hostname: 10.55.99.13
+  groups:
+    - ios
+
+pl-krk-as04-f03:
+  hostname: 10.55.99.15
+  groups:
+    - ios
+
+pl-krk-cs01:
+  hostname: 10.55.99.1
+  groups:
+    - ios
+
+pl-krk-vacc01:
+  hostname: 10.55.99.8
+  groups:
+    - ios
+
+pl-krk-vacc02:
+  hostname: 10.55.99.9
+  groups:
+    - ios
+
+uk-bfa-ar01:
+  hostname: 10.99.253.62
+  groups:
+    - ios
+
+uk-bfa-ar02:
+  hostname: 10.99.253.63
+  groups:
+    - ios
+
+uk-bfa-as01-f02:
+  hostname: 10.56.99.5
+  groups:
+    - ios
+
+uk-bfa-as02-f02:
+  hostname: 10.56.99.6
+  groups:
+    - ios
+
+uk-bfa-cs01:
+  hostname: 10.56.99.1
+  groups:
+    - ios
+
+uk-brs-cr01:
+  hostname: 10.210.129.4
+  groups:
+    - ios
+
+uk-brs-cr02:
+  hostname: 10.210.129.5
+  groups:
+    - ios
+
+uk-brs-cs01:
+  hostname: 10.210.129.1
+  groups:
+    - ios
+
+uk-brs-er01:
+  hostname: 10.210.159.6
+  groups:
+    - ios
+
+uk-brs-er02:
+  hostname: 10.210.159.7
+  groups:
+    - ios
+
+uk-brs-es01:
+  hostname: 10.210.159.4
+  groups:
+    - ios
+
+uk-brs-es02:
+  hostname: 10.210.159.5
+  groups:
+    - ios
+
+uk-brs-sbc:
+  hostname: 10.210.129.42
+  groups:
+    - ios
+
+uk-brs-vacc1:
+  hostname: 192.168.10.202
+  groups:
+    - ios
+
+uk-dum-ar01:
+  hostname: 10.99.254.56
+  groups:
+    - ios
+
+uk-gs2-ar01:
+  hostname: 10.99.254.60
+  groups:
+    - ios
+
+uk-gs2-ar02:
+  hostname: 10.99.254.61
+  groups:
+    - ios
+
+uk-ixh-ar01-pa:
+  hostname: 10.99.254.45
+  groups:
+    - ios
+
+uk-ld6-dm01:
+  hostname: 10.112.129.80
+  groups:
+    - ios
+
+uk-ld6-dmvpn01:
+  hostname: 10.112.129.54
+  groups:
+    - ios
+
+uk-ld6-es01:
+  hostname: 10.112.129.4
+  groups:
+    - ios
+
+uk-ld6-es02:
+  hostname: 10.112.129.5
+  groups:
+    - ios
+
+uk-ld6-rr01:
+  hostname: 10.99.253.47
+  groups:
+    - ios
+
+uk-man-cr01:
+  hostname: 10.99.253.41
+  groups:
+    - ios
+
+uk-man-rr01:
+  hostname: 10.99.253.49
+  groups:
+    - ios
+
+uk-mdc-ar01:
+  hostname: 10.99.253.34
+  groups:
+    - ios
+
+uk-mdc-ar02:
+  hostname: 10.99.253.35
+  groups:
+    - ios
+
+uk-mdc-vacc01:
+  hostname: 10.99.253.38
+  groups:
+    - ios
+
+uk-mtk-acc01:
+  hostname: 10.99.253.39
+  groups:
+    - ios
+
+uk-mtk-ar01:
+  hostname: 10.99.253.36
+  groups:
+    - ios
+
+uk-old-sg-ar01:
+  hostname: 10.96.253.1
+  groups:
+    - ios
+
+uk-sc1-dm01:
+  hostname: 10.99.253.54
+  groups:
+    - ios
+
+uk-sc1-dmvpn01:
+  hostname: 10.120.129.54
+  groups:
+    - ios
+
+uk-sc1-er01:
+  hostname: 10.120.159.8
+  groups:
+    - ios
+
+uk-sc1-er02:
+  hostname: 10.120.159.7
+  groups:
+    - ios
+
+uk-sc1-es01:
+  hostname: 10.120.159.4
+  groups:
+    - ios
+
+uk-sc1-es02:
+  hostname: 10.120.159.5
+  groups:
+    - ios
+
+uk-sc1-rr01:
+  hostname: 10.99.253.46
+  groups:
+    - ios
+
+uk-scc-sbc:
+  hostname: 10.120.129.42
+  groups:
+    - ios
+
+uk-sov-ms01:
+  hostname: 10.99.239.226
+  groups:
+    - ios
+
+uk-stj-ar01:
+  hostname: 10.99.253.25
+  groups:
+    - ios
+
+uk-stj-ar02:
+  hostname: 10.99.253.26
+  groups:
+    - ios
+
+uk-stj-as01:
+  hostname: 10.1.99.71
+  groups:
+    - ios
+
+uk-stj-as02:
+  hostname: 10.1.99.72
+  groups:
+    - ios
+
+uk-stj-cs01:
+  hostname: 10.1.99.1
+  groups:
+    - ios
+
+uk-stj-f1c1-sw1:
+  hostname: 10.1.99.7
+  groups:
+    - ios
+
+uk-stj-f1c1-sw4:
+  hostname: 10.1.99.54
+  groups:
+    - ios
+
+uk-stj-vacc01:
+  hostname: 10.1.99.12
+  groups:
+    - ios
+
+uk-stj-vacc02:
+  hostname: 10.1.99.11
+  groups:
+    - ios
+
+uk-thn-ar01-pa:
+  hostname: 10.99.254.44
+  groups:
+    - ios
+
+uk-thn-ar02-pa:
+  hostname: 10.99.254.43
+  groups:
+    - ios
+
+uk-thw-cr01:
+  hostname: 10.99.253.31
+  groups:
+    - ios
+
+uk-ttb-ar01:
+  hostname: 10.99.254.62
+  groups:
+    - ios
+
+k-wak-ar01:
+ hostname: 10.99.254.51
+ groups:
+   - ios
+
+uk-wak-as01:
+  hostname: 10.1.152.2
+  groups:
+    - ios
+
+wh-brs-core-sw3:
+  hostname: 192.168.10.172
+  groups:
+    - ios
+
+wh-brs-core-sw4:
+  hostname: 192.168.10.173
+  groups:
+    - ios
+
+uk-sov-cr01:
+  hostname: 10.99.239.227
+  groups:
+    - iosxr
+uk-sc1-cr01:
+  hostname: 10.120.129.186
+  groups:
+    - iosxr
+
+uk-sc1-cr02:
+  hostname: 10.120.129.187
+  groups:
+    - iosxr
+
+uk-ld6-cr01:
+  hostname: 10.112.129.210
+  groups:
+    - iosxr
+
+uk-ld6-cr02:
+  hostname: 10.112.129.211
+  groups:
+    - iosxr
+
+uk-ld6-er01:
+  hostname: 10.112.129.6
+  groups:
+    - iosxr
+
+uk-ld6-er02:
+  hostname: 10.112.129.7
+  groups:
+    - iosxr
+
+gib-mpl-cr01:
+  hostname: 10.180.129.253
+  groups:
+    - iosxr
+#
+ib-mpl-cr02:
+ hostname: 10.180.129.254
+ groups:
+   - iosxr
+
+uk-brs-ds01:
+  hostname: 10.210.129.111
+  groups:
+    - nxos
+
+uk-brs-ds02:
+  hostname: 10.210.129.112
+  groups:
+    - nxos
+
+uk-brs-pp-ds01:
+  hostname: 10.210.129.113
+  groups:
+    - nxos
+
+uk-brs-pp-ds02:
+  hostname: 10.210.129.114
+  groups:
+    - nxos
+
+gib-mpl-ds01:
+  hostname: 10.180.129.81
+  groups:
+    - nxos
+
+gib-mpl-ds02:
+  hostname: 10.180.129.82
+  groups:
+    - nxos
+
+gib-mpl-ds03:
+  hostname: 10.180.129.213
+  groups:
+    - nxos
+
+gib-mpl-ds04:
+  hostname: 10.180.129.214
+  groups:
+    - nxos
+
+uk-sc1-ds03:
+  hostname: 10.120.129.83
+  groups:
+    - nxos
+#
+k-sc1-ds04:
+ hostname: 10.120.129.84
+ groups:
+   - nxos
+#
+mt-msc-cs01:
+  hostname: 10.128.129.1
+  groups:
+    - nxos
+
+mt-msc-cs02:
+  hostname: 10.128.129.2
+  groups:
+    - nxos
+
+uk-sc1-cs01:
+  hostname: 10.120.129.1
+  groups:
+    - nxos
+
+#bg-sof-fw01-pri:
+#  hostname: 10.53.99.220
+#  groups:
+#    - asa
+#
+#bg-sof-fw01-sec:
+#  hostname: 10.53.99.221
+#  groups:
+#    - asa
+#
+#gi-mpl-fw01:
+#  hostname: 10.180.129.220
+#  groups:
+#    - asa
+#
+#gi-mpl-fw02:
+#  hostname: 10.180.129.221
+#  groups:
+#    - asa
+#
+#gib-fw-vpn-asa-pri:
+#  hostname: 10.180.129.52
+#  groups:
+#    - asa
+#
+#gib-fw-vpn-asa-sec:
+#  hostname: 10.180.129.53
+#  groups:
+#    - asa
+#
+#uk-brs-asa-01-admin-act:
+#  hostname: 10.210.129.220
+#  groups:
+#    - asa
+##
+#uk-brs-asa-01-admin-stby:
+#  hostname: 10.210.129.221
+#  groups:
+#    - asa
+##
+#uk-brs-pp-fw-asa01-pri:
+#  hostname: 10.210.129.70
+#  groups:
+#    - asa
+##
+#uk-brs-pp-fw-asa01-sec:
+#  hostname: 10.210.129.71
+#  groups:
+#    - asa
+##
+#uk-brs-vpn-fw01-pri:
+#  hostname: 10.210.129.52
+#  groups:
+#    - asa
+#
+#uk-brs-vpn-fw01-sec:
+#  hostname: 10.210.129.53
+#  groups:
+#    - asa
+#
+#uk-ld6-fw01:
+#  hostname: 10.112.129.220
+#  groups:
+#    - asa
+#
+#uk-ld6-fw02-pri:
+#  hostname: 10.112.129.69
+#  groups:
+#    - asa
+#
+#uk-ld6-fw02-sec:
+#  hostname: 10.112.129.70
+#  groups:
+#    - asa
+#
+#uk-ld6-fw03-pri:
+#  hostname: 10.112.215.220
+#  groups:
+#    - asa
+#
+#uk-ld6-fw03-sec:
+#  hostname: 10.112.215.221
+#  groups:
+#    - asa
+#
+#uk-ld6-fw04-pri:
+#  hostname: 10.112.129.19
+#  groups:
+#    - asa
+#
+#uk-ld6-fw04-sec:
+#  hostname: 10.112.129.20
+#  groups:
+#    - asa
+#
+#uk-sc1-fw01-pri:
+#  hostname: 10.120.129.220
+#  groups:
+#    - asa
+##
+#uk-sc1-fw01-sec:
+#  hostname: 10.120.129.221
+#  groups:
+#    - asa
+##
+#uk-sc1-fw04-pri:
+#  hostname: 10.120.129.19
+#  groups:
+#    - asa
+#
+#uk-sc1-fw04-sec:
+#  hostname: 10.120.129.20
+#  groups:
+#    - asa
+#
+#uk-sc1-vpn-asa-pri:
+#  hostname: 10.120.129.52
+#  groups:
+#    - asa
+#
+#uk-sc1-vpn-asa-sec:
+#  hostname: 10.120.129.53
+#  groups:
+#    - asa
+#
+#uk-stj-fw01-pri:
+#  hostname: 10.1.99.220
+#  groups:
+#    - asa
+##
+#uk-stj-fw01-stby:
+#  hostname: 10.1.99.221
+#  groups:
+#    - asa
+##
+#mt-msc-fw01:
+#  hostname: 10.128.129.220
+#  groups:
+#    - asa
+#
+#mt-msc-fw02:
+#  hostname: 10.128.129.221
+#  groups:
+#    - asa
+#
+#
+##uk-wak-as01:
+##  hostname: 10.1.152.2
+##  groups:
+##    - core
+##uk-wak-ar01:
+##  hostname: 10.99.254.51
+##  groups:
+##    - core
+#uk-sov-or01:
+#  hostname: 10.92.39.253
+#  groups:
+#    - oob
+#l-krk-or01:
+# hostname: 10.92.39.68
+# groups:
+#   - oob
+#uk-sc1-or01:
+#  hostname: 10.120.129.11
+#  groups:
+#    - oob
+#uk-ld6-or01:
+#  hostname: 10.92.39.1
+#  groups:
+#    - oob
+#mt-slm-or01:
+#  hostname: 10.92.39.72
+#  groups:
+#    - oob
+#mt-msc-or01:
+#  hostname: 10.92.39.6
+#  groups:
+#    - oob
+#uk-stj-or01:
+#  hostname: 10.92.39.66
+#  groups:
+#    - oob
+#uk-brs-or01:
+#  hostname: 10.92.39.3
+#  groups:
+#    - oob
+#gi-wpp-or01:
+#  hostname: 10.92.39.69
+#  groups:
+#    - oob
+#uk-brs-lab-sw01:
+#  hostname: 10.210.49.14
+#  groups:
+#    - lab
+#uk-brs-lab-sw02:
+#  hostname: 10.210.49.15
+#  groups:
+#    - lab
+#uk-sc1-fw04:
+#  hostname: 10.120.129.19
+#  groups:
+#    - ras
+#uk-ld6-fw04:
+#  hostname: 10.112.129.19
+#  groups:
+#    - ras
+uk-ld6-lab-fw05:
+  hostname: 10.112.129.181
+  groups:
+    - asa

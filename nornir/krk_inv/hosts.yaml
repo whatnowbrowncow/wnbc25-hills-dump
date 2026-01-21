@@ -1,0 +1,19 @@
+---
+
+pl-krk-ar01:
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 50
+  hostname: 10.99.254.22
+  groups:
+    - ios
+
+pl-krk-ar02:
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 50
+  hostname: 10.99.254.23
+  groups:
+    - ios

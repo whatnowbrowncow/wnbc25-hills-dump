@@ -1,0 +1,19 @@
+---
+
+uk-ld6-cr01:
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 50
+  hostname: 10.112.129.210
+  groups:
+    - iosxr
+
+uk-ld6-cr02:
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 50
+  hostname: 10.112.129.211
+  groups:
+    - iosxr

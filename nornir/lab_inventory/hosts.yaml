@@ -1,0 +1,19 @@
+---
+
+uk-brs-lab-cr01:
+  hostname: 10.210.49.12
+  groups:
+    - lab_routers
+    - dmvpn_site
+    - lbo
+  data:
+    device_hostname: uk-brs-lab-lbo-cr01
+
+uk-brs-lab-cr02:
+  hostname: 10.210.49.13
+  groups:
+    - lab_routers
+    - dmvpn_site
+    - racecourse
+  data:
+    device_hostname: uk-brs-lab-rc-cr02

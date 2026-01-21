@@ -1,0 +1,72 @@
+// DMVPN Map
+graph {
+	node [color=deepskyblue1 style=filled]
+	node [color=deepskyblue]
+	"uk-sov-or01"
+	node [color=deepskyblue]
+	"uk-man-or01"
+	node [color=deepskyblue]
+	"pl-krk-or01"
+	node [color=deepskyblue]
+	"bg-sof-or01"
+	node [color=deepskyblue]
+	"de-fr7-or01"
+	node [color=deepskyblue]
+	"it-ml2-or01"
+	node [color=deepskyblue]
+	"uk-sc1-or01"
+	node [color=coral]
+	"uk-ld6-or01"
+	node [color=deepskyblue]
+	"mt-slm-or01"
+	node [color=deepskyblue]
+	"mt-msc-or01"
+	node [color=deepskyblue]
+	"uk-stj-or01"
+	node [color=deepskyblue]
+	"uk-brs-or01"
+	node [color=deepskyblue]
+	"uk-bfa-or01"
+	node [color=deepskyblue]
+	"gi-wpp-or01"
+	node [color=deepskyblue]
+	"gi-mpl-or01"
+	node [color=deepskyblue]
+	"ph-mnl-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-sc1-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-brs-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "gi-mpl-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "ph-mnl-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "de-fr7-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-stj-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-bfa-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "pl-krk-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "gi-wpp-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "bg-sof-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "mt-slm-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "it-ml2-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-man-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-sov-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-sc1-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "uk-brs-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "gi-mpl-or01"
+	edge [color=green3]
+	"uk-ld6-or01" -- "ph-mnl-or01"
+}
