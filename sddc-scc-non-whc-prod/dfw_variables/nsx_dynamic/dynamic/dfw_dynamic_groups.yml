@@ -1,0 +1,2159 @@
+---
+
+resources:
+
+### OBJECTS ###
+
+  group_objects:
+
+    - group_name: "vmc_corp_subnets"
+      description: "all scc corporate networks migrated to vmc"
+      ip_addr_list:
+        - "10.120.192.0/23"
+        - "10.120.194.0/25"
+        - "10.120.194.160/27"
+        - "10.120.194.192/26"
+        - "10.120.196.0/22"
+
+    - group_name: "rfc_1918"
+      description: "internal private address space"
+      ip_addr_list:
+        - "10.0.0.0/8"
+        - "192.168.0.0/16"
+        - "172.16.0.0/12"
+
+    - group_name: "rfc_6598"
+      description: "shared address space - internal AWS IP range"
+      ip_addr_list:
+        - "100.64.0.0/10"
+
+    - group_name: "opendns_virtual_appliances"
+      description: "opendns virtual appliances"
+      ip_addr_list:
+        - "10.120.193.238"
+        - "10.120.193.239"
+
+    - group_name: "opendns_ntp_service"
+      description: "opendns ntp servers"
+      ip_addr_list:
+        - "91.189.94.4"
+        - "91.189.89.199"
+
+    - group_name: "opendns_dns_service"
+      description: "opendns dns servers"
+      ip_addr_list:
+        - "67.215.71.201"
+        - "72.21.91.29"
+        - "117.18.237.29"
+        - "208.67.220.220"
+        - "208.67.220.222"
+        - "208.67.222.220"
+        - "208.67.222.222"
+        - "67.215.92.0/24"
+
+    - group_name: "internet_minus_rfc1918"
+      description: "internet minus rfc 1918"
+      ip_addr_list:
+        - "0.0.0.0/5"
+        - "8.0.0.0/7"
+        - "11.0.0.0/8"
+        - "12.0.0.0/6"
+        - "16.0.0.0/4"
+        - "32.0.0.0/3"
+        - "64.0.0.0/2"
+        - "128.0.0.0/3"
+        - "160.0.0.0/5"
+        - "168.0.0.0/6"
+        - "172.0.0.0/12"
+        - "172.32.0.0/11"
+        - "172.64.0.0/10"
+        - "172.128.0.0/9"
+        - "173.0.0.0/8"
+        - "174.0.0.0/7"
+        - "176.0.0.0/4"
+        - "192.0.0.0/9"
+        - "192.128.0.0/11"
+        - "192.160.0.0/13"
+        - "192.169.0.0/16"
+        - "192.170.0.0/15"
+        - "192.172.0.0/14"
+        - "192.176.0.0/12"
+        - "192.192.0.0/10"
+        - "193.0.0.0/8"
+        - "194.0.0.0/7"
+        - "196.0.0.0/6"
+        - "200.0.0.0/5"
+        - "208.0.0.0/4"
+
+    - group_name: "wh_apogee_external_site"
+      description: "william-hill.apogee.eu.eophcp.com"
+      ip_addr_list:
+        - "34.252.199.173"
+        - "18.202.147.163"
+        - "52.19.122.66"
+        - "52.50.253.210"
+
+    - group_name: "sc1uxpregw01"
+      description: "sc1uxpregw01"
+      ip_addr_list:
+        - "10.120.194.40"
+
+    - group_name: "aws_storage_gateway"
+      description: "ireprnapsg01.prod.williamhill.plc"
+      ip_addr_list:
+        - "10.156.5.170"
+
+    - group_name: "scc_dc_networks"
+      description: "scc_dc_networks"
+      ip_addr_list:
+        - "10.120.0.0/16"
+        - "10.121.0.0/16"
+
+    - group_name: "uno_presentation_access_group"
+      description: "This group is for user access to UNO Presentation SQL Server"
+      ip_addr_list:
+      - "10.40.9.55"      # Test User - RITM0137091
+      - "10.55.15.233"    # Aleksandra Czerwik - RITM0129868
+      - "10.55.224.197"   # Iryna Marchenko - RITM0131275
+      - "10.56.225.38"    # Pavlos Katidis - RITM0131853
+      - "10.1.74.212"     # Ella Spence - RITM0134801
+    - group_name: "uno_sandbox_access_group"
+      description: "This group is for user access to UNO Sandbox SQL Server"
+      ip_addr_list:
+      - "10.40.9.55"      # Test User - RITM0137091
+      - "10.55.15.233"    # Aleksandra Czerwik - RITM0129868
+      - "10.55.224.197"   # Iryna Marchenko - RITM0131275
+      - "10.56.225.38"    # Pavlos Katidis - RITM0131853
+      - "10.1.74.212"     # Ella Spence - RITM0134801
+    - group_name: "uno_cube_access_group"
+      description: "This group is for user access to the various UNO Cube SQL Server\
+        \ Instances"
+      ip_addr_list:
+      - "10.40.9.55"      # Test User - RITM0137091
+      - "10.55.15.233"    # Aleksandra Czerwik - RITM0129868
+      - "10.55.224.197"   # Iryna Marchenko - RITM0131275
+    - group_name: "uno_dpe_access_group"
+      description: "This group is for user access to the various UNO DPE Services"
+      ip_addr_list:
+      - "10.40.9.55"      # Test User - RITM0137091
+    - group_name: "uno_presentation_lb_vip"
+      description: "UNO Presentation Database VIP"
+      ip_addr_list:
+      - "10.120.74.51"    # int-lb-dm-analytics-tig.sc1.prod.williamhill.plc
+    - group_name: "uno_sandbox_lb_vip"
+      description: "UNO Sandbox Database VIP"
+      ip_addr_list:
+      - "10.120.74.50"    # int-lb-dm-sandbox-tig.sc1.prod.williamhill.plc
+    - group_name: "uno_cube_lb_vip"
+      description: "UNO Cube Database VIP"
+      ip_addr_list:
+      - "10.120.74.22"    # int-lb-uno-ssas-tab.sc1.prod.williamhill.plc
+    - group_name: "uno_dpe_servers"
+      description: "UNO DPE Servers"
+      ip_addr_list:
+      - "10.120.100.80"   # whdpservices.group.williamhill.plc
+      - "10.120.100.81"   # whdpsource01.group.williamhill.plc
+      - "10.120.100.82"   # whdpops01.group.williamhill.plc
+      - "10.120.100.83"   # whdppresent01.group.williamhill.plc
+      - "10.120.100.84"   # whdpservices01.group.williamhill.plc
+      - "10.120.100.86"   # mds.prod.williamhill.plc
+      - "10.120.100.88"   # ssrs.prod.williamhill.plc
+
+    - group_name: "role-modelvillage-zookeeper"
+      description: "CHG0146652"
+      ip_addr_list:
+      - "10.121.67.29"
+      - "10.121.67.63"
+
+    - group_name: "sc1wnprndb004"
+      description: "CHG0146652"
+      ip_addr_list:
+      - "10.120.100.18"
+      - "10.120.100.20"
+
+    - group_name: "brsuxdrrdb04"
+      description: "CHG0146480"
+      ip_addr_list:
+      - "10.200.4.15"
+
+    - group_name: "sc1wnprnap013"
+      description: "CHG0146447"
+      ip_addr_list:
+      - "10.120.66.246"
+
+    - group_name: "sc1wnprgdb05_06_cluster"
+      description: "CHG0146447"
+      ip_addr_list:
+      - "10.120.99.52"
+      - "10.120.99.54"
+      - "10.120.99.55"
+
+    - group_name: "vmcprapvrli02"
+      description: "CHG0146817"
+      ip_addr_list:
+      - "10.156.4.23"
+
+    - group_name: "sc1uxpremn126"
+      description: "CHG0146817"
+      ip_addr_list:
+      - "10.120.163.126"
+
+    - group_name: "irewnprewb10"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.120.103.3"
+
+    - group_name: "irewnpreap10"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.120.103.4"
+
+    - group_name: "end_user_accurate_access"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.1.71.101"   # Mark Broadhead PC
+      - "10.1.71.102"   # Luke Wilson PC
+      - "10.1.82.184"   # WH5004745
+      - "10.1.82.24"    # WH0005112
+      - "10.1.83.11"    # WH0003252
+      - "10.1.83.154"   # WH0005434
+      - "10.1.83.221"   # WH5001731
+      - "10.1.83.5"     # WH0004371
+      - "10.53.32.107"  # WH0001360
+      - "10.53.32.93"   # WH5002300
+      - "10.53.33.120"  # WH5002050
+      - "10.53.33.56"   # WH5002303
+      - "10.55.14.80"   # WH0006047
+
+    - group_name: "scc_citrix"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.120.39.0/24"
+
+    - group_name: "brs_citrix"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.210.39.0/24"
+
+    - group_name: "aws_accurate_prod_database"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "100.79.16.0/23" # accparc2-db.techserv.aws-ew1.pr.williamhill.plc
+      - "100.79.18.0/23" # accpmain-db.techserv.aws-ew1.pr.williamhill.plc
+      - "100.79.20.0/23" # accpmain-db.techserv.aws-ew1.pr.williamhill.plc
+
+    - group_name: "aws_active_directory"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "100.97.1.135" # nvawnprdc01
+      - "100.97.1.167" # nvawnprdc02
+      - "100.72.225.135" # irewnprdc01
+      - "100.72.225.167" # irewnprdc02
+
+    - group_name: "infoblox_grid_ex_scc"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.210.193.235" # brsns01
+      - "10.210.193.236" # brsns02
+      - "10.180.193.235" # gibns01
+      - "10.180.193.236" # gibns02
+      - "10.112.208.11" # ld6ns01
+      - "10.112.208.12" # ld6ns02
+
+    - group_name: "sc1wnpreap10"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.120.99.81"
+
+    - group_name: "ld6wnpreap10"
+      description: "CHG0146931"
+      ip_addr_list:
+      - "10.118.214.32"
+
+    - group_name: "snow_mid_servers"
+      description: "CHG0146988"
+      ip_addr_list:
+      - "10.120.163.138" # sc1wnpremg47
+      - "10.120.163.139" # sc1wnpremg48
+      - "10.120.163.141" # sc1wnpremg49
+
+    - group_name: "williamhillssl-cloudsoftcat-com-secondary"
+      description: "CHG0146988"
+      ip_addr_list:
+      - "130.0.80.205"
+
+    - group_name: "trs_servers"
+      description: "CHG0147001"
+      ip_addr_list:
+      - "10.120.101.10" # sc1wnprecp01
+      - "10.120.101.11" # sc1wnpreap001
+      - "10.120.101.12" # sc1wnpreap006
+
+    - group_name: "trs_db"
+      description: "NETAR-6589"
+      ip_addr_list:
+      - "10.120.101.16" # sc1wnprrdb05
+
+    - group_name: "gib_rss_server"
+      description: "CHG0147001"
+      ip_addr_list:
+      - "10.180.139.140" # gibux353_354
+
+    - group_name: "ld6_rss_server"
+      description: "CHG0147001"
+      ip_addr_list:
+      - "10.118.104.32" # ld6ux351
+
+    - group_name: "non-cde-bomgar-jump-hosts"
+      description: "CHG0147120"
+      ip_addr_list:
+      - "10.120.151.31" # sc1uxprnmg31
+      - "10.120.151.32" # sc1uxprnmg32
+      - "10.120.151.33" # sc1uxprnmg33
+      - "10.120.151.34" # sc1uxprnmg34
+
+    - group_name: "sc1uxpremg32"
+      description: "CHG0147120"
+      ip_addr_list:
+      - "10.120.163.130" # sc1uxpremg32
+
+    - group_name: "sc1wnprbkcs01"
+      description: "CHG0147150"
+      ip_addr_list:
+        - "10.120.46.30"
+
+    - group_name: "commvault_mrg_media_servers"
+      description: "CHG0147150"
+      ip_addr_list:
+        - "10.40.46.0/24"
+        - "10.130.46.0/24"
+        - "10.131.46.0/24"
+        - "10.132.46.0/24"
+
+    - group_name: "sc1wnprndb002"
+      description: "CHG0147230"
+      ip_addr_list:
+        - "10.120.100.224"
+
+    - group_name: "sc1wnprcmn250"
+      description: "CHG0147215"
+      ip_addr_list:
+        - "10.120.163.250"
+
+    - group_name: "retail_vmc_retail_db_servers"
+      description: "CHG0147260"
+      ip_addr_list:
+        - "10.233.0.60" # vmcwnprdcs01
+        - "10.233.0.62" # vmcwnprdto01
+        - "10.233.0.64" # vmcwnprdtp01
+
+    - group_name: "spotlight_monitoring_servers"
+      description: "CHG0147215"
+      ip_addr_list:
+        - "10.118.160.170" # whdpops02.group.williamhill.plc
+        - "10.118.160.171" # whdppresent02.group.williamhill.plc
+        - "10.118.160.172" # whdpservices02.group.williamhill.plc
+        - "10.118.160.172" # whdp02services.group.williamhill.plc
+
+    - group_name: "ld6_uno_db_servers"
+      description: "CHG0147209"
+      ip_addr_list:
+        - "10.118.160.161" # ld6wnprndb001.prod.williamhill.plc
+        - "10.118.160.162" # ld6wnprndb002.prod.williamhill.plc
+        - "10.118.160.163" # ld6wnprndb003.prod.williamhill.plc
+        - "10.118.160.164" # ld6wnprndb004.prod.williamhill.plc
+        - "10.118.160.165" # ld6wnprndb005.prod.williamhill.plc
+        - "10.118.160.166" # ld6wnprndb006.prod.williamhill.plc
+        - "10.118.160.169" # uno-ssrs
+        - "10.118.160.170" # whdpops02
+        - "10.118.160.172" # whdpservices02
+        - "10.118.160.174" # whdp02tabular
+
+    - group_name: "uipath_robot_servers"
+      description: "CHG0147311"
+      ip_addr_list:
+        - "10.120.66.59" # sc1wnprnwb30
+        - "10.120.66.60" # sc1wnprnwb31
+        - "10.120.66.61" # sc1wnprnwb32
+        - "10.120.66.62" # sc1wnprnwb33
+        - "10.120.66.63" # sc1wnprnwb34
+        - "10.120.66.64" # sc1wnprnwb35
+        - "10.120.66.65" # sc1wnprnwb38
+        - "10.120.66.66" # sc1wnprnwb39
+        - "10.120.66.67" # sc1wnprnwb40
+        - "10.120.66.68" # sc1wnprnwb41
+        - "10.120.71.0/24"
+
+    - group_name: "mrg_nyx_services_for_uipath"
+      description: "CHG0147311"
+      ip_addr_list:
+        - "10.1.76.11" # nbo.evokegaming.com
+        - "10.10.21.6" # nyxbo.mrgreen.services
+        - "10.10.21.12" # nyxbodk.mrgreen.services
+
+    - group_name: "uipath_robot_server_subnet"
+      description: "CHG0147284"
+      ip_addr_list:
+        - "10.120.71.0/24"
+
+    - group_name: "jira_mrgreen_zone"
+      description: "CHG0147284"
+      ip_addr_list:
+        - "10.40.220.10" # nat for jira.mrgreen.zone
+        - "172.17.100.225" # real ip for jira.mrgreen.zone
+
+    - group_name: "whdpmigration02"
+      description: "CHG0147317"
+      ip_addr_list:
+        - "10.118.160.175"
+
+    - group_name: "scc_uno_db_servers"
+      description: "CHG0147317"
+      ip_addr_list:
+      - "10.120.100.170" # whdpmigration01
+      - "10.120.100.17" # sc1wnprndb003
+      - "10.120.100.19" # sc1wnprndb005
+
+    - group_name: "whdpmigration01"
+      description: "CHG0147414"
+      ip_addr_list:
+      - "10.120.100.170" # whdpmigration01
+
+    - group_name: "citrix_controllers"
+      description: "CHG0147368"
+      ip_addr_list:
+      - "10.120.39.105" # sc1wnpreddc01
+      - "10.120.39.106" # sc1wnpreddc02
+
+    - group_name: "scc_non_whc_prod_vcentre"
+      description: "CHG0147368"
+      ip_addr_list:
+      - "10.126.238.4" # vcenter.sddc-54-72-69-180.vmwarevmc.com
+
+    - group_name: "scc_non_whc_prod_vsphere_net"
+      description: "CHG0147444"
+      ip_addr_list:
+      - "10.126.224.0/20"
+
+    - group_name: "irepraptcp02"
+      description: "CHG0147444"
+      ip_addr_list:
+      - "10.156.4.10"
+
+    - group_name: "aws_data_prod"
+      description: "CHG0147548"
+      ip_addr_list:
+      - "100.76.16.0/23" # williamhill-data-default-vpc-private-eu-west-1a
+      - "100.76.18.0/23" # williamhill-data-default-vpc-private-eu-west-1b
+      - "100.76.20.0/23" # williamhill-data-default-vpc-private-eu-west-1c
+
+    - group_name: "mars_on_prem_app_servers"
+      description: "CHG0147433"
+      ip_addr_list:
+      - "10.120.99.151" # sc1uxprnap43.prod.williamhill.plc
+      - "10.120.99.152" # sc1uxprnap44.prod.williamhill.plc
+
+    - group_name: "mars_rss_adapter"
+      description: "CHG0147433"
+      ip_addr_list:
+      - "10.181.5.167" # int-api-mars-rss-adapter.gib.prod.williamhill.plc
+
+    - group_name: "mrg-fileshare"
+      description: "CHG0147919"
+      ip_addr_list:
+      - "10.40.60.7" # mts-fs-01
+      - "10.40.60.107"
+
+    - group_name: "ld6-fileshare"
+      description: "CHG0152337"
+      ip_addr_list:
+      - "10.19.2.27" # ld6wnprefs01
+
+    - group_name: "gibux353-354-mgt"
+      description: "CHG0147891"
+      ip_addr_list:
+      - "10.180.139.143" # gibux353-mgt
+      - "10.180.139.144" # gibux354-mgt
+
+    - group_name: "sc1uxprnwb51"
+      description: "CHG0147891"
+      ip_addr_list:
+      - "10.120.67.51"
+
+    - group_name: "stjwn561"
+      description: "AWSMIG-253"
+      ip_addr_list:
+      - "10.120.104.14"
+
+    - group_name: "featurespace_ui"
+      description: "CHG0148052"
+      ip_addr_list:
+      - "10.180.74.35"
+
+    - group_name: "trs_mysql"
+      description: "CHG0148257"
+      ip_addr_list:
+      - "10.120.146.20"
+
+    - group_name: "prod_solarwinds"
+      description: "CHG0148302"
+      ip_addr_list:
+      - "10.120.162.122" # sc1wnpremn74
+      - "10.120.163.123" # sc1wnpremn75
+      - "10.120.163.132" # sc1wnpremn80
+      - "10.120.163.142" # sc1wnpremn77
+      - "10.120.163.143" # sc1wnpremn78
+
+    - group_name: "ireprnapsg01"
+      description: "CHG0148302"
+      ip_addr_list:
+      - "10.156.5.170" # ireprnapsg01.prod.williamhill.plc
+
+    - group_name: "scc_jumpboxes"
+      description: "CHG0148432"
+      ip_addr_list:
+      - "10.120.141.41" # sc1wnprcmg41
+      - "10.120.141.42" # sc1wnprcmg42
+      - "10.120.141.43" # sc1wnprcmg43
+      - "10.120.141.44" # sc1wnprcmg44
+
+    - group_name: "aws_whddos_oregon_f5s"
+      description: "CHG0148432"
+      ip_addr_list:
+      - "10.125.24.0/22"
+
+    - group_name: "jde_meridian_svrs"
+      description: "CHG0148470"
+      ip_addr_list:
+      - "10.155.0.12"
+      - "10.155.0.24"
+      - "10.155.0.44"
+
+    - group_name: "int-lb-backoffice"
+      description: "CHG0148498"
+      ip_addr_list:
+      - "10.180.74.54"
+
+    - group_name: "gib-int-api-bonuswallet"
+      description: "CHG0148632"
+      ip_addr_list:
+      - "10.181.4.170"
+
+    - group_name: "rundeck_db"
+      description: "CHG0148398"
+      ip_addr_list:
+      - "10.120.163.235" #sc1uxpredb235
+      - "10.120.163.236" #sc1uxpredb236
+
+    - group_name: "cde_jumphosts"
+      description: "CHG0148398"
+      ip_addr_list:
+      - "10.120.141.41" #sc1wnprcmg41
+      - "10.120.141.42" #sc1wnprcmg42
+      - "10.120.141.43" #sc1wnprcmg43
+      - "10.120.141.44" #sc1wnprcmg44
+
+    - group_name: "scc_tpam"
+      description: "CHG0148704"
+      ip_addr_list:
+      - "10.120.136.66" #Old to remove WC 03/05/21
+      - "10.120.33.147"
+
+    - group_name: "sc1pisilon01"
+      description: "CHG0148704"
+      ip_addr_list:
+        - "10.120.46.10"
+
+    - group_name: "aws_whddos_ireland"
+      description: "CHG0148830"
+      ip_addr_list:
+      - "10.125.5.0/24"
+
+    - group_name: "scc_uno_load_balancers"
+      description: "CHG0148856"
+      ip_addr_list:
+      - "10.120.74.11" #sc1prdadcnlb01
+      - "10.120.74.12" #sc1prdadcnlb02
+
+    - group_name: "whdppresent02"
+      description: "CHG0148856"
+      ip_addr_list:
+        - "10.118.160.171"
+
+    - group_name: "sc1uxprnwb040"
+      description: "CHG0148876"
+      ip_addr_list:
+        - "10.120.67.120"
+
+    - group_name: "prodjden"
+      description: "CHG0148876"
+      ip_addr_list:
+        - "10.155.0.12"
+
+    - group_name: "sc1uxprnft001"
+      description: "CHG0122284"
+      ip_addr_list:
+        - "10.120.67.66"
+
+    - group_name: "sc1uxprnap019"
+      description: "CHG0122284"
+      ip_addr_list:
+        - "10.120.99.34"
+
+    - group_name: "grp_prod1_dev1"
+      description: "CHG0122284"
+      ip_addr_list:
+        - "10.155.0.18" # prod1
+        - "10.155.0.48" # dev1
+
+    - group_name: "ld6wnprndb001"
+      description: "CHG0148614"
+      ip_addr_list:
+        - "10.118.160.161"
+
+    - group_name: "whdp02tabular"
+      description: "CHG0148971"
+      ip_addr_list:
+        - "10.118.160.174"
+
+    - group_name: "uno_mds"
+      description: "CHG0148975"
+      ip_addr_list:
+        - "10.118.160.174"
+
+    - group_name: "uno_ssrs"
+      description: "CHG0148976"
+      ip_addr_list:
+        - "10.118.160.169"
+
+    - group_name: "nyx-spain"
+      description: "CHG0148928"
+      ip_addr_list:
+        - "10.10.21.18"
+
+    - group_name: "sc1uxpremg26"
+      description: "CHG0149147"
+      ip_addr_list:
+        - "10.120.163.110"
+
+    - group_name: "aws-tss-vpc-prod"
+      description: "CHG0149147"
+      ip_addr_list:
+        - "100.79.16.0/20"
+
+    - group_name: "aws-tss-vpc-dev"
+      description: "CHG0149147"
+      ip_addr_list:
+        - "100.79.80.0/20"
+
+    - group_name: "whdpservices01"
+      description: "CHG0147981"
+      ip_addr_list:
+        - "10.120.100.84"
+
+    - group_name: "ld6wnprndb005"
+      description: "CHG0147981"
+      ip_addr_list:
+        - "10.118.160.165"
+
+    - group_name: "uno-remote-access"
+      description: "CHG0149220"
+      ip_addr_list:
+        - "10.120.100.28"
+
+    - group_name: "uno-presentation-ld6"
+      description: "CHG0149220"
+      ip_addr_list:
+        - "10.118.148.51"
+
+    - group_name: "uno-dmtfs"
+      description: "CHG0149220"
+      ip_addr_list:
+        - "10.120.100.241"
+
+    - group_name: "ld6-ncde-stingray"
+      description: "CHG0149220"
+      ip_addr_list:
+        - "10.118.148.11"
+        - "10.118.148.12"
+
+    - group_name: "sc1wnprncp001"
+      description: "CHG0149277"
+      ip_addr_list:
+        - "10.120.66.112"
+
+    - group_name: "prod1"
+      description: "CHG0149277"
+      ip_addr_list:
+        - "10.155.0.18"
+
+    - group_name: "int-pres-clp-sc1"
+      description: "int-pres-clp.sc1.prod.williamhill.plc"
+      ip_addr_list:
+        - "10.121.4.150"
+
+    - group_name: "sofia-commvault-server"
+      description: "CHG0149455"
+      ip_addr_list:
+        - "10.53.96.36"
+
+    - group_name: "ld6_lab_esxi_hosts"
+      description: "CHG0149246"
+      ip_addr_list:
+        - "10.61.8.13"
+        - "10.61.8.14"
+        - "10.61.8.15"
+
+    - group_name: "bonusadmin_mrgreen_services"
+      description: "CHG0149626"
+      ip_addr_list:
+        - "10.10.11.45"
+
+    - group_name: "ping_federate_aws_subnets"
+      description: "CHG0149589 CHG0149826"
+      ip_addr_list:
+        - "100.106.128.0/20"
+        - "100.106.160.0/20"
+        - "100.106.192.0/20"
+        - "100.75.32.0/20"
+        - "100.75.64.0/20"
+        - "100.75.0.0/20"
+
+    - group_name: "ad_autopilot_poc"
+      description: "CHG0149589"
+      ip_addr_list:
+        - "10.120.33.240"
+
+    - group_name: "campaignmanager_mrgreen_zone"
+      description: "CHG0149628"
+      ip_addr_list:
+        - "10.10.11.115"
+
+    - group_name: "comm_vault_servers_ld6"
+      description: "CHG0149801"
+      ip_addr_list:
+        - "10.112.46.30"
+        - "10.112.46.31"
+        - "10.112.46.32"
+        - "10.112.46.33"
+        - "10.112.46.34"
+        - "10.112.46.35"
+        - "10.112.46.36"
+        - "10.112.46.37"
+        - "10.112.46.38"
+        - "10.112.46.39"
+
+    - group_name: "comm_vault_servers_scc"
+      description: "CHG0149801"
+      ip_addr_list:
+        - "10.120.46.30"
+        - "10.120.46.31"
+        - "10.120.46.32"
+        - "10.120.46.35"
+        - "10.120.46.36"
+        - "10.120.46.37"
+        - "10.120.46.38"
+        - "10.120.46.39"
+        - "10.120.47.11"
+        - "10.120.47.12"
+        - "10.120.47.13"
+        - "10.120.47.14"
+        - "10.120.47.15"
+
+
+    - group_name: "vsa_proxy_vmc"
+      description: "CHG0149801"
+      ip_addr_list:
+        - "10.156.5.133"
+
+    - group_name: "esx_hosts_vmc_scc_non-whc"
+      description: "CHG0149801"
+      ip_addr_list:
+        - "10.126.226.0/24"
+        - "10.126.225.0/24"
+
+    - group_name: "sc1_cx_nets"
+      description: "CHG0079131"
+      ip_addr_list:
+        - "10.121.0.0/18"
+        - "10.121.64.0/18"
+
+    - group_name: "grp_commvault"
+      description: "CHG0150040"
+      ip_addr_list:
+        - "10.120.46.30"
+        - "10.112.46.30"
+        - "10.53.98.37"
+
+    - group_name: "mars-backofficeadmin-users"
+      description: "RITM0148510"
+      ip_addr_list:
+        - "10.40.10.221"  # Kinga Szejka
+        - "10.40.10.155"  # Krasimir Krumov
+        - "10.40.10.132"  #Miriana Micallef
+
+    - group_name: "mars-backofficeadmin"
+      description: "RITM0148510"
+      ip_addr_list:
+        - "10.120.74.32"  # backofficeadmin-mar.prod.williamhill.plc
+
+    - group_name: "sc1-vcenter"
+      description: "CHG0150040"
+      ip_addr_list:
+        - "10.120.134.253" # sc1prapvc01.prod.williamhill.plc
+
+    - group_name: "f5_big-iq_nonprod_caesars"
+      description: "CHG0150343"
+      ip_addr_list:
+        - "100.98.52.234"
+
+    - group_name: "vmc_preprod_and_dev_vropss_appliances"
+      description: "CHG0150362"
+      ip_addr_list:
+        - "10.208.63.254"
+        - "10.195.10.253"
+
+    - group_name: "bulgaria_sec_isp"
+      description: "CHG0125710"
+      ip_addr_list:
+        - "92.247.8.98"
+
+    - group_name: "groupras-williamhill-plc-uk"
+      description: "CHG0125710"
+      ip_addr_list:
+        - "10.120.69.202"
+
+    - group_name: "vmc_prod_vrops_appliances"
+      description: "CHG0150584"
+      ip_addr_list:
+       - "10.156.1.16"
+       - "10.156.3.140"
+
+    - group_name: "bulgaria_lan"
+      description: "CHG0125710"
+      ip_addr_list:
+        - "10.53.32.0/23"
+
+    - group_name: "gib-int-api-bonuswallet-2"
+      description: "CHG0148632"
+      ip_addr_list:
+        - "10.181.5.170"
+
+    - group_name: "scc_accurate_citrix"
+      description: "CHG0150752"
+      ip_addr_list:
+        - "10.120.33.64/27"
+        - "10.120.40.0/24"
+
+    - group_name: "sc1wnprelic01"
+      description: "CHG0150752"
+      ip_addr_list:
+        - "10.120.39.108"
+
+    - group_name: "sc1wnprefs04"
+      description: "CHG0150752"
+      ip_addr_list:
+        - "10.120.39.109"
+
+    - group_name: "sc1uxprcmn001"
+      description: "CHG0150768"
+      ip_addr_list:
+        - "10.120.163.38"
+
+    - group_name: "sc1wnprens01_bo_vip"
+      description: "CHG0150911"
+      ip_addr_list:
+        - "10.120.69.207"
+
+    - group_name: "trading_aws_subnets"
+      description: "CHG0150798"
+      ip_addr_list:
+        - "100.72.128.0/20"
+        - "100.72.144.0/20"
+
+    - group_name: "sc1wnprens01_snip"
+      description: "CHG0150911"
+      ip_addr_list:
+        - "10.120.69.200"
+
+    - group_name: "sc1wnprewb10-new"
+      description: "CHG0151059"
+      ip_addr_list:
+      - "10.120.104.26"
+
+    - group_name: "sc1uxprgdb05-new"
+      description: "CHG0151059"
+      ip_addr_list:
+      - "10.120.104.25"
+
+    - group_name: "sc1wnpreap10-new"
+      description: "CHG0151059"
+      ip_addr_list:
+      - "10.120.104.24"
+
+    - group_name: "brs_openbet_citrix"
+      description: "CHG0151059"
+      ip_addr_list:
+      - "10.210.39.142" # brswnprexa142
+      - "10.210.39.143" # brswnprexa143
+      - "10.210.39.148" # brswnprexa148
+      - "10.210.39.149" # brswnprexa149
+      - "10.210.39.150" # brswnprexa150
+      - "10.210.39.151" # brswnprexa151
+
+    - group_name: "aws_unity_db"
+      description: "CHG0151090"
+      ip_addr_list:
+      - "100.77.96.0/20"
+      - "100.92.0.0/17"
+      - "100.93.0.0/17"
+      - "100.75.96.0/20"
+      - "100.92.128.0/17"
+
+    - group_name: "trs_users"
+      description: "CHG0151198"
+      ip_addr_list:
+        - "10.1.13.0/24"
+        - "10.1.18.0/24"
+        - "10.1.30.0/24"
+        - "10.1.62.0/23"
+        - "10.1.66.0/23"
+        - "10.1.74.0/24"
+        - "10.1.112.0/23"
+        - "10.180.18.0/23"
+
+    - group_name: "aws_prod_ireland_vpc_trading"
+      description: "CHG0151337"
+      ip_addr_list:
+        - "100.72.128.0/19"
+
+    - group_name: "sc1wnprrmimg01"
+      description: "sc1wnprrmimg01"
+      ip_addr_list:
+        - "10.120.104.20"
+
+    - group_name: "sc1wndremg002"
+      description: "sc1wndremg002"
+      ip_addr_list:
+        - "10.120.194.52"
+
+    - group_name: "sc1wnpredc17"
+      description: "sc1wnpredc17"
+      ip_addr_list:
+        - "10.120.69.214"
+
+    - group_name: "brs_sc1_wnpremg002"
+      description: "CHG0151491"
+      ip_addr_list:
+        - "10.210.194.52"
+        - "10.120.194.52"
+
+    - group_name: "ossec_splunk"
+      description: "ossec_splunk"
+      ip_addr_list:
+      - "10.120.163.99"
+      - "10.120.163.38"
+      - "10.120.163.95"
+      - "10.120.163.96"
+
+    - group_name: "rodc_subnets"
+      description: "rodc_subnets"
+      ip_addr_list:
+      - "163.114.224.0/24"
+      - "163.114.225.0/24"
+      - "163.114.226.0/24"
+      - "163.114.227.0/24"
+      - "163.114.228.0/24"
+      - "163.114.229.0/24"
+      - "163.114.230.0/24"
+      - "163.114.231.0/24"
+      - "163.114.231.0/24"
+
+    - group_name: "sc1wnpredc15-17"
+      description: "sc1wnpredc15-17"
+      ip_addr_list:
+      - "10.120.69.213"
+      - "10.120.69.214"
+
+    - group_name: "uno-present-readonly"
+      description: "CHG0151587"
+      ip_addr_list:
+      - "10.118.144.32"
+
+    - group_name: "emis-servers"
+      description: "NETACCESS-375"
+      ip_addr_list:
+      - "10.120.146.154"
+      - "10.120.104.8"
+
+    - group_name: "msc-pure-storage"
+      description: "CHG0151660"
+      ip_addr_list:
+      - "10.129.11.1"
+      - "10.129.11.2"
+      - "10.129.11.3"
+      - "10.129.11.4"
+      - "10.129.11.5"
+      - "10.129.11.6"
+
+    - group_name: "sc1-pure-storage"
+      description: "CHG0151660"
+      ip_addr_list:
+      - "10.120.143.171"
+      - "10.120.143.172"
+      - "10.120.143.173"
+      - "10.120.143.181"
+      - "10.120.143.182"
+      - "10.120.143.183"
+
+    - group_name: "sc1-isilon-storage"
+      description: "CHG0151660"
+      ip_addr_list:
+      - "10.120.46.10"
+      - "10.120.46.11"
+      - "10.120.46.12"
+      - "10.120.46.13"
+      - "10.120.46.14"
+      - "10.120.46.15"
+
+    - group_name: "suricata-ids"
+      description: "CHG0151854"
+      ip_addr_list:
+      - "10.120.104.27"
+      - "10.120.104.28"
+
+    - group_name: "ob_live_vpn"
+      description: "CHG0151859"
+      ip_addr_list:
+      - "10.194.20.0/24"
+
+    - group_name: "sc1uxpremn81"
+      description: "CHG0151859"
+      ip_addr_list:
+      - "10.120.163.81"
+
+    - group_name: "whus-vpn-subnet"
+      description: "CHG0151892"
+      ip_addr_list:
+      - "10.18.0.0/23"
+      - "10.58.20.0/24"
+      - "172.17.85.0/24"
+      - "172.17.3.0/24"
+
+    - group_name: "whlan-prod"
+      description: "CHG0151892"
+      ip_addr_list:
+      - "10.120.69.201"
+
+    - group_name: "unity-prod"
+      description: "CHG0151897"
+      ip_addr_list:
+      - "100.73.96.0/20"
+
+    - group_name: "aws_central_ingress"
+      description: "CHG0151941"
+      ip_addr_list:
+      - "100.79.0.0/20"
+      - "100.78.32.0/20"
+      - "100.78.64.0/20"
+
+    - group_name: "scc_splunk"
+      description: "CHG0151941"
+      ip_addr_list:
+      - "10.120.163.35"
+
+    - group_name: "epos_datastore_user_access"
+      description: "RITM0156908"
+      ip_addr_list:
+      - "10.3.20.6" # WH0003475
+
+    - group_name: "epos_datastore_server"
+      description: "RITM0156908"
+      ip_addr_list:
+      - "10.120.146.154"
+
+    - group_name: "irewnprejamf01-02"
+      description: "CHG0152079"
+      ip_addr_list:
+      - "10.120.69.228"
+      - "10.120.69.229"
+
+    - group_name: "ad_sccm_poc"
+      description: "CHG0152108"
+      ip_addr_list:
+        - "10.120.33.245"
+
+    - group_name: "ac_vpn_ranges"
+      description: "ac vpn ranges"
+      ip_addr_list:
+        - "192.168.48.0/20"
+        - "192.168.0.0/21"
+        - "192.168.12.0/22"
+        - "192.168.16.0/22"
+
+    - group_name: "service_now_grp"
+      description: "CHG0151491"
+      ip_addr_list:
+      - "199.91.137.0/24"
+      - "37.98.232.0/24"
+      - "148.139.3.0/24"
+      - "148.139.2.0/24"
+
+    - group_name: "crowd_platform_grp"
+      description: "CHG0151491"
+      ip_addr_list:
+      - "3.9.50.26"
+      - "18.133.46.22"
+      - "54.220.110.201"
+      - "35.177.140.147"
+      - "18.133.96.184"
+      - "134.213.60.128"
+      - "52.49.230.246"
+      - "18.133.84.226"
+
+    - group_name: "wg-wrproxy-usa"
+      description: "CHG0151491"
+      ip_addr_list:
+      - "208.87.136.0/23"
+
+    - group_name: "bomgar_hosts"
+      description: "CHG0152247 dynamic"
+      ip_addr_list:
+        - "10.210.141.42"
+        - "10.210.141.43"
+        - "10.120.141.42"
+        - "10.120.141.43"
+        - "10.180.141.42"
+        - "10.180.141.43"
+        - "10.112.15.42"
+        - "10.112.15.43"
+
+    - group_name: "sailpoint_test_vas"
+      description: "NETAR-197"
+      ip_addr_list:
+        - "10.120.70.20"
+        - "10.118.208.110"
+        - "10.120.70.14"
+
+    - group_name: "testad_iq"
+      description: "NETAR-197"
+      ip_addr_list:
+        - "10.120.33.247"
+
+    - group_name: "sc1wnprnmg020"
+      description: "NETAR-200"
+      ip_addr_list:
+        - "10.120.100.28"
+
+    - group_name: "tableau_mrgreen_zone"
+      description: "NETAR-260"
+      ip_addr_list:
+        - "10.20.30.27"
+
+    - group_name: "aws_sports_whapi"
+      description: "NETAR-352"
+      ip_addr_list:
+        - "100.73.112.0/22"
+
+    - group_name: "uno_readonly_db"
+      description: "NETAR-403"
+      ip_addr_list:
+        - "10.118.160.166"
+        - "10.118.160.162"
+
+    - group_name: "int-lb-oxi-proxy"
+      description: "NETAR-466"
+      ip_addr_list:
+        - "10.180.74.140"
+
+    - group_name: "sc1_cde_linux_jump"
+      description: "NETAR-270"
+      ip_addr_list:
+        - "10.120.141.13"
+        - "10.120.141.14"
+
+    - group_name: "evoke_report_services"
+      description: "NETAR-579"
+      ip_addr_list:
+        - "10.40.220.18" # NAT for EvokeGaming Reports
+        - "10.1.92.11" # Real IP for EvokeGaming Reports
+
+    - group_name: "trading_reports_server"
+      description: "NETAR-670"
+      ip_addr_list:
+      - "10.120.101.10" # sc1wnprecp01
+
+    - group_name: "dfs_root_namespace_servers"
+      description: "NETAR-797"
+      ip_addr_list:
+        - "10.120.194.48"
+        - "10.120.194.49"
+
+    - group_name: "malta-sliema-dc-access"
+      description: "NETAR-797"
+      ip_addr_list:
+        - "10.40.110.9"
+        - "10.40.110.10"
+
+    - group_name: "ld6-scc-dcs"
+      description: "NETAR-797"
+      ip_addr_list:
+        - "10.120.76.12"
+        - "10.118.208.68"
+
+    - group_name: "gibwnprefs01"
+      description: "NETAR-1052"
+      ip_addr_list:
+        - "10.180.194.20"
+
+    - group_name: "aws_central_prod"
+      description: "NETAR-1082"
+      ip_addr_list:
+        - "100.76.144.0/23"
+        - "100.76.146.0/23"
+        - "100.76.148.0/23"
+
+    - group_name: "aspect_stunnel"
+      description: "NETAR-1082"
+      ip_addr_list:
+        - "10.120.65.134"
+
+    - group_name: "sc1_darktrace"
+      description: "NETAR-1203"
+      ip_addr_list:
+        - "10.120.163.156"
+
+    - group_name: "aws_darktrace_master"
+      description: "NETAR-1203"
+      ip_addr_list:
+        - "52.52.139.68"
+
+    - group_name: "direct_access_servers"
+      description: "NETAR-1211"
+      ip_addr_list:
+        - "10.120.76.13"
+        - "10.120.76.14"
+
+    - group_name: "sc1uxprsap02"
+      description: "NETAR-1344"
+      ip_addr_list:
+        - "10.120.65.101"
+
+    - group_name: "sap_datacenter_dr"
+      description: "NETAR-1344"
+      ip_addr_list:
+        - "34.91.42.149"
+        - "34.90.197.160"
+
+    - group_name: "sap_datacenter_pri"
+      description: "NETAR-1344"
+      ip_addr_list:
+        - "34.107.112.35"
+        - "34.89.141.13"
+        - "34.89.143.40"
+
+    - group_name: "sap_datacenter_frankfurt"
+      description: "NETAR-1369"
+      ip_addr_list:
+        - "35.246.224.53"
+        - "34.107.88.2"
+
+    - group_name: "manila-isp"
+      description: "NETAR-1847"
+      ip_addr_list:
+        - "115.84.238.240/29"
+        - "116.50.151.24/29"
+
+    - group_name: "hatwnprecp001"
+      description: "NETAR-2035"
+      ip_addr_list:
+        - "10.135.10.11"
+
+    - group_name: "cdgwnprecp001"
+      description: "NETAR-2972"
+      ip_addr_list:
+        - "10.135.12.10"
+
+    - group_name: "sc1wnprwsus01"
+      description: "NETAR-2035"
+      ip_addr_list:
+        - "10.120.163.114"
+
+    - group_name: "scc_smtp"
+      description: "NETAR-2035"
+      ip_addr_list:
+        - "10.120.33.164"
+        - "10.120.33.165"
+
+    - group_name: "sofia_fileserver"
+      description: "NETAR-2150"
+      ip_addr_list:
+        - "10.53.98.15"
+
+    - group_name: "mrg_featurespace"
+      description: "NETAR-2216"
+      ip_addr_list:
+        - "10.10.60.11"
+
+    - group_name: "scc_ilo_network"
+      description: "NETAR-2231"
+      ip_addr_list:
+        - "10.120.130.0/24"
+        - "10.120.80.0/24"
+
+    - group_name: "gib_ilo_network"
+      description: "NETAR-2231"
+      ip_addr_list:
+        - "10.180.130.0/24"
+        - "10.180.80.0/24"
+
+    - group_name: "sailpoint_vas"
+      description: "NETAR-197"
+      ip_addr_list:
+        - "10.118.208.100"
+        - "10.118.208.110"
+
+    - group_name: "irewnpreftp01-ftp"
+      description: "NETAR-197"
+      ip_addr_list:
+        - "10.120.69.230"
+
+    - group_name: "dc_888_ips"
+      description: "NETAR-2260"
+      ip_addr_list:
+        - "192.118.64.27"
+        - "192.118.64.28"
+        - "192.118.64.29"
+
+    - group_name: "irewnpreftp01"
+      description: "NETAR-2260"
+      ip_addr_list:
+        - "10.120.69.230"
+
+    - group_name: "sailpoint_iq_servers"
+      description: "NETAR-2260"
+      ip_addr_list:
+        - "10.120.70.16"
+        - "10.120.70.22"
+        - "10.118.208.102"
+        - "10.118.208.112"
+
+    - group_name: "ireuxppbkvsa01-02"
+      description: "NETAR-2331"
+      ip_addr_list:
+        - "10.156.5.35"
+        - "10.156.5.36"
+
+    - group_name: "brswntstdb01"
+      description: "NETAR-2319"
+      ip_addr_list:
+        - "10.210.146.207"
+
+    - group_name: "oneview_appliances"
+      description: "NETAR-2487"
+      ip_addr_list:
+        - "10.112.11.254"
+        - "10.120.163.110"
+        - "10.180.163.110"
+        - "10.210.163.110"
+
+    - group_name: "sc1uxpremg27"
+      description: "NETAR-2487"
+      ip_addr_list:
+        - "10.120.163.115"
+
+    - group_name: "sailpoint_ssh_tunnel_ips"
+      description: "NETAR-2571"
+      ip_addr_list:
+        - "52.206.133.183"
+        - "52.206.132.240"
+        - "52.206.130.59"
+        - "35.157.132.22"
+        - "35.157.185.79"
+        - "35.157.251.228"
+        - "18.130.210.174"
+        - "18.130.148.201"
+        - "35.178.220.78"
+        - "52.65.42.92"
+        - "13.55.78.212"
+        - "3.24.127.50"
+
+    - group_name: "cde_monitoring_nets"
+      description: "NETAR-2692"
+      ip_addr_list:
+        - "10.120.163.0/24"
+        - "10.180.163.0/24"
+        - "10.210.163.0/24"
+        - "10.112.13.0/24"
+
+    - group_name: "brsapprcmg002"
+      description: "NETAR-2494"
+      ip_addr_list:
+        - "10.210.163.13"
+
+    - group_name: "retail_dev_vmc_workstation"
+      description: "NETAR-2723"
+      ip_addr_list:
+        - "10.233.11.50"
+
+    - group_name: "sc1wnprnap002"
+      description: "NETAR-2723"
+      ip_addr_list:
+        - "10.120.153.10"
+
+    - group_name: "sc1wnprefs03"
+      description: "NETAR-2734"
+      ip_addr_list:
+        - "10.120.192.162"
+
+    - group_name: "sc1prapli01"
+      description: "NETAR-2697"
+      ip_addr_list:
+        - "10.120.134.246"
+
+    - group_name: "slmprmrgov01"
+      description: "NETAR-2691"
+      ip_addr_list:
+        - "10.40.60.60"
+
+    - group_name: "brsuxpremn004"
+      description: "NETAR-2860"
+      ip_addr_list:
+        - "10.210.163.73"
+
+    - group_name: "parkviewscc"
+      description: "NETAR-3024"
+      ip_addr_list:
+        - "10.120.163.112"
+        - "10.120.163.113"
+
+    - group_name: "parkviewext"
+      description: "NETAR-3024"
+      ip_addr_list:
+        - "52.167.178.64"
+        - "52.167.178.66"
+        - "52.167.178.67"
+        - "52.167.178.68"
+        - "52.184.234.3"
+        - "52.184.234.4"
+        - "52.184.234.5"
+        - "207.54.131.225"
+        - "207.54.131.226"
+        - "207.54.131.228"
+        - "207.54.131.229"
+
+    - group_name: "duuf-ntsadmin-vip"
+      description: "NETAR-3001"
+      ip_addr_list:
+        - "10.213.2.18"
+
+    - group_name: "duuc-qmanager-vip"
+      description: "NETAR-3001"
+      ip_addr_list:
+        - "10.213.2.35"
+
+    - group_name: "duuc-passivests-vip"
+      description: "NETAR-3001"
+      ip_addr_list:
+        - "10.213.2.52"
+
+    - group_name: "duuc-customeradmin-vip"
+      description: "NETAR-3001"
+      ip_addr_list:
+        - "10.213.2.41"
+
+    - group_name: "irewnprnrbt024"
+      description: "NETAR-3001"
+      ip_addr_list:
+        - "10.120.71.34"
+
+    - group_name: "networks_888"
+      description: "NETAR-3137"
+      ip_addr_list:
+        - "10.20.0.0/16"
+        - "10.105.0.0/16"
+        - "10.50.20.0/22"
+        - "10.50.24.0/22"
+        - "10.231.0.0/20"
+        - "10.213.0.0/20"
+
+    - group_name: "ad-servers-888"
+      description: "NETAR-3137"
+      ip_addr_list:
+        - "10.154.124.13"
+        - "10.154.24.13"
+        - "10.105.5.100"
+        - "10.105.5.101"
+        - "10.215.15.21"
+        - "10.215.15.22"
+        - "172.16.129.23"
+        - "172.16.129.24"
+        - "10.50.25.100"
+        - "10.50.25.101"
+        - "10.20.5.106"
+        - "10.20.5.12"
+        - "10.20.5.21"
+        - "10.20.5.20"
+        - "10.20.5.11"
+        - "10.17.38.11"
+        - "10.17.38.12"
+        - "10.19.4.21"
+        - "10.19.4.22"
+
+    - group_name: "ld6_fileservers"
+      description: "NETAR-3402"
+      ip_addr_list:
+        - "10.19.2.28"
+        - "10.19.2.29"
+
+    - group_name: "brswndredb04"
+      description: "NETAR-3366"
+      ip_addr_list:
+        - "10.210.65.69"
+
+    - group_name: "irewnpredb04"
+      description: "NETAR-3366"
+      ip_addr_list:
+        - "10.120.65.69"
+
+    - group_name: "sc1wnprgdb13-14"
+      description: "NETAR-3469"
+      ip_addr_list:
+      - "10.120.146.116"
+      - "10.120.146.115"
+      - "10.120.99.115"
+      - "10.120.99.116"
+
+    - group_name: "brs-tna-servers"
+      description: "NETAR-3469"
+      ip_addr_list:
+        - "10.210.146.207"
+        - "10.210.146.206"
+
+    - group_name: "aws_webproxy"
+      description: "NETAR-3398"
+      ip_addr_list:
+        - "100.72.16.0/20"
+        - "100.72.48.0/20"
+        - "100.72.80.0/20"
+
+    - group_name: "citrix_corp_tech"
+      description: "NETAR-3525"
+      ip_addr_list:
+        - "10.120.69.208"
+
+    - group_name: "solarwinds_pollers"
+      description: "NETAR-3607"
+      ip_addr_list:
+        - "10.120.138.195"
+        - "10.120.138.196"
+        - "10.120.138.197"
+        - "10.120.138.198"
+
+    - group_name: "solarwinds_dsts"
+      description: "NETAR-3607"
+      ip_addr_list:
+        - "10.0.0.0/8"
+        - "192.168.9.0/24"
+
+    - group_name: "solarwinds_primary_poller"
+      description: "NETAR-3607"
+      ip_addr_list:
+        - "10.120.138.195"
+
+    - group_name: "solarwinds_webserver"
+      description: "NETAR-3607"
+      ip_addr_list:
+        - "10.120.138.199"
+
+    - group_name: "ld6_powerbi"
+      description: "NETAR-3725"
+      ip_addr_list:
+        - "10.118.214.33"
+        - "10.118.214.34"
+
+    - group_name: "solarwinds_db"
+      description: "NETAR-3739"
+      ip_addr_list:
+        - "10.120.138.190"
+
+    - group_name: "manila_esxi_hosts"
+      description: "NETAR-3806"
+      ip_addr_list:
+        - "10.123.198.0/24"
+        - "10.123.125.0/25"
+
+    - group_name: "mnlprapvr01"
+      description: "NETAR-3806"
+      ip_addr_list:
+        - "10.123.125.60"
+
+    - group_name: "vsan_witness"
+      description: "NETAR-3806"
+      ip_addr_list:
+        - "10.120.134.241"
+        - "10.120.134.238"
+        - "10.120.134.253"
+
+    - group_name: "manila_esxi_host"
+      description: "NETAR-3806"
+      ip_addr_list:
+        - "10.123.210.128/25"
+
+    - group_name: "scc_120"
+      description: "NETAR-3782"
+      ip_addr_list:
+        - "10.120.0.0/16"
+
+    - group_name: "net_10_0_0_0s8"
+      description: "NETAR-3885"
+      ip_addr_list:
+        - "10.0.0.0/8"
+
+    - group_name: "splunk_aws"
+      description: "NETAR-3885"
+      ip_addr_list:
+        - "100.72.96.0/20"
+        - "100.74.48.0/20"
+        - "100.76.0.0/20"
+
+    - group_name: "mi_db"
+      description: "NETAR-3969"
+      ip_addr_list:
+        - "10.120.104.16"
+
+    - group_name: "testad"
+      description: "NETAR-3952"
+      ip_addr_list:
+        - "10.120.33.192/26"
+
+    - group_name: "ld6wnprwsus02"
+      description: "NETAR-7245"
+      ip_addr_list:
+        - "10.19.2.45"
+
+    - group_name: "sc1jump1"
+      description: "NETAR-3952"
+      ip_addr_list:
+        - "10.120.151.59"
+
+    - group_name: "wh-data-duo-prod-sql2019-ec2"
+      description: "NETAR-3922"
+      ip_addr_list:
+         - "100.76.19.254"
+
+    - group_name: "aws_centralised_sftp"
+      description: "NETAR-4187"
+      ip_addr_list:
+         - "100.79.16.0/20"
+         - "100.79.48.0/20"
+         - "100.79.80.0/20"
+
+    - group_name: "ro_vpn_888"
+      description: "NETAR-888"
+      ip_addr_list:
+         - "10.105.220.0/22"
+
+    - group_name: "ciprian_graure_888"
+      description: "NETAR-888"
+      ip_addr_list:
+         - "10.105.14.11"
+
+    - group_name: "pte_db_tier"
+      description: "NETAR-4497"
+      ip_addr_list:
+         - "10.114.98.0"
+
+    - group_name: "sc1uxpremg30"
+      description: "NETAR-4497"
+      ip_addr_list:
+         - "10.120.136.30"
+
+    - group_name: "ncde_jumphosts"
+      description: "NETAR-69"
+      ip_addr_list:
+         - "10.120.151.13"
+         - "10.120.151.14"
+
+    - group_name: "nessus_servers"
+      description: "NETAR-4737"
+      ip_addr_list:
+         - "172.17.200.28"
+         - "10.180.142.230"
+         - "10.1.43.55"
+         - "10.10.220.55"
+
+    - group_name: "ld6wnprecp001"
+      description: "NETAR-4794"
+      ip_addr_list:
+         - "10.19.2.26"
+         - "10.19.2.30"
+
+
+    - group_name: "splunk_aws_prod"
+      description: "NETAR-4814"
+      ip_addr_list:
+         - "100.72.96.0/20"
+
+    - group_name: "ld6wnpredb02"
+      description: "NETAR-5144"
+      ip_addr_list:
+        - "10.118.214.62"
+
+    - group_name: "sofwnprefs02"
+      description: "NETAR-5282"
+      ip_addr_list:
+        - "10.53.98.22"
+
+    - group_name: "sc1uxprein14"
+      description: "NETAR-5282"
+      ip_addr_list:
+        - "10.120.145.37"
+
+    - group_name: "wh_iam"
+      description: "NETAR-5227"
+      ip_addr_list:
+        - "10.120.194.22"
+        - "10.120.194.23"
+
+    - group_name: "ld6wndvdb02"
+      description: "NETAR-5310"
+      ip_addr_list:
+        - "10.118.214.50"
+
+    - group_name: "ro_build_network"
+      description: "NETAR-5246"
+      ip_addr_list:
+        - "10.105.135.0/24"
+
+    - group_name: "iam-prod-preprod"
+      description: "NETAR-5341"
+      ip_addr_list:
+        - "10.120.70.16"
+        - "10.120.70.22"
+
+    - group_name: "cluster-vas"
+      description: "NETAR-5341"
+      ip_addr_list:
+        - "10.120.70.14"
+        - "10.120.70.20"
+
+    - group_name: "sailpoint-sftp"
+      description: "NETAR-5341"
+      ip_addr_list:
+        - "10.120.145.37"
+
+    - group_name: "iam-new-jump-server"
+      description: "NETAR-5341"
+      ip_addr_list:
+        - "10.19.2.96"
+
+    - group_name: "cms_spectate"
+      description: "NETAR-5532"
+      ip_addr_list:
+        - "54.76.76.29"
+        - "54.54.76.29"
+        - "54.154.80.106"
+        - "54.73.60.230"
+
+    - group_name: "hpe_synergy_oneview"
+      description: "NETAR-5643"
+      ip_addr_list:
+        - "10.210.130.70"
+
+    - group_name: "sftp_sc1uxprnap70"
+      description: "NETAR-5643"
+      ip_addr_list:
+        - "10.120.146.135"
+
+    - group_name: "scc_netscalers"
+      description: "NETAR-5751"
+      ip_addr_list:
+        - "10.120.69.198"
+        - "10.120.69.199"
+        - "10.120.69.200"
+
+    - group_name: "jamf_cloud"
+      description: "NETAR-5822"
+      ip_addr_list:
+        - "3.8.240.231"
+        - "35.176.203.6"
+        - "13.41.154.59"
+        - "3.11.42.21"
+        - "18.135.155.218"
+        - "18.168.143.142"
+        - "18.135.241.236"
+        - "18.168.141.199"
+        - "3.11.44.253"
+        - "3.10.137.75"
+        - "3.9.2.225"
+        - "3.11.115.18"
+        - "35.178.147.36"
+        - "18.134.197.23"
+        - "35.176.159.21"
+        - "18.132.124.105"
+        - "13.40.247.171"
+        - "52.49.168.205"
+        - "3.8.240.231"
+        - "35.176.203.6"
+
+    - group_name: "grp-net-kafka-racebook-addrs-dest"
+      description: "NETAR-5796"
+      ip_addr_list:
+        - "3.106.33.249"
+        - "3.106.155.65"
+
+    - group_name: "grp-net-kafka-racebook-addrs-src"
+      description: "NETAR-5796"
+      ip_addr_list:
+      - "10.120.101.11" # sc1wnpreap001
+      - "10.120.101.12" # sc1wnpreap006
+
+    - group_name: "corp-engineering-servers"
+      description: "NETAR-6045"
+      ip_addr_list:
+        - "10.120.194.128/27"
+        - "10.120.104.0/27"
+
+    - group_name: "grp-net-crucial_comp"
+      description: "NETAR-6032"
+      ip_addr_list:
+      - "100.76.179.0/24"
+
+    - group_name: "semperis-dsp-mgmt-svr"
+      description: "NETAR-6071"
+      ip_addr_list:
+      - "10.120.194.134" # irewnpreadfr01
+
+    - group_name: "semperis-adfr-svr"
+      description: "NETAR-6071"
+      ip_addr_list:
+      - "10.120.194.135" # irewnpredsp01
+
+    - group_name: "non-vmc-ad-dsp-agents"
+      description: "NETAR-6071"
+      ip_addr_list:
+      - "10.210.194.11" # brswnpredc01
+      - "10.19.2.21" # ld6wnpredc01
+
+    - group_name: "all-non-vmc-ad-with-semperis"
+      description: "NETAR-6071"
+      ip_addr_list:
+      - "10.19.2.21" # ld6wnpredc01
+      - "10.19.2.22" # ld6wnpredc02
+      - "10.55.9.11" # krawnpredc01
+      - "10.55.9.12" # krawnpredc02
+      - "10.40.110.9" # slmwnpredc01
+      - "10.40.110.10" # slmwnpredc02
+      - "10.123.197.11" # mnlwnpredc02
+      - "10.123.197.16" # mnlwnpredc03
+      - "10.210.194.12" # brswnpredc02
+      - "10.210.194.13" # brswnpredc03
+      - "10.180.194.12" # gibwnpredc02
+      - "10.180.194.13" # gibwnpredc03
+      - "100.72.225.135" # irewnprdc01
+      - "100.72.225.167" # irewnprdc02
+
+    - group_name: "non-vmc-pki-svrs"
+      description: "NETAR-6071"
+      ip_addr_list:
+      - "10.210.194.31" # brswnpredc01
+
+    - group_name: "aws-ad-adfr-agents"
+      description: "NETAR-6071"
+      ip_addr_list:
+      - "100.72.225.135" # irewnprdc01
+      - "100.72.225.167" # irewnprdc02
+
+    - group_name: "semperis_dsp_db"
+      description: "NETAR-6071"
+      ip_addr_list:
+      - "10.120.194.133" # 
+
+    - group_name: "_10_120_194_128s27_access"
+      description: "NETAR-6041"
+      ip_addr_list:
+      - "10.210.163.13"
+      - "10.19.2.22"
+      - "10.55.9.11"
+      - "10.55.9.12"
+      - "10.19.2.21"
+      - "10.40.110.9"
+      - "10.40.110.10"
+      - "10.123.197.16"
+      - "10.210.194.13"
+      - "10.120.69.213"
+      - "10.120.194.13"
+      - "10.120.194.15"
+      - "10.120.194.18"
+      - "10.180.194.13"
+      - "10.123.197.11"
+      - "10.120.194.14" 
+      - "10.120.69.214"
+      - "10.180.194.12"
+      - "10.210.194.12"
+      - "100.72.225.167"
+      - "100.72.225.135"
+      - "100.72.225.199"
+      - "100.72.225.136"
+      - "10.120.194.11"
+      - "10.120.194.12"
+      - "10.210.194.11"
+
+    - group_name: "sailpoint_888"
+      description: "NETAR-6147"
+      ip_addr_list:
+      - "10.120.70.15"
+
+    - group_name: "sailpoint_iq_888"
+      description: "NETAR-6147"
+      ip_addr_list:
+      - "10.20.5.194"
+      - "10.105.5.194"
+
+    - group_name: "irewnpreadfr02"
+      description: "NETAR-6147"
+      ip_addr_list:
+      - "100.72.225.139"
+
+    - group_name: "dublin_published_apps"
+      description: "ITSD-33471"
+      ip_addr_list:
+      - "10.217.4.0/22"
+
+    - group_name: "fortisoar"
+      description: "ITSD-33471"
+      ip_addr_list:
+      - "10.120.163.28"
+
+    - group_name: "_888_vpns"
+      description: "ITSD-34565"
+      ip_addr_list:
+      - "10.105.220.0/22"
+      - "10.20.220.0/22"
+
+    - group_name: "sc1bigiq01"
+      description: "ITSD-34565"
+      ip_addr_list:
+      - "10.120.140.13"
+
+    - group_name: "_888_infosec"
+      description: "ITSD-34565"
+      ip_addr_list:
+      - "10.20.168.64"
+
+    - group_name: "brswn562"
+      description: "NETAR-6268"
+      ip_addr_list:
+      - "10.201.9.62"
+
+    - group_name: "scc_citrix_ob"
+      description: "NETAR-6279"
+      ip_addr_list:
+      - "10.120.33.81"
+      - "10.120.33.82"
+      - "10.120.33.83"
+      - "10.120.33.84"
+      - "10.120.33.85"
+
+    - group_name: "sc1wnprefs08"
+      description: "NETAR-6279"
+      ip_addr_list:
+      - "10.120.192.165"
+
+    - group_name: "datamgmt_aws_non_prod"
+      description: "NETAR-6498"
+      ip_addr_list:
+      - "100.76.48.0/20"
+
+    - group_name: "sc1uxprrdb05"
+      description: "NETAR-6518"
+      ip_addr_list:
+        - "10.120.146.16"
+
+    - group_name: "ma3uxprdb01"
+      description: "NETAR-6518"
+      ip_addr_list:
+        - "10.120.177.69"
+
+    - group_name: "ma3le1cmp"
+      description: "NETAR-6634"
+      ip_addr_list:
+        - "10.120.125.10"
+
+    - group_name: "rundeck-login"
+      description: "ITSD-49490"
+      ip_addr_list:
+        - "10.120.163.238"
+
+    - group_name: "infoblox-login"
+      description: "ITSD-49489"
+      ip_addr_list:
+        - "10.120.193.240"
+
+    - group_name: "gib-888"
+      description: "ITSD-49489"
+      ip_addr_list:
+        - "10.50.20.0/23"
+
+    - group_name: "evoke-test-ad"
+      description: "NETAR-6685"
+      ip_addr_list:
+      - "10.114.68.4"
+      - "10.114.68.5"
+
+    - group_name: "wh-test-ad"
+      description: "NETAR-6685"
+      ip_addr_list:
+      - "10.120.33.240"
+      - "10.120.33.235"
+
+    - group_name: "whcsssbt"
+      description: "ITSD-51970"
+      ip_addr_list:
+      - "10.120.104.3"
+
+    - group_name: "sc1wnprcon01"
+      description: "NETAR-6705"
+      ip_addr_list:
+      - "10.120.162.85"
+
+    - group_name: "ma3prapvc01"
+      description: "NETAR-6693"
+      ip_addr_list:
+      - "10.120.126.253"
+
+    - group_name: "ld6-ironport"
+      description: "NETAR-6767"
+      ip_addr_list:
+      - "10.114.33.166"
+      - "10.114.33.167"
+      - "10.114.33.170"
+
+    - group_name: "ire-ironport"
+      description: "NETAR-6767"
+      ip_addr_list:
+      - "10.120.33.166"
+      - "10.120.33.167"
+
+    - group_name: "ironport_cloud"
+      description: "NETAR-6767"
+      ip_addr_list:
+      - "139.138.37.116"
+      - "216.71.139.17"
+
+    - group_name: "azure_mailrelay"
+      description: "NETAR-6767"
+      ip_addr_list:
+      - "10.40.0.7"
+      - "10.40.0.10"
+
+    - group_name: "icann"
+      description: "NETAR-6792"
+      ip_addr_list:
+      - "192.0.46.8"
+      - "192.0.43.8"
+
+    - group_name: "ld6wnprejmp04"
+      description: "ITSD-51965"
+      ip_addr_list:
+      - "10.118.160.179"
+
+    - group_name: "aws-nifi-ranges"
+      description: "ITSD-51966"
+      ip_addr_list:
+      - "100.76.16.0/20"
+
+    - group_name: "brswn561"
+      description: "ITSD-51966"
+      ip_addr_list:
+      - "10.201.9.61"
+      - "10.1.28.61"
+
+    - group_name: "corp_test_servers"
+      description: "NETAR-6563"
+      ip_addr_list:
+      - "10.19.2.92"
+      - "10.19.2.93"
+      - "10.19.2.94"
+      - "10.19.2.97"
+
+    - group_name: "evoke_test_ad"
+      description: "NETAR-6949"
+      ip_addr_list:
+      - "10.114.68.0/26"
+
+    - group_name: "sc1uxpremn89"
+      description: "NETAR-6935"
+      ip_addr_list:
+      - "10.120.163.89"
+
+    - group_name: "sc1_commvault_network"
+      description: "CHG0147150"
+      ip_addr_list:
+        - "10.120.46.0/24"
+
+    - group_name: "ma3_commvault_network"
+      description: "CHG0147150"
+      ip_addr_list:
+        - "10.120.47.0/24"
+
+    - group_name: "il_infosec_machines"
+      description: "ITSD-71301"
+      ip_addr_list:
+        - "10.20.168.26"
+        - "10.20.160.218"
+
+    - group_name: "ld6-synergy-deployment-blade-enc"
+      description: "NETAR-7064"
+      ip_addr_list:
+        - "10.112.11.50"
+
+    - group_name: "ma3wnprfs08-group-williamhill-plc"
+      description: "NETAR-7228"
+      ip_addr_list:
+      - "10.120.192.231"
+
+    - group_name: "citrix_ob_scc"
+      description: "NETAR-7228"
+      ip_addr_list:
+      - "10.120.33.81"
+      - "10.120.33.82"
+      - "10.120.33.83"
+      - "10.120.33.84"
+      - "10.120.33.85"
+      - "10.120.39.147"
+      - "10.120.39.148"
+      - "10.120.39.149"
+      - "10.120.39.150"
+      - "10.120.39.151"
+
+    - group_name: "kafka_topics_networks"
+      description: "NETAR7174"
+      ip_addr_list:
+        - "10.132.64.0/20"
+        - "10.132.80.0/20"
+        - "10.132.96.0/20"
+
+### OBJECT_GROUPS ###
+
+  object_groups:
+    - group_name: "comm_vault_servers_group"
+      description: "group_containing_dc_com_vault_server_groups"
+      sub_group_list:
+        - "comm_vault_servers_ld6"
+        - "comm_vault_servers_scc"
+
+    - group_name: "storage_devices_group"
+      description: "group_containing_mt_scc_storage"
+      sub_group_list:
+        - "msc-pure-storage"
+        - "sc1-pure-storage"
+        - "sc1-isilon-storage"
+
+    - group_name: "citrix"
+      description: "group_containing_citrix_subnets"
+      sub_group_list:
+        - "scc_citrix"
+        - "scc_accurate_citrix"
+        - "brs_citrix"

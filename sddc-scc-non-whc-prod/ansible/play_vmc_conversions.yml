@@ -1,0 +1,9 @@
+---
+
+- name: PLAY - YAML to Terraform (.tf) objects and rules conversion 
+  hosts: localhost
+  gather_facts: no
+  connection: local
+
+  roles:
+    - vmc-conversions

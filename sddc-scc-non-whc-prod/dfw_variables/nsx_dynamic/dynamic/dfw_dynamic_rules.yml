@@ -1,0 +1,3095 @@
+resources:
+  security_policy:
+
+    - access_list: na
+      rules:
+
+        - rule_description: "deny scc openbet citrix to ma3wnprfs08"
+          change_ref: "NETAR-7228"
+          action: "drop"
+          disabled: false
+          source:
+            - "citrix_ob_scc"
+          destination:
+            - "ma3wnprfs08-group-williamhill-plc"
+          service:
+            - "tcp445"
+            
+        - rule_description: "VMC corp networks to all RFC-1918 and RFC-6598 subnets"
+          change_ref: "CHG0145252"
+          action: "permit"
+          disabled: false
+          source:
+            - "vmc_corp_subnets"
+          destination:
+            - "rfc_1918"
+            - "rfc_6598"
+          service:
+            - "ip-any"
+
+        - rule_description: "All RFC-1918 and RFC-6598 subnets to VMC corp networks"
+          change_ref: "CHG0145252"
+          action: "permit"
+          disabled: false
+          source:
+            - "rfc_1918"
+            - "rfc_6598"
+          destination:
+            - "vmc_corp_subnets"
+          service:
+            - "ip-any"
+
+        - rule_description: "VMC corp networks to all internet"
+          change_ref: "User Internet access rules - InfoSec approved"
+          action: "permit"
+          disabled: false
+          source:
+            - "vmc_corp_subnets"
+          destination:
+            - "internet_minus_rfc1918"
+          service:
+            - "general_internet_ports"
+
+        - rule_description: "OpenDNS Access"
+          change_ref: "OpenDNS access - InfoSec approved"
+          action: "permit"
+          disabled: false
+          source:
+            - "opendns_virtual_appliances"
+          destination:
+            - "opendns_ntp_service"
+            - "opendns_dns_service"
+          service:
+            - "opendns_ports"
+
+        - rule_description: "OpenDNS Access"
+          change_ref: "OpenDNS access - InfoSec approved"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxpregw01"
+          destination:
+            - "wh_apogee_external_site"
+          service:
+            - "wh_apogee_external_site_services"
+
+        - rule_description: "scc dc nets and brs trs to aws storage gateway"
+          change_ref: "CHG0145578-CHG0146480"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_dc_networks"
+            - "brsuxdrrdb04"
+          destination:
+            - "aws_storage_gateway"
+          service:
+            - "aws_storage_gatweway_ports"
+
+        - rule_description: "aws storage gateway to scc dc nets and brs trs"
+          change_ref: "CHG0145578-CHG0146480"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_storage_gateway"
+          destination:
+            - "scc_dc_networks"
+            - "brsuxdrrdb04"
+          service:
+            - "aws_storage_gatweway_ports"
+
+        - rule_description: "dm_uno_presentation_access_in"
+          change_ref: "NA"
+          action: "permit"
+          disabled: false
+          source:
+            - "uno_presentation_access_group"
+          destination:
+            - "uno_presentation_lb_vip"
+          service:
+            - "uno_presentation_ports"
+
+        - rule_description: "dm_uno_sandbox_access_in"
+          change_ref: "NA"
+          action: "permit"
+          disabled: false
+          source:
+            - "uno_sandbox_access_group"
+          destination:
+            - "uno_sandbox_lb_vip"
+          service:
+            - "uno_sandbox_ports"
+
+        - rule_description: "dm_uno_cube_access_in"
+          change_ref: "NA"
+          action: "permit"
+          disabled: false
+          source:
+            - "uno_cube_access_group"
+          destination:
+            - "uno_cube_lb_vip"
+          service:
+            - "uno_cube_ports"
+
+        - rule_description: "dm_uno_dpe_access_in"
+          change_ref: "NA"
+          action: "permit"
+          disabled: false
+          source:
+            - "uno_dpe_access_group"
+          destination:
+            - "uno_dpe_servers"
+          service:
+            - "uno_dpe_ports"
+
+        - rule_description: "vmcprapvrli02 to sc1uxpremn126"
+          change_ref: "CHG0146817"
+          action: "permit"
+          disabled: false
+          source:
+            - "vmcprapvrli02"
+          destination:
+            - "sc1uxpremn126"
+          service:
+            - "tcp8088"
+
+        - rule_description: "accurate batch dfs to accurate batch dfs scc legacy to scc"
+          change_ref: "CHG0146931"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnpreap10"
+          destination:
+            - "irewnpreap10"
+          service:
+            - "accurate_batch_dfs"
+
+        - rule_description: "accurate batch dfs to accurate batch dfs scc to legacy scc"
+          change_ref: "CHG0146931"
+          action: "permit"
+          disabled: false
+          source:
+            - "irewnpreap10"
+          destination:
+            - "sc1wnpreap10"
+          service:
+            - "accurate_batch_dfs"
+
+        - rule_description: "snow mid servers to williamhillssl-cloudsoftcat-com-secondary"
+          change_ref: "CHG0146988"
+          action: "permit"
+          disabled: false
+          source:
+            - "snow_mid_servers"
+          destination:
+            - "williamhillssl-cloudsoftcat-com-secondary"
+          service:
+            - "tcp1433"
+
+        - rule_description: "allow access to new gib rss servers"
+          change_ref: "CHG0147001"
+          action: "permit"
+          disabled: false
+          source:
+            - "trs_servers"
+            - "sc1wnprndb002"
+          destination:
+            - "gib_rss_server"
+          service:
+            - "tcp1576"
+
+        - rule_description: "Spotlight monitoring servers to ld6 uno db servers"
+          change_ref: "CHG0147215"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "spotlight_monitoring_servers"
+          service:
+            - "uno_db_ports"
+
+        - rule_description: "Spotlight access to monitor retail vmc db servers"
+          change_ref: "CHG0147260"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "retail_vmc_retail_db_servers"
+          service:
+            - "retail_db_ports"
+
+        - rule_description: "sc1wnprcmn250 access to ld6_uno_db_servers"
+          change_ref: "CHG0147209"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "ld6_uno_db_servers"
+          service:
+            - "ld6_uno_db_ports"
+
+        - rule_description: "UI Robot Path to MRG NYX Services"
+          change_ref: "CHG0147311"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "mrg_nyx_services_for_uipath"
+          service:
+            - "tcp-http-https"
+
+        - rule_description: "UI Robot Path to MRG Jira"
+          change_ref: "CHG0147284"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "jira_mrgreen_zone"
+          service:
+            - "tcp-https"
+
+        - rule_description: "Citrix controllers to vsphere"
+          change_ref: "CHG0147368"
+          action: "permit"
+          disabled: false
+          source:
+            - "citrix_controllers"
+          destination:
+            - "scc_non_whc_prod_vcentre"
+          service:
+            - "tcp-https"
+
+        - rule_description: "SCC-NON-WHC SDDC vSphere network to port mirror server"
+          change_ref: "CHG0147444"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_non_whc_prod_vsphere_net"
+          destination:
+            - "irepraptcp02"
+          service:
+            - "ip-any"
+
+        - rule_description: "rpa robots vmc to mrg fileshare"
+          change_ref: "CHG0147919"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "mrg-fileshare"
+          service:
+            - "tcp445"
+
+        - rule_description: "rpa robots vmc to ld6 fileserver"
+          change_ref: "CHG0152337"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "ld6-fileshare"
+          service:
+            - "tcp445"
+
+        - rule_description: "gibux353 & gibux354 to sc1uxprnwb51"
+          change_ref: "CHG0147891"
+          action: "permit"
+          disabled: false
+          source:
+            - "gibux353-354-mgt"
+          destination:
+            - "sc1uxprnwb51"
+          service:
+            - "tcp22"
+
+        - rule_description: "STJWN561 sftp access to sc1uxprnwb51"
+          change_ref: "AWSMIG-253"
+          action: "permit"
+          disabled: false
+          source:
+            - "stjwn561"
+          destination:
+            - "sc1uxprnwb51"
+          service:
+            - "tcp22"
+
+        - rule_description: "rpa robots to featurespace ui"
+          change_ref: "CHG0148052"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "featurespace_ui"
+          service:
+            - "tcp-https"
+
+        - rule_description: "scc citrix to jde meridian"
+          change_ref: "CHG0148470"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_citrix"
+          destination:
+            - "jde_meridian_svrs"
+          service:
+            - "jde_meridian_ports"
+
+        - rule_description: "rpa robots to int-lb-backoffice"
+          change_ref: "CHG0148498"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "int-lb-backoffice"
+          service:
+            - "tcp-https"
+
+        - rule_description: "rpa robots to int-api-bonuswallet"
+          change_ref: "CHG0148632"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "gib-int-api-bonuswallet"
+          service:
+            - "tcp-https"
+
+        - rule_description: "scc uno load balancers to ld6 presentation"
+          change_ref: "CHG0148856"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_uno_load_balancers"
+          destination:
+            - "whdppresent02"
+          service:
+            - "tcp23000"
+
+        - rule_description: "sftp server to new as400"
+          change_ref: "CHG0148876"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxprnwb040"
+          destination:
+            - "prodjden"
+          service:
+            - "tcp22"
+
+        - rule_description: "sc1uxprnft001 to prodjden"
+          change_ref: "CHG0122284"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxprnft001"
+          destination:
+            - "prodjden"
+          service:
+            - "tcp22"
+
+        - rule_description: "sc1uxprnap019 to as400"
+          change_ref: "CHG0122284"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxprnap019"
+          destination:
+            - "grp_prod1_dev1"
+          service:
+            - "tcp22"
+
+        - rule_description: "ld6 uno db to sc1uxprnwb040"
+          change_ref: "CHG0148614"
+          action: "permit"
+          disabled: false
+          source:
+            - "ld6_uno_db_servers"
+          destination:
+            - "sc1uxprnwb040"
+          service:
+            - "tcp22"
+
+        - rule_description: "scc uno load balancers connection to whdp02tabular."
+          change_ref: "CHG0148971"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_uno_load_balancers"
+          destination:
+            - "whdp02tabular"
+          service:
+            - "uno_cube_ports"
+
+        - rule_description: "scc uno load balancers connection to uno mds."
+          change_ref: "CHG0148971"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_uno_load_balancers"
+          destination:
+            - "uno_mds"
+          service:
+            - "tcp-https"
+
+        - rule_description: "scc uno load balancers connection to uno ssrs."
+          change_ref: "CHG0148976"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_uno_load_balancers"
+          destination:
+            - "uno_ssrs"
+          service:
+            - "tcp-http-https"
+
+        - rule_description: "rpa robots access to nyx spain"
+          change_ref: "CHG0148928"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "nyx-spain"
+          service:
+            - "http-only"
+
+        - rule_description: "hp oneview to aws tss vpcs"
+          change_ref: "CHG0149147"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxpremg26"
+          destination:
+            - "aws-tss-vpc-prod"
+            - "aws-tss-vpc-dev"
+          service:
+            - "snmp-traps"
+
+        - rule_description: "ld6 uno to whdp"
+          change_ref: "CHG0147981"
+          action: "permit"
+          disabled: false
+          source:
+            - "ld6wnprndb005"
+          destination:
+            - "whdpservices01"
+          service:
+            - "tcp5022"
+            - "tcp29000"
+
+        - rule_description: "uno jumphost to uno presentation"
+          change_ref: "CHG0149220"
+          action: "permit"
+          disabled: false
+          source:
+            - "uno-remote-access"
+          destination:
+            - "uno-presentation-ld6"
+          service:
+            - "uno_presentation_ports"
+
+        - rule_description: "uno jumphost to uno presentation"
+          change_ref: "CHG0149094"
+          action: "permit"
+          disabled: false
+          source:
+            - "ld6-ncde-stingray"
+          destination:
+            - "uno-dmtfs"
+          service:
+            - "tcp8080"
+
+        - rule_description: "bacs to jde"
+          change_ref: "CHG0149277"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprncp001"
+          destination:
+            - "prodjden"
+            - "prod1"
+          service:
+            - "tcp21"
+            - "tcp22"
+            - "tcp139"
+            - "tcp445"
+
+        - rule_description: "uno hosts to sftp"
+          change_ref: "CHG0149285"
+          action: "permit"
+          disabled: false
+          source:
+            - "ld6_uno_db_servers"
+          destination:
+            - "sc1uxprnwb51"
+          service:
+            - "tcp22"
+
+        - rule_description: "UI Robot Path to int pres clp"
+          change_ref: "CHG0149127"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "int-pres-clp-sc1"
+          service:
+            - "tcp-https"
+
+        - rule_description: "Sofia to SCC Commvault"
+          change_ref: "CHG0149455"
+          action: "permit"
+          disabled: false
+          source:
+            - "sofia-commvault-server"
+          destination:
+            - "sc1wnprbkcs01"
+          service:
+            - "commvault_server_ports"
+
+        - rule_description: "SCC to Sofia Commvault"
+          change_ref: "CHG0149455"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprbkcs01"
+          destination:
+            - "sofia-commvault-server"
+          service:
+            - "commvault_server_ports"
+
+        - rule_description: "cde jumphost to ld6 lab esxi hosts"
+          change_ref: "CHG0149246"
+          action: "permit"
+          disabled: false
+          source:
+            - "cde_jumphosts"
+          destination:
+            - "ld6_lab_esxi_hosts"
+          service:
+            - "tcp22"
+
+        - rule_description: "rpa robots to have access to bonus engine"
+          change_ref: "CHG0149626"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "bonusadmin_mrgreen_services"
+          service:
+            - "http-only"
+
+        - rule_description: "ping federate aws to ad autopilot poc"
+          change_ref: "CHG0149589"
+          action: "permit"
+          disabled: false
+          source:
+            - "ping_federate_aws_subnets"
+          destination:
+            - "ad_autopilot_poc"
+          service:
+            - "ping_to_ad_autopilot_ports"
+
+        - rule_description: "rpa robots to have access to campaign manager mrgreen"
+          change_ref: "CHG0149628"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "campaignmanager_mrgreen_zone"
+          service:
+            - "tcp-https"
+
+        - rule_description: "com_vault_to_vsa"
+          change_ref: "CHG0149801"
+          action: "permit"
+          disabled: false
+          source:
+            - "comm_vault_servers_group"
+          destination:
+            - "vsa_proxy_vmc"
+          service:
+            - "commvault_server_ports"
+
+        - rule_description: "vsa_to_com_vault"
+          change_ref: "CHG0149801"
+          action: "permit"
+          disabled: false
+          source:
+            - "vsa_proxy_vmc"
+          destination:
+            - "comm_vault_servers_group"
+          service:
+            - "commvault_server_ports"
+
+        - rule_description: "vsa_to_esx_hosts_vmc_scc_non-whc"
+          change_ref: "CHG0149801"
+          action: "permit"
+          disabled: false
+          source:
+            - "vsa_proxy_vmc"
+          destination:
+            - "esx_hosts_vmc_scc_non-whc"
+          service:
+            - "commvault_backup_ports"
+
+        - rule_description: "ld6 ncde lbs to erportal"
+          change_ref: "CHG0149972"
+          action: "permit"
+          disabled: false
+          source:
+            - "ld6-ncde-stingray"
+          destination:
+            - "sc1wnprnap013"
+          service:
+            - "tcp-https"
+
+        - rule_description: "sc1 cde jumphosts to sc1 cx lans"
+          change_ref: "CHG0079131"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "sc1_cx_nets"
+          service:
+            - "tcp22"
+
+        - rule_description: "commvault servers connectivity"
+          change_ref: "CHG0150040"
+          action: "permit"
+          disabled: false
+          source:
+            - "grp_commvault"
+          destination:
+            - "grp_commvault"
+          service:
+            - "commvault_server_ports"
+        - rule_description: "mars backofficeadmin access"
+          change_ref: "RITM0148509"
+          action: "permit"
+          disabled: false
+          source:
+            - "mars-backofficeadmin-users"
+          destination:
+            - "mars-backofficeadmin"
+          service:
+            - "tcp-https"
+
+        - rule_description: "bacs to jde"
+          change_ref: "CHG0150049"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprncp001"
+          destination:
+            - "prodjden"
+          service:
+            - "tcp139"
+            - "tcp445"
+
+        - rule_description: "commvault servers to sc1 vcenter on prem"
+          change_ref: "CHG0150040"
+          action: "permit"
+          disabled: false
+          source:
+            - "grp_commvault"
+          destination:
+            - "sc1-vcenter"
+          service:
+            - "tcp-https"
+
+        - rule_description: "sc1 jumphosts to f5 big iq caesars"
+          change_ref: "CHG0150343"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "f5_big-iq_nonprod_caesars"
+          service:
+            - "tcp_8443_tcp_443"
+
+        - rule_description: "sc1 jumphosts to vmc preprod and dev vropss appliances"
+          change_ref: "CHG0150362"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "vmc_preprod_and_dev_vropss_appliances"
+          service:
+            - "tcp22"
+
+        - rule_description: "Bulgaria Sec ISP to Citrix"
+          change_ref: "CHG0125710"
+          action: "permit"
+          disabled: false
+          source:
+            - "bulgaria_sec_isp"
+          destination:
+            - "groupras-williamhill-plc-uk"
+          service:
+            - "groupras_ports"
+
+        - rule_description: "scc bomgar to vmc prod vrops appliances"
+          change_ref: "CHG0150584"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "vmc_prod_vrops_appliances"
+          service:
+            - "tcp22"
+
+        - rule_description: "Bulgaria LAN to Citrix"
+          change_ref: "CHG0125710"
+          action: "permit"
+          disabled: false
+          source:
+            - "bulgaria_lan"
+          destination:
+            - "groupras-williamhill-plc-uk"
+          service:
+            - "groupras_ports"
+
+        - rule_description: "rpa robots to int-api-bonuswallet"
+          change_ref: "CHG0148632"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "gib-int-api-bonuswallet-2"
+          service:
+            - "tcp-https"
+
+        - rule_description: "citrix accurate to file server"
+          change_ref: "CHG0150752"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_accurate_citrix"
+          destination:
+            - "sc1wnprefs04"
+          service:
+            - "tcp445"
+            - "tcp135"
+
+        - rule_description: "citrix accurate to xenapp 7 licensing"
+          change_ref: "CHG0150752"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_accurate_citrix"
+          destination:
+            - "sc1wnprelic01"
+          service:
+            - "citrix_licensing_ports"
+
+        - rule_description: "citrix delivery controller to vda"
+          change_ref: "CHG0150752"
+          action: "permit"
+          disabled: false
+          source:
+            - "citrix_controllers"
+          destination:
+            - "scc_accurate_citrix"
+          service:
+            - "citrix_to_vda_ports"
+            - "tcp-https"
+
+        - rule_description: "citrix delivery controller to vda"
+          change_ref: "CHG0150752, NETAR-7000"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_accurate_citrix"
+          destination:
+            - "citrix_controllers"
+          service:
+            - "tcp-http-https"
+
+        - rule_description: "vmc citrix to vmc hids Server"
+          change_ref: "CHG0150752"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_citrix"
+          destination:
+            - "sc1uxprcmn001"
+          service:
+            - "udp1514"
+
+        - rule_description: "citrix accurate to sc1wnprens01-bo-vip"
+          change_ref: "CHG0150911"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_accurate_citrix"
+          destination:
+            - "sc1wnprens01_bo_vip"
+          service:
+            - "tcp81"
+
+        - rule_description: "trading eks to trs db"
+          change_ref: "CHG0150798"
+          action: "permit"
+          disabled: false
+          source:
+            - "trading_aws_subnets"
+          destination:
+            - "trs_mysql"
+          service:
+            - "tcp3306"
+
+        - rule_description: "netscaler snip access"
+          change_ref: "CHG0150752"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprens01_snip"
+          destination:
+            - "scc_accurate_citrix"
+          service:
+            - "netscaler_snip_ports"
+
+        - rule_description: "brs citrix to accurate oracle"
+          change_ref: "CHG0151059"
+          action: "permit"
+          disabled: false
+          source:
+            - "brs_citrix"
+          destination:
+            - "sc1uxprgdb05-new"
+          service:
+            - "tcp1521"
+
+        - rule_description: "brs citrix to accurate batch"
+          change_ref: "CHG0151059"
+          action: "permit"
+          disabled: false
+          source:
+            - "brs_citrix"
+          destination:
+            - "sc1wnpreap10-new"
+          service:
+            - "tcp445"
+
+        - rule_description: "brs citrix to accurate web"
+          change_ref: "CHG0151059"
+          action: "permit"
+          disabled: false
+          source:
+            - "brs_citrix"
+          destination:
+            - "sc1wnprewb10-new"
+          service:
+            - "tcp8443"
+
+        - rule_description: "deny brs openbet citrix to accurate web"
+          change_ref: "CHG0151059"
+          action: "drop"
+          disabled: false
+          source:
+            - "brs_openbet_citrix"
+          destination:
+            - "sc1wnpreap10-new"
+          service:
+            - "tcp445"
+
+        - rule_description: "scc bomgar to aws unity db"
+          change_ref: "CHG0151090"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "aws_unity_db"
+          service:
+            - "tcp3306"
+            - "postgresql"
+
+        - rule_description: "user access to trs server"
+          change_ref: "CHG0151198"
+          action: "permit"
+          disabled: false
+          source:
+            - "trs_users"
+          destination:
+            - "trs_mysql"
+          service:
+            - "tcp3306"
+
+        - rule_description: "aws prod ireland vpc to trading report server"
+          change_ref: "CHG0151337"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_prod_ireland_vpc_trading"
+          destination:
+            - "trs_mysql"
+          service:
+            - "tcp3306"
+
+        - rule_description: "retail bi reporting to kms server"
+          change_ref: "CHG0151433"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprrmimg01"
+          destination:
+            - "sc1wndremg002"
+          service:
+            - "tcp1688"
+
+        - rule_description: "WH AWS to sc1wnpredc17"
+          change_ref: "CHG0151491"
+          action: "permit"
+          disabled: false
+          source:
+            - "rfc_6598"
+          destination:
+            - "sc1wnpredc17"
+          service:
+            - "rodc_ports"
+
+        - rule_description: "sc1wnpredc17 to KMS"
+          change_ref: "CHG0151491"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnpredc17"
+          destination:
+            - "brs_sc1_wnpremg002"
+          service:
+            - "kms_ports"
+
+        - rule_description: "RFC1918 to sc1wnpredc17"
+          change_ref: "CHG0151491"
+          action: "permit"
+          disabled: false
+          source:
+            - "rfc_1918"
+          destination:
+            - "sc1wnpredc17"
+          service:
+            - "rodc_ports"
+
+        - rule_description: "sc1wnpredc17 to ossec and splunk"
+          change_ref: "CHG0151491"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnpredc17"
+          destination:
+            - "ossec_splunk"
+          service:
+            - "ossec_splunk_ports"
+
+        - rule_description: "rodc-subnets to sc1wnpredc15-17"
+          change_ref: "CHG0151491"
+          action: "permit"
+          disabled: false
+          source:
+            - "rodc_subnets"
+          destination:
+            - "sc1wnpredc15-17"
+          service:
+            - "tcp636"
+
+        - rule_description: "rpa to uno pres readonly"
+          change_ref: "CHG0151587"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "uno-present-readonly"
+          service:
+            - "tcp1433"
+
+        - rule_description: "access to sc1uxprnap019 sftp server"
+          change_ref: "NETACCESS-375"
+          action: "permit"
+          disabled: false
+          source:
+            - "emis-servers"
+          destination:
+            - "sc1uxprnap019"
+          service:
+            - "tcp22"
+
+        - rule_description: "access from bomgar to storage nodes"
+          change_ref: "CHG0151660"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "storage_devices_group"
+          service:
+            - "storage_ports"
+
+        - rule_description: "access from bomgar to suricata nodes"
+          change_ref: "CHG0151854"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "suricata-ids"
+          service:
+            - "scc_jumphost_to_suricata_ids_ports"
+
+        - rule_description: "access from ob to splunk instance"
+          change_ref: "CHG0151859"
+          action: "permit"
+          disabled: false
+          source:
+            - "ob_live_vpn"
+          destination:
+            - "sc1uxpremn81"
+          service:
+            - "tcp8000"
+
+        - rule_description: "whus vpn to citrix"
+          change_ref: "CHG0151892"
+          action: "permit"
+          disabled: false
+          source:
+            - "whus-vpn-subnet"
+          destination:
+            - "whlan-prod"
+          service:
+            - "tcp-https"
+
+        - rule_description: "rpa access to unity platform"
+          change_ref: "CHG0151897"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "unity-prod"
+          service:
+            - "tcp-https"
+
+        - rule_description: "aws central ingress access to splunk"
+          change_ref: "CHG0151941"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_central_ingress"
+          destination:
+            - "scc_splunk"
+          service:
+            - "tcp514"
+
+        - rule_description: "scc_bomgar_to_aws_central_ingress"
+          change_ref: "CHG0151929"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "aws_central_ingress"
+          service:
+            - "tcp_8443_tcp_443_tcp_22"
+
+        - rule_description: "user access to epos datastore server"
+          change_ref: "RITM0156908"
+          action: "permit"
+          disabled: false
+          source:
+            - "epos_datastore_user_access"
+          destination:
+            - "epos_datastore_server"
+          service:
+            - "tcp1521"
+
+        - rule_description: "ns1 load balancer probe"
+          change_ref: "CHG0152079"
+          action: "permit"
+          disabled: false
+          source:
+            - "rodc_subnets"
+          destination:
+            - "irewnprejamf01-02"
+          service:
+            - "tcp-https"
+
+        - rule_description: "ad sccm to anyconnect ports"
+          change_ref: "CHG0152108"
+          action: "permit"
+          disabled: false
+          source:
+            - "ad_sccm_poc"
+          destination:
+            - "ac_vpn_ranges"
+          service:
+            - "ad_sccm_to_anyconnect_ports"
+
+        - rule_description: "jira rodc ext"
+          change_ref: "CHG0151491"
+          action: "permit"
+          disabled: false
+          source:
+            - "service_now_grp"
+            - "crowd_platform_grp"
+            - "wg-wrproxy-usa"
+          destination:
+            - "sc1wnpredc17"
+          service:
+            - "tcp636"
+
+        - rule_description: "jamf cloud to adscs"
+          change_ref: "CHG0152079"
+          action: "permit"
+          disabled: false
+          source:
+            - "jamf_cloud"
+          destination:
+            - "irewnprejamf01-02"
+          service:
+            - "tcp-https"
+
+        - rule_description: "bomgar cde to rundeck db"
+          change_ref: "CHG0152247"
+          action: "permit"
+          disabled: false
+          source:
+            - "bomgar_hosts"
+          destination:
+            - "rundeck_db"
+          service:
+            - "tcp3306"
+
+        - rule_description: "citrix vda to accurate citrix"
+          change_ref: "CHANGE-2801"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprefs04"
+          destination:
+            - "scc_accurate_citrix"
+          service:
+            - "citrix_vda"
+
+        - rule_description: "test sailpoint va to ad iq"
+          change_ref: "NETAR-197"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_test_vas"
+          destination:
+            - "testad_iq"
+          service:
+            - "ad_iq_ports"
+
+        - rule_description: "uno jumpbox to uno read only db"
+          change_ref: "NETAR-200"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprnmg020"
+          destination:
+            - "uno-present-readonly"
+          service:
+            - "uno_sandbox_ports"
+
+        - rule_description: "test sailpoint va to ad test"
+          change_ref: "NETAR-229"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_test_vas"
+          destination:
+            - "testad_iq"
+          service:
+            - "ad_test_ports"
+
+        - rule_description: "test sailpoint va to ad test gc port"
+          change_ref: "NETAR-243"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_test_vas"
+          destination:
+            - "ad_autopilot_poc"
+          service:
+            - "tcp3268"
+            - "ad_test_ports"
+
+        - rule_description: "rpa prod robots to tableau mrg"
+          change_ref: "NETAR-260"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "tableau_mrgreen_zone"
+          service:
+            - "tcp-https"
+
+        - rule_description: "aws eks gateway to mars"
+          change_ref: "NETAR-352"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_sports_whapi"
+          destination:
+            - "mars-backofficeadmin"
+          service:
+            - "tcp-https"
+
+        - rule_description: "uno jump host to presentation layer"
+          change_ref: "NETAR-299"
+          action: "permit"
+          disabled: false
+          source:
+            - "uno-remote-access"
+          destination:
+            - "whdppresent02"
+          service:
+            - "tcp23000"
+
+        - rule_description: "uno jump host to presentation layer RO"
+          change_ref: "NETAR-401"
+          action: "permit"
+          disabled: false
+          source:
+            - "uno-remote-access"
+          destination:
+            - "uno_readonly_db"
+          service:
+            - "tcp30000"
+
+        - rule_description: "Darshaan to int-lb-oxi-proxy"
+          change_ref: "NETAR-466"
+          action: "permit"
+          disabled: false
+          source:
+            - "trs_servers"
+          destination:
+            - "int-lb-oxi-proxy"
+          service:
+            - "http-only"
+
+        - rule_description: "SC1 Jump Host to TPAM"
+          change_ref: "NETAR-270"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1_cde_linux_jump"
+          destination:
+            - "scc_tpam"
+          service:
+            - "tcp22"
+
+        - rule_description: "RPA Robots to Evoke Reporting"
+          change_ref: "NETAR-579"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "evoke_report_services"
+          service:
+            - "tcp-http-https"
+
+        - rule_description: "Trading Reports Server to then Retail MI database via 1521"
+          change_ref: "NETAR-670"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "trading_reports_server"
+          destination:
+            - "emis-servers"
+          service:
+            - "tcp1521"
+
+        - rule_description: "Citrix subnets to DFS root namespace servers via 445"
+          change_ref: "NETAR-797"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "citrix"
+          destination:
+            - "dfs_root_namespace_servers"
+          service:
+            - "tcp445"
+
+        - rule_description: "Inter DC Communication between Malta and SCC/LD6"
+          change_ref: "NETAR-909"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "ld6-scc-dcs"
+          destination:
+            - "malta-sliema-dc-access"
+          service:
+            - "rodc_ports"
+
+        - rule_description: "Inter DC Communication between Malta and SCC/LD6"
+          change_ref: "NETAR-909"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "ld6-scc-dcs"
+          destination:
+            - "malta-sliema-dc-access"
+          service:
+            - "tcp139"
+
+        - rule_description: "RPA Robots Subnet to Gib Fileshare"
+          change_ref: "NETAR-1052"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "gibwnprefs01"
+          service:
+            - "tcp445"
+
+        - rule_description: "AWS Central Prod to Aspect"
+          change_ref: "NETAR-1082"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "aws_central_prod"
+          destination:
+            - "aspect_stunnel"
+          service:
+            - "tcp6861"
+
+        - rule_description: "sc1 darktrace to aws darktrace"
+          change_ref: "NETAR-1203"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "sc1_darktrace"
+          destination:
+            - "aws_darktrace_master"
+          service:
+            - "tcp8089"
+
+        - rule_description: "aws darktrace to sc1 darktrace"
+          change_ref: "NETAR-1203"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "aws_darktrace_master"
+          destination:
+            - "sc1_darktrace"
+          service:
+            - "tcp8089"
+
+        - rule_description: "direct access servers to mrg fileshare"
+          change_ref: "NETAR-1211"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "direct_access_servers"
+          destination:
+            - "mrg-fileshare"
+          service:
+            - "tcp445"
+
+        - rule_description: "New WH SAP Router to SAP DC"
+          change_ref: "NETAR-1344"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "sc1uxprsap02"
+          destination:
+            - "sap_datacenter_pri"
+            - "sap_datacenter_dr"
+          service:
+            - "sap_services"
+
+        - rule_description: "SAP DC to new WH SAP Router"
+          change_ref: "NETAR-1360"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "sap_datacenter_pri"
+            - "sap_datacenter_dr"
+          destination:
+            - "sc1uxprsap02"
+          service:
+            - "sap_services"
+
+        - rule_description: "New WH SAP Router to SAP Frankfurt DC"
+          change_ref: "NETAR-1369"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "sc1uxprsap02"
+          destination:
+            - "sap_datacenter_frankfurt"
+          service:
+            - "sap_services"
+
+        - rule_description: "SAP Frankfurt DC to new WH SAP Router"
+          change_ref: "NETAR-1369"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "sap_datacenter_frankfurt"
+          destination:
+            - "sc1uxprsap02"
+          service:
+            - "sap_services"
+
+        - rule_description: "UI Path Robots to Central Product AWS"
+          change_ref: "NETAR-1338"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "aws_central_prod"
+          service:
+            - "tcp-https"
+
+        - rule_description: "commvault_scc_to_aws_dev_commvault"
+          change_ref: "NETAR-1786"
+          action: "permit"
+          disabled: false
+          source:
+            - "comm_vault_servers_scc"
+          destination:
+            - "aws-tss-vpc-dev"
+          service:
+            - "commvault_proxy_services"
+
+        - rule_description: "aws_dev_commvault_to_commvault_scc"
+          change_ref: "NETAR-1786"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws-tss-vpc-dev"
+          destination:
+            - "comm_vault_servers_scc"
+          service:
+            - "commvault_proxy_services"
+
+        - rule_description: "Manila ISP to Citrix"
+          change_ref: "NETAR-1847"
+          action: "permit"
+          disabled: false
+          source:
+            - "manila-isp"
+          destination:
+            - "groupras-williamhill-plc-uk"
+          service:
+            - "groupras_ports"
+
+        - rule_description: "Hatfield SCCM DP to SCC SCCM"
+          change_ref: "NETAR-2035"
+          action: "permit"
+          disabled: false
+          source:
+            - "hatwnprecp001"
+          destination:
+            - "sc1wnprwsus01"
+          service:
+            - "http-only"
+
+        - rule_description: "Hatfield SCCM DP to SCC Splunk"
+          change_ref: "NETAR-2035"
+          action: "permit"
+          disabled: false
+          source:
+            - "hatwnprecp001"
+          destination:
+            - "ossec_splunk"
+          service:
+            - "ossec_splunk_ports"
+
+        - rule_description: "Ceuta SCCM DP to SCC SCCM"
+          change_ref: "NETAR-2972"
+          action: "permit"
+          disabled: false
+          source:
+            - "cdgwnprecp001"
+          destination:
+            - "sc1wnprwsus01"
+          service:
+            - "http-only"
+
+        - rule_description: "Ceuta SCCM DP to SCC Splunk"
+          change_ref: "NETAR-2972"
+          action: "permit"
+          disabled: false
+          source:
+            - "cdgwnprecp001"
+          destination:
+            - "ossec_splunk"
+          service:
+            - "ossec_splunk_ports"
+
+        - rule_description: "DM AWS to TRS"
+          change_ref: "NETAR-2144"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_data_prod"
+          destination:
+            - "trs_mysql"
+          service:
+            - "tcp3306"
+
+        - rule_description: "RPA Robots to Sofia FS"
+          change_ref: "NETAR-2150"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "sofia_fileserver"
+          service:
+            - "tcp445"
+
+        - rule_description: "RPA Robots to MRG Featurespace"
+          change_ref: "NETAR-2216"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "mrg_featurespace"
+          service:
+            - "tcp-https"
+
+        - rule_description: "SCC WSUS to ILOs"
+          change_ref: "NETAR-2231"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprwsus01"
+          destination:
+            - "scc_ilo_network"
+            - "gib_ilo_network"
+          service:
+            - "tcp22"
+
+        - rule_description: "sailpoint vas to idam ftp server"
+          change_ref: "NETAR-2303"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_vas"
+          destination:
+            - "irewnpreftp01-ftp"
+          service:
+            - "tcp22"
+
+        - rule_description: "sailpoint and 888 to irewnpreftp01"
+          change_ref: "NETAR-2260"
+          action: "permit"
+          disabled: false
+          source:
+            - "dc_888_ips"
+            - "sailpoint_iq_servers"
+          destination:
+            - "irewnpreftp01"
+          service:
+            - "tcp22"
+
+        - rule_description: "Commvault Commcell to WHC-PP vCenter"
+          change_ref: "NETAR-2331"
+          action: "permit"
+          disabled: false
+          source:
+            - "grp_commvault"
+          destination:
+            - "ireuxppbkvsa01-02"
+          service:
+            - "commvault_proxy_services"
+
+        - rule_description: "WHC-PP vCenter to Commvault Commcell"
+          change_ref: "NETAR-2331"
+          action: "permit"
+          disabled: false
+          source:
+            - "ireuxppbkvsa01-02"
+          destination:
+            - "grp_commvault"
+          service:
+            - "commvault_proxy_services"
+
+        - rule_description: "robots to test TNA server"
+          change_ref: "NETAR-2319"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "brswntstdb01"
+          service:
+            - "tcp1433"
+
+        - rule_description: "sc1wnprwsus01 to Internet"
+          change_ref: "NETAR-2403"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprwsus01"
+          destination:
+            - "internet_minus_rfc1918"
+          service:
+            - "tcp-http-https"
+
+        - rule_description: "oneview appliances to oneview global dashboard"
+          change_ref: "NETAR-2487"
+          action: "permit"
+          disabled: false
+          source:
+            - "oneview_appliances"
+          destination:
+            - "sc1uxpremg27"
+          service:
+            - "tcp_5671"
+
+        - rule_description: "oneview appliances from oneview global dashboard"
+          change_ref: "NETAR-2487"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxpremg27"
+          destination:
+            - "oneview_appliances"
+          service:
+            - "tcp_5671"
+
+        - rule_description: "sailpoint to sailpoint ssh tunnels"
+          change_ref: "NETAR-2571"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_test_vas"
+          destination:
+            - "sailpoint_ssh_tunnel_ips"
+          service:
+            - "tcp-https"
+
+        - rule_description: "bomgar to cde monitoring nets"
+          change_ref: "NETAR-2692"
+          action: "permit"
+          disabled: false
+          source:
+            - "bomgar_hosts"
+          destination:
+            - "cde_monitoring_nets"
+          service:
+            - "tcp3389"
+
+        - rule_description: "euc management server to idam ftp"
+          change_ref: "NETAR-2494"
+          action: "permit"
+          disabled: false
+          source:
+            - "brsapprcmg002"
+          destination:
+            - "irewnpreftp01-ftp"
+          service:
+            - "tcp22"
+
+        - rule_description: "retail workstation to sc1wnprnap002"
+          change_ref: "NETAR-2723"
+          action: "permit"
+          disabled: false
+          source:
+            - "retail_dev_vmc_workstation"
+          destination:
+            - "sc1wnprnap002"
+          service:
+            - "tcp445"
+
+        - rule_description: "retail workstation to sc1wnprefs03"
+          change_ref: "NETAR-2734"
+          action: "permit"
+          disabled: false
+          source:
+            - "retail_dev_vmc_workstation"
+          destination:
+            - "sc1wnprefs03"
+          service:
+            - "tcp445"
+
+        - rule_description: "log insights access to splunk"
+          change_ref: "NETAR-2697"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1prapli01"
+          destination:
+            - "int-pres-clp-sc1"
+          service:
+            - "tcp514"
+
+        - rule_description: "Oneview MRG to Global Dashboard"
+          change_ref: "NETAR-2691"
+          action: "permit"
+          disabled: false
+          source:
+            - "slmprmrgov01"
+          destination:
+            - "sc1uxpremg27"
+          service:
+            - "oneview_ports"
+
+        - rule_description: "Global Dashboard to MRG Oneview"
+          change_ref: "NETAR-2691"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxpremg27"
+          destination:
+            - "slmprmrgov01"
+          service:
+            - "oneview_ports"
+
+        - rule_description: "Access to CLP from SC1 Prod Log Insight"
+          change_ref: "NETAR-2860"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1prapli01"
+          destination:
+            - "brsuxpremn004"
+          service:
+            - "tcp514"
+
+        - rule_description: "Access to Parkview External from SCC Parkview Servers"
+          change_ref: "NETAR-3024"
+          action: "permit"
+          disabled: false
+          source:
+            - "parkviewscc"
+          destination:
+            - "parkviewext"
+          service:
+            - "parkview_ports"
+
+        - rule_description: "Bomgar to BRS Citrix"
+          change_ref: "NETAR-3035"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "brs_citrix"
+          service:
+            - "tcp3389_udp3389"
+
+        - rule_description: "UI Path to 888"
+          change_ref: "NETAR-3001"
+          action: "permit"
+          disabled: false
+          source:
+            - "irewnprnrbt024"
+          destination:
+            - "duuf-ntsadmin-vip"
+            - "duuc-passivests-vip"
+            - "duuc-customeradmin-vip"
+          service:
+            - "tcp-https"
+
+        - rule_description: "UI Path to 888"
+          change_ref: "NETAR-3001"
+          action: "permit"
+          disabled: false
+          source:
+            - "irewnprnrbt024"
+          destination:
+            - "duuc-qmanager-vip"
+          service:
+            - "tcp-83"
+
+        - rule_description: "888 networks to sc1wnpredc15-17"
+          change_ref: "NETAR-3137"
+          action: "permit"
+          disabled: false
+          source:
+            - "networks_888"
+          destination:
+            - "sc1wnpredc15-17"
+          service:
+            - "ad_ports"
+
+        - rule_description: "sc1wnpredc15-17 to 888 AD"
+          change_ref: "NETAR-3137"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnpredc15-17"
+          destination:
+            - "ad-servers-888"
+          service:
+            - "ad_ports"
+
+        - rule_description: "ParkviewSCC to iLO Networks"
+          change_ref: "NETAR-3313"
+          action: "permit"
+          disabled: false
+          source:
+            - "parkviewscc"
+          destination:
+            - "scc_ilo_network"
+          service:
+            - "snmp-traps"
+            - "snmp"
+
+        - rule_description: "SCC DA to LD6 FS"
+          change_ref: "NETAR-3402"
+          action: "permit"
+          disabled: false
+          source:
+            - "direct_access_servers"
+          destination:
+            - "ld6_fileservers"
+          service:
+            - "tcp445"
+
+        - rule_description: "Propman Server Rules DR to Prod"
+          change_ref: "NETAR-3366"
+          action: "permit"
+          disabled: false
+          source:
+            - "brswndredb04"
+          destination:
+            - "irewnpredb04"
+          service:
+            - "accurate_batch_dfs"
+
+        - rule_description: "Propman Server Rules Prod to DR"
+          change_ref: "NETAR-3366"
+          action: "permit"
+          disabled: false
+          source:
+            - "irewnpredb04"
+          destination:
+            - "brswndredb04"
+          service:
+            - "accurate_batch_dfs"
+
+        - rule_description: "Open SMB access to TNA Servers"
+          change_ref: "NETAR-3469"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprgdb13-14"
+          destination:
+            - "brs-tna-servers"
+          service:
+            - "smb_ports"
+
+        - rule_description: "AWS Webproxy to Epos servers"
+          change_ref: "NETAR-3398"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_webproxy"
+          destination:
+            - "sc1uxprnap019"
+          service:
+            - "tcp22"
+
+        - rule_description: "888 to sc1 citrix"
+          change_ref: "NETAR-3525"
+          action: "permit"
+          disabled: false
+          source:
+            - "networks_888"
+          destination:
+            - "citrix_corp_tech"
+          service:
+            - "groupras_ports"
+
+        - rule_description: "RPA Robots to LD6 FS03"
+          change_ref: "NETAR-3552"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "ld6_fileservers"
+          service:
+            - "tcp445"
+
+        - rule_description: "VMC Citrix to Propman"
+          change_ref: "NETAR-3366"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_citrix"
+          destination:
+            - "irewnpredb04"
+          service:
+            - "propman_ports"
+
+        - rule_description: "RPA Robots TNA DB"
+          change_ref: "NETAR-3592"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "sc1wnprgdb13-14"
+          service:
+            - "tcp1433"
+
+        - rule_description: "solarwinds to smtp"
+          change_ref: "NETAR-3607"
+          action: "permit"
+          disabled: false
+          source:
+            - "solarwinds_primary_poller"
+          destination:
+            - "scc_smtp"
+          service:
+            - "smtp_port"
+
+        - rule_description: "solarwinds to network devices"
+          change_ref: "NETAR-3607"
+          action: "permit"
+          disabled: false
+          source:
+            - "solarwinds_pollers"
+          destination:
+            - "solarwinds_dsts"
+          service:
+            - "to_solarwinds_dsts"
+
+        - rule_description: "Propman to DFS root hosts"
+          change_ref: "NETAR-3478"
+          action: "permit"
+          disabled: false
+          source:
+            - "irewnpredb04"
+            - "brswndredb04"
+          destination:
+            - "dfs_root_namespace_servers"
+          service:
+            - "dfs_root_hosts_services"
+
+        - rule_description: "Trading EKS to TRS"
+          change_ref: "NETAR-3607"
+          action: "permit"
+          disabled: false
+          source:
+            - "trading_aws_subnets"
+          destination:
+            - "trs_servers"
+          service:
+            - "tcp8081"
+
+        - rule_description: "solarwinds dsts to pollers"
+          change_ref: "NETAR-3607"
+          action: "permit"
+          disabled: false
+          source:
+            - "solarwinds_dsts"
+          destination:
+            - "solarwinds_pollers"
+          service:
+            - "snmp"
+
+        - rule_description: "solarwinds primary to network devices"
+          change_ref: "NETAR-3607"
+          action: "permit"
+          disabled: false
+          source:
+            - "solarwinds_primary_poller"
+          destination:
+            - "solarwinds_dsts"
+          service:
+            - "tcp22"
+            - "tcp43"
+
+        - rule_description: "ld6 powerbi to trs"
+          change_ref: "NETAR-3725"
+          action: "permit"
+          disabled: false
+          source:
+            - "ld6_powerbi"
+          destination:
+            - "trs_mysql"
+          service:
+            - "tcp3306"
+
+        - rule_description: "spotlight server to solarwinds db"
+          change_ref: "NETAR-3739"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "solarwinds_db"
+          service:
+            - "retail_db_ports"
+
+        - rule_description: "Manila ESXi to SCC Log Insight"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "manila_esxi_hosts"
+          destination:
+            - "sc1prapli01"
+          service:
+            - "tcp514"
+            - "udp1514"
+
+        - rule_description: "Manila ESXi to SCC vCenter"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "manila_esxi_hosts"
+          destination:
+            - "sc1-vcenter"
+          service:
+            - "tcp-https"
+
+        - rule_description: "Jumpboxes to Manila ESXi"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "manila_esxi_hosts"
+          service:
+            - "manila_bomgar_ports"
+
+        - rule_description: "SCC OneView to Manila ESXi"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxpremg26"
+          destination:
+            - "manila_esxi_hosts"
+          service:
+            - "manila_oneview_ports"
+
+        - rule_description: "Manila ESXi to SCC OneView"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxpremg26"
+          destination:
+            - "manila_esxi_hosts"
+          service:
+            - "oneview_ports_manila"
+
+        - rule_description: "Manila VR Appliance"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "mnlprapvr01"
+          destination:
+            - "sc1-vcenter"
+          service:
+            - "vr_appliance_ports"
+
+        - rule_description: "Manila VR Appliance to ESXi Hosts"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "mnlprapvr01"
+          destination:
+            - "manila_esxi_hosts"
+          service:
+            - "vr_appliance_vcenter"
+
+        - rule_description: "Manila ESXi to vSAN Witness"
+          change_ref: "NETAR-3806"
+          action: "permit"
+          disabled: false
+          source:
+            - "manila_esxi_hosts"
+            - "manila_esxi_host"
+          destination:
+            - "vsan_witness"
+          service:
+            - "vsan_witness_ports"
+
+        - rule_description: "Bomgar to SCC Hosts"
+          change_ref: "NETAR-3782"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_jumpboxes"
+          destination:
+            - "scc_120"
+          service:
+            - "ssh_rdp"
+
+        - rule_description: "all servers to splunk aws"
+          change_ref: "NETAR-3885"
+          action: "permit"
+          disabled: false
+          source:
+            - "net_10_0_0_0s8"
+          destination:
+            - "splunk_aws"
+          service:
+            - "splunk_ports"
+
+        - rule_description: "rpa_robots to mi db"
+          change_ref: "NETAR-3969"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "mi_db"
+          service:
+            - "http-only"
+
+        - rule_description: "888 to testad"
+          change_ref: "NETAR-3952"
+          action: "permit"
+          disabled: false
+          source:
+            - "networks_888"
+          destination:
+            - "testad"
+          service:
+            - "tcp-https"
+            - "tcp3389"
+            - "tcp445"
+
+        - rule_description: "888 to sc1 bomgar"
+          change_ref: "NETAR-3952"
+          action: "permit"
+          disabled: false
+          source:
+            - "networks_888"
+          destination:
+            - "sc1jump1"
+          service:
+            - "tcp-https"
+            - "tcp3389"
+
+        - rule_description: "Spotlight to Duo"
+          change_ref: "NETAR-3922"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "wh-data-duo-prod-sql2019-ec2"
+          service:
+            - "retail_db_ports"
+
+        - rule_description: "sftp server to retail attendance server"
+          change_ref: "NETAR-4187"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_centralised_sftp"
+          destination:
+            - "sc1wnprgdb13-14"
+          service:
+            - "tcp445"
+
+        - rule_description: "888 VPN to IDAM Server"
+          change_ref: "NETAR-888"
+          action: "permit"
+          disabled: false
+          source:
+            - "ro_vpn_888"
+            - "ciprian_graure_888"
+          destination:
+            - "sailpoint_iq_servers"
+          service:
+            - "smb_ports"
+            - "tcp3389"
+
+        - rule_description: "PTE DBs to Patch reporting server"
+          change_ref: "NETAR-4497"
+          action: "permit"
+          disabled: false
+          source:
+            - "pte_db_tier"
+          destination:
+            - "sc1uxpremg30"
+          service:
+            - "tcp_60606"
+
+        - rule_description: "Deny NCDE to CDE Jumphosts"
+          change_ref: "NETAR-4497"
+          action: "deny"
+          disabled: false
+          source:
+            - "ncde_jumphosts"
+          destination:
+            - "ncde_jumphosts"
+          service:
+            - "ssh_rdp"
+
+        - rule_description: "888 DFS roots"
+          change_ref: "888-321673"
+          action: "permit"
+          disabled: false
+          source:
+            - "networks_888"
+          destination:
+            - "dfs_root_namespace_servers"
+            - "sc1wnpreap10-new"
+          service:
+            - "tcp445"
+
+        - rule_description: "bomgar to nessus"
+          change_ref: "NETAR-4737"
+          action: "permit"
+          disabled: false
+          source:
+            - "bomgar_hosts"
+          destination:
+            - "nessus_servers"
+          service:
+            - "ssh_rdp"
+
+        - rule_description: "LD6 direct access servers"
+          change_ref: "NETAR-4794, NETAR-4899"
+          action: "permit"
+          disabled: false
+          source:
+            - "direct_access_servers"
+          destination:
+            - "ld6wnprecp001"
+          service:
+            - "da_ports"
+
+        - rule_description: "RPA Robot access to prod splunk UI"
+          change_ref: "NETAR-4814"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "splunk_aws_prod"
+          service:
+            - "tcp-http-https"
+
+        - rule_description: "RPA Robot access to AWS Data Prod"
+          change_ref: "NETAR-5072"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_servers"
+          destination:
+            - "aws_data_prod"
+          service:
+            - "http-only"
+
+        - rule_description: "Monitoring of ld6wnpredb02"
+          change_ref: "NETAR-5144"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "ld6wnpredb02"
+          service:
+            - "retail_db_ports"
+
+        - rule_description: "Syslog between Commvault & Splunk"
+          change_ref: "NETAR-5220"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprbkcs01"
+          destination:
+            - "scc_splunk"
+          service:
+            - "syslog-ports"
+
+        - rule_description: "sofia hr share migration"
+          change_ref: "NETAR-5282"
+          action: "permit"
+          disabled: false
+          source:
+            - "sofwnprefs02"
+          destination:
+            - "sc1uxprein14"
+          service:
+            - "tcp22"
+
+        - rule_description: "wh iam to sailpoint"
+          change_ref: "NETAR-5227"
+          action: "permit"
+          disabled: false
+          source:
+            - "wh_iam"
+          destination:
+            - "sailpoint_iq_servers"
+          service:
+            - "tcp445"
+            - "tcp3389"
+
+        - rule_description: "db monitoring for ld6wndvdb02"
+          change_ref: "NETAR-5310"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "ld6wndvdb02"
+          service:
+            - "retail_db_ports"
+
+        - rule_description: "ro build vlan to sccm"
+          change_ref: "NETAR-5246"
+          action: "permit"
+          disabled: false
+          source:
+            - "ro_build_network"
+          destination:
+            - "sc1wnprwsus01"
+          service:
+            - "http-only"
+
+        - rule_description: "iam jump server to sailpoint sftp"
+          change_ref: "NETAR-5341"
+          action: "permit"
+          disabled: false
+          source:
+            - "iam-new-jump-server"
+          destination:
+            - "sailpoint-sftp"
+          service:
+            - "tcp22"
+
+        - rule_description: "iam jump server to cluster vas"
+          change_ref: "NETAR-5341"
+          action: "permit"
+          disabled: false
+          source:
+            - "iam-new-jump-server"
+          destination:
+            - "cluster-vas"
+          service:
+            - "tcp22"
+
+        - rule_description: "iam jump server to iams prod and pre-prod"
+          change_ref: "NETAR-5341"
+          action: "permit"
+          disabled: false
+          source:
+            - "iam-new-jump-server"
+          destination:
+            - "iam-prod-preprod"
+          service:
+            - "iam-ports"
+
+        - rule_description: "aws sftp to idam sftp server"
+          change_ref: "NETAR-5466"
+          action: "permit"
+          disabled: false
+          source:
+            - "aws_centralised_sftp"
+          destination:
+            - "sc1uxprein14"
+          service:
+            - "tcp22"
+
+        - rule_description: "RPA Machine to Spectate URL"
+          change_ref: "NETAR-5532"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "cms_spectate"
+          service:
+            - "tcp-https"
+
+        - rule_description: "one view to sftp sc1uxprnap70"
+          change_ref: "NETAR-5532"
+          action: "permit"
+          disabled: false
+          source:
+            - "hpe_synergy_oneview"
+          destination:
+            - "sftp_sc1uxprnap70"
+          service:
+            - "tcp22"
+
+        - rule_description: "scc smtp to aws splunk"
+          change_ref: "NETAR-5751"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_smtp"
+          destination:
+            - "splunk_aws_prod"
+          service:
+            - "syslog-ports"
+
+        - rule_description: "scc netscalers to aws splunk"
+          change_ref: "NETAR-5751"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_netscalers"
+          destination:
+            - "splunk_aws_prod"
+          service:
+            - "syslog-ports"
+
+        - rule_description: "iam jump server to sftp irewnpreftp01"
+          change_ref: "NETAR-5787"
+          action: "permit"
+          disabled: false
+          source:
+            - "iam-new-jump-server"
+          destination:
+            - "irewnpreftp01-ftp"
+          service:
+            - "tcp22"
+
+        - rule_description: "Kiafka-racebook-access"
+          change_ref: "NETAR-5796"
+          action: "permit"
+          disabled: false
+          source:
+            - "grp-net-kafka-racebook-addrs-src"
+          destination:
+            - "grp-net-kafka-racebook-addrs-dest"
+          service:
+            - "tcp_9196"
+
+        - rule_description: "iam jump server to corp sftp server"
+          change_ref: "NETAR-5787"
+          action: "permit"
+          disabled: false
+          source:
+            - "iam-new-jump-server"
+          destination:
+            - "irewnpreftp01-ftp"
+          service:
+            - "tcp22"
+
+        - rule_description: "euc management server to additional networks"
+          change_ref: "NETAR-6045"
+          action: "permit"
+          disabled: false
+          source:
+            - "brsapprcmg002"
+            - "sc1uxpremg32"
+          destination:
+            - "corp-engineering-servers"
+          service:
+            - "corp-engineering-server-ports"
+
+        - rule_description: "crucial comp to rpa robots"
+          change_ref: "NETAR-6032"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "grp-net-crucial_comp"
+          service:
+            - "tcp-https"
+
+        - rule_description: "semperis dsp to non-vmc ad dsp agents"
+          change_ref: "NETAR-6071"
+          action: "permit"
+          disabled: false
+          source:
+            - "semperis-dsp-mgmt-svr"
+          destination:
+            - "non-vmc-ad-dsp-agents"
+          service:
+            - "corp-ad-dsp-agent-ports"
+
+        - rule_description: "non-vmc semperis audit agents to semperis dsp mgmt"
+          change_ref: "NETAR-6071"
+          action: "permit"
+          disabled: false
+          source:
+            - "all-non-vmc-ad-with-semperis"
+          destination:
+            - "semperis-dsp-mgmt-svr"
+          service:
+            - "corp-semperis-dsp-mgmt-svr-ports"
+
+        - rule_description: "semperis dsp mgmt to non-vmc pki servers"
+          change_ref: "NETAR-6071"
+          action: "permit"
+          disabled: false
+          source:
+            - "semperis-dsp-mgmt-svr"
+          destination:
+            - "non-vmc-pki-svrs"
+          service:
+            - "tcp-https"
+
+        - rule_description: "semperis adfr svr aws adfr agents"
+          change_ref: "NETAR-6071"
+          action: "permit"
+          disabled: false
+          source:
+            - "semperis-adfr-svr"
+          destination:
+            - "aws-ad-adfr-agents"
+          service:
+            - "corp-ad-adfr-agent-ports"
+
+        - rule_description: "spotlight server to semperis_dsp_db"
+          change_ref: "NETAR-6087"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1wnprcmn250"
+          destination:
+            - "semperis_dsp_db"
+          service:
+            - "retail_db_ports"
+
+        - rule_description: "spotlight server to semperis_dsp_db"
+          change_ref: "NETAR-6047"
+          action: "permit"
+          disabled: false
+          source:
+            - "_10_120_194_128s27_access"
+          destination:
+            - "corp-engineering-servers"
+          service:
+            - "corp_engineering_ports"
+
+        - rule_description: "rpa machines access to ssrs"
+          change_ref: "NETAR-6123"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "uno-presentation-ld6"
+          service:
+            - "tcp-https"
+
+        - rule_description: "888 sailpoint to sailpoint openvpn"
+          change_ref: "NETAR-6147"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_888"
+          destination:
+            - "sailpoint_ssh_tunnel_ips"
+          service:
+            - "tcp-https"
+
+        - rule_description: "888 sailpoint to sailpoint openvpn"
+          change_ref: "NETAR-6147"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_888"
+          destination:
+            - "ad-servers-888"
+          service:
+            - "ad_888_ports"
+
+        - rule_description: "888 sailpoint to sailpoint openvpn"
+          change_ref: "NETAR-6147"
+          action: "permit"
+          disabled: false
+          source:
+            - "sailpoint_888"
+          destination:
+            - "sailpoint_iq_888"
+          service:
+            - "ad_iq_ports"
+
+        - rule_description: "ADFR communication"
+          change_ref: "NETAR-6191"
+          action: "permit"
+          disabled: false
+          source:
+            - "semperis-adfr-svr"
+          destination:
+            - "irewnpreadfr02"
+          service:
+            - "active_directory_ports"
+
+        - rule_description: "ADFR communication"
+          change_ref: "NETAR-6191"
+          action: "permit"
+          disabled: false
+          source:
+            - "irewnpreadfr02"
+          destination:
+            - "semperis-adfr-svr"
+          service:
+            - "active_directory_ports"
+
+        - rule_description: "Dublin apps access to fortisoar"
+          change_ref: "ITSD-33471"
+          action: "permit"
+          disabled: false
+          source:
+            - "dublin_published_apps"
+          destination:
+            - "fortisoar"
+          service:
+            - "tcp-https"
+
+        - rule_description: "888 infosec access"
+          change_ref: "ITSD-34565"
+          action: "permit"
+          disabled: false
+          source:
+            - "_888_vpns"
+            - "_888_infosec"
+          destination:
+            - "fortisoar"
+            - "sc1bigiq01"
+          service:
+            - "tcp-https"
+
+        - rule_description: "brs etl server to scc sftp server"
+          change_ref: "NETAR-6268"
+          action: "permit"
+          disabled: false
+          source:
+            - "brswn562"
+          destination:
+            - "sc1uxprnwb51"
+          service:
+            - "tcp22"
+
+        - rule_description: "sc1 ob citrix deny"
+          change_ref: "NETAR-6279"
+          action: "deny"
+          disabled: false
+          source:
+            - "scc_citrix_ob"
+          destination:
+            - "sc1wnprefs08"
+          service:
+            - "tcp445"
+
+        - rule_description: "sc1 citrix to fileshres"
+          change_ref: "NETAR-6279"
+          action: "permit"
+          disabled: false
+          source:
+            - "scc_accurate_citrix"
+            - "scc_citrix"
+          destination:
+            - "sc1wnprefs08"
+          service:
+            - "tcp445"
+
+        - rule_description: "corp servers to splunk"
+          change_ref: "NETAR-6284"
+          action: "permit"
+          disabled: false
+          source:
+            - "corp-engineering-servers"
+          destination:
+            - "splunk_aws_prod"
+          service:
+            - "tcp514"
+
+        - rule_description: "dm aws to retail sftp"
+          change_ref: "NETAR-6498"
+          action: "permit"
+          disabled: false
+          source:
+            - "datamgmt_aws_non_prod"
+          destination:
+            - "sc1uxprnap019"
+          service:
+            - "tcp22"
+
+        - rule_description: "TRS to new liability viewer"
+          change_ref: "NETAR-6518"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1uxprrdb05"
+          destination:
+            - "ma3uxprdb01"
+          service:
+            - "tcp3306"
+
+        - rule_description: "TRS to new liability viewer"
+          change_ref: "NETAR-6518"
+          action: "permit"
+          disabled: false
+          source:
+            - "trs_db"
+          destination:
+            - "ma3uxprdb01"
+          service:
+            - "tcp3306"
+
+        - rule_description: "MA3 oneview backups"
+          change_ref: "NETAR-6634"
+          action: "permit"
+          disabled: false
+          source:
+            - "ma3le1cmp"
+          destination:
+            - "sftp_sc1uxprnap70"
+          service:
+            - "tcp22"
+
+        - rule_description: "RPA to Splunk"
+          change_ref: "NETAR-6671"
+          action: "permit"
+          disabled: false
+          source:
+            - "uipath_robot_server_subnet"
+          destination:
+            - "splunk_aws_prod"
+          service:
+            - "rpa-splunk-port"
+
+        - rule_description: "888 infoblox/rundeck access"
+          change_ref: "ITSD-49490"
+          action: "permit"
+          disabled: false
+          source:
+            - "gib-888"
+          destination:
+            - "infoblox-login"
+            - "rundeck-login"
+          service:
+            - "tcp-https"
+            - "tcp-4443"
+
+        - rule_description: "wh test ad to evoke test ad"
+          change_ref: "NETAR-6685"
+          action: "permit"
+          disabled: false
+          source:
+            - "wh-test-ad"
+          destination:
+            - "evoke-test-ad"
+          service:
+            - "active_directory_ports"
+
+        - rule_description: "evoke test ad to wh test ad"
+          change_ref: "NETAR-6685"
+          action: "permit"
+          disabled: false
+          source:
+            - "evoke-test-ad"
+          destination:
+            - "wh-test-ad"
+          service:
+            - "active_directory_ports"
+
+        - rule_description: "SQL Spotlight Access"
+          change_ref: "ITSD-51970"
+          action: "permit"
+          disabled: false
+          source:
+            - "whcsssbt"
+          destination:
+            - "sc1wnprcmn250"
+          service:
+            - "tcp1433"
+
+        - rule_description: "vmconverter to accurate db"
+          change_ref: "NETAR-6705"
+          action: "permit"
+          disabled: false
+          source: 
+            - "sc1wnprcon01"
+          destination:
+            - "sc1uxprgdb05-new"
+            - "suricata-ids"
+          service:
+            - "tcp-https"
+            - "tcp22"
+
+        - rule_description: "ma3 vcenter backups"
+          change_ref: "NETAR-6693"
+          action: "permit"
+          disabled: false
+          source: 
+            - "ma3prapvc01"
+          destination:
+            - "sftp_sc1uxprnap70"
+          service:
+            - "tcp22"
+
+        - rule_description: "citrix master to db storage"
+          change_ref: "NETAR-6752"
+          action: "permit"
+          disabled: false
+          source: 
+            - "scc_accurate_citrix"
+          destination:
+            - "irewnpredb04"
+          service:
+            - "accurate_batch_dfs"
+
+        - rule_description: "ire ironport to ld6 ironport"
+          change_ref: "NETAR-6767"
+          action: "permit"
+          disabled: false
+          source: 
+            - "ire-ironport"
+          destination:
+            - "ld6-ironport"
+          service:
+            - "ironport-ports"
+
+        - rule_description: "ld6 ironport to ire ironport"
+          change_ref: "NETAR-6767"
+          action: "permit"
+          disabled: false
+          source: 
+            - "ld6-ironport"
+          destination:
+            - "ire-ironport"
+          service:
+            - "ironport-ports"
+
+        - rule_description: "ironport onprem to ironport cloud"
+          change_ref: "NETAR-6767"
+          action: "permit"
+          disabled: false
+          source:
+            - "ire-ironport"
+          destination:
+            - "ironport_cloud"
+          service:
+            - "smtp_port"
+
+        - rule_description: "ironport onprem to ironport azure"
+          change_ref: "NETAR-6767"
+          action: "permit"
+          disabled: false
+          source:
+            - "ire-ironport"
+          destination:
+            - "azure_mailrelay"
+          service:
+            - "tcp514"
+
+        - rule_description: "ironport onprem to ironport azure"
+          change_ref: "NETAR-6767"
+          action: "permit"
+          disabled: false
+          source:
+            - "ire-ironport"
+          destination:
+            - "icann"
+          service:
+            - "tcp-https"
+
+        - rule_description: "unodb servers to whcssbt"
+          change_ref: "ITSD-51965"
+          action: "permit"
+          disabled: false
+          source: 
+            - "ld6_uno_db_servers"
+            - "ld6_powerbi"
+            - "ld6wnprejmp04"
+            - "stjwn561"
+            - "mi_db"
+            - "aws-nifi-ranges"
+            - "brswn561"
+          destination:
+            - "whcsssbt"
+          service:
+            - "tcp1433"
+
+        - rule_description: "corp test servers to ironport"
+          change_ref: "NETAR-6563"
+          action: "permit"
+          disabled: false
+          source: 
+            - "corp_test_servers"
+          destination:
+            - "ire-ironport"
+          service:
+            - "smtp_port"
+
+        - rule_description: "infoblox ironport monitoring"
+          change_ref: "NETAR-6563"
+          action: "permit"
+          disabled: false
+          source: 
+            - "infoblox_grid_ex_scc"
+          destination:
+            - "ire-ironport"
+          service:
+            - "smtp_port"
+
+        - rule_description: "any to ironport"
+          change_ref: "NETAR-6929"
+          action: "permit"
+          disabled: false
+          source:
+            - "rfc_1918"
+            - "rfc_6598" 
+          destination:
+            - "ire-ironport"
+            - "ld6-ironport"
+          service:
+            - "smtp_port"
+
+        - rule_description: "wh to evoke ad sync"
+          change_ref: "NETAR-6949"
+          action: "permit"
+          disabled: false
+          source:
+            - "testad"
+          destination:
+            - "evoke_test_ad"
+          service:
+            - "test_ad_ports"
+
+        - rule_description: "wh to evoke ad sync"
+          change_ref: "NETAR-6967"
+          action: "permit"
+          disabled: false
+          source:
+            - "evoke_test_ad"
+          destination:
+            - "testad"
+          service:
+            - "active_directory_ports"
+
+        - rule_description: "euc server to citrix brokers"
+          change_ref: "NETAR-6922"
+          action: "permit"
+          disabled: false
+          source:
+            - "brsapprcmg002"
+          destination:
+            - "citrix_controllers"
+          service:
+            - "dfs_root_hosts_services"
+
+        - rule_description: "citrix controllers to ma3 vcentre"
+          change_ref: "NETAR-6997"
+          action: "permit"
+          disabled: false
+          source:
+            - "citrix_controllers"
+          destination:
+            - "ma3prapvc01"
+          service:
+            - "tcp-https"
+
+        - rule_description: "ironport to splunk"
+          change_ref: "NETAR-6994"
+          action: "permit"
+          disabled: false
+          source: 
+            - "ire-ironport"
+          destination:
+            - "splunk_aws_prod"
+          service:
+            - "tcp514"
+
+        - rule_description: "new relic to ma3 vcenter"
+          change_ref: "NETAR-6935"
+          action: "permit"
+          disabled: false
+          source: 
+            - "sc1uxpremn89"
+          destination:
+            - "ma3prapvc01"
+          service:
+            - "tcp-https"
+
+        - rule_description: "scc_ma3_commvault_interconnectivity"
+          change_ref: "NETAR-6935"
+          action: "permit"
+          disabled: false
+          source:
+            - "sc1_commvault_network"
+            - "ma3_commvault_network"
+          destination:
+            - "sc1_commvault_network"
+            - "ma3_commvault_network"
+          service:
+            - "commvault_proxy_services"
+
+        - rule_description: "il infosec to fortisoar"
+          change_ref: "ITSD-71301"
+          action: "permit"
+          disabled: false
+          source: 
+            - "il_infosec_machines"
+          destination:
+            - "fortisoar"
+          service:
+            - "tcp-https"
+
+        - rule_description: "ld6 vcenter backups"
+          change_ref: "NETAR-7064"
+          action: "permit"
+          disabled: false
+          source: 
+            - "ld6-synergy-deployment-blade-enc"
+          destination:
+            - "sftp_sc1uxprnap70"
+          service:
+            - "tcp22"
+
+        - rule_description: "iam jump server to vmc scc vcentre"
+          change_ref: "NETAR-5838"
+          action: "permit"
+          disabled: false
+          source: 
+            - "iam-new-jump-server"
+          destination:
+            - "scc_non_whc_prod_vcentre"
+          service:
+            - "tcp-https"
+
+        - rule_description: "testad to windows wsus"
+          change_ref: "NETAR-7245"
+          action: "permit"
+          disabled: false
+          source: 
+            - "testad"
+          destination:
+            - "ld6wnprwsus02"
+          service:
+            - "http-only"
+
+        - rule_description: "trs to kafka topics"
+          change_ref: "NETAR-7174"
+          action: "permit"
+          disabled: false
+          source: 
+            - "trs_servers"
+          destination:
+            - "kafka_topics_networks"
+          service:
+            - "kafka-topics-ports"

@@ -1,0 +1,854 @@
+---
+
+resources:
+  security_policy:
+
+    - access_list: intra-segment
+      rules:
+
+        - rule_description: "10.120.100.0/24 to 10.120.100.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-100-0s24v262"
+          destination:
+            - "intra-segment_10-120-100-0s24v262"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.101.0/27 to 10.120.101.0/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-101-0s27v263"
+          destination:
+            - "intra-segment_10-120-101-0s27v263"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.102.0/24 to 10.120.102.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-102-0s24v264"
+          destination:
+            - "intra-segment_10-120-102-0s24v264"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.103.0/29 to 10.120.103.0/29"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-103-0s29"
+          destination:
+            - "intra-segment_10-120-103-0s29"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.129.0/24 to 10.120.129.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-129-0s24v301"
+          destination:
+            - "intra-segment_10-120-129-0s24v301"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.131.0/24 to 10.120.131.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-131-0s24v303"
+          destination:
+            - "intra-segment_10-120-131-0s24v303"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.132.0/24 to 10.120.132.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-132-0s24v304"
+          destination:
+            - "intra-segment_10-120-132-0s24v304"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.136.0/24 to 10.120.136.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-136-0s24v309"
+          destination:
+            - "intra-segment_10-120-136-0s24v309"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.137.0/24 to 10.120.137.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-137-0s24v310"
+          destination:
+            - "intra-segment_10-120-137-0s24v310"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.139.0/27 to 10.120.139.0/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-139-0s27"
+          destination:
+            - "intra-segment_10-120-139-0s27"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.140.0/24 to 10.120.140.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-140-0s24v320"
+          destination:
+            - "intra-segment_10-120-140-0s24v320"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.141.0/24 to 10.120.141.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-141-0s24v321"
+          destination:
+            - "intra-segment_10-120-141-0s24v321"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.143.66/27 to 10.120.143.66/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-143-64s27v334"
+          destination:
+            - "intra-segment_10-120-143-64s27v334"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.145.0/24 to 10.120.145.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-145-0s24v341"
+          destination:
+            - "intra-segment_10-120-145-0s24v341"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.146.0/24 to 10.120.146.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-146-0s24v342"
+          destination:
+            - "intra-segment_10-120-146-0s24v342"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.148.0/24 to 10.120.148.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-148-0s24v344"
+          destination:
+            - "intra-segment_10-120-148-0s24v344"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.149.0/24 to 10.120.149.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-149-0s24v345"
+          destination:
+            - "intra-segment_10-120-149-0s24v345"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.151.0/24 to 10.120.151.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-151-0s24v347"
+          destination:
+            - "intra-segment_10-120-151-0s24v347"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.152.0/24 to 10.120.152.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-152-0s24v348"
+          destination:
+            - "intra-segment_10-120-152-0s24v348"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.153.0/24 to 10.120.153.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-153-0s24v349"
+          destination:
+            - "intra-segment_10-120-153-0s24v349"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.159.96/27 to 10.120.159.96/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-159-96s27v365"
+          destination:
+            - "intra-segment_10-120-159-96s27v365"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.161.224/27 to 10.120.161.224/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-161-224s27v385"
+          destination:
+            - "intra-segment_10-120-161-224s27v385"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.162.0/24 to 10.120.162.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-162-0s24v398"
+          destination:
+            - "intra-segment_10-120-162-0s24v398"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.163.0/24 to 10.120.163.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-163-0s24v399"
+          destination:
+            - "intra-segment_10-120-163-0s24v399"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.170.0/25 to 10.120.170.0/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-170-0s25v450"
+          destination:
+            - "intra-segment_10-120-170-0s25v450"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.170.128/25 to 10.120.170.128/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-170-128s25v451"
+          destination:
+            - "intra-segment_10-120-170-128s25v451"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.172.0/24 to 10.120.172.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-172-0s24v453"
+          destination:
+            - "intra-segment_10-120-172-0s24v453"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.173.0/25 to 10.120.173.0/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-173-0s25v460"
+          destination:
+            - "intra-segment_10-120-173-0s25v460"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.173.128/25 to 10.120.173.128/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-173-128s25v461"
+          destination:
+            - "intra-segment_10-120-173-128s25v461"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.177.0/25 to 10.120.177.0/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-177-0s25v480"
+          destination:
+            - "intra-segment_10-120-177-0s25v480"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.180.0/25 to 10.120.180.0/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-180-0s25v485"
+          destination:
+            - "intra-segment_10-120-180-0s25v485"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.180.128/25 to 10.120.180.128/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-180-128s25v486"
+          destination:
+            - "intra-segment_10-120-180-128s25v486"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.192.128/27 to 10.120.192.128/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-192-128s27"
+          destination:
+            - "intra-segment_10-120-192-128s27"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.192.160/29 to 10.120.192.160/29"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-192-160s29v565"
+          destination:
+            - "intra-segment_10-120-192-160s29v565"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.192.168/29 to 10.120.192.168/29"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-192-168s29"
+          destination:
+            - "intra-segment_10-120-192-168s29"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.193.224/27 to 10.120.193.224/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-193-224s27v575"
+          destination:
+            - "intra-segment_10-120-193-224s27v575"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.194.0/26 to 10.120.194.0/26"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-194-0s26v576"
+          destination:
+            - "intra-segment_10-120-194-0s26v576"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.194.192/26 to 10.120.194.192/26"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-194-192s26v579"
+          destination:
+            - "intra-segment_10-120-194-192s26v579"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.194.64/26 to 10.120.194.64/26"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-194-64s26v577"
+          destination:
+            - "intra-segment_10-120-194-64s26v577"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.195.0/24 to 10.120.195.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-195-0s24v580"
+          destination:
+            - "intra-segment_10-120-195-0s24v580"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.196.0/24 to 10.120.196.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-196-0s24v581"
+          destination:
+            - "intra-segment_10-120-196-0s24v581"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.208.0/24 to 10.120.208.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-208-0s24v650"
+          destination:
+            - "intra-segment_10-120-208-0s24v650"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.216.0/21 to 10.120.216.0/21"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-216-0s21v397"
+          destination:
+            - "intra-segment_10-120-216-0s21v397"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.254.208/29 to 10.120.254.208/29"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-254-208s29v989"
+          destination:
+            - "intra-segment_10-120-254-208s29v989"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.32.128/27 to 10.120.32.128/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-32-128s27v104"
+          destination:
+            - "intra-segment_10-120-32-128s27v104"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.32.96/27 to 10.120.32.96/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-32-96s27v103"
+          destination:
+            - "intra-segment_10-120-32-96s27v103"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.33.0/29 to 10.120.33.0/29"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-33-0s29v109"
+          destination:
+            - "intra-segment_10-120-33-0s29v109"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.33.160/27 to 10.120.33.160/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-33-160s27v115"
+          destination:
+            - "intra-segment_10-120-33-160s27v115"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.36.0/24 to 10.120.36.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-36-0s24"
+          destination:
+            - "intra-segment_10-120-36-0s24"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.37.0/24 to 10.120.37.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-37-0s24v121"
+          destination:
+            - "intra-segment_10-120-37-0s24v121"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.38.0/24 to 10.120.38.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-38-0s24v122"
+          destination:
+            - "intra-segment_10-120-38-0s24v122"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.39.0/24 to 10.120.39.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-39-0s24v123"
+          destination:
+            - "intra-segment_10-120-39-0s24v123"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.43.0/24 to 10.120.43.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-43-0s24v124"
+          destination:
+            - "intra-segment_10-120-43-0s24v124"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.44.0/23 to 10.120.44.0/23"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-44-0s23v134"
+          destination:
+            - "intra-segment_10-120-44-0s23v134"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.46.0/25 to 10.120.46.0/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-46-0s25v140"
+          destination:
+            - "intra-segment_10-120-46-0s25v140"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.50.0/24 to 10.120.50.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-50-0s24v160"
+          destination:
+            - "intra-segment_10-120-50-0s24v160"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.64.128/27 to 10.120.64.128/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-64-128s27v204"
+          destination:
+            - "intra-segment_10-120-64-128s27v204"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.64.160/27 to 10.120.64.160/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-64-160s27v205"
+          destination:
+            - "intra-segment_10-120-64-160s27v205"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.65.128/27 to 10.120.65.128/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-65-128s27v235"
+          destination:
+            - "intra-segment_10-120-65-128s27v235"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.65.64/27 to 10.120.65.64/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-65-64s27v232"
+          destination:
+            - "intra-segment_10-120-65-64s27v232"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.65.96/27 to 10.120.65.96/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-65-96s27v234"
+          destination:
+            - "intra-segment_10-120-65-96s27v234"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.66.0/24 to 10.120.66.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-66-0s24v210"
+          destination:
+            - "intra-segment_10-120-66-0s24v210"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.67.0/24 to 10.120.67.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-67-0s24v211"
+          destination:
+            - "intra-segment_10-120-67-0s24v211"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.69.192/27 to 10.120.69.192/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-69-192s27v219"
+          destination:
+            - "intra-segment_10-120-69-192s27v219"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.69.224/27 to 10.120.69.224/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-69-224s27v218"
+          destination:
+            - "intra-segment_10-120-69-224s27v218"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.69.96/27 to 10.120.69.96/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-69-96s27v216"
+          destination:
+            - "intra-segment_10-120-69-96s27v216"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.70.0/27 to 10.120.70.0/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-70-0s27v223"
+          destination:
+            - "intra-segment_10-120-70-0s27v223"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.71.0/24 to 10.120.71.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-71-0s24"
+          destination:
+            - "intra-segment_10-120-71-0s24"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.72.0/24 to 10.120.72.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-72-0s24v222"
+          destination:
+            - "intra-segment_10-120-72-0s24v222"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.74.0/23 to 10.120.74.0/23"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-74-0s23v231"
+          destination:
+            - "intra-segment_10-120-74-0s23v231"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.76.0/24 to 10.120.76.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-76-0s24v233"
+          destination:
+            - "intra-segment_10-120-76-0s24v233"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.98.0/24 to 10.120.98.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-98-0s24v260"
+          destination:
+            - "intra-segment_10-120-98-0s24v260"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.99.0/24 to 10.120.99.0/24"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-120-99-0s24v261"
+          destination:
+            - "intra-segment_10-120-99-0s24v261"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.156.4.0/25 to 10.156.4.0/25"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-156-4-0s25"
+          destination:
+            - "intra-segment_10-156-4-0s25"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.156.5.128/27 to 10.156.5.128/27"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source: 
+            - "intra-segment_10-156-5-128s27"
+          destination: 
+            - "intra-segment_10-156-5-128s27"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.33.192/27 to 10.120.33.192/27"
+          change_ref: "CHG0149147"
+          action: "permit"
+          disabled: false
+          source:
+            - "intra-segment_10-120-33-192s26"
+          destination:
+            - "intra-segment_10-120-33-192s26"
+          service:
+            - "ip-any"
+
+        - rule_description: "10.120.194.128/27 to 10.120.194.128/27"
+          change_ref: "CHG0149147"
+          action: "permit"
+          disabled: false
+          source:
+            - "intra-segment_10-120-194-128s27"
+          destination:
+            - "intra-segment_10-120-194-128s27"
+          service:
+            - "ip-any"

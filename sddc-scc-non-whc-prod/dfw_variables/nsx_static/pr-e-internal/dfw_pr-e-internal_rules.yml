@@ -1,0 +1,1466 @@
+---
+
+resources:
+  security_policy:
+
+    - access_list: internal-vrf_access_in
+      rules:
+
+    - access_list: monitoring-int_access_in
+      rules:
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_4"
+          change_ref: "CHG0138766,CHG0140021,CHG0143922"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-orion-app-srvs"
+          destination:
+            - "pr-e-internal_grp_net-obj-g-solarwinds-destinations"
+          service:
+            - "pr-e-internal_svc-obj-g-solarwinds"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_6"
+          change_ref: "CHG0111088"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-0s24"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_26"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_9"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_8"
+          change_ref: "CHG0075847"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-0s24"
+          destination:
+            - "pr-e-internal_brs-git-nonprod-williamhill-plc"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_10"
+          change_ref: "CHG0019196"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-0s24"
+          destination:
+            - "pr-e-internal_sc1uxpremg30"
+          service:
+            - "pr-e-internal_tcp-60606_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_12"
+          change_ref: "CHG0141604"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_rundeck-app-servers"
+          destination:
+            - "pr-e-internal_grp_aws-retail-prod-vpc"
+          service:
+            - "pr-e-internal_tcp-3306_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_14"
+          change_ref: "CHG0112330"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_27"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_28"
+          service:
+            - "pr-e-internal_tcp-3306_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_16"
+          change_ref: "CHG0112691"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremn73"
+          destination:
+            - "pr-e-internal_ip_10-120-99-85"
+          service:
+            - "pr-e-internal_tcp-1523_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_18"
+          change_ref: "CHG0101781 / CHG0114923"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_rundeck-primary-cluster"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_14"
+          service:
+            - "pr-e-internal_tcp-9977"            
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_20"
+          change_ref: "CHG0054123"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-26"
+          destination:
+            - "pr-e-internal_ip_10-120-129-151"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_22"
+          change_ref: "CHG0134971"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_skybox-appliances"
+          destination:
+            - "pr-e-internal_grp_skybox-clients"
+          service:
+            - "pr-e-internal_tcp-9070_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_25"
+          change_ref: "CHG0117835, CHG0118067, CHG0118070, CHG0118072, CHG0118074, CHG0118080, CHG0118083, ,CHG0119313"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnmem01"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_36"
+          service:
+            - "pr-e-internal_tcp-3306"            
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_27"
+          change_ref: "CHG0130058"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremg22"
+          destination:
+            - "pr-e-internal_grp_isilon-storage-svrs"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_29"
+          change_ref: "CHG0114426"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-134"
+          destination:
+            - "pr-e-internal_grp_pure-storage-svrs"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_31"
+          change_ref: "CHG0064699, CHG0143874"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_tufin"
+          destination:
+            - "pr-e-internal_grp_tufin-endpoints"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_33"
+          change_ref: "CHG0033465"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxrdk"
+          destination:
+            - "pr-e-internal_grp_retail-liability-svrs"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_35"
+          change_ref: "CHG0122369,CHG0127976"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn006"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_41"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_37"
+          change_ref: "CHG0115562"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremg31"
+          destination:
+            - "pr-e-internal_grp_puppet-master-db"
+          service:
+            - "pr-e-internal_tcp-8081_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_39"
+          change_ref: "CHG0063703, CHG0143875"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_netbrain"
+          destination:
+            - "pr-e-internal_grp_netbrain-destinations"
+          service:
+            - "pr-e-internal_scc-migrated_service_37"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_41"
+          change_ref: "Cacti - CHG0015230"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_gib-internal-traffic-mon"
+          destination:
+            - "pr-e-internal_grp_rfc1918networks"
+          service:
+            - "pr-e-internal_udp-snmp_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_43"
+          change_ref: "CHG0123307, CHG0123640"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_ca-hub-servers-scc"
+          destination:
+            - "pr-e-internal_grp_ca-hub-clients-aws"
+          service:
+            - "pr-e-internal_ca-hub-services-group"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_45"
+          change_ref: "CHG0125390, CHG0125510"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_prdxclo25srv001-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_51"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_47"
+          change_ref: "CHG0124683"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremg60"
+          destination:
+            - "pr-e-internal_cran-r-project-org"
+          service:
+            - "pr-e-internal_tcp-873_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_49"
+          change_ref: "CHG0125713"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_54"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_55"
+          service:
+            - "pr-e-internal_tcp-8089_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_51"
+          change_ref: "CHG0033465"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_88"
+          destination:
+            - "pr-e-internal_grp_apache-servers"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_89"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_53"
+          change_ref: "CHG0143884"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_91"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_92"
+          service:
+            - "pr-e-internal_tcp-1433_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_55"
+          change_ref: "CHG0127786"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpreap242"
+          destination:
+            - "pr-e-internal_brs-git-nonprod-williamhill-plc"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_56"
+          change_ref: ""
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-orion-app-srvs"
+          destination:
+            - "pr-e-internal_grp_wh-border-devices"
+          service:
+            - "pr-e-internal_udp-snmp_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_58"
+          change_ref: "CHG0129308"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremg26"
+          destination:
+            - "pr-e-internal_grp_us-subnets"
+          service:
+            - "pr-e-internal_scc-migrated_service_21"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_60"
+          change_ref: "CHG0131597"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_69"
+          destination:
+            - "pr-e-internal_grp_malta_pure_array"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_70"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_62"
+          change_ref: "CHG0135223"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpredb11-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_ld6wnpredb11-prod-williamhill-plc"
+          service:
+            - "pr-e-internal_scc-migrated_service_25"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_64"
+          change_ref: "CHG0135457"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremg26"
+          destination:
+            - "pr-e-internal_in1-ilo-net"
+          service:
+            - "pr-e-internal_scc-migrated_service_27"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_66"
+          change_ref: "CHG0136426"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnprcdb30"
+          destination:
+            - "pr-e-internal_ld6wnprcdb30"
+          service:
+            - "pr-e-internal_scc-migrated_service_29"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_68"
+          change_ref: "CHG0111816"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_athene-servers"
+          destination:
+            - "pr-e-internal_sc1prapvc01-prod-williamhill-plc"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_70"
+          change_ref: "CHG0137053"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn17"
+          destination:
+            - "pr-e-internal_ip_10-120-143-171"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_72"
+          change_ref: "CHG0141421"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-89"
+          destination:
+            - "pr-e-internal_ip_10-121-10-109"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_74"
+          change_ref: "CHG0141421"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-89"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_107"
+          service:
+            - "pr-e-internal_tcp-9070_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_76"
+          change_ref: "CHG0141736"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-89"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_106"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_78"
+          change_ref: "CHG0143826"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_130"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_84"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_132"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_80"
+          change_ref: "CHG0065974, CHG0143829"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_131"
+          destination:
+            - "pr-e-internal_grp_checkpoint-cma"
+          service:
+            - "pr-e-internal_tufincheckpointports"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_82"
+          change_ref: "CHG0079889,CHG0083441,CHG0092703,CHG0094547,CHG0094606"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxrdk"
+          destination:
+            - "pr-e-internal_grp_stingrays"
+          service:
+            - "pr-e-internal_tcp-9070_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_84"
+          change_ref: "CHG0089097"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_whdpops01"
+          service:
+            - "pr-e-internal_tcp-22000_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_86"
+          change_ref: "CHG0089097"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_whdppresent01"
+          service:
+            - "pr-e-internal_tcp-23000_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_88"
+          change_ref: "CHG0089097"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_whdpservices01"
+          service:
+            - "pr-e-internal_tcp-29000_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_90"
+          change_ref: "CHG0089097"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_whdpservices"
+          service:
+            - "pr-e-internal_scc-migrated_service_3"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_93"
+          change_ref: "CHG0082905 ,CHG0083742"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_sql-monitored-servers"
+          service:
+            - "pr-e-internal_scc-migrated_service_4"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_95"
+          change_ref: "CHG0082905"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_sql-servers"
+          service:
+            - "pr-e-internal_sql-monitoring"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_97"
+          change_ref: "CHG0143828"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremn57"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_76"
+          service:
+            - "pr-e-internal_scc-migrated_service_5"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_99"
+          change_ref: "CHG0143830"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremg32"
+          destination:
+            - "pr-e-internal_ip_10-112-13-33"
+          service:
+            - "pr-e-internal_tcp-www_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_101"
+          change_ref: "CHG0135695, CHG0143840"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_77"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_78"
+          service:
+            - "pr-e-internal_scc-migrated_service_83"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_103"
+          change_ref: "CHG0079439"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremg26"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_80"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_105"
+          change_ref: "CHG0034356, CHG0143923"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_obmon-onshore"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_81"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_107"
+          change_ref: "CHG0108784"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn006"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_95"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_109"
+          change_ref: "CHG0065471, CHG0070895, CHG0066166"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_scc_wsus"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_139"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_111"
+          change_ref: "CHG0134210, CHG0134346"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn81"
+          destination:
+            - "pr-e-internal_ip_10-120-134-250"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_25"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_113"
+          change_ref: "CHG0143841"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn21"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_82"
+          service:
+            - "pr-e-internal_tcp-8089_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_115"
+          change_ref: "CHG0143842"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn21"
+          destination:
+            - "pr-e-internal_ip_10-100-9-73"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_6"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_117"
+          change_ref: "CHG0098476, CHG0101521, CHG0115562"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_93"
+          destination:
+            - "pr-e-internal_ip_10-201-230-17"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_119"
+          change_ref: "CHG0085802"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn74"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_138"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_121"
+          change_ref: "CHG0112804, CHG0114385, CHG0143887, CHG0143888"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-134"
+          destination:
+            - "pr-e-internal_grp_isilon-storage-svrs"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_26"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_123"
+          change_ref: "CHG0076486, CHG0077496,CHG0077496"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremn01-prod-williamhill-plc"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_134"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_125"
+          change_ref: "CHG0097787"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_140"
+          destination:
+            - "pr-e-internal_ip_10-120-146-135"
+          service:
+            - "pr-e-internal_tcp-ssh_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_127"
+          change_ref: "CHG0143974"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_wily_svrs_scc"
+          destination:
+            - "pr-e-internal_grp_consul-hosts"
+          service:
+            - "pr-e-internal_tcp-8500_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_130"
+          change_ref: "Snow monitoring to all vCenter 6.0 ,CHG0087219,CHG0134053"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremg44"
+          destination:
+            - "pr-e-internal_grp_vcenter"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_132"
+          change_ref: "CHG0144405"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_master-rundeck-app-nodes"
+          destination:
+            - "pr-e-internal_ext-api-forwardproxy-gib-prod-williamhill-plc"
+          service:
+            - "pr-e-internal_tcp-9070_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_134"
+          change_ref: "CHG0144444"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_master-rundeck-app-nodes"
+          destination:
+            - "pr-e-internal_ext-api-forwardproxy-gib-prod-williamhill-plc-nic2"
+          service:
+            - "pr-e-internal_tcp-9070_eq"
+
+        - rule_description: "pr-e-internal_monitoring-int_access_in_136"
+          change_ref: "CHG0144134"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-163-89"
+          destination:
+            - "pr-e-internal_grp_scc-oracle-instances"
+          service:
+            - "pr-e-internal_scc-oracle-instances-services"
+
+    - access_list: global_access
+      rules:
+
+        - rule_description: "pr-e-internal_global_access_2"
+          change_ref: "CHG0141979 -  wide access on prem due to specific rules in sddc"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_vmc-sddcs"
+          destination:
+            - "any"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_3"
+          change_ref: ""
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_vmc-sddcs"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_5"
+          change_ref: "CHG0144834"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_whgroup_ad_servers-chg0144834"
+          service:
+            - "pr-e-internal_whgroup_ad_ports-chg0144834"
+
+        - rule_description: "pr-e-internal_global_access_7"
+          change_ref: "CHG0015788"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_scc-nessus"
+          destination:
+            - "pr-e-internal_grp_internal-nets"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_9"
+          change_ref: "CHG0067421, CHG0090267"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_sc1uxpremn74"
+          service:
+            - "pr-e-internal_scc-migrated_udp_1"
+
+        - rule_description: "pr-e-internal_global_access_11"
+          change_ref: "CHG0094805 CHG0117584"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_wily_svrs_scc"
+          destination:
+            - "pr-e-internal_grp_sccbrs-stingray"
+          service:
+            - "pr-e-internal_tcp-9070"            
+
+        - rule_description: "pr-e-internal_global_access_13"
+          change_ref: "CHG0109028"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_grp_rds-kms-server"
+          service:
+            - "pr-e-internal_tcp-1688_eq"
+
+        - rule_description: "pr-e-internal_global_access_15"
+          change_ref: "CHG0115147 CHG0118220"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_31"
+          service:
+            - "pr-e-internal_scc-migrated_service_15"
+
+        - rule_description: "pr-e-internal_global_access_17"
+          change_ref: "CHG0144215"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_net-10-120-163-0_255-255-255-0"
+          destination:
+            - "pr-e-internal_ip_10-121-10-0s24"
+          service:
+            - "pr-e-internal_tcp-9996_eq"
+
+        - rule_description: "pr-e-internal_global_access_19"
+          change_ref: "CHG0079749"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_net-10-0-0-0_255-0-0-0"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_135"
+          service:
+            - "pr-e-internal_nimsoft-ports"
+
+        - rule_description: "pr-e-internal_global_access_21"
+          change_ref: "CHG0079749"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_136"
+          destination:
+            - "pr-e-internal_net-10-0-0-0_255-0-0-0"
+          service:
+            - "pr-e-internal_nimsoft-ports"
+
+        - rule_description: "pr-e-internal_global_access_23"
+          change_ref: "CHG0089523"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_6"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_7"
+          service:
+            - "pr-e-internal_scc-migrated_service_36"
+
+        - rule_description: "pr-e-internal_global_access_25"
+          change_ref: "CHG0102733"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_18"
+          destination:
+            - "pr-e-internal_grp_rundeck-primary-cluster"
+          service:
+            - "pr-e-internal_scc-migrated_service_35"
+
+        - rule_description: "pr-e-internal_global_access_27"
+          change_ref: "CHG0094015"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_splunk-heavy-forwarders"
+          destination:
+            - "pr-e-internal_splunk-deploy-server"
+          service:
+            - "pr-e-internal_tcp-8089"            
+
+        - rule_description: "pr-e-internal_global_access_29"
+          change_ref: "CHG0067421"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1uxpremn74"
+          destination:
+            - "any"
+          service:
+            - "pr-e-internal_splunk_mgmt"
+
+        - rule_description: "pr-e-internal_global_access_31"
+          change_ref: "CHG0143973"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-orion-app-srvs-ld6"
+          destination:
+            - "pr-e-internal_grp_grp-orion-app-srvs-scc"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_120"
+
+        - rule_description: "pr-e-internal_global_access_33"
+          change_ref: "CHG0143973"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-orion-app-srvs-scc"
+          destination:
+            - "pr-e-internal_grp_grp-orion-app-srvs-ld6"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_27"
+
+        - rule_description: "pr-e-internal_global_access_35"
+          change_ref: "CHG0144184"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-orion-app-srvs-ld6"
+          destination:
+            - "pr-e-internal_sc1wnpredb11-prod-williamhill-plc"
+          service:
+            - "pr-e-internal_scc-migrated_service_12"
+
+        - rule_description: "pr-e-internal_global_access_39"
+          change_ref: "Katello - Generic"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-0-0s16"
+          destination:
+            - "pr-e-internal_ip_10-120-163-130"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_125"
+
+        - rule_description: "pr-e-internal_global_access_41"
+          change_ref: "Katello - Generic"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-121-0-0s16"
+          destination:
+            - "pr-e-internal_ip_10-120-163-136"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_22"
+
+        - rule_description: "pr-e-internal_global_access_43"
+          change_ref: "CHG0144190"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-121-10-0s24"
+          destination:
+            - "pr-e-internal_ip_10-120-163-0s24"
+          service:
+            - "pr-e-internal_tcp-8089_eq"
+
+        - rule_description: "pr-e-internal_global_access_45"
+          change_ref: "CHG0144188"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-180-163-234"
+          destination:
+            - "pr-e-internal_ip_10-120-163-234"
+          service:
+            - "pr-e-internal_maria-db-services"
+
+        - rule_description: "pr-e-internal_global_access_47"
+          change_ref: "CHG0142765"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_euc_mgmt_server-group-chg0142765"
+          destination:
+            - "pr-e-internal_grp_on_premise_datacentre_vlans-group-chg0142765"
+          service:
+            - "pr-e-internal_euc_mgmt_port-group-chg0142765"
+
+        - rule_description: "pr-e-internal_global_access_49"
+          change_ref: "CHG0143200"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_wh_nets-chg0143200"
+          destination:
+            - "pr-e-internal_grp_splunk_heavy_forwarders-chg0143200"
+          service:
+            - "pr-e-internal_splunk_indexing_port-chg0143200"
+
+        - rule_description: "pr-e-internal_global_access_51"
+          change_ref: "CHG0143200"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_wh_nets-chg0143200"
+          destination:
+            - "pr-e-internal_grp_splunk_deployment_server-chg0143200"
+          service:
+            - "pr-e-internal_splunk_mgmt_port-chg0143200"
+
+        - rule_description: "pr-e-internal_global_access_57"
+          change_ref: "RAS-VPN"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_ras-vpn-pool"
+          destination:
+            - "any"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_63"
+          change_ref: "CHG0112231"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-scc-commvault-svrs"
+          destination:
+            - "any"
+          service:
+            - "pr-e-internal_tcp-8400-8403"
+
+        - rule_description: "pr-e-internal_global_access_65"
+          change_ref: "CHG0112231"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-ld6-commvault-svrs"
+          destination:
+            - "any"
+          service:
+            - "pr-e-internal_tcp-8400-8403"
+
+        - rule_description: "pr-e-internal_global_access_67"
+          change_ref: "CHG0121600"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-gib-commvault-svrs"
+          destination:
+            - "any"
+          service:
+            - "pr-e-internal_tcp-8400-8403"
+
+        - rule_description: "pr-e-internal_global_access_71"
+          change_ref: "CHG0112231"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_grp-ld6-commvault-svrs"
+          service:
+            - "pr-e-internal_tcp-8400-8403"
+
+        - rule_description: "pr-e-internal_global_access_73"
+          change_ref: "Standard rule - CHG0083747"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_whgroup-ad-servers"
+          service:
+            - "pr-e-internal_ad-global-rule-ports"
+
+        - rule_description: "pr-e-internal_global_access_75"
+          change_ref: "CHG0121600"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_grp-gib-commvault-svrs"
+          service:
+            - "pr-e-internal_tcp-8400-8403"
+
+        - rule_description: "pr-e-internal_global_access_78"
+          change_ref: "Wily global access - CHG0081701, CHG0092588"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_wily-svrs_all"
+          destination:
+            - "pr-e-internal_grp_wily-access-group"
+          service:
+            - "pr-e-internal_wily-outbound-ports"
+
+        - rule_description: "pr-e-internal_global_access_80"
+          change_ref: "PCI Q2 2016"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_wily-access-group"
+          destination:
+            - "pr-e-internal_grp_wily-svrs_all"
+          service:
+            - "pr-e-internal_wily-inbound-ports"
+
+        - rule_description: "pr-e-internal_global_access_82"
+          change_ref: "CHG0106526"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_rundeck-servers"
+          destination:
+            - "any"
+          service:
+            - "pr-e-internal_rundeck-winrm-ports"
+
+        - rule_description: "pr-e-internal_global_access_84"
+          change_ref: "CHG0078639"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_webproxies-cx-scc"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_86"
+          change_ref: "Standard rule - CHG0083593"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "any"
+          service:
+            - "icmp-any"
+
+        - rule_description: "pr-e-internal_global_access_88"
+          change_ref: "Standard rule - CHG0083506"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_infoblox-servers"
+          service:
+            - "pr-e-internal_infoblox-standard-ports"
+
+        - rule_description: "pr-e-internal_global_access_90"
+          change_ref: "CHG0097030"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_grp_mailhosts"
+          service:
+            - "pr-e-internal_tcp-smtp_eq"
+
+        - rule_description: "pr-e-internal_global_access_92"
+          change_ref: "CHG0095595, CHG0095744"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-0-0s16"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_10"
+          service:
+            - "pr-e-internal_scc-migrated_service_6"
+
+        - rule_description: "pr-e-internal_global_access_94"
+          change_ref: "CHG0101535"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_scc-migrated_network_17"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_16"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_4"
+
+        - rule_description: "pr-e-internal_global_access_96"
+          change_ref: "CHG0116053"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-0-0-0s8"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_33"
+          service:
+            - "pr-e-internal_ldap-service"
+
+        - rule_description: "pr-e-internal_global_access_98"
+          change_ref: "Global Rule"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-e-internal_sc1uxpromn012"
+          service:
+            - "pr-e-internal_8089"            
+
+#        - rule_description: "pr-e-internal_global_access_100"
+#          change_ref: "Deny all outgoing traffic to presentation tier network"
+#          action: "deny"
+#          disabled: false
+#          source:
+#            - "pr-e-internal_grp_internal-nets"
+#          destination:
+#            - "pr-e-internal_net-10-120-216-0_255-255-248-0"
+#          service:
+#            - "ip-any"
+
+#        - rule_description: "pr-e-internal_global_access_102"
+#          change_ref: "Deny all incoming traffic from the presentation tier netowkr"
+#          action: "deny"
+#          disabled: false
+#          source:
+#            - "pr-e-internal_net-10-120-216-0_255-255-248-0"
+#          destination:
+#            - "pr-e-internal_grp_internal-nets"
+#          service:
+#            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_104"
+          change_ref: "CHG0060667"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_grp_rfc1918networks"
+          service:
+            - "pr-e-internal_udp-snmp_eq"
+
+        - rule_description: "pr-e-internal_global_access_106"
+          change_ref: "CHG0060667"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_grp_rfc1918networks"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_global_access_108"
+          change_ref: "CHG0060667"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_grp_rfc1918networks"
+          service:
+            - "pr-e-internal_tcp-1433_eq"
+
+        - rule_description: "pr-e-internal_global_access_111"
+          change_ref: "CHG0060667 ,logging disabled to stop double logging"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_grp_rfc1918networks"
+          service:
+            - "pr-e-internal_scc-migrated_service_11"
+
+        - rule_description: "pr-e-internal_global_access_113"
+          change_ref: "CHG0095363"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremn73"
+          destination:
+            - "pr-e-internal_grp_scc-migrated_network_11"
+          service:
+            - "pr-e-internal_scc-migrated_service_8"
+
+        - rule_description: "pr-e-internal_global_access_115"
+          change_ref: "CHG0060667"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_grp_rfc1918networks"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_117"
+          change_ref: "CHG0060667"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_internal-nets"
+          destination:
+            - "pr-e-internal_aws-100-64-0-0slash10"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_121"
+          change_ref: "CHG0110997"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_ip_10-120-134-246"
+          destination:
+            - "pr-e-internal_ip_10-120-163-134"
+          service:
+            - "pr-e-internal_udp-syslog_eq"
+
+        - rule_description: "pr-e-internal_global_access_124"
+          change_ref: "CHG0060667 ,logging disabled to reduce double logging"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_rfc1918networks"
+          destination:
+            - "pr-e-internal_grp_internal-nets"
+          service:
+            - "pr-e-internal_scc-migrated_service_10"
+
+        - rule_description: "pr-e-internal_global_access_126"
+          change_ref: "CHG0123314"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_grp-bomgar-cde-jumphosts"
+          destination:
+            - "pr-e-internal_grp_grp-orion-app-srvs"
+          service:
+            - "pr-e-internal_tcp-3389"            
+
+#        - rule_description: "pr-e-internal_global_access_128"
+#          change_ref: "CHG0123314"
+#          action: "deny"
+#          disabled: false
+#          source:
+#            - "any"
+#          destination:
+#            - "pr-e-internal_grp_grp-orion-app-srvs"
+#          service:
+#            - "pr-e-internal_tcp-3389"            
+
+        - rule_description: "pr-e-internal_global_access_130"
+          change_ref: "CHG0060667"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_rfc1918networks"
+          destination:
+            - "pr-e-internal_grp_internal-nets"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_132"
+          change_ref: "CHG0060667"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_aws-100-64-0-0slash10"
+          destination:
+            - "pr-e-internal_grp_internal-nets"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-e-internal_global_access_136"
+          change_ref: "CHG0014573"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_direct-internet-access"
+          destination:
+            - "any"
+          service:
+            - "pr-e-internal_scc-migrated_tcp_1"
+
+        - rule_description: "pr-e-internal_global_access_183"
+          change_ref: "CHG0069736, CHG0072222"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_scc_nimsoft_mgmt"
+          destination:
+            - "pr-e-internal_grp_rackspace_nimsoft_ch"
+          service:
+            - "pr-e-internal_nimsoft-ports"
+
+        - rule_description: "pr-e-internal_global_access_224"
+          change_ref: "CHG0077138"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_grp_external-netflow-sources"
+          destination:
+            - "pr-e-internal_grp_grp-swinds-polling-svrs"
+          service:
+            - "pr-e-internal_solarwinds-netflow"
+
+        - rule_description: "pr-e-internal_global_access_226"
+          change_ref: "CHG0077138"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_scc-ca-nfa-harvester"
+          destination:
+            - "pr-e-internal_grp_uk-sc1-border-routers"
+          service:
+            - "pr-e-internal_udp-snmp_eq"
+
+        - rule_description: "pr-e-internal_global_access_228"
+          change_ref: "CHG0080518"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremg44"
+          destination:
+            - "pr-e-internal_williamhillssl-cloudsoftcat-com"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_global_access_232"
+          change_ref: "CHG0081562"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremg45"
+          destination:
+            - "pr-e-internal_grp_snow_public"
+          service:
+            - "pr-e-internal_tcp-https_eq"
+
+        - rule_description: "pr-e-internal_global_access_242"
+          change_ref: "CHG0086912"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-e-internal_sc1wnpremg45"
+          destination:
+            - "pr-e-internal_williamhillssl-cloudsoftcat-com-secondary"
+          service:
+            - "pr-e-internal_tcp-1433_eq"
+
+#        - rule_description: "pr-e-internal_global_access_316"
+#          change_ref: ""
+#          action: "deny"
+#          disabled: false
+#          source:
+#            - "any"
+#          destination:
+#            - "any"
+#          service:
+#            - "ip-any"
+

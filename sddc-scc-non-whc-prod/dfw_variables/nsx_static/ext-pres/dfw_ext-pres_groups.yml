@@ -1,0 +1,68 @@
+---
+
+resources:
+
+### OBJECTS ###
+
+  group_objects:
+
+    - group_name: "ext-pres_network"
+      description: "External Presentation Network"
+      ip_addr_list:
+        - "10.120.216.0/21"
+
+    - group_name: "ext-pres_all_pr-c-frontend_networks"
+      description: "All pr-c-frontend Networks"
+      ip_addr_list:
+        - "10.120.32.64/27"
+        - "10.120.33.0/29"
+        - "10.120.33.160/27"
+        - "10.120.37.0/24"
+        - "10.120.38.0/24"
+        - "10.120.39.0/24"
+        - "10.120.44.0/23"
+        - "10.120.46.0/25"
+        - "10.120.48.96/27"
+        - "10.120.50.0/24"
+        - "10.120.52.0/24"
+
+    - group_name: "ext-pres_all_pr-n-frontend_networks"
+      description: "All pr-n-frontend Networks"
+      ip_addr_list:
+        - "10.120.64.0/27"
+        - "10.120.64.32/27"
+        - "10.120.64.64/27"
+        - "10.120.64.128/27"
+        - "10.120.64.160/27"
+        - "10.120.64.224/27"
+        - "10.120.66.0/24"
+        - "10.120.67.0/24"
+        - "10.120.69.96/27"
+        - "10.120.69.224/27"
+        - "10.120.69.192/27"
+        - "10.120.72.0/24"
+        - "10.120.70.0/27"
+        - "10.120.74.0/23"
+        - "10.120.65.64/27"
+        - "10.120.76.0/24"
+        - "10.120.65.96/27"
+        - "10.120.65.128/27"
+        - "10.120.98.0/24"
+        - "10.120.99.0/24"
+        - "10.120.100.0/24"
+        - "10.120.101.0/27"
+        - "10.120.102.0/24"
+        - "10.120.104.0/27"
+
+    - group_name: "ext-pres_all_pr-e-internal_networks"
+      description: "All pr-e-internal Networks"
+      ip_addr_list:
+        - "10.120.162.0/24"
+        - "10.120.163.0/24"
+
+### OBJECT_GROUPS ###
+
+  object_groups:
+    - group_name: "dynamic_network_group_object_example_1"
+      description: "This is a group of network object groups"
+      sub_group_list:

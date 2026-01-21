@@ -1,0 +1,21 @@
+---
+
+contexts:
+  - context: "pr-c-mgt"
+    tf_sequence: "30"
+  - context: "pr-n-mgt"
+    tf_sequence: "40"
+  - context: "pr-c-frontend"
+    tf_sequence: "50"
+  - context: "pr-n-frontend"
+    tf_sequence: "60"
+  - context: "pr-e-internal"
+    tf_sequence: "70"
+  - context: "ext-pres"
+    tf_sequence: "80"
+
+policies:
+  - policy: "intra-segment"
+    tf_sequence: "1"
+  - policy: "dynamic"
+    tf_sequence: "20"

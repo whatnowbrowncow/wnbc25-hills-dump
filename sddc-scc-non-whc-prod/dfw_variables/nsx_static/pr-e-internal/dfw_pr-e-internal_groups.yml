@@ -1,0 +1,5127 @@
+---
+resources:
+  group_objects:
+
+###IPS IN ACLS###
+
+    - group_name: "pr-e-internal_ip_10-120-99-85"
+      description: "pr-e-internal_ip_10-120-99-85"
+      ip_addr_list:
+        - "10.120.99.85"
+
+    - group_name: "pr-e-internal_ip_10-120-163-26"
+      description: "pr-e-internal_ip_10-120-163-26"
+      ip_addr_list:
+        - "10.120.163.26"
+
+    - group_name: "pr-e-internal_ip_10-120-129-151"
+      description: "pr-e-internal_ip_10-120-129-151"
+      ip_addr_list:
+        - "10.120.129.151"
+
+    - group_name: "pr-e-internal_ip_10-120-163-134"
+      description: "pr-e-internal_ip_10-120-163-134"
+      ip_addr_list:
+        - "10.120.163.134"
+
+    - group_name: "pr-e-internal_ip_10-120-143-171"
+      description: "pr-e-internal_ip_10-120-143-171"
+      ip_addr_list:
+        - "10.120.143.171"
+
+    - group_name: "pr-e-internal_ip_10-120-163-89"
+      description: "pr-e-internal_ip_10-120-163-89"
+      ip_addr_list:
+        - "10.120.163.89"
+
+    - group_name: "pr-e-internal_ip_10-121-10-109"
+      description: "pr-e-internal_ip_10-121-10-109"
+      ip_addr_list:
+        - "10.121.10.109"
+
+    - group_name: "pr-e-internal_ip_10-112-13-33"
+      description: "pr-e-internal_ip_10-112-13-33"
+      ip_addr_list:
+        - "10.112.13.33"
+
+    - group_name: "pr-e-internal_ip_10-120-134-250"
+      description: "pr-e-internal_ip_10-120-134-250"
+      ip_addr_list:
+        - "10.120.134.250"
+
+    - group_name: "pr-e-internal_ip_10-100-9-73"
+      description: "pr-e-internal_ip_10-100-9-73"
+      ip_addr_list:
+        - "10.100.9.73"
+
+    - group_name: "pr-e-internal_ip_10-201-230-17"
+      description: "pr-e-internal_ip_10-201-230-17"
+      ip_addr_list:
+        - "10.201.230.17"
+
+    - group_name: "pr-e-internal_ip_10-120-146-135"
+      description: "pr-e-internal_ip_10-120-146-135"
+      ip_addr_list:
+        - "10.120.146.135"
+
+    - group_name: "pr-e-internal_ip_10-120-163-130"
+      description: "pr-e-internal_ip_10-120-163-130"
+      ip_addr_list:
+        - "10.120.163.130"
+
+    - group_name: "pr-e-internal_ip_10-120-163-136"
+      description: "pr-e-internal_ip_10-120-163-136"
+      ip_addr_list:
+        - "10.120.163.136"
+
+    - group_name: "pr-e-internal_ip_10-180-163-234"
+      description: "pr-e-internal_ip_10-180-163-234"
+      ip_addr_list:
+        - "10.180.163.234"
+
+    - group_name: "pr-e-internal_ip_10-120-163-234"
+      description: "pr-e-internal_ip_10-120-163-234"
+      ip_addr_list:
+        - "10.120.163.234"
+
+    - group_name: "pr-e-internal_ip_10-120-134-246"
+      description: "pr-e-internal_ip_10-120-134-246"
+      ip_addr_list:
+        - "10.120.134.246"
+
+    - group_name: "pr-e-internal_ip_10-120-193-132"
+      description: "pr-e-internal_ip_10-120-193-132"
+      ip_addr_list:
+        - "10.120.193.132"
+
+    - group_name: "pr-e-internal_ip_10-120-46-30"
+      description: "pr-e-internal_ip_10-120-46-30"
+      ip_addr_list:
+        - "10.120.46.30"
+
+    - group_name: "pr-e-internal_ip_10-120-46-31"
+      description: "pr-e-internal_ip_10-120-46-31"
+      ip_addr_list:
+        - "10.120.46.31"
+
+    - group_name: "pr-e-internal_ip_10-120-46-32"
+      description: "pr-e-internal_ip_10-120-46-32"
+      ip_addr_list:
+        - "10.120.46.32"
+
+    - group_name: "pr-e-internal_ip_10-120-163-237"
+      description: "pr-e-internal_ip_10-120-163-237"
+      ip_addr_list:
+        - "10.120.163.237"
+
+    - group_name: "pr-e-internal_ip_10-120-163-238"
+      description: "pr-e-internal_ip_10-120-163-238"
+      ip_addr_list:
+        - "10.120.163.238"
+
+    - group_name: "pr-e-internal_ip_10-120-163-239"
+      description: "pr-e-internal_ip_10-120-163-239"
+      ip_addr_list:
+        - "10.120.163.239"
+
+    - group_name: "pr-e-internal_ip_10-120-180-67"
+      description: "pr-e-internal_ip_10-120-180-67"
+      ip_addr_list:
+        - "10.120.180.67"
+
+    - group_name: "pr-e-internal_ip_10-212-180-138"
+      description: "pr-e-internal_ip_10-212-180-138"
+      ip_addr_list:
+        - "10.212.180.138"
+
+    - group_name: "pr-e-internal_ip_10-214-180-138"
+      description: "pr-e-internal_ip_10-214-180-138"
+      ip_addr_list:
+        - "10.214.180.138"
+
+    - group_name: "pr-e-internal_ip_10-120-46-10"
+      description: "pr-e-internal_ip_10-120-46-10"
+      ip_addr_list:
+        - "10.120.46.10"
+
+    - group_name: "pr-e-internal_ip_10-120-46-11"
+      description: "pr-e-internal_ip_10-120-46-11"
+      ip_addr_list:
+        - "10.120.46.11"
+
+    - group_name: "pr-e-internal_ip_10-120-46-12"
+      description: "pr-e-internal_ip_10-120-46-12"
+      ip_addr_list:
+        - "10.120.46.12"
+
+    - group_name: "pr-e-internal_ip_10-120-46-13"
+      description: "pr-e-internal_ip_10-120-46-13"
+      ip_addr_list:
+        - "10.120.46.13"
+
+    - group_name: "pr-e-internal_ip_10-120-46-14"
+      description: "pr-e-internal_ip_10-120-46-14"
+      ip_addr_list:
+        - "10.120.46.14"
+
+    - group_name: "pr-e-internal_ip_10-120-46-15"
+      description: "pr-e-internal_ip_10-120-46-15"
+      ip_addr_list:
+        - "10.120.46.15"
+
+    - group_name: "pr-e-internal_ip_10-120-46-16"
+      description: "pr-e-internal_ip_10-120-46-16"
+      ip_addr_list:
+        - "10.120.46.16"
+
+    - group_name: "pr-e-internal_ip_10-120-46-17"
+      description: "pr-e-internal_ip_10-120-46-17"
+      ip_addr_list:
+        - "10.120.46.17"
+
+    - group_name: "pr-e-internal_ip_10-120-46-18"
+      description: "pr-e-internal_ip_10-120-46-18"
+      ip_addr_list:
+        - "10.120.46.18"
+
+    - group_name: "pr-e-internal_ip_10-120-46-19"
+      description: "pr-e-internal_ip_10-120-46-19"
+      ip_addr_list:
+        - "10.120.46.19"
+
+    - group_name: "pr-e-internal_ip_10-120-143-172"
+      description: "pr-e-internal_ip_10-120-143-172"
+      ip_addr_list:
+        - "10.120.143.172"
+
+    - group_name: "pr-e-internal_ip_10-120-143-173"
+      description: "pr-e-internal_ip_10-120-143-173"
+      ip_addr_list:
+        - "10.120.143.173"
+
+    - group_name: "pr-e-internal_ip_10-120-143-182"
+      description: "pr-e-internal_ip_10-120-143-182"
+      ip_addr_list:
+        - "10.120.143.182"
+
+    - group_name: "pr-e-internal_ip_10-120-143-183"
+      description: "pr-e-internal_ip_10-120-143-183"
+      ip_addr_list:
+        - "10.120.143.183"
+
+    - group_name: "pr-e-internal_ip_10-1-130-36"
+      description: "pr-e-internal_ip_10-1-130-36"
+      ip_addr_list:
+        - "10.1.130.36"
+
+    - group_name: "pr-e-internal_ip_10-1-130-50"
+      description: "pr-e-internal_ip_10-1-130-50"
+      ip_addr_list:
+        - "10.1.130.50"
+
+    - group_name: "pr-e-internal_ip_10-1-99-220"
+      description: "pr-e-internal_ip_10-1-99-220"
+      ip_addr_list:
+        - "10.1.99.220"
+
+    - group_name: "pr-e-internal_ip_10-120-129-220"
+      description: "pr-e-internal_ip_10-120-129-220"
+      ip_addr_list:
+        - "10.120.129.220"
+
+    - group_name: "pr-e-internal_ip_10-120-129-4"
+      description: "pr-e-internal_ip_10-120-129-4"
+      ip_addr_list:
+        - "10.120.129.4"
+
+    - group_name: "pr-e-internal_ip_10-120-129-5"
+      description: "pr-e-internal_ip_10-120-129-5"
+      ip_addr_list:
+        - "10.120.129.5"
+
+    - group_name: "pr-e-internal_ip_10-120-160-68"
+      description: "pr-e-internal_ip_10-120-160-68"
+      ip_addr_list:
+        - "10.120.160.68"
+
+    - group_name: "pr-e-internal_ip_10-120-161-97"
+      description: "pr-e-internal_ip_10-120-161-97"
+      ip_addr_list:
+        - "10.120.161.97"
+
+    - group_name: "pr-e-internal_ip_10-92-100-13"
+      description: "pr-e-internal_ip_10-92-100-13"
+      ip_addr_list:
+        - "10.92.100.13"
+
+    - group_name: "pr-e-internal_ip_10-92-100-1"
+      description: "pr-e-internal_ip_10-92-100-1"
+      ip_addr_list:
+        - "10.92.100.1"
+
+    - group_name: "pr-e-internal_ip_10-92-100-5"
+      description: "pr-e-internal_ip_10-92-100-5"
+      ip_addr_list:
+        - "10.92.100.5"
+
+    - group_name: "pr-e-internal_ip_10-92-100-9"
+      description: "pr-e-internal_ip_10-92-100-9"
+      ip_addr_list:
+        - "10.92.100.9"
+
+    - group_name: "pr-e-internal_ip_10-99-253-31"
+      description: "pr-e-internal_ip_10-99-253-31"
+      ip_addr_list:
+        - "10.99.253.31"
+
+    - group_name: "pr-e-internal_ip_10-99-253-41"
+      description: "pr-e-internal_ip_10-99-253-41"
+      ip_addr_list:
+        - "10.99.253.41"
+
+    - group_name: "pr-e-internal_ip_10-120-129-19"
+      description: "pr-e-internal_ip_10-120-129-19"
+      ip_addr_list:
+        - "10.120.129.19"
+
+    - group_name: "pr-e-internal_ip_10-120-177-37"
+      description: "pr-e-internal_ip_10-120-177-37"
+      ip_addr_list:
+        - "10.120.177.37"
+
+    - group_name: "pr-e-internal_ip_10-120-180-101"
+      description: "pr-e-internal_ip_10-120-180-101"
+      ip_addr_list:
+        - "10.120.180.101"
+
+    - group_name: "pr-e-internal_ip_10-120-180-102"
+      description: "pr-e-internal_ip_10-120-180-102"
+      ip_addr_list:
+        - "10.120.180.102"
+
+    - group_name: "pr-e-internal_ip_10-120-180-103"
+      description: "pr-e-internal_ip_10-120-180-103"
+      ip_addr_list:
+        - "10.120.180.103"
+
+    - group_name: "pr-e-internal_ip_10-120-180-104"
+      description: "pr-e-internal_ip_10-120-180-104"
+      ip_addr_list:
+        - "10.120.180.104"
+
+    - group_name: "pr-e-internal_ip_10-120-180-133"
+      description: "pr-e-internal_ip_10-120-180-133"
+      ip_addr_list:
+        - "10.120.180.133"
+
+    - group_name: "pr-e-internal_ip_10-120-180-134"
+      description: "pr-e-internal_ip_10-120-180-134"
+      ip_addr_list:
+        - "10.120.180.134"
+
+    - group_name: "pr-e-internal_ip_10-120-180-135"
+      description: "pr-e-internal_ip_10-120-180-135"
+      ip_addr_list:
+        - "10.120.180.135"
+
+    - group_name: "pr-e-internal_ip_10-120-180-136"
+      description: "pr-e-internal_ip_10-120-180-136"
+      ip_addr_list:
+        - "10.120.180.136"
+
+    - group_name: "pr-e-internal_ip_10-120-180-81"
+      description: "pr-e-internal_ip_10-120-180-81"
+      ip_addr_list:
+        - "10.120.180.81"
+
+    - group_name: "pr-e-internal_ip_10-120-180-82"
+      description: "pr-e-internal_ip_10-120-180-82"
+      ip_addr_list:
+        - "10.120.180.82"
+
+    - group_name: "pr-e-internal_ip_10-120-180-83"
+      description: "pr-e-internal_ip_10-120-180-83"
+      ip_addr_list:
+        - "10.120.180.83"
+
+    - group_name: "pr-e-internal_ip_10-120-180-84"
+      description: "pr-e-internal_ip_10-120-180-84"
+      ip_addr_list:
+        - "10.120.180.84"
+
+    - group_name: "pr-e-internal_ip_10-1-28-102"
+      description: "pr-e-internal_ip_10-1-28-102"
+      ip_addr_list:
+        - "10.1.28.102"
+
+    - group_name: "pr-e-internal_ip_10-1-28-26"
+      description: "pr-e-internal_ip_10-1-28-26"
+      ip_addr_list:
+        - "10.1.28.26"
+
+    - group_name: "pr-e-internal_ip_10-112-13-1"
+      description: "pr-e-internal_ip_10-112-13-1"
+      ip_addr_list:
+        - "10.112.13.1"
+
+    - group_name: "pr-e-internal_ip_10-180-163-97"
+      description: "pr-e-internal_ip_10-180-163-97"
+      ip_addr_list:
+        - "10.180.163.97"
+
+    - group_name: "pr-e-internal_ip_10-210-163-101"
+      description: "pr-e-internal_ip_10-210-163-101"
+      ip_addr_list:
+        - "10.210.163.101"
+
+    - group_name: "pr-e-internal_ip_10-211-163-101"
+      description: "pr-e-internal_ip_10-211-163-101"
+      ip_addr_list:
+        - "10.211.163.101"
+
+    - group_name: "pr-e-internal_ip_10-213-163-101"
+      description: "pr-e-internal_ip_10-213-163-101"
+      ip_addr_list:
+        - "10.213.163.101"
+
+    - group_name: "pr-e-internal_ip_10-215-163-101"
+      description: "pr-e-internal_ip_10-215-163-101"
+      ip_addr_list:
+        - "10.215.163.101"
+
+    - group_name: "pr-e-internal_ip_10-120-163-155"
+      description: "pr-e-internal_ip_10-120-163-155"
+      ip_addr_list:
+        - "10.120.163.155"
+
+    - group_name: "pr-e-internal_ip_10-120-163-156"
+      description: "pr-e-internal_ip_10-120-163-156"
+      ip_addr_list:
+        - "10.120.163.156"
+
+    - group_name: "pr-e-internal_ip_10-120-163-157"
+      description: "pr-e-internal_ip_10-120-163-157"
+      ip_addr_list:
+        - "10.120.163.157"
+
+    - group_name: "pr-e-internal_ip_10-120-163-158"
+      description: "pr-e-internal_ip_10-120-163-158"
+      ip_addr_list:
+        - "10.120.163.158"
+
+    - group_name: "pr-e-internal_ip_10-112-12-104"
+      description: "pr-e-internal_ip_10-112-12-104"
+      ip_addr_list:
+        - "10.112.12.104"
+
+    - group_name: "pr-e-internal_ip_10-112-12-105"
+      description: "pr-e-internal_ip_10-112-12-105"
+      ip_addr_list:
+        - "10.112.12.105"
+
+    - group_name: "pr-e-internal_ip_10-112-12-106"
+      description: "pr-e-internal_ip_10-112-12-106"
+      ip_addr_list:
+        - "10.112.12.106"
+
+    - group_name: "pr-e-internal_ip_10-112-12-107"
+      description: "pr-e-internal_ip_10-112-12-107"
+      ip_addr_list:
+        - "10.112.12.107"
+
+    - group_name: "pr-e-internal_ip_10-112-12-108"
+      description: "pr-e-internal_ip_10-112-12-108"
+      ip_addr_list:
+        - "10.112.12.108"
+
+    - group_name: "pr-e-internal_ip_10-112-12-109"
+      description: "pr-e-internal_ip_10-112-12-109"
+      ip_addr_list:
+        - "10.112.12.109"
+
+    - group_name: "pr-e-internal_ip_10-120-163-209"
+      description: "pr-e-internal_ip_10-120-163-209"
+      ip_addr_list:
+        - "10.120.163.209"
+
+    - group_name: "pr-e-internal_ip_10-120-163-43"
+      description: "pr-e-internal_ip_10-120-163-43"
+      ip_addr_list:
+        - "10.120.163.43"
+
+    - group_name: "pr-e-internal_ip_10-180-163-38"
+      description: "pr-e-internal_ip_10-180-163-38"
+      ip_addr_list:
+        - "10.180.163.38"
+
+    - group_name: "pr-e-internal_ip_10-180-163-39"
+      description: "pr-e-internal_ip_10-180-163-39"
+      ip_addr_list:
+        - "10.180.163.39"
+
+    - group_name: "pr-e-internal_ip_10-180-163-45"
+      description: "pr-e-internal_ip_10-180-163-45"
+      ip_addr_list:
+        - "10.180.163.45"
+
+    - group_name: "pr-e-internal_ip_10-180-163-46"
+      description: "pr-e-internal_ip_10-180-163-46"
+      ip_addr_list:
+        - "10.180.163.46"
+
+    - group_name: "pr-e-internal_ip_10-180-163-51"
+      description: "pr-e-internal_ip_10-180-163-51"
+      ip_addr_list:
+        - "10.180.163.51"
+
+    - group_name: "pr-e-internal_ip_10-180-163-52"
+      description: "pr-e-internal_ip_10-180-163-52"
+      ip_addr_list:
+        - "10.180.163.52"
+
+    - group_name: "pr-e-internal_ip_100-100-2-208"
+      description: "pr-e-internal_ip_100-100-2-208"
+      ip_addr_list:
+        - "100.100.2.208"
+
+    - group_name: "pr-e-internal_ip_100-100-2-55"
+      description: "pr-e-internal_ip_100-100-2-55"
+      ip_addr_list:
+        - "100.100.2.55"
+
+    - group_name: "pr-e-internal_ip_10-120-163-35"
+      description: "pr-e-internal_ip_10-120-163-35"
+      ip_addr_list:
+        - "10.120.163.35"
+
+    - group_name: "pr-e-internal_ip_10-120-170-100"
+      description: "pr-e-internal_ip_10-120-170-100"
+      ip_addr_list:
+        - "10.120.170.100"
+
+    - group_name: "pr-e-internal_ip_10-120-173-100"
+      description: "pr-e-internal_ip_10-120-173-100"
+      ip_addr_list:
+        - "10.120.173.100"
+
+    - group_name: "pr-e-internal_ip_10-120-177-38"
+      description: "pr-e-internal_ip_10-120-177-38"
+      ip_addr_list:
+        - "10.120.177.38"
+
+    - group_name: "pr-e-internal_ip_10-120-177-39"
+      description: "pr-e-internal_ip_10-120-177-39"
+      ip_addr_list:
+        - "10.120.177.39"
+
+    - group_name: "pr-e-internal_ip_10-121-4-11"
+      description: "pr-e-internal_ip_10-121-4-11"
+      ip_addr_list:
+        - "10.121.4.11"
+
+    - group_name: "pr-e-internal_ip_10-121-4-12"
+      description: "pr-e-internal_ip_10-121-4-12"
+      ip_addr_list:
+        - "10.121.4.12"
+
+    - group_name: "pr-e-internal_ip_10-121-5-11"
+      description: "pr-e-internal_ip_10-121-5-11"
+      ip_addr_list:
+        - "10.121.5.11"
+
+    - group_name: "pr-e-internal_ip_10-121-5-12"
+      description: "pr-e-internal_ip_10-121-5-12"
+      ip_addr_list:
+        - "10.121.5.12"
+
+    - group_name: "pr-e-internal_ip_10-121-10-110"
+      description: "pr-e-internal_ip_10-121-10-110"
+      ip_addr_list:
+        - "10.121.10.110"
+
+    - group_name: "pr-e-internal_ip_10-121-10-115"
+      description: "pr-e-internal_ip_10-121-10-115"
+      ip_addr_list:
+        - "10.121.10.115"
+
+    - group_name: "pr-e-internal_ip_10-121-4-205"
+      description: "pr-e-internal_ip_10-121-4-205"
+      ip_addr_list:
+        - "10.121.4.205"
+
+    - group_name: "pr-e-internal_ip_10-120-163-18"
+      description: "pr-e-internal_ip_10-120-163-18"
+      ip_addr_list:
+        - "10.120.163.18"
+
+    - group_name: "pr-e-internal_ip_10-120-163-27"
+      description: "pr-e-internal_ip_10-120-163-27"
+      ip_addr_list:
+        - "10.120.163.27"
+
+    - group_name: "pr-e-internal_ip_10-120-163-49"
+      description: "pr-e-internal_ip_10-120-163-49"
+      ip_addr_list:
+        - "10.120.163.49"
+
+    - group_name: "pr-e-internal_ip_10-120-163-74"
+      description: "pr-e-internal_ip_10-120-163-74"
+      ip_addr_list:
+        - "10.120.163.74"
+
+    - group_name: "pr-e-internal_ip_10-120-129-60"
+      description: "pr-e-internal_ip_10-120-129-60"
+      ip_addr_list:
+        - "10.120.129.60"
+
+    - group_name: "pr-e-internal_ip_10-120-129-61"
+      description: "pr-e-internal_ip_10-120-129-61"
+      ip_addr_list:
+        - "10.120.129.61"
+
+    - group_name: "pr-e-internal_ip_10-120-129-62"
+      description: "pr-e-internal_ip_10-120-129-62"
+      ip_addr_list:
+        - "10.120.129.62"
+
+    - group_name: "pr-e-internal_ip_10-120-129-63"
+      description: "pr-e-internal_ip_10-120-129-63"
+      ip_addr_list:
+        - "10.120.129.63"
+
+    - group_name: "pr-e-internal_ip_10-120-129-64"
+      description: "pr-e-internal_ip_10-120-129-64"
+      ip_addr_list:
+        - "10.120.129.64"
+
+    - group_name: "pr-e-internal_ip_10-120-129-65"
+      description: "pr-e-internal_ip_10-120-129-65"
+      ip_addr_list:
+        - "10.120.129.65"
+
+    - group_name: "pr-e-internal_ip_10-120-129-66"
+      description: "pr-e-internal_ip_10-120-129-66"
+      ip_addr_list:
+        - "10.120.129.66"
+
+    - group_name: "pr-e-internal_ip_10-120-129-67"
+      description: "pr-e-internal_ip_10-120-129-67"
+      ip_addr_list:
+        - "10.120.129.67"
+
+    - group_name: "pr-e-internal_ip_10-180-129-60"
+      description: "pr-e-internal_ip_10-180-129-60"
+      ip_addr_list:
+        - "10.180.129.60"
+
+    - group_name: "pr-e-internal_ip_10-180-129-61"
+      description: "pr-e-internal_ip_10-180-129-61"
+      ip_addr_list:
+        - "10.180.129.61"
+
+    - group_name: "pr-e-internal_ip_10-180-129-62"
+      description: "pr-e-internal_ip_10-180-129-62"
+      ip_addr_list:
+        - "10.180.129.62"
+
+    - group_name: "pr-e-internal_ip_10-180-129-63"
+      description: "pr-e-internal_ip_10-180-129-63"
+      ip_addr_list:
+        - "10.180.129.63"
+
+    - group_name: "pr-e-internal_ip_10-180-129-64"
+      description: "pr-e-internal_ip_10-180-129-64"
+      ip_addr_list:
+        - "10.180.129.64"
+
+    - group_name: "pr-e-internal_ip_10-180-129-65"
+      description: "pr-e-internal_ip_10-180-129-65"
+      ip_addr_list:
+        - "10.180.129.65"
+
+    - group_name: "pr-e-internal_ip_10-180-129-66"
+      description: "pr-e-internal_ip_10-180-129-66"
+      ip_addr_list:
+        - "10.180.129.66"
+
+    - group_name: "pr-e-internal_ip_10-180-129-67"
+      description: "pr-e-internal_ip_10-180-129-67"
+      ip_addr_list:
+        - "10.180.129.67"
+
+    - group_name: "pr-e-internal_ip_10-180-163-71"
+      description: "pr-e-internal_ip_10-180-163-71"
+      ip_addr_list:
+        - "10.180.163.71"
+
+    - group_name: "pr-e-internal_ip_10-210-163-70"
+      description: "pr-e-internal_ip_10-210-163-70"
+      ip_addr_list:
+        - "10.210.163.70"
+
+    - group_name: "pr-e-internal_ip_10-120-132-31"
+      description: "pr-e-internal_ip_10-120-132-31"
+      ip_addr_list:
+        - "10.120.132.31"
+
+    - group_name: "pr-e-internal_ip_10-120-132-32"
+      description: "pr-e-internal_ip_10-120-132-32"
+      ip_addr_list:
+        - "10.120.132.32"
+
+    - group_name: "pr-e-internal_ip_10-120-132-45"
+      description: "pr-e-internal_ip_10-120-132-45"
+      ip_addr_list:
+        - "10.120.132.45"
+
+    - group_name: "pr-e-internal_ip_10-120-132-46"
+      description: "pr-e-internal_ip_10-120-132-46"
+      ip_addr_list:
+        - "10.120.132.46"
+
+    - group_name: "pr-e-internal_ip_10-120-146-71"
+      description: "pr-e-internal_ip_10-120-146-71"
+      ip_addr_list:
+        - "10.120.146.71"
+
+    - group_name: "pr-e-internal_ip_10-120-146-72"
+      description: "pr-e-internal_ip_10-120-146-72"
+      ip_addr_list:
+        - "10.120.146.72"
+
+    - group_name: "pr-e-internal_ip_10-120-146-73"
+      description: "pr-e-internal_ip_10-120-146-73"
+      ip_addr_list:
+        - "10.120.146.73"
+
+    - group_name: "pr-e-internal_ip_10-210-143-171"
+      description: "pr-e-internal_ip_10-210-143-171"
+      ip_addr_list:
+        - "10.210.143.171"
+
+    - group_name: "pr-e-internal_ip_10-120-163-243"
+      description: "pr-e-internal_ip_10-120-163-243"
+      ip_addr_list:
+        - "10.120.163.243"
+
+    - group_name: "pr-e-internal_ip_10-120-143-185"
+      description: "pr-e-internal_ip_10-120-143-185"
+      ip_addr_list:
+        - "10.120.143.185"
+
+    - group_name: "pr-e-internal_ip_10-180-143-185"
+      description: "pr-e-internal_ip_10-180-143-185"
+      ip_addr_list:
+        - "10.180.143.185"
+
+    - group_name: "pr-e-internal_ip_10-210-139-243"
+      description: "pr-e-internal_ip_10-210-139-243"
+      ip_addr_list:
+        - "10.210.139.243"
+
+    - group_name: "pr-e-internal_ip_10-210-143-185"
+      description: "pr-e-internal_ip_10-210-143-185"
+      ip_addr_list:
+        - "10.210.143.185"
+
+    - group_name: "pr-e-internal_ip_10-120-130-252"
+      description: "pr-e-internal_ip_10-120-130-252"
+      ip_addr_list:
+        - "10.120.130.252"
+
+    - group_name: "pr-e-internal_ip_10-180-130-110"
+      description: "pr-e-internal_ip_10-180-130-110"
+      ip_addr_list:
+        - "10.180.130.110"
+
+    - group_name: "pr-e-internal_ip_10-180-130-151"
+      description: "pr-e-internal_ip_10-180-130-151"
+      ip_addr_list:
+        - "10.180.130.151"
+
+    - group_name: "pr-e-internal_ip_10-180-130-68"
+      description: "pr-e-internal_ip_10-180-130-68"
+      ip_addr_list:
+        - "10.180.130.68"
+
+    - group_name: "pr-e-internal_ip_10-180-80-104"
+      description: "pr-e-internal_ip_10-180-80-104"
+      ip_addr_list:
+        - "10.180.80.104"
+
+    - group_name: "pr-e-internal_ip_10-180-80-98"
+      description: "pr-e-internal_ip_10-180-80-98"
+      ip_addr_list:
+        - "10.180.80.98"
+
+    - group_name: "pr-e-internal_ip_10-201-254-223"
+      description: "pr-e-internal_ip_10-201-254-223"
+      ip_addr_list:
+        - "10.201.254.223"
+
+    - group_name: "pr-e-internal_ip_10-120-163-115"
+      description: "pr-e-internal_ip_10-120-163-115"
+      ip_addr_list:
+        - "10.120.163.115"
+
+    - group_name: "pr-e-internal_ip_10-120-163-31"
+      description: "pr-e-internal_ip_10-120-163-31"
+      ip_addr_list:
+        - "10.120.163.31"
+
+    - group_name: "pr-e-internal_ip_10-120-163-32"
+      description: "pr-e-internal_ip_10-120-163-32"
+      ip_addr_list:
+        - "10.120.163.32"
+
+    - group_name: "pr-e-internal_ip_10-120-163-33"
+      description: "pr-e-internal_ip_10-120-163-33"
+      ip_addr_list:
+        - "10.120.163.33"
+
+    - group_name: "pr-e-internal_ip_10-120-163-34"
+      description: "pr-e-internal_ip_10-120-163-34"
+      ip_addr_list:
+        - "10.120.163.34"
+
+    - group_name: "pr-e-internal_ip_10-120-163-36"
+      description: "pr-e-internal_ip_10-120-163-36"
+      ip_addr_list:
+        - "10.120.163.36"
+
+    - group_name: "pr-e-internal_ip_10-121-10-79"
+      description: "pr-e-internal_ip_10-121-10-79"
+      ip_addr_list:
+        - "10.121.10.79"
+
+    - group_name: "pr-e-internal_ip_10-121-10-81"
+      description: "pr-e-internal_ip_10-121-10-81"
+      ip_addr_list:
+        - "10.121.10.81"
+
+    - group_name: "pr-e-internal_ip_10-121-10-82"
+      description: "pr-e-internal_ip_10-121-10-82"
+      ip_addr_list:
+        - "10.121.10.82"
+
+    - group_name: "pr-e-internal_ip_10-121-10-83"
+      description: "pr-e-internal_ip_10-121-10-83"
+      ip_addr_list:
+        - "10.121.10.83"
+
+    - group_name: "pr-e-internal_ip_10-121-10-84"
+      description: "pr-e-internal_ip_10-121-10-84"
+      ip_addr_list:
+        - "10.121.10.84"
+
+    - group_name: "pr-e-internal_ip_10-112-12-125"
+      description: "pr-e-internal_ip_10-112-12-125"
+      ip_addr_list:
+        - "10.112.12.125"
+
+    - group_name: "pr-e-internal_ip_10-112-12-126"
+      description: "pr-e-internal_ip_10-112-12-126"
+      ip_addr_list:
+        - "10.112.12.126"
+
+    - group_name: "pr-e-internal_ip_10-112-12-142"
+      description: "pr-e-internal_ip_10-112-12-142"
+      ip_addr_list:
+        - "10.112.12.142"
+
+    - group_name: "pr-e-internal_ip_10-112-12-143"
+      description: "pr-e-internal_ip_10-112-12-143"
+      ip_addr_list:
+        - "10.112.12.143"
+
+    - group_name: "pr-e-internal_ip_10-112-12-144"
+      description: "pr-e-internal_ip_10-112-12-144"
+      ip_addr_list:
+        - "10.112.12.144"
+
+    - group_name: "pr-e-internal_ip_10-120-163-122"
+      description: "pr-e-internal_ip_10-120-163-122"
+      ip_addr_list:
+        - "10.120.163.122"
+
+    - group_name: "pr-e-internal_ip_10-120-163-123"
+      description: "pr-e-internal_ip_10-120-163-123"
+      ip_addr_list:
+        - "10.120.163.123"
+
+    - group_name: "pr-e-internal_ip_10-120-163-142"
+      description: "pr-e-internal_ip_10-120-163-142"
+      ip_addr_list:
+        - "10.120.163.142"
+
+    - group_name: "pr-e-internal_ip_10-120-163-143"
+      description: "pr-e-internal_ip_10-120-163-143"
+      ip_addr_list:
+        - "10.120.163.143"
+
+    - group_name: "pr-e-internal_ip_10-120-44-25"
+      description: "pr-e-internal_ip_10-120-44-25"
+      ip_addr_list:
+        - "10.120.44.25"
+
+    - group_name: "pr-e-internal_ip_10-120-44-26"
+      description: "pr-e-internal_ip_10-120-44-26"
+      ip_addr_list:
+        - "10.120.44.26"
+
+    - group_name: "pr-e-internal_ip_10-120-44-27"
+      description: "pr-e-internal_ip_10-120-44-27"
+      ip_addr_list:
+        - "10.120.44.27"
+
+    - group_name: "pr-e-internal_ip_10-120-145-40"
+      description: "pr-e-internal_ip_10-120-145-40"
+      ip_addr_list:
+        - "10.120.145.40"
+
+    - group_name: "pr-e-internal_ip_10-120-177-68"
+      description: "pr-e-internal_ip_10-120-177-68"
+      ip_addr_list:
+        - "10.120.177.68"
+
+    - group_name: "pr-e-internal_ip_10-120-143-85"
+      description: "pr-e-internal_ip_10-120-143-85"
+      ip_addr_list:
+        - "10.120.143.85"
+
+    - group_name: "pr-e-internal_ip_199-91-137-100"
+      description: "pr-e-internal_ip_199-91-137-100"
+      ip_addr_list:
+        - "199.91.137.100"
+
+    - group_name: "pr-e-internal_ip_37-98-232-100"
+      description: "pr-e-internal_ip_37-98-232-100"
+      ip_addr_list:
+        - "37.98.232.100"
+
+    - group_name: "pr-e-internal_ip_10-210-139-229"
+      description: "pr-e-internal_ip_10-210-139-229"
+      ip_addr_list:
+        - "10.210.139.229"
+
+    - group_name: "pr-e-internal_ip_10-210-139-230"
+      description: "pr-e-internal_ip_10-210-139-230"
+      ip_addr_list:
+        - "10.210.139.230"
+
+    - group_name: "pr-e-internal_ip_10-210-139-231"
+      description: "pr-e-internal_ip_10-210-139-231"
+      ip_addr_list:
+        - "10.210.139.231"
+
+    - group_name: "pr-e-internal_ip_10-120-139-229"
+      description: "pr-e-internal_ip_10-120-139-229"
+      ip_addr_list:
+        - "10.120.139.229"
+
+    - group_name: "pr-e-internal_ip_10-120-139-230"
+      description: "pr-e-internal_ip_10-120-139-230"
+      ip_addr_list:
+        - "10.120.139.230"
+
+    - group_name: "pr-e-internal_ip_10-120-139-231"
+      description: "pr-e-internal_ip_10-120-139-231"
+      ip_addr_list:
+        - "10.120.139.231"
+
+    - group_name: "pr-e-internal_ip_10-210-163-95"
+      description: "pr-e-internal_ip_10-210-163-95"
+      ip_addr_list:
+        - "10.210.163.95"
+
+    - group_name: "pr-e-internal_ip_10-210-163-96"
+      description: "pr-e-internal_ip_10-210-163-96"
+      ip_addr_list:
+        - "10.210.163.96"
+
+    - group_name: "pr-e-internal_ip_10-210-163-97"
+      description: "pr-e-internal_ip_10-210-163-97"
+      ip_addr_list:
+        - "10.210.163.97"
+
+    - group_name: "pr-e-internal_ip_10-210-163-98"
+      description: "pr-e-internal_ip_10-210-163-98"
+      ip_addr_list:
+        - "10.210.163.98"
+
+    - group_name: "pr-e-internal_ip_10-210-163-99"
+      description: "pr-e-internal_ip_10-210-163-99"
+      ip_addr_list:
+        - "10.210.163.99"
+
+    - group_name: "pr-e-internal_ip_10-180-163-211"
+      description: "pr-e-internal_ip_10-180-163-211"
+      ip_addr_list:
+        - "10.180.163.211"
+
+    - group_name: "pr-e-internal_ip_10-180-163-212"
+      description: "pr-e-internal_ip_10-180-163-212"
+      ip_addr_list:
+        - "10.180.163.212"
+
+    - group_name: "pr-e-internal_ip_10-180-163-213"
+      description: "pr-e-internal_ip_10-180-163-213"
+      ip_addr_list:
+        - "10.180.163.213"
+
+    - group_name: "pr-e-internal_ip_10-180-163-214"
+      description: "pr-e-internal_ip_10-180-163-214"
+      ip_addr_list:
+        - "10.180.163.214"
+
+    - group_name: "pr-e-internal_ip_10-180-163-218"
+      description: "pr-e-internal_ip_10-180-163-218"
+      ip_addr_list:
+        - "10.180.163.218"
+
+    - group_name: "pr-e-internal_ip_10-180-163-102"
+      description: "pr-e-internal_ip_10-180-163-102"
+      ip_addr_list:
+        - "10.180.163.102"
+
+    - group_name: "pr-e-internal_ip_10-180-163-220"
+      description: "pr-e-internal_ip_10-180-163-220"
+      ip_addr_list:
+        - "10.180.163.220"
+
+    - group_name: "pr-e-internal_ip_10-180-163-221"
+      description: "pr-e-internal_ip_10-180-163-221"
+      ip_addr_list:
+        - "10.180.163.221"
+
+    - group_name: "pr-e-internal_ip_10-180-163-40"
+      description: "pr-e-internal_ip_10-180-163-40"
+      ip_addr_list:
+        - "10.180.163.40"
+
+
+####SUBNETS IN ACLS###
+    - group_name: "pr-e-internal_ip_10-120-163-0s24"
+      description: "pr-e-internal_ip_10-120-163-0s24"
+      ip_addr_list:
+        - "10.120.163.0/24"
+
+    - group_name: "pr-e-internal_ip_10-121-10-0s24"
+      description: "pr-e-internal_ip_10-121-10-0s24"
+      ip_addr_list:
+        - "10.121.10.0/24"
+
+    - group_name: "pr-e-internal_ip_10-120-0-0s16"
+      description: "pr-e-internal_ip_10-120-0-0s16"
+      ip_addr_list:
+        - "10.120.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-121-0-0s16"
+      description: "pr-e-internal_ip_10-121-0-0s16"
+      ip_addr_list:
+        - "10.121.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-0-0-0s8"
+      description: "pr-e-internal_ip_10-0-0-0s8"
+      ip_addr_list:
+        - "10.0.0.0/8"
+
+    - group_name: "pr-e-internal_ip_10-3-0-0s24"
+      description: "pr-e-internal_ip_10-3-0-0s24"
+      ip_addr_list:
+        - "10.3.0.0/24"
+
+    - group_name: "pr-e-internal_ip_10-3-1-0s24"
+      description: "pr-e-internal_ip_10-3-1-0s24"
+      ip_addr_list:
+        - "10.3.1.0/24"
+
+    - group_name: "pr-e-internal_ip_10-3-99-0s24"
+      description: "pr-e-internal_ip_10-3-99-0s24"
+      ip_addr_list:
+        - "10.3.99.0/24"
+
+    - group_name: "pr-e-internal_ip_10-53-99-0s24"
+      description: "pr-e-internal_ip_10-53-99-0s24"
+      ip_addr_list:
+        - "10.53.99.0/24"
+
+    - group_name: "pr-e-internal_ip_10-53-113-0s24"
+      description: "pr-e-internal_ip_10-53-113-0s24"
+      ip_addr_list:
+        - "10.53.113.0/24"
+
+    - group_name: "pr-e-internal_ip_10-54-99-0s24"
+      description: "pr-e-internal_ip_10-54-99-0s24"
+      ip_addr_list:
+        - "10.54.99.0/24"
+
+    - group_name: "pr-e-internal_ip_10-180-129-0s24"
+      description: "pr-e-internal_ip_10-180-129-0s24"
+      ip_addr_list:
+        - "10.180.129.0/24"
+
+    - group_name: "pr-e-internal_ip_10-180-159-0s24"
+      description: "pr-e-internal_ip_10-180-159-0s24"
+      ip_addr_list:
+        - "10.180.159.0/24"
+
+    - group_name: "pr-e-internal_ip_10-1-152-0s23"
+      description: "pr-e-internal_ip_10-1-152-0s23"
+      ip_addr_list:
+        - "10.1.152.0/23"
+
+    - group_name: "pr-e-internal_ip_10-112-12-0s24"
+      description: "pr-e-internal_ip_10-112-12-0s24"
+      ip_addr_list:
+        - "10.112.12.0/24"
+
+    - group_name: "pr-e-internal_ip_10-210-129-0s24"
+      description: "pr-e-internal_ip_10-210-129-0s24"
+      ip_addr_list:
+        - "10.210.129.0/24"
+
+    - group_name: "pr-e-internal_ip_10-210-159-0s27"
+      description: "pr-e-internal_ip_10-210-159-0s27"
+      ip_addr_list:
+        - "10.210.159.0/27"
+
+    - group_name: "pr-e-internal_ip_10-210-164-192s27"
+      description: "pr-e-internal_ip_10-210-164-192s27"
+      ip_addr_list:
+        - "10.210.164.192/27"
+
+    - group_name: "pr-e-internal_ip_10-210-194-64s26"
+      description: "pr-e-internal_ip_10-210-194-64s26"
+      ip_addr_list:
+        - "10.210.194.64/26"
+
+    - group_name: "pr-e-internal_ip_10-210-194-192s26"
+      description: "pr-e-internal_ip_10-210-194-192s26"
+      ip_addr_list:
+        - "10.210.194.192/26"
+
+    - group_name: "pr-e-internal_ip_192-168-10-0s24"
+      description: "pr-e-internal_ip_192-168-10-0s24"
+      ip_addr_list:
+        - "192.168.10.0/24"
+
+    - group_name: "pr-e-internal_ip_10-120-129-0s24"
+      description: "pr-e-internal_ip_10-120-129-0s24"
+      ip_addr_list:
+        - "10.120.129.0/24"
+
+    - group_name: "pr-e-internal_ip_10-120-159-0s27"
+      description: "pr-e-internal_ip_10-120-159-0s27"
+      ip_addr_list:
+        - "10.120.159.0/27"
+
+    - group_name: "pr-e-internal_ip_10-120-159-96s27"
+      description: "pr-e-internal_ip_10-120-159-96s27"
+      ip_addr_list:
+        - "10.120.159.96/27"
+
+    - group_name: "pr-e-internal_ip_10-120-194-0s24"
+      description: "pr-e-internal_ip_10-120-194-0s24"
+      ip_addr_list:
+        - "10.120.194.0/24"
+
+    - group_name: "pr-e-internal_ip_10-55-99-0s24"
+      description: "pr-e-internal_ip_10-55-99-0s24"
+      ip_addr_list:
+        - "10.55.99.0/24"
+
+    - group_name: "pr-e-internal_ip_10-93-0-0s16"
+      description: "pr-e-internal_ip_10-93-0-0s16"
+      ip_addr_list:
+        - "10.93.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-94-0-0s16"
+      description: "pr-e-internal_ip_10-94-0-0s16"
+      ip_addr_list:
+        - "10.94.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-95-0-0s16"
+      description: "pr-e-internal_ip_10-95-0-0s16"
+      ip_addr_list:
+        - "10.95.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-96-0-0s16"
+      description: "pr-e-internal_ip_10-96-0-0s16"
+      ip_addr_list:
+        - "10.96.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-123-14-0s24"
+      description: "pr-e-internal_ip_10-123-14-0s24"
+      ip_addr_list:
+        - "10.123.14.0/24"
+
+    - group_name: "pr-e-internal_ip_10-123-142-0s24"
+      description: "pr-e-internal_ip_10-123-142-0s24"
+      ip_addr_list:
+        - "10.123.142.0/24"
+
+    - group_name: "pr-e-internal_ip_10-123-206-0s24"
+      description: "pr-e-internal_ip_10-123-206-0s24"
+      ip_addr_list:
+        - "10.123.206.0/24"
+
+    - group_name: "pr-e-internal_ip_10-99-239-224s27"
+      description: "pr-e-internal_ip_10-99-239-224s27"
+      ip_addr_list:
+        - "10.99.239.224/27"
+
+    - group_name: "pr-e-internal_ip_10-1-99-0s24"
+      description: "pr-e-internal_ip_10-1-99-0s24"
+      ip_addr_list:
+        - "10.1.99.0/24"
+
+    - group_name: "pr-e-internal_ip_10-56-99-0s24"
+      description: "pr-e-internal_ip_10-56-99-0s24"
+      ip_addr_list:
+        - "10.56.99.0/24"
+
+    - group_name: "pr-e-internal_ip_10-128-129-0s24"
+      description: "pr-e-internal_ip_10-128-129-0s24"
+      ip_addr_list:
+        - "10.128.129.0/24"
+
+    - group_name: "pr-e-internal_ip_10-1-98-0s24"
+      description: "pr-e-internal_ip_10-1-98-0s24"
+      ip_addr_list:
+        - "10.1.98.0/24"
+
+    - group_name: "pr-e-internal_ip_10-112-129-0s24"
+      description: "pr-e-internal_ip_10-112-129-0s24"
+      ip_addr_list:
+        - "10.112.129.0/24"
+
+    - group_name: "pr-e-internal_ip_10-99-253-0s24"
+      description: "pr-e-internal_ip_10-99-253-0s24"
+      ip_addr_list:
+        - "10.99.253.0/24"
+
+    - group_name: "pr-e-internal_ip_10-99-254-0s24"
+      description: "pr-e-internal_ip_10-99-254-0s24"
+      ip_addr_list:
+        - "10.99.254.0/24"
+
+    - group_name: "pr-e-internal_ip_10-19-0-96s27"
+      description: "pr-e-internal_ip_10-19-0-96s27"
+      ip_addr_list:
+        - "10.19.0.96/27"
+
+    - group_name: "pr-e-internal_ip_10-1-36-0s24"
+      description: "pr-e-internal_ip_10-1-36-0s24"
+      ip_addr_list:
+        - "10.1.36.0/24"
+
+    - group_name: "pr-e-internal_ip_10-130-129-0s24"
+      description: "pr-e-internal_ip_10-130-129-0s24"
+      ip_addr_list:
+        - "10.130.129.0/24"
+
+    - group_name: "pr-e-internal_ip_10-120-160-0s23"
+      description: "pr-e-internal_ip_10-120-160-0s23"
+      ip_addr_list:
+        - "10.120.160.0/23"
+
+    - group_name: "pr-e-internal_ip_10-1-105-0s24"
+      description: "pr-e-internal_ip_10-1-105-0s24"
+      ip_addr_list:
+        - "10.1.105.0/24"
+
+    - group_name: "pr-e-internal_ip_10-1-84-0s24"
+      description: "pr-e-internal_ip_10-1-84-0s24"
+      ip_addr_list:
+        - "10.1.84.0/24"
+
+    - group_name: "pr-e-internal_ip_10-120-32-0s24"
+      description: "pr-e-internal_ip_10-120-32-0s24"
+      ip_addr_list:
+        - "10.120.32.0/24"
+
+    - group_name: "pr-e-internal_ip_10-123-140-0s24"
+      description: "pr-e-internal_ip_10-123-140-0s24"
+      ip_addr_list:
+        - "10.123.140.0/24"
+
+    - group_name: "pr-e-internal_ip_10-210-159-0s24"
+      description: "pr-e-internal_ip_10-210-159-0s24"
+      ip_addr_list:
+        - "10.210.159.0/24"
+
+    - group_name: "pr-e-internal_ip_10-56-100-0s24"
+      description: "pr-e-internal_ip_10-56-100-0s24"
+      ip_addr_list:
+        - "10.56.100.0/24"
+
+    - group_name: "pr-e-internal_ip_10-92-0-0s16"
+      description: "pr-e-internal_ip_10-92-0-0s16"
+      ip_addr_list:
+        - "10.92.0.0/16"
+
+    - group_name: "pr-e-internal_ip_192-168-9-0s24"
+      description: "pr-e-internal_ip_192-168-9-0s24"
+      ip_addr_list:
+        - "192.168.9.0/24"
+
+    - group_name: "pr-e-internal_ip_10-180-159-0s27"
+      description: "pr-e-internal_ip_10-180-159-0s27"
+      ip_addr_list:
+        - "10.180.159.0/27"
+
+    - group_name: "pr-e-internal_ip_10-120-130-0s24"
+      description: "pr-e-internal_ip_10-120-130-0s24"
+      ip_addr_list:
+        - "10.120.130.0/24"
+
+    - group_name: "pr-e-internal_ip_10-120-80-0s24"
+      description: "pr-e-internal_ip_10-120-80-0s24"
+      ip_addr_list:
+        - "10.120.80.0/24"
+
+    - group_name: "pr-e-internal_ip_10-156-5-0s24"
+      description: "pr-e-internal_ip_10-156-5-0s24"
+      ip_addr_list:
+        - "10.156.5.0/24"
+
+    - group_name: "pr-e-internal_ip_10-210-0-0s16"
+      description: "pr-e-internal_ip_10-210-0-0s16"
+      ip_addr_list:
+        - "10.210.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-180-0-0s16"
+      description: "pr-e-internal_ip_10-180-0-0s16"
+      ip_addr_list:
+        - "10.180.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-112-0-0s16"
+      description: "pr-e-internal_ip_10-112-0-0s16"
+      ip_addr_list:
+        - "10.112.0.0/16"
+
+    - group_name: "pr-e-internal_ip_10-19-0-0s16"
+      description: "pr-e-internal_ip_10-19-0-0s16"
+      ip_addr_list:
+        - "10.19.0.0/16"
+
+    - group_name: "pr-e-internal_ip_0-0-0-0s0"
+      description: "pr-e-internal_ip_0-0-0-0s0"
+      ip_addr_list:
+        - "0.0.0.0/0"
+
+    - group_name: "pr-e-internal_ip_10-100-254-0s24"
+      description: "pr-e-internal_ip_10-100-254-0s24"
+      ip_addr_list:
+        - "10.100.254.0/24"
+
+    - group_name: "pr-e-internal_ip_10-180-130-0s24"
+      description: "pr-e-internal_ip_10-180-130-0s24"
+      ip_addr_list:
+        - "10.180.130.0/24"
+
+    - group_name: "pr-e-internal_ip_10-180-80-0s24"
+      description: "pr-e-internal_ip_10-180-80-0s24"
+      ip_addr_list:
+        - "10.180.80.0/24"
+
+    - group_name: "pr-e-internal_ip_10-201-225-0s24"
+      description: "pr-e-internal_ip_10-201-225-0s24"
+      ip_addr_list:
+        - "10.201.225.0/24"
+
+    - group_name: "pr-e-internal_ip_10-201-254-0s24"
+      description: "pr-e-internal_ip_10-201-254-0s24"
+      ip_addr_list:
+        - "10.201.254.0/24"
+
+    - group_name: "pr-e-internal_ip_10-210-130-0s24"
+      description: "pr-e-internal_ip_10-210-130-0s24"
+      ip_addr_list:
+        - "10.210.130.0/24"
+
+    - group_name: "pr-e-internal_ip_192-168-48-0s20"
+      description: "pr-e-internal_ip_192-168-48-0s20"
+      ip_addr_list:
+        - "192.168.48.0/20"
+
+    - group_name: "pr-e-internal_ip_192-168-12-0s22"
+      description: "pr-e-internal_ip_192-168-12-0s22"
+      ip_addr_list:
+        - "192.168.12.0/22"
+
+    - group_name: "pr-e-internal_ip_192-168-16-0s22"
+      description: "pr-e-internal_ip_192-168-16-0s22"
+      ip_addr_list:
+        - "192.168.16.0/22"
+
+    - group_name: "pr-e-internal_ip_10-30-200-0s24"
+      description: "pr-e-internal_ip_10-30-200-0s24"
+      ip_addr_list:
+        - "10.30.200.0/24"
+
+    - group_name: "pr-e-internal_ip_10-30-202-0s24"
+      description: "pr-e-internal_ip_10-30-202-0s24"
+      ip_addr_list:
+        - "10.30.202.0/24"
+
+    - group_name: "pr-e-internal_ip_10-40-200-0s24"
+      description: "pr-e-internal_ip_10-40-200-0s24"
+      ip_addr_list:
+        - "10.40.200.0/24"
+
+    - group_name: "pr-e-internal_ip_10-40-202-0s24"
+      description: "pr-e-internal_ip_10-40-202-0s24"
+      ip_addr_list:
+        - "10.40.202.0/24"
+
+    - group_name: "pr-e-internal_ip_10-130-200-0s23"
+      description: "pr-e-internal_ip_10-130-200-0s23"
+      ip_addr_list:
+        - "10.130.200.0/23"
+
+
+###OBJECTS###
+
+    - group_name: "pr-e-internal_brs-git-nonprod-williamhill-plc"
+      description: "CHG0127786"
+      ip_addr_list:
+        - "10.201.230.17"
+
+    - group_name: "pr-e-internal_sc1uxpremg30"
+      description: "CHG0125224"
+      ip_addr_list:
+        - "10.120.136.30"
+
+    - group_name: "pr-e-internal_sc1wnpremn73"
+      description: "pr-e-internal_sc1wnpremn73"
+      ip_addr_list:
+        - "10.120.163.73"
+
+    - group_name: "pr-e-internal_sc1wnmem01"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.120.163.13"
+
+    - group_name: "pr-e-internal_sc1uxpremg22"
+      description: "pr-e-internal_sc1uxpremg22"
+      ip_addr_list:
+        - "10.120.163.28"
+
+    - group_name: "pr-e-internal_tufin"
+      description: "pr-e-internal_tufin"
+      ip_addr_list:
+        - "10.120.163.37"
+
+    - group_name: "pr-e-internal_sc1uxrdk"
+      description: "pr-e-internal_sc1uxrdk"
+      ip_addr_list:
+        - "10.120.163.131"
+
+    - group_name: "pr-e-internal_sc1uxpremn006"
+      description: "CHG0122369"
+      ip_addr_list:
+        - "10.120.163.118"
+
+    - group_name: "pr-e-internal_sc1uxpremg31"
+      description: "CHG0115562"
+      ip_addr_list:
+        - "10.120.163.243"
+
+    - group_name: "pr-e-internal_netbrain"
+      description: "pr-e-internal_netbrain"
+      ip_addr_list:
+        - "10.120.163.210"
+
+    - group_name: "pr-e-internal_gib-internal-traffic-mon"
+      description: "CHG0118366"
+      ip_addr_list:
+        - "10.120.163.59"
+
+    - group_name: "pr-e-internal_prdxclo25srv001-prod-williamhill-plc"
+      description: "pr-e-internal_prdxclo25srv001-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.46"
+
+    - group_name: "pr-e-internal_sc1uxpremg60"
+      description: "pr-e-internal_sc1uxpremg60"
+      ip_addr_list:
+        - "10.120.163.160"
+
+    - group_name: "pr-e-internal_cran-r-project-org"
+      description: "pr-e-internal_cran-r-project-org"
+      ip_addr_list:
+        - "137.208.57.37"
+
+    - group_name: "pr-e-internal_sc1uxpreap242"
+      description: "pr-e-internal_sc1uxpreap242"
+      ip_addr_list:
+        - "10.120.163.242"
+
+    - group_name: "pr-e-internal_sc1uxpremg26"
+      description: "CHG0129308"
+      ip_addr_list:
+        - "10.120.163.110"
+
+    - group_name: "pr-e-internal_sc1wnpredb11-prod-williamhill-plc"
+      description: "pr-e-internal_sc1wnpredb11-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.124"
+
+    - group_name: "pr-e-internal_ld6wnpredb11-prod-williamhill-plc"
+      description: "pr-e-internal_ld6wnpredb11-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.112.12.127"
+
+    - group_name: "pr-e-internal_in1-ilo-net"
+      description: "CHG0135457"
+      ip_addr_list:
+        - "10.174.135.128/25"
+
+    - group_name: "pr-e-internal_sc1wnprcdb30"
+      description: "pr-e-internal_sc1wnprcdb30"
+      ip_addr_list:
+        - "10.120.163.179"
+
+    - group_name: "pr-e-internal_ld6wnprcdb30"
+      description: "pr-e-internal_ld6wnprcdb30"
+      ip_addr_list:
+        - "10.112.12.58"
+
+    - group_name: "pr-e-internal_sc1prapvc01-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prapvc01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.134.253"
+
+    - group_name: "pr-e-internal_sc1uxpremn17"
+      description: "pr-e-internal_sc1uxpremn17"
+      ip_addr_list:
+        - "10.120.163.75"
+
+    - group_name: "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+      description: "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.250"
+
+    - group_name: "pr-e-internal_sc1wnpremn57"
+      description: "pr-e-internal_sc1wnpremn57"
+      ip_addr_list:
+        - "10.120.163.57"
+
+    - group_name: "pr-e-internal_sc1uxpremg32"
+      description: "CHG0129567"
+      ip_addr_list:
+        - "10.120.163.130"
+
+    - group_name: "pr-e-internal_obmon-onshore"
+      description: "CHG0118366"
+      ip_addr_list:
+        - "10.120.163.29"
+
+    - group_name: "pr-e-internal_scc_wsus"
+      description: "pr-e-internal_scc_wsus"
+      ip_addr_list:
+        - "10.120.163.114"
+
+    - group_name: "pr-e-internal_sc1uxpremn81"
+      description: "CHG0139674"
+      ip_addr_list:
+        - "10.120.163.81"
+
+    - group_name: "pr-e-internal_sc1uxpremn21"
+      description: "CHG0094217"
+      ip_addr_list:
+        - "10.120.163.43"
+
+    - group_name: "pr-e-internal_sc1uxpremn74"
+      description: "CHG0067511"
+      ip_addr_list:
+        - "10.120.163.74"
+
+    - group_name: "pr-e-internal_sc1wnpremn01-prod-williamhill-plc"
+      description: "pr-e-internal_sc1wnpremn01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.76"
+
+    - group_name: "pr-e-internal_sc1wnpremg44"
+      description: "pr-e-internal_sc1wnpremg44"
+      ip_addr_list:
+        - "10.120.163.44"
+
+    - group_name: "pr-e-internal_ext-api-forwardproxy-gib-prod-williamhill-plc"
+      description: "pr-e-internal_ext-api-forwardproxy-gib-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.181.7.11"
+
+    - group_name: "pr-e-internal_ext-api-forwardproxy-gib-prod-williamhill-plc-nic2"
+      description: "pr-e-internal_ext-api-forwardproxy-gib-prod-williamhill-plc-nic2"
+      ip_addr_list:
+        - "10.181.7.100"
+
+    - group_name: "pr-e-internal_scc-nessus"
+      description: "pr-e-internal_scc-nessus"
+      ip_addr_list:
+        - "10.120.143.70"
+
+    - group_name: "pr-e-internal_net-10-120-163-0_255-255-255-0"
+      description: "pr-e-internal_net-10-120-163-0_255-255-255-0"
+      ip_addr_list:
+        - "10.120.163.0/24"
+
+    - group_name: "pr-e-internal_net-10-0-0-0_255-0-0-0"
+      description: "pr-e-internal_net-10-0-0-0_255-0-0-0"
+      ip_addr_list:
+        - "10.0.0.0/8"
+
+    - group_name: "pr-e-internal_splunk-deploy-server"
+      description: "pr-e-internal_splunk-deploy-server"
+      ip_addr_list:
+        - "10.121.10.106"
+
+    - group_name: "pr-e-internal_sc1uxpromn012"
+      description: "pr-e-internal_sc1uxpromn012"
+      ip_addr_list:
+        - "10.120.163.99"
+
+    - group_name: "pr-e-internal_net-10-120-216-0_255-255-248-0"
+      description: "pr-e-internal_net-10-120-216-0_255-255-248-0"
+      ip_addr_list:
+        - "10.120.216.0/21"
+
+    - group_name: "pr-e-internal_aws-100-64-0-0slash10"
+      description: "pr-e-internal_aws-100-64-0-0slash10"
+      ip_addr_list:
+        - "100.64.0.0/10"
+
+    - group_name: "pr-e-internal_scc_nimsoft_mgmt"
+      description: "CHG0070513"
+      ip_addr_list:
+        - "10.120.163.61"
+
+    - group_name: "pr-e-internal_scc-ca-nfa-harvester"
+      description: "CHG0077138"
+      ip_addr_list:
+        - "10.120.163.71"
+
+    - group_name: "pr-e-internal_williamhillssl-cloudsoftcat-com"
+      description: "pr-e-internal_williamhillssl-cloudsoftcat-com"
+      ip_addr_list:
+        - "130.0.80.197"
+
+    - group_name: "pr-e-internal_sc1wnpremg45"
+      description: "pr-e-internal_sc1wnpremg45"
+      ip_addr_list:
+        - "10.120.163.45"
+
+    - group_name: "pr-e-internal_williamhillssl-cloudsoftcat-com-secondary"
+      description: "pr-e-internal_williamhillssl-cloudsoftcat-com-secondary"
+      ip_addr_list:
+        - "130.0.80.205"
+
+    - group_name: "pr-e-internal_sc1wnpremn74-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.120.163.122"
+
+    - group_name: "pr-e-internal_sc1wnpremn75-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.120.163.123"
+
+    - group_name: "pr-e-internal_sc1wnpremn77-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.120.163.142"
+
+    - group_name: "pr-e-internal_sc1wnpremn78-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.120.163.143"
+
+    - group_name: "pr-e-internal_ld6wnpremn74-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.112.12.125"
+
+    - group_name: "pr-e-internal_ld6wnpremn75-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.112.12.126"
+
+    - group_name: "pr-e-internal_ld6wnpremn77-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.112.12.142"
+
+    - group_name: "pr-e-internal_ld6wnpremn78-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.112.12.143"
+
+    - group_name: "pr-e-internal_ld6wnpremn79-prod-williamhill-plc"
+      description: "CHG0140962"
+      ip_addr_list:
+        - "10.112.12.144"
+
+    - group_name: "pr-e-internal_gib-cp-ext-1"
+      description: "pr-e-internal_gib-cp-ext-1"
+      ip_addr_list:
+        - "95.131.184.49"
+
+    - group_name: "pr-e-internal_sc1uxpreap237_ip_10-120-163-237"
+      description: "pr-e-internal_sc1uxpreap237_ip_10-120-163-237"
+      ip_addr_list:
+        - "10.120.163.237"
+
+    - group_name: "pr-e-internal_sc1uxpreap238_ip_10-120-163-238"
+      description: "pr-e-internal_sc1uxpreap238_ip_10-120-163-238"
+      ip_addr_list:
+        - "10.120.163.238"
+
+    - group_name: "pr-e-internal_sc1uxpreap239_ip_10-120-163-239"
+      description: "pr-e-internal_sc1uxpreap239_ip_10-120-163-239"
+      ip_addr_list:
+        - "10.120.163.239"
+
+    - group_name: "pr-e-internal_aws-retail-prod-1"
+      description: "CHG0141604"
+      ip_addr_list:
+        - "100.73.16.0/23"
+
+    - group_name: "pr-e-internal_aws-retail-prod-2"
+      description: "CHG0141604"
+      ip_addr_list:
+        - "100.73.18.0/23"
+
+    - group_name: "pr-e-internal_aws-retail-prod-3"
+      description: "CHG0141604"
+      ip_addr_list:
+        - "100.73.20.0/23"
+
+    - group_name: "pr-e-internal_zoltan-brs-pp1-williamhill-plc"
+      description: "pr-e-internal_zoltan-brs-pp1-williamhill-plc"
+      ip_addr_list:
+        - "10.191.10.71"
+
+    - group_name: "pr-e-internal_zoltan-brs-pp2-williamhill-plc"
+      description: "pr-e-internal_zoltan-brs-pp2-williamhill-plc"
+      ip_addr_list:
+        - "10.193.10.71"
+
+    - group_name: "pr-e-internal_zoltan-brs-pp3-williamhill-plc"
+      description: "pr-e-internal_zoltan-brs-pp3-williamhill-plc"
+      ip_addr_list:
+        - "10.195.10.71"
+
+    - group_name: "pr-e-internal_zoltan-brs-prod-williamhill-plc"
+      description: "pr-e-internal_zoltan-brs-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.241.10.71"
+
+    - group_name: "pr-e-internal_zoltan-gib-prod-williamhill-plc"
+      description: "pr-e-internal_zoltan-gib-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.181.10.71"
+
+    - group_name: "pr-e-internal_zoltan-sc1-prod-williamhill-plc"
+      description: "pr-e-internal_zoltan-sc1-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.10.71"
+
+    - group_name: "pr-e-internal_zoltan-brs-cxp-williamhill-plc"
+      description: "pr-e-internal_zoltan-brs-cxp-williamhill-plc"
+      ip_addr_list:
+        - "10.201.230.96"
+
+    - group_name: "pr-e-internal_sc1appresc02"
+      description: "pr-e-internal_sc1appresc02"
+      ip_addr_list:
+        - "10.120.163.151"
+
+    - group_name: "pr-e-internal_sc1appresc03"
+      description: "pr-e-internal_sc1appresc03"
+      ip_addr_list:
+        - "10.120.163.152"
+
+    - group_name: "pr-e-internal_ld6pteadcint01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.116.4.11"
+
+    - group_name: "pr-e-internal_ld6pteadcapi02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.116.4.12"
+
+    - group_name: "pr-e-internal_ld6pteadcapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.116.5.11"
+
+    - group_name: "pr-e-internal_ld6pteadcint02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.116.5.12"
+
+    - group_name: "pr-e-internal_ld6pteadcextapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.116.7.11"
+
+    - group_name: "pr-e-internal_ld6pteadcextapi02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.116.7.12"
+
+    - group_name: "pr-e-internal_sc1invadcint01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.122.4.11"
+
+    - group_name: "pr-e-internal_sc1invadcint02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.122.4.12"
+
+    - group_name: "pr-e-internal_sc1invadcapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.122.5.11"
+
+    - group_name: "pr-e-internal_sc1invadcapi02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.122.5.12"
+
+    - group_name: "pr-e-internal_sc1invadcext01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.122.6.11"
+
+    - group_name: "pr-e-internal_sc1invadcext02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.122.6.12"
+
+    - group_name: "pr-e-internal_pp1adcapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.191.5.11"
+
+    - group_name: "pr-e-internal_pp1adcapi02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.191.5.12"
+
+    - group_name: "pr-e-internal_brspp1adcextapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.191.7.11"
+
+    - group_name: "pr-e-internal_pp2adcint01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.193.4.10"
+
+    - group_name: "pr-e-internal_pp2adcapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.193.5.10"
+
+    - group_name: "pr-e-internal_brspp2adcextapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.193.7.11"
+
+    - group_name: "pr-e-internal_pp3adcint01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.195.4.11"
+
+    - group_name: "pr-e-internal_pp3adcapi01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.195.5.11"
+
+    - group_name: "pr-e-internal_brsprdadcint01"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.241.4.11"
+
+    - group_name: "pr-e-internal_brsprdadcint02"
+      description: "CHG0134971"
+      ip_addr_list:
+        - "10.241.4.12"
+
+    - group_name: "pr-e-internal_gibuxpredb01"
+      description: "pr-e-internal_gibuxpredb01"
+      ip_addr_list:
+        - "10.180.163.141"
+
+    - group_name: "pr-e-internal_ld6wnprbkcs01"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.112.46.30"
+
+    - group_name: "pr-e-internal_sc1uxprbkcs01"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.120.46.30"
+
+    - group_name: "pr-e-internal_gibx9002"
+      description: "pr-e-internal_gibx9002"
+      ip_addr_list:
+        - "10.180.143.177"
+
+    - group_name: "pr-e-internal_net-172-16-0-0_255-240-0-0"
+      description: "pr-e-internal_net-172-16-0-0_255-240-0-0"
+      ip_addr_list:
+        - "172.16.0.0/12"
+
+    - group_name: "pr-e-internal_net-192-168-0-0_255-255-0-0"
+      description: "pr-e-internal_net-192-168-0-0_255-255-0-0"
+      ip_addr_list:
+        - "192.168.0.0/16"
+
+    - group_name: "pr-e-internal_sc1uxpremn137-prod-williamhill-plc"
+      description: "pr-e-internal_sc1uxpremn137-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.137"
+
+    - group_name: "pr-e-internal_am1xuim01col001-am1-williamhill-plc"
+      description: "pr-e-internal_am1xuim01col001-am1-williamhill-plc"
+      ip_addr_list:
+        - "10.125.159.144"
+
+    - group_name: "pr-e-internal_am1xuim01col002-am1-williamhill-plc"
+      description: "pr-e-internal_am1xuim01col002-am1-williamhill-plc"
+      ip_addr_list:
+        - "10.125.156.214"
+
+    - group_name: "pr-e-internal_njpxuim01col001"
+      description: "pr-e-internal_njpxuim01col001"
+      ip_addr_list:
+        - "100.100.8.13"
+
+    - group_name: "pr-e-internal_njpxuim01col002"
+      description: "pr-e-internal_njpxuim01col002"
+      ip_addr_list:
+        - "100.100.8.221"
+
+    - group_name: "pr-e-internal_aws-ssn-mgmt"
+      description: "pr-e-internal_aws-ssn-mgmt"
+      ip_addr_list:
+        - "100.79.162.0/23"
+
+    - group_name: "pr-e-internal_aws-ssp-mgmt"
+      description: "pr-e-internal_aws-ssp-mgmt"
+      ip_addr_list:
+        - "100.79.130.0/23"
+
+    - group_name: "pr-e-internal_10-120-163-31"
+      description: "pr-e-internal_10-120-163-31"
+      ip_addr_list:
+        - "10.120.163.31"
+
+    - group_name: "pr-e-internal_10-120-163-32"
+      description: "pr-e-internal_10-120-163-32"
+      ip_addr_list:
+        - "10.120.163.32"
+
+    - group_name: "pr-e-internal_10-120-163-33"
+      description: "pr-e-internal_10-120-163-33"
+      ip_addr_list:
+        - "10.120.163.33"
+
+    - group_name: "pr-e-internal_10-120-163-34"
+      description: "pr-e-internal_10-120-163-34"
+      ip_addr_list:
+        - "10.120.163.34"
+
+    - group_name: "pr-e-internal_gi-mpl-es01-vl20"
+      description: "pr-e-internal_gi-mpl-es01-vl20"
+      ip_addr_list:
+        - "95.131.184.61"
+
+    - group_name: "pr-e-internal_gi-mpl-es02-vl20"
+      description: "pr-e-internal_gi-mpl-es02-vl20"
+      ip_addr_list:
+        - "95.131.184.60"
+
+    - group_name: "pr-e-internal_uk-brs-es01-vl20"
+      description: "pr-e-internal_uk-brs-es01-vl20"
+      ip_addr_list:
+        - "141.138.129.34"
+
+    - group_name: "pr-e-internal_uk-brs-es02-vl20"
+      description: "pr-e-internal_uk-brs-es02-vl20"
+      ip_addr_list:
+        - "141.138.129.35"
+
+    - group_name: "pr-e-internal_uk-ld6-es01-vl20"
+      description: "pr-e-internal_uk-ld6-es01-vl20"
+      ip_addr_list:
+        - "185.119.152.34"
+
+    - group_name: "pr-e-internal_uk-ld6-es02-vl20"
+      description: "pr-e-internal_uk-ld6-es02-vl20"
+      ip_addr_list:
+        - "185.119.152.35"
+
+    - group_name: "pr-e-internal_uk-sc1-es01"
+      description: "CHG0077662"
+      ip_addr_list:
+        - "141.138.128.34"
+
+    - group_name: "pr-e-internal_uk-sc1-es02"
+      description: "CHG0077662"
+      ip_addr_list:
+        - "141.138.128.35"
+
+    - group_name: "pr-e-internal_10-174-104-0_24"
+      description: "CHG0129192"
+      ip_addr_list:
+        - "10.174.104.0/24"
+
+    - group_name: "pr-e-internal_10-174-111-128_25"
+      description: "CHG0129192"
+      ip_addr_list:
+        - "10.174.111.128/25"
+
+    - group_name: "pr-e-internal_10-129-11-1"
+      description: "pr-e-internal_10-129-11-1"
+      ip_addr_list:
+        - "10.129.11.1"
+
+    - group_name: "pr-e-internal_10-129-11-2"
+      description: "pr-e-internal_10-129-11-2"
+      ip_addr_list:
+        - "10.129.11.2"
+
+    - group_name: "pr-e-internal_10-129-11-3"
+      description: "pr-e-internal_10-129-11-3"
+      ip_addr_list:
+        - "10.129.11.3"
+
+    - group_name: "pr-e-internal_10-129-11-4"
+      description: "pr-e-internal_10-129-11-4"
+      ip_addr_list:
+        - "10.129.11.4"
+
+    - group_name: "pr-e-internal_10-129-11-5"
+      description: "pr-e-internal_10-129-11-5"
+      ip_addr_list:
+        - "10.129.11.5"
+
+    - group_name: "pr-e-internal_10-129-11-6"
+      description: "pr-e-internal_10-129-11-6"
+      ip_addr_list:
+        - "10.129.11.6"
+
+    - group_name: "pr-e-internal_10-129-11-7"
+      description: "pr-e-internal_10-129-11-7"
+      ip_addr_list:
+        - "10.129.11.7"
+
+    - group_name: "pr-e-internal_10-129-11-8"
+      description: "pr-e-internal_10-129-11-8"
+      ip_addr_list:
+        - "10.129.11.8"
+
+    - group_name: "pr-e-internal_sc1wnpremn20a"
+      description: "pr-e-internal_sc1wnpremn20a"
+      ip_addr_list:
+        - "10.120.163.40"
+
+    - group_name: "pr-e-internal_sc1wnpremn21a"
+      description: "pr-e-internal_sc1wnpremn21a"
+      ip_addr_list:
+        - "10.120.163.48"
+
+    - group_name: "pr-e-internal_sc1uxpremn79"
+      description: "pr-e-internal_sc1uxpremn79"
+      ip_addr_list:
+        - "10.120.163.78"
+
+    - group_name: "pr-e-internal_sc1apprein04-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein04-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.200"
+
+    - group_name: "pr-e-internal_sc1apprein05-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein05-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.201"
+
+    - group_name: "pr-e-internal_sc1apprein06-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein06-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.202"
+
+    - group_name: "pr-e-internal_sc1apprein07-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein07-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.203"
+
+    - group_name: "pr-e-internal_sc1apprein08-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein08-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.204"
+
+    - group_name: "pr-e-internal_sc1apprein09-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein09-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.205"
+
+    - group_name: "pr-e-internal_sc1apprein10-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein10-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.206"
+
+    - group_name: "pr-e-internal_sc1apprein11-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein11-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.207"
+
+    - group_name: "pr-e-internal_sc1apprein12-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein12-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.208"
+
+    - group_name: "pr-e-internal_sc1apprein13-prod-williamhill-plc"
+      description: "pr-e-internal_sc1apprein13-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.140.209"
+
+    - group_name: "pr-e-internal_sc1prdadcclb01-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcclb01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.44.11"
+
+    - group_name: "pr-e-internal_sc1prdadcclb02-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcclb02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.44.12"
+
+    - group_name: "pr-e-internal_sc1prdadcnlb01-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcnlb01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.74.11"
+
+    - group_name: "pr-e-internal_sc1prdadcnlb02-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcnlb02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.74.12"
+
+    - group_name: "pr-e-internal_sccadcrprapi01-prod-williamhill-plc"
+      description: "pr-e-internal_sccadcrprapi01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.172.3"
+
+    - group_name: "pr-e-internal_sccadcrprapi02-prod-williamhill-plc"
+      description: "pr-e-internal_sccadcrprapi02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.172.4"
+
+    - group_name: "pr-e-internal_10-120-100-82"
+      description: "pr-e-internal_10-120-100-82"
+      ip_addr_list:
+        - "10.120.100.82"
+
+    - group_name: "pr-e-internal_10-200-100-82"
+      description: "pr-e-internal_10-200-100-82"
+      ip_addr_list:
+        - "10.200.100.82"
+
+    - group_name: "pr-e-internal_10-120-100-83"
+      description: "pr-e-internal_10-120-100-83"
+      ip_addr_list:
+        - "10.120.100.83"
+
+    - group_name: "pr-e-internal_10-200-100-83"
+      description: "pr-e-internal_10-200-100-83"
+      ip_addr_list:
+        - "10.200.100.83"
+
+    - group_name: "pr-e-internal_10-120-100-84"
+      description: "pr-e-internal_10-120-100-84"
+      ip_addr_list:
+        - "10.120.100.84"
+
+    - group_name: "pr-e-internal_10-200-100-84"
+      description: "pr-e-internal_10-200-100-84"
+      ip_addr_list:
+        - "10.200.100.84"
+
+    - group_name: "pr-e-internal_10-120-100-80"
+      description: "pr-e-internal_10-120-100-80"
+      ip_addr_list:
+        - "10.120.100.80"
+
+    - group_name: "pr-e-internal_10-200-100-80"
+      description: "pr-e-internal_10-200-100-80"
+      ip_addr_list:
+        - "10.200.100.80"
+
+    - group_name: "pr-e-internal_brswndrndb003"
+      description: "pr-e-internal_brswndrndb003"
+      ip_addr_list:
+        - "10.210.149.58"
+
+    - group_name: "pr-e-internal_brswndrndb004"
+      description: "pr-e-internal_brswndrndb004"
+      ip_addr_list:
+        - "10.210.149.59"
+
+    - group_name: "pr-e-internal_brswnppndb002"
+      description: "pr-e-internal_brswnppndb002"
+      ip_addr_list:
+        - "10.1.29.245"
+
+    - group_name: "pr-e-internal_brswnppndb003"
+      description: "pr-e-internal_brswnppndb003"
+      ip_addr_list:
+        - "10.1.29.236"
+
+    - group_name: "pr-e-internal_sc1wnprgdb01"
+      description: "pr-e-internal_sc1wnprgdb01"
+      ip_addr_list:
+        - "10.120.146.66"
+
+    - group_name: "pr-e-internal_sc1wnprgdb02"
+      description: "pr-e-internal_sc1wnprgdb02"
+      ip_addr_list:
+        - "10.120.146.223"
+
+    - group_name: "pr-e-internal_sc1wnprgdb03"
+      description: "pr-e-internal_sc1wnprgdb03"
+      ip_addr_list:
+        - "10.120.146.101"
+
+    - group_name: "pr-e-internal_sc1wnprndb003_ip_10-120-149-25"
+      description: "pr-e-internal_sc1wnprndb003_ip_10-120-149-25"
+      ip_addr_list:
+        - "10.120.149.25"
+
+    - group_name: "pr-e-internal_sc1wnprndb004_ip_10-120-149-26"
+      description: "pr-e-internal_sc1wnprndb004_ip_10-120-149-26"
+      ip_addr_list:
+        - "10.120.149.26"
+
+    - group_name: "pr-e-internal_sc1wnprndb005_ip_10-120-149-27"
+      description: "pr-e-internal_sc1wnprndb005_ip_10-120-149-27"
+      ip_addr_list:
+        - "10.120.149.27"
+
+    - group_name: "pr-e-internal_sc1wnprndb006_ip_10-120-149-28"
+      description: "pr-e-internal_sc1wnprndb006_ip_10-120-149-28"
+      ip_addr_list:
+        - "10.120.149.28"
+
+    - group_name: "pr-e-internal_sc1wnprrcs01"
+      description: "pr-e-internal_sc1wnprrcs01"
+      ip_addr_list:
+        - "10.120.180.140"
+
+    - group_name: "pr-e-internal_sc1wnprrcs02"
+      description: "pr-e-internal_sc1wnprrcs02"
+      ip_addr_list:
+        - "10.120.180.141"
+
+    - group_name: "pr-e-internal_sc1wnprrto02_ip_10-120-180-59"
+      description: "pr-e-internal_sc1wnprrto02_ip_10-120-180-59"
+      ip_addr_list:
+        - "10.120.180.59"
+
+    - group_name: "pr-e-internal_sc1wnprrtp01"
+      description: "pr-e-internal_sc1wnprrtp01"
+      ip_addr_list:
+        - "10.120.180.142"
+
+    - group_name: "pr-e-internal_gibwn400"
+      description: "pr-e-internal_gibwn400"
+      ip_addr_list:
+        - "10.180.33.100"
+
+    - group_name: "pr-e-internal_sc1wnprgdb05"
+      description: "pr-e-internal_sc1wnprgdb05"
+      ip_addr_list:
+        - "10.120.99.54"
+
+    - group_name: "pr-e-internal_sc1wnprgdb05-vmc"
+      description: "CHG0146032"
+      ip_addr_list:
+        - "10.120.104.9"
+
+    - group_name: "pr-e-internal_sc1wnprgdb06"
+      description: "pr-e-internal_sc1wnprgdb06"
+      ip_addr_list:
+        - "10.120.99.55"
+
+    - group_name: "pr-e-internal_sc1wnprgdb06-vmc"
+      description: "CHG0146032"
+      ip_addr_list:
+        - "10.120.104.10"
+
+    - group_name: "pr-e-internal_corpservicessql-prod-williamhill-plc"
+      description: "CHG0146032"
+      ip_addr_list:
+        - "10.120.99.54"
+
+    - group_name: "pr-e-internal_corpservicessql-prod-williamhill-plc-vmc"
+      description: "CHG0146032"
+      ip_addr_list:
+        - "10.120.104.11"
+
+    - group_name: "pr-e-internal_sc1wnprgdb05_06"
+      description: "pr-e-internal_sc1wnprgdb05_06"
+      ip_addr_list:
+        - "10.120.99.54"
+
+    - group_name: "pr-e-internal_sc1wnpremn74"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.120.163.122"
+
+    - group_name: "pr-e-internal_sc1wnpremn75"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.120.163.123"
+
+    - group_name: "pr-e-internal_sc1wnpremn77"
+      description: "pr-e-internal_sc1wnpremn77"
+      ip_addr_list:
+        - "10.120.163.142"
+
+    - group_name: "pr-e-internal_sc1wnpremn78"
+      description: "pr-e-internal_sc1wnpremn78"
+      ip_addr_list:
+        - "10.120.163.143"
+
+    - group_name: "pr-e-internal_10-180-143-171"
+      description: "pr-e-internal_10-180-143-171"
+      ip_addr_list:
+        - "10.180.143.171"
+
+    - group_name: "pr-e-internal_sc1uxpremn105"
+      description: "pr-e-internal_sc1uxpremn105"
+      ip_addr_list:
+        - "10.120.163.105"
+
+    - group_name: "pr-e-internal_sc1uxpremn106"
+      description: "pr-e-internal_sc1uxpremn106"
+      ip_addr_list:
+        - "10.120.163.106"
+
+    - group_name: "pr-e-internal_sc1uxpremn107"
+      description: "pr-e-internal_sc1uxpremn107"
+      ip_addr_list:
+        - "10.120.163.107"
+
+    - group_name: "pr-e-internal_sc1uxpremn108"
+      description: "pr-e-internal_sc1uxpremn108"
+      ip_addr_list:
+        - "10.120.163.108"
+
+    - group_name: "pr-e-internal_sc1uxpremn120"
+      description: "pr-e-internal_sc1uxpremn120"
+      ip_addr_list:
+        - "10.120.163.120"
+
+    - group_name: "pr-e-internal_sc1uxpremn121"
+      description: "pr-e-internal_sc1uxpremn121"
+      ip_addr_list:
+        - "10.120.163.121"
+
+    - group_name: "pr-e-internal_brsppapvc01-group-williamhill-plc"
+      description: "pr-e-internal_brsppapvc01-group-williamhill-plc"
+      ip_addr_list:
+        - "10.201.226.253"
+
+    - group_name: "pr-e-internal_gibprapvc01-prod-williamhill-plc"
+      description: "pr-e-internal_gibprapvc01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.180.138.15"
+
+    - group_name: "pr-e-internal_ld6prapvc01-prod-williamhill-plc"
+      description: "pr-e-internal_ld6prapvc01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.112.8.253"
+
+    - group_name: "pr-e-internal_sc1uxprgdb01"
+      description: "pr-e-internal_sc1uxprgdb01"
+      ip_addr_list:
+        - "10.120.146.154"
+
+    - group_name: "pr-e-internal_sc1uxprgdb05"
+      description: "pr-e-internal_sc1uxprgdb05"
+      ip_addr_list:
+        - "10.120.146.155"
+
+    - group_name: "pr-e-internal_sc1uxprodb001"
+      description: "pr-e-internal_sc1uxprodb001"
+      ip_addr_list:
+        - "10.120.146.83"
+
+    - group_name: "pr-e-internal_sc1uxprodb002"
+      description: "pr-e-internal_sc1uxprodb002"
+      ip_addr_list:
+        - "10.120.146.84"
+
+    - group_name: "pr-e-internal_sc1uxprtdb001"
+      description: "pr-e-internal_sc1uxprtdb001"
+      ip_addr_list:
+        - "10.120.180.14"
+
+    - group_name: "pr-e-internal_bfawnpredc01"
+      description: "pr-e-internal_bfawnpredc01"
+      ip_addr_list:
+        - "10.56.9.11"
+
+    - group_name: "pr-e-internal_brswnpredc01"
+      description: "CHG0138309"
+      ip_addr_list:
+        - "10.210.194.11"
+
+    - group_name: "pr-e-internal_brswnpredc02_ip_10-210-194-12"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.210.194.12"
+
+    - group_name: "pr-e-internal_brswnpredc03-chg0144834"
+      description: "CHG0144834"
+      ip_addr_list:
+        - "10.210.194.13"
+
+    - group_name: "pr-e-internal_gibwnpredc02_ip_10-180-194-12"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.180.194.12"
+
+    - group_name: "pr-e-internal_gibwnpredc03_ip_10-180-194-13"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.180.194.13"
+
+    - group_name: "pr-e-internal_irewnprdc01"
+      description: "CHG0140344"
+      ip_addr_list:
+        - "100.72.225.135"
+
+    - group_name: "pr-e-internal_irewnprdc02"
+      description: "CHG0140344"
+      ip_addr_list:
+        - "100.72.225.167"
+
+    - group_name: "pr-e-internal_nvawnprdc01"
+      description: "CHG0140344"
+      ip_addr_list:
+        - "100.97.1.135"
+
+    - group_name: "pr-e-internal_nvawnprdc02"
+      description: "CHG0140344"
+      ip_addr_list:
+        - "100.97.1.167"
+
+    - group_name: "pr-e-internal_krawnpredc01"
+      description: "pr-e-internal_krawnpredc01"
+      ip_addr_list:
+        - "10.55.9.11"
+
+    - group_name: "pr-e-internal_krawnpredc02"
+      description: "pr-e-internal_krawnpredc02"
+      ip_addr_list:
+        - "10.55.9.12"
+
+    - group_name: "pr-e-internal_ld6wnpredc01-new"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.19.2.21"
+
+    - group_name: "pr-e-internal_ld6wnpredc02-new"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.19.2.22"
+
+    - group_name: "pr-e-internal_mnlwnpredc02_ip_10-123-197-11"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.123.197.11"
+
+    - group_name: "pr-e-internal_mnlwnpredc03"
+      description: "pr-e-internal_mnlwnpredc03"
+      ip_addr_list:
+        - "10.123.197.16"
+
+    - group_name: "pr-e-internal_sc1wnpredc01"
+      description: "CHG0138309"
+      ip_addr_list:
+        - "10.120.194.11"
+
+    - group_name: "pr-e-internal_sc1wnpredc02"
+      description: "CHG0138309"
+      ip_addr_list:
+        - "10.120.194.12"
+
+    - group_name: "pr-e-internal_sc1wnpredc03_ip_10-120-194-13"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.13"
+
+    - group_name: "pr-e-internal_sc1wnpredc04_ip_10-120-194-14"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.14"
+
+    - group_name: "pr-e-internal_sc1wnpredc05_ip_10-120-194-15"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.15"
+
+    - group_name: "pr-e-internal_sc1wnpredc08_ip_10-120-194-18"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.18"
+
+    - group_name: "pr-e-internal_sofwnpredc01"
+      description: "pr-e-internal_sofwnpredc01"
+      ip_addr_list:
+        - "10.53.98.10"
+
+    - group_name: "pr-e-internal_sofwnpredc02"
+      description: "pr-e-internal_sofwnpredc02"
+      ip_addr_list:
+        - "10.53.98.11"
+
+    - group_name: "pr-e-internal_net-10-120-162-0_255-255-255-0"
+      description: "pr-e-internal_net-10-120-162-0_255-255-255-0"
+      ip_addr_list:
+        - "10.120.162.0/24"
+
+    - group_name: "pr-e-internal_brsapprein04-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein04-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.200"
+
+    - group_name: "pr-e-internal_brsapprein05-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein05-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.201"
+
+    - group_name: "pr-e-internal_brsapprein06-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein06-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.202"
+
+    - group_name: "pr-e-internal_brsapprein07-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein07-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.203"
+
+    - group_name: "pr-e-internal_brsapprein08-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein08-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.204"
+
+    - group_name: "pr-e-internal_brsapprein09-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein09-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.205"
+
+    - group_name: "pr-e-internal_brsapprein10-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein10-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.206"
+
+    - group_name: "pr-e-internal_brsapprein11-prod-williamhill-plc"
+      description: "pr-e-internal_brsapprein11-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.140.207"
+
+    - group_name: "pr-e-internal_brsprdadcclb01-prod-williamhill-plc"
+      description: "pr-e-internal_brsprdadcclb01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.44.11"
+
+    - group_name: "pr-e-internal_brsprdadcclb02-prod-williamhill-plc"
+      description: "pr-e-internal_brsprdadcclb02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.44.12"
+
+    - group_name: "pr-e-internal_brsprdadcint01-prod-williamhill-plc"
+      description: "pr-e-internal_brsprdadcint01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.214.4.11"
+
+    - group_name: "pr-e-internal_brsprdadcint02-prod-williamhill-plc"
+      description: "pr-e-internal_brsprdadcint02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.214.4.12"
+
+    - group_name: "pr-e-internal_brsprdadcnlb01-prod-williamhill-plc"
+      description: "pr-e-internal_brsprdadcnlb01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.74.11"
+
+    - group_name: "pr-e-internal_brsprdadcnlb02-prod-williamhill-plc"
+      description: "pr-e-internal_brsprdadcnlb02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.74.12"
+
+    - group_name: "pr-e-internal_sc1invadcapi01-inv-williamhill-plc"
+      description: "pr-e-internal_sc1invadcapi01-inv-williamhill-plc"
+      ip_addr_list:
+        - "10.122.5.11"
+
+    - group_name: "pr-e-internal_sc1invadcapi02-inv-williamhill-plc"
+      description: "pr-e-internal_sc1invadcapi02-inv-williamhill-plc"
+      ip_addr_list:
+        - "10.122.5.12"
+
+    - group_name: "pr-e-internal_sc1invadcext01-inv-williamhill-plc"
+      description: "pr-e-internal_sc1invadcext01-inv-williamhill-plc"
+      ip_addr_list:
+        - "10.122.6.11"
+
+    - group_name: "pr-e-internal_sc1invadcext02-inv-williamhill-plc"
+      description: "pr-e-internal_sc1invadcext02-inv-williamhill-plc"
+      ip_addr_list:
+        - "10.122.6.12"
+
+    - group_name: "pr-e-internal_sc1invadcint01-inv-williamhill-plc"
+      description: "pr-e-internal_sc1invadcint01-inv-williamhill-plc"
+      ip_addr_list:
+        - "10.122.4.11"
+
+    - group_name: "pr-e-internal_sc1invadcint02-inv-williamhill-plc"
+      description: "pr-e-internal_sc1invadcint02-inv-williamhill-plc"
+      ip_addr_list:
+        - "10.122.4.12"
+
+    - group_name: "pr-e-internal_sc1prdadcapi01-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcapi01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.122.5.11"
+
+    - group_name: "pr-e-internal_sc1prdadcapi02-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcapi02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.122.5.12"
+
+    - group_name: "pr-e-internal_sc1prdadcint01-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcint01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.4.11"
+
+    - group_name: "pr-e-internal_sc1prdadcint02-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcint02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.4.12"
+
+    - group_name: "pr-e-internal_brswndremg002"
+      description: "pr-e-internal_brswndremg002"
+      ip_addr_list:
+        - "10.210.194.52"
+
+    - group_name: "pr-e-internal_sc1wnpremg002"
+      description: "pr-e-internal_sc1wnpremg002"
+      ip_addr_list:
+        - "10.120.194.52"
+
+    - group_name: "pr-e-internal_scc-nms-hub-dr"
+      description: "pr-e-internal_scc-nms-hub-dr"
+      ip_addr_list:
+        - "10.120.163.66"
+
+    - group_name: "pr-e-internal_scc-nms-hub-live"
+      description: "pr-e-internal_scc-nms-hub-live"
+      ip_addr_list:
+        - "10.120.163.65"
+
+    - group_name: "pr-e-internal_sc1wnprgdb0506"
+      description: "pr-e-internal_sc1wnprgdb0506"
+      ip_addr_list:
+        - "10.120.146.51"
+
+    - group_name: "pr-e-internal_10-1-86-31"
+      description: "pr-e-internal_10-1-86-31"
+      ip_addr_list:
+        - "10.1.86.31"
+
+    - group_name: "pr-e-internal_10-120-146-116"
+      description: "pr-e-internal_10-120-146-116"
+      ip_addr_list:
+        - "10.120.146.116"
+
+    - group_name: "pr-e-internal_cessql"
+      description: "pr-e-internal_cessql"
+      ip_addr_list:
+        - "10.120.180.139"
+
+    - group_name: "pr-e-internal_brswnstrdb001"
+      description: "pr-e-internal_brswnstrdb001"
+      ip_addr_list:
+        - "10.1.28.5"
+
+    - group_name: "pr-e-internal_sc1wnpredb01"
+      description: "pr-e-internal_sc1wnpredb01"
+      ip_addr_list:
+        - "10.120.134.11"
+
+    - group_name: "pr-e-internal_sc1wnprevo01"
+      description: "pr-e-internal_sc1wnprevo01"
+      ip_addr_list:
+        - "10.120.194.74"
+
+    - group_name: "pr-e-internal_sc1wnprgdb13"
+      description: "pr-e-internal_sc1wnprgdb13"
+      ip_addr_list:
+        - "10.120.146.115"
+
+    - group_name: "pr-e-internal_sc1wnprndb019"
+      description: "pr-e-internal_sc1wnprndb019"
+      ip_addr_list:
+        - "10.120.146.35"
+
+    - group_name: "pr-e-internal_sc1wnprrdb01"
+      description: "pr-e-internal_sc1wnprrdb01"
+      ip_addr_list:
+        - "10.120.180.211"
+
+    - group_name: "pr-e-internal_sc1wnprrto01"
+      description: "pr-e-internal_sc1wnprrto01"
+      ip_addr_list:
+        - "10.120.180.53"
+
+    - group_name: "pr-e-internal_sc1wnprrto02_ip_10-120-180-54"
+      description: "pr-e-internal_sc1wnprrto02_ip_10-120-180-54"
+      ip_addr_list:
+        - "10.120.180.54"
+
+    - group_name: "pr-e-internal_w7d-dbjump"
+      description: "pr-e-internal_w7d-dbjump"
+      ip_addr_list:
+        - "10.120.149.229"
+
+    - group_name: "pr-e-internal_sc1uxpremn002-prod-williamhill-plc"
+      description: "pr-e-internal_sc1uxpremn002-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.95"
+
+    - group_name: "pr-e-internal_sc1uxpremn003-prod-williamhill-plc"
+      description: "pr-e-internal_sc1uxpremn003-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.96"
+
+    - group_name: "pr-e-internal_brsapprcmg002-group-williamhill-plc"
+      description: "CHG0142765"
+      ip_addr_list:
+        - "10.210.163.13"
+
+    - group_name: "pr-e-internal_sc1uxpremn002"
+      description: "CHG0142763"
+      ip_addr_list:
+        - "10.120.163.95"
+
+    - group_name: "pr-e-internal_sc1uxpremn003"
+      description: "CHG0142763"
+      ip_addr_list:
+        - "10.120.163.96"
+
+    - group_name: "pr-e-internal_splunkdeployment-sc1-prod-williamhill-plc"
+      description: "CHG0142763"
+      ip_addr_list:
+        - "10.120.163.99"
+
+    - group_name: "pr-e-internal_sc1uxprbkms01"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.120.46.31"
+
+    - group_name: "pr-e-internal_sc1uxprbkms02"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.120.46.32"
+
+    - group_name: "pr-e-internal_sc1wnprbkcs01"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.120.46.30"
+
+    - group_name: "pr-e-internal_ld6uxprbkms03"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.112.46.33"
+
+    - group_name: "pr-e-internal_ld6uxprbkms04"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.112.46.34"
+
+    - group_name: "pr-e-internal_ld6uxprbkms01"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.112.46.31"
+
+    - group_name: "pr-e-internal_ld6uxprbkms02"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.112.46.32"
+
+    - group_name: "pr-e-internal_gibuxprbkms01"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.180.46.31"
+
+    - group_name: "pr-e-internal_gibuxprbkms02"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.180.46.32"
+
+    - group_name: "pr-e-internal_brswnpredc03"
+      description: "pr-e-internal_brswnpredc03"
+      ip_addr_list:
+        - "10.210.194.13"
+
+    - group_name: "pr-e-internal_ld6wnpredc01"
+      description: "pr-e-internal_ld6wnpredc01"
+      ip_addr_list:
+        - "10.19.2.21"
+
+    - group_name: "pr-e-internal_ld6wnpredc02"
+      description: "pr-e-internal_ld6wnpredc02"
+      ip_addr_list:
+        - "10.19.2.22"
+
+    - group_name: "pr-e-internal_int-10-180-36-10"
+      description: "pr-e-internal_int-10-180-36-10"
+      ip_addr_list:
+        - "10.180.36.10"
+
+    - group_name: "pr-e-internal_int-10-180-37-51"
+      description: "pr-e-internal_int-10-180-37-51"
+      ip_addr_list:
+        - "10.180.37.51"
+
+    - group_name: "pr-e-internal_int-10-180-37-52"
+      description: "pr-e-internal_int-10-180-37-52"
+      ip_addr_list:
+        - "10.180.37.52"
+
+    - group_name: "pr-e-internal_int-10-180-37-53"
+      description: "pr-e-internal_int-10-180-37-53"
+      ip_addr_list:
+        - "10.180.37.53"
+
+    - group_name: "pr-e-internal_int-10-180-37-54"
+      description: "pr-e-internal_int-10-180-37-54"
+      ip_addr_list:
+        - "10.180.37.54"
+
+    - group_name: "pr-e-internal_10-121-5-0slash24"
+      description: "pr-e-internal_10-121-5-0slash24"
+      ip_addr_list:
+        - "10.121.5.0/24"
+
+    - group_name: "pr-e-internal_10-121-7-0slash24"
+      description: "pr-e-internal_10-121-7-0slash24"
+      ip_addr_list:
+        - "10.121.7.0/24"
+
+    - group_name: "pr-e-internal_brsns01"
+      description: "pr-e-internal_brsns01"
+      ip_addr_list:
+        - "10.210.193.235"
+
+    - group_name: "pr-e-internal_brsns02"
+      description: "pr-e-internal_brsns02"
+      ip_addr_list:
+        - "10.210.193.236"
+
+    - group_name: "pr-e-internal_gibns01"
+      description: "pr-e-internal_gibns01"
+      ip_addr_list:
+        - "10.180.193.235"
+
+    - group_name: "pr-e-internal_gibns02"
+      description: "pr-e-internal_gibns02"
+      ip_addr_list:
+        - "10.180.193.236"
+
+    - group_name: "pr-e-internal_sc1ns01"
+      description: "pr-e-internal_sc1ns01"
+      ip_addr_list:
+        - "10.120.193.235"
+
+    - group_name: "pr-e-internal_sc1ns02"
+      description: "pr-e-internal_sc1ns02"
+      ip_addr_list:
+        - "10.120.193.236"
+
+    - group_name: "pr-e-internal_ld6ns01-new"
+      description: "pr-e-internal_ld6ns01-new"
+      ip_addr_list:
+        - "10.112.208.11"
+
+    - group_name: "pr-e-internal_ld6ns02-new"
+      description: "pr-e-internal_ld6ns02-new"
+      ip_addr_list:
+        - "10.112.208.12"
+
+    - group_name: "pr-e-internal_emailhost01"
+      description: "pr-e-internal_emailhost01"
+      ip_addr_list:
+        - "10.120.33.164"
+
+    - group_name: "pr-e-internal_emailhost02"
+      description: "pr-e-internal_emailhost02"
+      ip_addr_list:
+        - "10.120.33.165"
+
+    - group_name: "pr-e-internal_emailhost03"
+      description: "pr-e-internal_emailhost03"
+      ip_addr_list:
+        - "10.210.33.164"
+
+    - group_name: "pr-e-internal_emailhost04"
+      description: "pr-e-internal_emailhost04"
+      ip_addr_list:
+        - "10.210.33.165"
+
+    - group_name: "pr-e-internal_emailhost05"
+      description: "pr-e-internal_emailhost05"
+      ip_addr_list:
+        - "10.180.33.164"
+
+    - group_name: "pr-e-internal_emailhost06"
+      description: "pr-e-internal_emailhost06"
+      ip_addr_list:
+        - "10.180.33.165"
+
+    - group_name: "pr-e-internal_clp-splunk-license-master-prod-williamhill-plc"
+      description: "pr-e-internal_clp-splunk-license-master-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.46"
+
+    - group_name: "pr-e-internal_brsux910"
+      description: "pr-e-internal_brsux910"
+      ip_addr_list:
+        - "10.1.28.4"
+
+    - group_name: "pr-e-internal_gibux910"
+      description: "pr-e-internal_gibux910"
+      ip_addr_list:
+        - "10.180.163.108"
+
+    - group_name: "pr-e-internal_ld6uxpreds01"
+      description: "pr-e-internal_ld6uxpreds01"
+      ip_addr_list:
+        - "10.112.12.20"
+
+    - group_name: "pr-e-internal_sc1uxpreds01"
+      description: "pr-e-internal_sc1uxpreds01"
+      ip_addr_list:
+        - "10.120.194.20"
+
+    - group_name: "pr-e-internal_sc1wnprncp001-mgmt-prod-williamhill-plc"
+      description: "pr-e-internal_sc1wnprncp001-mgmt-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.146.112"
+
+    - group_name: "pr-e-internal_sc1uxpredb01"
+      description: "pr-e-internal_sc1uxpredb01"
+      ip_addr_list:
+        - "10.120.163.141"
+
+    - group_name: "pr-e-internal_sc1uxprnap43_44vip"
+      description: "pr-e-internal_sc1uxprnap43_44vip"
+      ip_addr_list:
+        - "10.120.99.153"
+
+    - group_name: "pr-e-internal_sc1uxprndb001"
+      description: "pr-e-internal_sc1uxprndb001"
+      ip_addr_list:
+        - "10.120.146.60"
+
+    - group_name: "pr-e-internal_sc1uxprndb95_96vip"
+      description: "pr-e-internal_sc1uxprndb95_96vip"
+      ip_addr_list:
+        - "10.120.99.91"
+
+    - group_name: "pr-e-internal_sc1uxprrdb"
+      description: "pr-e-internal_sc1uxprrdb"
+      ip_addr_list:
+        - "10.120.146.20"
+
+    - group_name: "pr-e-internal_sc1uxprrvr05"
+      description: "pr-e-internal_sc1uxprrvr05"
+      ip_addr_list:
+        - "10.120.180.201"
+
+    - group_name: "pr-e-internal_sc1uxprrvr06"
+      description: "pr-e-internal_sc1uxprrvr06"
+      ip_addr_list:
+        - "10.120.180.202"
+
+    - group_name: "pr-e-internal_sc1wnprecp01"
+      description: "pr-e-internal_sc1wnprecp01"
+      ip_addr_list:
+        - "10.120.146.156"
+
+    - group_name: "pr-e-internal_sc1uxprndb037_38vip"
+      description: "pr-e-internal_sc1uxprndb037_38vip"
+      ip_addr_list:
+        - "10.120.98.50"
+
+    - group_name: "pr-e-internal_sc1wnprnwb87"
+      description: "pr-e-internal_sc1wnprnwb87"
+      ip_addr_list:
+        - "10.120.146.131"
+
+    - group_name: "pr-e-internal_sc1wnprndb003_ip_10-120-100-17"
+      description: "pr-e-internal_sc1wnprndb003_ip_10-120-100-17"
+      ip_addr_list:
+        - "10.120.100.17"
+
+    - group_name: "pr-e-internal_sc1wnprndb004_ip_10-120-100-18"
+      description: "pr-e-internal_sc1wnprndb004_ip_10-120-100-18"
+      ip_addr_list:
+        - "10.120.100.18"
+
+    - group_name: "pr-e-internal_sc1wnprndb005_ip_10-120-100-19"
+      description: "pr-e-internal_sc1wnprndb005_ip_10-120-100-19"
+      ip_addr_list:
+        - "10.120.100.19"
+
+    - group_name: "pr-e-internal_sc1wnprndb006_ip_10-120-100-20"
+      description: "pr-e-internal_sc1wnprndb006_ip_10-120-100-20"
+      ip_addr_list:
+        - "10.120.100.20"
+
+    - group_name: "pr-e-internal_host-10-121-5-11"
+      description: "pr-e-internal_host-10-121-5-11"
+      ip_addr_list:
+        - "10.121.5.11"
+
+    - group_name: "pr-e-internal_host-10-121-5-12"
+      description: "pr-e-internal_host-10-121-5-12"
+      ip_addr_list:
+        - "10.121.5.12"
+
+    - group_name: "pr-e-internal_sc1wnprnap024-prod-williamhill-plc"
+      description: "pr-e-internal_sc1wnprnap024-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.100.70"
+
+    - group_name: "pr-e-internal_brswnprcmg41"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.210.141.41"
+
+    - group_name: "pr-e-internal_brswnprcmg42"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.210.141.42"
+
+    - group_name: "pr-e-internal_brswnprcmg43"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.210.141.43"
+
+    - group_name: "pr-e-internal_brswnprcmg44"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.210.141.44"
+
+    - group_name: "pr-e-internal_gibwnprcmg41"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.180.141.41"
+
+    - group_name: "pr-e-internal_gibwnprcmg42"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.180.141.42"
+
+    - group_name: "pr-e-internal_gibwnprcmg43"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.180.141.43"
+
+    - group_name: "pr-e-internal_gibwnprcmg44"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.180.141.44"
+
+    - group_name: "pr-e-internal_ld6wnprcmg41"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.112.12.41"
+
+    - group_name: "pr-e-internal_ld6wnprcmg42"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.112.12.42"
+
+    - group_name: "pr-e-internal_ld6wnprcmg43"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.112.12.43"
+
+    - group_name: "pr-e-internal_ld6wnprcmg44"
+      description: "CHG0123314"
+      ip_addr_list:
+        - "10.112.12.44"
+
+    - group_name: "pr-e-internal_sc1wnprcmg41"
+      description: "pr-e-internal_sc1wnprcmg41"
+      ip_addr_list:
+        - "10.120.141.41"
+
+    - group_name: "pr-e-internal_sc1wnprcmg42"
+      description: "pr-e-internal_sc1wnprcmg42"
+      ip_addr_list:
+        - "10.120.141.42"
+
+    - group_name: "pr-e-internal_sc1wnprcmg43"
+      description: "pr-e-internal_sc1wnprcmg43"
+      ip_addr_list:
+        - "10.120.141.43"
+
+    - group_name: "pr-e-internal_sc1wnprcmg44"
+      description: "pr-e-internal_sc1wnprcmg44"
+      ip_addr_list:
+        - "10.120.141.44"
+
+    - group_name: "pr-e-internal_rackspace_nimsoft_ch_dr"
+      description: "pr-e-internal_rackspace_nimsoft_ch_dr"
+      ip_addr_list:
+        - "134.213.60.159"
+
+    - group_name: "pr-e-internal_rackspace_nimsoft_ch_live"
+      description: "pr-e-internal_rackspace_nimsoft_ch_live"
+      ip_addr_list:
+        - "134.213.60.6"
+
+    - group_name: "pr-e-internal_uk-sc1-er01-lo0"
+      description: "CHG0077138"
+      ip_addr_list:
+        - "141.138.128.82"
+
+    - group_name: "pr-e-internal_uk-sc1-er02-lo0"
+      description: "CHG0077138"
+      ip_addr_list:
+        - "141.138.128.81"
+
+    - group_name: "pr-e-internal_uk-sc1-dmvpn01"
+      description: "CHG0077667"
+      ip_addr_list:
+        - "141.138.128.105"
+
+    - group_name: "pr-e-internal_uk-sc1-dmvpn02"
+      description: "CHG0077667"
+      ip_addr_list:
+        - "141.138.128.106"
+
+    - group_name: "pr-e-internal_servicenowams-datacentre"
+      description: "pr-e-internal_servicenowams-datacentre"
+      ip_addr_list:
+        - "149.96.66.22"
+
+    - group_name: "pr-e-internal_servicenowlhr-datacentre"
+      description: "pr-e-internal_servicenowlhr-datacentre"
+      ip_addr_list:
+        - "149.96.50.22"
+
+    - group_name: "pr-e-internal_brsux1rdb001"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.212.180.138"
+
+    - group_name: "pr-e-internal_brsux1rdb002"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.212.180.143"
+
+    - group_name: "pr-e-internal_brsux2rdb001"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.214.180.138"
+
+    - group_name: "pr-e-internal_brsux2rdb002"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.214.180.143"
+
+    - group_name: "pr-e-internal_brsuxdrrdb001"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.210.180.65"
+
+    - group_name: "pr-e-internal_ld6uxptrdb002"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.115.177.10"
+
+    - group_name: "pr-e-internal_retail-omni-mysql-dev-williamhill-plc"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.210.201.72"
+
+    - group_name: "pr-e-internal_sc1uxprrdb001"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.120.180.65"
+
+    - group_name: "pr-e-internal_sc1uxprrdb0012"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.120.177.68"
+
+    - group_name: "pr-e-internal_sc1uxprrdb002"
+      description: "CHG0117835"
+      ip_addr_list:
+        - "10.120.180.66"
+
+    - group_name: "pr-e-internal_brsuxdrrdb04"
+      description: "CHG0118067"
+      ip_addr_list:
+        - "10.201.9.15"
+
+    - group_name: "pr-e-internal_sc1uxprrdb-vip"
+      description: "CHG0118067"
+      ip_addr_list:
+        - "10.120.146.20"
+
+    - group_name: "pr-e-internal_sc1uxprrdb04"
+      description: "CHG0118067"
+      ip_addr_list:
+        - "10.120.146.15"
+
+    - group_name: "pr-e-internal_sc1uxprrdb05"
+      description: "CHG0118067"
+      ip_addr_list:
+        - "10.120.146.16"
+
+    - group_name: "pr-e-internal_brsux003"
+      description: "CHG0118070"
+      ip_addr_list:
+        - "10.201.8.180"
+
+    - group_name: "pr-e-internal_brsux232"
+      description: "CHG0118070"
+      ip_addr_list:
+        - "10.201.9.182"
+
+    - group_name: "pr-e-internal_liability-live-vip"
+      description: "CHG0118070"
+      ip_addr_list:
+        - "10.120.180.165"
+
+    - group_name: "pr-e-internal_sc1uxprrdb01"
+      description: "CHG0118070"
+      ip_addr_list:
+        - "10.120.180.166"
+
+    - group_name: "pr-e-internal_sc1uxprrdb02"
+      description: "CHG0118070"
+      ip_addr_list:
+        - "10.120.180.167"
+
+    - group_name: "pr-e-internal_brsuxdrrvr05"
+      description: "CHG0118072"
+      ip_addr_list:
+        - "10.210.180.201"
+
+    - group_name: "pr-e-internal_brsuxp1rvr05"
+      description: "CHG0118072"
+      ip_addr_list:
+        - "10.212.180.211"
+
+    - group_name: "pr-e-internal_brsuxp1rvr06"
+      description: "CHG0118072"
+      ip_addr_list:
+        - "10.212.180.212"
+
+    - group_name: "pr-e-internal_brsuxp2rvr05"
+      description: "CHG0118072"
+      ip_addr_list:
+        - "10.214.180.211"
+
+    - group_name: "pr-e-internal_brsuxp2rvr06"
+      description: "CHG0118072"
+      ip_addr_list:
+        - "10.214.180.212"
+
+    - group_name: "pr-e-internal_brsuxp3rvr005"
+      description: "CHG0118072"
+      ip_addr_list:
+        - "10.216.177.61"
+
+    - group_name: "pr-e-internal_brsuxp3rvr006"
+      description: "CHG0118072"
+      ip_addr_list:
+        - "10.216.177.62"
+
+    - group_name: "pr-e-internal_brsuxdrrdb010"
+      description: "pr-e-internal_brsuxdrrdb010"
+      ip_addr_list:
+        - "10.210.180.12"
+
+    - group_name: "pr-e-internal_brsuxp1rdb010"
+      description: "pr-e-internal_brsuxp1rdb010"
+      ip_addr_list:
+        - "10.212.180.12"
+
+    - group_name: "pr-e-internal_brsuxp2rdb010"
+      description: "pr-e-internal_brsuxp2rdb010"
+      ip_addr_list:
+        - "10.214.180.12"
+
+    - group_name: "pr-e-internal_sc1uxprrdb010"
+      description: "CHG0118080"
+      ip_addr_list:
+        - "10.120.180.12"
+
+    - group_name: "pr-e-internal_brsuxdrshd010"
+      description: "pr-e-internal_brsuxdrshd010"
+      ip_addr_list:
+        - "10.210.177.24"
+
+    - group_name: "pr-e-internal_brsuxr1rdb003"
+      description: "CHG0118083"
+      ip_addr_list:
+        - "10.212.180.225"
+
+    - group_name: "pr-e-internal_sc1uxprshd010"
+      description: "pr-e-internal_sc1uxprshd010"
+      ip_addr_list:
+        - "10.120.177.24"
+
+    - group_name: "pr-e-internal_brsux121"
+      description: "CHG0119313"
+      ip_addr_list:
+        - "10.1.29.117"
+
+    - group_name: "pr-e-internal_brsux122"
+      description: "CHG0119313"
+      ip_addr_list:
+        - "10.1.29.118"
+
+    - group_name: "pr-e-internal_gibux321vip"
+      description: "CHG0119313"
+      ip_addr_list:
+        - "10.180.133.100"
+
+    - group_name: "pr-e-internal_gibux322"
+      description: "CHG0119313"
+      ip_addr_list:
+        - "10.180.133.102"
+
+    - group_name: "pr-e-internal_gibux322vip"
+      description: "CHG0119313"
+      ip_addr_list:
+        - "10.180.133.101"
+
+    - group_name: "pr-e-internal_ld6ux321"
+      description: "CHG0119313"
+      ip_addr_list:
+        - "10.114.135.216"
+
+    - group_name: "pr-e-internal_10-120-99-95"
+      description: "pr-e-internal_10-120-99-95"
+      ip_addr_list:
+        - "10.120.99.95"
+
+    - group_name: "pr-e-internal_sc1uxprndb001-vip"
+      description: "pr-e-internal_sc1uxprndb001-vip"
+      ip_addr_list:
+        - "10.120.99.53"
+
+    - group_name: "pr-e-internal_sc1uxprndb002"
+      description: "pr-e-internal_sc1uxprndb002"
+      ip_addr_list:
+        - "10.120.99.42"
+
+    - group_name: "pr-e-internal_10-120-99-151"
+      description: "pr-e-internal_10-120-99-151"
+      ip_addr_list:
+        - "10.120.99.151"
+
+    - group_name: "pr-e-internal_10-120-99-152"
+      description: "pr-e-internal_10-120-99-152"
+      ip_addr_list:
+        - "10.120.99.152"
+
+    - group_name: "pr-e-internal_vmc-retail-production-vsphere-mgmt"
+      description: "pr-e-internal_vmc-retail-production-vsphere-mgmt"
+      ip_addr_list:
+        - "10.126.32.0/20"
+
+    - group_name: "pr-e-internal_vmc-retail-production-10-233-0-0s24"
+      description: "pr-e-internal_vmc-retail-production-10-233-0-0s24"
+      ip_addr_list:
+        - "10.233.0.0/24"
+
+    - group_name: "pr-e-internal_vmc-retail-production-services-mgmt"
+      description: "pr-e-internal_vmc-retail-production-services-mgmt"
+      ip_addr_list:
+        - "10.156.1.0/25"
+
+    - group_name: "pr-e-internal_10-180-46-40"
+      description: "pr-e-internal_10-180-46-40"
+      ip_addr_list:
+        - "10.180.46.40"
+
+    - group_name: "pr-e-internal_10-180-46-41"
+      description: "pr-e-internal_10-180-46-41"
+      ip_addr_list:
+        - "10.180.46.41"
+
+    - group_name: "pr-e-internal_10-180-46-42"
+      description: "pr-e-internal_10-180-46-42"
+      ip_addr_list:
+        - "10.180.46.42"
+
+    - group_name: "pr-e-internal_10-180-46-43"
+      description: "pr-e-internal_10-180-46-43"
+      ip_addr_list:
+        - "10.180.46.43"
+
+    - group_name: "pr-e-internal_10-180-46-44"
+      description: "pr-e-internal_10-180-46-44"
+      ip_addr_list:
+        - "10.180.46.44"
+
+    - group_name: "pr-e-internal_10-180-46-45"
+      description: "pr-e-internal_10-180-46-45"
+      ip_addr_list:
+        - "10.180.46.45"
+
+    - group_name: "pr-e-internal_10-180-46-46"
+      description: "pr-e-internal_10-180-46-46"
+      ip_addr_list:
+        - "10.180.46.46"
+
+    - group_name: "pr-e-internal_10-180-46-47"
+      description: "pr-e-internal_10-180-46-47"
+      ip_addr_list:
+        - "10.180.46.47"
+
+    - group_name: "pr-e-internal_10-180-46-48"
+      description: "pr-e-internal_10-180-46-48"
+      ip_addr_list:
+        - "10.180.46.48"
+
+    - group_name: "pr-e-internal_10-180-46-49"
+      description: "pr-e-internal_10-180-46-49"
+      ip_addr_list:
+        - "10.180.46.49"
+
+    - group_name: "pr-e-internal_10-180-46-50"
+      description: "pr-e-internal_10-180-46-50"
+      ip_addr_list:
+        - "10.180.46.50"
+
+    - group_name: "pr-e-internal_10-180-46-51"
+      description: "pr-e-internal_10-180-46-51"
+      ip_addr_list:
+        - "10.180.46.51"
+
+    - group_name: "pr-e-internal_10-180-46-52"
+      description: "pr-e-internal_10-180-46-52"
+      ip_addr_list:
+        - "10.180.46.52"
+
+    - group_name: "pr-e-internal_10-180-46-53"
+      description: "pr-e-internal_10-180-46-53"
+      ip_addr_list:
+        - "10.180.46.53"
+
+    - group_name: "pr-e-internal_10-180-46-54"
+      description: "pr-e-internal_10-180-46-54"
+      ip_addr_list:
+        - "10.180.46.54"
+
+    - group_name: "pr-e-internal_10-180-46-55"
+      description: "pr-e-internal_10-180-46-55"
+      ip_addr_list:
+        - "10.180.46.55"
+
+    - group_name: "pr-e-internal_10-180-46-56"
+      description: "pr-e-internal_10-180-46-56"
+      ip_addr_list:
+        - "10.180.46.56"
+
+    - group_name: "pr-e-internal_10-180-46-57"
+      description: "pr-e-internal_10-180-46-57"
+      ip_addr_list:
+        - "10.180.46.57"
+
+    - group_name: "pr-e-internal_10-180-46-58"
+      description: "pr-e-internal_10-180-46-58"
+      ip_addr_list:
+        - "10.180.46.58"
+
+    - group_name: "pr-e-internal_10-180-46-59"
+      description: "pr-e-internal_10-180-46-59"
+      ip_addr_list:
+        - "10.180.46.59"
+
+    - group_name: "pr-e-internal_10-112-46-40"
+      description: "pr-e-internal_10-112-46-40"
+      ip_addr_list:
+        - "10.112.46.40"
+
+    - group_name: "pr-e-internal_10-112-46-41"
+      description: "pr-e-internal_10-112-46-41"
+      ip_addr_list:
+        - "10.112.46.41"
+
+    - group_name: "pr-e-internal_10-112-46-42"
+      description: "pr-e-internal_10-112-46-42"
+      ip_addr_list:
+        - "10.112.46.42"
+
+    - group_name: "pr-e-internal_10-112-46-43"
+      description: "pr-e-internal_10-112-46-43"
+      ip_addr_list:
+        - "10.112.46.43"
+
+    - group_name: "pr-e-internal_10-112-46-44"
+      description: "pr-e-internal_10-112-46-44"
+      ip_addr_list:
+        - "10.112.46.44"
+
+    - group_name: "pr-e-internal_10-112-46-45"
+      description: "pr-e-internal_10-112-46-45"
+      ip_addr_list:
+        - "10.112.46.45"
+
+    - group_name: "pr-e-internal_10-112-46-46"
+      description: "pr-e-internal_10-112-46-46"
+      ip_addr_list:
+        - "10.112.46.46"
+
+    - group_name: "pr-e-internal_10-112-46-47"
+      description: "pr-e-internal_10-112-46-47"
+      ip_addr_list:
+        - "10.112.46.47"
+
+    - group_name: "pr-e-internal_10-112-46-48"
+      description: "pr-e-internal_10-112-46-48"
+      ip_addr_list:
+        - "10.112.46.48"
+
+    - group_name: "pr-e-internal_10-112-46-49"
+      description: "pr-e-internal_10-112-46-49"
+      ip_addr_list:
+        - "10.112.46.49"
+
+    - group_name: "pr-e-internal_10-112-46-50"
+      description: "pr-e-internal_10-112-46-50"
+      ip_addr_list:
+        - "10.112.46.50"
+
+    - group_name: "pr-e-internal_10-112-46-51"
+      description: "pr-e-internal_10-112-46-51"
+      ip_addr_list:
+        - "10.112.46.51"
+
+    - group_name: "pr-e-internal_10-112-46-52"
+      description: "pr-e-internal_10-112-46-52"
+      ip_addr_list:
+        - "10.112.46.52"
+
+    - group_name: "pr-e-internal_10-112-46-53"
+      description: "pr-e-internal_10-112-46-53"
+      ip_addr_list:
+        - "10.112.46.53"
+
+    - group_name: "pr-e-internal_10-112-46-54"
+      description: "pr-e-internal_10-112-46-54"
+      ip_addr_list:
+        - "10.112.46.54"
+
+    - group_name: "pr-e-internal_10-112-46-55"
+      description: "pr-e-internal_10-112-46-55"
+      ip_addr_list:
+        - "10.112.46.55"
+
+    - group_name: "pr-e-internal_10-112-46-56"
+      description: "pr-e-internal_10-112-46-56"
+      ip_addr_list:
+        - "10.112.46.56"
+
+    - group_name: "pr-e-internal_10-112-46-57"
+      description: "pr-e-internal_10-112-46-57"
+      ip_addr_list:
+        - "10.112.46.57"
+
+    - group_name: "pr-e-internal_10-112-46-58"
+      description: "pr-e-internal_10-112-46-58"
+      ip_addr_list:
+        - "10.112.46.58"
+
+    - group_name: "pr-e-internal_10-112-46-59"
+      description: "pr-e-internal_10-112-46-59"
+      ip_addr_list:
+        - "10.112.46.59"
+
+    - group_name: "pr-e-internal_10-120-77-40"
+      description: "pr-e-internal_10-120-77-40"
+      ip_addr_list:
+        - "10.120.77.40"
+
+    - group_name: "pr-e-internal_10-120-77-41"
+      description: "pr-e-internal_10-120-77-41"
+      ip_addr_list:
+        - "10.120.77.41"
+
+    - group_name: "pr-e-internal_10-120-77-42"
+      description: "pr-e-internal_10-120-77-42"
+      ip_addr_list:
+        - "10.120.77.42"
+
+    - group_name: "pr-e-internal_10-120-77-43"
+      description: "pr-e-internal_10-120-77-43"
+      ip_addr_list:
+        - "10.120.77.43"
+
+    - group_name: "pr-e-internal_10-120-77-44"
+      description: "pr-e-internal_10-120-77-44"
+      ip_addr_list:
+        - "10.120.77.44"
+
+    - group_name: "pr-e-internal_10-120-77-45"
+      description: "pr-e-internal_10-120-77-45"
+      ip_addr_list:
+        - "10.120.77.45"
+
+    - group_name: "pr-e-internal_10-120-77-46"
+      description: "pr-e-internal_10-120-77-46"
+      ip_addr_list:
+        - "10.120.77.46"
+
+    - group_name: "pr-e-internal_10-120-77-47"
+      description: "pr-e-internal_10-120-77-47"
+      ip_addr_list:
+        - "10.120.77.47"
+
+    - group_name: "pr-e-internal_10-120-77-48"
+      description: "pr-e-internal_10-120-77-48"
+      ip_addr_list:
+        - "10.120.77.48"
+
+    - group_name: "pr-e-internal_10-120-77-49"
+      description: "pr-e-internal_10-120-77-49"
+      ip_addr_list:
+        - "10.120.77.49"
+
+    - group_name: "pr-e-internal_10-120-77-50"
+      description: "pr-e-internal_10-120-77-50"
+      ip_addr_list:
+        - "10.120.77.50"
+
+    - group_name: "pr-e-internal_10-120-77-51"
+      description: "pr-e-internal_10-120-77-51"
+      ip_addr_list:
+        - "10.120.77.51"
+
+    - group_name: "pr-e-internal_10-120-77-52"
+      description: "pr-e-internal_10-120-77-52"
+      ip_addr_list:
+        - "10.120.77.52"
+
+    - group_name: "pr-e-internal_10-120-77-53"
+      description: "pr-e-internal_10-120-77-53"
+      ip_addr_list:
+        - "10.120.77.53"
+
+    - group_name: "pr-e-internal_10-120-77-54"
+      description: "pr-e-internal_10-120-77-54"
+      ip_addr_list:
+        - "10.120.77.54"
+
+    - group_name: "pr-e-internal_10-120-77-55"
+      description: "pr-e-internal_10-120-77-55"
+      ip_addr_list:
+        - "10.120.77.55"
+
+    - group_name: "pr-e-internal_10-120-77-56"
+      description: "pr-e-internal_10-120-77-56"
+      ip_addr_list:
+        - "10.120.77.56"
+
+    - group_name: "pr-e-internal_10-120-77-57"
+      description: "pr-e-internal_10-120-77-57"
+      ip_addr_list:
+        - "10.120.77.57"
+
+    - group_name: "pr-e-internal_10-120-77-58"
+      description: "pr-e-internal_10-120-77-58"
+      ip_addr_list:
+        - "10.120.77.58"
+
+    - group_name: "pr-e-internal_10-120-77-59"
+      description: "pr-e-internal_10-120-77-59"
+      ip_addr_list:
+        - "10.120.77.59"
+
+    - group_name: "pr-e-internal_10-120-46-40"
+      description: "pr-e-internal_10-120-46-40"
+      ip_addr_list:
+        - "10.120.46.40"
+
+    - group_name: "pr-e-internal_10-120-46-41"
+      description: "pr-e-internal_10-120-46-41"
+      ip_addr_list:
+        - "10.120.46.41"
+
+    - group_name: "pr-e-internal_10-120-46-42"
+      description: "pr-e-internal_10-120-46-42"
+      ip_addr_list:
+        - "10.120.46.42"
+
+    - group_name: "pr-e-internal_10-120-46-43"
+      description: "pr-e-internal_10-120-46-43"
+      ip_addr_list:
+        - "10.120.46.43"
+
+    - group_name: "pr-e-internal_10-120-46-44"
+      description: "pr-e-internal_10-120-46-44"
+      ip_addr_list:
+        - "10.120.46.44"
+
+    - group_name: "pr-e-internal_10-120-46-45"
+      description: "pr-e-internal_10-120-46-45"
+      ip_addr_list:
+        - "10.120.46.45"
+
+    - group_name: "pr-e-internal_10-120-46-46"
+      description: "pr-e-internal_10-120-46-46"
+      ip_addr_list:
+        - "10.120.46.46"
+
+    - group_name: "pr-e-internal_10-120-46-47"
+      description: "pr-e-internal_10-120-46-47"
+      ip_addr_list:
+        - "10.120.46.47"
+
+    - group_name: "pr-e-internal_10-120-46-48"
+      description: "pr-e-internal_10-120-46-48"
+      ip_addr_list:
+        - "10.120.46.48"
+
+    - group_name: "pr-e-internal_10-120-46-49"
+      description: "pr-e-internal_10-120-46-49"
+      ip_addr_list:
+        - "10.120.46.49"
+
+    - group_name: "pr-e-internal_10-120-46-50"
+      description: "pr-e-internal_10-120-46-50"
+      ip_addr_list:
+        - "10.120.46.50"
+
+    - group_name: "pr-e-internal_10-120-46-51"
+      description: "pr-e-internal_10-120-46-51"
+      ip_addr_list:
+        - "10.120.46.51"
+
+    - group_name: "pr-e-internal_10-120-46-52"
+      description: "pr-e-internal_10-120-46-52"
+      ip_addr_list:
+        - "10.120.46.52"
+
+    - group_name: "pr-e-internal_10-120-46-53"
+      description: "pr-e-internal_10-120-46-53"
+      ip_addr_list:
+        - "10.120.46.53"
+
+    - group_name: "pr-e-internal_10-120-46-54"
+      description: "pr-e-internal_10-120-46-54"
+      ip_addr_list:
+        - "10.120.46.54"
+
+    - group_name: "pr-e-internal_10-120-46-55"
+      description: "pr-e-internal_10-120-46-55"
+      ip_addr_list:
+        - "10.120.46.55"
+
+    - group_name: "pr-e-internal_10-120-46-56"
+      description: "pr-e-internal_10-120-46-56"
+      ip_addr_list:
+        - "10.120.46.56"
+
+    - group_name: "pr-e-internal_10-120-46-57"
+      description: "pr-e-internal_10-120-46-57"
+      ip_addr_list:
+        - "10.120.46.57"
+
+    - group_name: "pr-e-internal_10-120-46-58"
+      description: "pr-e-internal_10-120-46-58"
+      ip_addr_list:
+        - "10.120.46.58"
+
+    - group_name: "pr-e-internal_10-120-46-59"
+      description: "pr-e-internal_10-120-46-59"
+      ip_addr_list:
+        - "10.120.46.59"
+
+    - group_name: "pr-e-internal_sc1uxprcmg01"
+      description: "pr-e-internal_sc1uxprcmg01"
+      ip_addr_list:
+        - "10.120.131.181"
+
+    - group_name: "pr-e-internal_sc1uxprcmg02"
+      description: "pr-e-internal_sc1uxprcmg02"
+      ip_addr_list:
+        - "10.120.131.182"
+
+    - group_name: "pr-e-internal_sccadcrprapi03-prod-williamhill-plc"
+      description: "pr-e-internal_sccadcrprapi03-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.172.5"
+
+    - group_name: "pr-e-internal_sc1prdadcextapi01-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcextapi01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.7.11"
+
+    - group_name: "pr-e-internal_sc1prdadcextapi02-prod-williamhill-plc"
+      description: "pr-e-internal_sc1prdadcextapi02-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.7.12"
+
+    - group_name: "pr-e-internal_uk-brs-er01-lo0"
+      description: "pr-e-internal_uk-brs-er01-lo0"
+      ip_addr_list:
+        - "141.138.129.82"
+
+    - group_name: "pr-e-internal_uk-brs-er02-lo0"
+      description: "pr-e-internal_uk-brs-er02-lo0"
+      ip_addr_list:
+        - "141.138.129.81"
+
+    - group_name: "pr-e-internal_uk-sc1-es01-vl20"
+      description: "pr-e-internal_uk-sc1-es01-vl20"
+      ip_addr_list:
+        - "141.138.128.34"
+
+    - group_name: "pr-e-internal_uk-sc1-es02-vl20"
+      description: "pr-e-internal_uk-sc1-es02-vl20"
+      ip_addr_list:
+        - "141.138.128.35"
+
+    - group_name: "pr-e-internal_uk-stj-ar01-lo0"
+      description: "pr-e-internal_uk-stj-ar01-lo0"
+      ip_addr_list:
+        - "10.99.253.25"
+
+    - group_name: "pr-e-internal_uk-stj-ar02-lo0"
+      description: "pr-e-internal_uk-stj-ar02-lo0"
+      ip_addr_list:
+        - "10.99.253.26"
+
+###OBJECT_GROUPS###
+
+  object_groups:
+    - group_name: "pr-e-internal_grp_grp-orion-app-srvs"
+      description: "pr-e-internal_grp_grp-orion-app-srvs"
+      sub_group_list:
+        - "pr-e-internal_sc1wnpremn74-prod-williamhill-plc"
+        - "pr-e-internal_sc1wnpremn75-prod-williamhill-plc"
+        - "pr-e-internal_sc1wnpremn77-prod-williamhill-plc"
+        - "pr-e-internal_sc1wnpremn78-prod-williamhill-plc"
+        - "pr-e-internal_ld6wnpremn74-prod-williamhill-plc"
+        - "pr-e-internal_ld6wnpremn75-prod-williamhill-plc"
+        - "pr-e-internal_ld6wnpremn77-prod-williamhill-plc"
+        - "pr-e-internal_ld6wnpremn78-prod-williamhill-plc"
+        - "pr-e-internal_ld6wnpremn79-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_net-obj-g-solarwinds-destinations"
+      description: "CHG0138766,CHG0140021"
+      sub_group_list:
+        - "pr-e-internal_gib-cp-ext-1"
+        - "pr-e-internal_ip_10-120-193-132"
+        - "pr-e-internal_ip_10-3-0-0s24"
+        - "pr-e-internal_ip_10-3-1-0s24"
+        - "pr-e-internal_ip_10-3-99-0s24"
+        - "pr-e-internal_ip_10-53-99-0s24"
+        - "pr-e-internal_ip_10-53-113-0s24"
+        - "pr-e-internal_ip_10-54-99-0s24"
+        - "pr-e-internal_ip_10-180-129-0s24"
+        - "pr-e-internal_ip_10-180-159-0s24"
+        - "pr-e-internal_ip_10-1-152-0s23"
+        - "pr-e-internal_ip_10-112-12-0s24"
+        - "pr-e-internal_ip_10-210-129-0s24"
+        - "pr-e-internal_ip_10-210-159-0s27"
+        - "pr-e-internal_ip_10-210-164-192s27"
+        - "pr-e-internal_ip_10-210-194-64s26"
+        - "pr-e-internal_ip_10-210-194-192s26"
+        - "pr-e-internal_ip_192-168-10-0s24"
+        - "pr-e-internal_ip_10-120-129-0s24"
+        - "pr-e-internal_ip_10-120-159-0s27"
+        - "pr-e-internal_ip_10-120-159-96s27"
+        - "pr-e-internal_ip_10-120-194-0s24"
+        - "pr-e-internal_ip_10-55-99-0s24"
+        - "pr-e-internal_ip_10-93-0-0s16"
+        - "pr-e-internal_ip_10-94-0-0s16"
+        - "pr-e-internal_ip_10-95-0-0s16"
+        - "pr-e-internal_ip_10-96-0-0s16"
+        - "pr-e-internal_ip_10-123-14-0s24"
+        - "pr-e-internal_ip_10-123-142-0s24"
+        - "pr-e-internal_ip_10-123-206-0s24"
+        - "pr-e-internal_ip_10-99-239-224s27"
+        - "pr-e-internal_ip_10-1-99-0s24"
+        - "pr-e-internal_ip_10-56-99-0s24"
+        - "pr-e-internal_ip_10-128-129-0s24"
+        - "pr-e-internal_ip_10-1-98-0s24"
+        - "pr-e-internal_ip_10-112-129-0s24"
+        - "pr-e-internal_ip_10-99-253-0s24"
+        - "pr-e-internal_ip_10-99-254-0s24"
+        - "pr-e-internal_ip_10-19-0-96s27"
+        - "pr-e-internal_ip_10-1-36-0s24"
+        - "pr-e-internal_ip_10-130-129-0s24"
+        - "pr-e-internal_ip_10-120-160-0s23"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_26"
+      description: "pr-e-internal_grp_scc-migrated_network_26"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-46-30"
+        - "pr-e-internal_ip_10-120-46-31"
+        - "pr-e-internal_ip_10-120-46-32"
+    - group_name: "pr-e-internal_grp_rundeck-app-servers"
+      description: "CHG0141604"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpreap237_ip_10-120-163-237"
+        - "pr-e-internal_sc1uxpreap238_ip_10-120-163-238"
+        - "pr-e-internal_sc1uxpreap239_ip_10-120-163-239"
+    - group_name: "pr-e-internal_grp_aws-retail-prod-vpc"
+      description: "CHG0141604"
+      sub_group_list:
+        - "pr-e-internal_aws-retail-prod-1"
+        - "pr-e-internal_aws-retail-prod-2"
+        - "pr-e-internal_aws-retail-prod-3"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_27"
+      description: "pr-e-internal_grp_scc-migrated_network_27"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-163-237"
+        - "pr-e-internal_ip_10-120-163-238"
+        - "pr-e-internal_ip_10-120-163-239"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_28"
+      description: "pr-e-internal_grp_scc-migrated_network_28"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-180-67"
+        - "pr-e-internal_ip_10-212-180-138"
+        - "pr-e-internal_ip_10-214-180-138"
+    - group_name: "pr-e-internal_grp_rundeck-primary-cluster"
+      description: "pr-e-internal_grp_rundeck-primary-cluster"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpreap237_ip_10-120-163-237"
+        - "pr-e-internal_sc1uxpreap238_ip_10-120-163-238"
+        - "pr-e-internal_sc1uxpreap239_ip_10-120-163-239"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_14"
+      description: "pr-e-internal_grp_scc-migrated_network_14"
+      sub_group_list:
+        - "pr-e-internal_zoltan-brs-pp1-williamhill-plc"
+        - "pr-e-internal_zoltan-brs-pp2-williamhill-plc"
+        - "pr-e-internal_zoltan-brs-pp3-williamhill-plc"
+        - "pr-e-internal_zoltan-brs-prod-williamhill-plc"
+        - "pr-e-internal_zoltan-gib-prod-williamhill-plc"
+        - "pr-e-internal_zoltan-sc1-prod-williamhill-plc"
+        - "pr-e-internal_zoltan-brs-cxp-williamhill-plc"
+    - group_name: "pr-e-internal_grp_skybox-appliances"
+      description: "CHG0121057"
+      sub_group_list:
+        - "pr-e-internal_sc1appresc02"
+        - "pr-e-internal_sc1appresc03"
+    - group_name: "pr-e-internal_grp_skybox-clients"
+      description: "CHG0134971"
+      sub_group_list:
+        - "pr-e-internal_ld6pteadcint01"
+        - "pr-e-internal_ld6pteadcapi02"
+        - "pr-e-internal_ld6pteadcapi01"
+        - "pr-e-internal_ld6pteadcint02"
+        - "pr-e-internal_ld6pteadcextapi01"
+        - "pr-e-internal_ld6pteadcextapi02"
+        - "pr-e-internal_sc1invadcint01"
+        - "pr-e-internal_sc1invadcint02"
+        - "pr-e-internal_sc1invadcapi01"
+        - "pr-e-internal_sc1invadcapi02"
+        - "pr-e-internal_sc1invadcext01"
+        - "pr-e-internal_sc1invadcext02"
+        - "pr-e-internal_pp1adcapi01"
+        - "pr-e-internal_pp1adcapi02"
+        - "pr-e-internal_brspp1adcextapi01"
+        - "pr-e-internal_pp2adcint01"
+        - "pr-e-internal_pp2adcapi01"
+        - "pr-e-internal_brspp2adcextapi01"
+        - "pr-e-internal_pp3adcint01"
+        - "pr-e-internal_pp3adcapi01"
+        - "pr-e-internal_brsprdadcint01"
+        - "pr-e-internal_brsprdadcint02"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_36"
+      description: "pr-e-internal_grp_scc-migrated_network_36"
+      sub_group_list:
+        - "pr-e-internal_gibuxpredb01"
+        - "pr-e-internal_grp_grp-sql-servers"
+        - "pr-e-internal_grp_grp-trs-db-servers"
+        - "pr-e-internal_grp_grp-liability-viewer-servers"
+        - "pr-e-internal_grp_grp-oscar-db-servers"
+        - "pr-e-internal_grp_grp-bingo-db-servers"
+        - "pr-e-internal_grp_grp-shopdiary-db-servers"
+        - "pr-e-internal_grp_mysqlenterprisemonitor"
+        - "pr-e-internal_grp_grp-scc-mars-mysql-svrs"
+        - "pr-e-internal_grp_grp-scc-mars-db-servers"
+    - group_name: "pr-e-internal_grp_isilon-storage-svrs"
+      description: "pr-e-internal_grp_isilon-storage-svrs"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-46-10"
+        - "pr-e-internal_ip_10-120-46-11"
+        - "pr-e-internal_ip_10-120-46-12"
+        - "pr-e-internal_ip_10-120-46-13"
+        - "pr-e-internal_ip_10-120-46-14"
+        - "pr-e-internal_ip_10-120-46-15"
+        - "pr-e-internal_ip_10-120-46-16"
+        - "pr-e-internal_ip_10-120-46-17"
+        - "pr-e-internal_ip_10-120-46-18"
+        - "pr-e-internal_ip_10-120-46-19"
+    - group_name: "pr-e-internal_grp_pure-storage-svrs"
+      description: "pr-e-internal_grp_pure-storage-svrs"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-143-172"
+        - "pr-e-internal_ip_10-120-143-173"
+        - "pr-e-internal_ip_10-120-143-182"
+        - "pr-e-internal_ip_10-120-143-183"
+    - group_name: "pr-e-internal_grp_tufin-endpoints"
+      description: "pr-e-internal_grp_tufin-endpoints"
+      sub_group_list:
+        - "pr-e-internal_ip_10-1-130-36"
+        - "pr-e-internal_ip_10-1-130-50"
+        - "pr-e-internal_ip_10-1-99-220"
+        - "pr-e-internal_ip_10-120-129-220"
+        - "pr-e-internal_ip_10-120-129-4"
+        - "pr-e-internal_ip_10-120-129-5"
+        - "pr-e-internal_ip_10-120-160-68"
+        - "pr-e-internal_ip_10-120-161-97"
+        - "pr-e-internal_ip_10-92-100-13"
+        - "pr-e-internal_ip_10-92-100-1"
+        - "pr-e-internal_ip_10-92-100-5"
+        - "pr-e-internal_ip_10-92-100-9"
+        - "pr-e-internal_ip_10-99-253-31"
+        - "pr-e-internal_ip_10-99-253-41"
+        - "pr-e-internal_ip_10-120-129-19"
+        - "pr-e-internal_ip_10-120-193-132"
+    - group_name: "pr-e-internal_grp_retail-liability-svrs"
+      description: "pr-e-internal_grp_retail-liability-svrs"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-177-37"
+        - "pr-e-internal_ip_10-120-180-101"
+        - "pr-e-internal_ip_10-120-180-102"
+        - "pr-e-internal_ip_10-120-180-103"
+        - "pr-e-internal_ip_10-120-180-104"
+        - "pr-e-internal_ip_10-120-180-133"
+        - "pr-e-internal_ip_10-120-180-134"
+        - "pr-e-internal_ip_10-120-180-135"
+        - "pr-e-internal_ip_10-120-180-136"
+        - "pr-e-internal_ip_10-120-180-81"
+        - "pr-e-internal_ip_10-120-180-82"
+        - "pr-e-internal_ip_10-120-180-83"
+        - "pr-e-internal_ip_10-120-180-84"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_41"
+      description: "pr-e-internal_grp_scc-migrated_network_41"
+      sub_group_list:
+        - "pr-e-internal_ld6wnprbkcs01"
+        - "pr-e-internal_sc1uxprbkcs01"
+        - "pr-e-internal_gibx9002"
+    - group_name: "pr-e-internal_grp_puppet-master-db"
+      description: "CHG0115562"
+      sub_group_list:
+        - "pr-e-internal_ip_10-1-28-102"
+        - "pr-e-internal_ip_10-1-28-26"
+        - "pr-e-internal_ip_10-112-13-1"
+        - "pr-e-internal_ip_10-180-163-97"
+        - "pr-e-internal_ip_10-210-163-101"
+        - "pr-e-internal_ip_10-211-163-101"
+        - "pr-e-internal_ip_10-213-163-101"
+        - "pr-e-internal_ip_10-215-163-101"
+    - group_name: "pr-e-internal_grp_netbrain-destinations"
+      description: "pr-e-internal_grp_netbrain-destinations"
+      sub_group_list:
+        - "pr-e-internal_ip_10-1-105-0s24"
+        - "pr-e-internal_ip_10-1-84-0s24"
+        - "pr-e-internal_ip_10-1-98-0s24"
+        - "pr-e-internal_ip_10-1-99-0s24"
+        - "pr-e-internal_ip_10-120-129-0s24"
+        - "pr-e-internal_ip_10-120-194-0s24"
+        - "pr-e-internal_ip_10-120-32-0s24"
+        - "pr-e-internal_ip_10-123-14-0s24"
+        - "pr-e-internal_ip_10-123-140-0s24"
+        - "pr-e-internal_ip_10-123-142-0s24"
+        - "pr-e-internal_ip_10-123-206-0s24"
+        - "pr-e-internal_ip_10-180-129-0s24"
+        - "pr-e-internal_ip_10-210-159-0s24"
+        - "pr-e-internal_ip_10-3-99-0s24"
+        - "pr-e-internal_ip_10-53-99-0s24"
+        - "pr-e-internal_ip_10-55-99-0s24"
+        - "pr-e-internal_ip_10-56-100-0s24"
+        - "pr-e-internal_ip_10-56-99-0s24"
+        - "pr-e-internal_ip_10-92-0-0s16"
+        - "pr-e-internal_ip_10-99-253-0s24"
+        - "pr-e-internal_ip_10-99-254-0s24"
+        - "pr-e-internal_ip_192-168-10-0s24"
+        - "pr-e-internal_ip_192-168-9-0s24"
+        - "pr-e-internal_ip_10-120-159-0s27"
+        - "pr-e-internal_ip_10-180-159-0s27"
+        - "pr-e-internal_ip_10-210-159-0s27"
+    - group_name: "pr-e-internal_grp_rfc1918networks"
+      description: "pr-e-internal_grp_rfc1918networks"
+      sub_group_list:
+        - "pr-e-internal_net-10-0-0-0_255-0-0-0"
+        - "pr-e-internal_net-172-16-0-0_255-240-0-0"
+        - "pr-e-internal_net-192-168-0-0_255-255-0-0"
+    - group_name: "pr-e-internal_grp_ca-hub-servers-scc"
+      description: "pr-e-internal_grp_ca-hub-servers-scc"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpremn137-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_ca-hub-clients-aws"
+      description: "pr-e-internal_grp_ca-hub-clients-aws"
+      sub_group_list:
+        - "pr-e-internal_am1xuim01col001-am1-williamhill-plc"
+        - "pr-e-internal_am1xuim01col002-am1-williamhill-plc"
+        - "pr-e-internal_njpxuim01col001"
+        - "pr-e-internal_njpxuim01col002"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_51"
+      description: "pr-e-internal_grp_scc-migrated_network_51"
+      sub_group_list:
+        - "pr-e-internal_aws-ssn-mgmt"
+        - "pr-e-internal_aws-ssp-mgmt"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_54"
+      description: "pr-e-internal_grp_scc-migrated_network_54"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-163-155"
+        - "pr-e-internal_ip_10-120-163-156"
+        - "pr-e-internal_ip_10-120-163-157"
+        - "pr-e-internal_ip_10-120-163-158"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_55"
+      description: "pr-e-internal_grp_scc-migrated_network_55"
+      sub_group_list:
+        - "pr-e-internal_ip_10-112-12-104"
+        - "pr-e-internal_ip_10-112-12-105"
+        - "pr-e-internal_ip_10-112-12-106"
+        - "pr-e-internal_ip_10-112-12-107"
+        - "pr-e-internal_ip_10-112-12-108"
+        - "pr-e-internal_ip_10-112-12-109"
+        - "pr-e-internal_ip_10-120-163-209"
+        - "pr-e-internal_ip_10-120-163-43"
+        - "pr-e-internal_ip_10-180-163-38"
+        - "pr-e-internal_ip_10-180-163-39"
+        - "pr-e-internal_ip_10-180-163-45"
+        - "pr-e-internal_ip_10-180-163-46"
+        - "pr-e-internal_ip_10-180-163-51"
+        - "pr-e-internal_ip_10-180-163-52"
+        - "pr-e-internal_ip_100-100-2-208"
+        - "pr-e-internal_ip_100-100-2-55"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_88"
+      description: "pr-e-internal_grp_scc-migrated_network_88"
+      sub_group_list:
+        - "pr-e-internal_10-120-163-31"
+        - "pr-e-internal_10-120-163-32"
+        - "pr-e-internal_10-120-163-33"
+        - "pr-e-internal_10-120-163-34"
+        - "pr-e-internal_ip_10-120-163-35"
+    - group_name: "pr-e-internal_grp_apache-servers"
+      description: "pr-e-internal_grp_apache-servers"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-170-100"
+        - "pr-e-internal_ip_10-120-173-100"
+        - "pr-e-internal_ip_10-120-180-101"
+        - "pr-e-internal_ip_10-120-180-102"
+        - "pr-e-internal_ip_10-120-180-103"
+        - "pr-e-internal_ip_10-120-180-104"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_91"
+      description: "pr-e-internal_grp_scc-migrated_network_91"
+      sub_group_list:
+        - "pr-e-internal_10-120-163-31"
+        - "pr-e-internal_10-120-163-32"
+        - "pr-e-internal_10-120-163-33"
+        - "pr-e-internal_10-120-163-34"
+        - "pr-e-internal_ip_10-120-163-35"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_92"
+      description: "pr-e-internal_grp_scc-migrated_network_92"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-177-38"
+        - "pr-e-internal_ip_10-120-177-39"
+    - group_name: "pr-e-internal_grp_wh-border-devices"
+      description: "pr-e-internal_grp_wh-border-devices"
+      sub_group_list:
+        - "pr-e-internal_gi-mpl-es01-vl20"
+        - "pr-e-internal_gi-mpl-es02-vl20"
+        - "pr-e-internal_uk-brs-es01-vl20"
+        - "pr-e-internal_uk-brs-es02-vl20"
+        - "pr-e-internal_uk-ld6-es01-vl20"
+        - "pr-e-internal_uk-ld6-es02-vl20"
+        - "pr-e-internal_uk-sc1-es01"
+        - "pr-e-internal_uk-sc1-es02"
+    - group_name: "pr-e-internal_grp_us-subnets"
+      description: "CHG0129192"
+      sub_group_list:
+        - "pr-e-internal_10-174-104-0_24"
+        - "pr-e-internal_10-174-111-128_25"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_69"
+      description: "pr-e-internal_grp_scc-migrated_network_69"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpremn006"
+        - "pr-e-internal_ip_10-120-163-134"
+    - group_name: "pr-e-internal_grp_malta_pure_array"
+      description: "CHG0131597"
+      sub_group_list:
+        - "pr-e-internal_10-129-11-1"
+        - "pr-e-internal_10-129-11-2"
+        - "pr-e-internal_10-129-11-3"
+        - "pr-e-internal_10-129-11-4"
+        - "pr-e-internal_10-129-11-5"
+        - "pr-e-internal_10-129-11-6"
+        - "pr-e-internal_10-129-11-7"
+        - "pr-e-internal_10-129-11-8"
+    - group_name: "pr-e-internal_grp_athene-servers"
+      description: "pr-e-internal_grp_athene-servers"
+      sub_group_list:
+        - "pr-e-internal_sc1wnpremn20a"
+        - "pr-e-internal_sc1wnpremn21a"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_107"
+      description: "pr-e-internal_grp_scc-migrated_network_107"
+      sub_group_list:
+        - "pr-e-internal_ip_10-121-4-11"
+        - "pr-e-internal_ip_10-121-4-12"
+        - "pr-e-internal_ip_10-121-5-11"
+        - "pr-e-internal_ip_10-121-5-12"
+        - "pr-e-internal_grp_stingrays"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_106"
+      description: "pr-e-internal_grp_scc-migrated_network_106"
+      sub_group_list:
+        - "pr-e-internal_ip_10-121-10-110"
+        - "pr-e-internal_ip_10-121-10-115"
+        - "pr-e-internal_ip_10-121-4-205"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_130"
+      description: "pr-e-internal_grp_scc-migrated_network_130"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-163-18"
+        - "pr-e-internal_ip_10-120-163-27"
+        - "pr-e-internal_ip_10-120-163-49"
+        - "pr-e-internal_ip_10-120-163-74"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_84"
+      description: "pr-e-internal_grp_scc-migrated_network_84"
+      sub_group_list:
+        - "pr-e-internal_grp_brs-xiv"
+        - "pr-e-internal_grp_sc1-xiv"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_131"
+      description: "pr-e-internal_grp_scc-migrated_network_131"
+      sub_group_list:
+        - "pr-e-internal_tufin"
+        - "pr-e-internal_sc1uxpremn79"
+    - group_name: "pr-e-internal_grp_checkpoint-cma"
+      description: "CHG0065974"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-129-60"
+        - "pr-e-internal_ip_10-120-129-61"
+        - "pr-e-internal_ip_10-120-129-62"
+        - "pr-e-internal_ip_10-120-129-63"
+        - "pr-e-internal_ip_10-120-129-64"
+        - "pr-e-internal_ip_10-120-129-65"
+        - "pr-e-internal_ip_10-120-129-66"
+        - "pr-e-internal_ip_10-120-129-67"
+        - "pr-e-internal_ip_10-180-129-60"
+        - "pr-e-internal_ip_10-180-129-61"
+        - "pr-e-internal_ip_10-180-129-62"
+        - "pr-e-internal_ip_10-180-129-63"
+        - "pr-e-internal_ip_10-180-129-64"
+        - "pr-e-internal_ip_10-180-129-65"
+        - "pr-e-internal_ip_10-180-129-66"
+        - "pr-e-internal_ip_10-180-129-67"
+    - group_name: "pr-e-internal_grp_stingrays"
+      description: "CHG0141421"
+      sub_group_list:
+        - "pr-e-internal_sc1apprein04-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein05-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein06-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein07-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein08-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein09-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein10-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein11-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein12-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein13-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcclb01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcclb02-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcnlb01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcnlb02-prod-williamhill-plc"
+        - "pr-e-internal_sccadcrprapi01-prod-williamhill-plc"
+        - "pr-e-internal_sccadcrprapi02-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_whdpops01"
+      description: "pr-e-internal_grp_whdpops01"
+      sub_group_list:
+        - "pr-e-internal_10-120-100-82"
+        - "pr-e-internal_10-200-100-82"
+    - group_name: "pr-e-internal_grp_whdppresent01"
+      description: "pr-e-internal_grp_whdppresent01"
+      sub_group_list:
+        - "pr-e-internal_10-120-100-83"
+        - "pr-e-internal_10-200-100-83"
+    - group_name: "pr-e-internal_grp_whdpservices01"
+      description: "pr-e-internal_grp_whdpservices01"
+      sub_group_list:
+        - "pr-e-internal_10-120-100-84"
+        - "pr-e-internal_10-200-100-84"
+    - group_name: "pr-e-internal_grp_whdpservices"
+      description: "pr-e-internal_grp_whdpservices"
+      sub_group_list:
+        - "pr-e-internal_10-120-100-80"
+        - "pr-e-internal_10-200-100-80"
+    - group_name: "pr-e-internal_grp_sql-monitored-servers"
+      description: "pr-e-internal_grp_sql-monitored-servers"
+      sub_group_list:
+        - "pr-e-internal_brswndrndb003"
+        - "pr-e-internal_brswndrndb004"
+        - "pr-e-internal_brswnppndb002"
+        - "pr-e-internal_brswnppndb003"
+        - "pr-e-internal_sc1wnprgdb01"
+        - "pr-e-internal_sc1wnprgdb02"
+        - "pr-e-internal_sc1wnprgdb03"
+        - "pr-e-internal_sc1wnprndb003_ip_10-120-149-25"
+        - "pr-e-internal_sc1wnprndb004_ip_10-120-149-26"
+        - "pr-e-internal_sc1wnprndb005_ip_10-120-149-27"
+        - "pr-e-internal_sc1wnprndb006_ip_10-120-149-28"
+        - "pr-e-internal_sc1wnprrcs01"
+        - "pr-e-internal_sc1wnprrcs02"
+        - "pr-e-internal_sc1wnprrto02_ip_10-120-180-59"
+        - "pr-e-internal_sc1wnprrtp01"
+        - "pr-e-internal_gibwn400"
+        - "pr-e-internal_sc1wnprgdb05"
+        - "pr-e-internal_sc1wnprgdb05-vmc"
+        - "pr-e-internal_sc1wnprgdb06"
+        - "pr-e-internal_sc1wnprgdb06-vmc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc-vmc"
+    - group_name: "pr-e-internal_grp_sql-servers"
+      description: "pr-e-internal_grp_sql-servers"
+      sub_group_list:
+        - "pr-e-internal_sc1wnprgdb01"
+        - "pr-e-internal_sc1wnprgdb02"
+        - "pr-e-internal_sc1wnprrcs01"
+        - "pr-e-internal_sc1wnprrcs02"
+        - "pr-e-internal_sc1wnprrto02_ip_10-120-180-59"
+        - "pr-e-internal_sc1wnprrtp01"
+        - "pr-e-internal_sc1wnprgdb03"
+        - "pr-e-internal_sc1wnprndb004_ip_10-120-149-26"
+        - "pr-e-internal_sc1wnprndb003_ip_10-120-149-25"
+        - "pr-e-internal_sc1wnprndb005_ip_10-120-149-27"
+        - "pr-e-internal_sc1wnprndb006_ip_10-120-149-28"
+        - "pr-e-internal_sc1wnprgdb05_06"
+        - "pr-e-internal_sc1wnprgdb05"
+        - "pr-e-internal_sc1wnprgdb05-vmc"
+        - "pr-e-internal_sc1wnprgdb06"
+        - "pr-e-internal_sc1wnprgdb06-vmc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc-vmc"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_76"
+      description: "pr-e-internal_grp_scc-migrated_network_76"
+      sub_group_list:
+        - "pr-e-internal_ip_10-180-163-71"
+        - "pr-e-internal_ip_10-210-163-70"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_77"
+      description: "pr-e-internal_grp_scc-migrated_network_77"
+      sub_group_list:
+        - "pr-e-internal_sc1wnpremn74"
+        - "pr-e-internal_sc1wnpremn75"
+        - "pr-e-internal_sc1wnpremn77"
+        - "pr-e-internal_sc1wnpremn78"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_78"
+      description: "pr-e-internal_grp_scc-migrated_network_78"
+      sub_group_list:
+        - "pr-e-internal_ip_10-112-12-0s24"
+        - "pr-e-internal_ip_10-120-129-0s24"
+        - "pr-e-internal_ip_10-180-129-0s24"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_80"
+      description: "pr-e-internal_grp_scc-migrated_network_80"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-130-0s24"
+        - "pr-e-internal_ip_10-120-80-0s24"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_81"
+      description: "pr-e-internal_grp_scc-migrated_network_81"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-132-31"
+        - "pr-e-internal_ip_10-120-132-32"
+        - "pr-e-internal_ip_10-120-132-45"
+        - "pr-e-internal_ip_10-120-132-46"
+        - "pr-e-internal_ip_10-120-146-71"
+        - "pr-e-internal_ip_10-120-146-72"
+        - "pr-e-internal_ip_10-120-146-73"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_95"
+      description: "pr-e-internal_grp_scc-migrated_network_95"
+      sub_group_list:
+        - "pr-e-internal_10-180-143-171"
+        - "pr-e-internal_ip_10-120-143-171"
+        - "pr-e-internal_ip_10-210-143-171"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_139"
+      description: "pr-e-internal_grp_scc-migrated_network_139"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpremg30"
+        - "pr-e-internal_grp_ilo-nets"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_82"
+      description: "pr-e-internal_grp_scc-migrated_network_82"
+      sub_group_list:
+        - "pr-e-internal_ip_10-180-163-38"
+        - "pr-e-internal_ip_10-180-163-39"
+        - "pr-e-internal_ip_10-180-163-45"
+        - "pr-e-internal_ip_10-180-163-46"
+        - "pr-e-internal_ip_10-180-163-51"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_93"
+      description: "pr-e-internal_grp_scc-migrated_network_93"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-163-237"
+        - "pr-e-internal_ip_10-120-163-238"
+        - "pr-e-internal_ip_10-120-163-239"
+        - "pr-e-internal_ip_10-120-163-243"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_138"
+      description: "pr-e-internal_grp_scc-migrated_network_138"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-143-185"
+        - "pr-e-internal_ip_10-180-143-185"
+        - "pr-e-internal_ip_10-210-139-243"
+        - "pr-e-internal_ip_10-210-143-185"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_134"
+      description: "pr-e-internal_grp_scc-migrated_network_134"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-130-252"
+        - "pr-e-internal_ip_10-180-130-110"
+        - "pr-e-internal_ip_10-180-130-151"
+        - "pr-e-internal_ip_10-180-130-68"
+        - "pr-e-internal_ip_10-180-80-104"
+        - "pr-e-internal_ip_10-180-80-98"
+        - "pr-e-internal_ip_10-201-254-223"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_140"
+      description: "pr-e-internal_grp_scc-migrated_network_140"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpremg26"
+        - "pr-e-internal_ip_10-120-163-115"
+    - group_name: "pr-e-internal_grp_wily_svrs_scc"
+      description: "pr-e-internal_grp_wily_svrs_scc"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpremn105"
+        - "pr-e-internal_sc1uxpremn106"
+        - "pr-e-internal_sc1uxpremn107"
+        - "pr-e-internal_sc1uxpremn108"
+        - "pr-e-internal_sc1uxpremn120"
+        - "pr-e-internal_sc1uxpremn121"
+        - "pr-e-internal_ip_10-120-163-31"
+        - "pr-e-internal_ip_10-120-163-32"
+        - "pr-e-internal_ip_10-120-163-33"
+        - "pr-e-internal_ip_10-120-163-34"
+        - "pr-e-internal_ip_10-120-163-36"
+    - group_name: "pr-e-internal_grp_consul-hosts"
+      description: "pr-e-internal_grp_consul-hosts"
+      sub_group_list:
+        - "pr-e-internal_ip_10-121-10-79"
+        - "pr-e-internal_ip_10-121-10-81"
+        - "pr-e-internal_ip_10-121-10-82"
+        - "pr-e-internal_ip_10-121-10-83"
+        - "pr-e-internal_ip_10-121-10-84"
+    - group_name: "pr-e-internal_grp_vcenter"
+      description: "pr-e-internal_grp_vcenter"
+      sub_group_list:
+        - "pr-e-internal_brsppapvc01-group-williamhill-plc"
+        - "pr-e-internal_gibprapvc01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prapvc01-prod-williamhill-plc"
+        - "pr-e-internal_ld6prapvc01-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_master-rundeck-app-nodes"
+      description: "pr-e-internal_grp_master-rundeck-app-nodes"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpreap237_ip_10-120-163-237"
+        - "pr-e-internal_sc1uxpreap238_ip_10-120-163-238"
+        - "pr-e-internal_sc1uxpreap239_ip_10-120-163-239"
+    - group_name: "pr-e-internal_grp_scc-oracle-instances"
+      description: "pr-e-internal_grp_scc-oracle-instances"
+      sub_group_list:
+        - "pr-e-internal_sc1uxprgdb01"
+        - "pr-e-internal_sc1uxprgdb05"
+        - "pr-e-internal_sc1uxprodb001"
+        - "pr-e-internal_sc1uxprodb002"
+        - "pr-e-internal_sc1uxprtdb001"
+    - group_name: "pr-e-internal_grp_vmc-sddcs"
+      description: "pr-e-internal_grp_vmc-sddcs"
+      sub_group_list:
+        - "pr-e-internal_ip_10-156-5-0s24"
+        - "pr-e-internal_grp_vmc-sddc-retail-production"
+    - group_name: "pr-e-internal_grp_whgroup_ad_servers-chg0144834"
+      description: "pr-e-internal_grp_whgroup_ad_servers-chg0144834"
+      sub_group_list:
+        - "pr-e-internal_bfawnpredc01"
+        - "pr-e-internal_brswnpredc01"
+        - "pr-e-internal_brswnpredc02_ip_10-210-194-12"
+        - "pr-e-internal_brswnpredc03-chg0144834"
+        - "pr-e-internal_gibwnpredc02_ip_10-180-194-12"
+        - "pr-e-internal_gibwnpredc03_ip_10-180-194-13"
+        - "pr-e-internal_irewnprdc01"
+        - "pr-e-internal_irewnprdc02"
+        - "pr-e-internal_nvawnprdc01"
+        - "pr-e-internal_nvawnprdc02"
+        - "pr-e-internal_krawnpredc01"
+        - "pr-e-internal_krawnpredc02"
+        - "pr-e-internal_ld6wnpredc01-new"
+        - "pr-e-internal_ld6wnpredc02-new"
+        - "pr-e-internal_mnlwnpredc02_ip_10-123-197-11"
+        - "pr-e-internal_mnlwnpredc03"
+        - "pr-e-internal_sc1wnpredc01"
+        - "pr-e-internal_sc1wnpredc02"
+        - "pr-e-internal_sc1wnpredc03_ip_10-120-194-13"
+        - "pr-e-internal_sc1wnpredc04_ip_10-120-194-14"
+        - "pr-e-internal_sc1wnpredc05_ip_10-120-194-15"
+        - "pr-e-internal_sc1wnpredc08_ip_10-120-194-18"
+        - "pr-e-internal_sofwnpredc01"
+        - "pr-e-internal_sofwnpredc02"
+    - group_name: "pr-e-internal_grp_internal-nets"
+      description: "pr-e-internal_grp_internal-nets"
+      sub_group_list:
+        - "pr-e-internal_net-10-120-162-0_255-255-255-0"
+        - "pr-e-internal_net-10-120-163-0_255-255-255-0"
+    - group_name: "pr-e-internal_grp_sccbrs-stingray"
+      description: "pr-e-internal_grp_sccbrs-stingray"
+      sub_group_list:
+        - "pr-e-internal_brsapprein04-prod-williamhill-plc"
+        - "pr-e-internal_brsapprein05-prod-williamhill-plc"
+        - "pr-e-internal_brsapprein06-prod-williamhill-plc"
+        - "pr-e-internal_brsapprein07-prod-williamhill-plc"
+        - "pr-e-internal_brsapprein08-prod-williamhill-plc"
+        - "pr-e-internal_brsapprein09-prod-williamhill-plc"
+        - "pr-e-internal_brsapprein10-prod-williamhill-plc"
+        - "pr-e-internal_brsapprein11-prod-williamhill-plc"
+        - "pr-e-internal_brsprdadcclb01-prod-williamhill-plc"
+        - "pr-e-internal_brsprdadcclb02-prod-williamhill-plc"
+        - "pr-e-internal_brsprdadcint01-prod-williamhill-plc"
+        - "pr-e-internal_brsprdadcint02-prod-williamhill-plc"
+        - "pr-e-internal_brsprdadcnlb01-prod-williamhill-plc"
+        - "pr-e-internal_brsprdadcnlb02-prod-williamhill-plc"
+        - "pr-e-internal_sc1invadcapi01-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcapi02-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcext01-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcext02-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcint01-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcint02-inv-williamhill-plc"
+        - "pr-e-internal_sc1prdadcapi01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcapi02-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcclb01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcclb02-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcint01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcint02-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcnlb01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcnlb02-prod-williamhill-plc"
+        - "pr-e-internal_sccadcrprapi01-prod-williamhill-plc"
+        - "pr-e-internal_sccadcrprapi02-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_rds-kms-server"
+      description: "KMS/RDS license servers"
+      sub_group_list:
+        - "pr-e-internal_brswndremg002"
+        - "pr-e-internal_sc1wnpremg002"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_31"
+      description: "pr-e-internal_grp_scc-migrated_network_31"
+      sub_group_list:
+        - "pr-e-internal_grp_gibstorage"
+        - "pr-e-internal_grp_ld6storage"
+        - "pr-e-internal_grp_sc1nas"
+        - "pr-e-internal_grp_sccstorage"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_135"
+      description: "pr-e-internal_grp_scc-migrated_network_135"
+      sub_group_list:
+        - "pr-e-internal_scc-nms-hub-dr"
+        - "pr-e-internal_scc-nms-hub-live"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_136"
+      description: "pr-e-internal_grp_scc-migrated_network_136"
+      sub_group_list:
+        - "pr-e-internal_scc-nms-hub-dr"
+        - "pr-e-internal_scc-nms-hub-live"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_6"
+      description: "pr-e-internal_grp_scc-migrated_network_6"
+      sub_group_list:
+        - "pr-e-internal_sc1wnprcmn250-prod-williamhill-plc"
+        - "pr-e-internal_sc1wnprgdb05"
+        - "pr-e-internal_sc1wnprgdb0506"
+        - "pr-e-internal_sc1wnprgdb05-vmc"
+        - "pr-e-internal_sc1wnprgdb06"
+        - "pr-e-internal_sc1wnprgdb06-vmc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc-vmc"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_7"
+      description: "pr-e-internal_grp_scc-migrated_network_7"
+      sub_group_list:
+        - "pr-e-internal_10-1-86-31"
+        - "pr-e-internal_10-120-146-116"
+        - "pr-e-internal_cessql"
+        - "pr-e-internal_sc1wnprrtp01"
+        - "pr-e-internal_brswnstrdb001"
+        - "pr-e-internal_sc1wnpredb01"
+        - "pr-e-internal_sc1wnprevo01"
+        - "pr-e-internal_sc1wnprgdb13"
+        - "pr-e-internal_sc1wnprndb019"
+        - "pr-e-internal_sc1wnprrdb01"
+        - "pr-e-internal_sc1wnprrto01"
+        - "pr-e-internal_sc1wnprrto02_ip_10-120-180-54"
+        - "pr-e-internal_w7d-dbjump"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_18"
+      description: "pr-e-internal_grp_scc-migrated_network_18"
+      sub_group_list:
+        - "pr-e-internal_sc1prdadcclb01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcclb02-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_splunk-heavy-forwarders"
+      description: "pr-e-internal_grp_splunk-heavy-forwarders"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpremn002-prod-williamhill-plc"
+        - "pr-e-internal_sc1uxpremn003-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_grp-orion-app-srvs-ld6"
+      description: "pr-e-internal_grp_grp-orion-app-srvs-ld6"
+      sub_group_list:
+        - "pr-e-internal_ip_10-112-12-125"
+        - "pr-e-internal_ip_10-112-12-126"
+        - "pr-e-internal_ip_10-112-12-142"
+        - "pr-e-internal_ip_10-112-12-143"
+        - "pr-e-internal_ip_10-112-12-144"
+    - group_name: "pr-e-internal_grp_grp-orion-app-srvs-scc"
+      description: "pr-e-internal_grp_grp-orion-app-srvs-scc"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-163-122"
+        - "pr-e-internal_ip_10-120-163-123"
+        - "pr-e-internal_ip_10-120-163-142"
+        - "pr-e-internal_ip_10-120-163-143"
+    - group_name: "pr-e-internal_grp_euc_mgmt_server-group-chg0142765"
+      description: "pr-e-internal_grp_euc_mgmt_server-group-chg0142765"
+      sub_group_list:
+        - "pr-e-internal_brsapprcmg002-group-williamhill-plc"
+    - group_name: "pr-e-internal_grp_on_premise_datacentre_vlans-group-chg0142765"
+      description: "pr-e-internal_grp_on_premise_datacentre_vlans-group-chg0142765"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-0-0s16"
+        - "pr-e-internal_ip_10-210-0-0s16"
+        - "pr-e-internal_ip_10-180-0-0s16"
+        - "pr-e-internal_ip_10-112-0-0s16"
+        - "pr-e-internal_ip_10-19-0-0s16"
+    - group_name: "pr-e-internal_grp_wh_nets-chg0143200"
+      description: "pr-e-internal_grp_wh_nets-chg0143200"
+      sub_group_list:
+        - "pr-e-internal_ip_10-0-0-0s8"
+    - group_name: "pr-e-internal_grp_splunk_heavy_forwarders-chg0143200"
+      description: "pr-e-internal_grp_splunk_heavy_forwarders-chg0143200"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpremn002"
+        - "pr-e-internal_sc1uxpremn003"
+    - group_name: "pr-e-internal_grp_splunk_deployment_server-chg0143200"
+      description: "pr-e-internal_grp_splunk_deployment_server-chg0143200"
+      sub_group_list:
+        - "pr-e-internal_splunkdeployment-sc1-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_ras-vpn-pool"
+      description: "pr-e-internal_grp_ras-vpn-pool"
+      sub_group_list:
+        - "pr-e-internal_grp_ld6-ras-vpn-pool"
+        - "pr-e-internal_grp_sc1-ras-vpn-pool"
+        - "pr-e-internal_grp_mrg-ras-vpn-pool"
+    - group_name: "pr-e-internal_grp_grp-scc-commvault-svrs"
+      description: "CHG0112231"
+      sub_group_list:
+        - "pr-e-internal_sc1uxprbkms01"
+        - "pr-e-internal_sc1uxprbkms02"
+        - "pr-e-internal_sc1wnprbkcs01"
+    - group_name: "pr-e-internal_grp_grp-ld6-commvault-svrs"
+      description: "CHG0112231"
+      sub_group_list:
+        - "pr-e-internal_ld6uxprbkms03"
+        - "pr-e-internal_ld6uxprbkms04"
+        - "pr-e-internal_ld6wnprbkcs01"
+        - "pr-e-internal_ld6uxprbkms01"
+        - "pr-e-internal_ld6uxprbkms02"
+    - group_name: "pr-e-internal_grp_grp-gib-commvault-svrs"
+      description: "CHG0112231"
+      sub_group_list:
+        - "pr-e-internal_gibuxprbkms01"
+        - "pr-e-internal_gibuxprbkms02"
+    - group_name: "pr-e-internal_grp_whgroup-ad-servers"
+      description: "pr-e-internal_grp_whgroup-ad-servers"
+      sub_group_list:
+        - "pr-e-internal_brswnpredc02_ip_10-210-194-12"
+        - "pr-e-internal_brswnpredc03"
+        - "pr-e-internal_gibwnpredc02_ip_10-180-194-12"
+        - "pr-e-internal_gibwnpredc03_ip_10-180-194-13"
+        - "pr-e-internal_mnlwnpredc02_ip_10-123-197-11"
+        - "pr-e-internal_sc1wnpredc03_ip_10-120-194-13"
+        - "pr-e-internal_sc1wnpredc04_ip_10-120-194-14"
+        - "pr-e-internal_sc1wnpredc05_ip_10-120-194-15"
+        - "pr-e-internal_sc1wnpredc08_ip_10-120-194-18"
+        - "pr-e-internal_bfawnpredc01"
+        - "pr-e-internal_krawnpredc01"
+        - "pr-e-internal_krawnpredc02"
+        - "pr-e-internal_ld6wnpredc01"
+        - "pr-e-internal_ld6wnpredc02"
+        - "pr-e-internal_mnlwnpredc03"
+        - "pr-e-internal_sofwnpredc01"
+        - "pr-e-internal_sofwnpredc02"
+        - "pr-e-internal_brswnpredc01"
+        - "pr-e-internal_sc1wnpredc01"
+        - "pr-e-internal_sc1wnpredc02"
+    - group_name: "pr-e-internal_grp_wily-svrs_all"
+      description: "pr-e-internal_grp_wily-svrs_all"
+      sub_group_list:
+        - "pr-e-internal_grp_wily_svrs_brs"
+        - "pr-e-internal_grp_wily_svrs_scc"
+        - "pr-e-internal_grp_wily_svrs_gib"
+    - group_name: "pr-e-internal_grp_wily-access-group"
+      description: "pr-e-internal_grp_wily-access-group"
+      sub_group_list:
+        - "pr-e-internal_int-10-180-36-10"
+        - "pr-e-internal_int-10-180-37-51"
+        - "pr-e-internal_int-10-180-37-52"
+        - "pr-e-internal_int-10-180-37-53"
+        - "pr-e-internal_int-10-180-37-54"
+        - "pr-e-internal_ip_10-0-0-0s8"
+    - group_name: "pr-e-internal_grp_rundeck-servers"
+      description: "pr-e-internal_grp_rundeck-servers"
+      sub_group_list:
+        - "pr-e-internal_sc1uxpreap237_ip_10-120-163-237"
+        - "pr-e-internal_sc1uxpreap238_ip_10-120-163-238"
+        - "pr-e-internal_sc1uxpreap239_ip_10-120-163-239"
+        - "pr-e-internal_sc1uxpreap242"
+        - "pr-e-internal_sc1uxrdk"
+    - group_name: "pr-e-internal_grp_webproxies-cx-scc"
+      description: "pr-e-internal_grp_webproxies-cx-scc"
+      sub_group_list:
+        - "pr-e-internal_10-121-5-0slash24"
+        - "pr-e-internal_10-121-7-0slash24"
+    - group_name: "pr-e-internal_grp_infoblox-servers"
+      description: "pr-e-internal_grp_infoblox-servers"
+      sub_group_list:
+        - "pr-e-internal_brsns01"
+        - "pr-e-internal_brsns02"
+        - "pr-e-internal_gibns01"
+        - "pr-e-internal_gibns02"
+        - "pr-e-internal_sc1ns01"
+        - "pr-e-internal_sc1ns02"
+        - "pr-e-internal_ld6ns01-new"
+        - "pr-e-internal_ld6ns02-new"
+    - group_name: "pr-e-internal_grp_mailhosts"
+      description: "pr-e-internal_grp_mailhosts"
+      sub_group_list:
+        - "pr-e-internal_emailhost01"
+        - "pr-e-internal_emailhost02"
+        - "pr-e-internal_emailhost03"
+        - "pr-e-internal_emailhost04"
+        - "pr-e-internal_emailhost05"
+        - "pr-e-internal_emailhost06"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_10"
+      description: "pr-e-internal_grp_scc-migrated_network_10"
+      sub_group_list:
+        - "pr-e-internal_clp-splunk-license-master-prod-williamhill-plc"
+        - "pr-e-internal_sc1uxpromn012"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_17"
+      description: "pr-e-internal_grp_scc-migrated_network_17"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-0-0s16"
+        - "pr-e-internal_ip_10-120-163-0s24"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_16"
+      description: "pr-e-internal_grp_scc-migrated_network_16"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-44-25"
+        - "pr-e-internal_ip_10-120-44-26"
+        - "pr-e-internal_ip_10-120-44-27"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_33"
+      description: "pr-e-internal_grp_scc-migrated_network_33"
+      sub_group_list:
+        - "pr-e-internal_brsux910"
+        - "pr-e-internal_gibux910"
+        - "pr-e-internal_ld6uxpreds01"
+        - "pr-e-internal_sc1uxpreds01"
+    - group_name: "pr-e-internal_grp_scc-migrated_network_11"
+      description: "pr-e-internal_grp_scc-migrated_network_11"
+      sub_group_list:
+        - "pr-e-internal_sc1uxprgdb01"
+        - "pr-e-internal_sc1uxprgdb05"
+        - "pr-e-internal_10-120-146-116"
+        - "pr-e-internal_cessql"
+        - "pr-e-internal_sc1wnprgdb02"
+        - "pr-e-internal_sc1wnprrto02_ip_10-120-180-59"
+        - "pr-e-internal_sc1wnprrtp01"
+        - "pr-e-internal_sc1wnprevo01"
+        - "pr-e-internal_sc1wnprgdb05"
+        - "pr-e-internal_sc1wnprgdb13"
+        - "pr-e-internal_sc1wnprncp001-mgmt-prod-williamhill-plc"
+        - "pr-e-internal_sc1wnprndb019"
+        - "pr-e-internal_sc1uxpredb01"
+        - "pr-e-internal_sc1uxpremn17"
+        - "pr-e-internal_sc1uxprnap43_44vip"
+        - "pr-e-internal_sc1uxprndb001"
+        - "pr-e-internal_sc1uxprndb95_96vip"
+        - "pr-e-internal_sc1uxprrdb"
+        - "pr-e-internal_sc1uxprrvr05"
+        - "pr-e-internal_sc1uxprrvr06"
+        - "pr-e-internal_sc1wnprecp01"
+        - "pr-e-internal_sc1wnprgdb01"
+        - "pr-e-internal_sc1uxprndb037_38vip"
+        - "pr-e-internal_sc1wnprnwb87"
+        - "pr-e-internal_sc1wnprndb003_ip_10-120-100-17"
+        - "pr-e-internal_sc1wnprndb004_ip_10-120-100-18"
+        - "pr-e-internal_sc1wnprndb005_ip_10-120-100-19"
+        - "pr-e-internal_sc1wnprndb006_ip_10-120-100-20"
+        - "pr-e-internal_host-10-121-5-11"
+        - "pr-e-internal_host-10-121-5-12"
+        - "pr-e-internal_sc1wnprnap024-prod-williamhill-plc"
+        - "pr-e-internal_sc1wnprgdb05-vmc"
+        - "pr-e-internal_sc1wnprgdb06"
+        - "pr-e-internal_sc1wnprgdb06-vmc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc"
+        - "pr-e-internal_corpservicessql-prod-williamhill-plc-vmc"
+        - "pr-e-internal_ip_10-120-145-40"
+        - "pr-e-internal_ip_10-120-177-68"
+        - "pr-e-internal_ip_10-120-143-85"
+        - "pr-e-internal_ip_0-0-0-0s0"
+        - "pr-e-internal_grp_snmpget"
+    - group_name: "pr-e-internal_grp_grp-bomgar-cde-jumphosts"
+      description: "CHG0123314"
+      sub_group_list:
+        - "pr-e-internal_brswnprcmg41"
+        - "pr-e-internal_brswnprcmg42"
+        - "pr-e-internal_brswnprcmg43"
+        - "pr-e-internal_brswnprcmg44"
+        - "pr-e-internal_gibwnprcmg41"
+        - "pr-e-internal_gibwnprcmg42"
+        - "pr-e-internal_gibwnprcmg43"
+        - "pr-e-internal_gibwnprcmg44"
+        - "pr-e-internal_ld6wnprcmg41"
+        - "pr-e-internal_ld6wnprcmg42"
+        - "pr-e-internal_ld6wnprcmg43"
+        - "pr-e-internal_ld6wnprcmg44"
+        - "pr-e-internal_sc1wnprcmg41"
+        - "pr-e-internal_sc1wnprcmg42"
+        - "pr-e-internal_sc1wnprcmg43"
+        - "pr-e-internal_sc1wnprcmg44"
+    - group_name: "pr-e-internal_grp_direct-internet-access"
+      description: "pr-e-internal_grp_direct-internet-access"
+      sub_group_list:
+        - "pr-e-internal_scc_wsus"
+        - "pr-e-internal_netbrain"
+    - group_name: "pr-e-internal_grp_rackspace_nimsoft_ch"
+      description: "CHG0069736"
+      sub_group_list:
+        - "pr-e-internal_rackspace_nimsoft_ch_dr"
+        - "pr-e-internal_rackspace_nimsoft_ch_live"
+    - group_name: "pr-e-internal_grp_external-netflow-sources"
+      description: "pr-e-internal_grp_external-netflow-sources"
+      sub_group_list:
+        - "pr-e-internal_grp_gi-mpl-border-routers"
+        - "pr-e-internal_grp_uk-brs-border-routers"
+        - "pr-e-internal_grp_uk-ld6-border-routers"
+        - "pr-e-internal_grp_uk-sc1-border-routers"
+        - "pr-e-internal_grp_stj-ar-routers"
+    - group_name: "pr-e-internal_grp_grp-swinds-polling-svrs"
+      description: "pr-e-internal_grp_grp-swinds-polling-svrs"
+      sub_group_list:
+        - "pr-e-internal_sc1wnpremn74"
+        - "pr-e-internal_sc1wnpremn75"
+        - "pr-e-internal_grp_grp-orion-app-srvs"
+    - group_name: "pr-e-internal_grp_uk-sc1-border-routers"
+      description: "CHG0077138"
+      sub_group_list:
+        - "pr-e-internal_uk-sc1-er01-lo0"
+        - "pr-e-internal_uk-sc1-er02-lo0"
+        - "pr-e-internal_uk-sc1-es01"
+        - "pr-e-internal_uk-sc1-es02"
+        - "pr-e-internal_uk-sc1-dmvpn01"
+        - "pr-e-internal_uk-sc1-dmvpn02"
+    - group_name: "pr-e-internal_grp_snow_public"
+      description: "pr-e-internal_grp_snow_public"
+      sub_group_list:
+        - "pr-e-internal_servicenowams-datacentre"
+        - "pr-e-internal_servicenowlhr-datacentre"
+        - "pr-e-internal_ip_199-91-137-100"
+        - "pr-e-internal_ip_37-98-232-100"
+    - group_name: "pr-e-internal_grp_grp-sql-servers"
+      description: "CHG0117835"
+      sub_group_list:
+        - "pr-e-internal_brsux1rdb001"
+        - "pr-e-internal_brsux1rdb002"
+        - "pr-e-internal_brsux2rdb001"
+        - "pr-e-internal_brsux2rdb002"
+        - "pr-e-internal_brsuxdrrdb001"
+        - "pr-e-internal_ld6uxptrdb002"
+        - "pr-e-internal_retail-omni-mysql-dev-williamhill-plc"
+        - "pr-e-internal_sc1uxprrdb001"
+        - "pr-e-internal_sc1uxprrdb0012"
+        - "pr-e-internal_sc1uxprrdb002"
+    - group_name: "pr-e-internal_grp_grp-trs-db-servers"
+      description: "CHG0118067"
+      sub_group_list:
+        - "pr-e-internal_brsuxdrrdb04"
+        - "pr-e-internal_sc1uxprrdb-vip"
+        - "pr-e-internal_sc1uxprrdb04"
+        - "pr-e-internal_sc1uxprrdb05"
+    - group_name: "pr-e-internal_grp_grp-liability-viewer-servers"
+      description: "CHG0118070"
+      sub_group_list:
+        - "pr-e-internal_brsux003"
+        - "pr-e-internal_brsux232"
+        - "pr-e-internal_liability-live-vip"
+        - "pr-e-internal_sc1uxprrdb01"
+        - "pr-e-internal_sc1uxprrdb02"
+    - group_name: "pr-e-internal_grp_grp-oscar-db-servers"
+      description: "CHG0118072"
+      sub_group_list:
+        - "pr-e-internal_brsuxdrrvr05"
+        - "pr-e-internal_brsuxp1rvr05"
+        - "pr-e-internal_brsuxp1rvr06"
+        - "pr-e-internal_brsuxp2rvr05"
+        - "pr-e-internal_brsuxp2rvr06"
+        - "pr-e-internal_brsuxp3rvr005"
+        - "pr-e-internal_brsuxp3rvr006"
+        - "pr-e-internal_sc1uxprrvr05"
+        - "pr-e-internal_sc1uxprrvr06"
+    - group_name: "pr-e-internal_grp_grp-bingo-db-servers"
+      description: "CHG0118080"
+      sub_group_list:
+        - "pr-e-internal_brsuxdrrdb010"
+        - "pr-e-internal_brsuxp1rdb010"
+        - "pr-e-internal_brsuxp2rdb010"
+        - "pr-e-internal_sc1uxprrdb010"
+    - group_name: "pr-e-internal_grp_grp-shopdiary-db-servers"
+      description: "CHG0118083"
+      sub_group_list:
+        - "pr-e-internal_brsuxdrshd010"
+        - "pr-e-internal_brsuxr1rdb003"
+        - "pr-e-internal_sc1uxprshd010"
+    - group_name: "pr-e-internal_grp_mysqlenterprisemonitor"
+      description: "CHG0119313"
+      sub_group_list:
+        - "pr-e-internal_brsux121"
+        - "pr-e-internal_brsux122"
+        - "pr-e-internal_gibux321vip"
+        - "pr-e-internal_gibux322"
+        - "pr-e-internal_gibux322vip"
+        - "pr-e-internal_ld6ux321"
+    - group_name: "pr-e-internal_grp_grp-scc-mars-mysql-svrs"
+      description: "pr-e-internal_grp_grp-scc-mars-mysql-svrs"
+      sub_group_list:
+        - "pr-e-internal_10-120-99-95"
+        - "pr-e-internal_sc1uxprndb001-vip"
+        - "pr-e-internal_sc1uxprndb002"
+    - group_name: "pr-e-internal_grp_grp-scc-mars-db-servers"
+      description: "pr-e-internal_grp_grp-scc-mars-db-servers"
+      sub_group_list:
+        - "pr-e-internal_10-120-99-151"
+        - "pr-e-internal_10-120-99-152"
+        - "pr-e-internal_sc1uxprnap43_44vip"
+    - group_name: "pr-e-internal_grp_brs-xiv"
+      description: "pr-e-internal_grp_brs-xiv"
+      sub_group_list:
+        - "pr-e-internal_ip_10-210-139-229"
+        - "pr-e-internal_ip_10-210-139-230"
+        - "pr-e-internal_ip_10-210-139-231"
+    - group_name: "pr-e-internal_grp_sc1-xiv"
+      description: "pr-e-internal_grp_sc1-xiv"
+      sub_group_list:
+        - "pr-e-internal_ip_10-120-139-229"
+        - "pr-e-internal_ip_10-120-139-230"
+        - "pr-e-internal_ip_10-120-139-231"
+    - group_name: "pr-e-internal_grp_ilo-nets"
+      description: "pr-e-internal_grp_ilo-nets"
+      sub_group_list:
+        - "pr-e-internal_ip_10-100-254-0s24"
+        - "pr-e-internal_ip_10-120-130-0s24"
+        - "pr-e-internal_ip_10-120-80-0s24"
+        - "pr-e-internal_ip_10-180-130-0s24"
+        - "pr-e-internal_ip_10-180-80-0s24"
+        - "pr-e-internal_ip_10-201-225-0s24"
+        - "pr-e-internal_ip_10-201-254-0s24"
+        - "pr-e-internal_ip_10-210-130-0s24"
+    - group_name: "pr-e-internal_grp_vmc-sddc-retail-production"
+      description: "pr-e-internal_grp_vmc-sddc-retail-production"
+      sub_group_list:
+        - "pr-e-internal_vmc-retail-production-vsphere-mgmt"
+        - "pr-e-internal_vmc-retail-production-10-233-0-0s24"
+        - "pr-e-internal_vmc-retail-production-services-mgmt"
+    - group_name: "pr-e-internal_grp_gibstorage"
+      description: "CHG0115147"
+      sub_group_list:
+        - "pr-e-internal_10-180-46-40"
+        - "pr-e-internal_10-180-46-41"
+        - "pr-e-internal_10-180-46-42"
+        - "pr-e-internal_10-180-46-43"
+        - "pr-e-internal_10-180-46-44"
+        - "pr-e-internal_10-180-46-45"
+        - "pr-e-internal_10-180-46-46"
+        - "pr-e-internal_10-180-46-47"
+        - "pr-e-internal_10-180-46-48"
+        - "pr-e-internal_10-180-46-49"
+        - "pr-e-internal_10-180-46-50"
+        - "pr-e-internal_10-180-46-51"
+        - "pr-e-internal_10-180-46-52"
+        - "pr-e-internal_10-180-46-53"
+        - "pr-e-internal_10-180-46-54"
+        - "pr-e-internal_10-180-46-55"
+        - "pr-e-internal_10-180-46-56"
+        - "pr-e-internal_10-180-46-57"
+        - "pr-e-internal_10-180-46-58"
+        - "pr-e-internal_10-180-46-59"
+    - group_name: "pr-e-internal_grp_ld6storage"
+      description: "CHG0115147"
+      sub_group_list:
+        - "pr-e-internal_10-112-46-40"
+        - "pr-e-internal_10-112-46-41"
+        - "pr-e-internal_10-112-46-42"
+        - "pr-e-internal_10-112-46-43"
+        - "pr-e-internal_10-112-46-44"
+        - "pr-e-internal_10-112-46-45"
+        - "pr-e-internal_10-112-46-46"
+        - "pr-e-internal_10-112-46-47"
+        - "pr-e-internal_10-112-46-48"
+        - "pr-e-internal_10-112-46-49"
+        - "pr-e-internal_10-112-46-50"
+        - "pr-e-internal_10-112-46-51"
+        - "pr-e-internal_10-112-46-52"
+        - "pr-e-internal_10-112-46-53"
+        - "pr-e-internal_10-112-46-54"
+        - "pr-e-internal_10-112-46-55"
+        - "pr-e-internal_10-112-46-56"
+        - "pr-e-internal_10-112-46-57"
+        - "pr-e-internal_10-112-46-58"
+        - "pr-e-internal_10-112-46-59"
+    - group_name: "pr-e-internal_grp_sc1nas"
+      description: "CHG0118220"
+      sub_group_list:
+        - "pr-e-internal_10-120-77-40"
+        - "pr-e-internal_10-120-77-41"
+        - "pr-e-internal_10-120-77-42"
+        - "pr-e-internal_10-120-77-43"
+        - "pr-e-internal_10-120-77-44"
+        - "pr-e-internal_10-120-77-45"
+        - "pr-e-internal_10-120-77-46"
+        - "pr-e-internal_10-120-77-47"
+        - "pr-e-internal_10-120-77-48"
+        - "pr-e-internal_10-120-77-49"
+        - "pr-e-internal_10-120-77-50"
+        - "pr-e-internal_10-120-77-51"
+        - "pr-e-internal_10-120-77-52"
+        - "pr-e-internal_10-120-77-53"
+        - "pr-e-internal_10-120-77-54"
+        - "pr-e-internal_10-120-77-55"
+        - "pr-e-internal_10-120-77-56"
+        - "pr-e-internal_10-120-77-57"
+        - "pr-e-internal_10-120-77-58"
+        - "pr-e-internal_10-120-77-59"
+    - group_name: "pr-e-internal_grp_sccstorage"
+      description: "CHG0115147"
+      sub_group_list:
+        - "pr-e-internal_10-120-46-40"
+        - "pr-e-internal_10-120-46-41"
+        - "pr-e-internal_10-120-46-42"
+        - "pr-e-internal_10-120-46-43"
+        - "pr-e-internal_10-120-46-44"
+        - "pr-e-internal_10-120-46-45"
+        - "pr-e-internal_10-120-46-46"
+        - "pr-e-internal_10-120-46-47"
+        - "pr-e-internal_10-120-46-48"
+        - "pr-e-internal_10-120-46-49"
+        - "pr-e-internal_10-120-46-50"
+        - "pr-e-internal_10-120-46-51"
+        - "pr-e-internal_10-120-46-52"
+        - "pr-e-internal_10-120-46-53"
+        - "pr-e-internal_10-120-46-54"
+        - "pr-e-internal_10-120-46-55"
+        - "pr-e-internal_10-120-46-56"
+        - "pr-e-internal_10-120-46-57"
+        - "pr-e-internal_10-120-46-58"
+        - "pr-e-internal_10-120-46-59"
+    - group_name: "pr-e-internal_grp_ld6-ras-vpn-pool"
+      description: "pr-e-internal_grp_ld6-ras-vpn-pool"
+      sub_group_list:
+        - "pr-e-internal_ip_192-168-48-0s20"
+    - group_name: "pr-e-internal_grp_sc1-ras-vpn-pool"
+      description: "pr-e-internal_grp_sc1-ras-vpn-pool"
+      sub_group_list:
+        - "pr-e-internal_ip_192-168-12-0s22"
+        - "pr-e-internal_ip_192-168-16-0s22"
+    - group_name: "pr-e-internal_grp_mrg-ras-vpn-pool"
+      description: "pr-e-internal_grp_mrg-ras-vpn-pool"
+      sub_group_list:
+        - "pr-e-internal_ip_10-30-200-0s24"
+        - "pr-e-internal_ip_10-30-202-0s24"
+        - "pr-e-internal_ip_10-40-200-0s24"
+        - "pr-e-internal_ip_10-40-202-0s24"
+        - "pr-e-internal_ip_10-130-200-0s23"
+    - group_name: "pr-e-internal_grp_wily_svrs_brs"
+      description: "pr-e-internal_grp_wily_svrs_brs"
+      sub_group_list:
+        - "pr-e-internal_ip_10-210-163-95"
+        - "pr-e-internal_ip_10-210-163-96"
+        - "pr-e-internal_ip_10-210-163-97"
+        - "pr-e-internal_ip_10-210-163-98"
+        - "pr-e-internal_ip_10-210-163-99"
+    - group_name: "pr-e-internal_grp_wily_svrs_gib"
+      description: "pr-e-internal_grp_wily_svrs_gib"
+      sub_group_list:
+        - "pr-e-internal_ip_10-180-163-211"
+        - "pr-e-internal_ip_10-180-163-212"
+        - "pr-e-internal_ip_10-180-163-213"
+        - "pr-e-internal_ip_10-180-163-214"
+        - "pr-e-internal_ip_10-180-163-218"
+        - "pr-e-internal_ip_10-180-163-102"
+        - "pr-e-internal_ip_10-180-163-220"
+        - "pr-e-internal_ip_10-180-163-221"
+        - "pr-e-internal_ip_10-180-163-40"
+    - group_name: "pr-e-internal_grp_snmpget"
+      description: "pr-e-internal_grp_snmpget"
+      sub_group_list:
+        - "pr-e-internal_sc1apprein04-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein05-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein06-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein07-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein08-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein09-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein10-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein11-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein12-prod-williamhill-plc"
+        - "pr-e-internal_sc1apprein13-prod-williamhill-plc"
+        - "pr-e-internal_sc1uxprcmg01"
+        - "pr-e-internal_sc1uxprcmg02"
+        - "pr-e-internal_sccadcrprapi01-prod-williamhill-plc"
+        - "pr-e-internal_sccadcrprapi02-prod-williamhill-plc"
+        - "pr-e-internal_sccadcrprapi03-prod-williamhill-plc"
+        - "pr-e-internal_sc1invadcapi01-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcapi02-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcext01-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcext02-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcint01-inv-williamhill-plc"
+        - "pr-e-internal_sc1invadcint02-inv-williamhill-plc"
+        - "pr-e-internal_sc1prdadcapi01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcapi02-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcextapi01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcextapi02-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcint01-prod-williamhill-plc"
+        - "pr-e-internal_sc1prdadcint02-prod-williamhill-plc"
+    - group_name: "pr-e-internal_grp_gi-mpl-border-routers"
+      description: "pr-e-internal_grp_gi-mpl-border-routers"
+      sub_group_list:
+        - "pr-e-internal_gi-mpl-es01-vl20"
+        - "pr-e-internal_gi-mpl-es02-vl20"
+    - group_name: "pr-e-internal_grp_uk-brs-border-routers"
+      description: "pr-e-internal_grp_uk-brs-border-routers"
+      sub_group_list:
+        - "pr-e-internal_uk-brs-er01-lo0"
+        - "pr-e-internal_uk-brs-er02-lo0"
+        - "pr-e-internal_uk-brs-es01-vl20"
+        - "pr-e-internal_uk-brs-es02-vl20"
+    - group_name: "pr-e-internal_grp_uk-ld6-border-routers"
+      description: "pr-e-internal_grp_uk-ld6-border-routers"
+      sub_group_list:
+        - "pr-e-internal_uk-sc1-er01-lo0"
+        - "pr-e-internal_uk-sc1-er02-lo0"
+        - "pr-e-internal_uk-sc1-es01-vl20"
+        - "pr-e-internal_uk-sc1-es02-vl20"
+    - group_name: "pr-e-internal_grp_stj-ar-routers"
+      description: "pr-e-internal_grp_stj-ar-routers"
+      sub_group_list:
+        - "pr-e-internal_uk-stj-ar01-lo0"
+        - "pr-e-internal_uk-stj-ar02-lo0"

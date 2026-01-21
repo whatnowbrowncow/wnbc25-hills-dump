@@ -1,0 +1,70 @@
+/*========================================
+
+###########################################################################
+###########################################################################
+###                                                                     ###
+{% if policy.policy == 'dynamic' %}
+###                {{ policy.policy |upper }} RULES - NOT MIGRATED FROM SCC                ###
+{% elif policy.policy == 'global' %}
+###                {{ policy.policy |upper }} RULES - NOT MIGRATED FROM SCC                 ###
+{% elif policy.policy == 'intra-segment' %}
+###             {{ policy.policy |upper }} RULES - NOT MIGRATED FROM SCC             ###
+{% endif %}
+###                                                                     ###
+###########################################################################
+###########################################################################
+
+========================================*/
+
+resource "nsxt_policy_security_policy" "{{ policy.policy }}" {
+  display_name    = "{{ policy.policy }}"
+  description     = "Firewall section for {{ policy.policy }}"
+  category        = var.category
+  stateful        = var.stateful
+  sequence_number = "{{ policy.tf_sequence }}"
+  domain          = "cgw"
+{% for resource in resources.security_policy %}
+{%   if resource.rules is iterable %}
+{%     for rule in resource.rules %}
+{%       if rule.destination[0] != '' %}
+  rule {
+    display_name       = "{{ rule.rule_description }}"
+{%         if rule.change_ref %}
+    description        = "Change ref: {{ rule.change_ref }}"
+{%         else %}
+    description        = ""
+{%         endif %}
+{%         if rule.action == 'permit' %}
+    action             = "ALLOW"
+{%         elif rule.action == 'deny' %}
+    action             = "DROP"
+{%         endif %}
+{%         if rule.disabled == true %}
+    disabled           = true
+{%          elif rule.disabled == false %}
+    disabled           = false
+{%          endif %}
+    logged             = true
+    ip_version         = "IPV4"
+    direction          = "IN_OUT"
+    sequence_number    = "{{ loop.index }}"
+{%         if 'any' in rule.source %}
+    source_groups      = [nsxt_policy_group.wh_any.path]
+{%         else %}
+    source_groups      = [{% for src in rule.source %}{% if loop.last %}nsxt_policy_group.{{ src }}.path{% else %}nsxt_policy_group.{{ src }}.path, {% endif %}{% endfor %}]
+{%         endif %}
+{%         if 'any' in rule.destination %}
+    destination_groups = [nsxt_policy_group.wh_any.path]
+{%         else %}
+    destination_groups = [{% for dest in rule.destination %}{% if loop.last %}nsxt_policy_group.{{ dest }}.path{% else %}nsxt_policy_group.{{ dest }}.path, {% endif %}{% endfor %}]
+{%         endif %}
+{%         if 'ip-any' in rule.service %}
+{%         else %}
+    services           = [{% for svc in rule.service %}{% if loop.last %}nsxt_policy_service.{{ svc }}.path{% else %}nsxt_policy_service.{{ svc }}.path, {% endif %}{% endfor %}]
+{%         endif %}
+  }
+{%       endif %}
+{%     endfor %}
+{%   endif %}
+{% endfor %}
+}

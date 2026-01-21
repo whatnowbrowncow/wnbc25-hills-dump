@@ -1,0 +1,12 @@
+---
+
+resources:
+
+  port_obj_groups:
+
+  - name: "intra-segement_tcp-ssh_eq"
+    description: "tcp-ssh_eq"
+    port_obj:
+    - protocol: "tcp"
+      port: "22"
+      direction: "destination"

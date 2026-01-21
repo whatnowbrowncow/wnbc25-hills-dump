@@ -1,0 +1,159 @@
+/*=========================================================
+#### Parse of ASA Service and Protocol Objects (ports) ####
+
+######### Example Format #############
+
+resource "nsxt_policy_service" "tcp_80" {
+  display_name = "tcp-80"
+  description  = "description: tcp-80, services: tcp80"
+  l4_port_set_entry {
+    protocol          = "TCP"
+    destination_ports = ["80"]
+  }
+}
+
+How we will format and standardise this:
+The "resource" name and "display_name" will be the same/identical, referencing the same varible: port_obj_name
+The "destination_ports" will always be a list
+The "description" must contain a service object's description, if it has one, and list of protocol/ports 
+description: describes the service object, where this information is available. Where it isn't the port_obj_name must be added
+services: lists the protocol/ports defined in the object in a comma separated format (e.g. tcp3389, udp514)
+The ports must always be listed in the "description", as this allows us to overcome a limitation with the VMC rule search/filter
+
+
+resource "nsxt_policy_service" "( port_obj_name )" {
+  display_name = "( port_obj_name )"
+  description  = "description: ( existing/valid object description | port_obj_name ), services: [( protocol )( port ), ( protocol )( port )]"
+  l4_port_set_entry {
+    protocol          = "( protocol (uppercase) )"
+    destination_ports = [( port )]
+  }
+  l4_port_set_entry {
+    protocol          = "( protocol (uppercase) )"
+    destination_ports = [( port )]
+  }
+}
+
+=========================================================*/
+
+{% set existingresources = [] %}
+{% for resource in resources.port_obj_groups %}
+{%   if resource.name not in existingresources %}
+resource "nsxt_policy_service" "{{ resource.name }}" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  display_name = "{{ resource.name }}"
+{%     if resource.protocol_obj is defined and resource.protocol_obj %}
+  description  = "description: {% if resource.description|length %}{{ resource.description }}{% else %}{{ resource.name }}{% endif %}, services: [{% for object in resource.protocol_obj %}{% if loop.last %}{{ object.protocol |lower }}{% else %}{{ object.protocol |lower }}, {% endif %}{% endfor %}]"
+{%       for object in resource.protocol_obj %}
+  ip_protocol_entry {
+    display_name = "{{ object.protocol }}"
+{%         if object.protocol == 'udp' %}
+    protocol     = "17"
+{%         elif object.protocol == 'tcp' %}
+    protocol     = "6"
+{%         else %}
+    protocol = "WARNING"
+{%         endif %}
+  }
+{%       endfor %}
+{%     else %}
+{%     endif %}
+{%     if resource.port_obj is defined and resource.port_obj is iterable %}
+  description  = "description: {% if resource.description|length %}{{ resource.description }}{% else %}{{ resource.name }}{% endif %}, services: [{% for object in resource.port_obj %}{% if loop.last %}{{ object.protocol |lower }}{{ object.port }}{% else %}{{ object.protocol |lower }}{{ object.port }}, {% endif %}{% endfor %}]"
+{%     set tcpsrcports = [] %}
+{%     set udpsrcports = [] %}
+{%     set tcpdstports = [] %}
+{%     set udpdstports = [] %}
+{%       for object in resource.port_obj %}
+{%         if object.direction == 'source' %}
+{%           if object.protocol == 'tcp-udp' %}
+{%             do tcpsrcports.append(object.port|regex_replace('any','1-65535')) %}
+{%             do udpsrcports.append(object.port|regex_replace('any','1-65535')) %}
+{%           elif object.protocol == 'tcp' %}
+{%             do tcpsrcports.append(object.port|regex_replace('any','1-65535')) %}
+{%           elif object.protocol == 'udp' %}
+{%             do udpsrcports.append(object.port|regex_replace('any','1-65535')) %}
+{%           endif %}
+{%         elif object.direction == 'destination' or object.direction == '' %}
+{%           if object.protocol == 'tcp-udp' %}
+{%             do tcpdstports.append(object.port|regex_replace('any','1-65535')) %}
+{%             do udpdstports.append(object.port|regex_replace('any','1-65535')) %}
+{%           elif object.protocol == 'tcp' %}
+{%             do tcpdstports.append(object.port|regex_replace('any','1-65535')) %}
+{%           elif object.protocol == 'udp' %}
+{%             do udpdstports.append(object.port|regex_replace('any','1-65535')) %}
+{%           endif %}
+{%         endif %}
+{%       endfor %}
+{%       if tcpsrcports|length > 0 %}
+{%         if tcpsrcports|length < 8 %}
+  l4_port_set_entry {
+    protocol          = "TCP"
+    source_ports = ["{{ tcpsrcports|join('", "') }}"]
+  }
+{%         else %}
+{%           for i in range(0, tcpsrcports|length, 7) %}
+  l4_port_set_entry {
+    protocol          = "TCP"
+    source_ports = ["{{ tcpsrcports[i:i+7]|join('", "') }}"]
+  }
+{%           endfor %}
+{%         endif %}
+{%       endif %}
+{%       if udpsrcports|length > 0 %}
+{%         if udpsrcports|length < 8 %}
+  l4_port_set_entry {
+    protocol          = "UDP"
+    source_ports = ["{{ udpsrcports|join('", "') }}"]
+  }
+{%         else %}
+{%           for i in range(0, udpsrcports|length, 7) %}
+  l4_port_set_entry {
+    protocol          = "UDP"
+    source_ports = ["{{ udpsrcports[i:i+7]|join('", "') }}"]
+  }
+{%           endfor %}
+{%         endif %}
+{%       endif %}
+{%       if tcpdstports|length > 0 %}
+{%         if tcpdstports|length < 8 %}
+  l4_port_set_entry {
+    protocol          = "TCP"
+    destination_ports = ["{{ tcpdstports|join('", "') }}"]
+  }
+{%         else %}
+{%           for i in range(0, tcpdstports|length, 7) %}
+  l4_port_set_entry {
+    protocol          = "TCP"
+    destination_ports = ["{{ tcpdstports[i:i+7]|join('", "') }}"]
+  }
+{%           endfor %}
+{%         endif %}
+{%       endif %}
+{%       if udpdstports|length > 0 %}
+{%         if udpdstports|length < 8 %}
+  l4_port_set_entry {
+    protocol          = "UDP"
+    destination_ports = ["{{ udpdstports|join('", "') }}"]
+  }
+{%         else %}
+{%           for i in range(0, udpdstports|length, 7) %}
+  l4_port_set_entry {
+    protocol          = "UDP"
+    destination_ports = ["{{ udpdstports[i:i+7]|join('", "') }}"]
+  }
+{%           endfor %}
+{%         endif %}
+{%       endif %}
+{%       set tcpsrcports = tcpsrcports.clear() %}
+{%       set udpsrcports = udpsrcports.clear() %}
+{%       set tcpdstports = tcpdstports.clear() %}
+{%       set udpdstports = udpdstports.clear() %}
+{%     endif %}
+}
+
+{%     do existingresources.append(resource.name) %}
+{%   endif %}
+{% endfor %}

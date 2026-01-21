@@ -1,0 +1,4528 @@
+---
+resources:
+  group_objects:
+
+###IPS IN ACLS###
+
+    - group_name: "pr-c-frontend_ip_10-120-163-73"
+      description: "pr-c-frontend_ip_10-120-163-73"
+      ip_addr_list:
+        - "10.120.163.73"
+
+    - group_name: "pr-c-frontend_ip_10-120-134-253"
+      description: "pr-c-frontend_ip_10-120-134-253"
+      ip_addr_list:
+        - "10.120.134.253"
+
+    - group_name: "pr-c-frontend_ip_10-180-142-164"
+      description: "pr-c-frontend_ip_10-180-142-164"
+      ip_addr_list:
+        - "10.180.142.164"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-134"
+      description: "pr-c-frontend_ip_10-120-163-134"
+      ip_addr_list:
+        - "10.120.163.134"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-70"
+      description: "pr-c-frontend_ip_10-120-46-70"
+      ip_addr_list:
+        - "10.120.46.70"
+
+    - group_name: "pr-c-frontend_ip_10-114-135-221"
+      description: "pr-c-frontend_ip_10-114-135-221"
+      ip_addr_list:
+        - "10.114.135.221"
+
+    - group_name: "pr-c-frontend_ip_10-120-99-10"
+      description: "pr-c-frontend_ip_10-120-99-10"
+      ip_addr_list:
+        - "10.120.99.10"
+
+    - group_name: "pr-c-frontend_ip_10-120-101-10"
+      description: "pr-c-frontend_ip_10-120-101-10"
+      ip_addr_list:
+        - "10.120.101.10"
+
+    - group_name: "pr-c-frontend_ip_10-120-48-122"
+      description: "pr-c-frontend_ip_10-120-48-122"
+      ip_addr_list:
+        - "10.120.48.122"
+
+    - group_name: "pr-c-frontend_ip_10-210-143-170"
+      description: "pr-c-frontend_ip_10-210-143-170"
+      ip_addr_list:
+        - "10.210.143.170"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-108"
+      description: "pr-c-frontend_ip_10-120-39-108"
+      ip_addr_list:
+        - "10.120.39.108"
+
+    - group_name: "pr-c-frontend_ip_10-120-69-200"
+      description: "pr-c-frontend_ip_10-120-69-200"
+      ip_addr_list:
+        - "10.120.69.200"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-89"
+      description: "pr-c-frontend_ip_10-120-163-89"
+      ip_addr_list:
+        - "10.120.163.89"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-33"
+      description: "pr-c-frontend_ip_10-120-163-33"
+      ip_addr_list:
+        - "10.120.163.33"
+
+    - group_name: "pr-c-frontend_ip_10-120-146-115"
+      description: "pr-c-frontend_ip_10-120-146-115"
+      ip_addr_list:
+        - "10.120.146.115"
+
+    - group_name: "pr-c-frontend_ip_10-120-146-116"
+      description: "pr-c-frontend_ip_10-120-146-116"
+      ip_addr_list:
+        - "10.120.146.116"
+
+    - group_name: "pr-c-frontend_ip_10-210-146-206"
+      description: "pr-c-frontend_ip_10-210-146-206"
+      ip_addr_list:
+        - "10.210.146.206"
+
+    - group_name: "pr-c-frontend_ip_10-120-64-152"
+      description: "pr-c-frontend_ip_10-120-64-152"
+      ip_addr_list:
+        - "10.120.64.152"
+
+    - group_name: "pr-c-frontend_ip_10-210-64-152"
+      description: "pr-c-frontend_ip_10-210-64-152"
+      ip_addr_list:
+        - "10.210.64.152"
+
+    - group_name: "pr-c-frontend_ip_10-210-64-140"
+      description: "pr-c-frontend_ip_10-210-64-140"
+      ip_addr_list:
+        - "10.210.64.140"
+
+    - group_name: "pr-c-frontend_ip_10-210-64-142"
+      description: "pr-c-frontend_ip_10-210-64-142"
+      ip_addr_list:
+        - "10.210.64.142"
+
+    - group_name: "pr-c-frontend_ip_10-210-64-147"
+      description: "pr-c-frontend_ip_10-210-64-147"
+      ip_addr_list:
+        - "10.210.64.147"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-143"
+      description: "pr-c-frontend_ip_10-120-39-143"
+      ip_addr_list:
+        - "10.120.39.143"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-142"
+      description: "pr-c-frontend_ip_10-120-39-142"
+      ip_addr_list:
+        - "10.120.39.142"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-147"
+      description: "pr-c-frontend_ip_10-120-39-147"
+      ip_addr_list:
+        - "10.120.39.147"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-148"
+      description: "pr-c-frontend_ip_10-120-39-148"
+      ip_addr_list:
+        - "10.120.39.148"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-140"
+      description: "pr-c-frontend_ip_10-120-163-140"
+      ip_addr_list:
+        - "10.120.163.140"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-140"
+      description: "pr-c-frontend_ip_10-180-163-140"
+      ip_addr_list:
+        - "10.180.163.140"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-145"
+      description: "pr-c-frontend_ip_10-180-163-145"
+      ip_addr_list:
+        - "10.180.163.145"
+
+    - group_name: "pr-c-frontend_ip_10-210-163-20"
+      description: "pr-c-frontend_ip_10-210-163-20"
+      ip_addr_list:
+        - "10.210.163.20"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-97"
+      description: "pr-c-frontend_ip_10-120-163-97"
+      ip_addr_list:
+        - "10.120.163.97"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-98"
+      description: "pr-c-frontend_ip_10-120-163-98"
+      ip_addr_list:
+        - "10.120.163.98"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-10"
+      description: "pr-c-frontend_ip_10-120-46-10"
+      ip_addr_list:
+        - "10.120.46.10"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-11"
+      description: "pr-c-frontend_ip_10-120-46-11"
+      ip_addr_list:
+        - "10.120.46.11"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-12"
+      description: "pr-c-frontend_ip_10-120-46-12"
+      ip_addr_list:
+        - "10.120.46.12"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-13"
+      description: "pr-c-frontend_ip_10-120-46-13"
+      ip_addr_list:
+        - "10.120.46.13"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-14"
+      description: "pr-c-frontend_ip_10-120-46-14"
+      ip_addr_list:
+        - "10.120.46.14"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-15"
+      description: "pr-c-frontend_ip_10-120-46-15"
+      ip_addr_list:
+        - "10.120.46.15"
+
+    - group_name: "pr-c-frontend_ip_10-180-138-15"
+      description: "pr-c-frontend_ip_10-180-138-15"
+      ip_addr_list:
+        - "10.180.138.15"
+
+    - group_name: "pr-c-frontend_ip_10-180-46-35"
+      description: "pr-c-frontend_ip_10-180-46-35"
+      ip_addr_list:
+        - "10.180.46.35"
+
+    - group_name: "pr-c-frontend_ip_10-180-46-36"
+      description: "pr-c-frontend_ip_10-180-46-36"
+      ip_addr_list:
+        - "10.180.46.36"
+
+    - group_name: "pr-c-frontend_ip_10-180-46-37"
+      description: "pr-c-frontend_ip_10-180-46-37"
+      ip_addr_list:
+        - "10.180.46.37"
+
+    - group_name: "pr-c-frontend_ip_10-180-46-38"
+      description: "pr-c-frontend_ip_10-180-46-38"
+      ip_addr_list:
+        - "10.180.46.38"
+
+    - group_name: "pr-c-frontend_ip_10-180-46-39"
+      description: "pr-c-frontend_ip_10-180-46-39"
+      ip_addr_list:
+        - "10.180.46.39"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-10"
+      description: "pr-c-frontend_ip_10-210-46-10"
+      ip_addr_list:
+        - "10.210.46.10"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-11"
+      description: "pr-c-frontend_ip_10-210-46-11"
+      ip_addr_list:
+        - "10.210.46.11"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-12"
+      description: "pr-c-frontend_ip_10-210-46-12"
+      ip_addr_list:
+        - "10.210.46.12"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-13"
+      description: "pr-c-frontend_ip_10-210-46-13"
+      ip_addr_list:
+        - "10.210.46.13"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-14"
+      description: "pr-c-frontend_ip_10-210-46-14"
+      ip_addr_list:
+        - "10.210.46.14"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-15"
+      description: "pr-c-frontend_ip_10-210-46-15"
+      ip_addr_list:
+        - "10.210.46.15"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-16"
+      description: "pr-c-frontend_ip_10-210-46-16"
+      ip_addr_list:
+        - "10.210.46.16"
+
+    - group_name: "pr-c-frontend_ip_10-210-46-17"
+      description: "pr-c-frontend_ip_10-210-46-17"
+      ip_addr_list:
+        - "10.210.46.17"
+
+    - group_name: "pr-c-frontend_ip_10-1-29-38"
+      description: "pr-c-frontend_ip_10-1-29-38"
+      ip_addr_list:
+        - "10.1.29.38"
+
+    - group_name: "pr-c-frontend_ip_10-1-29-39"
+      description: "pr-c-frontend_ip_10-1-29-39"
+      ip_addr_list:
+        - "10.1.29.39"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-43"
+      description: "pr-c-frontend_ip_10-120-46-43"
+      ip_addr_list:
+        - "10.120.46.43"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-44"
+      description: "pr-c-frontend_ip_10-120-46-44"
+      ip_addr_list:
+        - "10.120.46.44"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-45"
+      description: "pr-c-frontend_ip_10-120-46-45"
+      ip_addr_list:
+        - "10.120.46.45"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-46"
+      description: "pr-c-frontend_ip_10-120-46-46"
+      ip_addr_list:
+        - "10.120.46.46"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-47"
+      description: "pr-c-frontend_ip_10-120-46-47"
+      ip_addr_list:
+        - "10.120.46.47"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-48"
+      description: "pr-c-frontend_ip_10-120-46-48"
+      ip_addr_list:
+        - "10.120.46.48"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-49"
+      description: "pr-c-frontend_ip_10-120-46-49"
+      ip_addr_list:
+        - "10.120.46.49"
+
+    - group_name: "pr-c-frontend_ip_10-120-99-61"
+      description: "pr-c-frontend_ip_10-120-99-61"
+      ip_addr_list:
+        - "10.120.99.61"
+
+    - group_name: "pr-c-frontend_ip_10-120-44-25"
+      description: "pr-c-frontend_ip_10-120-44-25"
+      ip_addr_list:
+        - "10.120.44.25"
+
+    - group_name: "pr-c-frontend_ip_10-120-44-26"
+      description: "pr-c-frontend_ip_10-120-44-26"
+      ip_addr_list:
+        - "10.120.44.26"
+
+    - group_name: "pr-c-frontend_ip_10-120-44-27"
+      description: "pr-c-frontend_ip_10-120-44-27"
+      ip_addr_list:
+        - "10.120.44.27"
+
+    - group_name: "pr-c-frontend_ip_10-180-52-220"
+      description: "pr-c-frontend_ip_10-180-52-220"
+      ip_addr_list:
+        - "10.180.52.220"
+
+    - group_name: "pr-c-frontend_ip_10-180-52-221"
+      description: "pr-c-frontend_ip_10-180-52-221"
+      ip_addr_list:
+        - "10.180.52.221"
+
+    - group_name: "pr-c-frontend_ip_10-180-52-222"
+      description: "pr-c-frontend_ip_10-180-52-222"
+      ip_addr_list:
+        - "10.180.52.222"
+
+    - group_name: "pr-c-frontend_ip_10-1-82-109"
+      description: "pr-c-frontend_ip_10-1-82-109"
+      ip_addr_list:
+        - "10.1.82.109"
+
+    - group_name: "pr-c-frontend_ip_10-1-82-178"
+      description: "pr-c-frontend_ip_10-1-82-178"
+      ip_addr_list:
+        - "10.1.82.178"
+
+    - group_name: "pr-c-frontend_ip_10-1-82-183"
+      description: "pr-c-frontend_ip_10-1-82-183"
+      ip_addr_list:
+        - "10.1.82.183"
+
+    - group_name: "pr-c-frontend_ip_10-1-82-189"
+      description: "pr-c-frontend_ip_10-1-82-189"
+      ip_addr_list:
+        - "10.1.82.189"
+
+    - group_name: "pr-c-frontend_ip_10-1-82-235"
+      description: "pr-c-frontend_ip_10-1-82-235"
+      ip_addr_list:
+        - "10.1.82.235"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-30"
+      description: "pr-c-frontend_ip_10-120-46-30"
+      ip_addr_list:
+        - "10.120.46.30"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-32"
+      description: "pr-c-frontend_ip_10-120-46-32"
+      ip_addr_list:
+        - "10.120.46.32"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-103"
+      description: "pr-c-frontend_ip_10-120-39-103"
+      ip_addr_list:
+        - "10.120.39.103"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-104"
+      description: "pr-c-frontend_ip_10-120-39-104"
+      ip_addr_list:
+        - "10.120.39.104"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-105"
+      description: "pr-c-frontend_ip_10-120-39-105"
+      ip_addr_list:
+        - "10.120.39.105"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-106"
+      description: "pr-c-frontend_ip_10-120-39-106"
+      ip_addr_list:
+        - "10.120.39.106"
+
+    - group_name: "pr-c-frontend_ip_10-180-44-28"
+      description: "pr-c-frontend_ip_10-180-44-28"
+      ip_addr_list:
+        - "10.180.44.28"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-38"
+      description: "pr-c-frontend_ip_10-180-163-38"
+      ip_addr_list:
+        - "10.180.163.38"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-39"
+      description: "pr-c-frontend_ip_10-180-163-39"
+      ip_addr_list:
+        - "10.180.163.39"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-45"
+      description: "pr-c-frontend_ip_10-180-163-45"
+      ip_addr_list:
+        - "10.180.163.45"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-46"
+      description: "pr-c-frontend_ip_10-180-163-46"
+      ip_addr_list:
+        - "10.180.163.46"
+
+    - group_name: "pr-c-frontend_ip_10-120-65-68"
+      description: "pr-c-frontend_ip_10-120-65-68"
+      ip_addr_list:
+        - "10.120.65.68"
+
+    - group_name: "pr-c-frontend_ip_10-210-65-68"
+      description: "pr-c-frontend_ip_10-210-65-68"
+      ip_addr_list:
+        - "10.210.65.68"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-31"
+      description: "pr-c-frontend_ip_10-120-163-31"
+      ip_addr_list:
+        - "10.120.163.31"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-32"
+      description: "pr-c-frontend_ip_10-120-163-32"
+      ip_addr_list:
+        - "10.120.163.32"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-34"
+      description: "pr-c-frontend_ip_10-120-163-34"
+      ip_addr_list:
+        - "10.120.163.34"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-36"
+      description: "pr-c-frontend_ip_10-120-163-36"
+      ip_addr_list:
+        - "10.120.163.36"
+
+    - group_name: "pr-c-frontend_ip_10-210-163-95"
+      description: "pr-c-frontend_ip_10-210-163-95"
+      ip_addr_list:
+        - "10.210.163.95"
+
+    - group_name: "pr-c-frontend_ip_10-210-163-96"
+      description: "pr-c-frontend_ip_10-210-163-96"
+      ip_addr_list:
+        - "10.210.163.96"
+
+    - group_name: "pr-c-frontend_ip_10-210-163-97"
+      description: "pr-c-frontend_ip_10-210-163-97"
+      ip_addr_list:
+        - "10.210.163.97"
+
+    - group_name: "pr-c-frontend_ip_10-210-163-98"
+      description: "pr-c-frontend_ip_10-210-163-98"
+      ip_addr_list:
+        - "10.210.163.98"
+
+    - group_name: "pr-c-frontend_ip_10-210-163-99"
+      description: "pr-c-frontend_ip_10-210-163-99"
+      ip_addr_list:
+        - "10.210.163.99"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-211"
+      description: "pr-c-frontend_ip_10-180-163-211"
+      ip_addr_list:
+        - "10.180.163.211"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-212"
+      description: "pr-c-frontend_ip_10-180-163-212"
+      ip_addr_list:
+        - "10.180.163.212"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-213"
+      description: "pr-c-frontend_ip_10-180-163-213"
+      ip_addr_list:
+        - "10.180.163.213"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-214"
+      description: "pr-c-frontend_ip_10-180-163-214"
+      ip_addr_list:
+        - "10.180.163.214"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-218"
+      description: "pr-c-frontend_ip_10-180-163-218"
+      ip_addr_list:
+        - "10.180.163.218"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-102"
+      description: "pr-c-frontend_ip_10-180-163-102"
+      ip_addr_list:
+        - "10.180.163.102"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-220"
+      description: "pr-c-frontend_ip_10-180-163-220"
+      ip_addr_list:
+        - "10.180.163.220"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-221"
+      description: "pr-c-frontend_ip_10-180-163-221"
+      ip_addr_list:
+        - "10.180.163.221"
+
+    - group_name: "pr-c-frontend_ip_10-180-163-40"
+      description: "pr-c-frontend_ip_10-180-163-40"
+      ip_addr_list:
+        - "10.180.163.40"
+
+
+####SUBNETS IN ACLS###
+    - group_name: "pr-c-frontend_ip_10-120-44-0s23"
+      description: "pr-c-frontend_ip_10-120-44-0s23"
+      ip_addr_list:
+        - "10.120.44.0/23"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-0s24"
+      description: "pr-c-frontend_ip_10-120-46-0s24"
+      ip_addr_list:
+        - "10.120.46.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-134-0s24"
+      description: "pr-c-frontend_ip_10-120-134-0s24"
+      ip_addr_list:
+        - "10.120.134.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-39-0s24"
+      description: "pr-c-frontend_ip_10-120-39-0s24"
+      ip_addr_list:
+        - "10.120.39.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-46-0s25"
+      description: "pr-c-frontend_ip_10-120-46-0s25"
+      ip_addr_list:
+        - "10.120.46.0/25"
+
+    - group_name: "pr-c-frontend_ip_10-118-0-0s16"
+      description: "pr-c-frontend_ip_10-118-0-0s16"
+      ip_addr_list:
+        - "10.118.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-120-141-0s24"
+      description: "pr-c-frontend_ip_10-120-141-0s24"
+      ip_addr_list:
+        - "10.120.141.0/24"
+
+    - group_name: "pr-c-frontend_ip_100-74-144-0s23"
+      description: "pr-c-frontend_ip_100-74-144-0s23"
+      ip_addr_list:
+        - "100.74.144.0/23"
+
+    - group_name: "pr-c-frontend_ip_10-120-66-0s24"
+      description: "pr-c-frontend_ip_10-120-66-0s24"
+      ip_addr_list:
+        - "10.120.66.0/24"
+
+    - group_name: "pr-c-frontend_ip_0-0-0-0s5"
+      description: "pr-c-frontend_ip_0-0-0-0s5"
+      ip_addr_list:
+        - "0.0.0.0/5"
+
+    - group_name: "pr-c-frontend_ip_8-0-0-0s7"
+      description: "pr-c-frontend_ip_8-0-0-0s7"
+      ip_addr_list:
+        - "8.0.0.0/7"
+
+    - group_name: "pr-c-frontend_ip_11-0-0-0s8"
+      description: "pr-c-frontend_ip_11-0-0-0s8"
+      ip_addr_list:
+        - "11.0.0.0/8"
+
+    - group_name: "pr-c-frontend_ip_12-0-0-0s6"
+      description: "pr-c-frontend_ip_12-0-0-0s6"
+      ip_addr_list:
+        - "12.0.0.0/6"
+
+    - group_name: "pr-c-frontend_ip_16-0-0-0s4"
+      description: "pr-c-frontend_ip_16-0-0-0s4"
+      ip_addr_list:
+        - "16.0.0.0/4"
+
+    - group_name: "pr-c-frontend_ip_32-0-0-0s3"
+      description: "pr-c-frontend_ip_32-0-0-0s3"
+      ip_addr_list:
+        - "32.0.0.0/3"
+
+    - group_name: "pr-c-frontend_ip_64-0-0-0s2"
+      description: "pr-c-frontend_ip_64-0-0-0s2"
+      ip_addr_list:
+        - "64.0.0.0/2"
+
+    - group_name: "pr-c-frontend_ip_128-0-0-0s3"
+      description: "pr-c-frontend_ip_128-0-0-0s3"
+      ip_addr_list:
+        - "128.0.0.0/3"
+
+    - group_name: "pr-c-frontend_ip_160-0-0-0s5"
+      description: "pr-c-frontend_ip_160-0-0-0s5"
+      ip_addr_list:
+        - "160.0.0.0/5"
+
+    - group_name: "pr-c-frontend_ip_168-0-0-0s6"
+      description: "pr-c-frontend_ip_168-0-0-0s6"
+      ip_addr_list:
+        - "168.0.0.0/6"
+
+    - group_name: "pr-c-frontend_ip_172-0-0-0s12"
+      description: "pr-c-frontend_ip_172-0-0-0s12"
+      ip_addr_list:
+        - "172.0.0.0/12"
+
+    - group_name: "pr-c-frontend_ip_172-32-0-0s11"
+      description: "pr-c-frontend_ip_172-32-0-0s11"
+      ip_addr_list:
+        - "172.32.0.0/11"
+
+    - group_name: "pr-c-frontend_ip_172-64-0-0s10"
+      description: "pr-c-frontend_ip_172-64-0-0s10"
+      ip_addr_list:
+        - "172.64.0.0/10"
+
+    - group_name: "pr-c-frontend_ip_172-128-0-0s9"
+      description: "pr-c-frontend_ip_172-128-0-0s9"
+      ip_addr_list:
+        - "172.128.0.0/9"
+
+    - group_name: "pr-c-frontend_ip_173-0-0-0s8"
+      description: "pr-c-frontend_ip_173-0-0-0s8"
+      ip_addr_list:
+        - "173.0.0.0/8"
+
+    - group_name: "pr-c-frontend_ip_174-0-0-0s7"
+      description: "pr-c-frontend_ip_174-0-0-0s7"
+      ip_addr_list:
+        - "174.0.0.0/7"
+
+    - group_name: "pr-c-frontend_ip_176-0-0-0s4"
+      description: "pr-c-frontend_ip_176-0-0-0s4"
+      ip_addr_list:
+        - "176.0.0.0/4"
+
+    - group_name: "pr-c-frontend_ip_192-0-0-0s9"
+      description: "pr-c-frontend_ip_192-0-0-0s9"
+      ip_addr_list:
+        - "192.0.0.0/9"
+
+    - group_name: "pr-c-frontend_ip_192-128-0-0s11"
+      description: "pr-c-frontend_ip_192-128-0-0s11"
+      ip_addr_list:
+        - "192.128.0.0/11"
+
+    - group_name: "pr-c-frontend_ip_192-160-0-0s13"
+      description: "pr-c-frontend_ip_192-160-0-0s13"
+      ip_addr_list:
+        - "192.160.0.0/13"
+
+    - group_name: "pr-c-frontend_ip_192-169-0-0s16"
+      description: "pr-c-frontend_ip_192-169-0-0s16"
+      ip_addr_list:
+        - "192.169.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_192-170-0-0s15"
+      description: "pr-c-frontend_ip_192-170-0-0s15"
+      ip_addr_list:
+        - "192.170.0.0/15"
+
+    - group_name: "pr-c-frontend_ip_192-172-0-0s14"
+      description: "pr-c-frontend_ip_192-172-0-0s14"
+      ip_addr_list:
+        - "192.172.0.0/14"
+
+    - group_name: "pr-c-frontend_ip_192-176-0-0s12"
+      description: "pr-c-frontend_ip_192-176-0-0s12"
+      ip_addr_list:
+        - "192.176.0.0/12"
+
+    - group_name: "pr-c-frontend_ip_192-192-0-0s10"
+      description: "pr-c-frontend_ip_192-192-0-0s10"
+      ip_addr_list:
+        - "192.192.0.0/10"
+
+    - group_name: "pr-c-frontend_ip_193-0-0-0s8"
+      description: "pr-c-frontend_ip_193-0-0-0s8"
+      ip_addr_list:
+        - "193.0.0.0/8"
+
+    - group_name: "pr-c-frontend_ip_194-0-0-0s7"
+      description: "pr-c-frontend_ip_194-0-0-0s7"
+      ip_addr_list:
+        - "194.0.0.0/7"
+
+    - group_name: "pr-c-frontend_ip_196-0-0-0s6"
+      description: "pr-c-frontend_ip_196-0-0-0s6"
+      ip_addr_list:
+        - "196.0.0.0/6"
+
+    - group_name: "pr-c-frontend_ip_200-0-0-0s5"
+      description: "pr-c-frontend_ip_200-0-0-0s5"
+      ip_addr_list:
+        - "200.0.0.0/5"
+
+    - group_name: "pr-c-frontend_ip_208-0-0-0s4"
+      description: "pr-c-frontend_ip_208-0-0-0s4"
+      ip_addr_list:
+        - "208.0.0.0/4"
+
+    - group_name: "pr-c-frontend_ip_10-120-33-160s27"
+      description: "pr-c-frontend_ip_10-120-33-160s27"
+      ip_addr_list:
+        - "10.120.33.160/27"
+
+    - group_name: "pr-c-frontend_ip_10-120-38-0s24"
+      description: "pr-c-frontend_ip_10-120-38-0s24"
+      ip_addr_list:
+        - "10.120.38.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-33-0s29"
+      description: "pr-c-frontend_ip_10-120-33-0s29"
+      ip_addr_list:
+        - "10.120.33.0/29"
+
+    - group_name: "pr-c-frontend_ip_10-1-28-0s23"
+      description: "pr-c-frontend_ip_10-1-28-0s23"
+      ip_addr_list:
+        - "10.1.28.0/23"
+
+    - group_name: "pr-c-frontend_ip_10-209-0-0s16"
+      description: "pr-c-frontend_ip_10-209-0-0s16"
+      ip_addr_list:
+        - "10.209.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-194-140-0s24"
+      description: "pr-c-frontend_ip_10-194-140-0s24"
+      ip_addr_list:
+        - "10.194.140.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-210-39-0s24"
+      description: "pr-c-frontend_ip_10-210-39-0s24"
+      ip_addr_list:
+        - "10.210.39.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-100-0s24"
+      description: "pr-c-frontend_ip_10-120-100-0s24"
+      ip_addr_list:
+        - "10.120.100.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-101-0s27"
+      description: "pr-c-frontend_ip_10-120-101-0s27"
+      ip_addr_list:
+        - "10.120.101.0/27"
+
+    - group_name: "pr-c-frontend_ip_10-120-102-0s24"
+      description: "pr-c-frontend_ip_10-120-102-0s24"
+      ip_addr_list:
+        - "10.120.102.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-132-0s24"
+      description: "pr-c-frontend_ip_10-120-132-0s24"
+      ip_addr_list:
+        - "10.120.132.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-180-39-0s24"
+      description: "pr-c-frontend_ip_10-180-39-0s24"
+      ip_addr_list:
+        - "10.180.39.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-160-32s27"
+      description: "pr-c-frontend_ip_10-120-160-32s27"
+      ip_addr_list:
+        - "10.120.160.32/27"
+
+    - group_name: "pr-c-frontend_ip_10-120-32-64s27"
+      description: "pr-c-frontend_ip_10-120-32-64s27"
+      ip_addr_list:
+        - "10.120.32.64/27"
+
+    - group_name: "pr-c-frontend_ip_10-120-37-0s24"
+      description: "pr-c-frontend_ip_10-120-37-0s24"
+      ip_addr_list:
+        - "10.120.37.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-48-96s27"
+      description: "pr-c-frontend_ip_10-120-48-96s27"
+      ip_addr_list:
+        - "10.120.48.96/27"
+
+    - group_name: "pr-c-frontend_ip_10-120-50-0s24"
+      description: "pr-c-frontend_ip_10-120-50-0s24"
+      ip_addr_list:
+        - "10.120.50.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-52-0s24"
+      description: "pr-c-frontend_ip_10-120-52-0s24"
+      ip_addr_list:
+        - "10.120.52.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-156-5-0s24"
+      description: "pr-c-frontend_ip_10-156-5-0s24"
+      ip_addr_list:
+        - "10.156.5.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-0-0s16"
+      description: "pr-c-frontend_ip_10-120-0-0s16"
+      ip_addr_list:
+        - "10.120.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-210-0-0s16"
+      description: "pr-c-frontend_ip_10-210-0-0s16"
+      ip_addr_list:
+        - "10.210.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-180-0-0s16"
+      description: "pr-c-frontend_ip_10-180-0-0s16"
+      ip_addr_list:
+        - "10.180.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-112-0-0s16"
+      description: "pr-c-frontend_ip_10-112-0-0s16"
+      ip_addr_list:
+        - "10.112.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-19-0-0s16"
+      description: "pr-c-frontend_ip_10-19-0-0s16"
+      ip_addr_list:
+        - "10.19.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-0-0-0s8"
+      description: "pr-c-frontend_ip_10-0-0-0s8"
+      ip_addr_list:
+        - "10.0.0.0/8"
+
+    - group_name: "pr-c-frontend_ip_10-120-67-0s24"
+      description: "pr-c-frontend_ip_10-120-67-0s24"
+      ip_addr_list:
+        - "10.120.67.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-72-0s24"
+      description: "pr-c-frontend_ip_10-120-72-0s24"
+      ip_addr_list:
+        - "10.120.72.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-121-0-0s16"
+      description: "pr-c-frontend_ip_10-121-0-0s16"
+      ip_addr_list:
+        - "10.121.0.0/16"
+
+    - group_name: "pr-c-frontend_ip_10-120-129-0s24"
+      description: "pr-c-frontend_ip_10-120-129-0s24"
+      ip_addr_list:
+        - "10.120.129.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-131-0s24"
+      description: "pr-c-frontend_ip_10-120-131-0s24"
+      ip_addr_list:
+        - "10.120.131.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-133-0s24"
+      description: "pr-c-frontend_ip_10-120-133-0s24"
+      ip_addr_list:
+        - "10.120.133.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-136-0s24"
+      description: "pr-c-frontend_ip_10-120-136-0s24"
+      ip_addr_list:
+        - "10.120.136.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-137-0s24"
+      description: "pr-c-frontend_ip_10-120-137-0s24"
+      ip_addr_list:
+        - "10.120.137.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-143-0s24"
+      description: "pr-c-frontend_ip_10-120-143-0s24"
+      ip_addr_list:
+        - "10.120.143.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-145-0s24"
+      description: "pr-c-frontend_ip_10-120-145-0s24"
+      ip_addr_list:
+        - "10.120.145.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-146-0s24"
+      description: "pr-c-frontend_ip_10-120-146-0s24"
+      ip_addr_list:
+        - "10.120.146.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-147-0s24"
+      description: "pr-c-frontend_ip_10-120-147-0s24"
+      ip_addr_list:
+        - "10.120.147.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-148-0s24"
+      description: "pr-c-frontend_ip_10-120-148-0s24"
+      ip_addr_list:
+        - "10.120.148.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-149-0s24"
+      description: "pr-c-frontend_ip_10-120-149-0s24"
+      ip_addr_list:
+        - "10.120.149.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-152-0s24"
+      description: "pr-c-frontend_ip_10-120-152-0s24"
+      ip_addr_list:
+        - "10.120.152.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-153-0s24"
+      description: "pr-c-frontend_ip_10-120-153-0s24"
+      ip_addr_list:
+        - "10.120.153.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-159-0s24"
+      description: "pr-c-frontend_ip_10-120-159-0s24"
+      ip_addr_list:
+        - "10.120.159.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-162-0s24"
+      description: "pr-c-frontend_ip_10-120-162-0s24"
+      ip_addr_list:
+        - "10.120.162.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-163-0s24"
+      description: "pr-c-frontend_ip_10-120-163-0s24"
+      ip_addr_list:
+        - "10.120.163.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-180-0s24"
+      description: "pr-c-frontend_ip_10-120-180-0s24"
+      ip_addr_list:
+        - "10.120.180.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-193-0s24"
+      description: "pr-c-frontend_ip_10-120-193-0s24"
+      ip_addr_list:
+        - "10.120.193.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-194-0s24"
+      description: "pr-c-frontend_ip_10-120-194-0s24"
+      ip_addr_list:
+        - "10.120.194.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-195-0s24"
+      description: "pr-c-frontend_ip_10-120-195-0s24"
+      ip_addr_list:
+        - "10.120.195.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-120-64-0s24"
+      description: "pr-c-frontend_ip_10-120-64-0s24"
+      ip_addr_list:
+        - "10.120.64.0/24"
+
+    - group_name: "pr-c-frontend_ip_192-168-48-0s20"
+      description: "pr-c-frontend_ip_192-168-48-0s20"
+      ip_addr_list:
+        - "192.168.48.0/20"
+
+    - group_name: "pr-c-frontend_ip_192-168-12-0s22"
+      description: "pr-c-frontend_ip_192-168-12-0s22"
+      ip_addr_list:
+        - "192.168.12.0/22"
+
+    - group_name: "pr-c-frontend_ip_192-168-16-0s22"
+      description: "pr-c-frontend_ip_192-168-16-0s22"
+      ip_addr_list:
+        - "192.168.16.0/22"
+
+    - group_name: "pr-c-frontend_ip_10-30-200-0s24"
+      description: "pr-c-frontend_ip_10-30-200-0s24"
+      ip_addr_list:
+        - "10.30.200.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-30-202-0s24"
+      description: "pr-c-frontend_ip_10-30-202-0s24"
+      ip_addr_list:
+        - "10.30.202.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-40-200-0s24"
+      description: "pr-c-frontend_ip_10-40-200-0s24"
+      ip_addr_list:
+        - "10.40.200.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-40-202-0s24"
+      description: "pr-c-frontend_ip_10-40-202-0s24"
+      ip_addr_list:
+        - "10.40.202.0/24"
+
+    - group_name: "pr-c-frontend_ip_10-130-200-0s23"
+      description: "pr-c-frontend_ip_10-130-200-0s23"
+      ip_addr_list:
+        - "10.130.200.0/23"
+
+
+###OBJECTS###
+
+    - group_name: "pr-c-frontend_gibux1023"
+      description: "pr-c-frontend_gibux1023"
+      ip_addr_list:
+        - "10.180.37.190"
+
+    - group_name: "pr-c-frontend_int-api-bonus-proxy-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.181.5.82"
+
+    - group_name: "pr-c-frontend_int-api-sports-pds-cmapi-whapi"
+      description: "pr-c-frontend_int-api-sports-pds-cmapi-whapi"
+      ip_addr_list:
+        - "10.121.5.86"
+
+    - group_name: "pr-c-frontend_sc1uxprcap31"
+      description: "pr-c-frontend_sc1uxprcap31"
+      ip_addr_list:
+        - "10.120.50.31"
+
+    - group_name: "pr-c-frontend_informix-db-vip"
+      description: "pr-c-frontend_informix-db-vip"
+      ip_addr_list:
+        - "10.120.52.100"
+
+    - group_name: "pr-c-frontend_sc1uxprcap32"
+      description: "pr-c-frontend_sc1uxprcap32"
+      ip_addr_list:
+        - "10.120.50.32"
+
+    - group_name: "pr-c-frontend_int-lb-cde-cp-aws-noncde-proxy-sc1-prod-williamhill-plc"
+      description: "CHG0141205"
+      ip_addr_list:
+        - "10.120.44.65"
+
+    - group_name: "pr-c-frontend_sc1apprcmg001"
+      description: "pr-c-frontend_sc1apprcmg001"
+      ip_addr_list:
+        - "10.120.136.12"
+
+    - group_name: "pr-c-frontend_citrix-network-24"
+      description: "pr-c-frontend_citrix-network-24"
+      ip_addr_list:
+        - "10.120.39.0/24"
+
+    - group_name: "pr-c-frontend_int-lb-cdebackoffice-sc1-prod-williamhill-plc"
+      description: "pr-c-frontend_int-lb-cdebackoffice-sc1-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.44.31"
+
+    - group_name: "pr-c-frontend_int-lb-cdebackoffice-williamhill-plc"
+      description: "pr-c-frontend_int-lb-cdebackoffice-williamhill-plc"
+      ip_addr_list:
+        - "10.180.44.31"
+
+    - group_name: "pr-c-frontend_sc1uxprtdb001"
+      description: "CHG0123808"
+      ip_addr_list:
+        - "10.120.177.25"
+
+    - group_name: "pr-c-frontend_was01n-prod-williamhill-plc"
+      description: "CHG0139029"
+      ip_addr_list:
+        - "10.210.64.151"
+
+    - group_name: "pr-c-frontend_svr-openbet-offshore-cde"
+      description: "pr-c-frontend_svr-openbet-offshore-cde"
+      ip_addr_list:
+        - "10.180.74.54"
+
+    - group_name: "pr-c-frontend_int-lb-cdeproxy"
+      description: "pr-c-frontend_int-lb-cdeproxy"
+      ip_addr_list:
+        - "10.180.44.31"
+
+    - group_name: "pr-c-frontend_sc1wnprefs04"
+      description: "pr-c-frontend_sc1wnprefs04"
+      ip_addr_list:
+        - "10.120.39.109"
+
+    - group_name: "pr-c-frontend_brswnprefs04"
+      description: "pr-c-frontend_brswnprefs04"
+      ip_addr_list:
+        - "10.210.39.109"
+
+    - group_name: "pr-c-frontend_sc1wnprein01"
+      description: "pr-c-frontend_sc1wnprein01"
+      ip_addr_list:
+        - "10.120.163.114"
+
+    - group_name: "pr-c-frontend_brswnpredb005"
+      description: "pr-c-frontend_brswnpredb005"
+      ip_addr_list:
+        - "10.210.39.107"
+
+    - group_name: "pr-c-frontend_splunkdeployment-sc1-prod-williamhill-plc"
+      description: "CHG0142763"
+      ip_addr_list:
+        - "10.120.163.99"
+
+    - group_name: "pr-c-frontend_sc1wnprens01-bovip"
+      description: "CHG0126550"
+      ip_addr_list:
+        - "10.120.69.207"
+
+    - group_name: "pr-c-frontend_brsapprcmg002"
+      description: "pr-c-frontend_brsapprcmg002"
+      ip_addr_list:
+        - "10.210.163.13"
+
+    - group_name: "pr-c-frontend_sc1uxpremn77"
+      description: "pr-c-frontend_sc1uxpremn77"
+      ip_addr_list:
+        - "10.120.163.77"
+
+    - group_name: "pr-c-frontend_sc1wnprbkcs01"
+      description: "pr-c-frontend_sc1wnprbkcs01"
+      ip_addr_list:
+        - "10.120.46.30"
+
+    - group_name: "pr-c-frontend_prodjde"
+      description: "pr-c-frontend_prodjde"
+      ip_addr_list:
+        - "10.1.27.20"
+
+    - group_name: "pr-c-frontend_informix-hdr-vip"
+      description: "pr-c-frontend_informix-hdr-vip"
+      ip_addr_list:
+        - "10.120.48.110"
+
+    - group_name: "pr-c-frontend_archive-db"
+      description: "pr-c-frontend_archive-db"
+      ip_addr_list:
+        - "10.120.48.118"
+
+    - group_name: "pr-c-frontend_brsux311"
+      description: "pr-c-frontend_brsux311"
+      ip_addr_list:
+        - "10.210.52.121"
+
+    - group_name: "pr-c-frontend_scc-nessus"
+      description: "pr-c-frontend_scc-nessus"
+      ip_addr_list:
+        - "10.120.143.70"
+
+    - group_name: "pr-c-frontend_sc1wnpremn20"
+      description: "pr-c-frontend_sc1wnpremn20"
+      ip_addr_list:
+        - "10.120.163.40"
+
+    - group_name: "pr-c-frontend_vpn-uk-24"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "192.168.2.0/23"
+
+    - group_name: "pr-c-frontend_sccuxstnmg03"
+      description: "pr-c-frontend_sccuxstnmg03"
+      ip_addr_list:
+        - "10.120.163.131"
+
+    - group_name: "pr-c-frontend_emailhost02"
+      description: "pr-c-frontend_emailhost02"
+      ip_addr_list:
+        - "10.120.33.165"
+
+    - group_name: "pr-c-frontend_emailhost01"
+      description: "pr-c-frontend_emailhost01"
+      ip_addr_list:
+        - "10.120.33.164"
+
+    - group_name: "pr-c-frontend_net_10-120-37-0m24"
+      description: "pr-c-frontend_net_10-120-37-0m24"
+      ip_addr_list:
+        - "10.120.37.0/24"
+
+    - group_name: "pr-c-frontend_sc1isilon-ssip"
+      description: "pr-c-frontend_sc1isilon-ssip"
+      ip_addr_list:
+        - "10.120.46.20"
+
+    - group_name: "pr-c-frontend_scc-nas-ip-range"
+      description: "SCC NAS IP range"
+      ip_addr_list:
+        - "10.120.46.40"
+        - "10.120.46.41"
+        - "10.120.46.42"
+        - "10.120.46.43"
+        - "10.120.46.44"
+        - "10.120.46.45"
+        - "10.120.46.46"
+        - "10.120.46.47"
+        - "10.120.46.48"
+        - "10.120.46.49"
+        - "10.120.46.50"
+        - "10.120.46.51"
+        - "10.120.46.52"
+        - "10.120.46.53"
+        - "10.120.46.54"
+        - "10.120.46.55"
+        - "10.120.46.56"
+        - "10.120.46.57"
+        - "10.120.46.58"
+        - "10.120.46.59"
+
+    - group_name: "pr-c-frontend_isilon-cluster-scc"
+      description: "pr-c-frontend_isilon-cluster-scc"
+      ip_addr_list:
+        - "10.120.46.10"
+        - "10.120.46.11"
+        - "10.120.46.12"
+        - "10.120.46.13"
+        - "10.120.46.14"
+        - "10.120.46.15"
+        - "10.120.46.16"
+        - "10.120.46.17"
+        - "10.120.46.18"
+        - "10.120.46.19"
+        - "10.120.46.20"
+        - "10.120.46.21"
+        - "10.120.46.22"
+        - "10.120.46.23"
+        - "10.120.46.24"
+        - "10.120.46.25"
+        - "10.120.46.26"
+        - "10.120.46.27"
+        - "10.120.46.28"
+        - "10.120.46.29"
+
+    - group_name: "pr-c-frontend_sc1uxprnap71"
+      description: "pr-c-frontend_sc1uxprnap71"
+      ip_addr_list:
+        - "10.120.99.71"
+
+    - group_name: "pr-c-frontend_net_10-210-39-0m24"
+      description: "pr-c-frontend_net_10-210-39-0m24"
+      ip_addr_list:
+        - "10.210.39.0/24"
+
+    - group_name: "pr-c-frontend_sc1wnpredb005"
+      description: "pr-c-frontend_sc1wnpredb005"
+      ip_addr_list:
+        - "10.120.39.107"
+
+    - group_name: "pr-c-frontend_sc1-whapi-servers"
+      description: "CHG0119859"
+      ip_addr_list:
+        - "10.120.37.0/24"
+
+    - group_name: "pr-c-frontend_sc1uxpremg22-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1uxpremg22-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.163.28"
+
+    - group_name: "pr-c-frontend_gibux998"
+      description: "pr-c-frontend_gibux998"
+      ip_addr_list:
+        - "10.180.163.198"
+
+    - group_name: "pr-c-frontend_gibprcap01"
+      description: "pr-c-frontend_gibprcap01"
+      ip_addr_list:
+        - "10.180.46.70"
+
+    - group_name: "pr-c-frontend_sc1wnprepvs05"
+      description: "CHG0146699"
+      ip_addr_list:
+        - "10.120.194.61"
+
+    - group_name: "pr-c-frontend_sc1wnprelic01"
+      description: "CHG0146699"
+      ip_addr_list:
+        - "10.120.39.108"
+
+    - group_name: "pr-c-frontend_classa-8"
+      description: "CHG0018964"
+      ip_addr_list:
+        - "10.0.0.0/8"
+
+    - group_name: "pr-c-frontend_sc1wnprein12"
+      description: "pr-c-frontend_sc1wnprein12"
+      ip_addr_list:
+        - "10.120.163.132"
+
+    - group_name: "pr-c-frontend_scc_snow_collector"
+      description: "pr-c-frontend_scc_snow_collector"
+      ip_addr_list:
+        - "10.120.163.44"
+
+    - group_name: "pr-c-frontend_sc1wnpremg30"
+      description: "pr-c-frontend_sc1wnpremg30"
+      ip_addr_list:
+        - "10.120.136.30"
+
+    - group_name: "pr-c-frontend_scc_internal_01"
+      description: "pr-c-frontend_scc_internal_01"
+      ip_addr_list:
+        - "10.120.37.191"
+
+    - group_name: "pr-c-frontend_sc1apprcwb017"
+      description: "pr-c-frontend_sc1apprcwb017"
+      ip_addr_list:
+        - "10.120.37.208"
+
+    - group_name: "pr-c-frontend_sc1apprcwb018"
+      description: "pr-c-frontend_sc1apprcwb018"
+      ip_addr_list:
+        - "10.120.37.209"
+
+    - group_name: "pr-c-frontend_sc1apprcwb019"
+      description: "pr-c-frontend_sc1apprcwb019"
+      ip_addr_list:
+        - "10.120.37.210"
+
+    - group_name: "pr-c-frontend_sc1apprcwb020"
+      description: "pr-c-frontend_sc1apprcwb020"
+      ip_addr_list:
+        - "10.120.37.211"
+
+    - group_name: "pr-c-frontend_sc1apprcwb021"
+      description: "pr-c-frontend_sc1apprcwb021"
+      ip_addr_list:
+        - "10.120.37.212"
+
+    - group_name: "pr-c-frontend_sc1apprcwb022"
+      description: "pr-c-frontend_sc1apprcwb022"
+      ip_addr_list:
+        - "10.120.37.213"
+
+    - group_name: "pr-c-frontend_sc1apprcwb023"
+      description: "pr-c-frontend_sc1apprcwb023"
+      ip_addr_list:
+        - "10.120.37.214"
+
+    - group_name: "pr-c-frontend_sc1apprcwb024"
+      description: "pr-c-frontend_sc1apprcwb024"
+      ip_addr_list:
+        - "10.120.37.215"
+
+    - group_name: "pr-c-frontend_scc_internal_03"
+      description: "pr-c-frontend_scc_internal_03"
+      ip_addr_list:
+        - "10.120.37.180"
+
+    - group_name: "pr-c-frontend_int-api-sports-pds-cmapi-whapi-es-sc1-prod-williamhill-plc"
+      description: "pr-c-frontend_int-api-sports-pds-cmapi-whapi-es-sc1-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.5.35"
+
+    - group_name: "pr-c-frontend_int-api-sports-pds-cmapi-whapi-it-sc1-prod-williamhill-plc"
+      description: "pr-c-frontend_int-api-sports-pds-cmapi-whapi-it-sc1-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.5.34"
+
+    - group_name: "pr-c-frontend_sc1uxprcap45"
+      description: "pr-c-frontend_sc1uxprcap45"
+      ip_addr_list:
+        - "10.120.50.45"
+
+    - group_name: "pr-c-frontend_sc1uxprcap46"
+      description: "pr-c-frontend_sc1uxprcap46"
+      ip_addr_list:
+        - "10.120.50.46"
+
+    - group_name: "pr-c-frontend_tig_cdeproxy-group-williamhill-plc"
+      description: "pr-c-frontend_tig_cdeproxy-group-williamhill-plc"
+      ip_addr_list:
+        - "10.120.44.29"
+
+    - group_name: "pr-c-frontend_cdeproxy-group-williamhill-plc"
+      description: "pr-c-frontend_cdeproxy-group-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.40"
+
+    - group_name: "pr-c-frontend_scc-backoffice-williamhill-local"
+      description: "pr-c-frontend_scc-backoffice-williamhill-local"
+      ip_addr_list:
+        - "10.120.38.10"
+
+    - group_name: "pr-c-frontend_internalproxy-williamhill-local"
+      description: "pr-c-frontend_internalproxy-williamhill-local"
+      ip_addr_list:
+        - "10.120.66.10"
+
+    - group_name: "pr-c-frontend_tig-backoffice-williamhill-local"
+      description: "pr-c-frontend_tig-backoffice-williamhill-local"
+      ip_addr_list:
+        - "10.120.74.80"
+
+    - group_name: "pr-c-frontend_sc1uxprnap72"
+      description: "pr-c-frontend_sc1uxprnap72"
+      ip_addr_list:
+        - "10.120.99.72"
+
+    - group_name: "pr-c-frontend_sc1uxprnap73"
+      description: "pr-c-frontend_sc1uxprnap73"
+      ip_addr_list:
+        - "10.120.99.73"
+
+    - group_name: "pr-c-frontend_sc1uxprnap74"
+      description: "pr-c-frontend_sc1uxprnap74"
+      ip_addr_list:
+        - "10.120.99.74"
+
+    - group_name: "pr-c-frontend_emailhost03"
+      description: "pr-c-frontend_emailhost03"
+      ip_addr_list:
+        - "10.210.33.164"
+
+    - group_name: "pr-c-frontend_emailhost04"
+      description: "pr-c-frontend_emailhost04"
+      ip_addr_list:
+        - "10.210.33.165"
+
+    - group_name: "pr-c-frontend_emailhost05"
+      description: "pr-c-frontend_emailhost05"
+      ip_addr_list:
+        - "10.180.33.164"
+
+    - group_name: "pr-c-frontend_emailhost06"
+      description: "pr-c-frontend_emailhost06"
+      ip_addr_list:
+        - "10.180.33.165"
+
+    - group_name: "pr-c-frontend_sc1uxpremn002"
+      description: "CHG0123744"
+      ip_addr_list:
+        - "10.120.163.95"
+
+    - group_name: "pr-c-frontend_sc1uxpremn003"
+      description: "CHG0123744"
+      ip_addr_list:
+        - "10.120.163.96"
+
+    - group_name: "pr-c-frontend_sc1uxprgdb05"
+      description: "pr-c-frontend_sc1uxprgdb05"
+      ip_addr_list:
+        - "10.120.99.155"
+
+    - group_name: "pr-c-frontend_ld6uxprndb531"
+      description: "pr-c-frontend_ld6uxprndb531"
+      ip_addr_list:
+        - "10.118.160.128"
+
+    - group_name: "pr-c-frontend_brsux084"
+      description: "pr-c-frontend_brsux084"
+      ip_addr_list:
+        - "10.1.28.133"
+
+    - group_name: "pr-c-frontend_sc1wnpreap10"
+      description: "pr-c-frontend_sc1wnpreap10"
+      ip_addr_list:
+        - "10.120.99.81"
+
+    - group_name: "pr-c-frontend_brswntsap10"
+      description: "pr-c-frontend_brswntsap10"
+      ip_addr_list:
+        - "10.1.28.87"
+
+    - group_name: "pr-c-frontend_ld6wnpreap10"
+      description: "pr-c-frontend_ld6wnpreap10"
+      ip_addr_list:
+        - "10.118.214.32"
+
+    - group_name: "pr-c-frontend_sc1wnprewb10"
+      description: "pr-c-frontend_sc1wnprewb10"
+      ip_addr_list:
+        - "10.120.66.81"
+
+    - group_name: "pr-c-frontend_brswntswb10"
+      description: "pr-c-frontend_brswntswb10"
+      ip_addr_list:
+        - "10.1.28.88"
+
+    - group_name: "pr-c-frontend_ld6wnprewb10"
+      description: "pr-c-frontend_ld6wnprewb10"
+      ip_addr_list:
+        - "10.118.210.32"
+
+    - group_name: "pr-c-frontend_irewnprewb10"
+      description: "pr-c-frontend_irewnprewb10"
+      ip_addr_list:
+        - "10.120.103.3"
+
+    - group_name: "pr-c-frontend_sc1wnpredb003"
+      description: "pr-c-frontend_sc1wnpredb003"
+      ip_addr_list:
+        - "10.120.65.68"
+
+    - group_name: "pr-c-frontend_brswndredb003"
+      description: "pr-c-frontend_brswndredb003"
+      ip_addr_list:
+        - "10.210.65.68"
+
+    - group_name: "pr-c-frontend_devjde"
+      description: "pr-c-frontend_devjde"
+      ip_addr_list:
+        - "10.120.64.174"
+
+    - group_name: "pr-c-frontend_scc-prodjde"
+      description: "pr-c-frontend_scc-prodjde"
+      ip_addr_list:
+        - "10.120.64.140"
+
+    - group_name: "pr-c-frontend_int-lb-qlikview"
+      description: "pr-c-frontend_int-lb-qlikview"
+      ip_addr_list:
+        - "10.120.74.27"
+
+    - group_name: "pr-c-frontend_brswndvncp003"
+      description: "pr-c-frontend_brswndvncp003"
+      ip_addr_list:
+        - "10.209.32.11"
+
+    - group_name: "pr-c-frontend_brsuxprsap01-brs-prod-williamhill-plc"
+      description: "pr-c-frontend_brsuxprsap01-brs-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.210.65.100"
+
+    - group_name: "pr-c-frontend_sc1uxprsap01-sc1-prod-williamhill-plc"
+      description: "CHG0125209"
+      ip_addr_list:
+        - "10.120.65.100"
+
+    - group_name: "pr-c-frontend_sc1wnprefs03"
+      description: "pr-c-frontend_sc1wnprefs03"
+      ip_addr_list:
+        - "10.120.194.53"
+
+    - group_name: "pr-c-frontend_sc1wnprefs03-new"
+      description: "pr-c-frontend_sc1wnprefs03-new"
+      ip_addr_list:
+        - "10.120.192.162"
+
+    - group_name: "pr-c-frontend_scc-int-lb-cde-stingray01"
+      description: "pr-c-frontend_scc-int-lb-cde-stingray01"
+      ip_addr_list:
+        - "10.120.44.11"
+
+    - group_name: "pr-c-frontend_scc-int-lb-cde-stingray02"
+      description: "pr-c-frontend_scc-int-lb-cde-stingray02"
+      ip_addr_list:
+        - "10.120.44.12"
+
+    - group_name: "pr-c-frontend_sc1uxprcwb41"
+      description: "pr-c-frontend_sc1uxprcwb41"
+      ip_addr_list:
+        - "10.120.37.41"
+
+    - group_name: "pr-c-frontend_sc1uxprcwb42"
+      description: "pr-c-frontend_sc1uxprcwb42"
+      ip_addr_list:
+        - "10.120.37.42"
+
+    - group_name: "pr-c-frontend_sc1uxprcwb41-new"
+      description: "CHG0146120"
+      ip_addr_list:
+        - "10.120.33.5"
+
+    - group_name: "pr-c-frontend_sc1uxprcwb42-new"
+      description: "CHG0146120"
+      ip_addr_list:
+        - "10.120.33.6"
+
+    - group_name: "pr-c-frontend_sc1uxpreap237_ip_10-120-163-237"
+      description: "pr-c-frontend_sc1uxpreap237_ip_10-120-163-237"
+      ip_addr_list:
+        - "10.120.163.237"
+
+    - group_name: "pr-c-frontend_sc1uxpreap238_ip_10-120-163-238"
+      description: "pr-c-frontend_sc1uxpreap238_ip_10-120-163-238"
+      ip_addr_list:
+        - "10.120.163.238"
+
+    - group_name: "pr-c-frontend_sc1uxpreap239_ip_10-120-163-239"
+      description: "pr-c-frontend_sc1uxpreap239_ip_10-120-163-239"
+      ip_addr_list:
+        - "10.120.163.239"
+
+    - group_name: "pr-c-frontend_aws-central-product-prod-1"
+      description: "CHG0143705"
+      ip_addr_list:
+        - "100.76.144.0/23"
+
+    - group_name: "pr-c-frontend_aws-central-product-prod-2"
+      description: "CHG0143705"
+      ip_addr_list:
+        - "100.76.146.0/23"
+
+    - group_name: "pr-c-frontend_aws-central-product-prod-3"
+      description: "CHG0143705"
+      ip_addr_list:
+        - "100.76.148.0/23"
+
+    - group_name: "pr-c-frontend_brsuxprbkms01-prod-williamhill-plc"
+      description: "CHG0136121"
+      ip_addr_list:
+        - "10.210.46.31"
+
+    - group_name: "pr-c-frontend_brsuxprbkms02-prod-williamhill-plc"
+      description: "CHG0136121"
+      ip_addr_list:
+        - "10.210.46.32"
+
+    - group_name: "pr-c-frontend_brsuxprbkms03-prod-williamhill-plc"
+      description: "CHG0136121"
+      ip_addr_list:
+        - "10.210.46.33"
+
+    - group_name: "pr-c-frontend_sc1uxprbkvs01"
+      description: "pr-c-frontend_sc1uxprbkvs01"
+      ip_addr_list:
+        - "10.120.46.35"
+
+    - group_name: "pr-c-frontend_sc1uxprbkvs02"
+      description: "pr-c-frontend_sc1uxprbkvs02"
+      ip_addr_list:
+        - "10.120.46.36"
+
+    - group_name: "pr-c-frontend_sc1uxprbkvs03"
+      description: "pr-c-frontend_sc1uxprbkvs03"
+      ip_addr_list:
+        - "10.120.46.37"
+
+    - group_name: "pr-c-frontend_sc1uxprbkvs04"
+      description: "pr-c-frontend_sc1uxprbkvs04"
+      ip_addr_list:
+        - "10.120.46.38"
+
+    - group_name: "pr-c-frontend_sc1uxprbkvs05"
+      description: "pr-c-frontend_sc1uxprbkvs05"
+      ip_addr_list:
+        - "10.120.46.39"
+
+    - group_name: "pr-c-frontend_ld6prapvc01"
+      description: "pr-c-frontend_ld6prapvc01"
+      ip_addr_list:
+        - "10.112.8.253"
+
+    - group_name: "pr-c-frontend_sc1uxprbkms01"
+      description: "pr-c-frontend_sc1uxprbkms01"
+      ip_addr_list:
+        - "10.120.46.31"
+
+    - group_name: "pr-c-frontend_sc1uxprbkms02"
+      description: "pr-c-frontend_sc1uxprbkms02"
+      ip_addr_list:
+        - "10.120.46.32"
+
+    - group_name: "pr-c-frontend_bireports"
+      description: "pr-c-frontend_bireports"
+      ip_addr_list:
+        - "10.120.149.229"
+
+    - group_name: "pr-c-frontend_sc1prcap01-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1prcap01-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.46.70"
+
+    - group_name: "pr-c-frontend_isilon-cluster-gib"
+      description: "pr-c-frontend_isilon-cluster-gib"
+      ip_addr_list:
+        - "10.180.46.10"
+        - "10.180.46.11"
+        - "10.180.46.12"
+        - "10.180.46.13"
+        - "10.180.46.14"
+        - "10.180.46.15"
+        - "10.180.46.16"
+        - "10.180.46.17"
+        - "10.180.46.18"
+        - "10.180.46.19"
+        - "10.180.46.20"
+        - "10.180.46.21"
+        - "10.180.46.22"
+        - "10.180.46.23"
+        - "10.180.46.24"
+        - "10.180.46.25"
+        - "10.180.46.26"
+        - "10.180.46.27"
+        - "10.180.46.28"
+        - "10.180.46.29"
+
+    - group_name: "pr-c-frontend_isilon-cluster-ld6"
+      description: "pr-c-frontend_isilon-cluster-ld6"
+      ip_addr_list:
+        - "10.112.46.10"
+        - "10.112.46.11"
+        - "10.112.46.12"
+        - "10.112.46.13"
+        - "10.112.46.14"
+        - "10.112.46.15"
+        - "10.112.46.16"
+        - "10.112.46.17"
+        - "10.112.46.18"
+        - "10.112.46.19"
+        - "10.112.46.20"
+        - "10.112.46.21"
+        - "10.112.46.22"
+        - "10.112.46.23"
+        - "10.112.46.24"
+        - "10.112.46.25"
+        - "10.112.46.26"
+        - "10.112.46.27"
+        - "10.112.46.28"
+        - "10.112.46.29"
+
+    - group_name: "pr-c-frontend_gamingdb-mgmt-prod-williamhill-plc"
+      description: "pr-c-frontend_gamingdb-mgmt-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.180.146.220"
+
+    - group_name: "pr-c-frontend_gibux531-mgmt-prod-williamhill-plc"
+      description: "pr-c-frontend_gibux531-mgmt-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.180.146.241"
+
+    - group_name: "pr-c-frontend_gibux532-mgmt-prod-williamhill-plc"
+      description: "pr-c-frontend_gibux532-mgmt-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.180.146.242"
+
+    - group_name: "pr-c-frontend_spbkdb-mgmt-prod-williamhill-plc"
+      description: "pr-c-frontend_spbkdb-mgmt-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.180.146.222"
+
+    - group_name: "pr-c-frontend_sc1uxd03"
+      description: "pr-c-frontend_sc1uxd03"
+      ip_addr_list:
+        - "10.120.48.111"
+
+    - group_name: "pr-c-frontend_sc1uxd04"
+      description: "pr-c-frontend_sc1uxd04"
+      ip_addr_list:
+        - "10.120.48.112"
+
+    - group_name: "pr-c-frontend_prod"
+      description: "pr-c-frontend_prod"
+      ip_addr_list:
+        - "10.1.27.250"
+
+    - group_name: "pr-c-frontend_sc1wncpgap11"
+      description: "pr-c-frontend_sc1wncpgap11"
+      ip_addr_list:
+        - "10.120.99.11"
+
+    - group_name: "pr-c-frontend_sc1wnprgap03"
+      description: "pr-c-frontend_sc1wnprgap03"
+      ip_addr_list:
+        - "10.120.99.68"
+
+    - group_name: "pr-c-frontend_sc1wnprgdb02"
+      description: "pr-c-frontend_sc1wnprgdb02"
+      ip_addr_list:
+        - "10.120.99.223"
+
+    - group_name: "pr-c-frontend_stj-accu-01"
+      description: "pr-c-frontend_stj-accu-01"
+      ip_addr_list:
+        - "10.100.4.68"
+
+    - group_name: "pr-c-frontend_stjux049"
+      description: "pr-c-frontend_stjux049"
+      ip_addr_list:
+        - "10.100.50.5"
+
+    - group_name: "pr-c-frontend_sc1wncpgap12"
+      description: "pr-c-frontend_sc1wncpgap12"
+      ip_addr_list:
+        - "10.120.99.41"
+
+    - group_name: "pr-c-frontend_prod1"
+      description: "pr-c-frontend_prod1"
+      ip_addr_list:
+        - "10.120.64.146"
+
+    - group_name: "pr-c-frontend_prod1_dr"
+      description: "pr-c-frontend_prod1_dr"
+      ip_addr_list:
+        - "10.210.64.146"
+
+    - group_name: "pr-c-frontend_sc1uxprcdb03"
+      description: "pr-c-frontend_sc1uxprcdb03"
+      ip_addr_list:
+        - "10.120.52.101"
+
+    - group_name: "pr-c-frontend_sc1uxprcdb04"
+      description: "pr-c-frontend_sc1uxprcdb04"
+      ip_addr_list:
+        - "10.120.52.102"
+
+    - group_name: "pr-c-frontend_10-120-46-40"
+      description: "pr-c-frontend_10-120-46-40"
+      ip_addr_list:
+        - "10.120.46.40"
+
+    - group_name: "pr-c-frontend_10-120-46-41"
+      description: "pr-c-frontend_10-120-46-41"
+      ip_addr_list:
+        - "10.120.46.41"
+
+    - group_name: "pr-c-frontend_10-120-46-42"
+      description: "pr-c-frontend_10-120-46-42"
+      ip_addr_list:
+        - "10.120.46.42"
+
+    - group_name: "pr-c-frontend_paragon-crisantaverbo"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.33.165"
+
+    - group_name: "pr-c-frontend_paragon-ellezarmarcelo"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.32.44"
+
+    - group_name: "pr-c-frontend_paragon-jeanbuenaventura"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.32.57"
+
+    - group_name: "pr-c-frontend_paragon-mariegracedioniso"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.33.78"
+
+    - group_name: "pr-c-frontend_paragon-reggiealtarejos"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.32.152"
+
+    - group_name: "pr-c-frontend_paragon-rommeltomas"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.33.102"
+
+    - group_name: "pr-c-frontend_paragon-waylansebastian"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.33.85"
+
+    - group_name: "pr-c-frontend_trg-manilla-16"
+      description: "pr-c-frontend_trg-manilla-16"
+      ip_addr_list:
+        - "10.123.0.0/16"
+
+    - group_name: "pr-c-frontend_telaviv-172-18-0-0-22"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "172.18.0.0/22"
+
+    - group_name: "pr-c-frontend_vpn-gib-24"
+      description: "CHG0022234"
+      ip_addr_list:
+        - "192.168.201.0/24"
+
+    - group_name: "pr-c-frontend_openbet-dr-24"
+      description: "pr-c-frontend_openbet-dr-24"
+      ip_addr_list:
+        - "10.193.30.0/24"
+
+    - group_name: "pr-c-frontend_openbet-live-24"
+      description: "pr-c-frontend_openbet-live-24"
+      ip_addr_list:
+        - "10.194.20.0/24"
+
+    - group_name: "pr-c-frontend_cdebackoffice-williamhill-local"
+      description: "pr-c-frontend_cdebackoffice-williamhill-local"
+      ip_addr_list:
+        - "10.120.38.10"
+
+    - group_name: "pr-c-frontend_brs-checkpoint-vpn-ra"
+      description: "pr-c-frontend_brs-checkpoint-vpn-ra"
+      ip_addr_list:
+        - "192.168.2.0/23"
+
+    - group_name: "pr-c-frontend_lcw-net-10-1-82-0_23"
+      description: "pr-c-frontend_lcw-net-10-1-82-0_23"
+      ip_addr_list:
+        - "10.1.82.0/23"
+
+    - group_name: "pr-c-frontend_lcw-net-10-1-86-0_23"
+      description: "pr-c-frontend_lcw-net-10-1-86-0_23"
+      ip_addr_list:
+        - "10.1.86.0/23"
+
+    - group_name: "pr-c-frontend_stj-net-10-1-74-0_24"
+      description: "pr-c-frontend_stj-net-10-1-74-0_24"
+      ip_addr_list:
+        - "10.1.74.0/24"
+
+    - group_name: "pr-c-frontend_krk-eoc-lan"
+      description: "pr-c-frontend_krk-eoc-lan"
+      ip_addr_list:
+        - "10.55.14.0/28"
+
+    - group_name: "pr-c-frontend_krk-eoc-wifi"
+      description: "pr-c-frontend_krk-eoc-wifi"
+      ip_addr_list:
+        - "10.55.226.0/28"
+
+    - group_name: "pr-c-frontend_10-55-12-74"
+      description: "pr-c-frontend_10-55-12-74"
+      ip_addr_list:
+        - "10.55.12.74"
+
+    - group_name: "pr-c-frontend_10-55-14-18"
+      description: "pr-c-frontend_10-55-14-18"
+      ip_addr_list:
+        - "10.55.14.18"
+
+    - group_name: "pr-c-frontend_10-55-14-19"
+      description: "pr-c-frontend_10-55-14-19"
+      ip_addr_list:
+        - "10.55.14.19"
+
+    - group_name: "pr-c-frontend_10-55-14-20"
+      description: "pr-c-frontend_10-55-14-20"
+      ip_addr_list:
+        - "10.55.14.20"
+
+    - group_name: "pr-c-frontend_10-55-14-22"
+      description: "pr-c-frontend_10-55-14-22"
+      ip_addr_list:
+        - "10.55.14.22"
+
+    - group_name: "pr-c-frontend_10-55-226-18"
+      description: "pr-c-frontend_10-55-226-18"
+      ip_addr_list:
+        - "10.55.226.18"
+
+    - group_name: "pr-c-frontend_10-55-226-19"
+      description: "pr-c-frontend_10-55-226-19"
+      ip_addr_list:
+        - "10.55.226.19"
+
+    - group_name: "pr-c-frontend_10-55-226-20"
+      description: "pr-c-frontend_10-55-226-20"
+      ip_addr_list:
+        - "10.55.226.20"
+
+    - group_name: "pr-c-frontend_10-55-226-62"
+      description: "pr-c-frontend_10-55-226-62"
+      ip_addr_list:
+        - "10.55.226.62"
+
+    - group_name: "pr-c-frontend_10-55-226-74"
+      description: "pr-c-frontend_10-55-226-74"
+      ip_addr_list:
+        - "10.55.226.74"
+
+    - group_name: "pr-c-frontend_net_10-55-60-0_28"
+      description: "pr-c-frontend_net_10-55-60-0_28"
+      ip_addr_list:
+        - "10.55.60.0/28"
+
+    - group_name: "pr-c-frontend_classb-12"
+      description: "CHG0018964"
+      ip_addr_list:
+        - "172.16.0.0/12"
+
+    - group_name: "pr-c-frontend_classc-16"
+      description: "CHG0018964"
+      ip_addr_list:
+        - "192.168.0.0/16"
+
+    - group_name: "pr-c-frontend_lcw-robrussell"
+      description: "pr-c-frontend_lcw-robrussell"
+      ip_addr_list:
+        - "10.1.82.135"
+
+    - group_name: "pr-c-frontend_10-121-5-0slash24"
+      description: "pr-c-frontend_10-121-5-0slash24"
+      ip_addr_list:
+        - "10.121.5.0/24"
+
+    - group_name: "pr-c-frontend_net-inv-cde-api-lan"
+      description: "CHG0071475"
+      ip_addr_list:
+        - "10.122.5.0/24"
+
+    - group_name: "pr-c-frontend_wh0004371"
+      description: "pr-c-frontend_wh0004371"
+      ip_addr_list:
+        - "10.1.83.5"
+
+    - group_name: "pr-c-frontend_test-prod-williamhill"
+      description: "pr-c-frontend_test-prod-williamhill"
+      ip_addr_list:
+        - "10.1.82.24"
+
+    - group_name: "pr-c-frontend_10-1-83-11"
+      description: "pr-c-frontend_10-1-83-11"
+      ip_addr_list:
+        - "10.1.83.11"
+
+    - group_name: "pr-c-frontend_10-53-32-107"
+      description: "pr-c-frontend_10-53-32-107"
+      ip_addr_list:
+        - "10.53.32.107"
+
+    - group_name: "pr-c-frontend_10-53-32-93"
+      description: "pr-c-frontend_10-53-32-93"
+      ip_addr_list:
+        - "10.53.32.93"
+
+    - group_name: "pr-c-frontend_10-53-33-120"
+      description: "pr-c-frontend_10-53-33-120"
+      ip_addr_list:
+        - "10.53.32.120"
+
+    - group_name: "pr-c-frontend_10-53-33-56"
+      description: "pr-c-frontend_10-53-33-56"
+      ip_addr_list:
+        - "10.53.33.56"
+
+    - group_name: "pr-c-frontend_10-1-82-184"
+      description: "pr-c-frontend_10-1-82-184"
+      ip_addr_list:
+        - "10.1.82.184"
+
+    - group_name: "pr-c-frontend_10-1-82-24"
+      description: "pr-c-frontend_10-1-82-24"
+      ip_addr_list:
+        - "10.1.82.24"
+
+    - group_name: "pr-c-frontend_10-1-83-154"
+      description: "pr-c-frontend_10-1-83-154"
+      ip_addr_list:
+        - "10.1.83.154"
+
+    - group_name: "pr-c-frontend_sc1wnprnap024-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1wnprnap024-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.100.70"
+
+    - group_name: "pr-c-frontend_serveroperations-27"
+      description: "Server OPS"
+      ip_addr_list:
+        - "10.1.82.160/27"
+
+    - group_name: "pr-c-frontend_brsns01"
+      description: "pr-c-frontend_brsns01"
+      ip_addr_list:
+        - "10.210.193.235"
+
+    - group_name: "pr-c-frontend_brsns02"
+      description: "pr-c-frontend_brsns02"
+      ip_addr_list:
+        - "10.210.193.236"
+
+    - group_name: "pr-c-frontend_gibns01"
+      description: "pr-c-frontend_gibns01"
+      ip_addr_list:
+        - "10.180.193.235"
+
+    - group_name: "pr-c-frontend_gibns02"
+      description: "pr-c-frontend_gibns02"
+      ip_addr_list:
+        - "10.180.193.236"
+
+    - group_name: "pr-c-frontend_sccns01"
+      description: "pr-c-frontend_sccns01"
+      ip_addr_list:
+        - "10.120.193.235"
+
+    - group_name: "pr-c-frontend_sccns02"
+      description: "pr-c-frontend_sccns02"
+      ip_addr_list:
+        - "10.120.193.236"
+
+    - group_name: "pr-c-frontend_ld6ns01"
+      description: "pr-c-frontend_ld6ns01"
+      ip_addr_list:
+        - "10.112.208.11"
+
+    - group_name: "pr-c-frontend_ld6ns02"
+      description: "pr-c-frontend_ld6ns02"
+      ip_addr_list:
+        - "10.112.208.12"
+
+    - group_name: "pr-c-frontend_brs-dev-test"
+      description: "pr-c-frontend_brs-dev-test"
+      ip_addr_list:
+        - "10.209.32.0/24"
+
+    - group_name: "pr-c-frontend_brs-dev-test-old"
+      description: "pr-c-frontend_brs-dev-test-old"
+      ip_addr_list:
+        - "10.1.28.0/23"
+
+    - group_name: "pr-c-frontend_gib-corp-tier"
+      description: "pr-c-frontend_gib-corp-tier"
+      ip_addr_list:
+        - "10.180.24.0/24"
+
+    - group_name: "pr-c-frontend_gib-ncde-db-tier"
+      description: "pr-c-frontend_gib-ncde-db-tier"
+      ip_addr_list:
+        - "10.180.98.0/24"
+
+    - group_name: "pr-c-frontend_gib-ncde-mgmt-tier"
+      description: "pr-c-frontend_gib-ncde-mgmt-tier"
+      ip_addr_list:
+        - "10.180.146.0/24"
+
+    - group_name: "pr-c-frontend_sc1-cde-frontend-hdr-tier"
+      description: "pr-c-frontend_sc1-cde-frontend-hdr-tier"
+      ip_addr_list:
+        - "10.120.48.96/27"
+
+    - group_name: "pr-c-frontend_sc1-ncde-app-tier"
+      description: "pr-c-frontend_sc1-ncde-app-tier"
+      ip_addr_list:
+        - "10.120.99.0/24"
+
+    - group_name: "pr-c-frontend_sc1-ncde-frontend-ods-tier"
+      description: "pr-c-frontend_sc1-ncde-frontend-ods-tier"
+      ip_addr_list:
+        - "10.120.100.0/24"
+
+    - group_name: "pr-c-frontend_sc1-ncde-mgmt-tier"
+      description: "pr-c-frontend_sc1-ncde-mgmt-tier"
+      ip_addr_list:
+        - "10.120.146.0/24"
+
+    - group_name: "pr-c-frontend_sc1-retail-mgmt-tier"
+      description: "pr-c-frontend_sc1-retail-mgmt-tier"
+      ip_addr_list:
+        - "10.120.180.0/24"
+
+    - group_name: "pr-c-frontend_sc1-ad-tier"
+      description: "pr-c-frontend_sc1-ad-tier"
+      ip_addr_list:
+        - "10.120.194.0/26"
+
+    - group_name: "pr-c-frontend_sc1-monitoring"
+      description: "pr-c-frontend_sc1-monitoring"
+      ip_addr_list:
+        - "10.120.163.0/24"
+
+    - group_name: "pr-c-frontend_sc1uxpremn74"
+      description: "CHG0067511"
+      ip_addr_list:
+        - "10.120.163.74"
+
+    - group_name: "pr-c-frontend_10-120-46-31"
+      description: "pr-c-frontend_10-120-46-31"
+      ip_addr_list:
+        - "10.120.46.31"
+
+    - group_name: "pr-c-frontend_prdxnex01box001-prod-williamhill-plc"
+      description: "pr-c-frontend_prdxnex01box001-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.10.109"
+
+    - group_name: "pr-c-frontend_prdxnex01box002-prod-williamhill-plc"
+      description: "pr-c-frontend_prdxnex01box002-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.10.110"
+
+    - group_name: "pr-c-frontend_prdxnex01box003-prod-williamhill-plc"
+      description: "pr-c-frontend_prdxnex01box003-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.121.10.115"
+
+    - group_name: "pr-c-frontend_ld6uxpremn11"
+      description: "CHG0122369"
+      ip_addr_list:
+        - "10.112.12.110"
+
+    - group_name: "pr-c-frontend_sc1uxpremn006"
+      description: "pr-c-frontend_sc1uxpremn006"
+      ip_addr_list:
+        - "10.120.163.118"
+
+    - group_name: "pr-c-frontend_aws-f5-slash24"
+      description: "CHG0127113"
+      ip_addr_list:
+        - "10.125.0.0/24"
+
+    - group_name: "pr-c-frontend_aws-irl-f5-slash24"
+      description: "pr-c-frontend_aws-irl-f5-slash24"
+      ip_addr_list:
+        - "10.125.4.0/24"
+
+    - group_name: "pr-c-frontend_10-120-46-16"
+      description: "pr-c-frontend_10-120-46-16"
+      ip_addr_list:
+        - "10.120.46.16"
+
+    - group_name: "pr-c-frontend_10-120-46-17"
+      description: "pr-c-frontend_10-120-46-17"
+      ip_addr_list:
+        - "10.120.46.17"
+
+    - group_name: "pr-c-frontend_10-120-46-18"
+      description: "pr-c-frontend_10-120-46-18"
+      ip_addr_list:
+        - "10.120.46.18"
+
+    - group_name: "pr-c-frontend_10-120-46-19"
+      description: "pr-c-frontend_10-120-46-19"
+      ip_addr_list:
+        - "10.120.46.19"
+
+    - group_name: "pr-c-frontend_uk-sc1-apic1"
+      description: "pr-c-frontend_uk-sc1-apic1"
+      ip_addr_list:
+        - "10.120.129.98"
+
+    - group_name: "pr-c-frontend_uk-sc1-apic2"
+      description: "pr-c-frontend_uk-sc1-apic2"
+      ip_addr_list:
+        - "10.120.129.99"
+
+    - group_name: "pr-c-frontend_uk-sc1-apic3"
+      description: "pr-c-frontend_uk-sc1-apic3"
+      ip_addr_list:
+        - "10.120.129.100"
+
+    - group_name: "pr-c-frontend_10-120-38-11"
+      description: "pr-c-frontend_10-120-38-11"
+      ip_addr_list:
+        - "10.120.38.11"
+
+    - group_name: "pr-c-frontend_10-120-38-12"
+      description: "pr-c-frontend_10-120-38-12"
+      ip_addr_list:
+        - "10.120.38.12"
+
+    - group_name: "pr-c-frontend_10-120-38-13"
+      description: "pr-c-frontend_10-120-38-13"
+      ip_addr_list:
+        - "10.120.38.13"
+
+    - group_name: "pr-c-frontend_cdeproxy-williamhill-remote"
+      description: "pr-c-frontend_cdeproxy-williamhill-remote"
+      ip_addr_list:
+        - "10.180.42.80"
+
+    - group_name: "pr-c-frontend_vmc-retail-test"
+      description: "CHG0145216"
+      ip_addr_list:
+        - "10.233.9.0/24"
+
+    - group_name: "pr-c-frontend_bfawnpredc01"
+      description: "pr-c-frontend_bfawnpredc01"
+      ip_addr_list:
+        - "10.56.9.11"
+
+    - group_name: "pr-c-frontend_brswnpredc01"
+      description: "CHG0138309"
+      ip_addr_list:
+        - "10.210.194.11"
+
+    - group_name: "pr-c-frontend_brswnpredc02_ip_10-210-194-12"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.210.194.12"
+
+    - group_name: "pr-c-frontend_brswnpredc03-chg0144834"
+      description: "CHG0144834"
+      ip_addr_list:
+        - "10.210.194.13"
+
+    - group_name: "pr-c-frontend_gibwnpredc02_ip_10-180-194-12"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.180.194.12"
+
+    - group_name: "pr-c-frontend_gibwnpredc03_ip_10-180-194-13"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.180.194.13"
+
+    - group_name: "pr-c-frontend_irewnprdc01"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "100.72.225.135"
+
+    - group_name: "pr-c-frontend_irewnprdc02"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "100.72.225.167"
+
+    - group_name: "pr-c-frontend_nvawnprdc01"
+      description: "CHG0144834"
+      ip_addr_list:
+        - "100.97.1.135"
+
+    - group_name: "pr-c-frontend_nvawnprdc02"
+      description: "CHG0144834"
+      ip_addr_list:
+        - "100.97.1.167"
+
+    - group_name: "pr-c-frontend_krawnpredc01"
+      description: "pr-c-frontend_krawnpredc01"
+      ip_addr_list:
+        - "10.55.9.11"
+
+    - group_name: "pr-c-frontend_krawnpredc02"
+      description: "pr-c-frontend_krawnpredc02"
+      ip_addr_list:
+        - "10.55.9.12"
+
+    - group_name: "pr-c-frontend_ld6wnpredc01-new"
+      description: "pr-c-frontend_ld6wnpredc01-new"
+      ip_addr_list:
+        - "10.19.2.21"
+
+    - group_name: "pr-c-frontend_ld6wnpredc02-new"
+      description: "pr-c-frontend_ld6wnpredc02-new"
+      ip_addr_list:
+        - "10.19.2.22"
+
+    - group_name: "pr-c-frontend_mnlwnpredc02_ip_10-123-197-11"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.123.197.11"
+
+    - group_name: "pr-c-frontend_mnlwnpredc03"
+      description: "pr-c-frontend_mnlwnpredc03"
+      ip_addr_list:
+        - "10.123.197.16"
+
+    - group_name: "pr-c-frontend_sc1wnpredc01"
+      description: "CHG0138309"
+      ip_addr_list:
+        - "10.120.194.11"
+
+    - group_name: "pr-c-frontend_sc1wnpredc02"
+      description: "CHG0138309"
+      ip_addr_list:
+        - "10.120.194.12"
+
+    - group_name: "pr-c-frontend_sc1wnpredc03_ip_10-120-194-13"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.13"
+
+    - group_name: "pr-c-frontend_sc1wnpredc04_ip_10-120-194-14"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.14"
+
+    - group_name: "pr-c-frontend_sc1wnpredc05_ip_10-120-194-15"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.15"
+
+    - group_name: "pr-c-frontend_sc1wnpredc08_ip_10-120-194-18"
+      description: "CHG0141790"
+      ip_addr_list:
+        - "10.120.194.18"
+
+    - group_name: "pr-c-frontend_sofwnpredc01"
+      description: "pr-c-frontend_sofwnpredc01"
+      ip_addr_list:
+        - "10.53.98.10"
+
+    - group_name: "pr-c-frontend_sofwnpredc02"
+      description: "pr-c-frontend_sofwnpredc02"
+      ip_addr_list:
+        - "10.53.98.11"
+
+    - group_name: "pr-c-frontend_brsapprcmg002-group-williamhill-plc"
+      description: "CHG0142765"
+      ip_addr_list:
+        - "10.210.163.13"
+
+    - group_name: "pr-c-frontend_sc1uxpreap242"
+      description: "pr-c-frontend_sc1uxpreap242"
+      ip_addr_list:
+        - "10.120.163.242"
+
+    - group_name: "pr-c-frontend_sc1uxrdk"
+      description: "pr-c-frontend_sc1uxrdk"
+      ip_addr_list:
+        - "10.120.163.131"
+
+    - group_name: "pr-c-frontend_brsux910"
+      description: "pr-c-frontend_brsux910"
+      ip_addr_list:
+        - "10.1.28.4"
+
+    - group_name: "pr-c-frontend_gibux910"
+      description: "pr-c-frontend_gibux910"
+      ip_addr_list:
+        - "10.180.163.108"
+
+    - group_name: "pr-c-frontend_ld6uxpreds01"
+      description: "pr-c-frontend_ld6uxpreds01"
+      ip_addr_list:
+        - "10.112.12.20"
+
+    - group_name: "pr-c-frontend_sc1uxpreds01"
+      description: "pr-c-frontend_sc1uxpreds01"
+      ip_addr_list:
+        - "10.120.194.20"
+
+    - group_name: "pr-c-frontend_sc1uxstnmg01"
+      description: "pr-c-frontend_sc1uxstnmg01"
+      ip_addr_list:
+        - "10.120.163.130"
+
+    - group_name: "pr-c-frontend_brsuxkat"
+      description: "pr-c-frontend_brsuxkat"
+      ip_addr_list:
+        - "10.210.163.130"
+
+    - group_name: "pr-c-frontend_gibuxkat"
+      description: "pr-c-frontend_gibuxkat"
+      ip_addr_list:
+        - "10.180.163.130"
+
+    - group_name: "pr-c-frontend_brswsus"
+      description: "pr-c-frontend_brswsus"
+      ip_addr_list:
+        - "10.210.163.114"
+
+    - group_name: "pr-c-frontend_gibwsus"
+      description: "pr-c-frontend_gibwsus"
+      ip_addr_list:
+        - "10.180.163.114"
+
+    - group_name: "pr-c-frontend_stjwsus"
+      description: "pr-c-frontend_stjwsus"
+      ip_addr_list:
+        - "10.110.163.114"
+
+    - group_name: "pr-c-frontend_gibux-hf1"
+      description: "pr-c-frontend_gibux-hf1"
+      ip_addr_list:
+        - "10.180.163.37"
+
+    - group_name: "pr-c-frontend_gibux-indx1"
+      description: "pr-c-frontend_gibux-indx1"
+      ip_addr_list:
+        - "10.180.163.35"
+
+    - group_name: "pr-c-frontend_gibux-indx2"
+      description: "pr-c-frontend_gibux-indx2"
+      ip_addr_list:
+        - "10.180.163.36"
+
+    - group_name: "pr-c-frontend_gibuxpremn01"
+      description: "pr-c-frontend_gibuxpremn01"
+      ip_addr_list:
+        - "10.180.163.22"
+
+    - group_name: "pr-c-frontend_gibuxpremn03"
+      description: "pr-c-frontend_gibuxpremn03"
+      ip_addr_list:
+        - "10.180.163.24"
+
+    - group_name: "pr-c-frontend_gibuxpremn04"
+      description: "pr-c-frontend_gibuxpremn04"
+      ip_addr_list:
+        - "10.180.163.25"
+
+    - group_name: "pr-c-frontend_sc1uxpromn012"
+      description: "pr-c-frontend_sc1uxpromn012"
+      ip_addr_list:
+        - "10.120.163.99"
+
+    - group_name: "pr-c-frontend_10-121-7-0slash24"
+      description: "pr-c-frontend_10-121-7-0slash24"
+      ip_addr_list:
+        - "10.121.7.0/24"
+
+    - group_name: "pr-c-frontend_brsuxpremn65"
+      description: "CHG0079749"
+      ip_addr_list:
+        - "10.210.163.65"
+
+    - group_name: "pr-c-frontend_brsuxpremn66"
+      description: "CHG0079749"
+      ip_addr_list:
+        - "10.210.163.66"
+
+    - group_name: "pr-c-frontend_sc1uxpremn65"
+      description: "CHG0079749"
+      ip_addr_list:
+        - "10.120.163.65"
+
+    - group_name: "pr-c-frontend_sc1uxpremn66"
+      description: "CHG0079749"
+      ip_addr_list:
+        - "10.120.163.66"
+
+    - group_name: "pr-c-frontend_ld6uxpremn13"
+      description: "pr-c-frontend_ld6uxpremn13"
+      ip_addr_list:
+        - "10.112.12.112"
+
+    - group_name: "pr-c-frontend_brswndremg002"
+      description: "pr-c-frontend_brswndremg002"
+      ip_addr_list:
+        - "10.210.194.52"
+
+    - group_name: "pr-c-frontend_sc1wnpremg002"
+      description: "pr-c-frontend_sc1wnpremg002"
+      ip_addr_list:
+        - "10.120.194.52"
+
+    - group_name: "pr-c-frontend_sc1appresc02-data"
+      description: "CHG0122435"
+      ip_addr_list:
+        - "10.120.163.151"
+
+    - group_name: "pr-c-frontend_sc1appresc03-data"
+      description: "CHG0122435"
+      ip_addr_list:
+        - "10.120.163.152"
+
+    - group_name: "pr-c-frontend_sc1apprcwb01-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.181"
+
+    - group_name: "pr-c-frontend_sc1apprcwb02-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.182"
+
+    - group_name: "pr-c-frontend_sc1apprcwb03-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.183"
+
+    - group_name: "pr-c-frontend_sc1apprcwb04-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.184"
+
+    - group_name: "pr-c-frontend_sc1apprcwb09-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.200"
+
+    - group_name: "pr-c-frontend_sc1apprcwb10-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.201"
+
+    - group_name: "pr-c-frontend_sc1apprcwb11-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.202"
+
+    - group_name: "pr-c-frontend_sc1apprcwb12-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.203"
+
+    - group_name: "pr-c-frontend_sc1apprcwb005-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.196"
+
+    - group_name: "pr-c-frontend_sc1apprcwb006-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.197"
+
+    - group_name: "pr-c-frontend_sc1apprcwb007-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.198"
+
+    - group_name: "pr-c-frontend_sc1apprcwb008-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.199"
+
+    - group_name: "pr-c-frontend_sc1apprcwb013-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb013-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.204"
+
+    - group_name: "pr-c-frontend_sc1apprcwb014-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb014-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.205"
+
+    - group_name: "pr-c-frontend_sc1apprcwb016-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb016-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.207"
+
+    - group_name: "pr-c-frontend_sc1apprcwb015-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb015-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.206"
+
+    - group_name: "pr-c-frontend_sc1apprcwb017-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.208"
+
+    - group_name: "pr-c-frontend_sc1apprcwb018-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.209"
+
+    - group_name: "pr-c-frontend_sc1apprcwb019-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.210"
+
+    - group_name: "pr-c-frontend_sc1apprcwb020-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.211"
+
+    - group_name: "pr-c-frontend_sc1apprcwb021-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.212"
+
+    - group_name: "pr-c-frontend_sc1apprcwb022-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.213"
+
+    - group_name: "pr-c-frontend_sc1apprcwb023-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.214"
+
+    - group_name: "pr-c-frontend_sc1apprcwb024-prod-williamhill-plc"
+      description: "CHG0144060"
+      ip_addr_list:
+        - "10.120.37.215"
+
+    - group_name: "pr-c-frontend_sc1apprcwb01"
+      description: "pr-c-frontend_sc1apprcwb01"
+      ip_addr_list:
+        - "10.120.37.181"
+
+    - group_name: "pr-c-frontend_sc1apprcwb02"
+      description: "pr-c-frontend_sc1apprcwb02"
+      ip_addr_list:
+        - "10.120.37.182"
+
+    - group_name: "pr-c-frontend_sc1apprcwb03"
+      description: "pr-c-frontend_sc1apprcwb03"
+      ip_addr_list:
+        - "10.120.37.183"
+
+    - group_name: "pr-c-frontend_sc1apprcwb04"
+      description: "pr-c-frontend_sc1apprcwb04"
+      ip_addr_list:
+        - "10.120.37.184"
+
+    - group_name: "pr-c-frontend_sc1apprcwb005"
+      description: "pr-c-frontend_sc1apprcwb005"
+      ip_addr_list:
+        - "10.120.37.196"
+
+    - group_name: "pr-c-frontend_sc1apprcwb006"
+      description: "pr-c-frontend_sc1apprcwb006"
+      ip_addr_list:
+        - "10.120.37.197"
+
+    - group_name: "pr-c-frontend_sc1apprcwb007"
+      description: "pr-c-frontend_sc1apprcwb007"
+      ip_addr_list:
+        - "10.120.37.198"
+
+    - group_name: "pr-c-frontend_sc1apprcwb008"
+      description: "pr-c-frontend_sc1apprcwb008"
+      ip_addr_list:
+        - "10.120.37.199"
+
+    - group_name: "pr-c-frontend_sc1apprcwb009-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb009-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.200"
+
+    - group_name: "pr-c-frontend_sc1apprcwb010-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb010-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.201"
+
+    - group_name: "pr-c-frontend_sc1apprcwb011-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb011-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.202"
+
+    - group_name: "pr-c-frontend_sc1apprcwb012-prod-williamhill-plc"
+      description: "pr-c-frontend_sc1apprcwb012-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.37.203"
+
+    - group_name: "pr-c-frontend_puppet-ncx-scc-ca-prod-williamhill-plc"
+      description: "pr-c-frontend_puppet-ncx-scc-ca-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.44.26"
+
+    - group_name: "pr-c-frontend_puppet-ncx-scc-db-prod-williamhill-plc"
+      description: "pr-c-frontend_puppet-ncx-scc-db-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.44.27"
+
+    - group_name: "pr-c-frontend_puppet-ncx-scc-prod-williamhill-plc"
+      description: "pr-c-frontend_puppet-ncx-scc-prod-williamhill-plc"
+      ip_addr_list:
+        - "10.120.44.25"
+
+    - group_name: "pr-c-frontend_ld6uxprbkms01"
+      description: "pr-c-frontend_ld6uxprbkms01"
+      ip_addr_list:
+        - "10.112.46.31"
+
+    - group_name: "pr-c-frontend_ld6uxprbkms02"
+      description: "pr-c-frontend_ld6uxprbkms02"
+      ip_addr_list:
+        - "10.112.46.32"
+
+    - group_name: "pr-c-frontend_ld6uxprbkms03"
+      description: "pr-c-frontend_ld6uxprbkms03"
+      ip_addr_list:
+        - "10.112.46.33"
+
+    - group_name: "pr-c-frontend_ld6uxprbkms04"
+      description: "pr-c-frontend_ld6uxprbkms04"
+      ip_addr_list:
+        - "10.112.46.34"
+
+    - group_name: "pr-c-frontend_gibuxprbkms01"
+      description: "pr-c-frontend_gibuxprbkms01"
+      ip_addr_list:
+        - "10.180.46.31"
+
+    - group_name: "pr-c-frontend_gibuxprbkms02"
+      description: "pr-c-frontend_gibuxprbkms02"
+      ip_addr_list:
+        - "10.180.46.32"
+
+    - group_name: "pr-c-frontend_ld6wnprbkcs01"
+      description: "CHG0112231"
+      ip_addr_list:
+        - "10.112.46.30"
+
+    - group_name: "pr-c-frontend_ld6uxprbkvs01"
+      description: "pr-c-frontend_ld6uxprbkvs01"
+      ip_addr_list:
+        - "10.112.46.35"
+
+    - group_name: "pr-c-frontend_ld6uxprbkvs02"
+      description: "pr-c-frontend_ld6uxprbkvs02"
+      ip_addr_list:
+        - "10.112.46.36"
+
+    - group_name: "pr-c-frontend_ld6uxprbkvs03"
+      description: "pr-c-frontend_ld6uxprbkvs03"
+      ip_addr_list:
+        - "10.112.46.37"
+
+    - group_name: "pr-c-frontend_ld6uxprbkvs04"
+      description: "pr-c-frontend_ld6uxprbkvs04"
+      ip_addr_list:
+        - "10.112.46.38"
+
+    - group_name: "pr-c-frontend_ld6uxprbkvs05"
+      description: "pr-c-frontend_ld6uxprbkvs05"
+      ip_addr_list:
+        - "10.112.46.39"
+
+    - group_name: "pr-c-frontend_brsux279_280-p1-vip"
+      description: "CHG0137980"
+      ip_addr_list:
+        - "10.1.29.211"
+
+    - group_name: "pr-c-frontend_brsux279_280-p2-vip"
+      description: "CHG0137980"
+      ip_addr_list:
+        - "10.1.29.212"
+
+    - group_name: "pr-c-frontend_brsux279_280-p3-vip"
+      description: "CHG0137980"
+      ip_addr_list:
+        - "10.1.29.213"
+
+    - group_name: "pr-c-frontend_brsux279_280-stg-vip"
+      description: "CHG0137980"
+      ip_addr_list:
+        - "10.1.29.222"
+
+    - group_name: "pr-c-frontend_brsux279_280-sys-vip"
+      description: "CHG0137980"
+      ip_addr_list:
+        - "10.1.29.221"
+
+    - group_name: "pr-c-frontend_brsux279_280-tem-vip"
+      description: "CHG0137980"
+      ip_addr_list:
+        - "10.1.29.214"
+
+    - group_name: "pr-c-frontend_wp-4th-data"
+      description: "CHG0019704"
+      ip_addr_list:
+        - "10.180.29.0/24"
+
+    - group_name: "pr-c-frontend_wp-5th-data-24"
+      description: "CHG0019704"
+      ip_addr_list:
+        - "10.180.27.0/24"
+
+    - group_name: "pr-c-frontend_wp-6th-data-23"
+      description: "pr-c-frontend_wp-6th-data-23"
+      ip_addr_list:
+        - "10.180.18.0/23"
+
+    - group_name: "pr-c-frontend_wp-gnd-data-24"
+      description: "CHG0019704"
+      ip_addr_list:
+        - "10.180.20.0/24"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa03"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.23"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa04"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.24"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa05"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.25"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa06"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.26"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa07"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.27"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa08"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.28"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa09"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.29"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa10"
+      description: "pr-c-frontend_sc1-wn-pre-xa10"
+      ip_addr_list:
+        - "10.120.39.30"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa11"
+      description: "pr-c-frontend_sc1-wn-pre-xa11"
+      ip_addr_list:
+        - "10.120.39.31"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa12"
+      description: "pr-c-frontend_sc1-wn-pre-xa12"
+      ip_addr_list:
+        - "10.120.39.32"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa13"
+      description: "pr-c-frontend_sc1-wn-pre-xa13"
+      ip_addr_list:
+        - "10.120.39.33"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa14"
+      description: "pr-c-frontend_sc1-wn-pre-xa14"
+      ip_addr_list:
+        - "10.120.39.34"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa01"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.15"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa02"
+      description: "CHG0017483"
+      ip_addr_list:
+        - "10.120.39.16"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa21"
+      description: "pr-c-frontend_sc1-wn-pre-xa21"
+      ip_addr_list:
+        - "10.120.39.41"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa22"
+      description: "pr-c-frontend_sc1-wn-pre-xa22"
+      ip_addr_list:
+        - "10.120.39.42"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa23"
+      description: "pr-c-frontend_sc1-wn-pre-xa23"
+      ip_addr_list:
+        - "10.120.39.43"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa24"
+      description: "pr-c-frontend_sc1-wn-pre-xa24"
+      ip_addr_list:
+        - "10.120.39.44"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa25"
+      description: "pr-c-frontend_sc1-wn-pre-xa25"
+      ip_addr_list:
+        - "10.120.39.45"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa26"
+      description: "pr-c-frontend_sc1-wn-pre-xa26"
+      ip_addr_list:
+        - "10.120.39.46"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa27"
+      description: "pr-c-frontend_sc1-wn-pre-xa27"
+      ip_addr_list:
+        - "10.120.39.47"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa28"
+      description: "pr-c-frontend_sc1-wn-pre-xa28"
+      ip_addr_list:
+        - "10.120.39.48"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-xa29"
+      description: "pr-c-frontend_sc1-wn-pre-xa29"
+      ip_addr_list:
+        - "10.120.39.49"
+
+    - group_name: "pr-c-frontend_sc1wnprexa35"
+      description: "pr-c-frontend_sc1wnprexa35"
+      ip_addr_list:
+        - "10.120.39.55"
+
+    - group_name: "pr-c-frontend_sc1wnprexa36"
+      description: "pr-c-frontend_sc1wnprexa36"
+      ip_addr_list:
+        - "10.120.39.56"
+
+    - group_name: "pr-c-frontend_sc1wnprexp01"
+      description: "CHG0018815"
+      ip_addr_list:
+        - "10.120.39.51"
+
+    - group_name: "pr-c-frontend_sc1wnprexp100"
+      description: "CHG0018815"
+      ip_addr_list:
+        - "10.120.39.150"
+
+    - group_name: "pr-c-frontend_sc1wnprexp95"
+      description: "CHG0018815"
+      ip_addr_list:
+        - "10.120.39.145"
+
+    - group_name: "pr-c-frontend_sc1wnprexp96"
+      description: "CHG0018815"
+      ip_addr_list:
+        - "10.120.39.146"
+
+    - group_name: "pr-c-frontend_sc1wnprexp97"
+      description: "CHG0018815"
+      ip_addr_list:
+        - "10.120.39.147"
+
+    - group_name: "pr-c-frontend_sc1wnprexp98"
+      description: "CHG0018815"
+      ip_addr_list:
+        - "10.120.39.148"
+
+    - group_name: "pr-c-frontend_sc1wnprexp99"
+      description: "CHG0018815"
+      ip_addr_list:
+        - "10.120.39.149"
+
+    - group_name: "pr-c-frontend_sc1wnprexa151"
+      description: "CHG0148435"
+      ip_addr_list:
+        - "10.120.39.151"
+
+    - group_name: "pr-c-frontend_10-120-39-128-28"
+      description: "pr-c-frontend_10-120-39-128-28"
+      ip_addr_list:
+        - "10.120.39.128/28"
+
+    - group_name: "pr-c-frontend_10-120-39-144"
+      description: "pr-c-frontend_10-120-39-144"
+      ip_addr_list:
+        - "10.120.39.144"
+
+    - group_name: "pr-c-frontend_10-120-39-52-30"
+      description: "pr-c-frontend_10-120-39-52-30"
+      ip_addr_list:
+        - "10.120.39.52/30"
+
+    - group_name: "pr-c-frontend_10-120-39-56-29"
+      description: "pr-c-frontend_10-120-39-56-29"
+      ip_addr_list:
+        - "10.120.39.56/29"
+
+    - group_name: "pr-c-frontend_10-120-39-64-26"
+      description: "pr-c-frontend_10-120-39-64-26"
+      ip_addr_list:
+        - "10.120.39.64/26"
+
+    - group_name: "pr-c-frontend_stj-alan-huner-backup"
+      description: "pr-c-frontend_stj-alan-huner-backup"
+      ip_addr_list:
+        - "10.1.18.46"
+
+    - group_name: "pr-c-frontend_stj-alan-hunter"
+      description: "pr-c-frontend_stj-alan-hunter"
+      ip_addr_list:
+        - "10.1.18.226"
+
+    - group_name: "pr-c-frontend_sc1uxpremn105"
+      description: "pr-c-frontend_sc1uxpremn105"
+      ip_addr_list:
+        - "10.120.163.105"
+
+    - group_name: "pr-c-frontend_sc1uxpremn106"
+      description: "pr-c-frontend_sc1uxpremn106"
+      ip_addr_list:
+        - "10.120.163.106"
+
+    - group_name: "pr-c-frontend_sc1uxpremn107"
+      description: "pr-c-frontend_sc1uxpremn107"
+      ip_addr_list:
+        - "10.120.163.107"
+
+    - group_name: "pr-c-frontend_sc1uxpremn108"
+      description: "pr-c-frontend_sc1uxpremn108"
+      ip_addr_list:
+        - "10.120.163.108"
+
+    - group_name: "pr-c-frontend_sc1uxpremn120"
+      description: "pr-c-frontend_sc1uxpremn120"
+      ip_addr_list:
+        - "10.120.163.120"
+
+    - group_name: "pr-c-frontend_sc1uxpremn121"
+      description: "pr-c-frontend_sc1uxpremn121"
+      ip_addr_list:
+        - "10.120.163.121"
+
+    - group_name: "pr-c-frontend_10-1-58-100"
+      description: "pr-c-frontend_10-1-58-100"
+      ip_addr_list:
+        - "10.1.58.100"
+
+    - group_name: "pr-c-frontend_10-1-58-101"
+      description: "pr-c-frontend_10-1-58-101"
+      ip_addr_list:
+        - "10.1.58.101"
+
+    - group_name: "pr-c-frontend_10-1-58-102"
+      description: "pr-c-frontend_10-1-58-102"
+      ip_addr_list:
+        - "10.1.58.102"
+
+    - group_name: "pr-c-frontend_10-1-58-103"
+      description: "pr-c-frontend_10-1-58-103"
+      ip_addr_list:
+        - "10.1.58.103"
+
+    - group_name: "pr-c-frontend_10-1-58-104"
+      description: "pr-c-frontend_10-1-58-104"
+      ip_addr_list:
+        - "10.1.58.104"
+
+    - group_name: "pr-c-frontend_10-1-58-97"
+      description: "pr-c-frontend_10-1-58-97"
+      ip_addr_list:
+        - "10.1.58.97"
+
+    - group_name: "pr-c-frontend_10-1-58-98"
+      description: "pr-c-frontend_10-1-58-98"
+      ip_addr_list:
+        - "10.1.58.98"
+
+    - group_name: "pr-c-frontend_10-1-58-99"
+      description: "pr-c-frontend_10-1-58-99"
+      ip_addr_list:
+        - "10.1.58.99"
+
+    - group_name: "pr-c-frontend_10-1-58-106"
+      description: "CHG0123895"
+      ip_addr_list:
+        - "10.1.58.106"
+
+    - group_name: "pr-c-frontend_10-1-58-107"
+      description: "CHG0123895"
+      ip_addr_list:
+        - "10.1.58.107"
+
+    - group_name: "pr-c-frontend_10-1-58-29"
+      description: "CHG0123895"
+      ip_addr_list:
+        - "10.1.58.29"
+
+    - group_name: "pr-c-frontend_brswn109"
+      description: "pr-c-frontend_brswn109"
+      ip_addr_list:
+        - "10.1.29.37"
+
+    - group_name: "pr-c-frontend_vmc-retail-production-vsphere-mgmt"
+      description: "pr-c-frontend_vmc-retail-production-vsphere-mgmt"
+      ip_addr_list:
+        - "10.126.32.0/20"
+
+    - group_name: "pr-c-frontend_vmc-retail-production-10-233-0-0s24"
+      description: "pr-c-frontend_vmc-retail-production-10-233-0-0s24"
+      ip_addr_list:
+        - "10.233.0.0/24"
+
+    - group_name: "pr-c-frontend_vmc-retail-production-services-mgmt"
+      description: "pr-c-frontend_vmc-retail-production-services-mgmt"
+      ip_addr_list:
+        - "10.156.1.0/25"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-dc03"
+      description: "CHG0017397"
+      ip_addr_list:
+        - "10.120.194.13"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-dc04"
+      description: "CHG0017397"
+      ip_addr_list:
+        - "10.120.194.14"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-dc05"
+      description: "CHG0017397"
+      ip_addr_list:
+        - "10.120.194.15"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-dc06"
+      description: "CHG0017397"
+      ip_addr_list:
+        - "10.120.194.16"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-dc07"
+      description: "CHG0017397"
+      ip_addr_list:
+        - "10.120.194.17"
+
+    - group_name: "pr-c-frontend_sc1-wn-pre-dc08"
+      description: "CHG0017397"
+      ip_addr_list:
+        - "10.120.194.18"
+
+    - group_name: "pr-c-frontend_brswnpredc03"
+      description: "pr-c-frontend_brswnpredc03"
+      ip_addr_list:
+        - "10.210.194.13"
+
+    - group_name: "pr-c-frontend_svr-cpr-whapi-snat240-vi"
+      description: "pr-c-frontend_svr-cpr-whapi-snat240-vi"
+      ip_addr_list:
+        - "10.120.216.240"
+
+    - group_name: "pr-c-frontend_svr-cpr-whapi-snat242-vi"
+      description: "pr-c-frontend_svr-cpr-whapi-snat242-vi"
+      ip_addr_list:
+        - "10.120.216.242"
+
+    - group_name: "pr-c-frontend_svr-cpr-whapi-snat241-vi"
+      description: "pr-c-frontend_svr-cpr-whapi-snat241-vi"
+      ip_addr_list:
+        - "10.120.216.241"
+
+    - group_name: "pr-c-frontend_svr-f5top01-re"
+      description: "pr-c-frontend_svr-f5top01-re"
+      ip_addr_list:
+        - "10.120.216.11"
+
+    - group_name: "pr-c-frontend_svr-f5top02-re"
+      description: "pr-c-frontend_svr-f5top02-re"
+      ip_addr_list:
+        - "10.120.216.12"
+
+    - group_name: "pr-c-frontend_svr-f5top03-re"
+      description: "pr-c-frontend_svr-f5top03-re"
+      ip_addr_list:
+        - "10.120.216.10"
+
+###OBJECT_GROUPS###
+
+  object_groups:
+    - group_name: "pr-c-frontend_grp_whapi-gateway-srvs"
+      description: "pr-c-frontend_grp_whapi-gateway-srvs"
+      sub_group_list:
+        - "pr-c-frontend_scc_internal_01"
+        - "pr-c-frontend_sc1apprcwb017"
+        - "pr-c-frontend_sc1apprcwb018"
+        - "pr-c-frontend_sc1apprcwb019"
+        - "pr-c-frontend_sc1apprcwb020"
+        - "pr-c-frontend_sc1apprcwb021"
+        - "pr-c-frontend_sc1apprcwb022"
+        - "pr-c-frontend_sc1apprcwb023"
+        - "pr-c-frontend_sc1apprcwb024"
+        - "pr-c-frontend_grp_grp-scc-pr-cwb-layer7"
+    - group_name: "pr-c-frontend_grp_whapi-gateways"
+      description: "CHG0144060"
+      sub_group_list:
+        - "pr-c-frontend_grp_scc-whapi-c1"
+        - "pr-c-frontend_grp_scc-whapi-c2"
+        - "pr-c-frontend_grp_scc-whapi-c3"
+    - group_name: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7"
+      description: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7"
+      sub_group_list:
+        - "pr-c-frontend_sc1apprcwb017"
+        - "pr-c-frontend_sc1apprcwb018"
+        - "pr-c-frontend_sc1apprcwb019"
+        - "pr-c-frontend_sc1apprcwb020"
+        - "pr-c-frontend_sc1apprcwb021"
+        - "pr-c-frontend_sc1apprcwb022"
+        - "pr-c-frontend_sc1apprcwb023"
+        - "pr-c-frontend_sc1apprcwb024"
+        - "pr-c-frontend_grp_grp-scc-pr-cwb-layer7-top"
+        - "pr-c-frontend_grp_grp-scc-pr-cwb-layer7new-top"
+        - "pr-c-frontend_grp_grp-scc-pr-cwb-layer7-top-3"
+    - group_name: "pr-c-frontend_grp_outbound-ext-web-access"
+      description: "pr-c-frontend_grp_outbound-ext-web-access"
+      sub_group_list:
+        - "pr-c-frontend_net_10-120-37-0m24"
+    - group_name: "pr-c-frontend_grp_internet-all-subnets"
+      description: "This is all the networks that make up the internet, less RFC1918 and Class D,E"
+      sub_group_list:
+        - "pr-c-frontend_ip_0-0-0-0s5"
+        - "pr-c-frontend_ip_8-0-0-0s7"
+        - "pr-c-frontend_ip_11-0-0-0s8"
+        - "pr-c-frontend_ip_12-0-0-0s6"
+        - "pr-c-frontend_ip_16-0-0-0s4"
+        - "pr-c-frontend_ip_32-0-0-0s3"
+        - "pr-c-frontend_ip_64-0-0-0s2"
+        - "pr-c-frontend_ip_128-0-0-0s3"
+        - "pr-c-frontend_ip_160-0-0-0s5"
+        - "pr-c-frontend_ip_168-0-0-0s6"
+        - "pr-c-frontend_ip_172-0-0-0s12"
+        - "pr-c-frontend_ip_172-32-0-0s11"
+        - "pr-c-frontend_ip_172-64-0-0s10"
+        - "pr-c-frontend_ip_172-128-0-0s9"
+        - "pr-c-frontend_ip_173-0-0-0s8"
+        - "pr-c-frontend_ip_174-0-0-0s7"
+        - "pr-c-frontend_ip_176-0-0-0s4"
+        - "pr-c-frontend_ip_192-0-0-0s9"
+        - "pr-c-frontend_ip_192-128-0-0s11"
+        - "pr-c-frontend_ip_192-160-0-0s13"
+        - "pr-c-frontend_ip_192-169-0-0s16"
+        - "pr-c-frontend_ip_192-170-0-0s15"
+        - "pr-c-frontend_ip_192-172-0-0s14"
+        - "pr-c-frontend_ip_192-176-0-0s12"
+        - "pr-c-frontend_ip_192-192-0-0s10"
+        - "pr-c-frontend_ip_193-0-0-0s8"
+        - "pr-c-frontend_ip_194-0-0-0s7"
+        - "pr-c-frontend_ip_196-0-0-0s6"
+        - "pr-c-frontend_ip_200-0-0-0s5"
+        - "pr-c-frontend_ip_208-0-0-0s4"
+    - group_name: "pr-c-frontend_grp_outbound-any-web-access"
+      description: "pr-c-frontend_grp_outbound-any-web-access"
+      sub_group_list:
+        - "pr-c-frontend_scc_internal_03"
+        - "pr-c-frontend_sc1apprcwb017"
+        - "pr-c-frontend_sc1apprcwb018"
+        - "pr-c-frontend_sc1apprcwb019"
+        - "pr-c-frontend_sc1apprcwb020"
+        - "pr-c-frontend_sc1apprcwb021"
+        - "pr-c-frontend_sc1apprcwb022"
+        - "pr-c-frontend_sc1apprcwb023"
+        - "pr-c-frontend_sc1apprcwb024"
+        - "pr-c-frontend_grp_grp-scc-pr-cwb-layer7"
+    - group_name: "pr-c-frontend_grp_outbound-3rdparty-access"
+      description: "pr-c-frontend_grp_outbound-3rdparty-access"
+      sub_group_list:
+        - "pr-c-frontend_net_10-120-37-0m24"
+    - group_name: "pr-c-frontend_grp_scc-sports-pds-cmapi-whapi"
+      description: "pr-c-frontend_grp_scc-sports-pds-cmapi-whapi"
+      sub_group_list:
+        - "pr-c-frontend_int-api-sports-pds-cmapi-whapi-es-sc1-prod-williamhill-plc"
+        - "pr-c-frontend_int-api-sports-pds-cmapi-whapi-it-sc1-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_26"
+      description: "pr-c-frontend_grp_scc-migrated_network_26"
+      sub_group_list:
+        - "pr-c-frontend_grp_cde_backoffice_app_servers"
+        - "pr-c-frontend_grp_cde_crypto_app_servers"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_27"
+      description: "pr-c-frontend_grp_scc-migrated_network_27"
+      sub_group_list:
+        - "pr-c-frontend_informix-db-vip"
+        - "pr-c-frontend_informix-hdr-vip"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_50"
+      description: "pr-c-frontend_grp_scc-migrated_network_50"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprcap45"
+        - "pr-c-frontend_sc1uxprcap46"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_6"
+      description: "pr-c-frontend_grp_scc-migrated_network_6"
+      sub_group_list:
+        - "pr-c-frontend_tig_cdeproxy-group-williamhill-plc"
+        - "pr-c-frontend_cdeproxy-group-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_57"
+      description: "pr-c-frontend_grp_scc-migrated_network_57"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprcap45"
+        - "pr-c-frontend_sc1uxprcap46"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_59"
+      description: "pr-c-frontend_grp_scc-migrated_network_59"
+      sub_group_list:
+        - "pr-c-frontend_scc-backoffice-williamhill-local"
+        - "pr-c-frontend_internalproxy-williamhill-local"
+        - "pr-c-frontend_int-lb-cdebackoffice-sc1-prod-williamhill-plc"
+        - "pr-c-frontend_tig-backoffice-williamhill-local"
+    - group_name: "pr-c-frontend_grp_cde_backoffice_app_servers"
+      description: "pr-c-frontend_grp_cde_backoffice_app_servers"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprcap45"
+        - "pr-c-frontend_sc1uxprcap46"
+    - group_name: "pr-c-frontend_grp_oxi_application_servers"
+      description: "pr-c-frontend_grp_oxi_application_servers"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprnap71"
+        - "pr-c-frontend_sc1uxprnap72"
+        - "pr-c-frontend_sc1uxprnap73"
+        - "pr-c-frontend_sc1uxprnap74"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_146"
+      description: "pr-c-frontend_grp_scc-migrated_network_146"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprcap45"
+        - "pr-c-frontend_sc1uxprcap46"
+    - group_name: "pr-c-frontend_grp_mailhosts"
+      description: "pr-c-frontend_grp_mailhosts"
+      sub_group_list:
+        - "pr-c-frontend_emailhost01"
+        - "pr-c-frontend_emailhost02"
+        - "pr-c-frontend_emailhost03"
+        - "pr-c-frontend_emailhost04"
+        - "pr-c-frontend_emailhost05"
+        - "pr-c-frontend_emailhost06"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_116"
+      description: "pr-c-frontend_grp_scc-migrated_network_116"
+      sub_group_list:
+        - "pr-c-frontend_emailhost01"
+        - "pr-c-frontend_emailhost02"
+    - group_name: "pr-c-frontend_grp_splunk-group"
+      description: "CHG0123744"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxpremn002"
+        - "pr-c-frontend_sc1uxpremn003"
+    - group_name: "pr-c-frontend_grp_grp-dr-oracle-db"
+      description: "pr-c-frontend_grp_grp-dr-oracle-db"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprgdb05"
+        - "pr-c-frontend_ld6uxprndb531"
+        - "pr-c-frontend_brsux084"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs"
+      description: "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs"
+      sub_group_list:
+        - "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs-onshore"
+        - "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs-offshore"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-accurate-batch-srvs"
+      description: "pr-c-frontend_grp_grp-dr-noncde-accurate-batch-srvs"
+      sub_group_list:
+        - "pr-c-frontend_sc1wnpreap10"
+        - "pr-c-frontend_brswntsap10"
+        - "pr-c-frontend_ld6wnpreap10"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-accurate-web-srvs"
+      description: "pr-c-frontend_grp_grp-dr-noncde-accurate-web-srvs"
+      sub_group_list:
+        - "pr-c-frontend_sc1wnprewb10"
+        - "pr-c-frontend_brswntswb10"
+        - "pr-c-frontend_ld6wnprewb10"
+        - "pr-c-frontend_irewnprewb10"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-propman-db"
+      description: "pr-c-frontend_grp_grp-dr-noncde-propman-db"
+      sub_group_list:
+        - "pr-c-frontend_sc1wnpredb003"
+        - "pr-c-frontend_brswndredb003"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-tanda-svr"
+      description: "pr-c-frontend_grp_grp-dr-noncde-tanda-svr"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-146-115"
+        - "pr-c-frontend_ip_10-120-146-116"
+        - "pr-c-frontend_ip_10-210-146-206"
+    - group_name: "pr-c-frontend_grp_grp-dr-jde-svr"
+      description: "pr-c-frontend_grp_grp-dr-jde-svr"
+      sub_group_list:
+        - "pr-c-frontend_devjde"
+        - "pr-c-frontend_scc-prodjde"
+        - "pr-c-frontend_ip_10-120-64-152"
+        - "pr-c-frontend_ip_10-210-64-152"
+        - "pr-c-frontend_ip_10-210-64-140"
+    - group_name: "pr-c-frontend_grp_grp-dr-jde-app-svr"
+      description: "pr-c-frontend_grp_grp-dr-jde-app-svr"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-210-64-142"
+        - "pr-c-frontend_ip_10-210-64-147"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs-onshore"
+      description: "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs-onshore"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-39-143"
+        - "pr-c-frontend_ip_10-120-39-142"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-qlikview-web"
+      description: "pr-c-frontend_grp_grp-dr-noncde-qlikview-web"
+      sub_group_list:
+        - "pr-c-frontend_int-lb-qlikview"
+        - "pr-c-frontend_brswndvncp003"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-sap-routers"
+      description: "pr-c-frontend_grp_grp-dr-noncde-sap-routers"
+      sub_group_list:
+        - "pr-c-frontend_brsuxprsap01-brs-prod-williamhill-plc"
+        - "pr-c-frontend_sc1uxprsap01-sc1-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs-offshore"
+      description: "pr-c-frontend_grp_grp-dr-noncde-citrix-dvs-offshore"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-39-147"
+        - "pr-c-frontend_ip_10-120-39-148"
+        - "pr-c-frontend_sc1wnprexp99"
+        - "pr-c-frontend_sc1wnprexp100"
+        - "pr-c-frontend_sc1wnprexa151"
+        
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_148"
+      description: "pr-c-frontend_grp_scc-migrated_network_148"
+      sub_group_list:
+        - "pr-c-frontend_sc1wnprefs03"
+        - "pr-c-frontend_sc1wnprefs03-new"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_149"
+      description: "pr-c-frontend_grp_scc-migrated_network_149"
+      sub_group_list:
+        - "pr-c-frontend_sc1wnprefs03"
+        - "pr-c-frontend_sc1wnprefs03-new"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_4"
+      description: "pr-c-frontend_grp_scc-migrated_network_4"
+      sub_group_list:
+        - "pr-c-frontend_scc-int-lb-cde-stingray01"
+        - "pr-c-frontend_scc-int-lb-cde-stingray02"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_8"
+      description: "pr-c-frontend_grp_scc-migrated_network_8"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprcwb41"
+        - "pr-c-frontend_sc1uxprcwb42"
+        - "pr-c-frontend_sc1uxprcwb41-new"
+        - "pr-c-frontend_sc1uxprcwb42-new"
+    - group_name: "pr-c-frontend_grp_grp-scc-int-lb-cde-stingray"
+      description: "pr-c-frontend_grp_grp-scc-int-lb-cde-stingray"
+      sub_group_list:
+        - "pr-c-frontend_scc-int-lb-cde-stingray01"
+        - "pr-c-frontend_scc-int-lb-cde-stingray02"
+    - group_name: "pr-c-frontend_grp_grp-brocade-svc-control"
+      description: "pr-c-frontend_grp_grp-brocade-svc-control"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-163-140"
+        - "pr-c-frontend_ip_10-180-163-140"
+        - "pr-c-frontend_ip_10-180-163-145"
+        - "pr-c-frontend_ip_10-210-163-20"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_15"
+      description: "pr-c-frontend_grp_scc-migrated_network_15"
+      sub_group_list:
+        - "pr-c-frontend_scc-int-lb-cde-stingray01"
+        - "pr-c-frontend_scc-int-lb-cde-stingray02"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_22"
+      description: "pr-c-frontend_grp_scc-migrated_network_22"
+      sub_group_list:
+        - "pr-c-frontend_citrix-network-24"
+        - "pr-c-frontend_sc1-whapi-servers"
+        - "pr-c-frontend_ip_10-120-33-160s27"
+        - "pr-c-frontend_ip_10-120-38-0s24"
+        - "pr-c-frontend_ip_10-120-33-0s29"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_30"
+      description: "pr-c-frontend_grp_scc-migrated_network_30"
+      sub_group_list:
+        - "pr-c-frontend_scc-int-lb-cde-stingray01"
+        - "pr-c-frontend_scc-int-lb-cde-stingray02"
+        - "pr-c-frontend_grp_puppet-ncx-servers"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_25"
+      description: "pr-c-frontend_grp_scc-migrated_network_25"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-163-97"
+        - "pr-c-frontend_ip_10-120-163-98"
+        - "pr-c-frontend_grp_scc-management-subnets"
+    - group_name: "pr-c-frontend_grp_rundeck-application-servers"
+      description: "pr-c-frontend_grp_rundeck-application-servers"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxpreap237_ip_10-120-163-237"
+        - "pr-c-frontend_sc1uxpreap238_ip_10-120-163-238"
+        - "pr-c-frontend_sc1uxpreap239_ip_10-120-163-239"
+    - group_name: "pr-c-frontend_grp_aws-central-product-prod"
+      description: "CHG0143705"
+      sub_group_list:
+        - "pr-c-frontend_aws-central-product-prod-1"
+        - "pr-c-frontend_aws-central-product-prod-2"
+        - "pr-c-frontend_aws-central-product-prod-3"
+    - group_name: "pr-c-frontend_grp_commvault-brs-media-servers"
+      description: "CHG0136121"
+      sub_group_list:
+        - "pr-c-frontend_brsuxprbkms01-prod-williamhill-plc"
+        - "pr-c-frontend_brsuxprbkms02-prod-williamhill-plc"
+        - "pr-c-frontend_brsuxprbkms03-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_commvault-media-servers"
+      description: "pr-c-frontend_grp_commvault-media-servers"
+      sub_group_list:
+        - "pr-c-frontend_grp_commvault-media-server-ld6"
+        - "pr-c-frontend_grp_commvault-media-servers-gib"
+        - "pr-c-frontend_grp_commvault-meida-servers-scc"
+    - group_name: "pr-c-frontend_grp_commvault-commcell"
+      description: "pr-c-frontend_grp_commvault-commcell"
+      sub_group_list:
+        - "pr-c-frontend_grp_commvault-commcell-ld6"
+        - "pr-c-frontend_grp_commvault-commcell-scc"
+    - group_name: "pr-c-frontend_grp_commvault-vsa-proxy-servers-scc"
+      description: "pr-c-frontend_grp_commvault-vsa-proxy-servers-scc"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkvs01"
+        - "pr-c-frontend_sc1uxprbkvs02"
+        - "pr-c-frontend_sc1uxprbkvs03"
+        - "pr-c-frontend_sc1uxprbkvs04"
+        - "pr-c-frontend_sc1uxprbkvs05"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_70"
+      description: "pr-c-frontend_grp_scc-migrated_network_70"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-46-10"
+        - "pr-c-frontend_ip_10-120-46-11"
+        - "pr-c-frontend_ip_10-120-46-12"
+        - "pr-c-frontend_ip_10-120-46-13"
+        - "pr-c-frontend_ip_10-120-46-14"
+        - "pr-c-frontend_ip_10-120-46-15"
+    - group_name: "pr-c-frontend_grp_commvault-commcell-scc"
+      description: "pr-c-frontend_grp_commvault-commcell-scc"
+      sub_group_list:
+        - "pr-c-frontend_sc1wnprbkcs01"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_72"
+      description: "pr-c-frontend_grp_scc-migrated_network_72"
+      sub_group_list:
+        - "pr-c-frontend_ld6prapvc01"
+        - "pr-c-frontend_ip_10-120-134-253"
+        - "pr-c-frontend_ip_10-180-138-15"
+        - "pr-c-frontend_grp_commvault-vsa-proxy-servers-ld6"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_74"
+      description: "pr-c-frontend_grp_scc-migrated_network_74"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkvs01"
+        - "pr-c-frontend_sc1uxprbkvs02"
+        - "pr-c-frontend_sc1uxprbkvs03"
+        - "pr-c-frontend_sc1uxprbkvs04"
+        - "pr-c-frontend_sc1uxprbkvs05"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_77"
+      description: "pr-c-frontend_grp_scc-migrated_network_77"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-180-46-35"
+        - "pr-c-frontend_ip_10-180-46-36"
+        - "pr-c-frontend_ip_10-180-46-37"
+        - "pr-c-frontend_ip_10-180-46-38"
+        - "pr-c-frontend_ip_10-180-46-39"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_78"
+      description: "pr-c-frontend_grp_scc-migrated_network_78"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkms01"
+        - "pr-c-frontend_sc1uxprbkms02"
+        - "pr-c-frontend_sc1wnprbkcs01"
+        - "pr-c-frontend_sc1uxprbkvs01"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_87"
+      description: "pr-c-frontend_grp_scc-migrated_network_87"
+      sub_group_list:
+        - "pr-c-frontend_bireports"
+        - "pr-c-frontend_ip_10-1-28-0s23"
+        - "pr-c-frontend_grp_commvault-backup-networks"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_82"
+      description: "pr-c-frontend_grp_scc-migrated_network_82"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-46-10"
+        - "pr-c-frontend_ip_10-120-46-11"
+        - "pr-c-frontend_ip_10-120-46-12"
+        - "pr-c-frontend_ip_10-120-46-13"
+        - "pr-c-frontend_ip_10-120-46-14"
+        - "pr-c-frontend_ip_10-120-46-15"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_84"
+      description: "pr-c-frontend_grp_scc-migrated_network_84"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkvs01"
+        - "pr-c-frontend_sc1uxprbkvs02"
+        - "pr-c-frontend_sc1uxprbkvs03"
+        - "pr-c-frontend_sc1uxprbkvs04"
+        - "pr-c-frontend_sc1uxprbkvs05"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_90"
+      description: "pr-c-frontend_grp_scc-migrated_network_90"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-46-10"
+        - "pr-c-frontend_ip_10-120-46-11"
+        - "pr-c-frontend_ip_10-120-46-12"
+        - "pr-c-frontend_ip_10-120-46-13"
+        - "pr-c-frontend_ip_10-120-46-14"
+        - "pr-c-frontend_ip_10-120-46-15"
+    - group_name: "pr-c-frontend_grp_insightiq-servers"
+      description: "pr-c-frontend_grp_insightiq-servers"
+      sub_group_list:
+        - "pr-c-frontend_sc1prcap01-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_isilon-clusters"
+      description: "pr-c-frontend_grp_isilon-clusters"
+      sub_group_list:
+        - "pr-c-frontend_isilon-cluster-gib"
+        - "pr-c-frontend_isilon-cluster-ld6"
+        - "pr-c-frontend_isilon-cluster-scc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_111"
+      description: "pr-c-frontend_grp_scc-migrated_network_111"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkms01"
+        - "pr-c-frontend_sc1uxprbkms02"
+        - "pr-c-frontend_sc1wnprbkcs01"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_115"
+      description: "pr-c-frontend_grp_scc-migrated_network_115"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-118-0-0s16"
+        - "pr-c-frontend_ip_10-209-0-0s16"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_118"
+      description: "pr-c-frontend_grp_scc-migrated_network_118"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-210-46-10"
+        - "pr-c-frontend_ip_10-210-46-11"
+        - "pr-c-frontend_ip_10-210-46-12"
+        - "pr-c-frontend_ip_10-210-46-13"
+        - "pr-c-frontend_ip_10-210-46-14"
+        - "pr-c-frontend_ip_10-210-46-15"
+        - "pr-c-frontend_ip_10-210-46-16"
+        - "pr-c-frontend_ip_10-210-46-17"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_2"
+      description: "pr-c-frontend_grp_scc-migrated_network_2"
+      sub_group_list:
+        - "pr-c-frontend_gamingdb-mgmt-prod-williamhill-plc"
+        - "pr-c-frontend_gibux531-mgmt-prod-williamhill-plc"
+        - "pr-c-frontend_gibux532-mgmt-prod-williamhill-plc"
+        - "pr-c-frontend_spbkdb-mgmt-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_45"
+      description: "pr-c-frontend_grp_scc-migrated_network_45"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-1-29-38"
+        - "pr-c-frontend_ip_10-1-29-39"
+        - "pr-c-frontend_grp_brs-informix-cluster"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_55"
+      description: "pr-c-frontend_grp_scc-migrated_network_55"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxd03"
+        - "pr-c-frontend_sc1uxd04"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_56"
+      description: "pr-c-frontend_grp_scc-migrated_network_56"
+      sub_group_list:
+        - "pr-c-frontend_ld6wnpreap10"
+        - "pr-c-frontend_sc1wnpreap10"
+    - group_name: "pr-c-frontend_grp_openbet-hdr-reporting-dbs"
+      description: "pr-c-frontend_grp_openbet-hdr-reporting-dbs"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxd03"
+        - "pr-c-frontend_sc1uxd04"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_52"
+      description: "pr-c-frontend_grp_scc-migrated_network_52"
+      sub_group_list:
+        - "pr-c-frontend_prod"
+        - "pr-c-frontend_prodjde"
+        - "pr-c-frontend_sc1wncpgap11"
+        - "pr-c-frontend_sc1wnprgap03"
+        - "pr-c-frontend_sc1wnprgdb02"
+        - "pr-c-frontend_stj-accu-01"
+        - "pr-c-frontend_stjux049"
+        - "pr-c-frontend_sc1wncpgap12"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_64"
+      description: "pr-c-frontend_grp_scc-migrated_network_64"
+      sub_group_list:
+        - "pr-c-frontend_prod"
+        - "pr-c-frontend_prod1"
+        - "pr-c-frontend_prod1_dr"
+    - group_name: "pr-c-frontend_grp_informix-db-servers"
+      description: "pr-c-frontend_grp_informix-db-servers"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprcdb03"
+        - "pr-c-frontend_sc1uxprcdb04"
+    - group_name: "pr-c-frontend_grp_scc-nas-ip-range40-49"
+      description: "CHG0133137"
+      sub_group_list:
+        - "pr-c-frontend_10-120-46-40"
+        - "pr-c-frontend_10-120-46-41"
+        - "pr-c-frontend_10-120-46-42"
+        - "pr-c-frontend_ip_10-120-46-43"
+        - "pr-c-frontend_ip_10-120-46-44"
+        - "pr-c-frontend_ip_10-120-46-45"
+        - "pr-c-frontend_ip_10-120-46-46"
+        - "pr-c-frontend_ip_10-120-46-47"
+        - "pr-c-frontend_ip_10-120-46-48"
+        - "pr-c-frontend_ip_10-120-46-49"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_16"
+      description: "pr-c-frontend_grp_scc-migrated_network_16"
+      sub_group_list:
+        - "pr-c-frontend_classa-8"
+        - "pr-c-frontend_paragon-crisantaverbo"
+        - "pr-c-frontend_paragon-ellezarmarcelo"
+        - "pr-c-frontend_paragon-jeanbuenaventura"
+        - "pr-c-frontend_paragon-mariegracedioniso"
+        - "pr-c-frontend_paragon-reggiealtarejos"
+        - "pr-c-frontend_paragon-rommeltomas"
+        - "pr-c-frontend_paragon-waylansebastian"
+        - "pr-c-frontend_trg-manilla-16"
+        - "pr-c-frontend_telaviv-172-18-0-0-22"
+        - "pr-c-frontend_vpn-gib-24"
+        - "pr-c-frontend_grp_wp-office-data"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_17"
+      description: "pr-c-frontend_grp_scc-migrated_network_17"
+      sub_group_list:
+        - "pr-c-frontend_grp_grp-pr-c-xen-sessionhost-xa65"
+        - "pr-c-frontend_grp_grp-pr-c-xen-desktops"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_29"
+      description: "pr-c-frontend_grp_scc-migrated_network_29"
+      sub_group_list:
+        - "pr-c-frontend_informix-db-vip"
+        - "pr-c-frontend_informix-hdr-vip"
+    - group_name: "pr-c-frontend_grp_openbet-live-dr"
+      description: "pr-c-frontend_grp_openbet-live-dr"
+      sub_group_list:
+        - "pr-c-frontend_openbet-dr-24"
+        - "pr-c-frontend_openbet-live-24"
+        - "pr-c-frontend_ip_10-194-140-0s24"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_13"
+      description: "pr-c-frontend_grp_scc-migrated_network_13"
+      sub_group_list:
+        - "pr-c-frontend_scc-backoffice-williamhill-local"
+        - "pr-c-frontend_int-lb-cdebackoffice-sc1-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_54"
+      description: "pr-c-frontend_grp_scc-migrated_network_54"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-99-61"
+        - "pr-c-frontend_grp_stj-hdr-user-access"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_125"
+      description: "pr-c-frontend_grp_scc-migrated_network_125"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-39-0s24"
+        - "pr-c-frontend_ip_10-210-39-0s24"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_18"
+      description: "pr-c-frontend_grp_scc-migrated_network_18"
+      sub_group_list:
+        - "pr-c-frontend_cdebackoffice-williamhill-local"
+        - "pr-c-frontend_int-lb-cdebackoffice-sc1-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_7"
+      description: "pr-c-frontend_grp_scc-migrated_network_7"
+      sub_group_list:
+        - "pr-c-frontend_grp_grp-brocade-svc-control"
+        - "pr-c-frontend_grp_wily_svrs_scc"
+    - group_name: "pr-c-frontend_grp_grp-brocade-vtm-admin"
+      description: "pr-c-frontend_grp_grp-brocade-vtm-admin"
+      sub_group_list:
+        - "pr-c-frontend_brs-checkpoint-vpn-ra"
+        - "pr-c-frontend_lcw-net-10-1-82-0_23"
+        - "pr-c-frontend_lcw-net-10-1-86-0_23"
+        - "pr-c-frontend_stj-net-10-1-74-0_24"
+        - "pr-c-frontend_krk-eoc-lan"
+        - "pr-c-frontend_krk-eoc-wifi"
+        - "pr-c-frontend_10-55-12-74"
+        - "pr-c-frontend_10-55-14-18"
+        - "pr-c-frontend_10-55-14-19"
+        - "pr-c-frontend_10-55-14-20"
+        - "pr-c-frontend_10-55-14-22"
+        - "pr-c-frontend_10-55-226-18"
+        - "pr-c-frontend_10-55-226-19"
+        - "pr-c-frontend_10-55-226-20"
+        - "pr-c-frontend_10-55-226-62"
+        - "pr-c-frontend_10-55-226-74"
+        - "pr-c-frontend_net_10-55-60-0_28"
+        - "pr-c-frontend_grp_stj-retail-ias"
+    - group_name: "pr-c-frontend_grp_rfc1918"
+      description: "pr-c-frontend_grp_rfc1918"
+      sub_group_list:
+        - "pr-c-frontend_classa-8"
+        - "pr-c-frontend_classb-12"
+        - "pr-c-frontend_classc-16"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_34"
+      description: "pr-c-frontend_grp_scc-migrated_network_34"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-100-0s24"
+        - "pr-c-frontend_ip_10-120-101-0s27"
+        - "pr-c-frontend_ip_10-120-102-0s24"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_35"
+      description: "pr-c-frontend_grp_scc-migrated_network_35"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-44-25"
+        - "pr-c-frontend_ip_10-120-44-26"
+        - "pr-c-frontend_ip_10-120-44-27"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_32"
+      description: "pr-c-frontend_grp_scc-migrated_network_32"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-163-97"
+        - "pr-c-frontend_ip_10-120-163-98"
+        - "pr-c-frontend_ip_10-120-132-0s24"
+        - "pr-c-frontend_grp_scc-management-subnets"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_33"
+      description: "pr-c-frontend_grp_scc-migrated_network_33"
+      sub_group_list:
+        - "pr-c-frontend_scc-int-lb-cde-stingray01"
+        - "pr-c-frontend_scc-int-lb-cde-stingray02"
+        - "pr-c-frontend_grp_puppet-ncx-servers"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_102"
+      description: "pr-c-frontend_grp_scc-migrated_network_102"
+      sub_group_list:
+        - "pr-c-frontend_lcw-robrussell"
+        - "pr-c-frontend_grp_layer7-access"
+    - group_name: "pr-c-frontend_grp_cde-web-any-access"
+      description: "pr-c-frontend_grp_cde-web-any-access"
+      sub_group_list:
+        - "pr-c-frontend_10-121-5-0slash24"
+        - "pr-c-frontend_net-inv-cde-api-lan"
+    - group_name: "pr-c-frontend_grp_euc-team-"
+      description: "pr-c-frontend_grp_euc-team-"
+      sub_group_list:
+        - "pr-c-frontend_wh0004371"
+        - "pr-c-frontend_test-prod-williamhill"
+        - "pr-c-frontend_10-1-83-11"
+        - "pr-c-frontend_10-53-32-107"
+        - "pr-c-frontend_10-53-32-93"
+        - "pr-c-frontend_10-53-33-120"
+        - "pr-c-frontend_10-53-33-56"
+        - "pr-c-frontend_10-1-82-184"
+        - "pr-c-frontend_10-1-82-24"
+        - "pr-c-frontend_10-1-83-154"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_46"
+      description: "pr-c-frontend_grp_scc-migrated_network_46"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-180-52-220"
+        - "pr-c-frontend_ip_10-180-52-221"
+        - "pr-c-frontend_ip_10-180-52-222"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_53"
+      description: "pr-c-frontend_grp_scc-migrated_network_53"
+      sub_group_list:
+        - "pr-c-frontend_brs-checkpoint-vpn-ra"
+        - "pr-c-frontend_sc1wnprnap024-prod-williamhill-plc"
+        - "pr-c-frontend_serveroperations-27"
+        - "pr-c-frontend_ip_10-1-82-109"
+        - "pr-c-frontend_ip_10-1-82-178"
+        - "pr-c-frontend_ip_10-1-82-183"
+        - "pr-c-frontend_ip_10-1-82-189"
+        - "pr-c-frontend_ip_10-1-82-235"
+    - group_name: "pr-c-frontend_grp_infoblox-all-dns-servers"
+      description: "pr-c-frontend_grp_infoblox-all-dns-servers"
+      sub_group_list:
+        - "pr-c-frontend_brsns01"
+        - "pr-c-frontend_brsns02"
+        - "pr-c-frontend_gibns01"
+        - "pr-c-frontend_gibns02"
+        - "pr-c-frontend_sccns01"
+        - "pr-c-frontend_sccns02"
+        - "pr-c-frontend_ld6ns01"
+        - "pr-c-frontend_ld6ns02"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_73"
+      description: "pr-c-frontend_grp_scc-migrated_network_73"
+      sub_group_list:
+        - "pr-c-frontend_ld6prapvc01"
+        - "pr-c-frontend_grp_commvault-vsa-proxy-servers-ld6"
+        - "pr-c-frontend_grp_commvault-vsa-proxy-servers-gib"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_101"
+      description: "pr-c-frontend_grp_scc-migrated_network_101"
+      sub_group_list:
+        - "pr-c-frontend_sccuxstnmg03"
+        - "pr-c-frontend_ip_10-120-141-0s24"
+    - group_name: "pr-c-frontend_grp_commvault-backup-networks"
+      description: "pr-c-frontend_grp_commvault-backup-networks"
+      sub_group_list:
+        - "pr-c-frontend_brs-dev-test"
+        - "pr-c-frontend_brs-dev-test-old"
+        - "pr-c-frontend_gib-corp-tier"
+        - "pr-c-frontend_gib-ncde-db-tier"
+        - "pr-c-frontend_gib-ncde-mgmt-tier"
+        - "pr-c-frontend_sc1-cde-frontend-hdr-tier"
+        - "pr-c-frontend_sc1-ncde-app-tier"
+        - "pr-c-frontend_sc1-ncde-frontend-ods-tier"
+        - "pr-c-frontend_sc1-ncde-mgmt-tier"
+        - "pr-c-frontend_sc1-retail-mgmt-tier"
+        - "pr-c-frontend_sc1-ad-tier"
+        - "pr-c-frontend_sc1-monitoring"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_79"
+      description: "pr-c-frontend_grp_scc-migrated_network_79"
+      sub_group_list:
+        - "pr-c-frontend_grp_commvault-commcell-scc"
+        - "pr-c-frontend_grp_commvault-meida-servers-scc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_97"
+      description: "pr-c-frontend_grp_scc-migrated_network_97"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxpremn74"
+        - "pr-c-frontend_ip_10-180-142-164"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_81"
+      description: "pr-c-frontend_grp_scc-migrated_network_81"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-46-10"
+        - "pr-c-frontend_ip_10-120-46-11"
+        - "pr-c-frontend_ip_10-120-46-12"
+        - "pr-c-frontend_ip_10-120-46-13"
+        - "pr-c-frontend_ip_10-120-46-14"
+        - "pr-c-frontend_ip_10-120-46-15"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_89"
+      description: "pr-c-frontend_grp_scc-migrated_network_89"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-46-10"
+        - "pr-c-frontend_ip_10-120-46-11"
+        - "pr-c-frontend_ip_10-120-46-12"
+        - "pr-c-frontend_ip_10-120-46-13"
+        - "pr-c-frontend_ip_10-120-46-14"
+        - "pr-c-frontend_ip_10-120-46-15"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_91"
+      description: "pr-c-frontend_grp_scc-migrated_network_91"
+      sub_group_list:
+        - "pr-c-frontend_10-120-46-31"
+        - "pr-c-frontend_ip_10-120-46-30"
+        - "pr-c-frontend_ip_10-120-46-32"
+    - group_name: "pr-c-frontend_grp_whc-nexus"
+      description: "CHG0117312"
+      sub_group_list:
+        - "pr-c-frontend_prdxnex01box001-prod-williamhill-plc"
+        - "pr-c-frontend_prdxnex01box002-prod-williamhill-plc"
+        - "pr-c-frontend_prdxnex01box003-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_112"
+      description: "pr-c-frontend_grp_scc-migrated_network_112"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkms01"
+        - "pr-c-frontend_sc1uxprbkms02"
+        - "pr-c-frontend_sc1wnprbkcs01"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_113"
+      description: "pr-c-frontend_grp_scc-migrated_network_113"
+      sub_group_list:
+        - "pr-c-frontend_ld6uxpremn11"
+        - "pr-c-frontend_sc1uxpremn006"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_122"
+      description: "pr-c-frontend_grp_scc-migrated_network_122"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-180-39-0s24"
+        - "pr-c-frontend_ip_10-210-39-0s24"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_120"
+      description: "pr-c-frontend_grp_scc-migrated_network_120"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-39-103"
+        - "pr-c-frontend_ip_10-120-39-104"
+        - "pr-c-frontend_ip_10-120-39-105"
+        - "pr-c-frontend_ip_10-120-39-106"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_133"
+      description: "pr-c-frontend_grp_scc-migrated_network_133"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-39-103"
+        - "pr-c-frontend_ip_10-120-39-104"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_142"
+      description: "pr-c-frontend_grp_scc-migrated_network_142"
+      sub_group_list:
+        - "pr-c-frontend_aws-f5-slash24"
+        - "pr-c-frontend_aws-irl-f5-slash24"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_137"
+      description: "pr-c-frontend_grp_scc-migrated_network_137"
+      sub_group_list:
+        - "pr-c-frontend_10-120-46-16"
+        - "pr-c-frontend_10-120-46-17"
+        - "pr-c-frontend_10-120-46-18"
+        - "pr-c-frontend_10-120-46-19"
+        - "pr-c-frontend_ip_10-120-46-10"
+        - "pr-c-frontend_ip_10-120-46-11"
+        - "pr-c-frontend_ip_10-120-46-12"
+        - "pr-c-frontend_ip_10-120-46-13"
+        - "pr-c-frontend_ip_10-120-46-14"
+        - "pr-c-frontend_ip_10-120-46-15"
+    - group_name: "pr-c-frontend_grp_sc1-apic-servers"
+      description: "pr-c-frontend_grp_sc1-apic-servers"
+      sub_group_list:
+        - "pr-c-frontend_uk-sc1-apic1"
+        - "pr-c-frontend_uk-sc1-apic2"
+        - "pr-c-frontend_uk-sc1-apic3"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_88"
+      description: "pr-c-frontend_grp_scc-migrated_network_88"
+      sub_group_list:
+        - "pr-c-frontend_scc-int-lb-cde-stingray01"
+        - "pr-c-frontend_scc-int-lb-cde-stingray02"
+#    - group_name: "pr-c-frontend_grp_pr_c_frontend_local_interfaces"
+#      description: "pr-c-frontend_grp_pr_c_frontend_local_interfaces"
+#      sub_group_list:
+#        - "pr-c-frontend_ip_10-120-160-32s27"
+#        - "pr-c-frontend_ip_10-120-32-64s27"
+#        - "pr-c-frontend_ip_10-120-33-160s27"
+#        - "pr-c-frontend_ip_10-120-37-0s24"
+#        - "pr-c-frontend_ip_10-120-38-0s24"
+#        - "pr-c-frontend_ip_10-120-39-0s24"
+#        - "pr-c-frontend_ip_10-120-44-0s23"
+#        - "pr-c-frontend_ip_10-120-46-0s25"
+#        - "pr-c-frontend_ip_10-120-48-96s27"
+#        - "pr-c-frontend_ip_10-120-50-0s24"
+#        - "pr-c-frontend_ip_10-120-52-0s24"
+#        - "pr-c-frontend_ip_10-120-33-0s29"
+    - group_name: "pr-c-frontend_grp_cde-backoffice-web-servers"
+      description: "pr-c-frontend_grp_cde-backoffice-web-servers"
+      sub_group_list:
+        - "pr-c-frontend_10-120-38-11"
+        - "pr-c-frontend_10-120-38-12"
+        - "pr-c-frontend_10-120-38-13"
+    - group_name: "pr-c-frontend_grp_cde_crypto_app_servers"
+      description: "pr-c-frontend_grp_cde_crypto_app_servers"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprcap31"
+        - "pr-c-frontend_sc1uxprcap32"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_141"
+      description: "pr-c-frontend_grp_scc-migrated_network_141"
+      sub_group_list:
+        - "pr-c-frontend_cdeproxy-williamhill-remote"
+        - "pr-c-frontend_int-lb-cdeproxy"
+        - "pr-c-frontend_ip_10-180-44-28"
+    - group_name: "pr-c-frontend_grp_vmc-sddcs"
+      description: "pr-c-frontend_grp_vmc-sddcs"
+      sub_group_list:
+        - "pr-c-frontend_vmc-retail-test"
+        - "pr-c-frontend_ip_10-156-5-0s24"
+        - "pr-c-frontend_grp_vmc-sddc-retail-production"
+    - group_name: "pr-c-frontend_grp_whgroup_ad_servers-chg0144834"
+      description: "pr-c-frontend_grp_whgroup_ad_servers-chg0144834"
+      sub_group_list:
+        - "pr-c-frontend_bfawnpredc01"
+        - "pr-c-frontend_brswnpredc01"
+        - "pr-c-frontend_brswnpredc02_ip_10-210-194-12"
+        - "pr-c-frontend_brswnpredc03-chg0144834"
+        - "pr-c-frontend_gibwnpredc02_ip_10-180-194-12"
+        - "pr-c-frontend_gibwnpredc03_ip_10-180-194-13"
+        - "pr-c-frontend_irewnprdc01"
+        - "pr-c-frontend_irewnprdc02"
+        - "pr-c-frontend_nvawnprdc01"
+        - "pr-c-frontend_nvawnprdc02"
+        - "pr-c-frontend_krawnpredc01"
+        - "pr-c-frontend_krawnpredc02"
+        - "pr-c-frontend_ld6wnpredc01-new"
+        - "pr-c-frontend_ld6wnpredc02-new"
+        - "pr-c-frontend_mnlwnpredc02_ip_10-123-197-11"
+        - "pr-c-frontend_mnlwnpredc03"
+        - "pr-c-frontend_sc1wnpredc01"
+        - "pr-c-frontend_sc1wnpredc02"
+        - "pr-c-frontend_sc1wnpredc03_ip_10-120-194-13"
+        - "pr-c-frontend_sc1wnpredc04_ip_10-120-194-14"
+        - "pr-c-frontend_sc1wnpredc05_ip_10-120-194-15"
+        - "pr-c-frontend_sc1wnpredc08_ip_10-120-194-18"
+        - "pr-c-frontend_sofwnpredc01"
+        - "pr-c-frontend_sofwnpredc02"
+    - group_name: "pr-c-frontend_grp_euc_mgmt_server-group-chg0142765"
+      description: "pr-c-frontend_grp_euc_mgmt_server-group-chg0142765"
+      sub_group_list:
+        - "pr-c-frontend_brsapprcmg002-group-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_on_premise_datacentre_vlans-group-chg0142765"
+      description: "pr-c-frontend_grp_on_premise_datacentre_vlans-group-chg0142765"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-0-0s16"
+        - "pr-c-frontend_ip_10-210-0-0s16"
+        - "pr-c-frontend_ip_10-180-0-0s16"
+        - "pr-c-frontend_ip_10-112-0-0s16"
+        - "pr-c-frontend_ip_10-19-0-0s16"
+    - group_name: "pr-c-frontend_grp_wh_nets-chg0143200"
+      description: "pr-c-frontend_grp_wh_nets-chg0143200"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-0-0-0s8"
+    - group_name: "pr-c-frontend_grp_splunk_heavy_forwarders-chg0143200"
+      description: "pr-c-frontend_grp_splunk_heavy_forwarders-chg0143200"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxpremn002"
+        - "pr-c-frontend_sc1uxpremn003"
+    - group_name: "pr-c-frontend_grp_splunk_deployment_server-chg0143200"
+      description: "pr-c-frontend_grp_splunk_deployment_server-chg0143200"
+      sub_group_list:
+        - "pr-c-frontend_splunkdeployment-sc1-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_wh_nets-chg0142763"
+      description: "pr-c-frontend_grp_wh_nets-chg0142763"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-0-0s16"
+    - group_name: "pr-c-frontend_grp_splunk_heavy_forwarders-chg0142763"
+      description: "pr-c-frontend_grp_splunk_heavy_forwarders-chg0142763"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxpremn002"
+        - "pr-c-frontend_sc1uxpremn003"
+    - group_name: "pr-c-frontend_grp_splunk_deployment_server-chg0142763"
+      description: "pr-c-frontend_grp_splunk_deployment_server-chg0142763"
+      sub_group_list:
+        - "pr-c-frontend_splunkdeployment-sc1-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_ras-vpn-pool"
+      description: "pr-c-frontend_grp_ras-vpn-pool"
+      sub_group_list:
+        - "pr-c-frontend_grp_ld6-ras-vpn-pool"
+        - "pr-c-frontend_grp_sc1-ras-vpn-pool"
+        - "pr-c-frontend_grp_mrg-ras-vpn-pool"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_43"
+      description: "pr-c-frontend_grp_scc-migrated_network_43"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-44-25"
+        - "pr-c-frontend_ip_10-120-44-26"
+        - "pr-c-frontend_ip_10-120-44-27"
+    - group_name: "pr-c-frontend_grp_rundeck-servers"
+      description: "pr-c-frontend_grp_rundeck-servers"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxpreap237_ip_10-120-163-237"
+        - "pr-c-frontend_sc1uxpreap238_ip_10-120-163-238"
+        - "pr-c-frontend_sc1uxpreap239_ip_10-120-163-239"
+        - "pr-c-frontend_sc1uxpreap242"
+        - "pr-c-frontend_sc1uxrdk"
+    - group_name: "pr-c-frontend_grp_wily-svrs_all"
+      description: "pr-c-frontend_grp_wily-svrs_all"
+      sub_group_list:
+        - "pr-c-frontend_grp_wily_svrs_brs"
+        - "pr-c-frontend_grp_wily_svrs_scc"
+        - "pr-c-frontend_grp_wily_svrs_gib"
+    - group_name: "pr-c-frontend_grp_wily-access-group"
+      description: "pr-c-frontend_grp_wily-access-group"
+      sub_group_list:
+        - "pr-c-frontend_classa-8"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_42"
+      description: "pr-c-frontend_grp_scc-migrated_network_42"
+      sub_group_list:
+        - "pr-c-frontend_net_10-120-37-0m24"
+        - "pr-c-frontend_ip_10-120-50-0s24"
+        - "pr-c-frontend_ip_10-120-52-0s24"
+        - "pr-c-frontend_ip_10-120-38-0s24"
+        - "pr-c-frontend_ip_10-120-39-0s24"
+        - "pr-c-frontend_ip_10-120-67-0s24"
+        - "pr-c-frontend_ip_10-120-72-0s24"
+        - "pr-c-frontend_ip_10-120-0-0s16"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_39"
+      description: "pr-c-frontend_grp_scc-migrated_network_39"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-44-25"
+        - "pr-c-frontend_ip_10-120-44-26"
+        - "pr-c-frontend_ip_10-120-44-27"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_93"
+      description: "pr-c-frontend_grp_scc-migrated_network_93"
+      sub_group_list:
+        - "pr-c-frontend_brsux910"
+        - "pr-c-frontend_gibux910"
+        - "pr-c-frontend_ld6uxpreds01"
+        - "pr-c-frontend_sc1uxpreds01"
+    - group_name: "pr-c-frontend_grp_katello"
+      description: "pr-c-frontend_grp_katello"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxstnmg01"
+        - "pr-c-frontend_brsuxkat"
+        - "pr-c-frontend_gibuxkat"
+    - group_name: "pr-c-frontend_grp_wsus"
+      description: "pr-c-frontend_grp_wsus"
+      sub_group_list:
+        - "pr-c-frontend_brswsus"
+        - "pr-c-frontend_gibwsus"
+        - "pr-c-frontend_sc1wnprein01"
+        - "pr-c-frontend_stjwsus"
+    - group_name: "pr-c-frontend_grp_splunk-logger"
+      description: "pr-c-frontend_grp_splunk-logger"
+      sub_group_list:
+        - "pr-c-frontend_gibux-hf1"
+        - "pr-c-frontend_gibux-indx1"
+        - "pr-c-frontend_gibux-indx2"
+        - "pr-c-frontend_gibuxpremn01"
+        - "pr-c-frontend_gibuxpremn03"
+        - "pr-c-frontend_gibuxpremn04"
+        - "pr-c-frontend_sc1uxpromn012"
+        - "pr-c-frontend_ip_10-180-163-38"
+        - "pr-c-frontend_ip_10-180-163-39"
+        - "pr-c-frontend_ip_10-180-163-45"
+        - "pr-c-frontend_ip_10-180-163-46"
+    - group_name: "pr-c-frontend_grp_webproxies-cx-scc"
+      description: "pr-c-frontend_grp_webproxies-cx-scc"
+      sub_group_list:
+        - "pr-c-frontend_10-121-5-0slash24"
+        - "pr-c-frontend_10-121-7-0slash24"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_67"
+      description: "pr-c-frontend_grp_scc-migrated_network_67"
+      sub_group_list:
+        - "pr-c-frontend_grp_ad-child-dc-group"
+        - "pr-c-frontend_grp_whgroup-ad-servers"
+    - group_name: "pr-c-frontend_grp_uim-servers"
+      description: "CHG0079749,CHG0119559"
+      sub_group_list:
+        - "pr-c-frontend_brsuxpremn65"
+        - "pr-c-frontend_brsuxpremn66"
+        - "pr-c-frontend_sc1uxpremn65"
+        - "pr-c-frontend_sc1uxpremn66"
+        - "pr-c-frontend_ld6uxpremn13"
+    - group_name: "pr-c-frontend_grp_rds-kms-server"
+      description: "KMS/RDS license servers"
+      sub_group_list:
+        - "pr-c-frontend_brswndremg002"
+        - "pr-c-frontend_sc1wnpremg002"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_61"
+      description: "pr-c-frontend_grp_scc-migrated_network_61"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-65-68"
+        - "pr-c-frontend_ip_10-210-65-68"
+    - group_name: "pr-c-frontend_grp_grp-commvault-svrs"
+      description: "CHG0112231"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkms01"
+        - "pr-c-frontend_sc1uxprbkms02"
+        - "pr-c-frontend_sc1wnprbkcs01"
+    - group_name: "pr-c-frontend_grp_scc-migrated_network_103"
+      description: "pr-c-frontend_grp_scc-migrated_network_103"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-0-0s16"
+        - "pr-c-frontend_ip_10-121-0-0s16"
+    - group_name: "pr-c-frontend_grp_skybox-appliances"
+      description: "CHG0122435"
+      sub_group_list:
+        - "pr-c-frontend_sc1appresc02-data"
+        - "pr-c-frontend_sc1appresc03-data"
+    - group_name: "pr-c-frontend_grp_scc-whapi-c1"
+      description: "CHG0144060"
+      sub_group_list:
+        - "pr-c-frontend_sc1apprcwb01-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb02-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb03-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb04-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb09-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb10-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb11-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb12-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-whapi-c2"
+      description: "CHG0144060"
+      sub_group_list:
+        - "pr-c-frontend_sc1apprcwb005-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb006-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb007-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb008-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb013-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb014-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb016-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb015-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-whapi-c3"
+      description: "CHG0144060"
+      sub_group_list:
+        - "pr-c-frontend_sc1apprcwb017-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb018-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb019-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb020-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb021-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb022-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb023-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb024-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7-top"
+      description: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7-top"
+      sub_group_list:
+        - "pr-c-frontend_sc1apprcwb01"
+        - "pr-c-frontend_sc1apprcwb02"
+        - "pr-c-frontend_sc1apprcwb03"
+        - "pr-c-frontend_sc1apprcwb04"
+    - group_name: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7new-top"
+      description: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7new-top"
+      sub_group_list:
+        - "pr-c-frontend_sc1apprcwb005"
+        - "pr-c-frontend_sc1apprcwb006"
+        - "pr-c-frontend_sc1apprcwb007"
+        - "pr-c-frontend_sc1apprcwb008"
+    - group_name: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7-top-3"
+      description: "pr-c-frontend_grp_grp-scc-pr-cwb-layer7-top-3"
+      sub_group_list:
+        - "pr-c-frontend_sc1apprcwb009-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb010-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb011-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb012-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb013-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb014-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb015-prod-williamhill-plc"
+        - "pr-c-frontend_sc1apprcwb016-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_puppet-ncx-servers"
+      description: "pr-c-frontend_grp_puppet-ncx-servers"
+      sub_group_list:
+        - "pr-c-frontend_puppet-ncx-scc-ca-prod-williamhill-plc"
+        - "pr-c-frontend_puppet-ncx-scc-db-prod-williamhill-plc"
+        - "pr-c-frontend_puppet-ncx-scc-prod-williamhill-plc"
+    - group_name: "pr-c-frontend_grp_scc-management-subnets"
+      description: "pr-c-frontend_grp_scc-management-subnets"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-120-129-0s24"
+        - "pr-c-frontend_ip_10-120-131-0s24"
+        - "pr-c-frontend_ip_10-120-132-0s24"
+        - "pr-c-frontend_ip_10-120-133-0s24"
+        - "pr-c-frontend_ip_10-120-134-0s24"
+        - "pr-c-frontend_ip_10-120-136-0s24"
+        - "pr-c-frontend_ip_10-120-137-0s24"
+        - "pr-c-frontend_ip_10-120-141-0s24"
+        - "pr-c-frontend_ip_10-120-143-0s24"
+        - "pr-c-frontend_ip_10-120-145-0s24"
+        - "pr-c-frontend_ip_10-120-146-0s24"
+        - "pr-c-frontend_ip_10-120-147-0s24"
+        - "pr-c-frontend_ip_10-120-148-0s24"
+        - "pr-c-frontend_ip_10-120-149-0s24"
+        - "pr-c-frontend_ip_10-120-152-0s24"
+        - "pr-c-frontend_ip_10-120-153-0s24"
+        - "pr-c-frontend_ip_10-120-159-0s24"
+        - "pr-c-frontend_ip_10-120-162-0s24"
+        - "pr-c-frontend_ip_10-120-163-0s24"
+        - "pr-c-frontend_ip_10-120-180-0s24"
+        - "pr-c-frontend_ip_10-120-193-0s24"
+        - "pr-c-frontend_ip_10-120-194-0s24"
+        - "pr-c-frontend_ip_10-120-195-0s24"
+        - "pr-c-frontend_ip_10-120-39-0s24"
+        - "pr-c-frontend_ip_10-120-64-0s24"
+    - group_name: "pr-c-frontend_grp_commvault-media-server-ld6"
+      description: "pr-c-frontend_grp_commvault-media-server-ld6"
+      sub_group_list:
+        - "pr-c-frontend_ld6uxprbkms01"
+        - "pr-c-frontend_ld6uxprbkms02"
+        - "pr-c-frontend_ld6uxprbkms03"
+        - "pr-c-frontend_ld6uxprbkms04"
+    - group_name: "pr-c-frontend_grp_commvault-media-servers-gib"
+      description: "pr-c-frontend_grp_commvault-media-servers-gib"
+      sub_group_list:
+        - "pr-c-frontend_gibuxprbkms01"
+        - "pr-c-frontend_gibuxprbkms02"
+    - group_name: "pr-c-frontend_grp_commvault-meida-servers-scc"
+      description: "pr-c-frontend_grp_commvault-meida-servers-scc"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxprbkms01"
+        - "pr-c-frontend_sc1uxprbkms02"
+        - "pr-c-frontend_sc1uxprbkvs01"
+    - group_name: "pr-c-frontend_grp_commvault-commcell-ld6"
+      description: "pr-c-frontend_grp_commvault-commcell-ld6"
+      sub_group_list:
+        - "pr-c-frontend_ld6wnprbkcs01"
+    - group_name: "pr-c-frontend_grp_commvault-vsa-proxy-servers-ld6"
+      description: "pr-c-frontend_grp_commvault-vsa-proxy-servers-ld6"
+      sub_group_list:
+        - "pr-c-frontend_ld6uxprbkvs01"
+        - "pr-c-frontend_ld6uxprbkvs02"
+        - "pr-c-frontend_ld6uxprbkvs03"
+        - "pr-c-frontend_ld6uxprbkvs04"
+        - "pr-c-frontend_ld6uxprbkvs05"
+    - group_name: "pr-c-frontend_grp_brs-informix-cluster"
+      description: "CHG0137980"
+      sub_group_list:
+        - "pr-c-frontend_brsux279_280-p1-vip"
+        - "pr-c-frontend_brsux279_280-p2-vip"
+        - "pr-c-frontend_brsux279_280-p3-vip"
+        - "pr-c-frontend_brsux279_280-stg-vip"
+        - "pr-c-frontend_brsux279_280-sys-vip"
+        - "pr-c-frontend_brsux279_280-tem-vip"
+    - group_name: "pr-c-frontend_grp_wp-office-data"
+      description: "CHG0019704"
+      sub_group_list:
+        - "pr-c-frontend_wp-4th-data"
+        - "pr-c-frontend_wp-5th-data-24"
+        - "pr-c-frontend_wp-6th-data-23"
+        - "pr-c-frontend_wp-gnd-data-24"
+    - group_name: "pr-c-frontend_grp_grp-pr-c-xen-sessionhost-xa65"
+      description: "CHG0018190"
+      sub_group_list:
+        - "pr-c-frontend_sc1-wn-pre-xa03"
+        - "pr-c-frontend_sc1-wn-pre-xa04"
+        - "pr-c-frontend_sc1-wn-pre-xa05"
+        - "pr-c-frontend_sc1-wn-pre-xa06"
+        - "pr-c-frontend_sc1-wn-pre-xa07"
+        - "pr-c-frontend_sc1-wn-pre-xa08"
+        - "pr-c-frontend_sc1-wn-pre-xa09"
+        - "pr-c-frontend_sc1-wn-pre-xa10"
+        - "pr-c-frontend_sc1-wn-pre-xa11"
+        - "pr-c-frontend_sc1-wn-pre-xa12"
+        - "pr-c-frontend_sc1-wn-pre-xa13"
+        - "pr-c-frontend_sc1-wn-pre-xa14"
+        - "pr-c-frontend_sc1-wn-pre-xa01"
+        - "pr-c-frontend_sc1-wn-pre-xa02"
+        - "pr-c-frontend_sc1-wn-pre-xa21"
+        - "pr-c-frontend_sc1-wn-pre-xa22"
+        - "pr-c-frontend_sc1-wn-pre-xa23"
+        - "pr-c-frontend_sc1-wn-pre-xa24"
+        - "pr-c-frontend_sc1-wn-pre-xa25"
+        - "pr-c-frontend_sc1-wn-pre-xa26"
+        - "pr-c-frontend_sc1-wn-pre-xa27"
+        - "pr-c-frontend_sc1-wn-pre-xa28"
+        - "pr-c-frontend_sc1-wn-pre-xa29"
+        - "pr-c-frontend_sc1wnprexa35"
+        - "pr-c-frontend_sc1wnprexa36"
+    - group_name: "pr-c-frontend_grp_grp-pr-c-xen-desktops"
+      description: "CHG0018815"
+      sub_group_list:
+        - "pr-c-frontend_sc1wnprexp01"
+        - "pr-c-frontend_sc1wnprexp100"
+        - "pr-c-frontend_sc1wnprexp95"
+        - "pr-c-frontend_sc1wnprexp96"
+        - "pr-c-frontend_sc1wnprexp97"
+        - "pr-c-frontend_sc1wnprexp98"
+        - "pr-c-frontend_sc1wnprexp99"
+        - "pr-c-frontend_10-120-39-128-28"
+        - "pr-c-frontend_10-120-39-144"
+        - "pr-c-frontend_10-120-39-52-30"
+        - "pr-c-frontend_10-120-39-56-29"
+        - "pr-c-frontend_10-120-39-64-26"
+    - group_name: "pr-c-frontend_grp_stj-hdr-user-access"
+      description: "pr-c-frontend_grp_stj-hdr-user-access"
+      sub_group_list:
+        - "pr-c-frontend_stj-alan-huner-backup"
+        - "pr-c-frontend_stj-alan-hunter"
+    - group_name: "pr-c-frontend_grp_wily_svrs_scc"
+      description: "pr-c-frontend_grp_wily_svrs_scc"
+      sub_group_list:
+        - "pr-c-frontend_sc1uxpremn105"
+        - "pr-c-frontend_sc1uxpremn106"
+        - "pr-c-frontend_sc1uxpremn107"
+        - "pr-c-frontend_sc1uxpremn108"
+        - "pr-c-frontend_sc1uxpremn120"
+        - "pr-c-frontend_sc1uxpremn121"
+        - "pr-c-frontend_ip_10-120-163-31"
+        - "pr-c-frontend_ip_10-120-163-32"
+        - "pr-c-frontend_ip_10-120-163-33"
+        - "pr-c-frontend_ip_10-120-163-34"
+        - "pr-c-frontend_ip_10-120-163-36"
+    - group_name: "pr-c-frontend_grp_stj-retail-ias"
+      description: "pr-c-frontend_grp_stj-retail-ias"
+      sub_group_list:
+        - "pr-c-frontend_10-1-58-100"
+        - "pr-c-frontend_10-1-58-101"
+        - "pr-c-frontend_10-1-58-102"
+        - "pr-c-frontend_10-1-58-103"
+        - "pr-c-frontend_10-1-58-104"
+        - "pr-c-frontend_10-1-58-97"
+        - "pr-c-frontend_10-1-58-98"
+        - "pr-c-frontend_10-1-58-99"
+        - "pr-c-frontend_10-1-58-106"
+        - "pr-c-frontend_10-1-58-107"
+        - "pr-c-frontend_10-1-58-29"
+    - group_name: "pr-c-frontend_grp_layer7-access"
+      description: "pr-c-frontend_grp_layer7-access"
+      sub_group_list:
+        - "pr-c-frontend_brswn109"
+        - "pr-c-frontend_grp_grp-whapi-snat"
+        - "pr-c-frontend_grp_grp-f5-top"
+    - group_name: "pr-c-frontend_grp_commvault-vsa-proxy-servers-gib"
+      description: "pr-c-frontend_grp_commvault-vsa-proxy-servers-gib"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-180-46-35"
+        - "pr-c-frontend_ip_10-180-46-36"
+        - "pr-c-frontend_ip_10-180-46-37"
+        - "pr-c-frontend_ip_10-180-46-38"
+        - "pr-c-frontend_ip_10-180-46-39"
+    - group_name: "pr-c-frontend_grp_vmc-sddc-retail-production"
+      description: "pr-c-frontend_grp_vmc-sddc-retail-production"
+      sub_group_list:
+        - "pr-c-frontend_vmc-retail-production-vsphere-mgmt"
+        - "pr-c-frontend_vmc-retail-production-10-233-0-0s24"
+        - "pr-c-frontend_vmc-retail-production-services-mgmt"
+    - group_name: "pr-c-frontend_grp_ld6-ras-vpn-pool"
+      description: "pr-c-frontend_grp_ld6-ras-vpn-pool"
+      sub_group_list:
+        - "pr-c-frontend_ip_192-168-48-0s20"
+    - group_name: "pr-c-frontend_grp_sc1-ras-vpn-pool"
+      description: "pr-c-frontend_grp_sc1-ras-vpn-pool"
+      sub_group_list:
+        - "pr-c-frontend_ip_192-168-12-0s22"
+        - "pr-c-frontend_ip_192-168-16-0s22"
+    - group_name: "pr-c-frontend_grp_mrg-ras-vpn-pool"
+      description: "pr-c-frontend_grp_mrg-ras-vpn-pool"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-30-200-0s24"
+        - "pr-c-frontend_ip_10-30-202-0s24"
+        - "pr-c-frontend_ip_10-40-200-0s24"
+        - "pr-c-frontend_ip_10-40-202-0s24"
+        - "pr-c-frontend_ip_10-130-200-0s23"
+    - group_name: "pr-c-frontend_grp_wily_svrs_brs"
+      description: "pr-c-frontend_grp_wily_svrs_brs"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-210-163-95"
+        - "pr-c-frontend_ip_10-210-163-96"
+        - "pr-c-frontend_ip_10-210-163-97"
+        - "pr-c-frontend_ip_10-210-163-98"
+        - "pr-c-frontend_ip_10-210-163-99"
+    - group_name: "pr-c-frontend_grp_wily_svrs_gib"
+      description: "pr-c-frontend_grp_wily_svrs_gib"
+      sub_group_list:
+        - "pr-c-frontend_ip_10-180-163-211"
+        - "pr-c-frontend_ip_10-180-163-212"
+        - "pr-c-frontend_ip_10-180-163-213"
+        - "pr-c-frontend_ip_10-180-163-214"
+        - "pr-c-frontend_ip_10-180-163-218"
+        - "pr-c-frontend_ip_10-180-163-102"
+        - "pr-c-frontend_ip_10-180-163-220"
+        - "pr-c-frontend_ip_10-180-163-221"
+        - "pr-c-frontend_ip_10-180-163-40"
+    - group_name: "pr-c-frontend_grp_ad-child-dc-group"
+      description: "CHG0017397"
+      sub_group_list:
+        - "pr-c-frontend_sc1-wn-pre-dc03"
+        - "pr-c-frontend_sc1-wn-pre-dc04"
+        - "pr-c-frontend_sc1-wn-pre-dc05"
+        - "pr-c-frontend_sc1-wn-pre-dc06"
+        - "pr-c-frontend_sc1-wn-pre-dc07"
+        - "pr-c-frontend_sc1-wn-pre-dc08"
+    - group_name: "pr-c-frontend_grp_whgroup-ad-servers"
+      description: "pr-c-frontend_grp_whgroup-ad-servers"
+      sub_group_list:
+        - "pr-c-frontend_brswnpredc02_ip_10-210-194-12"
+        - "pr-c-frontend_brswnpredc03"
+        - "pr-c-frontend_gibwnpredc02_ip_10-180-194-12"
+        - "pr-c-frontend_gibwnpredc03_ip_10-180-194-13"
+        - "pr-c-frontend_mnlwnpredc02_ip_10-123-197-11"
+        - "pr-c-frontend_sc1wnpredc03_ip_10-120-194-13"
+        - "pr-c-frontend_sc1wnpredc04_ip_10-120-194-14"
+        - "pr-c-frontend_sc1wnpredc05_ip_10-120-194-15"
+        - "pr-c-frontend_sc1wnpredc08_ip_10-120-194-18"
+        - "pr-c-frontend_ld6wnpredc01-new"
+        - "pr-c-frontend_ld6wnpredc02-new"
+        - "pr-c-frontend_bfawnpredc01"
+        - "pr-c-frontend_krawnpredc01"
+        - "pr-c-frontend_krawnpredc02"
+        - "pr-c-frontend_mnlwnpredc03"
+        - "pr-c-frontend_sofwnpredc01"
+        - "pr-c-frontend_sofwnpredc02"
+        - "pr-c-frontend_brswnpredc01"
+        - "pr-c-frontend_sc1wnpredc01"
+        - "pr-c-frontend_sc1wnpredc02"
+    - group_name: "pr-c-frontend_grp_grp-whapi-snat"
+      description: "pr-c-frontend_grp_grp-whapi-snat"
+      sub_group_list:
+        - "pr-c-frontend_svr-cpr-whapi-snat240-vi"
+        - "pr-c-frontend_svr-cpr-whapi-snat242-vi"
+        - "pr-c-frontend_svr-cpr-whapi-snat241-vi"
+    - group_name: "pr-c-frontend_grp_grp-f5-top"
+      description: "pr-c-frontend_grp_grp-f5-top"
+      sub_group_list:
+        - "pr-c-frontend_svr-f5top01-re"
+        - "pr-c-frontend_svr-f5top02-re"
+        - "pr-c-frontend_svr-f5top03-re"

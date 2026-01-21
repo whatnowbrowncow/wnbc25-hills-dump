@@ -1,0 +1,2955 @@
+---
+
+resources:
+  security_policy:
+
+    - access_list: sc1-cde-jumphost-lan_access_in
+      rules:
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_2"
+          change_ref: "CHG0079131"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_sc1-cx-cde-nets"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_4"
+          change_ref: "CHG0067823 - CDE Jumpnet to Katello"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_sc1-katello-prod"
+          service:
+            - "pr-c-mgt_katello-ports"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_6"
+          change_ref: "CHG0140052"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_stingray-mgt"
+          service:
+            - "pr-c-mgt_tcp-9090_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_8"
+          change_ref: "CHG0120371"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_sc1-bomgar-clients"
+          destination:
+            - "pr-c-mgt_sc1-prd-ncde-sports-app-lan"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_10"
+          change_ref: "CHG0128017"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_sc1-bomgar-clients"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_310"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_14"
+          change_ref: "CHG0067329 - CDE Jumpnet to Puppet Master (Inv Prod)"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_sc1-inv-cde-nets"
+          service:
+            - "pr-c-mgt_cellmgmt-ports"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_16"
+          change_ref: "CHG0067329 - CDE Jumpnet to Cell Mgmt (Inv Prod), CHG0115965"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_inv-cde-mgmt-lan"
+          service:
+            - "pr-c-mgt_scc-migrated_service_38"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_18"
+          change_ref: "CHG0067823 - CDE Jumpnet to Stingray Mgmt (Inv Prod)"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_inv-pr-stingray-subnets"
+          service:
+            - "pr-c-mgt_stingray-ports"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_20"
+          change_ref: "CHG0076594"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_qlickview_app"
+          service:
+            - "pr-c-mgt_tcp-3389_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_22"
+          change_ref: "CHG0076594"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_qlickview_web"
+          service:
+            - "pr-c-mgt_tcp-3389_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_24"
+          change_ref: "CHG0111495, CHG0127143"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_vsphere_mgmt_nets"
+          service:
+            - "pr-c-mgt_vmware-access-ports"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_26"
+          change_ref: "CHG0114077, CHG0114418"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-scc-bomgar-jumphosts"
+          destination:
+            - "pr-c-mgt_grp_grp-bomgar-appliances"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_28"
+          change_ref: "CHG0120144"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-scc-bomgar-jumphosts"
+          destination:
+            - "pr-c-mgt_grp_device-management-networks"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_30"
+          change_ref: "CHG0114077"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-scc-bomgar-jumphosts"
+          destination:
+            - "pr-c-mgt_ip_10-120-0-0s16"
+          service:
+            - "pr-c-mgt_tcp-22-3389"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_32"
+          change_ref: "CHG0115563"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-141-0s24"
+          destination:
+            - "pr-c-mgt_invxpup06mst001-inv-williamhill-plc"
+          service:
+            - "pr-c-mgt_tcp_8140"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_34"
+          change_ref: "CHG0120025"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-141-0s24"
+          destination:
+            - "pr-c-mgt_aws-ddos-big-ip-net"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_36"
+          change_ref: "CHG0121057,CHG0121362,CHG0121632,CHG0121634"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_rds-servers-scc"
+          destination:
+            - "pr-c-mgt_grp_skybox-appliances"
+          service:
+            - "pr-c-mgt_scc-migrated_service_42"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_38"
+          change_ref: "CHG0120877"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_rds-servers-scc"
+          destination:
+            - "pr-c-mgt_grp_bomgar_asdm_access_brs_gib"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_40"
+          change_ref: "CHG0127129"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-141-0s24"
+          destination:
+            - "pr-c-mgt_grp_cde-ilo-range"
+          service:
+            - "pr-c-mgt_ilo-access-ports"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_42"
+          change_ref: "CHG0127129,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-141-0s24"
+          destination:
+            - "pr-c-mgt_grp_oneview"
+          service:
+            - "pr-c-mgt_hp-oneview-access"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_44"
+          change_ref: "CHG0123657,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-scc-bomgar-jumphosts"
+          destination:
+            - "pr-c-mgt_grp_checkpoint-mds-cmas"
+          service:
+            - "pr-c-mgt_checkpoint-user-mgmt-ports"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_46"
+          change_ref: "CHG0123808"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-cx-cde-jump-hosts"
+          destination:
+            - "pr-c-mgt_sc1uxprtdb001"
+          service:
+            - "pr-c-mgt_tcp-8080-1521"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_48"
+          change_ref: "CHG0123933, CHG0127332"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_10-120-141-40s29"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_295"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_73"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_50"
+          change_ref: "CHG0126265"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_sc1-bomgar-clients"
+          destination:
+            - "pr-c-mgt_us-njp-ddos-platform"
+          service:
+            - "pr-c-mgt_tcp-8443_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_52"
+          change_ref: "CHG0126949"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_300"
+          destination:
+            - "pr-c-mgt_ip_10-120-163-0s24"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_301"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_54"
+          change_ref: "CHG0127332, CHG0127524, CHG0127798,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_304"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_306"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_305"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_56"
+          change_ref: "CHG0130995"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-scc-bomgar-jumphosts"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_317"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_58"
+          change_ref: "CHG0133434"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_aws-supernets"
+          service:
+            - "pr-c-mgt_tcp-3389_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_60"
+          change_ref: "CHG0140039"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_26"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_29"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_30"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_62"
+          change_ref: "CHG0140344"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_36"
+          destination:
+            - "pr-c-mgt_grp_aws-dcs-ire-nva"
+          service:
+            - "pr-c-mgt_scc-migrated_service_40"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_64"
+          change_ref: "CHG0140523"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_39"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_40"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_44"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_66"
+          change_ref: "CHG0141002"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_51"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_71"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_68"
+          change_ref: "CHG0142117, CHG0144147, CHG0144126, CHG0143326, CHG0143327"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_55"
+          service:
+            - "pr-c-mgt_scc-migrated_service_15"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_70"
+          change_ref: "CHG0142705"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_53"
+          destination:
+            - "pr-c-mgt_aws-ddos-dev-100-78-80-0s20"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_54"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_72"
+          change_ref: "CHG0144793"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "pr-c-mgt_service-mgmt-scc-whc-prod-sddc"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_74"
+          change_ref: "CHG0144732"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_57"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_58"
+          service:
+            - "pr-c-mgt_tcp-7778_eq"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_access_in_76"
+          change_ref: "CHG0145168"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-bomgar-grp"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_69"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_37"
+
+    - access_list: web-mgt_access_in
+      rules:
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_2"
+          change_ref: "CHG0020856"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_web-mgmt-network-24"
+          destination:
+            - "pr-c-mgt_sccuxstnmg01"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_24"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_4"
+          change_ref: "CHG0070831,CHG0116922"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-c-layer7-servers"
+          destination:
+            - "pr-c-mgt_grp_scc-moni-servers"
+          service:
+            - "pr-c-mgt_tcp-5001_eq"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_6"
+          change_ref: "CHG82531"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-layer7new-servers"
+          destination:
+            - "pr-c-mgt_grp_scc-moni-servers"
+          service:
+            - "pr-c-mgt_tcp-5001_eq"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_8"
+          change_ref: "CHG0020675, CHG0027079, CHG0107140,CHG0116922,CHG0126849"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_117"
+          destination:
+            - "pr-c-mgt_sc1uxprnap70"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_10"
+          change_ref: "CHG0104113,CHG0116922"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-c-layer7-servers"
+          destination:
+            - "pr-c-mgt_sc1uxpromn012"
+          service:
+            - "pr-c-mgt_tcp-8089_eq"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_12"
+          change_ref: "CHG0104113"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-layer7new-servers"
+          destination:
+            - "pr-c-mgt_sc1uxpromn012"
+          service:
+            - "pr-c-mgt_tcp-8089_eq"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_14"
+          change_ref: "PCI Q4 2018,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxprcwb41"
+          destination:
+            - "pr-c-mgt_sc1uxprnap70"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_16"
+          change_ref: "CHG0105871,CHG0116922"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_ob-web-app-servers"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_67"
+          service:
+            - "pr-c-mgt_tcpudp-514"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_18"
+          change_ref: "CHG0107212"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-c-layer7-mgmt-3"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_83"
+          service:
+            - "pr-c-mgt_tcpudp-514"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_20"
+          change_ref: "CHG0107212"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-c-layer7-mgmt-3"
+          destination:
+            - "pr-c-mgt_ip_10-120-136-181"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_29"
+
+        - rule_description: "pr-c-mgt_web-mgt_access_in_22"
+          change_ref: "CHG0122003"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_web-mgmt-network-24"
+          destination:
+            - "pr-c-mgt_scc-nas-ip-range"
+          service:
+            - "pr-c-mgt_scc-nas-ports"
+
+    - access_list: app-mgt_access_in
+      rules:
+
+        - rule_description: "pr-c-mgt_app-mgt_access_in_2"
+          change_ref: "CHG0020856"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_app-mgt-network-24"
+          destination:
+            - "pr-c-mgt_sccuxstnmg01"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_42"
+
+        - rule_description: "pr-c-mgt_app-mgt_access_in_3"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxprcap45"
+          destination:
+            - "pr-c-mgt_sc1uxprnap70"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_app-mgt_access_in_4"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxprcap46"
+          destination:
+            - "pr-c-mgt_sc1uxprnap70"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_app-mgt_access_in_6"
+          change_ref: "CHG0124318"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_298"
+          destination:
+            - "pr-c-mgt_sc1uxprnap70"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_app-mgt_access_in_8"
+          change_ref: "CHG0122003"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_app-mgt-network-24"
+          destination:
+            - "pr-c-mgt_scc-nas-ip-range"
+          service:
+            - "pr-c-mgt_scc-nas-ports"
+
+    - access_list: cde-backoffice-mgt_in
+      rules:
+
+        - rule_description: "pr-c-mgt_cde-backoffice-mgt_in_2"
+          change_ref: "CHG0028339"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_cde-backoffice-mgt-network-24"
+          destination:
+            - "pr-c-mgt_sccuxstnmg01"
+          service:
+            - "pr-c-mgt_tcp-www_eq"
+
+        - rule_description: "pr-c-mgt_cde-backoffice-mgt_in_3"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-137-11"
+          destination:
+            - "pr-c-mgt_sc1uxprnap70"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_cde-backoffice-mgt_in_4"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-137-12"
+          destination:
+            - "pr-c-mgt_sc1uxprnap70"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_cde-backoffice-mgt_in_6"
+          change_ref: "CHG0122003"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_cde-backoffice-mgt-network-24"
+          destination:
+            - "pr-c-mgt_scc-nas-ip-range"
+          service:
+            - "pr-c-mgt_scc-nas-ports"
+
+    - access_list: Stingray-Mgt_access_in
+      rules:
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_2"
+          change_ref: "CHG0030985"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-140-0s24"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_289"
+          service:
+            - "pr-c-mgt_scc-migrated_udp_8"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_4"
+          change_ref: "CHG0060912,CHG0083349"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_f5-mgmt"
+          destination:
+            - "pr-c-mgt_sc1wnpredc03"
+          service:
+            - "pr-c-mgt_tcp-ldap_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_6"
+          change_ref: "CHG0061479, CHG0078266, CHG0083349"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-f5-mgmt"
+          destination:
+            - "pr-c-mgt_grp_f5-splunk-servers"
+          service:
+            - "pr-c-mgt_scc-migrated_service_49"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_8"
+          change_ref: "CHG0074843, CHG0078266,CHG0083441, CHG0084296,CHG0094547, CHG0094606"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_stingray-group"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_235"
+          service:
+            - "pr-c-mgt_scc-migrated_service_48"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_9"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-140-0s24"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_27"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_17"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_11"
+          change_ref: "CHG0066638,CHG0083441"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_stingray_prod"
+          destination:
+            - "pr-c-mgt_grp_grp-ldap-group-scc"
+          service:
+            - "pr-c-mgt_tcp-ldap_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_13"
+          change_ref: "CHG0086708"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_wh-f5-devices"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_292"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_15"
+          change_ref: "CHG0113225"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_stingray-group"
+          destination:
+            - "pr-c-mgt_grp_clp-heavyforwarders"
+          service:
+            - "pr-c-mgt_tcp-8088_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_17"
+          change_ref: "CHG0114594"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1bigiq01-mgmt-prod-williamhill-plc"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_278"
+          service:
+            - "pr-c-mgt_tcp-8443_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_19"
+          change_ref: "CHG0123860"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-140-14"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_9"
+          service:
+            - "pr-c-mgt_tcp-8443_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_21"
+          change_ref: "CHG0125663, CHG0132492"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1bigiq03-mgmt-prod-williamhill-plc"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_321"
+          service:
+            - "pr-c-mgt_tcp-8443_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_23"
+          change_ref: "CHG0142649"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1bigiq03-mgmt-prod-williamhill-plc"
+          destination:
+            - "pr-c-mgt_aws-ddos-dev-100-78-80-0s20"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_25"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_25"
+          change_ref: "CHG0125909"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1bigiq04-mgmt-prod-williamhill"
+          destination:
+            - "pr-c-mgt_grp_njp-dev-ddos-subnet"
+          service:
+            - "pr-c-mgt_tcp-8443_eq"
+
+        - rule_description: "pr-c-mgt_Stingray-Mgt_access_in_27"
+          change_ref: "CHG0141617"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_45"
+          destination:
+            - "pr-c-mgt_ip_10-120-194-58"
+          service:
+            - "pr-c-mgt_tcp-www_eq"
+
+    - access_list: internal-vrf_access_in
+      rules:
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_1"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_8"
+          destination:
+            - "pr-c-mgt_scc-xiv-array-1"
+          service:
+            - "pr-c-mgt_tcp-7778_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_3"
+          change_ref: "CHG0143999"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_grp_cp-vpn-cde-mgmt-nets"
+          service:
+            - "pr-c-mgt_cde-mgmt-nets-services"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_6"
+          change_ref: "CHG0143999 ,CHG0143999"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_sc1prappsc02-prod-williamhill-plc"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_7"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_uk-sc1-network-mgmt-24"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_9"
+          change_ref: "CHG0143999"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_web-mgmt-network-24"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_32"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_11"
+          change_ref: "CHG0143999"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_bladelogic-dmz-network-24"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_33"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_13"
+          change_ref: "CHG0143999"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_net-10-120-140-0_24-sccstringray"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_35"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_15"
+          change_ref: "CHG0143999"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_36"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_17"
+          change_ref: "CHG0143999"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_ip_10-120-143-64s27"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_18"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_ip_10-120-134-253"
+          service:
+            - "pr-c-mgt_scc-migrated_service_29"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_21"
+          change_ref: "** Temp Access for migration work - Monday 25th Jan 2021 ** ,** Temp Access for migration work - Monday 25th Jan 2021 **"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_vmhost-mgt-network-24"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_24"
+          change_ref: "CHG0125201 - ILO ACCESS IS ALLOWED IN THE CDE"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_ilo-access"
+          destination:
+            - "pr-c-mgt_grp_hp-ilo-subnets"
+          service:
+            - "pr-c-mgt_ilo-access-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_26"
+          change_ref: "CHG0141104"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_us-esxi-hosts"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-9084_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_28"
+          change_ref: "CHG0141104"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_us-esxi-hosts"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_scc-migrated_service_7"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_31"
+          change_ref: "CHG0140599 ,CHG0140759"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-commvault-servers"
+          destination:
+            - "pr-c-mgt_sc1uxpremg30"
+          service:
+            - "pr-c-mgt_tcp-60606_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_33"
+          change_ref: "CHG0140599"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_copxbld16api001-co1-cop-williamhill-plc"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_43"
+          change_ref: "CHG0123928"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_networkteam-vpn-range"
+          destination:
+            - "pr-c-mgt_grp_cde-direct-access-nets"
+          service:
+            - "pr-c-mgt_tcp-22-3389"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_47"
+          change_ref: "Deny Rule - CHG0123928"
+          action: "deny"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_grp_cde-direct-access-nets"
+          service:
+            - "pr-c-mgt_tcp-22-3389"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_49"
+          change_ref: "controlled on BRS CP"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-vpn-pool"
+          destination:
+            - "pr-c-mgt_grp_cde-direct-access-nets"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_51"
+          change_ref: "CHG0064699"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_tufincollectors"
+          destination:
+            - "pr-c-mgt_scc-internal-asa"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_53"
+          change_ref: "CHG0090616"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_pr-cde-front-cx-mgmt"
+          destination:
+            - "pr-c-mgt_scc-internal-asa"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_55"
+          change_ref: "TBC"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_tufincollectors"
+          destination:
+            - "pr-c-mgt_grp_tufiniosdevices"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_57"
+          change_ref: "CHG0065974"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_149"
+          destination:
+            - "pr-c-mgt_grp_tufincheckpointmds"
+          service:
+            - "pr-c-mgt_tufincheckpointports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_60"
+          change_ref: "OPSEC LEA connection from SCC Splunk HF to SCC CMA-1 server - CHG0084220 ,OPSEC LEA connection from SCC Splunk HF to SCC CMA-1 server - CHG0084220"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxpremn79"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_54"
+          service:
+            - "pr-c-mgt_checkpointmanagmentports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_61"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxpremn79"
+          destination:
+            - "pr-c-mgt_scc-pr-ext-cma1"
+          service:
+            - "pr-c-mgt_checkpointmanagmentports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_63"
+          change_ref: "CHG0065471, CHG0070895"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_uk-scc-wsus"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_225"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_65"
+          change_ref: "CHG0066166"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_uk-scc-wsus"
+          destination:
+            - "pr-c-mgt_sc1uxpremg30"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_67"
+          change_ref: "CHG0131534"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ld6wnprwsus01"
+          destination:
+            - "pr-c-mgt_sc1uxpremg30"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_69"
+          change_ref: "CHG0131534"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brswnprwsus01"
+          destination:
+            - "pr-c-mgt_sc1uxpremg30"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_71"
+          change_ref: "CHG0060632, INC0349198"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_211"
+          destination:
+            - "pr-c-mgt_rsa-scc-new"
+          service:
+            - "pr-c-mgt_rsa-new-services"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_73"
+          change_ref: "CHG0132892"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gibux950-02"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_323"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_75"
+          change_ref: "CHG0035636"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-solarwinds"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_173"
+          service:
+            - "pr-c-mgt_sc1-solarwindsports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_77"
+          change_ref: "CHG0056829"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_uk-sc1-netbrain01"
+          destination:
+            - "pr-c-mgt_uk-sc1-network-mgmt-24"
+          service:
+            - "pr-c-mgt_scc-migrated_service_45"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_78"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1-cacti"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_293"
+          service:
+            - "pr-c-mgt_udp-snmp_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_80"
+          change_ref: "CHG0021260"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_rfc-1918"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_43"
+          service:
+            - "pr-c-mgt_scc-migrated_service_21"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_82"
+          change_ref: "CHG0085234, CHG0035934, CHG0086479, CHG0111816"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_athene-servers"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_287"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_84"
+          change_ref: "CHG0015230, CHG0021040"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-c-nms-mgmt"
+          destination:
+            - "pr-c-mgt_grp_rfc-1918"
+          service:
+            - "pr-c-mgt_scc-migrated_service_19"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_86"
+          change_ref: "CHG0015319, CHG0017396"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_104"
+          destination:
+            - "pr-c-mgt_ip_10-120-0-0s16"
+          service:
+            - "pr-c-mgt_grp-pr-c-altris-task-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_88"
+          change_ref: "CHG0018025, CHG0018188"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_110"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_116"
+          service:
+            - "pr-c-mgt_grp-pr-c-ad-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_92"
+          change_ref: "CHG0015230, CHG0118320"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_215"
+          destination:
+            - "pr-c-mgt_sc1-ncs1"
+          service:
+            - "pr-c-mgt_udp-tftp_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_94"
+          change_ref: "CHG0076486, CHG0077496 - IRS do not disable"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_hp-irs-server"
+          destination:
+            - "pr-c-mgt_grp_hp-irs-destinations"
+          service:
+            - "pr-c-mgt_hp-irs-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_95"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-gib-whapi-portal-servers"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-layer7new-servers"
+          service:
+            - "pr-c-mgt_tcp-8443_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_97"
+          change_ref: "CHG82531, CHG0084117, INC0604535, CHG0135991"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_1"
+          destination:
+            - "pr-c-mgt_uk-sc1-network-mgmt-24"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_1"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_99"
+          change_ref: "CHG0075512,CHG0076346,CHG0076483, CHG0083049,CHG0082670,CHG0081582,CHG0083446,CHG0083821,CHG0083088"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_whapi-gateway-access"
+          destination:
+            - "pr-c-mgt_grp_whapi-gateway-servers"
+          service:
+            - "pr-c-mgt_whapi-access-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_102"
+          change_ref: "CHG0053652 ,CHG0116257 - SDenham removed as part of CDE lockdown,CHG0116922"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_191"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_192"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_97"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_104"
+          change_ref: "CHG0019196"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_ip_10-120-136-30"
+          service:
+            - "pr-c-mgt_tcp-60606_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_106"
+          change_ref: "Infosec approved web-ports"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_15"
+          destination:
+            - "pr-c-mgt_vmhost-mgt-network-24"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_99"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_110"
+          change_ref: "CHG0013387 ,CHG0015230 ,CHG0116257 - Removed SSH as part of CDE lockdown"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_network_services_team"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_48"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_113"
+          change_ref: "CHG0020650,CHG0023838, CHG0023913, CHG0024220 CHG0036165 ,CHG0117503 - SSH removed as part of CDE lockdown"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_47"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_48"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_115"
+          change_ref: "CHG0022219, CHG0022372, INC0442316,CHG0116922"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-moni-servers"
+          destination:
+            - "pr-c-mgt_grp_ob-web-app-servers"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_58"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_119"
+          change_ref: "CHG0029253,CHG0031299,CHG0052001, CHG0073744,CHG0083441, CHG0110894, CHG0114039"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_stingray-mgt-tcp-9070-9090-access"
+          destination:
+            - "pr-c-mgt_grp_stingray-mgt"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_72"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_121"
+          change_ref: "CHG0029349, CHG0033991"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_gib-checkpoint"
+          destination:
+            - "pr-c-mgt_gib-pr-ext-cma1"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_66"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_123"
+          change_ref: "CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_birstall_checkpointfirewalls"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_35"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_92"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_125"
+          change_ref: "CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_birstall_checkpointfirewalls"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_222"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_127"
+          change_ref: "CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_brs-checkpoint-firewalls"
+          destination:
+            - "pr-c-mgt_brs-pp-ext-cma1"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_93"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_129"
+          change_ref: "CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_scc-pr-ext-cma2"
+          destination:
+            - "pr-c-mgt_grp_scc_checkpointfirewalls"
+          service:
+            - "pr-c-mgt_checkpoint-mgmt"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_131"
+          change_ref: "CHG0033991, CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gi-mpl-fm01"
+          destination:
+            - "pr-c-mgt_grp_scc-smart-1"
+          service:
+            - "pr-c-mgt_provider-1-mgt"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_133"
+          change_ref: "CHG0033991"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gib-pr-ext-cma2"
+          destination:
+            - "pr-c-mgt_gib-pr-ext-cma1"
+          service:
+            - "pr-c-mgt_provider-1-mgt"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_135"
+          change_ref: "CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-dr-ext-cma2"
+          destination:
+            - "pr-c-mgt_brs-dr-ext-cma1"
+          service:
+            - "pr-c-mgt_provider-1-mgt"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_137"
+          change_ref: "CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-pp-ext-cma2"
+          destination:
+            - "pr-c-mgt_brs-pp-ext-cma1"
+          service:
+            - "pr-c-mgt_provider-1-mgt"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_139"
+          change_ref: "CHG0052271"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_scc-pr-ext-cma2"
+          destination:
+            - "pr-c-mgt_scc-pr-ext-cma1"
+          service:
+            - "pr-c-mgt_provider-1-mgt"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_141"
+          change_ref: "CHG0027354, CHG0028018, CHG0056990,CHG0029349"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_gib-smart-1"
+          destination:
+            - "pr-c-mgt_grp_scc-smart-1"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_143"
+          change_ref: "CHG0029400, CHG0071526"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_orbis"
+          destination:
+            - "pr-c-mgt_sc1-wn-pre-mg01"
+          service:
+            - "pr-c-mgt_tcp-3389_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_145"
+          change_ref: "CHG0032746 , CHG0035670,CHG0083441, CHG0101073"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_152"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_279"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_128"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_147"
+          change_ref: "CHG0066839,CHG0083441,PCI-Q4-2017,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brsuxprein02"
+          destination:
+            - "pr-c-mgt_grp_grp-stingrays-batch2"
+          service:
+            - "pr-c-mgt_tcp-9090-9070"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_150"
+          change_ref: "CHG0033689, CHG0034017 CHG0036165,CHG0039270, CHG0038627, CHG0052441,CHG0083441, CHG0090196, ,CHG0110251,CHG0118303,TASK0238453"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_282"
+          destination:
+            - "pr-c-mgt_grp_stingray-mgt"
+          service:
+            - "pr-c-mgt_tcp-9090_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_152"
+          change_ref: "CHG0034356"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxprein12"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_284"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_154"
+          change_ref: "CHG0034492"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_infoblox-grid-masters"
+          destination:
+            - "pr-c-mgt_sc1uxprenw01"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_156"
+          change_ref: "CHG0126802"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_291"
+          destination:
+            - "pr-c-mgt_sc1uxprenw01"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_158"
+          change_ref: "CHG0125582"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_299"
+          destination:
+            - "pr-c-mgt_sc1uxprenw01"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_160"
+          change_ref: "CHG0066438"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-moni-servers"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_218"
+          service:
+            - "pr-c-mgt_tcp-1526_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_165"
+          change_ref: "CHG0079889,CHG0083441 ,CHG0079889,CHG0083441 ,CHG0079889,CHG0083441 ,CHG0092703,CHG0094547,CHG0094606"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_2"
+          destination:
+            - "pr-c-mgt_grp_stingray-group"
+          service:
+            - "pr-c-mgt_tcp-9070_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_170"
+          change_ref: "CHG0039188, CHG0040157, CHG0065418, CHG0067336,CHG0074856, CHG0081123, CHG0095211 ,CHG0113088,CHG0115204, CHG0116788, TASK0234868,TASK0240023"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_160"
+          destination:
+            - "pr-c-mgt_scc-tpam"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_172"
+          change_ref: "CHG0040158"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brs-tpam"
+          destination:
+            - "pr-c-mgt_scc-tpam"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_85"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_174"
+          change_ref: "CHG0040756,CHG0116922"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gib-c-web-mg-net"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-layer7-servers"
+          service:
+            - "pr-c-mgt_tcp-8443_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_177"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-pr-n-redhat-servers"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-n-redhat-servers-ilo"
+          service:
+            - "pr-c-mgt_tcpudp-623"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_179"
+          change_ref: "CHG0054123"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sccappresc01"
+          destination:
+            - "pr-c-mgt_grp_scc-fw-bk-svr"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_181"
+          change_ref: "RITM0113292,TASK0213814"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_krk-f5-admin-users"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_322"
+          service:
+            - "pr-c-mgt_networkmanagementports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_182"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-180-163-140"
+          destination:
+            - "pr-c-mgt_ip_10-120-140-0s24"
+          service:
+            - "pr-c-mgt_tcp-9070_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_183"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_pr-cde-front-cx-mgmt"
+          destination:
+            - "pr-c-mgt_ip_10-120-140-0s24"
+          service:
+            - "pr-c-mgt_tcp-9070_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_185"
+          change_ref: "CHG0068574"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gibwnprcmg003"
+          destination:
+            - "pr-c-mgt_grp_storage-mgt-vlans"
+          service:
+            - "pr-c-mgt_storage-mgt-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_187"
+          change_ref: "CHG0069498"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxprein001"
+          destination:
+            - "pr-c-mgt_grp_scc-xiv-array"
+          service:
+            - "pr-c-mgt_tcp-7778_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_189"
+          change_ref: "CHG0069500"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gibux9002"
+          destination:
+            - "pr-c-mgt_grp_scc-xiv-array"
+          service:
+            - "pr-c-mgt_tcp-7778_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_190"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxpremg001"
+          destination:
+            - "pr-c-mgt_grp_scc-xiv-array"
+          service:
+            - "pr-c-mgt_tcp-7778_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_191"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brsuxpremg001"
+          destination:
+            - "pr-c-mgt_grp_scc-xiv-array"
+          service:
+            - "pr-c-mgt_tcp-7778_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_193"
+          change_ref: "CHG0133739"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_3"
+          destination:
+            - "pr-c-mgt_sc1prapvro01"
+          service:
+            - "pr-c-mgt_vr-ops"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_195"
+          change_ref: "CHG0076518"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brsdatafabman01"
+          destination:
+            - "pr-c-mgt_grp_scc_nas_mgmt"
+          service:
+            - "pr-c-mgt_brsdatafabman01_ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_196"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_brsdatafabman01"
+          destination:
+            - "pr-c-mgt_grp_scc_nas_mgmt"
+          service:
+            - "pr-c-mgt_brsdatafabman01_ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_197"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_cisco_dcmn_access"
+          destination:
+            - "pr-c-mgt_sc1dcnm01"
+          service:
+            - "pr-c-mgt_cisco_dcmn_ports_monitoring"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_199"
+          change_ref: "CHG0075038, CHG0079579"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_237"
+          destination:
+            - "pr-c-mgt_grp_scc-xiv-array"
+          service:
+            - "pr-c-mgt_splunk-xiv-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_201"
+          change_ref: "CHG0089260"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_5"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_203"
+          change_ref: "CHG0085802"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxpremn74"
+          destination:
+            - "pr-c-mgt_ip_10-120-143-185"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_206"
+          change_ref: "Snow monitoring to all vCenter 6.0 ,CHG0087219"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1wnpremg44"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_208"
+          change_ref: "CHG0131065"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_nj2-whc-build-server"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_210"
+          change_ref: "CHG0135767"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_inpxbld16api001-in1-inp-williamhill-plc"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_212"
+          change_ref: "CHG0087137"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-0-0-0s8"
+          destination:
+            - "pr-c-mgt_sc1uxpresc002-mgmt-prod-williamhill-plc"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_214"
+          change_ref: "CHG0087628 - Performance related metrics collection from device over ssh or APIs"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxcpemn001"
+          destination:
+            - "pr-c-mgt_ip_10-120-129-0s24"
+          service:
+            - "pr-c-mgt_perf_metrics_ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_216"
+          change_ref: "CHG0095011"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_trs_db_servers"
+          destination:
+            - "pr-c-mgt_sc1-enc02-ilo4"
+          service:
+            - "pr-c-mgt_tcpudp-623"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_217"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_trs_db_servers"
+          destination:
+            - "pr-c-mgt_sc1-enc04-ilo9"
+          service:
+            - "pr-c-mgt_udp-623_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_218"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-sc1-uxprrdb"
+          destination:
+            - "pr-c-mgt_grp_grp-sc1-uxprrdb-ilo"
+          service:
+            - "pr-c-mgt_udp-623_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_220"
+          change_ref: "CHG0097030"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_mailhosts"
+          destination:
+            - "pr-c-mgt_sc1apprcmg001"
+          service:
+            - "pr-c-mgt_mailhostports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_222"
+          change_ref: "CHG0097030"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_proofpoint_admins"
+          destination:
+            - "pr-c-mgt_sc1apprcmg001"
+          service:
+            - "icmp-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_223"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_proofpoint_admins"
+          destination:
+            - "pr-c-mgt_sc1apprcmg001"
+          service:
+            - "pr-c-mgt_tcp-10000_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_225"
+          change_ref: "CHG0101840, PCI Q4 2018,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-gib-layer7-srv-cluster3"
+          destination:
+            - "pr-c-mgt_sc1uxprcmg01"
+          service:
+            - "pr-c-mgt_tcp_8182_8675"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_227"
+          change_ref: "CHG0107579, CHG0115760"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_188"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_89"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_38"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_229"
+          change_ref: "CHG0108784"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-163-118"
+          destination:
+            - "pr-c-mgt_sccstorageprocesserb"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_231"
+          change_ref: "CHG0110901"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_137"
+          destination:
+            - "pr-c-mgt_ip_10-120-134-253"
+          service:
+            - "pr-c-mgt_scc-migrated_service_30"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_233"
+          change_ref: "CHG0111326"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_139"
+          destination:
+            - "pr-c-mgt_ip_10-120-134-0s24"
+          service:
+            - "pr-c-mgt_comm_vault_service"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_235"
+          change_ref: "CHG0112168"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-trading-oracle-cluster"
+          destination:
+            - "pr-c-mgt_grp_grp-enc-ilo-nodes"
+          service:
+            - "pr-c-mgt_tcp-udp-623"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_237"
+          change_ref: "CHG0114426"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-163-134"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_179"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_239"
+          change_ref: "CHG0114383"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_192-168-2-0s23"
+          destination:
+            - "pr-c-mgt_ip_10-120-131-0s24"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_63"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_241"
+          change_ref: "CHG0115599"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-brs-bomgar-wn-jumphosts"
+          destination:
+            - "pr-c-mgt_ip_10-120-134-0s24"
+          service:
+            - "pr-c-mgt_vmware-tcp-groups"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_244"
+          change_ref: "CHG0116321 ,CHG0137633"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_us-10-178-0-0s15"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_246"
+          change_ref: "CHG0116654, PCI Q4 2018"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-po-kr-tpam-access"
+          destination:
+            - "pr-c-mgt_scc-tpam"
+          service:
+            - "pr-c-mgt_web-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_248"
+          change_ref: "CHG0116778,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-apm-cluster"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_203"
+          service:
+            - "pr-c-mgt_udp-snmp_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_249"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_241"
+          destination:
+            - "pr-c-mgt_sccstorageprocesserb"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_251"
+          change_ref: "CHG0118285"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_210"
+          destination:
+            - "pr-c-mgt_grp_grp-cluster-ilo-fencing-srvs"
+          service:
+            - "pr-c-mgt_scc-migrated_service_211"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_253"
+          change_ref: "CHG0119666,PCI-Q2-2019"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_242"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_243"
+          service:
+            - "pr-c-mgt_tcp-9070"            
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_255"
+          change_ref: "CHG0139085"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-orion-app-srvs"
+          destination:
+            - "pr-c-mgt_net-10-120-129-0_24-scc-networkmanagement"
+          service:
+            - "pr-c-mgt_solarwinds-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_259"
+          change_ref: "CHG0135695"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-orion-app-srvs"
+          destination:
+            - "pr-c-mgt_uk-sc1-network-mgmt-24"
+          service:
+            - "pr-c-mgt_scc-migrated_service_2"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_261"
+          change_ref: "CHG0121232 CHG0164785"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_zabbix-monitoring"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_252"
+          service:
+            - "pr-c-mgt_zabbix-ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_263"
+          change_ref: "CHG0126163, CHG0126733"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_storage-labm"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_82"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_265"
+          change_ref: "CHG0133938"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_us-las-it-team"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_4"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_267"
+          change_ref: "CHG0133938"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_us-las-it-team"
+          destination:
+            - "pr-c-mgt_sc1prappsc02-prod-williamhill-plc"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_6"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_269"
+          change_ref: "CHG0134210,CHG0134346"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxpremn81"
+          destination:
+            - "pr-c-mgt_sc1prapvro01"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_9"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_271"
+          change_ref: "CHG0135451"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-wh-us-team"
+          destination:
+            - "pr-c-mgt_sc1prapvro01"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_10"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_273"
+          change_ref: "CHG0135151, CHG0135607"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gibux998"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_7"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_14"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_275"
+          change_ref: "CHG0137053"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxpremn17"
+          destination:
+            - "pr-c-mgt_sccstorageprocesserb"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_277"
+          change_ref: "CHG0141421"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-163-89"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_44"
+          service:
+            - "pr-c-mgt_tcp-9070_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_281"
+          change_ref: "CHG0142676"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_aws-ddos-dev-100-78-80-0s20"
+          destination:
+            - "pr-c-mgt_sc1bigiq03-mgmt-prod-williamhill-plc"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_26"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_284"
+          change_ref: "CHG0144380 CHG0144383 ,CHG0144380, CHG0144383, CHG0144490"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-scc-vmc-service-mgmt"
+          destination:
+            - "pr-c-mgt_vmhost-mgt-network-24"
+          service:
+            - "pr-c-mgt_scc-migrated_service_23"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_286"
+          change_ref: "CHG0144597"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_vmcprapvro01-prod-williamhill-plc"
+          destination:
+            - "pr-c-mgt_sc1prapvro01"
+          service:
+            - "pr-c-mgt_scc-whc-prod-vmc-service-grp"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_288"
+          change_ref: "CHG0144732"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_59"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_62"
+          service:
+            - "pr-c-mgt_tcp-7778_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_290"
+          change_ref: "CHG0145092"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_68"
+          destination:
+            - "pr-c-mgt_vmhost-mgt-network-24"
+          service:
+            - "pr-c-mgt_tcp-31031_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_292"
+          change_ref: "CHG0145248"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_gibwnprndcnm01"
+          destination:
+            - "pr-c-mgt_grp_san-switches"
+          service:
+            - "pr-c-mgt_cisco_dcmn_ports"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_294"
+          change_ref: "VMC migration rule - to allow connectivity between migrated and yet to be migrated subnets."
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_pr_c_mgt_local_subnets"
+          destination:
+            - "pr-c-mgt_grp_pr_c_mgt_local_subnets"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_296"
+          change_ref: "CHG0145252"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_ise-psn"
+          destination:
+            - "pr-c-mgt_sc1uxprenw01"
+          service:
+            - "pr-c-mgt_tcp-ssh_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_298"
+          change_ref: "CHG0146753"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_brs_citrix_controllers"
+          destination:
+            - "pr-c-mgt_sc1prapvc01"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_300"
+          change_ref: "CHG0146853"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_vsphere_mgmt_net_ld6"
+          destination:
+            - "pr-c-mgt_vsphere_mgmt_net_scc"
+          service:
+            - "pr-c-mgt_scc-migrated_service_11"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_304"
+          change_ref: "CHG0147160"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_10-125-4-0s22"
+          destination:
+            - "pr-c-mgt_sc1bigiq01-mgmt-prod-williamhill-plc"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_307"
+          change_ref: "CHG0148000 ,CHG0148000, CHG0148066"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-33-11"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_6"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_internal-vrf_access_in_309"
+          change_ref: "CHG0150097"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-aws-ddos-nonprod"
+          destination:
+            - "pr-c-mgt_sc1bigiq03-mgmt-prod-williamhill-plc"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+    - access_list: global_access
+      rules:
+
+        - rule_description: "pr-c-mgt_global_access_5"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_ras-vpn-pool"
+          destination:
+            - "pr-c-mgt_ip_10-120-0-0s16"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_global_access_7"
+          change_ref: "CHG0144834"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_whgroup_ad_servers-chg0144834"
+          service:
+            - "pr-c-mgt_whgroup_ad_ports-chg0144834"
+
+        - rule_description: "pr-c-mgt_global_access_9"
+          change_ref: "CHG0142765"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_euc_mgmt_server-group-chg0142765"
+          destination:
+            - "pr-c-mgt_grp_on_premise_datacentre_vlans-group-chg0142765"
+          service:
+            - "pr-c-mgt_euc_mgmt_port-group-chg0142765"
+
+        - rule_description: "pr-c-mgt_global_access_11"
+          change_ref: "CHG0143200"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_wh_nets-chg0143200"
+          destination:
+            - "pr-c-mgt_grp_splunk_heavy_forwarders-chg0143200"
+          service:
+            - "pr-c-mgt_splunk_indexing_port-chg0143200"
+
+        - rule_description: "pr-c-mgt_global_access_13"
+          change_ref: "CHG0143200"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_wh_nets-chg0143200"
+          destination:
+            - "pr-c-mgt_grp_splunk_deployment_server-chg0143200"
+          service:
+            - "pr-c-mgt_splunk_mgmt_port-chg0143200"
+
+        - rule_description: "pr-c-mgt_global_access_15"
+          change_ref: "CHG0142763"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_wh_nets-chg0142763"
+          destination:
+            - "pr-c-mgt_grp_splunk_heavy_forwarders-chg0142763"
+          service:
+            - "pr-c-mgt_splunk_indexing_port-chg0142763"
+
+        - rule_description: "pr-c-mgt_global_access_17"
+          change_ref: "CHG0142763"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_wh_nets-chg0142763"
+          destination:
+            - "pr-c-mgt_grp_splunk_deployment_server-chg0142763"
+          service:
+            - "pr-c-mgt_splunk_mgmt_port-chg0142763"
+
+        - rule_description: "pr-c-mgt_global_access_19"
+          change_ref: "CHG0137261,CHG0137484,CHG0145266"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_rfc-1918"
+          destination:
+            - "pr-c-mgt_grp_ise-psn"
+          service:
+            - "pr-c-mgt_ise-ports"
+
+        - rule_description: "pr-c-mgt_global_access_34"
+          change_ref: "CHG0112231"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-commvault-svrs"
+          destination:
+            - "any"
+          service:
+            - "pr-c-mgt_tcp8400-8403"
+
+        - rule_description: "pr-c-mgt_global_access_36"
+          change_ref: "CHG0121600"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-gib-commvault-svrs"
+          destination:
+            - "any"
+          service:
+            - "pr-c-mgt_tcp8400-8403"
+
+        - rule_description: "pr-c-mgt_global_access_38"
+          change_ref: "CHG0112231"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-commvault-svrs"
+          service:
+            - "pr-c-mgt_tcp8400-8403"
+
+        - rule_description: "pr-c-mgt_global_access_40"
+          change_ref: "CHG0112231"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_grp-ld6-commvault-svrs"
+          destination:
+            - "any"
+          service:
+            - "pr-c-mgt_tcp8400-8403"
+
+        - rule_description: "pr-c-mgt_global_access_42"
+          change_ref: "CHG0112231"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-ld6-commvault-svrs"
+          service:
+            - "pr-c-mgt_tcp8400-8403"
+
+        - rule_description: "pr-c-mgt_global_access_44"
+          change_ref: "CHG0121600"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-gib-commvault-svrs"
+          service:
+            - "pr-c-mgt_tcp8400-8403"
+
+        - rule_description: "pr-c-mgt_global_access_48"
+          change_ref: "CHG0112231 ,CHG0110997 ,CHG0112231"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-134-246"
+          destination:
+            - "pr-c-mgt_ip_10-120-163-134"
+          service:
+            - "pr-c-mgt_udp-syslog_eq"
+
+        - rule_description: "pr-c-mgt_global_access_53"
+          change_ref: "CHG0087656,  PCI Q2 2016"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_splunkhfcluster"
+          service:
+            - "pr-c-mgt_scc-migrated_service_4"
+
+        - rule_description: "pr-c-mgt_global_access_55"
+          change_ref: "CHG0106526"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_rundeck-servers"
+          destination:
+            - "any"
+          service:
+            - "pr-c-mgt_rundeck-winrm-ports"
+
+        - rule_description: "pr-c-mgt_global_access_59"
+          change_ref: "CHG0100330"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-120-0-0s16"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_50"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_27"
+
+        - rule_description: "pr-c-mgt_global_access_61"
+          change_ref: "Global Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_sc1uxpromn012"
+          service:
+            - "pr-c-mgt_8089"            
+
+        - rule_description: "pr-c-mgt_global_access_63"
+          change_ref: "CHG0116053"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-0-0-0s8"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_200"
+          service:
+            - "pr-c-mgt_ldap-services"
+
+        - rule_description: "pr-c-mgt_global_access_67"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_wily-svrs_all"
+          destination:
+            - "pr-c-mgt_grp_wily-access-group"
+          service:
+            - "pr-c-mgt_wily-outbound-ports"
+
+        - rule_description: "pr-c-mgt_global_access_69"
+          change_ref: "PCI Q2 2016"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_wily-access-group"
+          destination:
+            - "pr-c-mgt_grp_wily-svrs_all"
+          service:
+            - "pr-c-mgt_wily-inbound-ports"
+
+        - rule_description: "pr-c-mgt_global_access_71"
+          change_ref: "CHG0078639"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_webproxies-cx-scc"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_global_access_75"
+          change_ref: "CHG0097030"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_mailhosts"
+          service:
+            - "pr-c-mgt_tcp-smtp_eq"
+
+        - rule_description: "pr-c-mgt_global_access_77"
+          change_ref: "CHG0079439 - HP Oneview do not disable"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_hp-ilo-subnets"
+          destination:
+            - "pr-c-mgt_grp_hp-oneview-servers"
+          service:
+            - "pr-c-mgt_hp-oneview-client-services"
+
+        - rule_description: "pr-c-mgt_global_access_79"
+          change_ref: "CHG0079439 - HP Oneview do not disable"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_hp-oneview-servers"
+          destination:
+            - "pr-c-mgt_grp_hp-ilo-subnets"
+          service:
+            - "pr-c-mgt_hp-oneview-server-services"
+
+        - rule_description: "pr-c-mgt_global_access_80"
+          change_ref: ""
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_ossec-servers"
+          service:
+            - "pr-c-mgt_ossec-client-services"
+
+        - rule_description: "pr-c-mgt_global_access_84"
+          change_ref: "Standard rule - CHG0083747, CHG0128153"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_wh-group-ad-servers"
+          service:
+            - "pr-c-mgt_scc-migrated_service_5"
+
+        - rule_description: "pr-c-mgt_global_access_86"
+          change_ref: "CHG0111493"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_145"
+          destination:
+            - "pr-c-mgt_vsphere_mgmt_net_scc"
+          service:
+            - "pr-c-mgt_vcenteruseraccess"
+
+        - rule_description: "pr-c-mgt_global_access_96"
+          change_ref: "CHG0111495, CHG0121216,CHG0128563, CHG0133793, CHG0135610"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_vsphere_access"
+          destination:
+            - "pr-c-mgt_grp_vsphere_mgmt_nets"
+          service:
+            - "pr-c-mgt_vmware-access-ports"
+
+        - rule_description: "pr-c-mgt_global_access_108"
+          change_ref: "Standard rile - CHG0083506"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_infoblox-all-dns-servers"
+          service:
+            - "pr-c-mgt_infoblox-standard-ports"
+
+        - rule_description: "pr-c-mgt_global_access_112"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-dns-servers"
+          service:
+            - "pr-c-mgt_tcpudp-domain"
+
+        - rule_description: "pr-c-mgt_global_access_114"
+          change_ref: "CHG0081848 "
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_sc1wnpremg44"
+          service:
+            - "pr-c-mgt_tcp-https_eq"
+
+        - rule_description: "pr-c-mgt_global_access_116"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-wsus-servers"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_120"
+
+        - rule_description: "pr-c-mgt_global_access_120"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-trendav-servers"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_121"
+
+        - rule_description: "pr-c-mgt_global_access_124"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-syslog-servers"
+          service:
+            - "pr-c-mgt_tcpudp-514"
+
+        - rule_description: "pr-c-mgt_global_access_132"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-ntp-servers"
+          service:
+            - "pr-c-mgt_udp-ntp_eq"
+
+        - rule_description: "pr-c-mgt_global_access_134"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-status-servers"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_90"
+
+        - rule_description: "pr-c-mgt_global_access_138"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_grp-pr-c-katello-servers"
+          service:
+            - "pr-c-mgt_scc-migrated_tcp_91"
+
+        - rule_description: "pr-c-mgt_global_access_140"
+          change_ref: "Standard Rule"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_grp_mail-servers"
+          service:
+            - "pr-c-mgt_tcp-smtp_eq"
+
+        - rule_description: "pr-c-mgt_global_access_148"
+          change_ref: "CHG0079749"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_uim-servers"
+          destination:
+            - "pr-c-mgt_ip_10-0-0-0s8"
+          service:
+            - "pr-c-mgt_tcp-48000-48030_eq"
+
+        - rule_description: "pr-c-mgt_global_access_150"
+          change_ref: "CHG0079749"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_ip_10-0-0-0s8"
+          destination:
+            - "pr-c-mgt_grp_uim-servers"
+          service:
+            - "pr-c-mgt_tcp-48000-48030_eq"
+
+        - rule_description: "pr-c-mgt_global_access_158"
+          change_ref: "CHG0109764"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_rfc-1918"
+          destination:
+            - "pr-c-mgt_grp_scc-migrated_network_105"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_global_access_164"
+          change_ref: "CHG0067511 - allow Splunk Heavy Forwarder secure access to management protocols and SNMP agent"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_sc1uxpremn74"
+          destination:
+            - "any"
+          service:
+            - "pr-c-mgt_scc-migrated_service_8"
+
+        - rule_description: "pr-c-mgt_global_access_166"
+          change_ref: "CHG0109028"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_rfc-1918"
+          destination:
+            - "pr-c-mgt_grp_rds-kms-server"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_global_access_168"
+          change_ref: "Standard Rule - CHG0083593"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "any"
+          destination:
+            - "any"
+          service:
+            - "icmp-any"
+
+        - rule_description: "pr-c-mgt_global_access_172"
+          change_ref: "CHG0119053"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_scc-migrated_network_221"
+          destination:
+            - "pr-c-mgt_ip_10-120-163-33"
+          service:
+            - "pr-c-mgt_tcp-8083_eq"
+
+        - rule_description: "pr-c-mgt_global_access_175"
+          change_ref: "Standard Rule ,CHG0122435, CHG0133580"
+          action: "permit"
+          disabled: "false"
+          source:
+            - "pr-c-mgt_grp_skybox-appliances"
+          destination:
+            - "pr-c-mgt_10-0-0-0_8_range"
+          service:
+            - "pr-c-mgt_scc-migrated_service_1"
+
+        # - rule_description: "pr-c-mgt_global_access_176"
+        #   change_ref: ""
+        #   action: "deny"
+        #   source:
+        #     - "any"
+        #   destination:
+        #     - "any"
+        #   service:
+        #     - "ip-any"
+
+        - rule_description: "pr-c-mgt_sc1-cde-jumphost-lan_to_any_deny"
+          change_ref: "CHG0146428"
+          action: "deny"
+          disabled: false
+          source:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          destination:
+            - "any"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_any_to_sc1-cde-jumphost-lan_permit"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_sc1-cde-jumphost-lan"
+          service:
+            - "ip-any"
+
+### PERMISSIVE RULES ###
+
+    - access_list: pr-c-mgt_permissive
+      rules:
+
+        - rule_description: "pr-c-mgt_allow_any_to_all_management_networks"
+          change_ref: "CHG0146123"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "pr-c-mgt_all_networks"
+          service:
+            - "ip-any"
+
+        - rule_description: "pr-c-mgt_allow_all_management_networks_to_any"
+          change_ref: "CHG0146123"
+          action: "permit"
+          disabled: false
+          source:
+            - "pr-c-mgt_all_networks"
+          destination:
+            - "any"
+          service:
+            - "ip-any"

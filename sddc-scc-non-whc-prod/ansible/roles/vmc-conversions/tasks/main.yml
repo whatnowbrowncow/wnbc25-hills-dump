@@ -1,0 +1,15 @@
+---
+
+- name: NSX_STATIC - groups, ports and rules YAML to TF conversion task.
+  include_tasks: ./static-convert-yaml-2-tf.yml
+  with_items:
+    - "{{ contexts }}"
+  loop_control:
+    loop_var: context
+
+- name: NSX_DYNAMIC - groups, ports and rules YAML to TF conversion task.
+  include_tasks: ./dynamic-convert-yaml-2-tf.yml
+  with_items:
+    - "{{ policies }}"
+  loop_control:
+    loop_var: policy

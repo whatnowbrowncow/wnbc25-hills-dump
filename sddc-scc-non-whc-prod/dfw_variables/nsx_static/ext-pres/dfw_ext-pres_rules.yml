@@ -1,0 +1,91 @@
+---
+
+resources:
+  security_policy:
+
+    - access_list: ext-pres_permissive
+      rules:
+
+        - rule_description: "ext-pres to pr-c-frontend"
+          change_ref: "CHG0146428"
+          action: "deny"
+          disabled: false
+          source:
+            - "ext-pres_network"
+          destination:
+            - "ext-pres_all_pr-c-frontend_networks"
+          service:
+            - "ip-any"
+        - rule_description: "pr-c-frontend to ext-pres"
+          change_ref: "CHG0146428"
+          action: "deny"
+          disabled: false
+          source:
+            - "ext-pres_all_pr-c-frontend_networks"
+          destination:
+            - "ext-pres_network"
+          service:
+            - "ip-any"
+
+        - rule_description: "ext-pres to pr-n-frontend"
+          change_ref: "CHG0146428"
+          action: "deny"
+          disabled: false
+          source:
+            - "ext-pres_network"
+          destination:
+            - "ext-pres_all_pr-n-frontend_networks"
+          service:
+            - "ip-any"
+        - rule_description: "pr-n-frontend to ext-pres"
+          change_ref: "CHG0146428"
+          action: "deny"
+          disabled: false
+          source:
+            - "ext-pres_all_pr-n-frontend_networks"
+          destination:
+            - "ext-pres_network"
+          service:
+            - "ip-any"
+
+        - rule_description: "ext-pres to pr-e-internal"
+          change_ref: "CHG0146428"
+          action: "deny"
+          disabled: false
+          source:
+            - "ext-pres_network"
+          destination:
+            - "ext-pres_all_pr-e-internal_networks"
+          service:
+            - "ip-any"
+        - rule_description: "pr-e-internal to ext-pres"
+          change_ref: "CHG0146428"
+          action: "deny"
+          disabled: false
+          source:
+            - "ext-pres_all_pr-e-internal_networks"
+          destination:
+            - "ext-pres_network"
+          service:
+            - "ip-any"
+
+        - rule_description: "ext-pres to ANY"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source:
+            - "ext-pres_network"
+          destination:
+            - "any"
+          service:
+            - "ip-any"
+        - rule_description: "ANY to ext-pres"
+          change_ref: "CHG0146428"
+          action: "permit"
+          disabled: false
+          source:
+            - "any"
+          destination:
+            - "ext-pres_network"
+          service:
+            - "ip-any"

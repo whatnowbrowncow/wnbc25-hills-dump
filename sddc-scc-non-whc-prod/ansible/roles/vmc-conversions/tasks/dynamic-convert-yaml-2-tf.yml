@@ -1,0 +1,44 @@
+---
+
+## Converts legacy context firewall specific YAML files into .tf format for nsx_dynamic
+
+## Import the dfw_dynamic_groups variables
+- name: DYNAMIC - "{{ policy.policy }}" - Import the dfw_dynamic_groups variables
+  include_vars:
+    file: "../dfw_variables/nsx_dynamic/{{ policy.policy }}/dfw_{{ policy.policy }}_groups.yml"
+
+## Calls a Jinja2 template that renders dynamic_groups YAML file into a dynamic_groups Terraform file 
+- name: DYNAMIC - "{{ policy.policy }}" - Generate VMC Terraform file - Network Objects (groups)
+  template:
+    src: ../ansible/roles/vmc-conversions/templates/nsx_dynamic_groups_tf.j2
+    dest: "../terraform/nsx_phase/nsx_dynamic/dfw_{{ policy.policy }}_groups.tf"
+
+## Check to make sure the ports file exists (may not always need a ports file)
+- name: DYNAMIC - "{{ policy.policy }}" - Check if ports file exists
+  stat: 
+    path: "../dfw_variables/nsx_dynamic/{{ policy.policy }}/dfw_{{ policy.policy }}_ports.yml"
+  register: ports_file
+
+## Import the dfw_dynamic_ports variables
+- name: DYNAMIC - "{{ policy.policy }}" - Import the dfw_dynamic_ports variables
+  include_vars:
+    file: "../dfw_variables/nsx_dynamic/{{ policy.policy }}/dfw_{{ policy.policy }}_ports.yml"
+  when: ports_file.stat.exists == true
+
+## Calls a Jinja2 template that renders dynamic_ports YAML file into a dynamic_ports Terraform file 
+- name: DYNAMIC - "{{ policy.policy }}" - Generate VMC Terraform file - Service and Protocol Objects (ports)
+  template:
+    src: ../ansible/roles/vmc-conversions/templates/nsx_dynamic_ports_tf.j2
+    dest: "../terraform/nsx_phase/nsx_dynamic/dfw_{{ policy.policy }}_ports.tf"
+  when: ports_file.stat.exists == true
+
+## Import the dfw_dynamic_rules variables
+- name: DYNAMIC - "{{ policy.policy }}" - Import the dfw_dynamic_rules variables
+  include_vars:
+    file: "../dfw_variables/nsx_dynamic/{{ policy.policy }}/dfw_{{ policy.policy }}_rules.yml"
+
+## Calls a Jinja2 template that renders dynamic_rules YAML file into a dynamic_rules Terraform file
+- name: DYNAMIC - "{{ policy.policy }}" - Generating the VMC Terraform file - Security Policy (rules)
+  template:
+    src: ../ansible/roles/vmc-conversions/templates/nsx_dynamic_rules_tf.j2
+    dest: "../terraform/nsx_phase/nsx_dynamic/dfw_{{ policy.policy }}_rules.tf"

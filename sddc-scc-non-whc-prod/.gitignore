@@ -1,0 +1,32 @@
+# Local .terraform directories
+**/.terraform/*
+.terraform
+.terraform.lock.hcl
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Makefile folders
+.vmc-makefile
+.centralized-makefile
+
+# Python testing
+Pipfile
+Pipfile.lock
+.test-plans
+*.pyc
+*.pyo
+__pycache__
+.tox
+*.egg-info
+.coverage
+.pytest_cache
+
+#Local files
+.DS_Store
+.librarian
+.vscode
+.history
+*swp
+!.envrc
+.direnv

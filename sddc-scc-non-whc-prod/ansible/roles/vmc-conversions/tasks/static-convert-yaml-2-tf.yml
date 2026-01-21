@@ -1,0 +1,36 @@
+---
+
+## Converts legacy context firewall specific YAML files into .tf format for nsx_static
+
+## Import the dfw_static_groups variables
+- name: STATIC - "{{ context.context }}" - Import the dfw_static_groups variables
+  include_vars:
+    file: "../dfw_variables/nsx_static/{{ context.context }}/dfw_{{ context.context }}_groups.yml"
+
+## Calls a Jinja2 template that renders the groups YAML file into a groups Terraform file 
+- name: STATIC - "{{ context.context }}" - Generate VMC Terraform file - Network Objects (groups)
+  template:
+    src: ../ansible/roles/vmc-conversions/templates/nsx_static_groups_tf.j2
+    dest: "../terraform/nsx_phase/nsx_static/dfw_{{ context.context }}_groups.tf"
+
+## Import the dfw_static_ports variables
+- name: STATIC - "{{ context.context }}" - Import the dfw_static_ports variables
+  include_vars:
+    file: "../dfw_variables/nsx_static/{{ context.context }}/dfw_{{ context.context }}_ports.yml"
+
+## Calls a Jinja2 template that renders the ports YAML file into a ports Terraform file 
+- name: STATIC - "{{ context.context }}" - Generate VMC Terraform file - Service and Protocol Objects (ports)
+  template:
+    src: ../ansible/roles/vmc-conversions/templates/nsx_static_ports_tf.j2
+    dest: "../terraform/nsx_phase/nsx_static/dfw_{{ context.context }}_ports.tf"
+
+## Import the dfw_static_rules variables
+- name: STATIC - "{{ context.context }}" - Import the dfw_static_rules variables
+  include_vars:
+    file: "../dfw_variables/nsx_static/{{ context.context }}/dfw_{{ context.context }}_rules.yml"
+
+## Calls a Jinja2 template that renders the rules YAML file into a rules Terraform file
+- name: STATIC - "{{ context.context }}" - Generating the VMC Terraform file - Security Policy (rules)
+  template:
+    src: ../ansible/roles/vmc-conversions/templates/nsx_static_rules_tf.j2
+    dest: "../terraform/nsx_phase/nsx_static/dfw_{{ context.context }}_rules.tf"
