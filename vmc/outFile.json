@@ -1,0 +1,402 @@
+MGW Groups
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "172.17.200.8"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "4290eaa1-a3d8-40d6-aa32-c8f892539cc6",
+            "path": "/infra/domains/mgw/groups/3542c3f0-233c-11eb-aba1-5d391f490f5b/ip-address-expressions/4290eaa1-a3d8-40d6-aa32-c8f892539cc6",
+            "relative_path": "4290eaa1-a3d8-40d6-aa32-c8f892539cc6",
+            "parent_path": "/infra/domains/mgw/groups/3542c3f0-233c-11eb-aba1-5d391f490f5b",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "3542c3f0-233c-11eb-aba1-5d391f490f5b",
+    "display_name": "172.17.200.8-temp",
+    "description": "172.17.200.8 - temp access to upload large ova",
+    "path": "/infra/domains/mgw/groups/3542c3f0-233c-11eb-aba1-5d391f490f5b",
+    "relative_path": "3542c3f0-233c-11eb-aba1-5d391f490f5b",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "rdraycott@Group.WilliamHill.PLC",
+    "_create_time": 1605002767696,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745446868,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "10.130.46.0/24"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "5d08e2bd-ceec-459b-ae7b-78999d85de59",
+            "path": "/infra/domains/mgw/groups/CommVault_MRG-DEV/ip-address-expressions/5d08e2bd-ceec-459b-ae7b-78999d85de59",
+            "relative_path": "5d08e2bd-ceec-459b-ae7b-78999d85de59",
+            "parent_path": "/infra/domains/mgw/groups/CommVault_MRG-DEV",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "CommVault_MRG-DEV",
+    "display_name": "CommVault_MRG-DEV",
+    "description": "CommVault_MRG-DEV - 10.130.46.0/24",
+    "path": "/infra/domains/mgw/groups/CommVault_MRG-DEV",
+    "relative_path": "CommVault_MRG-DEV",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "mianev@Group.WilliamHill.PLC",
+    "_create_time": 1620207249287,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745436796,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "93.158.66.132"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "3b3d7dd4-f84c-4b87-81a7-d896b4bd212a",
+            "path": "/infra/domains/mgw/groups/6fc96abe-f52d-4ef6-b443-c510ce3f410b/ip-address-expressions/3b3d7dd4-f84c-4b87-81a7-d896b4bd212a",
+            "relative_path": "3b3d7dd4-f84c-4b87-81a7-d896b4bd212a",
+            "parent_path": "/infra/domains/mgw/groups/6fc96abe-f52d-4ef6-b443-c510ce3f410b",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "6fc96abe-f52d-4ef6-b443-c510ce3f410b",
+    "display_name": "Public-Hammarby",
+    "description": "Public-Hammarby - 93.158.66.132",
+    "path": "/infra/domains/mgw/groups/6fc96abe-f52d-4ef6-b443-c510ce3f410b",
+    "relative_path": "6fc96abe-f52d-4ef6-b443-c510ce3f410b",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1598284145173,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745447183,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "10.130.251.0/24",
+                "10.130.46.0/24",
+                "10.130.220.0/24",
+                "172.16.123.0/24",
+                "172.17.200.0/24",
+                "172.16.122.0/24"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "65b402b3-a176-4478-ad0f-8a2adac57244",
+            "path": "/infra/domains/mgw/groups/f7bff412-d8c7-47b4-9c35-8cd86e2e9bde/ip-address-expressions/65b402b3-a176-4478-ad0f-8a2adac57244",
+            "relative_path": "65b402b3-a176-4478-ad0f-8a2adac57244",
+            "parent_path": "/infra/domains/mgw/groups/f7bff412-d8c7-47b4-9c35-8cd86e2e9bde",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "f7bff412-d8c7-47b4-9c35-8cd86e2e9bde",
+    "display_name": "Remote Subnets",
+    "description": "Remote Subnets - \n10.130.46.0/24,\n10.130.220.0/24,\n10.130.251.0/24, \n172.16.122.0/24,\n172.16.123.0/24,\n172.17.200.0/24",
+    "path": "/infra/domains/mgw/groups/f7bff412-d8c7-47b4-9c35-8cd86e2e9bde",
+    "relative_path": "f7bff412-d8c7-47b4-9c35-8cd86e2e9bde",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1598284144763,
+    "_last_modified_user": "mianev@Group.WilliamHill.PLC",
+    "_last_modified_time": 1649764103895,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 8
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "10.130.251.49"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "bdf066c0-e0d9-4348-8f2c-4da0b8c9fd34",
+            "path": "/infra/domains/mgw/groups/19952b0e-6424-4027-a909-9d07fe1756ca/ip-address-expressions/bdf066c0-e0d9-4348-8f2c-4da0b8c9fd34",
+            "relative_path": "bdf066c0-e0d9-4348-8f2c-4da0b8c9fd34",
+            "parent_path": "/infra/domains/mgw/groups/19952b0e-6424-4027-a909-9d07fe1756ca",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "19952b0e-6424-4027-a909-9d07fe1756ca",
+    "display_name": "Remote VC",
+    "description": "Remote VC - 10.130.251.49",
+    "path": "/infra/domains/mgw/groups/19952b0e-6424-4027-a909-9d07fe1756ca",
+    "relative_path": "19952b0e-6424-4027-a909-9d07fe1756ca",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1598284144808,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745442629,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "172.17.200.8"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "cd08563f-71fb-4729-9cf1-17ca5a331905",
+            "path": "/infra/domains/mgw/groups/fc7ed6ce-00b5-4010-968f-c9587c01a0ef/ip-address-expressions/cd08563f-71fb-4729-9cf1-17ca5a331905",
+            "relative_path": "cd08563f-71fb-4729-9cf1-17ca5a331905",
+            "parent_path": "/infra/domains/mgw/groups/fc7ed6ce-00b5-4010-968f-c9587c01a0ef",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "fc7ed6ce-00b5-4010-968f-c9587c01a0ef",
+    "display_name": "Remote_Admin_Server",
+    "description": "Remote_Admin_Server - 172.17.200.8",
+    "path": "/infra/domains/mgw/groups/fc7ed6ce-00b5-4010-968f-c9587c01a0ef",
+    "relative_path": "fc7ed6ce-00b5-4010-968f-c9587c01a0ef",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1598284144827,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745436511,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "10.130.251.61-10.130.251.66",
+                "10.130.251.11-10.130.251.16"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "d40cbd0f-4c99-49c7-8942-7e429d900f4c",
+            "path": "/infra/domains/mgw/groups/9993c425-ae75-436f-804d-833f3fe9c074/ip-address-expressions/d40cbd0f-4c99-49c7-8942-7e429d900f4c",
+            "relative_path": "d40cbd0f-4c99-49c7-8942-7e429d900f4c",
+            "parent_path": "/infra/domains/mgw/groups/9993c425-ae75-436f-804d-833f3fe9c074",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "9993c425-ae75-436f-804d-833f3fe9c074",
+    "display_name": "Remote_ESXi_Hosts",
+    "description": "Remote_ESXi_Hosts - 10.130.251.11-10.130.251.16",
+    "path": "/infra/domains/mgw/groups/9993c425-ae75-436f-804d-833f3fe9c074",
+    "relative_path": "9993c425-ae75-436f-804d-833f3fe9c074",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1598284145269,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745444442,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 5
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "10.130.251.31"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "3254965c-e721-4eec-a2aa-c1e2751d3a2d",
+            "path": "/infra/domains/mgw/groups/74aaeaa6-a21e-453d-9f7c-6748d8feb333/ip-address-expressions/3254965c-e721-4eec-a2aa-c1e2751d3a2d",
+            "relative_path": "3254965c-e721-4eec-a2aa-c1e2751d3a2d",
+            "parent_path": "/infra/domains/mgw/groups/74aaeaa6-a21e-453d-9f7c-6748d8feb333",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "74aaeaa6-a21e-453d-9f7c-6748d8feb333",
+    "display_name": "Remote_Site_Recovery_Manager",
+    "description": "Remote_Site_Recovery_Manager - 10.130.251.31",
+    "path": "/infra/domains/mgw/groups/74aaeaa6-a21e-453d-9f7c-6748d8feb333",
+    "relative_path": "74aaeaa6-a21e-453d-9f7c-6748d8feb333",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1598284144763,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745439906,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "10.130.251.42"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "18221dd4-5a54-42be-b253-7a6a74c6d0b5",
+            "path": "/infra/domains/mgw/groups/a0b65edb-15c9-4194-9b4c-6e16ea1b20b2/ip-address-expressions/18221dd4-5a54-42be-b253-7a6a74c6d0b5",
+            "relative_path": "18221dd4-5a54-42be-b253-7a6a74c6d0b5",
+            "parent_path": "/infra/domains/mgw/groups/a0b65edb-15c9-4194-9b4c-6e16ea1b20b2",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "a0b65edb-15c9-4194-9b4c-6e16ea1b20b2",
+    "display_name": "Remote_vSphere_Replication",
+    "description": "Remote_vSphere_Replication - 10.130.251.42",
+    "path": "/infra/domains/mgw/groups/a0b65edb-15c9-4194-9b4c-6e16ea1b20b2",
+    "relative_path": "a0b65edb-15c9-4194-9b4c-6e16ea1b20b2",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1598284144785,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745439920,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "192.168.48.0/20",
+                "192.168.2.0/23",
+                "10.30.200.0/22",
+                "192.168.12.0/22",
+                "10.130.200.0/23",
+                "192.168.16.0/22",
+                "10.30.195.0/24",
+                "192.168.6.0/23",
+                "192.168.4.0/23",
+                "10.40.200.0/22"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "f5da6d46-9ecf-416f-a818-31aaef280b71",
+            "path": "/infra/domains/mgw/groups/b1f36ad2-c0ff-4c48-befc-ddf6903a7f1a/ip-address-expressions/f5da6d46-9ecf-416f-a818-31aaef280b71",
+            "relative_path": "f5da6d46-9ecf-416f-a818-31aaef280b71",
+            "parent_path": "/infra/domains/mgw/groups/b1f36ad2-c0ff-4c48-befc-ddf6903a7f1a",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "b1f36ad2-c0ff-4c48-befc-ddf6903a7f1a",
+    "display_name": "VPNs",
+    "description": "WH and MRG VPN ranges  - 192.168.2.0/23, 192.168.4.0/23, 192.168.6.0/23, 192.168.12.0/22, 192.168.16.0/22, 192.168.48.0/20, 10.30.195.0/24, 10.30.200.0/22, 10.130.200.0/23, 10.40.200.0/22",
+    "path": "/infra/domains/mgw/groups/b1f36ad2-c0ff-4c48-befc-ddf6903a7f1a",
+    "relative_path": "b1f36ad2-c0ff-4c48-befc-ddf6903a7f1a",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "thparker@Group.WilliamHill.PLC",
+    "_create_time": 1599062220921,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745447507,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+{
+    "expression": [
+        {
+            "ip_addresses": [
+                "10.120.163.44"
+            ],
+            "resource_type": "IPAddressExpression",
+            "id": "9f2a37f9-33b5-4b39-a998-a427e34514a1",
+            "path": "/infra/domains/mgw/groups/1ce16fa6-5b89-4e11-ab87-f5c94dccecd9/ip-address-expressions/9f2a37f9-33b5-4b39-a998-a427e34514a1",
+            "relative_path": "9f2a37f9-33b5-4b39-a998-a427e34514a1",
+            "parent_path": "/infra/domains/mgw/groups/1ce16fa6-5b89-4e11-ab87-f5c94dccecd9",
+            "marked_for_delete": false,
+            "overridden": false,
+            "_protection": "NOT_PROTECTED"
+        }
+    ],
+    "extended_expression": [],
+    "reference": false,
+    "resource_type": "Group",
+    "id": "1ce16fa6-5b89-4e11-ab87-f5c94dccecd9",
+    "display_name": "snow_asset_collector",
+    "description": "snow_asset_collector - 10.120.163.44",
+    "path": "/infra/domains/mgw/groups/1ce16fa6-5b89-4e11-ab87-f5c94dccecd9",
+    "relative_path": "1ce16fa6-5b89-4e11-ab87-f5c94dccecd9",
+    "parent_path": "/infra/domains/mgw",
+    "marked_for_delete": false,
+    "overridden": false,
+    "_create_user": "pedwards@Group.WilliamHill.PLC",
+    "_create_time": 1617012308630,
+    "_last_modified_user": "system",
+    "_last_modified_time": 1622745439332,
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 1
+}
+CGW Groups

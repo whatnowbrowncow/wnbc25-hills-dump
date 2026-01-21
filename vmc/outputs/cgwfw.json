@@ -1,0 +1,1 @@
+{"0": {"Display name": "Any - ANY to DFW", "Action": "ALLOW", "Source(s)": {"/infra/domains/cgw/groups/c455b62b-413c-4bbc-ae2d-d4d666e219b7": ["0.0.0.0/0"]}, "Destination(s)": {"/infra/domains/cgw/groups/c455b62b-413c-4bbc-ae2d-d4d666e219b7": ["0.0.0.0/0"]}, "Service(s)": {"ANY": "ANY"}}}

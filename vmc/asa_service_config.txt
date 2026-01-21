@@ -1,0 +1,2010 @@
+
+object-group service /infra/services/AD_Server
+ service TCP destination eq 1024
+object-group service /infra/services/Active_Directory_Server
+ service TCP destination eq 464
+object-group service /infra/services/Active_Directory_Server_UDP
+ service UDP destination eq 464
+object-group service /infra/services/BGP
+ service TCP destination eq 179
+object-group service /infra/services/CIM-HTTP
+ service TCP destination eq 5988
+object-group service /infra/services/CIM-HTTPS
+ service TCP destination eq 5989
+object-group service /infra/services/CommVault_CommCell
+ service TCP destination eq 8400
+ service TCP destination eq 8401
+ service TCP destination eq 8402
+ service TCP destination eq 8403
+object-group service /infra/services/Couchbase_client_access
+ service TCP destination eq 11207
+ service TCP destination eq 18091-18096
+ service TCP destination eq 11210
+ service TCP destination eq 11211
+ service TCP destination eq 8091-8096
+ service TCP destination eq 9140
+object-group service /infra/services/DCM_Java_Object_Cache_port
+ service TCP destination eq 7100
+object-group service /infra/services/DHCP,_MADCAP
+ service UDP destination eq 2535
+object-group service /infra/services/DHCP-Client
+ service UDP destination eq 68
+object-group service /infra/services/DHCP-Server
+ service UDP destination eq 67
+object-group service /infra/services/DHCPv6_Client
+ service UDP destination eq 546
+object-group service /infra/services/DHCPv6_Server
+ service UDP destination eq 547
+object-group service /infra/services/DNS
+ service TCP destination eq 53
+object-group service /infra/services/DNS-UDP
+ service UDP destination eq 53
+object-group service /infra/services/Data_Recovery_Appliance
+ service TCP destination eq 22024
+ service TCP destination eq 902
+ service TCP destination eq 443
+object-group service /infra/services/Directory_Services
+ service TCP destination eq 5725
+object-group service /infra/services/ESXi_Syslog_Collector
+ service TCP destination eq 8001
+object-group service /infra/services/EdgeSync_service
+ service TCP destination eq 50636
+object-group service /infra/services/EdgeSync_service-ADAM
+ service TCP destination eq 50389
+object-group service /infra/services/Enterprise_Manager_RMI_port
+ service TCP destination eq 1850
+object-group service /infra/services/Enterprise_Manager_Reporting_port
+ service TCP destination eq 3339
+object-group service /infra/services/Enterprise_Manager_Servlet_port_SSL
+ service TCP destination eq 1810
+object-group service /infra/services/Enterprise_ManagerAgent_port
+ service TCP destination eq 1831
+object-group service /infra/services/Exchange_ActiveSync
+ service UDP destination eq 2883
+object-group service /infra/services/FTP
+object-group service /infra/services/For_X.400_connections_over_TCP
+ service TCP destination eq 102
+object-group service /infra/services/H323_Call_Signaling
+ service TCP destination eq 1720
+object-group service /infra/services/H323_Gatekeeper_Discovery
+ service UDP destination eq 1718
+object-group service /infra/services/HBR_Server_App
+ service TCP destination eq 5480
+object-group service /infra/services/HTTP
+ service TCP destination eq 80
+object-group service /infra/services/HTTPS
+ service TCP destination eq 443
+object-group service /infra/services/HTTPS,_net.tcp_binding
+ service TCP destination eq 32843
+ service TCP destination eq 32844
+ service TCP destination eq 32845
+object-group service /infra/services/Heartbeat
+ service TCP destination eq 57348
+ service TCP destination eq 52267
+object-group service /infra/services/IBM_DB2
+ service TCP destination eq 5000
+object-group service /infra/services/ICMP-ALL
+object-group service /infra/services/ICMP_Destination_Unreachable
+object-group service /infra/services/ICMP_Echo_Reply
+object-group service /infra/services/ICMP_Echo_Request
+object-group service /infra/services/ICMP_Redirect
+object-group service /infra/services/ICMP_Router_Advertisement
+object-group service /infra/services/ICMP_Router_Solicitation
+object-group service /infra/services/ICMP_Source_Quench
+object-group service /infra/services/ICMP_Time_Exceeded
+object-group service /infra/services/ICMPv4-ALL
+object-group service /infra/services/ICMPv6-ALL
+object-group service /infra/services/IDAM-VA-TO-IQ
+ service TCP destination eq 5050
+ service TCP destination eq 5051
+object-group service /infra/services/IGMP_Leave_Group
+object-group service /infra/services/IGMP_Membership_Query
+object-group service /infra/services/IGMP_V2_Membership_Report
+object-group service /infra/services/IGMP_V3_Membership_Report
+object-group service /infra/services/IKE_(Key_Exchange)
+ service UDP destination eq 500
+object-group service /infra/services/IKE_(NAT_Traversal)
+ service UDP destination eq 4500
+object-group service /infra/services/IMAP
+ service TCP destination eq 143
+object-group service /infra/services/IMAP_SSL
+ service TCP destination eq 993
+object-group service /infra/services/IPv6-ICMP_Destination_Unreachable
+object-group service /infra/services/IPv6-ICMP_Echo_Reply
+object-group service /infra/services/IPv6-ICMP_Echo_Request
+object-group service /infra/services/IPv6-ICMP_Multicast_Listener_Done
+object-group service /infra/services/IPv6-ICMP_Multicast_Listener_Query
+object-group service /infra/services/IPv6-ICMP_Multicast_Listener_Report
+object-group service /infra/services/IPv6-ICMP_Neighbor_Advertisement
+object-group service /infra/services/IPv6-ICMP_Neighbor_Solicitation
+object-group service /infra/services/IPv6-ICMP_Packet_Too_Big
+object-group service /infra/services/IPv6-ICMP_Parameter_Problem
+object-group service /infra/services/IPv6-ICMP_Time_Exceeded
+object-group service /infra/services/IPv6-ICMP_Version_2_Multicast_Listener
+object-group service /infra/services/ISAKMP
+ service UDP destination eq 500
+object-group service /infra/services/Java_Object_Cache_port
+ service TCP destination eq 7000
+object-group service /infra/services/KERBEROS
+ service TCP destination eq 88
+object-group service /infra/services/KERBEROS-TCP
+ service TCP destination eq 88
+object-group service /infra/services/KERBEROS-UDP
+ service UDP destination eq 88
+object-group service /infra/services/LDAP
+ service TCP destination eq 389
+object-group service /infra/services/LDAP_Global_Catalog
+ service TCP destination eq 3268
+object-group service /infra/services/LDAP-UDP
+ service UDP destination eq 389
+object-group service /infra/services/LDAP-over-SSL
+ service TCP destination eq 636
+object-group service /infra/services/LDAP-over-SSL-UDP
+ service UDP destination eq 636
+object-group service /infra/services/Log_Loader
+ service TCP destination eq 44000
+object-group service /infra/services/MGCP_(TCP)
+ service TCP destination eq 2428
+object-group service /infra/services/MGCP_(UDP)
+ service UDP destination eq 2427
+object-group service /infra/services/MS_Customizable
+ service TCP destination eq 64327
+object-group service /infra/services/MS_Exchange_2007_Client_Access_Server
+ service TCP destination eq 80
+ service TCP destination eq 143
+ service TCP destination eq 443
+ service TCP destination eq 995
+ service TCP destination eq 110
+ service TCP destination eq 993
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+object-group service /infra/services/MS_Exchange_2007_Mailbox_Servers
+ service UDP destination eq 389
+ service UDP destination eq 53
+ service UDP destination eq 88
+ service TCP destination eq 3268
+ service TCP destination eq 445
+ service TCP destination eq 88
+ service TCP destination eq 389
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 53
+object-group service /infra/services/MS_Exchange_2007_Transport_Servers
+ service TCP destination eq 3268
+ service UDP destination eq 88
+ service TCP destination eq 587
+ service UDP destination eq 389
+ service TCP destination eq 25
+ service TCP destination eq 50636
+ service TCP destination eq 53
+ service TCP destination eq 80
+ service UDP destination eq 53
+ service TCP destination eq 50389
+ service TCP destination eq 88
+ service TCP destination eq 389
+object-group service /infra/services/MS_Exchange_2007_Unified_Messaging_Centre
+ service TCP destination eq 25
+ service TCP destination eq 80
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+ service TCP destination eq 443
+object-group service /infra/services/MS_Exchange_2010_Client_Access_Servers
+ service UDP destination eq 88
+ service UDP destination eq 53
+ service TCP destination eq 143
+ service TCP destination eq 443
+ service UDP destination eq 389
+ service TCP destination eq 993
+ service TCP destination eq 53
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+ service TCP destination eq 88
+ service TCP destination eq 110
+ service TCP destination eq 995
+ service TCP destination eq 3268
+ service TCP destination eq 389
+ service TCP destination eq 80
+object-group service /infra/services/MS_Exchange_2010_Mailbox_Servers
+ service TCP destination eq 88
+ service TCP destination eq 64327
+ service TCP destination eq 389
+ service TCP destination eq 53
+ service UDP destination eq 88
+ service UDP destination eq 53
+ service TCP destination eq 808
+ service TCP destination eq 3268
+ service UDP destination eq 389
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+ service TCP destination eq 445
+object-group service /infra/services/MS_Exchange_2010_Transport_Servers
+ service TCP destination eq 443
+ service TCP destination eq 3268
+ service UDP destination eq 53
+ service TCP destination eq 25
+ service UDP destination eq 88
+ service TCP destination eq 88
+ service TCP destination eq 389
+ service TCP destination eq 587
+ service TCP destination eq 50636
+ service UDP destination eq 389
+ service TCP destination eq 53
+object-group service /infra/services/MS_Exchange_2010_Unified_Messaging_Server
+ service TCP destination eq 25
+ service UDP destination eq 88
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5065
+ service TCP destination eq 5066
+ service TCP destination eq 5067
+ service TCP destination eq 5068
+ service TCP destination eq 88
+ service UDP destination eq 389
+ service TCP destination eq 80
+ service UDP destination eq 53
+ service TCP destination eq 443
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+ service TCP destination eq 389
+ service TCP destination eq 3268
+ service TCP destination eq 53
+object-group service /infra/services/MS_Replication_service
+ service TCP destination eq 808
+object-group service /infra/services/MS_Unified_Messaging_server
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+object-group service /infra/services/MS_Unified_Messaging_server_-_Client_Access
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+object-group service /infra/services/MS_Unified_Messaging_server-Phone
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5065
+ service TCP destination eq 5066
+ service TCP destination eq 5067
+ service TCP destination eq 5068
+object-group service /infra/services/MS-DS
+ service TCP destination eq 445
+object-group service /infra/services/MS-DS-TCP
+ service TCP destination eq 445
+object-group service /infra/services/MS-DS-UDP
+ service UDP destination eq 445
+object-group service /infra/services/MS-SQL-M
+ service UDP destination eq 1434
+object-group service /infra/services/MS-SQL-M-TCP
+ service TCP destination eq 1434
+object-group service /infra/services/MS-SQL-S
+ service TCP destination eq 1433
+object-group service /infra/services/MSN_(TCP)
+ service TCP destination eq 1863
+object-group service /infra/services/MSN_(UDP)
+ service UDP destination eq 1863
+object-group service /infra/services/MSSQL_Integration_Services
+object-group service /infra/services/MSSQL_Reporting_Services
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/MSSQL_Server_Analysis_Services
+ service TCP destination eq 2382
+ service TCP destination eq 2383
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/MSSQL_Server_Database_Engine
+ service TCP destination eq 1434
+ service TCP destination eq 1433
+ service TCP destination eq 80
+ service UDP destination eq 1434
+ service TCP destination eq 443
+object-group service /infra/services/MS_RPC_TCP
+object-group service /infra/services/MS_RPC_UDP
+object-group service /infra/services/Microsoft_Active_Directory_V1
+ service UDP destination eq 138
+ service TCP destination eq 49152-65535
+ service UDP destination eq 389
+ service UDP destination eq 1025-65535
+ service TCP destination eq 3269
+ service TCP destination eq 53
+ service TCP destination eq 464
+ service TCP destination eq 9389
+ service UDP destination eq 464
+ service UDP destination eq 445
+ service UDP destination eq 123
+ service TCP destination eq 88
+ service TCP destination eq 3268
+ service TCP destination eq 25
+ service TCP destination eq 636
+ service TCP destination eq 1025-65535
+ service TCP destination eq 42
+ service UDP destination eq 88
+ service TCP destination eq 5722
+ service UDP destination eq 2535
+ service UDP destination eq 53
+ service UDP destination eq 42
+ service TCP destination eq 1025-5000
+ service TCP destination eq 389
+ service TCP destination eq 445
+ service UDP destination eq 137
+ service UDP destination eq 67
+object-group service /infra/services/Microsoft_Exchange_2003
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination eq 389
+ service TCP destination eq 563
+ service TCP destination eq 143
+ service TCP destination eq 995
+ service TCP destination eq 119
+ service TCP destination eq 993
+ service TCP destination eq 110
+ service TCP destination eq 25
+ service TCP destination eq 691
+ service TCP destination eq 379
+ service UDP destination eq 2883
+ service TCP destination eq 102
+object-group service /infra/services/Microsoft_Exchange_2007
+ service TCP destination eq 88
+ service TCP destination eq 587
+ service TCP destination eq 995
+ service TCP destination eq 50389
+ service TCP destination eq 389
+ service TCP destination eq 110
+ service TCP destination eq 993
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+ service TCP destination eq 25
+ service TCP destination eq 53
+ service TCP destination eq 3268
+ service UDP destination eq 389
+ service UDP destination eq 53
+ service TCP destination eq 143
+ service UDP destination eq 88
+ service TCP destination eq 80
+ service TCP destination eq 445
+ service TCP destination eq 50636
+ service TCP destination eq 443
+object-group service /infra/services/Microsoft_Exchange_2010
+ service TCP destination eq 389
+ service UDP destination eq 88
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5065
+ service TCP destination eq 5066
+ service TCP destination eq 5067
+ service TCP destination eq 5068
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+ service UDP destination eq 53
+ service TCP destination eq 808
+ service TCP destination eq 88
+ service TCP destination eq 995
+ service TCP destination eq 110
+ service TCP destination eq 64327
+ service TCP destination eq 80
+ service TCP destination eq 445
+ service TCP destination eq 993
+ service TCP destination eq 143
+ service TCP destination eq 53
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+ service TCP destination eq 587
+ service TCP destination eq 3268
+ service TCP destination eq 25
+ service TCP destination eq 50636
+ service UDP destination eq 389
+ service TCP destination eq 443
+object-group service /infra/services/Microsoft_Media_Server_(TCP)
+ service TCP destination eq 1755
+object-group service /infra/services/Microsoft_Media_Server_(UDP)
+ service UDP destination eq 1755
+object-group service /infra/services/Microsoft_SQL_Server
+ service TCP destination eq 1434
+ service TCP destination eq 2382
+ service TCP destination eq 2383
+ service UDP destination eq 1434
+ service TCP destination eq 443
+ service TCP destination eq 1433
+ service TCP destination eq 80
+object-group service /infra/services/MySQL
+ service TCP destination eq 3306
+object-group service /infra/services/NBDG-Broadcast-V1
+ service UDP destination eq 138
+object-group service /infra/services/NBNS-Broadcast-V1
+ service UDP destination eq 137
+object-group service /infra/services/NFS_(TCP)
+ service TCP destination eq 2049
+object-group service /infra/services/NFS_(UDP)
+ service UDP destination eq 2049
+object-group service /infra/services/NFS_Client
+ service TCP destination eq 111
+object-group service /infra/services/NFS_Client_UDP
+ service UDP destination eq 111
+object-group service /infra/services/NFS-Server-TCP
+ service TCP destination eq 2049
+object-group service /infra/services/NFS-Server-UDP
+ service UDP destination eq 2049
+object-group service /infra/services/NNTP
+ service TCP destination eq 119
+object-group service /infra/services/NNTP_SSL
+ service TCP destination eq 563
+object-group service /infra/services/NTP
+ service UDP destination eq 123
+object-group service /infra/services/NTP_Time_Server
+ service UDP destination eq 123
+object-group service /infra/services/NetBios_Datagram_(TCP)
+ service TCP destination eq 138
+object-group service /infra/services/NetBios_Datagram_(UDP)
+ service UDP destination eq 138
+object-group service /infra/services/NetBios_Name_Service_(TCP)
+ service TCP destination eq 137
+object-group service /infra/services/NetBios_Name_Service_(UDP)
+ service UDP destination eq 137
+object-group service /infra/services/NetBios_Session_Service_(TCP)
+ service TCP destination eq 139
+object-group service /infra/services/NetBios_Session_Service_(UDP)
+ service UDP destination eq 139
+object-group service /infra/services/OC4J_Forms_-_Reports_Instance
+ service TCP destination eq 8888
+object-group service /infra/services/OC4J_Forms_-_Reports_Instance_(8889)
+ service TCP destination eq 8889
+object-group service /infra/services/ORACLE-FORM-SERVICES
+ service TCP destination eq 9000
+object-group service /infra/services/ORACLE-HTTP
+ service TCP destination eq 7777
+object-group service /infra/services/ORACLE-XDB-FTP
+ service TCP destination eq 2100
+object-group service /infra/services/ORACLE_TNS
+object-group service /infra/services/OS_Agent
+ service TCP destination eq 14000
+object-group service /infra/services/Office_Server_Web_Services,_HTTP,_SSL
+ service TCP destination eq 56737
+ service TCP destination eq 56738
+object-group service /infra/services/Office_communication_server
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+object-group service /infra/services/Oracle
+ service TCP destination eq 1521
+object-group service /infra/services/Oracle_Application_Server
+ service TCP destination eq 4443
+ service TCP destination eq 3701
+ service TCP destination eq 6100
+ service TCP destination eq 3201
+ service TCP destination eq 7501
+ service TCP destination eq 4444
+ service TCP destination eq 4401
+ service TCP destination eq 3601
+ service TCP destination eq 1809
+ service TCP destination eq 3501
+ service TCP destination eq 9000
+ service TCP destination eq 7000
+ service TCP destination eq 4400
+ service TCP destination eq 6668
+ service TCP destination eq 636
+ service TCP destination eq 4001
+ service TCP destination eq 3301
+ service TCP destination eq 14000
+ service TCP destination eq 6003
+ service TCP destination eq 3339
+ service TCP destination eq 9998
+ service TCP destination eq 7778
+ service TCP destination eq 4002
+ service TCP destination eq 8007
+ service TCP destination eq 4000
+ service TCP destination eq 7100
+ service TCP destination eq 1808
+ service TCP destination eq 7200
+ service TCP destination eq 7779
+ service TCP destination eq 6200
+ service TCP destination eq 7777
+ service TCP destination eq 1748
+ service TCP destination eq 1754
+ service TCP destination eq 4032
+ service TCP destination eq 4031
+ service TCP destination eq 3401
+ service TCP destination eq 389
+object-group service /infra/services/Oracle_Connection_Manager_(CMAN)
+ service TCP destination eq 1630
+object-group service /infra/services/Oracle_Connection_Manager_Admin_(CMAN)
+ service TCP destination eq 1830
+object-group service /infra/services/Oracle_Database
+ service TCP destination eq 1521
+ service TCP destination eq 2100
+ service TCP destination eq 2482
+ service TCP destination eq 1575
+ service TCP destination eq 8080
+ service TCP destination eq 2481
+ service TCP destination eq 1526
+object-group service /infra/services/Oracle_Enterprise_Manager
+ service TCP destination eq 1831
+ service TCP destination eq 1810
+ service TCP destination eq 1850
+ service TCP destination eq 44000
+object-group service /infra/services/Oracle_Enterprise_Manager_Web
+ service TCP destination eq 5500
+object-group service /infra/services/Oracle_Enterprise_Manager_Web_Console
+ service TCP destination eq 5500
+object-group service /infra/services/Oracle_Forms_Server_6_-_6i
+ service TCP destination eq 9000
+object-group service /infra/services/Oracle_GIOP_IIOP
+ service TCP destination eq 2481
+object-group service /infra/services/Oracle_GIOP_IIOP_for_SSL
+ service TCP destination eq 2482
+object-group service /infra/services/Oracle_HTTP_Server_Diagnostic_Port
+ service TCP destination eq 7200
+object-group service /infra/services/Oracle_HTTP_Server_Jserv_port
+ service TCP destination eq 8007
+object-group service /infra/services/Oracle_HTTP_Server_Port_Tunneling
+ service TCP destination eq 7501
+object-group service /infra/services/Oracle_HTTP_Server_SSL_port
+ service TCP destination eq 4443
+object-group service /infra/services/Oracle_HTTP_Server_listen_port
+ service TCP destination eq 7778
+object-group service /infra/services/Oracle_HTTP_Server_port
+ service TCP destination eq 7777
+object-group service /infra/services/Oracle_Intelligent_Agent_(1748)
+ service TCP destination eq 1748
+object-group service /infra/services/Oracle_Intelligent_Agent_(1754)
+ service TCP destination eq 1754
+object-group service /infra/services/Oracle_Intelligent_Agent_(1808)
+ service TCP destination eq 1808
+object-group service /infra/services/Oracle_Intelligent_Agent_(1809)
+ service TCP destination eq 1809
+object-group service /infra/services/Oracle_Internet_Directory(SSL)
+ service TCP destination eq 636
+object-group service /infra/services/Oracle_Internet_Directory(SSL,_4031)
+ service TCP destination eq 4031
+object-group service /infra/services/Oracle_Internet_Directory(non-SSL)
+ service TCP destination eq 389
+object-group service /infra/services/Oracle_Internet_Directory(non-SSL,_4032)
+ service TCP destination eq 4032
+object-group service /infra/services/Oracle_JDBC_for_Rdb_Thin_Server
+ service TCP destination eq 1701
+object-group service /infra/services/Oracle_Names
+ service TCP destination eq 1575
+object-group service /infra/services/Oracle_Net_Listener
+ service TCP destination eq 1526
+object-group service /infra/services/Oracle_Net_Listener_-_Enterprise_Manager_Repository_port
+ service TCP destination eq 1521
+object-group service /infra/services/Oracle_Notification_Service_local_port
+ service TCP destination eq 6100
+object-group service /infra/services/Oracle_Notification_Service_remote_port
+ service TCP destination eq 6200
+object-group service /infra/services/Oracle_Notification_Service_request_port
+ service TCP destination eq 6003
+object-group service /infra/services/Oracle_OC4J_AJP
+ service TCP destination eq 3301
+object-group service /infra/services/Oracle_OC4J_IIOP
+ service TCP destination eq 3401
+object-group service /infra/services/Oracle_OC4J_IIOPS1
+ service TCP destination eq 3501
+object-group service /infra/services/Oracle_OC4J_IIOPS2
+ service TCP destination eq 3601
+object-group service /infra/services/Oracle_OC4J_JMS
+ service TCP destination eq 3701
+object-group service /infra/services/Oracle_OC4J_RMI
+ service TCP destination eq 3201
+object-group service /infra/services/Oracle_Rdb
+ service TCP destination eq 1701
+object-group service /infra/services/Oracle_SOAP_Server
+ service TCP destination eq 9998
+object-group service /infra/services/Oracle_Times_Ten
+ service TCP destination eq 4767
+ service TCP destination eq 15000
+ service TCP destination eq 4758
+ service TCP destination eq 4759
+ service TCP destination eq 4764
+ service TCP destination eq 4766
+ service TCP destination eq 4761
+ service TCP destination eq 4662
+ service TCP destination eq 15004
+ service TCP destination eq 15002
+object-group service /infra/services/Oracle_Times_Ten_(15000)
+ service TCP destination eq 15000
+object-group service /infra/services/Oracle_Times_Ten_(15002)
+ service TCP destination eq 15002
+object-group service /infra/services/Oracle_Times_Ten_(15004)
+ service TCP destination eq 15004
+object-group service /infra/services/Oracle_TimesTen
+ service TCP destination eq 4662
+object-group service /infra/services/Oracle_TimesTen_(4758)
+ service TCP destination eq 4758
+object-group service /infra/services/Oracle_TimesTen_(4759)
+ service TCP destination eq 4759
+object-group service /infra/services/Oracle_TimesTen_(4761)
+ service TCP destination eq 4761
+object-group service /infra/services/Oracle_TimesTen_(4764)
+ service TCP destination eq 4764
+object-group service /infra/services/Oracle_TimesTen_(4766)
+ service TCP destination eq 4766
+object-group service /infra/services/Oracle_TimesTen_(4767)
+ service TCP destination eq 4767
+object-group service /infra/services/Oracle_XMLDB_FTP_Port
+ service TCP destination eq 2100
+object-group service /infra/services/Oracle_XMLDB_HTTP_port
+ service TCP destination eq 8080
+object-group service /infra/services/Oracle_i*SQLPlus
+ service TCP destination eq 5560
+ service TCP destination eq 5580
+object-group service /infra/services/Oracle-2
+ service TCP destination eq 1526
+object-group service /infra/services/Oracle9iAS_Clickstream_Collector_Agent
+ service TCP destination eq 6668
+object-group service /infra/services/Oracle9iAS_Web_Cache_Admin_port
+ service TCP destination eq 4000
+object-group service /infra/services/Oracle9iAS_Web_Cache_HTTP_Listen(SSL)_port
+ service TCP destination eq 4444
+object-group service /infra/services/Oracle9iAS_Web_Cache_HTTP_Listen(non-SSL)_port
+ service TCP destination eq 7779
+object-group service /infra/services/Oracle9iAS_Web_Cache_Invalidation_port
+ service TCP destination eq 4001
+object-group service /infra/services/Oracle9iAS_Web_Cache_Statistics_port
+ service TCP destination eq 4002
+object-group service /infra/services/OracleAS_Certificate_Authority_(OCA)_-_Mutual_Authentication
+ service TCP destination eq 4401
+object-group service /infra/services/OracleAS_Certificate_Authority_(OCA)_-_Server_Authentication
+ service TCP destination eq 4400
+object-group service /infra/services/Orchestrator
+ service TCP destination eq 25
+ service TCP destination eq 8281
+ service TCP destination eq 443
+ service TCP destination eq 8230
+ service TCP destination eq 5432
+ service TCP destination eq 8240
+ service TCP destination eq 8283
+ service TCP destination eq 1521
+ service UDP destination eq 389
+ service TCP destination eq 636
+ service TCP destination eq 8282
+ service TCP destination eq 8244
+ service TCP destination eq 8250
+ service TCP destination eq 1433
+ service TCP destination eq 3306
+ service TCP destination eq 8280
+ service TCP destination eq 389
+object-group service /infra/services/PC_Anywhere_(TCP)
+ service TCP destination eq 5631
+object-group service /infra/services/PC_Anywhere_(UDP)
+ service UDP destination eq 5632
+object-group service /infra/services/POP3
+ service TCP destination eq 110
+object-group service /infra/services/POP3_SSL
+ service TCP destination eq 995
+object-group service /infra/services/PostgreSQL
+ service TCP destination eq 5432
+object-group service /infra/services/VMware_Remote_Console
+ service TCP destination eq 902
+object-group service /infra/services/RDP
+ service TCP destination eq 3389
+object-group service /infra/services/RFB
+ service TCP destination eq 5900-5964
+object-group service /infra/services/RPC,_DFSR_(SYSVOL)
+ service TCP destination eq 5722
+object-group service /infra/services/RTSP_(TCP)
+ service TCP destination eq 554
+object-group service /infra/services/RTSP_(UDP)
+ service UDP destination eq 554
+object-group service /infra/services/RabbitMQ_Mgmt_Plugin
+ service TCP destination eq 15672
+object-group service /infra/services/Routing_Engine_service
+ service TCP destination eq 691
+object-group service /infra/services/SAP_Admin_console
+ service TCP destination eq 20005
+object-group service /infra/services/SAP_Alert_Server
+ service TCP destination eq 30011
+object-group service /infra/services/SAP_Backup_Server
+ service TCP destination eq 30017
+object-group service /infra/services/SAP_Cache_Server
+ service TCP destination eq 1095
+object-group service /infra/services/SAP_Central_Software_Deployment_Manager
+ service TCP destination eq 20201
+object-group service /infra/services/SAP_Comm
+ service TCP destination eq 20003
+object-group service /infra/services/SAP_Content_Server
+ service TCP destination eq 1090
+object-group service /infra/services/SAP_Cruiser
+ service TCP destination eq 30008
+object-group service /infra/services/SAP_Design_Time_Repository
+ service TCP destination eq 50015
+object-group service /infra/services/SAP_Dispatcher
+ service TCP destination eq 3200
+object-group service /infra/services/SAP_Dispatcher_Netweaver_App_Server
+ service UDP destination eq 3200
+object-group service /infra/services/SAP_Enqueue_Repl_2
+ service TCP destination eq 50116
+object-group service /infra/services/SAP_Enqueue_Svr
+ service TCP destination eq 3201
+object-group service /infra/services/SAP_Exchange_Groupware_Connector_(DCOM)
+ service TCP destination eq 135
+object-group service /infra/services/SAP_File_Adapter
+ service TCP destination eq 8230
+object-group service /infra/services/SAP_GRMG_Service_(Heartbeat)
+ service TCP destination eq 30006
+object-group service /infra/services/SAP_Gateway_Netweaver_App_Server
+ service UDP destination eq 3300
+object-group service /infra/services/SAP_HTTP
+ service TCP destination eq 50000
+object-group service /infra/services/SAP_HTTP_Server
+ service TCP destination eq 30005
+object-group service /infra/services/SAP_HTTP_Server_2
+ service TCP destination eq 8353
+object-group service /infra/services/SAP_HTTPS
+ service TCP destination eq 50001
+object-group service /infra/services/SAP_HostControl
+ service TCP destination eq 1128
+object-group service /infra/services/SAP_HostControlS
+ service TCP destination eq 1129
+object-group service /infra/services/SAP_IBM
+ service TCP destination eq 4402
+ service TCP destination eq 50000
+object-group service /infra/services/SAP_ICM_HTTP
+ service TCP destination eq 8000
+object-group service /infra/services/SAP_IIOP
+ service TCP destination eq 50007
+object-group service /infra/services/SAP_IIOP_initial
+ service TCP destination eq 50002
+object-group service /infra/services/SAP_IIOPS
+ service TCP destination eq 50003
+object-group service /infra/services/SAP_IPC_Dispatcher_Mobile_client
+ service TCP destination eq 4444
+object-group service /infra/services/SAP_IPC_Dispatcher_Mobile_client_2
+ service TCP destination eq 4363
+object-group service /infra/services/SAP_IPC_Server
+ service TCP destination eq 9999
+object-group service /infra/services/SAP_IPC_data_loader
+ service TCP destination eq 4445
+object-group service /infra/services/SAP_Import_Mgr
+ service TCP destination eq 20006
+object-group service /infra/services/SAP_Index_Server
+ service TCP destination eq 30003
+object-group service /infra/services/SAP_Index_Server_2
+ service TCP destination eq 8351
+object-group service /infra/services/SAP_Inst
+ service TCP destination eq 21212
+ service TCP destination eq 21213
+object-group service /infra/services/SAP_Inst_on_IBM
+ service TCP destination eq 59975
+ service TCP destination eq 59976
+object-group service /infra/services/SAP_Inter_Server_COmm
+ service TCP destination eq 20004
+object-group service /infra/services/SAP_JDBCAdapter
+ service TCP destination eq 8220
+object-group service /infra/services/SAP_JMS
+ service TCP destination eq 50010
+object-group service /infra/services/SAP_JMS_Adapter
+ service TCP destination eq 8210
+object-group service /infra/services/SAP_JMS-JDBC-File_Adapter_Server
+ service TCP destination eq 8200
+object-group service /infra/services/SAP_Java_Debug
+ service TCP destination eq 50021
+object-group service /infra/services/SAP_Java_Join
+ service TCP destination eq 50020
+object-group service /infra/services/SAP_Layout_Server
+ service TCP destination eq 31596
+ service TCP destination eq 31597
+ service TCP destination eq 31604
+object-group service /infra/services/SAP_Layout_Server_2
+ service TCP destination eq 31596
+object-group service /infra/services/SAP_Layout_Server_Adobe_InDesign
+ service TCP destination eq 31603
+object-group service /infra/services/SAP_Layout_Server_Quark_Express
+ service TCP destination eq 31602
+object-group service /infra/services/SAP_LiveCache
+ service TCP destination eq 7200
+ service TCP destination eq 7210
+ service TCP destination eq 7269
+ service TCP destination eq 7270
+ service TCP destination eq 7575
+object-group service /infra/services/SAP_Lotus_Domino_-_Connector
+ service TCP destination eq 62026-62029
+object-group service /infra/services/SAP_Lotus_Domino_-_Proxy
+ service TCP destination eq 62126-62129
+object-group service /infra/services/SAP_MDM_Server
+ service TCP destination eq 2000-2002
+object-group service /infra/services/SAP_Mapping_Manager
+ service TCP destination eq 3909
+object-group service /infra/services/SAP_Message_Server_HTTP
+ service TCP destination eq 8100
+object-group service /infra/services/SAP_Monitoring_(GRMG)
+ service TCP destination eq 8366
+object-group service /infra/services/SAP_Msg_Svr
+ service TCP destination eq 3600
+object-group service /infra/services/SAP_Msg_Svr_2
+ service TCP destination eq 3601
+object-group service /infra/services/SAP_Msg_Svr_HTTP
+ service TCP destination eq 8101
+object-group service /infra/services/SAP_Name_Server
+ service TCP destination eq 30001
+object-group service /infra/services/SAP_Name_Server_2
+ service TCP destination eq 8355
+object-group service /infra/services/SAP_Oracle_Listener
+ service TCP destination eq 1527
+object-group service /infra/services/SAP_P4
+ service TCP destination eq 50004
+object-group service /infra/services/SAP_P4_over_HTTP
+ service TCP destination eq 50005
+object-group service /infra/services/SAP_P4_over_SSL
+ service TCP destination eq 50006
+object-group service /infra/services/SAP_PAW_Communication_Server
+ service TCP destination eq 1099
+object-group service /infra/services/SAP_PAW_Servlet_Engine
+ service TCP destination eq 1089
+object-group service /infra/services/SAP_Pre_Processor
+ service TCP destination eq 30002
+object-group service /infra/services/SAP_Pre_Processor_2
+ service TCP destination eq 8357
+object-group service /infra/services/SAP_Queue_Server
+ service TCP destination eq 30004
+object-group service /infra/services/SAP_Queue_Server_2
+ service TCP destination eq 8352
+object-group service /infra/services/SAP_RFC_Server
+ service TCP destination eq 30007
+object-group service /infra/services/SAP_Router
+ service TCP destination eq 3299
+object-group service /infra/services/SAP_SDM-SL
+ service TCP destination eq 50017
+ service TCP destination eq 50018
+ service TCP destination eq 50019
+object-group service /infra/services/SAP_SNC_secured_gateway
+ service TCP destination eq 4800
+object-group service /infra/services/SAP_Start_Service
+ service TCP destination eq 50013
+object-group service /infra/services/SAP_Start_Service_2
+ service TCP destination eq 50014
+object-group service /infra/services/SAP_Syndicator_Service
+ service TCP destination eq 20007
+object-group service /infra/services/SAP_Telnet
+ service TCP destination eq 50008
+object-group service /infra/services/SAP_Upgrade
+ service TCP destination eq 4238
+ service TCP destination eq 4239
+ service TCP destination eq 4240
+ service TCP destination eq 4241
+object-group service /infra/services/SAP_gateway_-_CPIC-RFC
+ service TCP destination eq 3300
+object-group service /infra/services/SAP_gateway-replication
+ service TCP destination eq 3301
+object-group service /infra/services/SAP_network_Test_Program
+ service TCP destination eq 3298
+object-group service /infra/services/SAP_printer_spooler
+ service TCP destination eq 515
+object-group service /infra/services/SIP_5060
+ service UDP destination eq 5060
+object-group service /infra/services/SIP_5061
+ service UDP destination eq 5061
+object-group service /infra/services/SMB
+ service TCP destination eq 445
+object-group service /infra/services/SMB_Server
+ service TCP destination eq 445
+object-group service /infra/services/SMB_Server_UDP
+ service UDP destination eq 445
+object-group service /infra/services/SMTP
+ service TCP destination eq 25
+object-group service /infra/services/SMTP_TLS
+ service TCP destination eq 587
+object-group service /infra/services/SNMP
+ service UDP destination eq 161
+object-group service /infra/services/SNMP-Receive
+ service UDP destination eq 161
+object-group service /infra/services/SNMP-Recieve
+ service UDP destination eq 161
+object-group service /infra/services/SNMP-Send
+ service UDP destination eq 162
+object-group service /infra/services/SOAP
+ service TCP destination eq 9389
+object-group service /infra/services/SQL_Analysis_service
+ service TCP destination eq 2383
+object-group service /infra/services/SQL_Server_Browser_service
+ service TCP destination eq 2382
+object-group service /infra/services/SSH
+ service TCP destination eq 22
+object-group service /infra/services/SSO
+ service TCP destination eq 7444
+object-group service /infra/services/SUN_RPC_TCP
+object-group service /infra/services/SUN_RPC_UDP
+object-group service /infra/services/Server_Message_Block_(SMB)
+ service TCP destination eq 137
+ service TCP destination eq 138
+ service TCP destination eq 139
+object-group service /infra/services/SharePoint_2007_V1
+ service UDP destination eq 53
+ service TCP destination eq 80
+ service TCP destination eq 445
+ service TCP destination eq 137
+ service TCP destination eq 138
+ service TCP destination eq 139
+ service TCP destination eq 56737
+ service TCP destination eq 56738
+ service UDP destination eq 389
+ service UDP destination eq 88
+ service UDP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 53
+ service UDP destination eq 137
+ service UDP destination eq 1434
+ service UDP destination eq 138
+ service TCP destination eq 25
+ service TCP destination eq 445
+ service UDP destination eq 636
+ service TCP destination eq 1433
+ service TCP destination eq 3389
+object-group service /infra/services/SharePoint_2010_V1
+ service TCP destination eq 445
+ service TCP destination eq 25
+ service TCP destination eq 443
+ service TCP destination eq 5725
+ service UDP destination eq 137
+ service TCP destination eq 3389
+ service UDP destination eq 1434
+ service TCP destination eq 53
+ service TCP destination eq 445
+ service UDP destination eq 88
+ service UDP destination eq 53
+ service UDP destination eq 636
+ service TCP destination eq 80
+ service TCP destination eq 1433
+ service UDP destination eq 389
+ service TCP destination eq 56737
+ service TCP destination eq 56738
+ service TCP destination eq 32843
+ service TCP destination eq 32844
+ service TCP destination eq 32845
+ service UDP destination eq 464
+ service UDP destination eq 445
+ service TCP destination eq 137
+ service TCP destination eq 138
+ service TCP destination eq 139
+ service UDP destination eq 138
+object-group service /infra/services/Site_Recovery_Manager_5.x
+ service TCP destination eq 8096
+ service TCP destination eq 443
+ service TCP destination eq 1433
+ service TCP destination eq 5480
+ service TCP destination eq 902
+ service TCP destination eq 9008
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+ service TCP destination eq 8095
+ service TCP destination eq 8080
+ service TCP destination eq 8282
+ service TCP destination eq 1521
+ service TCP destination eq 8043
+ service TCP destination eq 5000
+ service TCP destination eq 8123
+ service TCP destination eq 80
+ service TCP destination eq 1526
+ service TCP destination eq 9007
+ service TCP destination eq 9085
+object-group service /infra/services/Site_Recovery_Manager_6.x
+ service TCP destination eq 9007
+ service TCP destination eq 8043
+ service TCP destination eq 80
+ service TCP destination eq 9085
+ service TCP destination eq 9008
+ service TCP destination eq 9086
+ service TCP destination eq 5000
+ service TCP destination eq 5480
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 8043
+ service TCP destination eq 443
+ service TCP destination eq 902
+ service TCP destination eq 1526
+ service TCP destination eq 8282
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+ service TCP destination eq 1433
+ service TCP destination eq 8095
+ service TCP destination eq 1521
+ service TCP destination eq 8123
+ service TCP destination eq 8096
+object-group service /infra/services/Site_Replication_service
+ service TCP destination eq 379
+object-group service /infra/services/Skinny
+ service TCP destination eq 2000
+object-group service /infra/services/Squid-Proxy
+ service TCP destination eq 3128
+object-group service /infra/services/Syslog_(TCP)
+ service TCP destination eq 514
+object-group service /infra/services/Syslog_(UDP)
+ service UDP destination eq 514
+object-group service /infra/services/Syslog-Server
+ service TCP destination eq 514
+object-group service /infra/services/Syslog-Server-UDP
+ service UDP destination eq 514
+object-group service /infra/services/T120_(Whiteboard_A43)
+ service TCP destination eq 1503
+object-group service /infra/services/TELNET
+ service TCP destination eq 23
+object-group service /infra/services/TFTP
+object-group service /infra/services/Terminal_Services_(TCP)
+ service TCP destination eq 3389
+object-group service /infra/services/Terminal_Services_(UDP)
+ service UDP destination eq 3389
+object-group service /infra/services/Update_Manager
+ service TCP destination eq 9087
+ service TCP destination eq 80
+ service TCP destination eq 735
+ service TCP destination eq 1521
+ service TCP destination eq 443
+ service TCP destination eq 9000-9100
+ service TCP destination eq 1433
+ service TCP destination eq 9084
+ service TCP destination eq 8084
+ service TCP destination eq 902
+object-group service /infra/services/VMware_Consolidated_Backup
+ service TCP destination eq 443
+object-group service /infra/services/VMware_ESXi_Dump_Collector
+ service TCP destination eq 8000
+ service UDP destination eq 6500
+object-group service /infra/services/VMware_Site_Recovery_SRM
+ service TCP destination eq 443
+ service TCP destination eq 9086
+object-group service /infra/services/VMware_Site_Recovery_VR
+ service TCP destination eq 443
+ service TCP destination eq 8043
+ service TCP destination eq 31031
+ service TCP destination eq 32032
+ service TCP destination eq 44046
+object-group service /infra/services/VMware_VMotion
+ service TCP destination eq 8000
+object-group service /infra/services/VMware-CIMSLP
+ service UDP destination eq 427
+object-group service /infra/services/VMware-DVS
+ service TCP destination eq 8301
+ service TCP destination eq 8302
+object-group service /infra/services/VMware-DataRecovery
+ service TCP destination eq 22024
+object-group service /infra/services/VMware-ESXi5.x-TCP
+ service TCP destination eq 902
+object-group service /infra/services/VMware-ESXi5.x-UDP
+ service UDP destination eq 902
+object-group service /infra/services/VMware-HA-TCP
+ service TCP destination eq 8182
+object-group service /infra/services/VMware-HA-UDP
+ service UDP destination eq 8182
+object-group service /infra/services/VMware-SPS
+ service TCP destination eq 31000
+ service TCP destination eq 31100
+object-group service /infra/services/VMware-SRM-H5-UI
+ service TCP destination eq 443
+object-group service /infra/services/VMware-SRM-HTTP
+ service TCP destination eq 9008
+object-group service /infra/services/VMware-SRM-Replication
+ service TCP destination eq 8123
+object-group service /infra/services/VMware-SRM-SOAP
+ service TCP destination eq 8043
+object-group service /infra/services/VMware-SRM-Server-Management
+ service TCP destination eq 9086
+object-group service /infra/services/VMware-SRM-UI
+ service TCP destination eq 9085
+object-group service /infra/services/VMware-SRM-VAMI
+ service TCP destination eq 8080
+object-group service /infra/services/VMware-SRM-vCentreServer
+ service TCP destination eq 8096
+object-group service /infra/services/VMware-SRM-vSphereReplication
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+object-group service /infra/services/VMware-SRMClient-Server
+ service TCP destination eq 8095
+object-group service /infra/services/VMware-UpdateMgr
+ service TCP destination eq 9000-9100
+object-group service /infra/services/VMware-UpdateMgr-Patching
+ service TCP destination eq 735
+object-group service /infra/services/VMware-UpdateMgr-SOAP
+ service TCP destination eq 8084
+object-group service /infra/services/VMware-UpdateMgr-VUM
+ service TCP destination eq 9084
+object-group service /infra/services/VMware-VC-DPM
+ service UDP destination eq 623
+object-group service /infra/services/VMware-VC-DumpCollector-TCP
+ service TCP destination eq 8000
+object-group service /infra/services/VMware-VC-DumpSvr
+ service UDP destination eq 6500
+object-group service /infra/services/VMware-VC-ESXi
+ service TCP destination eq 51915
+object-group service /infra/services/VMware-VC-RemoteConsole
+ service TCP destination eq 903
+object-group service /infra/services/VMware-VC-Syslog
+ service TCP destination eq 8001
+object-group service /infra/services/VMware-VCO-Command
+ service TCP destination eq 8240
+object-group service /infra/services/VMware-VCO-Data
+ service TCP destination eq 8244
+object-group service /infra/services/VMware-VCO-Messaging
+ service TCP destination eq 8250
+object-group service /infra/services/VMware-VCO-VCO-HTTPS
+ service TCP destination eq 8283
+object-group service /infra/services/VMware-VCO-WebHTTP
+ service TCP destination eq 8280
+object-group service /infra/services/VMware-VCO-WebHTTPS
+ service TCP destination eq 8281
+object-group service /infra/services/VMware-VCOMgr-UI
+ service TCP destination eq 1194
+object-group service /infra/services/VMware-VCOStdAln-Heartbeat
+ service TCP destination eq 1199
+object-group service /infra/services/VMware-VDM2.x-Ephemeral
+ service TCP destination eq 1024-65535
+object-group service /infra/services/VMware-VDM2.x-RGS
+ service TCP destination eq 42966
+object-group service /infra/services/VMware-VR-Replication-Traffic
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+object-group service /infra/services/VMware-VR-Server-Management-Traffic
+ service TCP destination eq 8043
+object-group service /infra/services/VMware-View-PCoIP
+ service TCP destination eq 4172
+object-group service /infra/services/VMware-View5.x-JMS
+ service TCP destination eq 4001
+object-group service /infra/services/VMware-View5.x-PCoIP-UDP
+ service UDP destination eq 4172
+object-group service /infra/services/VMware-iSCSI-Server
+ service TCP destination eq 3260
+object-group service /infra/services/View_5.x
+ service UDP destination eq 4172
+ service TCP destination eq 4172
+ service TCP destination eq 902
+ service TCP destination eq 80
+ service TCP destination eq 4001
+ service TCP destination eq 443
+object-group service /infra/services/Vmware_View-VDM2.x
+ service TCP destination eq 88
+ service TCP destination eq 3389
+ service TCP destination eq 4001
+ service UDP destination eq 88
+ service TCP destination eq 443
+ service TCP destination eq 1024-65535
+ service TCP destination eq 389
+ service TCP destination eq 80
+ service TCP destination eq 4100
+ service TCP destination eq 445
+ service UDP destination eq 445
+ service TCP destination eq 8009
+ service TCP destination eq 42966
+ service UDP destination eq 389
+object-group service /infra/services/Vmware-FT-TCP
+ service TCP destination eq 8100
+ service TCP destination eq 8200
+object-group service /infra/services/Vmware-FT-UDP
+ service UDP destination eq 8100
+ service UDP destination eq 8200
+object-group service /infra/services/Vmware-Heartbeat-PrimarySecondary
+ service TCP destination eq 57348
+object-group service /infra/services/Vmware-SRM-WSDL-vCentreServer
+ service TCP destination eq 9007
+object-group service /infra/services/Vmware-UpdateMgr-update
+ service TCP destination eq 9087
+object-group service /infra/services/Vmware-VC-HTTP
+ service TCP destination eq 10080
+object-group service /infra/services/Vmware-VC-VC-Internal
+ service TCP destination eq 10109
+ service TCP destination eq 10111
+ service TCP destination eq 60099
+ service TCP destination eq 7500
+ service TCP destination eq 8005
+ service TCP destination eq 8006
+ service TCP destination eq 8083
+ service TCP destination eq 8085
+ service TCP destination eq 8086
+ service TCP destination eq 8087
+ service TCP destination eq 8443
+object-group service /infra/services/Vmware-VC-WebAccess
+ service TCP destination eq 10443
+ service TCP destination eq 8443
+ service TCP destination eq 9443
+object-group service /infra/services/Vmware-VCHeartbeat
+ service TCP destination eq 52267
+object-group service /infra/services/Vmware-VCO-Lookup
+ service TCP destination eq 8230
+object-group service /infra/services/Vmware-VCO-VCO-HTTP
+ service TCP destination eq 8282
+object-group service /infra/services/Vmware-VCOStdAln-Remote
+ service TCP destination eq 61616
+object-group service /infra/services/Vmware-VDM2.x-AJP
+ service TCP destination eq 8009
+object-group service /infra/services/Vmware-VDM2.x-JMS
+ service TCP destination eq 4100
+object-group service /infra/services/WINS
+ service TCP destination eq 42
+object-group service /infra/services/WINS-UDP
+ service UDP destination eq 42
+object-group service /infra/services/Win_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS_-_TCP
+ service TCP destination eq 1025-65535
+object-group service /infra/services/Win_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS_-_UDP
+ service UDP destination eq 1025-65535
+object-group service /infra/services/Win_2003_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS
+ service TCP destination eq 1025-5000
+object-group service /infra/services/Win_2008_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS
+ service TCP destination eq 49152-65535
+object-group service /infra/services/Windows-Global-Catalog
+ service TCP destination eq 3268
+object-group service /infra/services/Windows-Global-Catalog-over-SSL
+ service TCP destination eq 3269
+object-group service /infra/services/Yahoo_Messenger_(TCP)
+ service TCP destination eq 5050
+object-group service /infra/services/Yahoo_Messenger_(UDP)
+ service UDP destination eq 5050
+object-group service /infra/services/01adc593-9007-4b86-ab41-f25895f634c1
+ service TCP destination eq 11207
+ service TCP destination eq 18091-18096
+ service TCP destination eq 11211
+ service TCP destination eq 9140
+ service TCP destination eq 11210
+ service TCP destination eq 8091-8096
+object-group service /infra/services/group-amq
+ service TCP destination eq 5672
+object-group service /infra/services/bbdb9cf7-c2b3-457d-9d7e-42868d1a7194
+ service TCP destination eq 5672
+object-group service /infra/services/iSQLPlus_10g
+ service TCP destination eq 5560
+object-group service /infra/services/iSQLPlus_10g_(5580)
+ service TCP destination eq 5580
+object-group service /infra/services/b36bff36-a4b2-462f-a4bd-263e3c0b10c3
+ service TCP destination eq 161
+ service UDP destination eq 161
+object-group service /infra/services/0aab30a9-76e6-4252-9d04-96a9bac6fabe
+ service TCP destination eq 5000
+object-group service /infra/services/cfd10da7-df08-4570-9411-f07ddcbce159
+ service TCP destination eq 8088
+object-group service /infra/services/7127c858-2246-46f8-ac83-e1b8f9db3360
+ service TCP destination eq 8091
+object-group service /infra/services/6e242668-7650-4199-a51c-eea597a6efc3
+ service TCP destination eq 8443
+object-group service /infra/services/2b23afe7-dbd1-4008-b874-93c4e088732b
+ service TCP destination eq 9094
+object-group service /infra/services/68994b74-7903-4180-9186-3e212f501dc2
+ service UDP destination eq 49152-65535
+ service UDP destination eq 138
+ service TCP destination eq 135
+ service TCP destination eq 1025-5000
+ service TCP destination eq 3268
+ service TCP destination eq 25
+ service UDP destination eq 1025-5000
+ service TCP destination eq 139
+ service TCP destination eq 464
+ service TCP destination eq 445
+ service UDP destination eq 53
+ service TCP destination eq 514
+ service TCP destination eq 53
+ service TCP destination eq 49164
+ service TCP destination eq 49152-65535
+ service UDP destination eq 464
+ service TCP destination eq 88
+ service UDP destination eq 123
+ service TCP destination eq 3269
+ service TCP destination eq 636
+ service UDP destination eq 137
+ service UDP destination eq 67
+ service UDP destination eq 389
+ service TCP destination eq 9389
+ service UDP destination eq 2535
+ service UDP destination eq 88
+ service TCP destination eq 389
+ service UDP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 8530
+ service TCP destination eq 5722
+object-group service /infra/services/2aa8d0ac-f0b9-471d-ad93-196b456cd1ff
+ service UDP destination eq 53
+object-group service /infra/services/82c0526b-6bf2-4449-ada6-201d62c631df
+ service TCP destination eq 5672
+object-group service /infra/services/ec162ac7-e03d-4c77-b721-821830619784
+ service TCP destination eq 7990
+object-group service /infra/services/3f7a94c1-fc6c-4f8e-9069-f02cb696a6e8
+ service TCP destination eq 445
+object-group service /infra/services/20b9a9e1-f1ef-4587-989f-69f07a8a8b7f
+ service UDP destination eq 3389
+ service TCP destination eq 443
+ service UDP destination eq 161
+ service TCP destination eq 5666
+ service TCP destination eq 23
+ service TCP destination eq 5986
+ service TCP destination eq 1248
+ service TCP destination eq 5985
+ service TCP destination eq 3389
+ service TCP destination eq 80
+ service UDP destination eq 123
+object-group service /infra/services/18fdcc8a-8cef-49c3-b46b-8dee77efa220
+ service TCP destination eq 8089
+ service TCP destination eq 3142
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/f82b1532-63ef-4637-b8d4-67ac7479af97
+ service TCP destination eq 443
+ service TCP destination eq 3142
+ service TCP destination eq 8089
+ service TCP destination eq 80
+object-group service /infra/services/19d9eeec-c383-494f-b4cb-5d17ceb127ff
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/0fd0d377-b519-4493-be35-1e6b2f0e437d
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/f05a826d-830d-4b66-aa33-c38293c9557f
+ service TCP destination eq 9997
+ service TCP destination eq 8089
+object-group service /infra/services/f7abee13-7e1e-4eeb-8fbd-0e5133f92e7c
+ service TCP destination eq 5000
+ service TCP destination eq 3142
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 8089
+object-group service /infra/services/3b69a47e-8c89-42db-b404-604532bf9887
+ service TCP destination eq 3389
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/20749fa6-c647-4416-845e-214f50058a72
+ service TCP destination eq 22
+object-group service /infra/services/61962c73-cb95-456b-bc62-3d930876c9e1
+ service TCP destination eq 3142
+ service TCP destination eq 443
+ service TCP destination eq 8089
+ service TCP destination eq 80
+object-group service /infra/services/f3d79d27-51df-473e-a536-bce6c3332b52
+ service TCP destination eq 443
+ service TCP destination eq 8443
+ service TCP destination eq 22
+object-group service /infra/services/6a7240f9-f4dd-4e42-aa88-9a93a39bced6
+ service TCP destination eq 587
+ service TCP destination eq 995
+ service TCP destination eq 465
+ service TCP destination eq 110
+ service TCP destination eq 25
+object-group service /infra/services/526664f5-c654-4a60-a6a5-beee71027f59
+ service TCP destination eq 8089
+ service TCP destination eq 9997
+object-group service /infra/services/afa3ec18-159e-4f82-80ce-985972449e7d
+ service TCP destination eq 443
+ service TCP destination eq 8443
+object-group service /infra/services/49a7d97a-b337-4f1b-8da8-c352733d25ce
+ service TCP destination eq 88
+ service UDP destination eq 123
+ service TCP destination eq 389
+ service UDP destination eq 53
+ service UDP destination eq 389
+ service TCP destination eq 49155
+ service TCP destination eq 135
+ service TCP destination eq 445
+ service TCP destination eq 53
+object-group service /infra/services/e2ffdaff-2b0e-4659-a68b-3c6a94f6b662
+ service TCP destination eq 22
+ service TCP destination eq 80
+ service UDP destination eq 5000
+ service TCP destination eq 443
+ service TCP destination eq 5000
+object-group service /infra/services/fb69ecb4-5ac1-4318-9971-80fae2c18fbd
+ service TCP destination eq 8080
+ service TCP destination eq 443
+object-group service /infra/services/9b8ae120-860b-4e79-8f11-42ddccb6c3fe
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/3055dff5-c1df-471c-b96e-cc4b25fb5a97
+ service UDP destination eq 10514
+ service TCP destination eq 1514
+object-group service /infra/services/c155ab4d-8ba2-4591-9c1f-bf310005a9ef
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/6553b0c5-30fd-40c3-bb0a-a65019d0e5f7
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/38ae29b0-29fe-4b6a-a8c8-1f6786f68642
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/a3791f3e-91c0-4334-ae63-f60f55d1fcf2
+ service TCP destination eq 23560
+ service TCP destination eq 443
+object-group service /infra/services/09c6c33b-0f90-4ba1-b98a-c4f9ae6c4d5a
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination eq 22
+object-group service /infra/services/9b0523fb-08f9-49bd-93b1-d8d62a94e4a9
+ service TCP destination eq 5000
+ service TCP destination eq 443
+object-group service /infra/services/f433260c-2e7a-42ed-984f-7febd596b3cd
+ service TCP destination eq 389
+ service TCP destination eq 1025-5000
+ service TCP destination eq 514
+ service TCP destination eq 464
+ service UDP destination eq 137
+ service UDP destination eq 123
+ service TCP destination eq 88
+ service TCP destination eq 445
+ service TCP destination eq 53
+ service TCP destination eq 135
+ service TCP destination eq 5722
+ service TCP destination eq 139
+ service TCP destination eq 3268
+ service UDP destination eq 53
+ service TCP destination eq 636
+ service UDP destination eq 138
+ service UDP destination eq 49152-65535
+ service TCP destination eq 25
+ service TCP destination eq 8530
+ service UDP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 3269
+ service TCP destination eq 49164
+ service UDP destination eq 464
+ service TCP destination eq 49152-65535
+ service UDP destination eq 1025-5000
+ service UDP destination eq 88
+ service UDP destination eq 2535
+ service UDP destination eq 67
+ service UDP destination eq 389
+ service TCP destination eq 9389
+object-group service /infra/services/0ce77541-c543-43fd-baad-bb0d7b58a96d
+ service TCP destination eq 464
+ service TCP destination eq 3269
+ service TCP destination eq 8530
+ service TCP destination eq 443
+ service TCP destination eq 49164
+ service TCP destination eq 135
+ service TCP destination eq 1025-5000
+ service TCP destination eq 49152-65535
+ service UDP destination eq 2535
+ service UDP destination eq 445
+ service TCP destination eq 445
+ service TCP destination eq 9389
+ service TCP destination eq 636
+ service TCP destination eq 53
+ service UDP destination eq 67
+ service UDP destination eq 138
+ service TCP destination eq 139
+ service TCP destination eq 514
+ service TCP destination eq 5722
+ service UDP destination eq 137
+ service UDP destination eq 123
+ service UDP destination eq 389
+ service TCP destination eq 389
+ service UDP destination eq 464
+ service UDP destination eq 53
+ service UDP destination eq 49152-65535
+ service TCP destination eq 88
+ service UDP destination eq 1025-5000
+ service TCP destination eq 3268
+ service UDP destination eq 88
+ service TCP destination eq 25
+object-group service /infra/services/88524381-3562-40ed-836c-22c1f93513cb
+ service TCP destination eq 5671
+ service TCP destination eq 5672
+object-group service /infra/services/21c5fe0c-245c-4632-81c3-821519d3624a
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/b71b0c6b-f0bf-4a70-8dc9-d9f5258014d3
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/2ad55e3c-8a67-4fba-8f48-6b8bbe7d1e1e
+ service TCP destination eq 222
+ service TCP destination eq 443
+object-group service /infra/services/6c0643c9-5ea7-4330-b43d-3e4148cd80f8
+ service TCP destination eq 222
+ service TCP destination eq 443
+object-group service /infra/services/3612b059-355d-41a6-be1a-03464fd59d42
+ service TCP destination eq 636
+ service TCP destination eq 53
+ service UDP destination eq 53
+ service UDP destination eq 123
+object-group service /infra/services/97ffca59-3b84-4689-9ab3-16dfd50ea4f4
+ service TCP destination eq 222
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/31bd3a47-40de-4283-b0af-6a8adb6c82fe
+ service TCP destination eq 80
+ service TCP destination eq 4119-4122
+ service TCP destination eq 443
+object-group service /infra/services/56f1be32-aef1-4730-9743-cb096b21ed1e
+ service TCP destination eq 53
+ service TCP destination eq 80
+ service UDP destination eq 53
+ service TCP destination eq 443
+object-group service /infra/services/aabbe283-a31c-4685-94bc-9c86fb135baf
+ service TCP destination eq 873
+ service TCP destination eq 25
+object-group service /infra/services/4e650770-f5ef-4fc4-94af-300e102fafc3
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/941eec14-58de-42f6-90dd-5df7e14d4da0
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/60a8ef95-e8e1-48b2-b462-d59d39af8437
+ service TCP destination eq 6443
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/0a1e274a-00cd-4669-b5f8-36d8751bd4ea
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 4119-4122
+object-group service /infra/services/1294cfbc-0b30-4f47-aa3a-692409113f7e
+ service TCP destination eq 3268
+ service UDP destination eq 67
+ service UDP destination eq 123
+ service UDP destination eq 2535
+ service UDP destination eq 138
+ service TCP destination eq 636
+ service UDP destination eq 445
+ service TCP destination eq 3269
+ service TCP destination eq 8530
+ service TCP destination eq 49164
+ service UDP destination eq 137
+ service TCP destination eq 464
+ service TCP destination eq 135
+ service TCP destination eq 25
+ service UDP destination eq 389
+ service TCP destination eq 49152-65535
+ service TCP destination eq 443
+ service TCP destination eq 139
+ service UDP destination eq 53
+ service TCP destination eq 389
+ service TCP destination eq 88
+ service TCP destination eq 9389
+ service UDP destination eq 1025-5000
+ service TCP destination eq 53
+ service TCP destination eq 445
+ service UDP destination eq 88
+ service TCP destination eq 1025-5000
+ service UDP destination eq 49152-65535
+ service TCP destination eq 514
+ service UDP destination eq 464
+ service TCP destination eq 5722
+object-group service /infra/services/7dbd87cf-92da-46a3-9ec4-3cce6a558e72
+ service TCP destination eq 3142
+ service TCP destination eq 8089
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/63039733-089e-48b3-bd26-25255b20989d
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 3142
+ service TCP destination eq 8089
+object-group service /infra/services/7b1a5500-8f69-4e99-ae8d-16f428ebed05
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/e021209c-18e0-4c94-82b3-04fd80a16182
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/b5497781-c434-43b0-8dff-a0bdd99a84b3
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/56a5b426-056f-4898-ab69-d33f05bbe73c
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/800f98aa-baf1-4c13-9d78-924def719a20
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/5ecc3a15-a161-4ae9-bf49-c26e78a10c0a
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/b99f5b68-7fa2-4a60-8eb8-0459863ce1be
+ service TCP destination eq 990
+ service TCP destination eq 80
+ service TCP destination eq 22
+ service TCP destination eq 443
+object-group service /infra/services/89669a56-208b-4d37-abc4-17bdfcc67f0f
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/18e156c0-2384-45d0-aeb3-66953990af47
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/120818d6-2151-48c3-8ec5-1652bd7e5fc1
+ service TCP destination eq 443
+ service TCP destination eq 22
+ service TCP destination eq 80
+object-group service /infra/services/0c7609bd-dee8-4c60-95a1-89ddec14bba5
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/35d6456b-b8fc-4c4c-838f-18a3aeceda87
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/6886f49e-098d-4e26-a289-6542e085abc6
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/8b810306-84a2-43a1-a7aa-923fb325e76e
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/004c11dd-e11b-401d-a938-c3bca4fc39d5
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/4236b669-b7a3-435b-b2f1-8f586bedfba9
+ service TCP destination eq 22
+ service TCP destination eq 443
+ service TCP destination eq 7999
+ service TCP destination eq 80
+object-group service /infra/services/64d7a143-2de1-429e-bb59-556f22ff9ba0
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/adb47e3f-a125-42a4-af8f-7bf210a785e7
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/e7f780ec-fd8b-44a7-af26-5f0638fd0c1d
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/ca7d5cd5-35b3-44c3-baeb-29f36a960825
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/2f02a19d-1c5e-45c5-9919-c6b3421a5a74
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/d200091c-0d2b-49d6-a404-6fa87accbcb0
+ service TCP destination eq 143
+ service TCP destination eq 110
+ service TCP destination eq 25
+ service TCP destination eq 135
+object-group service /infra/services/e6ab4259-306a-409f-97a5-72c801884aac
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/6473e26f-63a7-412f-9b61-7864740786bf
+ service TCP destination eq 443
+ service TCP destination eq 22
+ service TCP destination eq 80
+object-group service /infra/services/d53aca99-d79c-4d21-8ae2-3ef8cba22570
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/ad05a022-507a-445f-a5af-2b165e20fa7e
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/49a50c48-b257-4686-868a-68ddf3980b76
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/de713121-b749-43be-b3d8-bd75887f16b6
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/9697d956-488d-48fb-b5d6-5d29448775f3
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/119a5d03-3572-4bf3-9e7e-62a771cd9a54
+ service TCP destination eq 22
+ service TCP destination eq 443
+object-group service /infra/services/c66f5297-b154-4c59-9815-08895a132e5d
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/0757180d-948b-46a6-9e56-2bc462dde757
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/6575b64d-6867-4e7f-a569-4b879ad106ae
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/010802bb-e633-4887-a5a0-a04b76445ade
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/9b029ec5-2a01-494d-a279-40094bb28f7e
+ service TCP destination eq 22
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/025f2c08-23de-4f75-868a-1490d6a54ff7
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/b79e3119-c4c0-4913-85db-7e1356332f59
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/e1f736ad-a13d-4eb3-95f0-dcd3ac8689b5
+ service TCP destination eq 8531
+ service TCP destination eq 8530
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/c796e0ee-cd25-4e57-abcd-cde5c8c76967
+ service TCP destination eq 443
+ service TCP destination eq 80
+object-group service /infra/services/2e0b210f-ae93-4ab1-afde-b5a546d6f88c
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/65313b32-efa0-46ad-b868-697c78cebda7
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/99524822-947d-43b6-999e-eaa03cf27aa4
+ service UDP destination eq 2195
+ service TCP destination eq 2195
+ service TCP destination eq 123
+ service UDP destination eq 123
+object-group service /infra/services/3d1ef29d-443e-4ad1-b512-dc186fc35ca0
+ service UDP destination eq 53
+ service TCP destination eq 53
+object-group service /infra/services/1938cd37-284d-47d1-aab4-2bd1d31671e5
+ service UDP destination eq 2055
+object-group service /infra/services/28ee3b6a-9604-4c7a-ad1c-af80421b2431
+ service TCP destination eq 80
+object-group service /infra/services/625ed785-43b8-4be0-ad3b-6834bb7342e0
+ service TCP destination eq 443
+object-group service /infra/services/f1f29645-f80e-4052-a113-e97c267a8414
+object-group service /infra/services/f54a1135-7724-49a9-aa96-c32d8501fe0d
+ service UDP destination eq 161
+object-group service /infra/services/df47287b-0314-427e-9c2b-9329a02e3698
+ service UDP destination eq 161
+ service TCP destination eq 22
+object-group service /infra/services/80d306a2-9a93-4a3a-b7c4-663698f2ce70
+ service UDP destination eq 162
+object-group service /infra/services/3b7f3296-4954-4963-b32c-2deded30c585
+ service TCP destination eq 22
+ service TCP destination eq 443
+object-group service /infra/services/95f7209c-eef2-4020-a940-abc7b4d2db9d
+object-group service /infra/services/97221c5a-099d-402c-b2f1-f867ac253d96
+ service TCP destination eq 49152-65535
+ service TCP destination eq 135
+ service TCP destination eq 445
+ service TCP destination eq 5986
+ service TCP destination eq 5985
+object-group service /infra/services/72638190-523f-4970-bf7a-d6e99e8ab173
+ service TCP destination eq 3306
+object-group service /infra/services/b5875440-ba0c-4932-bd3d-a73c799d60e5
+ service TCP destination eq 1080
+object-group service /infra/services/ca6b524b-2da1-411b-a3f4-c1c1b8ddb1f9
+ service TCP destination eq 135
+ service TCP destination eq 49152-65535
+ service TCP destination eq 80
+object-group service /infra/services/7b6ffbe2-bd05-4b18-9110-7868980f7e15
+ service TCP destination eq 445
+ service TCP destination eq 80
+ service TCP destination eq 49152-65535
+ service TCP destination eq 135
+object-group service /infra/services/4f287e6b-22be-4abf-b9f4-b9a4fc0494db
+ service TCP destination eq 3389
+object-group service /infra/services/549dae08-6d79-472f-b029-290f73d6c08c
+ service UDP destination eq 67
+ service TCP destination eq 80
+ service TCP destination eq 10123
+ service UDP destination eq 69
+ service UDP destination eq 68
+ service UDP destination eq 4011
+ service TCP destination eq 443
+object-group service /infra/services/c0d83278-d5d7-4566-bcdc-3e80dd71b3a7
+ service TCP destination eq 2701
+ service TCP destination eq 135
+ service TCP destination eq 49152-65535
+ service TCP destination eq 3389
+ service UDP destination eq 135
+ service TCP destination eq 445
+object-group service /infra/services/f4ba4a64-9a08-4b61-a021-1f99a2184f2c
+ service TCP destination eq 8531
+ service TCP destination eq 10123
+ service TCP destination eq 135
+ service TCP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 8530
+ service TCP destination eq 49152-65535
+object-group service /infra/services/0addee92-904b-4ac4-af6a-cc1527439a09
+ service TCP destination eq 2701
+ service TCP destination eq 3389
+object-group service /infra/services/4b5c6e98-11e0-4425-ad38-3a14c0a7acdf
+ service TCP destination eq 8531
+ service TCP destination eq 443
+object-group service /infra/services/5a0d377d-ab0c-47ed-94aa-899969cb543a
+ service TCP destination eq 8530
+ service TCP destination eq 135
+ service TCP destination eq 1433
+ service TCP destination eq 443
+ service TCP destination eq 49152-65535
+ service TCP destination eq 8531
+ service TCP destination eq 80
+object-group service /infra/services/49fdd7b0-56d7-46a6-b167-82a1f84af740
+ service UDP destination eq 135
+ service TCP destination eq 135
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination eq 49152-65535
+ service TCP destination eq 1433
+ service TCP destination eq 445
+object-group service /infra/services/2b74791b-5df8-4302-be9e-c91d1b1c374c
+ service TCP destination eq 5985
+ service TCP destination eq 22
+ service TCP destination eq 5986
+ service TCP destination eq 222
+object-group service /infra/services/33c79e8b-4ed5-4a78-bd2b-b429c8d5692d
+ service TCP destination eq 5000
+ service TCP destination eq 514
+ service UDP destination eq 514
+object-group service /infra/services/9d56243f-5085-48eb-8894-918f0b0c1255
+ service UDP destination eq 49
+ service TCP destination eq 49
+ service UDP destination eq 1646
+ service UDP destination eq 1645
+object-group service /infra/services/61c50b79-9478-4728-bccc-a070ae9c9684
+ service TCP destination eq 1080
+object-group service /infra/services/f39f39ef-5af9-4435-9a0e-b1f84e3348fd
+ service TCP destination eq 137
+object-group service /infra/services/330e2043-ac83-4608-bc11-c68e7cddd776
+ service TCP destination eq 1514
+object-group service /infra/services/f856bfa1-9715-405a-a621-3ab130ecfd9b
+ service TCP destination eq 5671
+object-group service /infra/services/e782353b-91ee-4ac5-a715-5001aa1bb149
+ service TCP destination eq 5678
+object-group service /infra/services/cb4103d2-457c-4868-8d8a-d5dac400e1a0
+ service TCP destination eq 631
+object-group service /infra/services/422344f4-4931-45c0-a2de-c7edfd3b077a
+ service TCP destination eq 8089
+object-group service /infra/services/8dd1a5e7-9353-442d-be88-007754ad0082
+ service TCP destination eq 8530
+object-group service /infra/services/a3d21eee-9c76-42fe-b082-e826371ebacb
+ service TCP destination eq 9100
+object-group service /infra/services/9919c0db-32fc-47d2-9bf2-96af99f0965d
+ service TCP destination eq 993
+object-group service /infra/services/f45d80bd-a865-48d9-a93b-184185d2666c
+object-group service /infra/services/3117e2a8-6f30-46db-8167-a591727a7286
+ service TCP destination eq 143
+object-group service /infra/services/af31dbd1-0ca5-451c-baa8-f461795e5bcd
+ service TCP destination eq 389
+object-group service /infra/services/8c4ab9e3-e12b-4ace-bf0b-7afea56b5acb
+ service TCP destination eq 515
+object-group service /infra/services/01ac3547-5341-4dfd-af37-98066a5558ad
+ service TCP destination eq 25
+object-group service /infra/services/4e684db3-734b-4c06-bf22-eb6f3f5e99da
+ service TCP destination eq 22
+object-group service /infra/services/b25a10ac-866b-40a0-b39e-8b04ee3d5065
+object-group service /infra/services/a6600f73-3975-4de2-a2a9-86e4caeaef55
+ service UDP destination eq 123
+ service TCP destination eq 123
+object-group service /infra/services/81d4c581-1e11-4257-9850-7dd626c9df35
+ service TCP destination eq 514
+ service UDP destination eq 514
+object-group service /infra/services/f1a4aa3b-a384-4931-a91f-306f2e6aee0b
+ service TCP destination eq 4119-4122
+object-group service /infra/services/90e8b06e-6eb4-44a8-b394-2daeb37206af
+ service UDP destination eq 5353
+object-group service /infra/services/5e88fc79-ba56-4789-801d-462f3c01a470
+ service UDP destination eq 5355
+object-group service /infra/services/3421f9ae-9f5a-4f12-9bb1-d10cf8a8292e
+object-group service /infra/services/b742be87-a0b8-4ead-a861-22b58068c85c
+ service UDP destination eq 137
+object-group service /infra/services/d2fca865-9792-45a9-ba08-c4593a62d406
+ service UDP destination eq 123
+object-group service /infra/services/fbc37793-c116-432f-8d52-e0670ab8f4d6
+ service UDP destination eq 514
+object-group service /infra/services/0fbc27ac-3215-45f0-86e7-1fab3dfd5d3a
+ service TCP destination eq 902
+object-group service /infra/services/f5dd4279-db7d-4b40-ba1e-8fd501527a11
+ service TCP destination eq 10443
+ service TCP destination eq 443
+object-group service /infra/services/0a0f0d39-f8b0-4481-b135-adcbfae99a9d
+ service TCP destination eq 80
+ service TCP destination eq 443
+object-group service /infra/services/d6ff51db-9943-461e-8471-2b693950b522
+ service TCP destination eq 8531
+ service TCP destination eq 8530
+object-group service /infra/services/a8b79d61-f5be-4714-b470-ffc959ef73a9
+ service TCP destination eq 80
+object-group service /infra/services/47f81f9d-60cf-4d02-8594-de2a855f7004
+ service TCP destination eq 1433
+object-group service /infra/services/e1a0ea0a-5c4c-4425-ac58-14c2e0244134
+ service TCP destination eq 2383
+ service TCP destination eq 2382
+ service TCP destination eq 135
+ service TCP destination eq 1434
+ service TCP destination eq 80
+ service UDP destination eq 1434
+ service TCP destination eq 1433
+ service TCP destination eq 443
+object-group service /infra/services/ebb69d14-96e1-4eea-9508-94b8bc9027fa
+ service TCP destination eq 49000-55000
+object-group service /infra/services/rdp_dynamic
+ service TCP destination eq 49000-55000
+object-group service /infra/services/svc-grp-ampq
+ service TCP destination eq 5672
+ service TCP destination eq 5671
+object-group service /infra/services/svc-grp-winrm
+ service TCP destination eq 445
+ service TCP destination eq 47001
+ service TCP destination eq 49152-65535
+ service TCP destination eq 3389
+ service TCP destination eq 5986
+ service TCP destination eq 135
+ service TCP destination eq 5985
+object-group service /infra/services/tcp-1514
+ service TCP destination eq 1514
+object-group service /infra/services/tcp-1515
+ service TCP destination eq 1515
+object-group service /infra/services/tcp-2433
+ service TCP destination eq 2433
+object-group service /infra/services/tcp-33001
+ service TCP destination eq 33001
+object-group service /infra/services/tcp-55000
+ service TCP destination eq 55000
+object-group service /infra/services/tcp-9996-mIHGqI9cG
+ service TCP destination eq 9996
+object-group service /infra/services/tcp-9996
+ service TCP destination eq 9996
+object-group service /infra/services/tcp-9997
+ service TCP destination eq 9997
+object-group service /infra/services/vCenter5.x
+ service UDP destination eq 389
+ service TCP destination eq 5988
+ service TCP destination eq 8000
+ service TCP destination eq 902
+ service TCP destination eq 1521
+ service TCP destination eq 8080
+ service UDP destination eq 1434
+ service TCP destination eq 51915
+ service TCP destination eq 1433
+ service TCP destination eq 10080
+ service UDP destination eq 161
+ service TCP destination eq 25
+ service UDP destination eq 623
+ service TCP destination eq 636
+ service TCP destination eq 53
+ service TCP destination eq 443
+ service UDP destination eq 902
+ service TCP destination eq 5989
+ service TCP destination eq 10443
+ service TCP destination eq 8443
+ service TCP destination eq 9443
+ service TCP destination eq 903
+ service UDP destination eq 162
+ service UDP destination eq 88
+ service TCP destination eq 10109
+ service TCP destination eq 10111
+ service TCP destination eq 60099
+ service TCP destination eq 7500
+ service TCP destination eq 8005
+ service TCP destination eq 8006
+ service TCP destination eq 8083
+ service TCP destination eq 8085
+ service TCP destination eq 8086
+ service TCP destination eq 8087
+ service TCP destination eq 8443
+ service TCP destination eq 389
+ service TCP destination eq 88
+object-group service /infra/services/vCenter5.x_V1
+ service UDP destination eq 902
+ service TCP destination eq 443
+ service TCP destination eq 389
+ service UDP destination eq 161
+ service TCP destination eq 51915
+ service TCP destination eq 1433
+ service UDP destination eq 162
+ service TCP destination eq 10443
+ service TCP destination eq 8443
+ service TCP destination eq 9443
+ service TCP destination eq 10080
+ service UDP destination eq 1434
+ service UDP destination eq 389
+ service UDP destination eq 88
+ service UDP destination eq 623
+ service TCP destination eq 5988
+ service TCP destination eq 902
+ service TCP destination eq 8000
+ service TCP destination eq 53
+ service TCP destination eq 636
+ service TCP destination eq 1521
+ service TCP destination eq 88
+ service TCP destination eq 10109
+ service TCP destination eq 10111
+ service TCP destination eq 60099
+ service TCP destination eq 7500
+ service TCP destination eq 8005
+ service TCP destination eq 8006
+ service TCP destination eq 8083
+ service TCP destination eq 8085
+ service TCP destination eq 8086
+ service TCP destination eq 8087
+ service TCP destination eq 8443
+ service TCP destination eq 8080
+ service TCP destination eq 5989
+ service TCP destination eq 903
+ service TCP destination eq 25
+object-group service /infra/services/vCentre_Operations_Manager_(Standalone)_5.x
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination eq 1199
+ service TCP destination eq 61616
+object-group service /infra/services/vCentre_Operations_Manager_(vApp)_5.x
+ service TCP destination eq 443
+ service TCP destination eq 22
+ service TCP destination eq 80
+ service TCP destination eq 1194
+object-group service /infra/services/vCentre_Operations_Standard_1.x
+ service TCP destination eq 5480
+ service TCP destination eq 22
+ service TCP destination eq 443

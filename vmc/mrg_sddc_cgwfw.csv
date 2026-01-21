@@ -1,0 +1,2 @@
+rule,display name,action,source,dest,service
+0,Any - ANY to DFW,ALLOW,"0.0.0.0/0","0.0.0.0/0","ANY"

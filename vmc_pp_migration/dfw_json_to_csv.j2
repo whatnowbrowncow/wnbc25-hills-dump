@@ -1,0 +1,14 @@
+Section,rule,display name,action,source,dest,service
+{% for section in data %}
+{% for rule in data[section]['rules'] %}
+{{section}},{{rule}},{{data[section]['rules'][rule]['Display name']}},{{data[section]['rules'][rule]['Action']}},"{% for src in data[section]['rules'][rule]['Source(s)'] %}{% if src == "ANY" %}{{src}}{% elif loop.last %}{% for srcip in data[section]['rules'][rule]['Source(s)'][src] %}{{srcip}}{% if not loop.last %}
+
+{% endif %}{% else %}{% for srcip in data[section]['rules'][rule]['Source(s)'][src] %}{{srcip}}
+{% endfor %}{% endfor %}{% endif %}{% endfor %}","{% for dst in data[section]['rules'][rule]['Destination(s)'] %}{% if dst == "ANY" %}{{dst}}{% elif loop.last %}{% for dstip in data[section]['rules'][rule]['Destination(s)'][dst] %}{{dstip}}{% if not loop.last %}
+
+{% endif %}{% else %}{% for dstip in data[section]['rules'][rule]['Destination(s)'][dst] %}{{dstip}}
+{% endfor %}{% endfor %}{% endif %}{% endfor %}","{% for svc in data[section]['rules'][rule]['Service(s)'] %}{% if svc == "ANY" %}{{ svc }}{% elif loop.last %}{% for svcpt in data[section]['rules'][rule]['Service(s)'][svc] %}{{svcpt}}{% if not loop.last %}
+
+{% endif %}{% endfor %}{% endif %}{% endfor %}"
+{% endfor %}
+{% endfor %}

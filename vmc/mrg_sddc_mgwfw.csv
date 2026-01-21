@@ -1,0 +1,69 @@
+rule,display name,action,source,dest,service
+0,ESXi Inbound,ALLOW,"192.168.48.0/20
+192.168.2.0/23
+10.30.200.0/22
+192.168.12.0/22
+10.130.200.0/23
+192.168.16.0/22
+10.30.195.0/24
+192.168.6.0/23
+192.168.4.0/23
+10.40.200.0/22","10.126.209.0/24
+10.126.210.0/24","TCP/443"
+1,VC2,ALLOW,"93.158.66.132","10.126.222.4/32","TCP/443"
+2,VR Inbound,ALLOW,"10.130.251.0/24
+10.130.46.0/24
+10.130.220.0/24
+172.16.123.0/24
+172.17.200.0/24
+172.16.122.0/24","/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","TCP/443
+TCP/8043
+TCP/31031
+TCP/32032
+TCP/44046"
+3,SRM Inbound,ALLOW,"10.130.251.0/24
+10.130.46.0/24
+10.130.220.0/24
+172.16.123.0/24
+172.17.200.0/24
+172.16.122.0/24","/infra/domains/mgw/groups/SITE_RECOVERY_MANAGER-cannot process group, check contents in GUI, may be empty","TCP/443
+TCP/9086"
+4,vCenter Inbound,ALLOW,"172.17.200.8","10.126.222.4/32","TCP/443"
+5,VR (VR Server Management) to remote network,ALLOW,"/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","10.130.251.42","ANY"
+6,SRM (VR Server Management) to remote network,ALLOW,"/infra/domains/mgw/groups/SITE_RECOVERY_MANAGER-cannot process group, check contents in GUI, may be empty","10.130.251.42","ANY"
+7,ESXi (VM Replication) to remote network,ALLOW,"10.126.209.0/24
+10.126.210.0/24","10.130.251.42","ANY"
+8,VR (SRM Server Management) to remote network,ALLOW,"/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","10.130.251.31","ANY"
+9,SRM (SRM Server Management) to remote network,ALLOW,"/infra/domains/mgw/groups/SITE_RECOVERY_MANAGER-cannot process group, check contents in GUI, may be empty","10.130.251.31","ANY"
+10,VR (HTTPS) to remote network,ALLOW,"/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","10.130.251.49","ANY"
+11,SRM (HTTPS) to remote network,ALLOW,"/infra/domains/mgw/groups/SITE_RECOVERY_MANAGER-cannot process group, check contents in GUI, may be empty","10.130.251.49","ANY"
+12,Remote network to VR (UI and API),ALLOW,"172.17.200.8","/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","TCP/443
+TCP/8043
+TCP/31031
+TCP/32032
+TCP/44046"
+13,Remote network to VR (VR Server Management),ALLOW,"10.130.251.42","/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","TCP/443
+TCP/8043
+TCP/31031
+TCP/32032
+TCP/44046"
+14,Remote network to VR (VM Replication),ALLOW,"10.130.251.61-10.130.251.66
+10.130.251.11-10.130.251.16","/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","TCP/443
+TCP/8043
+TCP/31031
+TCP/32032
+TCP/44046"
+15,Remote network to SRM (SRM Server Management),ALLOW,"10.130.251.42","/infra/domains/mgw/groups/SITE_RECOVERY_MANAGER-cannot process group, check contents in GUI, may be empty","TCP/443
+TCP/9086"
+16,Remote VR to vCenter Server,ALLOW,"10.130.251.42","10.126.222.4/32","TCP/443"
+17,Remote SRM to vCenter Server,ALLOW,"10.130.251.31","10.126.222.4/32","TCP/443"
+18,SRM Outbound,ALLOW,"/infra/domains/mgw/groups/SITE_RECOVERY_MANAGER-cannot process group, check contents in GUI, may be empty","ANY","ANY"
+19,VR Outbound,ALLOW,"/infra/domains/mgw/groups/VSPHERE_REPLICATION-cannot process group, check contents in GUI, may be empty","ANY","ANY"
+20,ESXi Outbound Rule,ALLOW,"10.126.209.0/24
+10.126.210.0/24","ANY","ANY"
+21,vCenter Outbound Rule,ALLOW,"10.126.222.4/32","ANY","ANY"
+41,Snow Asset Collector to vCentre,ALLOW,"10.120.163.44","10.126.222.4/32","ICMP
+ICMP"
+1030,MRG ESXi to LD6 ESXi,ALLOW,"10.126.209.0/24
+10.126.210.0/24","10.112.8.0/23","ANY"
+2020,MRG VCentre to LD6 VCentre,ALLOW,"10.126.222.4/32","10.112.8.0/23","ANY"

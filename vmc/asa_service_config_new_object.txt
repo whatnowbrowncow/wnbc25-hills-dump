@@ -1,0 +1,2580 @@
+
+object-group service AD_Server
+ service TCP destination eq 1024
+exit
+object-group service Active_Directory_Server
+ service TCP destination eq 464
+exit
+object-group service Active_Directory_Server_UDP
+ service UDP destination eq 464
+exit
+object-group service BGP
+ service TCP destination eq 179
+exit
+object-group service CIM-HTTP
+ service TCP destination eq 5988
+exit
+object-group service CIM-HTTPS
+ service TCP destination eq 5989
+exit
+object-group service CommVault_CommCell
+ service TCP destination eq 8400
+ service TCP destination eq 8401
+ service TCP destination eq 8402
+ service TCP destination eq 8403
+exit
+object-group service Couchbase_client_access
+ service TCP destination eq 11207
+ service TCP destination range 18091 18096
+ service TCP destination eq 11210
+ service TCP destination eq 11211
+ service TCP destination range 8091 8096
+ service TCP destination eq 9140
+exit
+object-group service DCM_Java_Object_Cache_port
+ service TCP destination eq 7100
+exit
+object-group service DHCP_MADCAP
+ service UDP destination eq 2535
+exit
+object-group service DHCP-Client
+ service UDP destination eq 68
+exit
+object-group service DHCP-Server
+ service UDP destination eq 67
+exit
+object-group service DHCPv6_Client
+ service UDP destination eq 546
+exit
+object-group service DHCPv6_Server
+ service UDP destination eq 547
+exit
+object-group service DNS
+ service TCP destination eq 53
+exit
+object-group service DNS-UDP
+ service UDP destination eq 53
+exit
+object-group service Data_Recovery_Appliance
+ service TCP destination eq 22024
+ service TCP destination eq 902
+ service TCP destination eq 443
+exit
+object-group service Directory_Services
+ service TCP destination eq 5725
+exit
+object-group service ESXi_Syslog_Collector
+ service TCP destination eq 8001
+exit
+object-group service EdgeSync_service
+ service TCP destination eq 50636
+exit
+object-group service EdgeSync_serviceADAM
+ service TCP destination eq 50389
+exit
+object-group service Enterprise_Manager_RMI_port
+ service TCP destination eq 1850
+exit
+object-group service Enterprise_Manager_Reporting_port
+ service TCP destination eq 3339
+exit
+object-group service Enterprise_Manager_Servlet_port_SSL
+ service TCP destination eq 1810
+exit
+object-group service Enterprise_ManagerAgent_port
+ service TCP destination eq 1831
+exit
+object-group service Exchange_ActiveSync
+ service UDP destination eq 2883
+exit
+object-group service FTP
+exit
+object-group service For_X.400_connections_over_TCP
+ service TCP destination eq 102
+exit
+object-group service H323_Call_Signaling
+ service TCP destination eq 1720
+exit
+object-group service H323_Gatekeeper_Discovery
+ service UDP destination eq 1718
+exit
+object-group service HBR_Server_App
+ service TCP destination eq 5480
+exit
+object-group service HTTP
+ service TCP destination eq 80
+exit
+object-group service HTTPS
+ service TCP destination eq 443
+exit
+object-group service HTTPS_net.tcp_binding
+ service TCP destination eq 32843
+ service TCP destination eq 32844
+ service TCP destination eq 32845
+exit
+object-group service Heartbeat
+ service TCP destination eq 57348
+ service TCP destination eq 52267
+exit
+object-group service IBM_DB2
+ service TCP destination eq 5000
+exit
+object-group service ICMP_ALL
+exit
+object-group service ICMP_Destination_Unreachable
+exit
+object-group service ICMP_Echo_Reply
+exit
+object-group service ICMP_Echo_Request
+exit
+object-group service ICMP_Redirect
+exit
+object-group service ICMP_Router_Advertisement
+exit
+object-group service ICMP_Router_Solicitation
+exit
+object-group service ICMP_Source_Quench
+exit
+object-group service ICMP_Time_Exceeded
+exit
+object-group service ICMPv4-ALL
+exit
+object-group service ICMPv6-ALL
+exit
+object-group service IDAM-VA-TO-IQ
+ service TCP destination eq 5050
+ service TCP destination eq 5051
+exit
+object-group service IGMP_Leave_Group
+exit
+object-group service IGMP_Membership_Query
+exit
+object-group service IGMP_V2_Membership_Report
+exit
+object-group service IGMP_V3_Membership_Report
+exit
+object-group service IKE_(Key_Exchange)
+ service UDP destination eq 500
+exit
+object-group service IKE_(NAT_Traversal)
+ service UDP destination eq 4500
+exit
+object-group service IMAP
+ service TCP destination eq 143
+exit
+object-group service IMAP_SSL
+ service TCP destination eq 993
+exit
+object-group service IPv6-ICMP_Destination_Unreachable
+exit
+object-group service IPv6-ICMP_Echo_Reply
+exit
+object-group service IPv6-ICMP_Echo_Request
+exit
+object-group service IPv6-ICMP_Multicast_Listener_Done
+exit
+object-group service IPv6-ICMP_Multicast_Listener_Query
+exit
+object-group service IPv6-ICMP_Multicast_Listener_Report
+exit
+object-group service IPv6-ICMP_Neighbor_Advertisement
+exit
+object-group service IPv6-ICMP_Neighbor_Solicitation
+exit
+object-group service IPv6-ICMP_Packet_Too_Big
+exit
+object-group service IPv6-ICMP_Parameter_Problem
+exit
+object-group service IPv6-ICMP_Time_Exceeded
+exit
+object-group service IPv6-ICMP_Version_2_Multicast_Listener
+exit
+object-group service ISAKMP
+ service UDP destination eq 500
+exit
+object-group service Java_Object_Cache_port
+ service TCP destination eq 7000
+exit
+object-group service KERBEROS
+ service TCP destination eq 88
+exit
+object-group service KERBEROS-TCP
+ service TCP destination eq 88
+exit
+object-group service KERBEROS-UDP
+ service UDP destination eq 88
+exit
+object-group service LDAP
+ service TCP destination eq 389
+exit
+object-group service LDAP_Global_Catalog
+ service TCP destination eq 3268
+exit
+object-group service LDAP-UDP
+ service UDP destination eq 389
+exit
+object-group service LDAP-over-SSL
+ service TCP destination eq 636
+exit
+object-group service LDAP-over-SSL-UDP
+ service UDP destination eq 636
+exit
+object-group service Log_Loader
+ service TCP destination eq 44000
+exit
+object-group service MGCP_(TCP)
+ service TCP destination eq 2428
+exit
+object-group service MGCP_(UDP)
+ service UDP destination eq 2427
+exit
+object-group service MS_Customizable
+ service TCP destination eq 64327
+exit
+object-group service MS_Exchange_2007_Client_Access_Server
+ service TCP destination eq 80
+ service TCP destination eq 143
+ service TCP destination eq 443
+ service TCP destination eq 995
+ service TCP destination eq 110
+ service TCP destination eq 993
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+exit
+object-group service MS_Exchange_2007_Mailbox_Servers
+ service UDP destination eq 389
+ service UDP destination eq 53
+ service UDP destination eq 88
+ service TCP destination eq 3268
+ service TCP destination eq 445
+ service TCP destination eq 88
+ service TCP destination eq 389
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 53
+exit
+object-group service MS_Exchange_2007_Transport_Servers
+ service TCP destination eq 3268
+ service UDP destination eq 88
+ service TCP destination eq 587
+ service UDP destination eq 389
+ service TCP destination eq 25
+ service TCP destination eq 50636
+ service TCP destination eq 53
+ service TCP destination eq 80
+ service UDP destination eq 53
+ service TCP destination eq 50389
+ service TCP destination eq 88
+ service TCP destination eq 389
+exit
+object-group service MS_Exchange_2007_Unified_Messaging_Centre
+ service TCP destination eq 25
+ service TCP destination eq 80
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+ service TCP destination eq 443
+exit
+object-group service MS_Exchange_2010_Client_Access_Servers
+ service UDP destination eq 88
+ service UDP destination eq 53
+ service TCP destination eq 143
+ service TCP destination eq 443
+ service UDP destination eq 389
+ service TCP destination eq 993
+ service TCP destination eq 53
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+ service TCP destination eq 88
+ service TCP destination eq 110
+ service TCP destination eq 995
+ service TCP destination eq 3268
+ service TCP destination eq 389
+ service TCP destination eq 80
+exit
+object-group service MS_Exchange_2010_Mailbox_Servers
+ service TCP destination eq 88
+ service TCP destination eq 64327
+ service TCP destination eq 389
+ service TCP destination eq 53
+ service UDP destination eq 88
+ service UDP destination eq 53
+ service TCP destination eq 808
+ service TCP destination eq 3268
+ service UDP destination eq 389
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+ service TCP destination eq 445
+exit
+object-group service MS_Exchange_2010_Transport_Servers
+ service TCP destination eq 443
+ service TCP destination eq 3268
+ service UDP destination eq 53
+ service TCP destination eq 25
+ service UDP destination eq 88
+ service TCP destination eq 88
+ service TCP destination eq 389
+ service TCP destination eq 587
+ service TCP destination eq 50636
+ service UDP destination eq 389
+ service TCP destination eq 53
+exit
+object-group service MS_Exchange_2010_Unified_Messaging_Server
+ service TCP destination eq 25
+ service UDP destination eq 88
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5065
+ service TCP destination eq 5066
+ service TCP destination eq 5067
+ service TCP destination eq 5068
+ service TCP destination eq 88
+ service UDP destination eq 389
+ service TCP destination eq 80
+ service UDP destination eq 53
+ service TCP destination eq 443
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+ service TCP destination eq 389
+ service TCP destination eq 3268
+ service TCP destination eq 53
+exit
+object-group service MS_Replication_service
+ service TCP destination eq 808
+exit
+object-group service MS_Unified_Messaging_server
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+exit
+object-group service MS_Unified_Messaging_server_-_Client_Access
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+exit
+object-group service MS_Unified_Messaging_server-Phone
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5065
+ service TCP destination eq 5066
+ service TCP destination eq 5067
+ service TCP destination eq 5068
+exit
+object-group service MS-DS
+ service TCP destination eq 445
+exit
+object-group service MS-DS-TCP
+ service TCP destination eq 445
+exit
+object-group service MS-DS-UDP
+ service UDP destination eq 445
+exit
+object-group service MS-SQL-M
+ service UDP destination eq 1434
+exit
+object-group service MS-SQL-M-TCP
+ service TCP destination eq 1434
+exit
+object-group service MS-SQL-S
+ service TCP destination eq 1433
+exit
+object-group service MSN_(TCP)
+ service TCP destination eq 1863
+exit
+object-group service MSN_(UDP)
+ service UDP destination eq 1863
+exit
+object-group service MSSQL_Integration_Services
+exit
+object-group service MSSQL_Reporting_Services
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service MSSQL_Server_Analysis_Services
+ service TCP destination eq 2382
+ service TCP destination eq 2383
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service MSSQL_Server_Database_Engine
+ service TCP destination eq 1434
+ service TCP destination eq 1433
+ service TCP destination eq 80
+ service UDP destination eq 1434
+ service TCP destination eq 443
+exit
+object-group service MS_RPC_TCP
+exit
+object-group service MS_RPC_UDP
+exit
+object-group service Microsoft_Active_Directory_V1
+ service UDP destination eq 138
+ service TCP destination range 49152 65535
+ service UDP destination eq 389
+ service UDP destination range 1025 65535
+ service TCP destination eq 3269
+ service TCP destination eq 53
+ service TCP destination eq 464
+ service TCP destination eq 9389
+ service UDP destination eq 464
+ service UDP destination eq 445
+ service UDP destination eq 123
+ service TCP destination eq 88
+ service TCP destination eq 3268
+ service TCP destination eq 25
+ service TCP destination eq 636
+ service TCP destination range 1025 65535
+ service TCP destination eq 42
+ service UDP destination eq 88
+ service TCP destination eq 5722
+ service UDP destination eq 2535
+ service UDP destination eq 53
+ service UDP destination eq 42
+ service TCP destination range 1025 5000
+ service TCP destination eq 389
+ service TCP destination eq 445
+ service UDP destination eq 137
+ service UDP destination eq 67
+exit
+object-group service Microsoft_Exchange_2003
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination eq 389
+ service TCP destination eq 563
+ service TCP destination eq 143
+ service TCP destination eq 995
+ service TCP destination eq 119
+ service TCP destination eq 993
+ service TCP destination eq 110
+ service TCP destination eq 25
+ service TCP destination eq 691
+ service TCP destination eq 379
+ service UDP destination eq 2883
+ service TCP destination eq 102
+exit
+object-group service Microsoft_Exchange_2007
+ service TCP destination eq 88
+ service TCP destination eq 587
+ service TCP destination eq 995
+ service TCP destination eq 50389
+ service TCP destination eq 389
+ service TCP destination eq 110
+ service TCP destination eq 993
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5062
+ service TCP destination eq 25
+ service TCP destination eq 53
+ service TCP destination eq 3268
+ service UDP destination eq 389
+ service UDP destination eq 53
+ service TCP destination eq 143
+ service UDP destination eq 88
+ service TCP destination eq 80
+ service TCP destination eq 445
+ service TCP destination eq 50636
+ service TCP destination eq 443
+exit
+object-group service Microsoft_Exchange_2010
+ service TCP destination eq 389
+ service UDP destination eq 88
+ service TCP destination eq 5060
+ service TCP destination eq 5061
+ service TCP destination eq 5065
+ service TCP destination eq 5066
+ service TCP destination eq 5067
+ service TCP destination eq 5068
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+ service UDP destination eq 53
+ service TCP destination eq 808
+ service TCP destination eq 88
+ service TCP destination eq 995
+ service TCP destination eq 110
+ service TCP destination eq 64327
+ service TCP destination eq 80
+ service TCP destination eq 445
+ service TCP destination eq 993
+ service TCP destination eq 143
+ service TCP destination eq 53
+ service TCP destination eq 5062
+ service TCP destination eq 587
+ service TCP destination eq 3268
+ service TCP destination eq 25
+ service TCP destination eq 50636
+ service UDP destination eq 389
+ service TCP destination eq 443
+exit
+object-group service Microsoft_Media_Server_(TCP)
+ service TCP destination eq 1755
+exit
+object-group service Microsoft_Media_Server_(UDP)
+ service UDP destination eq 1755
+exit
+object-group service Microsoft_SQL_Server
+ service TCP destination eq 1434
+ service TCP destination eq 2382
+ service TCP destination eq 2383
+ service UDP destination eq 1434
+ service TCP destination eq 443
+ service TCP destination eq 1433
+ service TCP destination eq 80
+exit
+object-group service MySQL
+ service TCP destination eq 3306
+exit
+object-group service NBDG-Broadcast-V1
+ service UDP destination eq 138
+exit
+object-group service NBNS-Broadcast-V1
+ service UDP destination eq 137
+exit
+object-group service NFS_(TCP)
+ service TCP destination eq 2049
+exit
+object-group service NFS_(UDP)
+ service UDP destination eq 2049
+exit
+object-group service NFS_Client
+ service TCP destination eq 111
+exit
+object-group service NFS_Client_UDP
+ service UDP destination eq 111
+exit
+object-group service NFS-Server-TCP
+ service TCP destination eq 2049
+exit
+object-group service NFS-Server-UDP
+ service UDP destination eq 2049
+exit
+object-group service NNTP
+ service TCP destination eq 119
+exit
+object-group service NNTP_SSL
+ service TCP destination eq 563
+exit
+object-group service NTP
+ service UDP destination eq 123
+exit
+object-group service NTP_Time_Server
+ service UDP destination eq 123
+exit
+object-group service NetBios_Datagram_(TCP)
+ service TCP destination eq 138
+exit
+object-group service NetBios_Datagram_(UDP)
+ service UDP destination eq 138
+exit
+object-group service NetBios_Name_Service_(TCP)
+ service TCP destination eq 137
+exit
+object-group service NetBios_Name_Service_(UDP)
+ service UDP destination eq 137
+exit
+object-group service NetBios_Session_Service_(TCP)
+ service TCP destination eq 139
+exit
+object-group service NetBios_Session_Service_(UDP)
+ service UDP destination eq 139
+exit
+object-group service OC4J_Forms__Reports_Instance
+ service TCP destination eq 8888
+exit
+object-group service OC4J_Forms__Reports_Instance_(8889)
+ service TCP destination eq 8889
+exit
+object-group service ORACLE-FORM-SERVICES
+ service TCP destination eq 9000
+exit
+object-group service ORACLE-HTTP
+ service TCP destination eq 7777
+exit
+object-group service ORACLE-XDB-FTP
+ service TCP destination eq 2100
+exit
+object-group service ORACLE_TNS
+exit
+object-group service OS_Agent
+ service TCP destination eq 14000
+exit
+object-group service Office_Server_Web_Services_HTTP_SSL
+ service TCP destination eq 56737
+ service TCP destination eq 56738
+exit
+object-group service Office_communication_server
+ service TCP destination eq 5075
+ service TCP destination eq 5076
+ service TCP destination eq 5077
+exit
+object-group service Oracle
+ service TCP destination eq 1521
+exit
+object-group service Oracle_Application_Server
+ service TCP destination eq 4443
+ service TCP destination eq 3701
+ service TCP destination eq 6100
+ service TCP destination eq 3201
+ service TCP destination eq 7501
+ service TCP destination eq 4444
+ service TCP destination eq 4401
+ service TCP destination eq 3601
+ service TCP destination eq 1809
+ service TCP destination eq 3501
+ service TCP destination eq 9000
+ service TCP destination eq 7000
+ service TCP destination eq 4400
+ service TCP destination eq 6668
+ service TCP destination eq 636
+ service TCP destination eq 4001
+ service TCP destination eq 3301
+ service TCP destination eq 14000
+ service TCP destination eq 6003
+ service TCP destination eq 3339
+ service TCP destination eq 9998
+ service TCP destination eq 7778
+ service TCP destination eq 4002
+ service TCP destination eq 8007
+ service TCP destination eq 4000
+ service TCP destination eq 7100
+ service TCP destination eq 1808
+ service TCP destination eq 7200
+ service TCP destination eq 7779
+ service TCP destination eq 6200
+ service TCP destination eq 7777
+ service TCP destination eq 1748
+ service TCP destination eq 1754
+ service TCP destination eq 4032
+ service TCP destination eq 4031
+ service TCP destination eq 3401
+ service TCP destination eq 389
+exit
+object-group service Oracle_Connection_Manager_(CMAN)
+ service TCP destination eq 1630
+exit
+object-group service Oracle_Connection_Manager_Admin_(CMAN)
+ service TCP destination eq 1830
+exit
+object-group service Oracle_Database
+ service TCP destination eq 1521
+ service TCP destination eq 2100
+ service TCP destination eq 2482
+ service TCP destination eq 1575
+ service TCP destination eq 8080
+ service TCP destination eq 2481
+ service TCP destination eq 1526
+exit
+object-group service Oracle_Enterprise_Manager
+ service TCP destination eq 1831
+ service TCP destination eq 1810
+ service TCP destination eq 1850
+ service TCP destination eq 44000
+exit
+object-group service Oracle_Enterprise_Manager_Web
+ service TCP destination eq 5500
+exit
+object-group service Oracle_Enterprise_Manager_Web_Console
+ service TCP destination eq 5500
+exit
+object-group service Oracle_Forms_Server_6__6i
+ service TCP destination eq 9000
+exit
+object-group service Oracle_GIOP_IIOP
+ service TCP destination eq 2481
+exit
+object-group service Oracle_GIOP_IIOP_for_SSL
+ service TCP destination eq 2482
+exit
+object-group service Oracle_HTTP_Server_Diagnostic_Port
+ service TCP destination eq 7200
+exit
+object-group service Oracle_HTTP_Server_Jserv_port
+ service TCP destination eq 8007
+exit
+object-group service Oracle_HTTP_Server_Port_Tunneling
+ service TCP destination eq 7501
+exit
+object-group service Oracle_HTTP_Server_SSL_port
+ service TCP destination eq 4443
+exit
+object-group service Oracle_HTTP_Server_listen_port
+ service TCP destination eq 7778
+exit
+object-group service Oracle_HTTP_Server_port
+ service TCP destination eq 7777
+exit
+object-group service Oracle_Intelligent_Agent_(1748)
+ service TCP destination eq 1748
+exit
+object-group service Oracle_Intelligent_Agent_(1754)
+ service TCP destination eq 1754
+exit
+object-group service Oracle_Intelligent_Agent_(1808)
+ service TCP destination eq 1808
+exit
+object-group service Oracle_Intelligent_Agent_(1809)
+ service TCP destination eq 1809
+exit
+object-group service Oracle_Internet_Directory(SSL)
+ service TCP destination eq 636
+exit
+object-group service Oracle_Internet_Directory(SSL_4031)
+ service TCP destination eq 4031
+exit
+object-group service Oracle_Internet_Directory(non-SSL)
+ service TCP destination eq 389
+exit
+object-group service Oracle_Internet_Directory(non-SSL_4032)
+ service TCP destination eq 4032
+exit
+object-group service Oracle_JDBC_for_Rdb_Thin_Server
+ service TCP destination eq 1701
+exit
+object-group service Oracle_Names
+ service TCP destination eq 1575
+exit
+object-group service Oracle_Net_Listener
+ service TCP destination eq 1526
+exit
+object-group service Oracle_Net_Listener__Enterprise_Manager_Repository_port
+ service TCP destination eq 1521
+exit
+object-group service Oracle_Notification_Service_local_port
+ service TCP destination eq 6100
+exit
+object-group service Oracle_Notification_Service_remote_port
+ service TCP destination eq 6200
+exit
+object-group service Oracle_Notification_Service_request_port
+ service TCP destination eq 6003
+exit
+object-group service Oracle_OC4J_AJP
+ service TCP destination eq 3301
+exit
+object-group service Oracle_OC4J_IIOP
+ service TCP destination eq 3401
+exit
+object-group service Oracle_OC4J_IIOPS1
+ service TCP destination eq 3501
+exit
+object-group service Oracle_OC4J_IIOPS2
+ service TCP destination eq 3601
+exit
+object-group service Oracle_OC4J_JMS
+ service TCP destination eq 3701
+exit
+object-group service Oracle_OC4J_RMI
+ service TCP destination eq 3201
+exit
+object-group service Oracle_Rdb
+ service TCP destination eq 1701
+exit
+object-group service Oracle_SOAP_Server
+ service TCP destination eq 9998
+exit
+object-group service Oracle_Times_Ten
+ service TCP destination eq 4767
+ service TCP destination eq 15000
+ service TCP destination eq 4758
+ service TCP destination eq 4759
+ service TCP destination eq 4764
+ service TCP destination eq 4766
+ service TCP destination eq 4761
+ service TCP destination eq 4662
+ service TCP destination eq 15004
+ service TCP destination eq 15002
+exit
+object-group service Oracle_Times_Ten_(15000)
+ service TCP destination eq 15000
+exit
+object-group service Oracle_Times_Ten_(15002)
+ service TCP destination eq 15002
+exit
+object-group service Oracle_Times_Ten_(15004)
+ service TCP destination eq 15004
+exit
+object-group service Oracle_TimesTen
+ service TCP destination eq 4662
+exit
+object-group service Oracle_TimesTen_(4758)
+ service TCP destination eq 4758
+exit
+object-group service Oracle_TimesTen_(4759)
+ service TCP destination eq 4759
+exit
+object-group service Oracle_TimesTen_(4761)
+ service TCP destination eq 4761
+exit
+object-group service Oracle_TimesTen_(4764)
+ service TCP destination eq 4764
+exit
+object-group service Oracle_TimesTen_(4766)
+ service TCP destination eq 4766
+exit
+object-group service Oracle_TimesTen_(4767)
+ service TCP destination eq 4767
+exit
+object-group service Oracle_XMLDB_FTP_Port
+ service TCP destination eq 2100
+exit
+object-group service Oracle_XMLDB_HTTP_port
+ service TCP destination eq 8080
+exit
+object-group service Oracle_i*SQLPlus
+ service TCP destination eq 5560
+ service TCP destination eq 5580
+exit
+object-group service Oracle-2
+ service TCP destination eq 1526
+exit
+object-group service Oracle9iAS_Clickstream_Collector_Agent
+ service TCP destination eq 6668
+exit
+object-group service Oracle9iAS_Web_Cache_Admin_port
+ service TCP destination eq 4000
+exit
+object-group service Oracle9iAS_Web_Cache_HTTP_Listen(SSL)_port
+ service TCP destination eq 4444
+exit
+object-group service Oracle9iAS_Web_Cache_HTTP_Listen(non-SSL)_port
+ service TCP destination eq 7779
+exit
+object-group service Oracle9iAS_Web_Cache_Invalidation_port
+ service TCP destination eq 4001
+exit
+object-group service Oracle9iAS_Web_Cache_Statistics_port
+ service TCP destination eq 4002
+exit
+object-group service OracleAS_Certificate_Authority_(OCA)_-_Mutual_Authentication
+ service TCP destination eq 4401
+exit
+object-group service OracleAS_Certificate_Authority_(OCA)_-_Server_Authentication
+ service TCP destination eq 4400
+exit
+object-group service Orchestrator
+ service TCP destination eq 25
+ service TCP destination eq 8281
+ service TCP destination eq 443
+ service TCP destination eq 8230
+ service TCP destination eq 5432
+ service TCP destination eq 8240
+ service TCP destination eq 8283
+ service TCP destination eq 1521
+ service UDP destination eq 389
+ service TCP destination eq 636
+ service TCP destination eq 8282
+ service TCP destination eq 8244
+ service TCP destination eq 8250
+ service TCP destination eq 1433
+ service TCP destination eq 3306
+ service TCP destination eq 8280
+ service TCP destination eq 389
+exit
+object-group service PC_Anywhere_(TCP)
+ service TCP destination eq 5631
+exit
+object-group service PC_Anywhere_(UDP)
+ service UDP destination eq 5632
+exit
+object-group service POP3
+ service TCP destination eq 110
+exit
+object-group service POP3_SSL
+ service TCP destination eq 995
+exit
+object-group service PostgreSQL
+ service TCP destination eq 5432
+exit
+object-group service Provisioning__Remote_Console
+ service TCP destination eq 902
+exit
+object-group service RDP
+ service TCP destination eq 3389
+exit
+object-group service RFB
+ service TCP destination range 5900 5964
+exit
+object-group service RPC_DFSR_(SYSVOL)
+ service TCP destination eq 5722
+exit
+object-group service RTSP_(TCP)
+ service TCP destination eq 554
+exit
+object-group service RTSP_(UDP)
+ service UDP destination eq 554
+exit
+object-group service RabbitMQ_Mgmt_Plugin
+ service TCP destination eq 15672
+exit
+object-group service Routing_Engine_service
+ service TCP destination eq 691
+exit
+object-group service SAP_Admin_console
+ service TCP destination eq 20005
+exit
+object-group service SAP_Alert_Server
+ service TCP destination eq 30011
+exit
+object-group service SAP_Backup_Server
+ service TCP destination eq 30017
+exit
+object-group service SAP_Cache_Server
+ service TCP destination eq 1095
+exit
+object-group service SAP_Central_Software_Deployment_Manager
+ service TCP destination eq 20201
+exit
+object-group service SAP_Comm
+ service TCP destination eq 20003
+exit
+object-group service SAP_Content_Server
+ service TCP destination eq 1090
+exit
+object-group service SAP_Cruiser
+ service TCP destination eq 30008
+exit
+object-group service SAP_Design_Time_Repository
+ service TCP destination eq 50015
+exit
+object-group service SAP_Dispatcher
+ service TCP destination eq 3200
+exit
+object-group service SAP_Dispatcher_Netweaver_App_Server
+ service UDP destination eq 3200
+exit
+object-group service SAP_Enqueue_Repl_2
+ service TCP destination eq 50116
+exit
+object-group service SAP_Enqueue_Svr
+ service TCP destination eq 3201
+exit
+object-group service SAP_Exchange_Groupware_Connector_(DCOM)
+ service TCP destination eq 135
+exit
+object-group service SAP_File_Adapter
+ service TCP destination eq 8230
+exit
+object-group service SAP_GRMG_Service_(Heartbeat)
+ service TCP destination eq 30006
+exit
+object-group service SAP_Gateway_Netweaver_App_Server
+ service UDP destination eq 3300
+exit
+object-group service SAP_HTTP
+ service TCP destination eq 50000
+exit
+object-group service SAP_HTTP_Server
+ service TCP destination eq 30005
+exit
+object-group service SAP_HTTP_Server_2
+ service TCP destination eq 8353
+exit
+object-group service SAP_HTTPS
+ service TCP destination eq 50001
+exit
+object-group service SAP_HostControl
+ service TCP destination eq 1128
+exit
+object-group service SAP_HostControlS
+ service TCP destination eq 1129
+exit
+object-group service SAP_IBM
+ service TCP destination eq 4402
+ service TCP destination eq 50000
+exit
+object-group service SAP_ICM_HTTP
+ service TCP destination eq 8000
+exit
+object-group service SAP_IIOP
+ service TCP destination eq 50007
+exit
+object-group service SAP_IIOP_initial
+ service TCP destination eq 50002
+exit
+object-group service SAP_IIOPS
+ service TCP destination eq 50003
+exit
+object-group service SAP_IPC_Dispatcher_Mobile_client
+ service TCP destination eq 4444
+exit
+object-group service SAP_IPC_Dispatcher_Mobile_client_2
+ service TCP destination eq 4363
+exit
+object-group service SAP_IPC_Server
+ service TCP destination eq 9999
+exit
+object-group service SAP_IPC_data_loader
+ service TCP destination eq 4445
+exit
+object-group service SAP_Import_Mgr
+ service TCP destination eq 20006
+exit
+object-group service SAP_Index_Server
+ service TCP destination eq 30003
+exit
+object-group service SAP_Index_Server_2
+ service TCP destination eq 8351
+exit
+object-group service SAP_Inst
+ service TCP destination eq 21212
+ service TCP destination eq 21213
+exit
+object-group service SAP_Inst_on_IBM
+ service TCP destination eq 59975
+ service TCP destination eq 59976
+exit
+object-group service SAP_Inter_Server_COmm
+ service TCP destination eq 20004
+exit
+object-group service SAP_JDBCAdapter
+ service TCP destination eq 8220
+exit
+object-group service SAP_JMS
+ service TCP destination eq 50010
+exit
+object-group service SAP_JMS_Adapter
+ service TCP destination eq 8210
+exit
+object-group service SAP_JMSJDBCFile_Adapter_Server
+ service TCP destination eq 8200
+exit
+object-group service SAP_Java_Debug
+ service TCP destination eq 50021
+exit
+object-group service SAP_Java_Join
+ service TCP destination eq 50020
+exit
+object-group service SAP_Layout_Server
+ service TCP destination eq 31596
+ service TCP destination eq 31597
+ service TCP destination eq 31604
+exit
+object-group service SAP_Layout_Server_2
+ service TCP destination eq 31596
+exit
+object-group service SAP_Layout_Server_Adobe_InDesign
+ service TCP destination eq 31603
+exit
+object-group service SAP_Layout_Server_Quark_Express
+ service TCP destination eq 31602
+exit
+object-group service SAP_LiveCache
+ service TCP destination eq 7200
+ service TCP destination eq 7210
+ service TCP destination eq 7269
+ service TCP destination eq 7270
+ service TCP destination eq 7575
+exit
+object-group service SAP_Lotus_Domino_-_Connector
+ service TCP destination range 62026 62029
+exit
+object-group service SAP_Lotus_Domino_-_Proxy
+ service TCP destination range 62126 62129
+exit
+object-group service SAP_MDM_Server
+ service TCP destination range 2000 2002
+exit
+object-group service SAP_Mapping_Manager
+ service TCP destination eq 3909
+exit
+object-group service SAP_Message_Server_HTTP
+ service TCP destination eq 8100
+exit
+object-group service SAP_Monitoring_(GRMG)
+ service TCP destination eq 8366
+exit
+object-group service SAP_Msg_Svr
+ service TCP destination eq 3600
+exit
+object-group service SAP_Msg_Svr_2
+ service TCP destination eq 3601
+exit
+object-group service SAP_Msg_Svr_HTTP
+ service TCP destination eq 8101
+exit
+object-group service SAP_Name_Server
+ service TCP destination eq 30001
+exit
+object-group service SAP_Name_Server_2
+ service TCP destination eq 8355
+exit
+object-group service SAP_Oracle_Listener
+ service TCP destination eq 1527
+exit
+object-group service SAP_P4
+ service TCP destination eq 50004
+exit
+object-group service SAP_P4_over_HTTP
+ service TCP destination eq 50005
+exit
+object-group service SAP_P4_over_SSL
+ service TCP destination eq 50006
+exit
+object-group service SAP_PAW_Communication_Server
+ service TCP destination eq 1099
+exit
+object-group service SAP_PAW_Servlet_Engine
+ service TCP destination eq 1089
+exit
+object-group service SAP_Pre_Processor
+ service TCP destination eq 30002
+exit
+object-group service SAP_Pre_Processor_2
+ service TCP destination eq 8357
+exit
+object-group service SAP_Queue_Server
+ service TCP destination eq 30004
+exit
+object-group service SAP_Queue_Server_2
+ service TCP destination eq 8352
+exit
+object-group service SAP_RFC_Server
+ service TCP destination eq 30007
+exit
+object-group service SAP_Router
+ service TCP destination eq 3299
+exit
+object-group service SAP_SDMSL
+ service TCP destination eq 50017
+ service TCP destination eq 50018
+ service TCP destination eq 50019
+exit
+object-group service SAP_SNC_secured_gateway
+ service TCP destination eq 4800
+exit
+object-group service SAP_Start_Service
+ service TCP destination eq 50013
+exit
+object-group service SAP_Start_Service_2
+ service TCP destination eq 50014
+exit
+object-group service SAP_Syndicator_Service
+ service TCP destination eq 20007
+exit
+object-group service SAP_Telnet
+ service TCP destination eq 50008
+exit
+object-group service SAP_Upgrade
+ service TCP destination eq 4238
+ service TCP destination eq 4239
+ service TCP destination eq 4240
+ service TCP destination eq 4241
+exit
+object-group service SAP_gateway_-_CPICRFC
+ service TCP destination eq 3300
+exit
+object-group service SAP_gatewayreplication
+ service TCP destination eq 3301
+exit
+object-group service SAP_network_Test_Program
+ service TCP destination eq 3298
+exit
+object-group service SAP_printer_spooler
+ service TCP destination eq 515
+exit
+object-group service SIP_5060
+ service UDP destination eq 5060
+exit
+object-group service SIP_5061
+ service UDP destination eq 5061
+exit
+object-group service SMB
+ service TCP destination eq 445
+exit
+object-group service SMB_Server
+ service TCP destination eq 445
+exit
+object-group service SMB_Server_UDP
+ service UDP destination eq 445
+exit
+object-group service SMTP
+ service TCP destination eq 25
+exit
+object-group service SMTP_TLS
+ service TCP destination eq 587
+exit
+object-group service SNMP
+ service UDP destination eq 161
+exit
+object-group service SNMP-Receive
+ service UDP destination eq 161
+exit
+object-group service SNMP-Recieve
+ service UDP destination eq 161
+exit
+object-group service SNMP-Send
+ service UDP destination eq 162
+exit
+object-group service SOAP
+ service TCP destination eq 9389
+exit
+object-group service SQL_Analysis_service
+ service TCP destination eq 2383
+exit
+object-group service SQL_Server_Browser_service
+ service TCP destination eq 2382
+exit
+object-group service SSH
+ service TCP destination eq 22
+exit
+object-group service SSO
+ service TCP destination eq 7444
+exit
+object-group service SUN_RPC_TCP
+exit
+object-group service SUN_RPC_UDP
+exit
+object-group service Server_Message_Block_(SMB)
+ service TCP destination eq 137
+ service TCP destination eq 138
+ service TCP destination eq 139
+exit
+object-group service SharePoint_2007_V1
+ service UDP destination eq 53
+ service TCP destination eq 80
+ service TCP destination eq 445
+ service TCP destination eq 137
+ service TCP destination eq 138
+ service TCP destination eq 139
+ service TCP destination eq 56737
+ service TCP destination eq 56738
+ service UDP destination eq 389
+ service UDP destination eq 88
+ service UDP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 53
+ service UDP destination eq 137
+ service UDP destination eq 1434
+ service UDP destination eq 138
+ service TCP destination eq 25
+ service UDP destination eq 636
+ service TCP destination eq 1433
+ service TCP destination eq 3389
+exit
+object-group service SharePoint_2010_V1
+ service TCP destination eq 445
+ service TCP destination eq 25
+ service TCP destination eq 443
+ service TCP destination eq 5725
+ service UDP destination eq 137
+ service TCP destination eq 3389
+ service UDP destination eq 1434
+ service TCP destination eq 53
+ service UDP destination eq 88
+ service UDP destination eq 53
+ service UDP destination eq 636
+ service TCP destination eq 80
+ service TCP destination eq 1433
+ service UDP destination eq 389
+ service TCP destination eq 56737
+ service TCP destination eq 56738
+ service TCP destination eq 32843
+ service TCP destination eq 32844
+ service TCP destination eq 32845
+ service UDP destination eq 464
+ service UDP destination eq 445
+ service TCP destination eq 137
+ service TCP destination eq 138
+ service TCP destination eq 139
+ service UDP destination eq 138
+exit
+object-group service Site_Recovery_Manager_5.x
+ service TCP destination eq 8096
+ service TCP destination eq 443
+ service TCP destination eq 1433
+ service TCP destination eq 5480
+ service TCP destination eq 902
+ service TCP destination eq 9008
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+ service TCP destination eq 8095
+ service TCP destination eq 8080
+ service TCP destination eq 8282
+ service TCP destination eq 1521
+ service TCP destination eq 8043
+ service TCP destination eq 5000
+ service TCP destination eq 8123
+ service TCP destination eq 80
+ service TCP destination eq 1526
+ service TCP destination eq 9007
+ service TCP destination eq 9085
+exit
+object-group service Site_Recovery_Manager_6.x
+ service TCP destination eq 9007
+ service TCP destination eq 8043
+ service TCP destination eq 80
+ service TCP destination eq 9085
+ service TCP destination eq 9008
+ service TCP destination eq 9086
+ service TCP destination eq 5000
+ service TCP destination eq 5480
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 902
+ service TCP destination eq 1526
+ service TCP destination eq 8282
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+ service TCP destination eq 1433
+ service TCP destination eq 8095
+ service TCP destination eq 1521
+ service TCP destination eq 8123
+ service TCP destination eq 8096
+exit
+object-group service Site_Replication_service
+ service TCP destination eq 379
+exit
+object-group service Skinny
+ service TCP destination eq 2000
+exit
+object-group service Squid-Proxy
+ service TCP destination eq 3128
+exit
+object-group service Syslog_(TCP)
+ service TCP destination eq 514
+exit
+object-group service Syslog_(UDP)
+ service UDP destination eq 514
+exit
+object-group service Syslog-Server
+ service TCP destination eq 514
+exit
+object-group service Syslog-Server-UDP
+ service UDP destination eq 514
+exit
+object-group service T120_(Whiteboard_A43)
+ service TCP destination eq 1503
+exit
+object-group service TELNET
+ service TCP destination eq 23
+exit
+object-group service TFTP
+exit
+object-group service Terminal_Services_(TCP)
+ service TCP destination eq 3389
+exit
+object-group service Terminal_Services_(UDP)
+ service UDP destination eq 3389
+exit
+object-group service Update_Manager
+ service TCP destination eq 9087
+ service TCP destination eq 80
+ service TCP destination eq 735
+ service TCP destination eq 1521
+ service TCP destination eq 443
+ service TCP destination range 9000 9100
+ service TCP destination eq 1433
+ service TCP destination eq 9084
+ service TCP destination eq 8084
+ service TCP destination eq 902
+exit
+object-group service VMware_Consolidated_Backup
+ service TCP destination eq 443
+exit
+object-group service VMware_ESXi_Dump_Collector
+ service TCP destination eq 8000
+ service UDP destination eq 6500
+exit
+object-group service VMware_Site_Recovery_SRM
+ service TCP destination eq 443
+ service TCP destination eq 9086
+exit
+object-group service VMware_Site_Recovery_vSphere_Replication
+ service TCP destination eq 443
+ service TCP destination eq 8043
+ service TCP destination eq 31031
+ service TCP destination eq 32032
+ service TCP destination eq 44046
+exit
+object-group service VMware_VMotion
+ service TCP destination eq 8000
+exit
+object-group service VMware-CIMSLP
+ service UDP destination eq 427
+exit
+object-group service VMware-DVS
+ service TCP destination eq 8301
+ service TCP destination eq 8302
+exit
+object-group service VMware-DataRecovery
+ service TCP destination eq 22024
+exit
+object-group service VMware-ESXi5.x-TCP
+ service TCP destination eq 902
+exit
+object-group service VMware-ESXi5.x-UDP
+ service UDP destination eq 902
+exit
+object-group service VMware-HA-TCP
+ service TCP destination eq 8182
+exit
+object-group service VMware-HA-UDP
+ service UDP destination eq 8182
+exit
+object-group service VMware-SPS
+ service TCP destination eq 31000
+ service TCP destination eq 31100
+exit
+object-group service VMware-SRM-H5-UI
+ service TCP destination eq 443
+exit
+object-group service VMware-SRM-HTTP
+ service TCP destination eq 9008
+exit
+object-group service VMware-SRM-Replication
+ service TCP destination eq 8123
+exit
+object-group service VMware-SRM-SOAP
+ service TCP destination eq 8043
+exit
+object-group service VMware-SRM-Server-Management
+ service TCP destination eq 9086
+exit
+object-group service VMware-SRM-UI
+ service TCP destination eq 9085
+exit
+object-group service VMware-SRM-VAMI
+ service TCP destination eq 8080
+exit
+object-group service VMware-SRM-vCentreServer
+ service TCP destination eq 8096
+exit
+object-group service VMware-SRM-vSphereReplication
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+exit
+object-group service VMware-SRMClient-Server
+ service TCP destination eq 8095
+exit
+object-group service VMware-UpdateMgr
+ service TCP destination range 9000 9100
+exit
+object-group service VMware-UpdateMgr-Patching
+ service TCP destination eq 735
+exit
+object-group service VMware-UpdateMgr-SOAP
+ service TCP destination eq 8084
+exit
+object-group service VMware-UpdateMgr-VUM
+ service TCP destination eq 9084
+exit
+object-group service VMware-VC-DPM
+ service UDP destination eq 623
+exit
+object-group service VMware-VC-DumpCollector-TCP
+ service TCP destination eq 8000
+exit
+object-group service VMware-VC-DumpSvr
+ service UDP destination eq 6500
+exit
+object-group service VMware-VC-ESXi
+ service TCP destination eq 51915
+exit
+object-group service VMware-VC-RemoteConsole
+ service TCP destination eq 903
+exit
+object-group service VMware-VC-Syslog
+ service TCP destination eq 8001
+exit
+object-group service VMware-VCO-Command
+ service TCP destination eq 8240
+exit
+object-group service VMware-VCO-Data
+ service TCP destination eq 8244
+exit
+object-group service VMware-VCO-Messaging
+ service TCP destination eq 8250
+exit
+object-group service VMware-VCO-VCO-HTTPS
+ service TCP destination eq 8283
+exit
+object-group service VMware-VCO-WebHTTP
+ service TCP destination eq 8280
+exit
+object-group service VMware-VCO-WebHTTPS
+ service TCP destination eq 8281
+exit
+object-group service VMware-VCOMgr-UI
+ service TCP destination eq 1194
+exit
+object-group service VMware-VCOStdAln-Heartbeat
+ service TCP destination eq 1199
+exit
+object-group service VMware-VDM2.x-Ephemeral
+ service TCP destination range 1024 65535
+exit
+object-group service VMware-VDM2.x-RGS
+ service TCP destination eq 42966
+exit
+object-group service VMware-VR-Replication-Traffic
+ service TCP destination eq 31031
+ service TCP destination eq 44046
+exit
+object-group service VMware-VR-Server-Management-Traffic
+ service TCP destination eq 8043
+exit
+object-group service VMware-View-PCoIP
+ service TCP destination eq 4172
+exit
+object-group service VMware-View5.x-JMS
+ service TCP destination eq 4001
+exit
+object-group service VMware-View5.x-PCoIP-UDP
+ service UDP destination eq 4172
+exit
+object-group service VMware-iSCSI-Server
+ service TCP destination eq 3260
+exit
+object-group service View_5.x
+ service UDP destination eq 4172
+ service TCP destination eq 4172
+ service TCP destination eq 902
+ service TCP destination eq 80
+ service TCP destination eq 4001
+ service TCP destination eq 443
+exit
+object-group service Vmware_ViewVDM2.x
+ service TCP destination eq 88
+ service TCP destination eq 3389
+ service TCP destination eq 4001
+ service UDP destination eq 88
+ service TCP destination eq 443
+ service TCP destination range 1024 65535
+ service TCP destination eq 389
+ service TCP destination eq 80
+ service TCP destination eq 4100
+ service TCP destination eq 445
+ service UDP destination eq 445
+ service TCP destination eq 8009
+ service TCP destination eq 42966
+ service UDP destination eq 389
+exit
+object-group service Vmware-FT-TCP
+ service TCP destination eq 8100
+ service TCP destination eq 8200
+exit
+object-group service Vmware-FT-UDP
+ service UDP destination eq 8100
+ service UDP destination eq 8200
+exit
+object-group service Vmware-Heartbeat-PrimarySecondary
+ service TCP destination eq 57348
+exit
+object-group service Vmware-SRM-WSDL-vCentreServer
+ service TCP destination eq 9007
+exit
+object-group service Vmware-UpdateMgr-update
+ service TCP destination eq 9087
+exit
+object-group service Vmware-VC-HTTP
+ service TCP destination eq 10080
+exit
+object-group service Vmware-VC-VC-Internal
+ service TCP destination eq 10109
+ service TCP destination eq 10111
+ service TCP destination eq 60099
+ service TCP destination eq 7500
+ service TCP destination eq 8005
+ service TCP destination eq 8006
+ service TCP destination eq 8083
+ service TCP destination eq 8085
+ service TCP destination eq 8086
+ service TCP destination eq 8087
+ service TCP destination eq 8443
+exit
+object-group service Vmware-VC-WebAccess
+ service TCP destination eq 10443
+ service TCP destination eq 8443
+ service TCP destination eq 9443
+exit
+object-group service Vmware-VCHeartbeat
+ service TCP destination eq 52267
+exit
+object-group service Vmware-VCO-Lookup
+ service TCP destination eq 8230
+exit
+object-group service Vmware-VCO-VCO-HTTP
+ service TCP destination eq 8282
+exit
+object-group service Vmware-VCOStdAln-Remote
+ service TCP destination eq 61616
+exit
+object-group service Vmware-VDM2.x-AJP
+ service TCP destination eq 8009
+exit
+object-group service Vmware-VDM2.x-JMS
+ service TCP destination eq 4100
+exit
+object-group service WINS
+ service TCP destination eq 42
+exit
+object-group service WINS-UDP
+ service UDP destination eq 42
+exit
+object-group service Win_-_RPC_DCOM_EPM_DRSUAPI_NetLogonR_SamR_FRS_-_TCP
+ service TCP destination range 1025 65535
+exit
+object-group service Win_-_RPC_DCOM_EPM_DRSUAPI_NetLogonR_SamR_FRS_-_UDP
+ service UDP destination range 1025 65535
+exit
+object-group service Win_2003_-_RPC_DCOM_EPM_DRSUAPI_NetLogonR_SamR_FRS
+ service TCP destination range 1025 5000
+exit
+object-group service Win_2008_-_RPC_DCOM_EPM_DRSUAPI_NetLogonR_SamR_FRS
+ service TCP destination range 49152 65535
+exit
+object-group service Windows-Global-Catalog
+ service TCP destination eq 3268
+exit
+object-group service Windows-Global-Catalog-over-SSL
+ service TCP destination eq 3269
+exit
+object-group service Yahoo_Messenger_(TCP)
+ service TCP destination eq 5050
+exit
+object-group service Yahoo_Messenger_(UDP)
+ service UDP destination eq 5050
+exit
+object-group service couchbase_client_access
+ service TCP destination eq 11207
+ service TCP destination range 18091 18096
+ service TCP destination eq 11211
+ service TCP destination eq 9140
+ service TCP destination eq 11210
+ service TCP destination range 8091 8096
+exit
+object-group service group-amq
+ service TCP destination eq 5672
+exit
+object-group service iSQLPlus_10g
+ service TCP destination eq 5560
+exit
+object-group service iSQLPlus_10g_(5580)
+ service TCP destination eq 5580
+exit
+object-group service migrated_161
+ service TCP destination eq 161
+ service UDP destination eq 161
+exit
+object-group service migrated_5000
+ service TCP destination eq 5000
+exit
+object-group service migrated_8088
+ service TCP destination eq 8088
+exit
+object-group service migrated_8091
+ service TCP destination eq 8091
+exit
+object-group service migrated_8443
+ service TCP destination eq 8443
+exit
+object-group service migrated_9094
+ service TCP destination eq 9094
+exit
+object-group service migrated_activedirectory-ports
+ service UDP destination range 49152 65535
+ service UDP destination eq 138
+ service TCP destination eq 135
+ service TCP destination range 1025 5000
+ service TCP destination eq 3268
+ service TCP destination eq 25
+ service UDP destination range 1025 5000
+ service TCP destination eq 139
+ service TCP destination eq 464
+ service TCP destination eq 445
+ service UDP destination eq 53
+ service TCP destination eq 514
+ service TCP destination eq 53
+ service TCP destination eq 49164
+ service TCP destination range 49152 65535
+ service UDP destination eq 464
+ service TCP destination eq 88
+ service UDP destination eq 123
+ service TCP destination eq 3269
+ service TCP destination eq 636
+ service UDP destination eq 137
+ service UDP destination eq 67
+ service UDP destination eq 389
+ service TCP destination eq 9389
+ service UDP destination eq 2535
+ service UDP destination eq 88
+ service TCP destination eq 389
+ service UDP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 8530
+ service TCP destination eq 5722
+exit
+object-group service migrated_ad-53-udp
+ service UDP destination eq 53
+exit
+object-group service migrated_advanced_message_queuing_protocol
+ service TCP destination eq 5672
+exit
+object-group service migrated_atlassian-bitbucket
+ service TCP destination eq 7990
+exit
+object-group service migrated_cifs
+ service TCP destination eq 445
+exit
+object-group service migrated_dm_inline_service_1
+ service UDP destination eq 3389
+ service TCP destination eq 443
+ service UDP destination eq 161
+ service TCP destination eq 5666
+ service TCP destination eq 23
+ service TCP destination eq 5986
+ service TCP destination eq 1248
+ service TCP destination eq 5985
+ service TCP destination eq 3389
+ service TCP destination eq 80
+ service UDP destination eq 123
+exit
+object-group service migrated_dm_inline_service_10
+ service TCP destination eq 8089
+ service TCP destination eq 3142
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_11
+ service TCP destination eq 443
+ service TCP destination eq 3142
+ service TCP destination eq 8089
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_12
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_13
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_14
+ service TCP destination eq 9997
+ service TCP destination eq 8089
+exit
+object-group service migrated_dm_inline_service_15
+ service TCP destination eq 5000
+ service TCP destination eq 3142
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 8089
+exit
+object-group service migrated_dm_inline_service_16
+ service TCP destination eq 3389
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_17
+ service TCP destination eq 22
+exit
+object-group service migrated_dm_inline_service_18
+ service TCP destination eq 3142
+ service TCP destination eq 443
+ service TCP destination eq 8089
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_19
+ service TCP destination eq 443
+ service TCP destination eq 8443
+ service TCP destination eq 22
+exit
+object-group service migrated_dm_inline_service_2
+ service TCP destination eq 587
+ service TCP destination eq 995
+ service TCP destination eq 465
+ service TCP destination eq 110
+ service TCP destination eq 25
+exit
+object-group service migrated_dm_inline_service_20
+ service TCP destination eq 8089
+ service TCP destination eq 9997
+exit
+object-group service migrated_dm_inline_service_21
+ service TCP destination eq 443
+ service TCP destination eq 8443
+exit
+object-group service migrated_dm_inline_service_22
+ service TCP destination eq 88
+ service UDP destination eq 123
+ service TCP destination eq 389
+ service UDP destination eq 53
+ service UDP destination eq 389
+ service TCP destination eq 49155
+ service TCP destination eq 135
+ service TCP destination eq 445
+ service TCP destination eq 53
+exit
+object-group service migrated_dm_inline_service_23
+ service TCP destination eq 22
+ service TCP destination eq 80
+ service UDP destination eq 5000
+ service TCP destination eq 443
+ service TCP destination eq 5000
+exit
+object-group service migrated_dm_inline_service_24
+ service TCP destination eq 8080
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_25
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_26
+ service UDP destination eq 10514
+ service TCP destination eq 1514
+exit
+object-group service migrated_dm_inline_service_27
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_28
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_29
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_3
+ service TCP destination eq 23560
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_30
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination eq 22
+exit
+object-group service migrated_dm_inline_service_33
+ service TCP destination eq 5000
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_35
+ service TCP destination eq 389
+ service TCP destination range 1025 5000
+ service TCP destination eq 514
+ service TCP destination eq 464
+ service UDP destination eq 137
+ service UDP destination eq 123
+ service TCP destination eq 88
+ service TCP destination eq 445
+ service TCP destination eq 53
+ service TCP destination eq 135
+ service TCP destination eq 5722
+ service TCP destination eq 139
+ service TCP destination eq 3268
+ service UDP destination eq 53
+ service TCP destination eq 636
+ service UDP destination eq 138
+ service UDP destination range 49152 65535
+ service TCP destination eq 25
+ service TCP destination eq 8530
+ service UDP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 3269
+ service TCP destination eq 49164
+ service UDP destination eq 464
+ service TCP destination range 49152 65535
+ service UDP destination range 1025 5000
+ service UDP destination eq 88
+ service UDP destination eq 2535
+ service UDP destination eq 67
+ service UDP destination eq 389
+ service TCP destination eq 9389
+exit
+object-group service migrated_dm_inline_service_36
+ service TCP destination eq 464
+ service TCP destination eq 3269
+ service TCP destination eq 8530
+ service TCP destination eq 443
+ service TCP destination eq 49164
+ service TCP destination eq 135
+ service TCP destination range 1025 5000
+ service TCP destination range 49152 65535
+ service UDP destination eq 2535
+ service UDP destination eq 445
+ service TCP destination eq 445
+ service TCP destination eq 9389
+ service TCP destination eq 636
+ service TCP destination eq 53
+ service UDP destination eq 67
+ service UDP destination eq 138
+ service TCP destination eq 139
+ service TCP destination eq 514
+ service TCP destination eq 5722
+ service UDP destination eq 137
+ service UDP destination eq 123
+ service UDP destination eq 389
+ service TCP destination eq 389
+ service UDP destination eq 464
+ service UDP destination eq 53
+ service UDP destination range 49152 65535
+ service TCP destination eq 88
+ service UDP destination range 1025 5000
+ service TCP destination eq 3268
+ service UDP destination eq 88
+ service TCP destination eq 25
+exit
+object-group service migrated_dm_inline_service_37
+ service TCP destination eq 5671
+ service TCP destination eq 5672
+exit
+object-group service migrated_dm_inline_service_38
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_4
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_40
+ service TCP destination eq 222
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_41
+ service TCP destination eq 222
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_44
+ service TCP destination eq 636
+ service TCP destination eq 53
+ service UDP destination eq 53
+ service UDP destination eq 123
+exit
+object-group service migrated_dm_inline_service_45
+ service TCP destination eq 222
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_47
+ service TCP destination eq 80
+ service TCP destination range 4119 4122
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_5
+ service TCP destination eq 53
+ service TCP destination eq 80
+ service UDP destination eq 53
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_50
+ service TCP destination eq 873
+ service TCP destination eq 25
+exit
+object-group service migrated_dm_inline_service_51
+ service TCP destination eq 8080
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_53
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_54
+ service TCP destination eq 6443
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_service_6
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination range 4119 4122
+exit
+object-group service migrated_dm_inline_service_7
+ service TCP destination eq 3268
+ service UDP destination eq 67
+ service UDP destination eq 123
+ service UDP destination eq 2535
+ service UDP destination eq 138
+ service TCP destination eq 636
+ service UDP destination eq 445
+ service TCP destination eq 3269
+ service TCP destination eq 8530
+ service TCP destination eq 49164
+ service UDP destination eq 137
+ service TCP destination eq 464
+ service TCP destination eq 135
+ service TCP destination eq 25
+ service UDP destination eq 389
+ service TCP destination range 49152 65535
+ service TCP destination eq 443
+ service TCP destination eq 139
+ service UDP destination eq 53
+ service TCP destination eq 389
+ service TCP destination eq 88
+ service TCP destination eq 9389
+ service UDP destination range 1025 5000
+ service TCP destination eq 53
+ service TCP destination eq 445
+ service UDP destination eq 88
+ service TCP destination range 1025 5000
+ service UDP destination range 49152 65535
+ service TCP destination eq 514
+ service UDP destination eq 464
+ service TCP destination eq 5722
+exit
+object-group service migrated_dm_inline_service_8
+ service TCP destination eq 3142
+ service TCP destination eq 8089
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_service_9
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 3142
+ service TCP destination eq 8089
+exit
+object-group service migrated_dm_inline_tcp_1
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_10
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_11
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_12
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_13
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_14
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_15
+ service TCP destination eq 990
+ service TCP destination eq 80
+ service TCP destination eq 22
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_16
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_18
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_19
+ service TCP destination eq 443
+ service TCP destination eq 22
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_2
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_20
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_21
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_22
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_23
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_24
+ service TCP destination eq 22
+ service TCP destination eq 443
+ service TCP destination eq 7999
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_25
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_26
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_27
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_28
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_29
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_3
+ service TCP destination eq 143
+ service TCP destination eq 110
+ service TCP destination eq 25
+ service TCP destination eq 135
+exit
+object-group service migrated_dm_inline_tcp_30
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_31
+ service TCP destination eq 443
+ service TCP destination eq 22
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_32
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_33
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_34
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_35
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_36
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_37
+ service TCP destination eq 22
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_39
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_4
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_40
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_42
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_43
+ service TCP destination eq 22
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_44
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_5
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_6
+ service TCP destination eq 8531
+ service TCP destination eq 8530
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_7
+ service TCP destination eq 443
+ service TCP destination eq 80
+exit
+object-group service migrated_dm_inline_tcp_8
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcp_9
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_dm_inline_tcpudp_1
+ service UDP destination eq 2195
+ service TCP destination eq 2195
+ service TCP destination eq 123
+ service UDP destination eq 123
+exit
+object-group service migrated_domain
+ service UDP destination eq 53
+ service TCP destination eq 53
+exit
+object-group service migrated_flowcollectorudp
+ service UDP destination eq 2055
+exit
+object-group service migrated_http
+ service TCP destination eq 80
+exit
+object-group service migrated_https
+ service TCP destination eq 443
+exit
+object-group service migrated_icmp-any
+exit
+object-group service migrated_icmp-snmp-group
+ service UDP destination eq 161
+exit
+object-group service migrated_icmp-snmp-ssh
+ service UDP destination eq 161
+ service TCP destination eq 22
+exit
+object-group service migrated_icmp-snmptrap-group
+ service UDP destination eq 162
+exit
+object-group service migrated_icmp-ssh-https-group
+ service TCP destination eq 22
+ service TCP destination eq 443
+exit
+object-group service migrated_ip-any
+exit
+object-group service migrated_mgmt-grp
+ service TCP destination range 49152 65535
+ service TCP destination eq 135
+ service TCP destination eq 445
+ service TCP destination eq 5986
+ service TCP destination eq 5985
+exit
+object-group service migrated_mysql
+ service TCP destination eq 3306
+exit
+object-group service migrated_np-verification
+ service TCP destination eq 1080
+exit
+object-group service migrated_pki-clients
+ service TCP destination eq 135
+ service TCP destination range 49152 65535
+ service TCP destination eq 80
+exit
+object-group service migrated_pki-int
+ service TCP destination eq 445
+ service TCP destination eq 80
+ service TCP destination range 49152 65535
+ service TCP destination eq 135
+exit
+object-group service migrated_rdp
+ service TCP destination eq 3389
+exit
+object-group service migrated_sccm-client
+ service UDP destination eq 67
+ service TCP destination eq 80
+ service TCP destination eq 10123
+ service UDP destination eq 69
+ service UDP destination eq 68
+ service UDP destination eq 4011
+ service TCP destination eq 443
+exit
+object-group service migrated_sccm-client-mgmt
+ service TCP destination eq 2701
+ service TCP destination eq 135
+ service TCP destination range 49152 65535
+ service TCP destination eq 3389
+ service UDP destination eq 135
+ service TCP destination eq 445
+exit
+object-group service migrated_sccm-client-seh
+ service TCP destination eq 8531
+ service TCP destination eq 10123
+ service TCP destination eq 135
+ service TCP destination eq 445
+ service TCP destination eq 443
+ service TCP destination eq 80
+ service TCP destination eq 8530
+ service TCP destination range 49152 65535
+exit
+object-group service migrated_sccm-client-to-client
+ service TCP destination eq 2701
+ service TCP destination eq 3389
+exit
+object-group service migrated_sccm-ext
+ service TCP destination eq 8531
+ service TCP destination eq 443
+exit
+object-group service migrated_sccm-ifc-ap01
+ service TCP destination eq 8530
+ service TCP destination eq 135
+ service TCP destination eq 1433
+ service TCP destination eq 443
+ service TCP destination range 49152 65535
+ service TCP destination eq 8531
+ service TCP destination eq 80
+exit
+object-group service migrated_sccm-int
+ service UDP destination eq 135
+ service TCP destination eq 135
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination range 49152 65535
+ service TCP destination eq 1433
+ service TCP destination eq 445
+exit
+object-group service migrated_svc-grp-tcp-ansible
+ service TCP destination eq 5985
+ service TCP destination eq 22
+ service TCP destination eq 5986
+ service TCP destination eq 222
+exit
+object-group service migrated_syslog-monitoring-group
+ service TCP destination eq 5000
+ service TCP destination eq 514
+ service UDP destination eq 514
+exit
+object-group service migrated_tacacs-radius-group
+ service UDP destination eq 49
+ service TCP destination eq 49
+ service UDP destination eq 1646
+ service UDP destination eq 1645
+exit
+object-group service migrated_tcp-1080
+ service TCP destination eq 1080
+exit
+object-group service migrated_tcp-137
+ service TCP destination eq 137
+exit
+object-group service migrated_tcp-1514
+ service TCP destination eq 1514
+exit
+object-group service migrated_tcp-5671
+ service TCP destination eq 5671
+exit
+object-group service migrated_tcp-5678
+ service TCP destination eq 5678
+exit
+object-group service migrated_tcp-631
+ service TCP destination eq 631
+exit
+object-group service migrated_tcp-8089
+ service TCP destination eq 8089
+exit
+object-group service migrated_tcp-8530
+ service TCP destination eq 8530
+exit
+object-group service migrated_tcp-9100
+ service TCP destination eq 9100
+exit
+object-group service migrated_tcp-993
+ service TCP destination eq 993
+exit
+object-group service migrated_tcp-any
+exit
+object-group service migrated_tcp-imap4
+ service TCP destination eq 143
+exit
+object-group service migrated_tcp-ldap
+ service TCP destination eq 389
+exit
+object-group service migrated_tcp-lpd
+ service TCP destination eq 515
+exit
+object-group service migrated_tcp-smtp
+ service TCP destination eq 25
+exit
+object-group service migrated_tcp-ssh
+ service TCP destination eq 22
+exit
+object-group service migrated_tcpudp
+exit
+object-group service migrated_tcpudp-123
+ service UDP destination eq 123
+ service TCP destination eq 123
+exit
+object-group service migrated_tcpudp-514
+ service TCP destination eq 514
+ service UDP destination eq 514
+exit
+object-group service migrated_trend_agent_4119-4122
+ service TCP destination range 4119 4122
+exit
+object-group service migrated_udp-5353
+ service UDP destination eq 5353
+exit
+object-group service migrated_udp-5355
+ service UDP destination eq 5355
+exit
+object-group service migrated_udp-any
+exit
+object-group service migrated_udp-netbios-ns
+ service UDP destination eq 137
+exit
+object-group service migrated_udp-ntp
+ service UDP destination eq 123
+exit
+object-group service migrated_udp-syslog
+ service UDP destination eq 514
+exit
+object-group service migrated_veeam-esx
+ service TCP destination eq 902
+exit
+object-group service migrated_veeam-srv
+ service TCP destination eq 10443
+ service TCP destination eq 443
+exit
+object-group service migrated_web
+ service TCP destination eq 80
+ service TCP destination eq 443
+exit
+object-group service migrated_wsus
+ service TCP destination eq 8531
+ service TCP destination eq 8530
+exit
+object-group service migrated_www
+ service TCP destination eq 80
+exit
+object-group service ms-sql-s
+ service TCP destination eq 1433
+exit
+object-group service ms-sql-server
+ service TCP destination eq 2383
+ service TCP destination eq 2382
+ service TCP destination eq 135
+ service TCP destination eq 1434
+ service TCP destination eq 80
+ service UDP destination eq 1434
+ service TCP destination eq 1433
+ service TCP destination eq 443
+exit
+object-group service rdp_dynamic
+ service TCP destination range 49000 55000
+exit
+object-group service svc-grp-ampq
+ service TCP destination eq 5672
+ service TCP destination eq 5671
+exit
+object-group service svc-grp-winmgmt
+ service TCP destination eq 445
+ service TCP destination eq 47001
+ service TCP destination range 49152 65535
+ service TCP destination eq 3389
+ service TCP destination eq 5986
+ service TCP destination eq 135
+ service TCP destination eq 5985
+exit
+object-group service tcp-1514
+ service TCP destination eq 1514
+exit
+object-group service tcp-1515
+ service TCP destination eq 1515
+exit
+object-group service tcp-2433
+ service TCP destination eq 2433
+exit
+object-group service tcp-33001
+ service TCP destination eq 33001
+exit
+object-group service tcp-55000
+ service TCP destination eq 55000
+exit
+object-group service tcp-9996
+ service TCP destination eq 9996
+exit
+object-group service tcp-9997
+ service TCP destination eq 9997
+exit
+object-group service vCenter5.x
+ service UDP destination eq 389
+ service TCP destination eq 5988
+ service TCP destination eq 8000
+ service TCP destination eq 902
+ service TCP destination eq 1521
+ service TCP destination eq 8080
+ service UDP destination eq 1434
+ service TCP destination eq 51915
+ service TCP destination eq 1433
+ service TCP destination eq 10080
+ service UDP destination eq 161
+ service TCP destination eq 25
+ service UDP destination eq 623
+ service TCP destination eq 636
+ service TCP destination eq 53
+ service TCP destination eq 443
+ service UDP destination eq 902
+ service TCP destination eq 5989
+ service TCP destination eq 10443
+ service TCP destination eq 8443
+ service TCP destination eq 9443
+ service TCP destination eq 903
+ service UDP destination eq 162
+ service UDP destination eq 88
+ service TCP destination eq 10109
+ service TCP destination eq 10111
+ service TCP destination eq 60099
+ service TCP destination eq 7500
+ service TCP destination eq 8005
+ service TCP destination eq 8006
+ service TCP destination eq 8083
+ service TCP destination eq 8085
+ service TCP destination eq 8086
+ service TCP destination eq 8087
+ service TCP destination eq 389
+ service TCP destination eq 88
+exit
+object-group service vCenter5.x_V1
+ service UDP destination eq 902
+ service TCP destination eq 443
+ service TCP destination eq 389
+ service UDP destination eq 161
+ service TCP destination eq 51915
+ service TCP destination eq 1433
+ service UDP destination eq 162
+ service TCP destination eq 10443
+ service TCP destination eq 8443
+ service TCP destination eq 9443
+ service TCP destination eq 10080
+ service UDP destination eq 1434
+ service UDP destination eq 389
+ service UDP destination eq 88
+ service UDP destination eq 623
+ service TCP destination eq 5988
+ service TCP destination eq 902
+ service TCP destination eq 8000
+ service TCP destination eq 53
+ service TCP destination eq 636
+ service TCP destination eq 1521
+ service TCP destination eq 88
+ service TCP destination eq 10109
+ service TCP destination eq 10111
+ service TCP destination eq 60099
+ service TCP destination eq 7500
+ service TCP destination eq 8005
+ service TCP destination eq 8006
+ service TCP destination eq 8083
+ service TCP destination eq 8085
+ service TCP destination eq 8086
+ service TCP destination eq 8087
+ service TCP destination eq 8080
+ service TCP destination eq 5989
+ service TCP destination eq 903
+ service TCP destination eq 25
+exit
+object-group service vCentre_Operations_Manager_(Standalone)_5.x
+ service TCP destination eq 80
+ service TCP destination eq 443
+ service TCP destination eq 1199
+ service TCP destination eq 61616
+exit
+object-group service vCentre_Operations_Manager_(vApp)_5.x
+ service TCP destination eq 443
+ service TCP destination eq 22
+ service TCP destination eq 80
+ service TCP destination eq 1194
+exit
+object-group service vCentre_Operations_Standard_1.x
+ service TCP destination eq 5480
+ service TCP destination eq 22
+ service TCP destination eq 443
+exit
