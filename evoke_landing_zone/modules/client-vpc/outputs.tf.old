@@ -1,0 +1,69 @@
+# ==================================================
+# Client VPC Module - modules/client-vpc/outputs.tf
+# ==================================================
+
+output "vpc_details" {
+  description = "Client VPC details"
+  value = {
+    id                     = aws_vpc.client.id
+    cidr_block            = aws_vpc.client.cidr_block
+    default_route_table_id = aws_vpc.client.default_route_table_id
+    name                  = local.vpc_name
+  }
+}
+
+output "subnet_details" {
+  description = "Client subnet details by environment type"
+  value = {
+    workload = {
+      for idx, subnet in aws_subnet.workload : idx => {
+        id                = subnet.id
+        cidr_block        = subnet.cidr_block
+        availability_zone = subnet.availability_zone
+      }
+    }
+    tgw = {
+      for idx, subnet in aws_subnet.tgw : idx => {
+        id                = subnet.id
+        cidr_block        = subnet.cidr_block
+        availability_zone = subnet.availability_zone
+      }
+    }
+  }
+}
+
+output "transit_gateway_attachment" {
+  description = "Transit Gateway attachment details"
+  value = {
+    id     = aws_ec2_transit_gateway_vpc_attachment.client.id
+    vpc_id = aws_ec2_transit_gateway_vpc_attachment.client.vpc_id
+  }
+}
+
+output "route_table_ids" {
+  description = "Route table IDs by environment type"
+  value = {
+    workload  = aws_route_table.workload[*].id
+  }
+}
+
+output "subnet_ids" {
+  description = "Subnet IDs by environment type"
+  value = {
+    workload  = aws_subnet.workload[*].id
+    tgw  = aws_subnet.tgw[*].id
+  }
+}
+
+output "test_instance" {
+  description = "Test instance details"
+  value = var.enable_test_instance && length(aws_instance.test) > 0 ? {
+    id                = aws_instance.test[0].id
+    private_ip        = aws_instance.test[0].private_ip
+    availability_zone = aws_instance.test[0].availability_zone
+    subnet_id         = aws_instance.test[0].subnet_id
+    ssh_command       = var.ssh_key_name != "" ? "ssh -i ${var.ssh_key_name}.pem ec2-user@${aws_instance.test[0].private_ip}" : "SSH key not configured"
+    subnet_cidr       = aws_subnet.workload[0].cidr_block
+    environment       = "cde"
+  } : null
+}

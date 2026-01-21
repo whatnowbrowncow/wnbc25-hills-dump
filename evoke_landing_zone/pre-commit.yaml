@@ -1,0 +1,39 @@
+repos:
+  - repo: https://gitlab.com/williamhillplc/company/cloud-services/python-packages/pre-commit-coe
+    rev: 3.0.0
+    hooks:
+      - id: update_tool_versions
+      - id: coe_rules
+      - id: sort_tf_vars
+  - repo: https://github.com/tofuutils/pre-commit-opentofu
+    rev: v2.2.1
+    hooks:
+      - id: terragrunt_fmt
+      - id: tofu_fmt
+      - id: tofu_docs
+      - id: tofu_tflint
+        args:
+          - --args=--config=__GIT_WORKING_DIR__.tflint.hcl
+      - id: tofu_tfsec
+        args:
+          - >
+            --args=--no-module-downloads
+            --exclude-downloaded-modules
+      - id: tofu_trivy
+        args:
+          - >
+            --args=--skip-dirs="**/.terragrunt-cache,**/.terraform"
+            --tf-exclude-downloaded-modules
+            --ignorefile="__GIT_WORKING_DIR__/.trivyignore"
+      - id: tofu_checkov
+        args:
+          - --args=-d . --quiet --config-file __GIT_WORKING_DIR__.checkov.yaml
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace

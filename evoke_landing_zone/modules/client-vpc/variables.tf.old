@@ -1,0 +1,77 @@
+# ==================================================
+# Client VPC Module - modules/client-vpc/variables.tf
+# ==================================================
+
+variable "project_name" {
+  description = "Project name for resource naming"
+  type        = string
+}
+
+variable "account_name" {
+  description = "Account name for resource identification"
+  type        = string
+}
+
+variable "environment" {
+  description = "Environment name"
+  type        = string
+}
+
+variable "region" {
+  description = "AWS region"
+  type        = string
+}
+
+variable "availability_zones" {
+  description = "List of availability zones"
+  type        = list(string)
+}
+
+variable "vpc_cidr" {
+  description = "VPC CIDR block"
+  type        = string
+  
+  validation {
+    condition     = can(cidrhost(var.vpc_cidr, 0))
+    error_message = "VPC CIDR must be a valid CIDR block."
+  }
+}
+
+variable "workload_subnets" {
+  description = "List of CDE subnet CIDR blocks"
+  type        = list(string)
+}
+
+variable "tgw_subnets" {
+  description = "List of Transit Gateway attachment subnet CIDR blocks"
+  type        = list(string)
+}
+
+variable "transit_gateway_id" {
+  description = "Transit Gateway ID for attachment"
+  type        = string
+}
+
+variable "common_tags" {
+  description = "Common tags to apply to all resources"
+  type        = map(string)
+  default     = {}
+}
+
+variable "enable_test_instance" {
+  description = "Enable creation of a test instance in NCDE subnet"
+  type        = bool
+  default     = false
+}
+
+variable "test_instance_type" {
+  description = "EC2 instance type for test instance"
+  type        = string
+  default     = "t3.micro"
+}
+
+variable "ssh_key_name" {
+  description = "Name of the SSH key pair for test instance"
+  type        = string
+  default     = ""
+}
