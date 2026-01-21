@@ -1,0 +1,1088 @@
+#SCC#
+uk-sc1-cr01:
+  hostname: 10.111.130.186
+  prod_ip: 10.120.129.186
+  groups:
+    - prod
+    - iosxr
+
+uk-sc1-cr02:
+  hostname: 10.111.130.187
+  prod_ip: 10.120.129.187
+  groups:
+    - prod
+    - iosxr
+
+uk-sc1-cs01:
+  hostname: 10.111.130.1
+  prod_ip: 10.120.129.1
+  groups:
+    - prod
+    - nxos
+
+uk-sc1-ds03:
+  hostname: 10.111.130.83
+  prod_ip: 10.120.129.83
+  groups:
+    - prod
+    - nxos
+
+uk-sc1-ds04:
+ hostname: 10.111.130.84
+ prod_ip: 10.120.129.84
+ groups:
+    - prod
+    - nxos
+
+uk-sc1-dm01:
+  hostname: 10.99.253.54
+  prod_ip: 10.99.253.54
+  groups:
+    - prod
+    - ios
+
+uk-sc1-dmvpn01:
+  hostname: 10.111.130.54
+  prod_ip: 10.120.129.54
+  groups:
+    - prod
+    - ios
+
+uk-sc1-er01:
+  hostname: 10.145.130.40
+  prod_ip: 10.120.159.8
+  groups:
+    - prod
+    - ios
+
+uk-sc1-er02:
+  hostname: 10.145.130.39
+  prod_ip: 10.120.159.7
+  groups:
+    - prod
+    - ios
+
+uk-sc1-es01:
+  hostname: 10.145.130.36
+  prod_ip: 10.120.159.4
+  groups:
+    - prod
+    - ios
+
+uk-sc1-es02:
+  hostname: 10.145.130.37
+  prod_ip: 10.120.159.5
+  groups:
+    - prod
+    - ios
+
+uk-sc1-rr01:
+  hostname: 10.99.253.46
+  prod_ip: 10.99.253.46
+  groups:
+    - prod
+    - ios
+
+uk-scc-sbc:
+  hostname: 10.111.130.42
+  prod_ip: 10.120.129.42
+  groups:
+    - prod
+    - ios
+
+uk-sc1-fw01-pri:
+  hostname: 10.111.130.220
+  prod_ip: 10.120.129.220
+  groups:
+    - prod
+    - asa
+
+uk-sc1-fw01-sec:
+  hostname: 10.111.130.221
+  prod_ip: 10.120.129.221
+  groups:
+    - prod
+    - asa
+
+uk-sc1-fw04-pri:
+  hostname: 10.111.130.19
+  prod_ip: 10.120.129.19
+  groups:
+    - prod
+    - asa
+
+uk-sc1-fw04-sec:
+  hostname: 10.111.130.20
+  prod_ip: 10.120.129.20
+  groups:
+    - prod
+    - asa
+
+uk-sc1-vpn-asa-pri:
+  hostname: 10.111.130.52
+  prod_ip: 10.120.129.52
+  groups:
+    - prod
+    - asa
+
+uk-sc1-vpn-asa-sec:
+  hostname: 10.111.130.53
+  prod_ip: 10.120.129.53
+  groups:
+    - prod
+    - asa
+
+uk-sc1-or01:
+  hostname: 10.111.130.11
+  prod_ip: 10.120.129.11
+  groups:
+    - oob
+    - spokes
+#LD6#
+uk-ld6-cr01:
+  hostname: 10.111.129.210
+  prod_ip: 10.112.129.210
+  groups:
+    - prod
+    - iosxr
+
+uk-ld6-cr02:
+  hostname: 10.111.129.211
+  prod_ip: 10.112.129.211
+  groups:
+    - prod
+    - iosxr
+
+uk-ld6-er01:
+  hostname: 10.111.145.3
+  prod_ip: 10.112.159.3
+  groups:
+    - prod
+    - iosxr
+
+uk-ld6-er02:
+  hostname: 10.111.145.4
+  prod_ip: 10.112.159.4
+  groups:
+    - prod
+    - iosxr
+
+uk-ld6-dm01:
+  hostname: 10.111.129.80
+  prod_ip: 10.112.129.80
+  groups:
+    - prod
+    - ios
+
+uk-ld6-dmvpn01:
+  hostname: 10.111.129.54
+  prod_ip: 10.112.129.54
+  groups:
+    - prod
+    - ios
+
+uk-ld6-es01:
+  hostname: 10.111.145.5
+  prod_ip: 10.112.159.5
+  groups:
+    - prod
+    - ios
+
+uk-ld6-es02:
+  hostname: 10.111.145.6
+  prod_ip: 10.112.159.6
+  groups:
+    - prod
+    - ios
+
+uk-ld6-rr01:
+  hostname: 10.99.253.47
+  prod_ip: 10.99.253.47
+  groups:
+    - prod
+    - ios
+
+uk-ld6-fw01:
+  hostname: 10.111.129.220
+  prod_ip: 10.112.129.220
+  groups:
+    - prod
+    - asa
+
+uk-ld6-fw02-pri:
+  hostname: 10.111.129.69
+  prod_ip: 10.112.129.69
+  groups:
+    - prod
+    - asa
+
+uk-ld6-fw02-sec:
+  hostname: 10.111.129.70
+  prod_ip: 10.112.129.70
+  groups:
+    - prod
+    - asa
+
+uk-ld6-fw03-pri:
+  hostname: 10.112.215.220
+  prod_ip: 10.112.215.220
+  groups:
+    - prod
+    - asa
+
+uk-ld6-fw03-sec:
+  hostname: 10.112.215.221
+  prod_ip: 10.112.215.221
+  groups:
+    - prod
+    - asa
+
+uk-ld6-fw04-pri:
+  hostname: 10.111.129.19
+  prod_ip: 10.112.129.19
+  groups:
+    - prod
+    - asa
+
+uk-ld6-fw04-sec:
+  hostname: 10.111.129.20
+  prod_ip: 10.112.129.20
+  groups:
+    - prod
+    - asa
+
+uk-ld6-fw04:
+  hostname: 10.111.129.19
+  prod_ip: 10.112.129.19
+  groups:
+    - prod
+    - asa
+    - ras
+
+uk-ld6-or01:
+  hostname: 10.92.39.1
+  prod_ip: 10.92.39.1
+  groups:
+    - oob
+    - hubs
+#BRS#
+uk-brs-cr01:
+  hostname: 10.111.131.4
+  prod_ip: 10.210.129.4
+  groups:
+    - prod
+    - ios
+
+uk-brs-cr02:
+  hostname: 10.111.131.5
+  prod_ip: 10.210.129.5
+  groups:
+    - prod
+    - ios
+
+uk-brs-cs01:
+  hostname: 10.111.131.1
+  prod_ip: 10.210.129.1
+  groups:
+    - prod
+    - ios
+
+uk-brs-ds01:
+  hostname: 10.111.131.111
+  prod_ip: 10.210.129.111
+  groups:
+    - prod
+    - nxos
+
+uk-brs-ds02:
+  hostname: 10.111.131.112
+  prod_ip: 10.210.129.112
+  groups:
+    - prod
+    - nxos
+
+uk-brs-pp-ds01:
+  hostname: 10.111.131.113
+  prod_ip: 10.210.129.113
+  groups:
+    - prod
+    - nxos
+
+uk-brs-pp-ds02:
+  hostname: 10.111.131.114
+  prod_ip: 10.210.129.114
+  groups:
+    - prod
+    - nxos
+
+uk-brs-er01:
+  hostname: 10.111.145.70
+  prod_ip: 10.210.159.6
+  groups:
+    - prod
+    - ios
+
+uk-brs-er02:
+  hostname: 10.111.145.71
+  prod_ip: 10.210.159.7
+  groups:
+    - prod
+    - ios
+
+uk-brs-es01:
+  hostname: 10.111.145.68
+  prod_ip: 10.210.159.4
+  groups:
+    - prod
+    - ios
+
+uk-brs-es02:
+  hostname: 10.111.145.69
+  prod_ip: 10.210.159.5
+  groups:
+    - prod
+    - ios
+
+uk-brs-sbc:
+  hostname: 10.111.131.42
+  prod_ip: 10.210.129.42
+  groups:
+    - prod
+    - ios
+
+uk-brs-vacc1:
+  hostname: 192.168.10.202
+  prod_ip: 192.168.10.202
+  groups:
+    - prod
+    - ios
+
+wh-brs-core-sw3:
+  hostname: 192.168.10.172
+  prod_ip: 192.168.10.172
+  groups:
+    - prod
+    - ios
+
+wh-brs-core-sw4:
+  hostname: 192.168.10.173
+  prod_ip: 192.168.10.173
+  groups:
+    - prod
+    - ios
+
+uk-brs-asa-01-admin-act:
+  hostname: 10.111.131.220
+  prod_ip: 10.210.129.220
+  groups:
+    - prod
+    - asa
+
+uk-brs-asa-01-admin-stby:
+  hostname: 10.111.131.221
+  prod_ip: 10.210.129.221
+  groups:
+    - prod
+    - asa
+
+uk-brs-pp-fw-asa01-pri:
+  hostname: 10.111.131.70
+  prod_ip: 10.210.129.70
+  groups:
+    - prod
+    - asa
+
+uk-brs-pp-fw-asa01-sec:
+  hostname: 10.111.131.71
+  prod_ip: 10.210.129.71
+  groups:
+    - prod
+    - asa
+
+uk-brs-vpn-fw01-pri:
+  hostname: 10.111.131.52
+  prod_ip: 10.210.129.52
+  groups:
+    - prod
+    - asa
+
+uk-brs-vpn-fw01-sec:
+  hostname: 10.111.131.53
+  prod_ip: 10.210.129.53
+  groups:
+    - prod
+    - asa
+
+uk-brs-or01:
+  hostname: 10.92.39.3
+  prod_ip: 10.92.39.3
+  groups:
+    - oob
+    - spokes
+#GIB#
+
+gib-mpl-cr01:
+  hostname: 10.180.129.253
+  prod_ip: 10.180.129.253
+  groups:
+    - prod
+    - iosxr
+
+gib-mpl-cr02:
+ hostname: 10.180.129.254
+ prod_ip: 10.180.129.254
+ groups:
+    - prod
+    - iosxr
+
+gib-vcore1:
+  hostname: 10.180.129.1
+  prod_ip: 10.180.129.1
+  groups:
+    - prod
+    - ios
+
+gib-mpl-ds01:
+  hostname: 10.180.129.81
+  prod_ip: 10.180.129.81
+  groups:
+    - prod
+    - nxos
+
+gib-mpl-ds02:
+  hostname: 10.180.129.82
+  prod_ip: 10.180.129.82
+  groups:
+    - prod
+    - nxos
+
+gib-mpl-ds03:
+  hostname: 10.180.129.213
+  prod_ip: 10.180.129.213
+  groups:
+    - prod
+    - nxos
+
+gib-mpl-ds04:
+  hostname: 10.180.129.214
+  prod_ip: 10.180.129.214
+  groups:
+    - prod
+    - nxos
+
+gi-mpl-es01:
+  hostname: 10.180.159.4
+  prod_ip: 10.180.159.4
+  groups:
+    - prod
+    - ios
+
+gi-mpl-es02:
+  hostname: 10.180.159.5
+  prod_ip: 10.180.159.5
+  groups:
+    - prod
+    - ios
+
+gi-mpl-fw01:
+  hostname: 10.180.129.220
+  prod_ip: 10.180.129.220
+  groups:
+    - prod
+    - asa
+
+gi-mpl-fw02:
+  hostname: 10.180.129.221
+  prod_ip: 10.180.129.221
+  groups:
+    - prod
+    - asa
+
+gib-fw-vpn-asa-pri:
+  hostname: 10.180.129.52
+  prod_ip: 10.180.129.52
+  groups:
+    - prod
+    - asa
+
+gib-fw-vpn-asa-sec:
+  hostname: 10.180.129.53
+  prod_ip: 10.180.129.53
+  groups:
+    - prod
+    - asa
+
+gi-wpp-or01:
+  hostname: 10.92.39.69
+  prod_ip: 10.92.39.69
+  groups:
+    - oob
+    - spokes
+gi-mpl-or01:
+  hostname: 10.92.39.4
+  prod_ip: 10.92.39.4
+  groups:
+    - oob
+    - spokes
+#MLT#
+mt-msc-cr01:
+  hostname: 10.99.253.64
+  prod_ip: 10.99.253.64
+  groups:
+    - prod
+    - ios
+
+mt-msc-cr02:
+  hostname: 10.99.253.65
+  prod_ip: 10.99.253.65
+  groups:
+    - prod
+    - ios
+
+mt-msc-cs01:
+  hostname: 10.128.129.1
+  prod_ip: 10.128.129.1
+  groups:
+    - prod
+    - nxos
+
+mt-msc-cs02:
+  hostname: 10.128.129.2
+  prod_ip: 10.128.129.2
+  groups:
+    - prod
+    - nxos
+
+mlt-slm-ar01:
+  hostname: 10.99.253.68
+  prod_ip: 10.99.253.68
+  groups:
+    - prod
+    - ios
+
+mlt-slm-ar02:
+  hostname: 10.99.253.69
+  prod_ip: 10.99.253.69
+  groups:
+    - prod
+    - ios
+
+mt-msc-fw01:
+  hostname: 10.128.129.220
+  prod_ip: 10.128.129.220
+  groups:
+    - prod
+    - asa
+
+mt-msc-fw02:
+  hostname: 10.128.129.221
+  prod_ip: 10.128.129.221
+  groups:
+    - prod
+    - asa
+
+mt-slm-or01:
+  hostname: 10.92.39.72
+  prod_ip: 10.92.39.72
+  groups:
+    - oob
+    - spokes
+
+mt-msc-or01:
+  hostname: 10.92.39.6
+  prod_ip: 10.92.39.6
+  groups:
+    - oob
+    - spokes
+#BFA#
+uk-bfa-ar01:
+  hostname: 10.99.253.62
+  prod_ip: 10.99.253.62
+  groups:
+    - prod
+    - ios
+
+uk-bfa-ar02:
+  hostname: 10.99.253.63
+  prod_ip: 10.99.253.63
+  groups:
+    - prod
+    - ios
+
+uk-bfa-as01-f02:
+  hostname: 10.56.99.5
+  prod_ip: 10.56.99.5
+  groups:
+    - prod
+    - ios
+
+uk-bfa-as02-f02:
+  hostname: 10.56.99.6
+  prod_ip: 10.56.99.6
+  groups:
+    - prod
+    - ios
+
+uk-bfa-cs01:
+  hostname: 10.56.99.1
+  prod_ip: 10.56.99.1
+  groups:
+    - prod
+    - ios
+#KRK#
+pl-krk-ar01:
+  hostname: 10.99.254.22
+  prod_ip: 10.99.254.22
+  groups:
+    - prod
+    - ios
+
+pl-krk-ar02:
+  hostname: 10.99.254.23
+  prod_ip: 10.99.254.23
+  groups:
+    - prod
+    - ios
+
+pl-krk-as01-f01:
+  hostname: 10.111.3.3
+  prod_ip: 10.55.99.3
+  groups:
+    - prod
+    - ios
+
+pl-krk-as01-f03:
+  hostname: 10.111.3.5
+  prod_ip: 10.55.99.5
+  groups:
+    - prod
+    - ios
+
+pl-krk-as01-f05:
+  hostname: 10.111.3.7
+  prod_ip: 10.55.99.7
+  groups:
+    - prod
+    - ios
+
+pl-krk-as02-f01:
+  hostname: 10.111.3.4
+  prod_ip: 10.55.99.4
+  groups:
+    - prod
+    - ios
+
+pl-krk-as02-f03:
+  hostname: 10.111.3.6
+  prod_ip: 10.55.99.6
+  groups:
+    - prod
+    - ios
+
+pl-krk-as03-f01:
+  hostname: 10.111.3.10
+  prod_ip: 10.55.99.10
+  groups:
+    - prod
+    - ios
+
+pl-krk-as03-f03:
+  hostname: 10.111.3.14
+  prod_ip: 10.55.99.14
+  groups:
+    - prod
+    - ios
+
+pl-krk-as04-f01:
+  hostname: 10.111.3.13
+  prod_ip: 10.55.99.13
+  groups:
+    - prod
+    - ios
+
+pl-krk-as04-f03:
+  hostname: 10.111.3.15
+  prod_ip: 10.55.99.15
+  groups:
+    - prod
+    - ios
+
+pl-krk-cs01:
+  hostname: 10.111.3.1
+  prod_ip: 10.55.99.1
+  groups:
+    - prod
+    - ios
+
+pl-krk-vacc01:
+  hostname: 10.111.3.8
+  prod_ip: 10.55.99.8
+  groups:
+    - prod
+    - ios
+
+pl-krk-vacc02:
+  hostname: 10.111.3.9
+  prod_ip: 10.55.99.9
+  groups:
+    - prod
+    - ios
+
+pl-krk-or01:
+ hostname: 10.92.39.68
+ prod_ip: 10.92.39.68
+ groups:
+   - oob
+    - spokes
+#STJ#
+uk-stj-ar01:
+  hostname: 10.99.253.25
+  prod_ip: 10.99.253.25
+  groups:
+    - prod
+    - ios
+
+uk-stj-ar02:
+  hostname: 10.99.253.26
+  prod_ip: 10.99.253.26
+  groups:
+    - prod
+    - ios
+
+uk-stj-as01:
+  hostname: 10.111.1.71
+  prod_ip: 10.1.99.71
+  groups:
+    - prod
+    - ios
+
+uk-stj-as02:
+  hostname: 10.111.1.72
+  prod_ip: 10.1.99.72
+  groups:
+    - prod
+    - ios
+
+uk-stj-cs01:
+  hostname: 10.111.1.1
+  prod_ip: 10.1.99.1
+  groups:
+    - prod
+    - ios
+
+uk-stj-f1c1-sw1:
+  hostname: 10.111.1.7
+  prod_ip: 10.1.99.7
+  groups:
+    - prod
+    - ios
+
+uk-stj-f1c1-sw4:
+  hostname: 10.111.1.54
+  prod_ip: 10.1.99.54
+  groups:
+    - prod
+    - ios
+
+uk-stj-vacc01:
+  hostname: 10.111.1.12
+  prod_ip: 10.1.99.12
+  groups:
+    - prod
+    - ios
+
+uk-stj-vacc02:
+  hostname: 10.111.1.11
+  prod_ip: 10.1.99.11
+  groups:
+    - prod
+    - ios
+
+lsj_f2c1_sw1:
+  hostname: 10.111.1.9
+  prod_ip: 10.1.99.9
+  groups:
+    - prod
+    - ios
+
+lsj_f2c1_sw2:
+  hostname: 10.111.1.19
+  prod_ip: 10.1.99.19
+  groups:
+    - prod
+    - ios
+
+lsj_f3al_pod:
+  hostname: 10.111.1.31
+  prod_ip: 10.1.99.31
+  groups:
+    - prod
+    - ios
+
+lsj_f3al_retail:
+  hostname: 10.111.1.32
+  prod_ip: 10.1.99.32
+  groups:
+    - prod
+    - ios
+
+lsj_f3al_sw1:
+  hostname: 10.111.1.30
+  prod_ip: 10.1.99.30
+  groups:
+    - prod
+    - ios
+
+lsj_f3c1_sw1:
+  hostname: 10.111.1.10
+  prod_ip: 10.1.99.10
+  groups:
+    - prod
+    - ios
+
+lsj_f3c1_sw2:
+  hostname: 10.111.1.74
+  prod_ip: 10.1.99.74
+  groups:
+    - prod
+    - ios
+
+lsj_f4al_sw1:
+  hostname: 10.111.1.36
+  prod_ip: 10.1.99.36
+  groups:
+    - prod
+    - ios
+
+uk-stj-as01-f04:
+  hostname: 10.111.1.26
+  prod_ip: 10.1.99.26
+  groups:
+    - prod
+    - ios
+
+lsj_f5c1_sw1:
+  hostname: 10.111.1.24
+  prod_ip: 10.1.99.24
+  groups:
+    - prod
+    - ios
+
+lsj_f6al_sw1:
+  hostname: 10.111.1.20
+  prod_ip: 10.1.99.20
+  groups:
+    - prod
+    - ios
+
+uk-stj-fw01-pri:
+  hostname: 10.111.1.220
+  prod_ip: 10.1.99.220
+  groups:
+    - prod
+    - asa
+
+uk-stj-fw01-stby:
+  hostname: 10.111.1.221
+  prod_ip: 10.1.99.221
+  groups:
+    - prod
+    - asa
+
+uk-stj-or01:
+  hostname: 10.92.39.66
+  prod_ip: 10.92.39.66
+  groups:
+    - oob
+    - spokes
+#MNL#
+ph-mnl-ar01:
+  hostname: 10.99.254.48
+  prod_ip: 10.99.254.48
+  groups:
+    - prod
+    - ios
+
+ph-mnl-ar02:
+  hostname: 10.99.254.49
+  prod_ip: 10.99.254.49
+  groups:
+    - prod
+    - ios
+
+ph-mnl-cs01:
+  hostname: 10.123.14.1
+  prod_ip: 10.123.14.1
+  groups:
+    - prod
+    - ios
+
+ph-mnl-vacc01:
+  hostname: 10.123.14.11
+  prod_ip: 10.123.14.11
+  groups:
+    - prod
+    - ios
+
+ph-mnl-vacc02:
+  hostname: 10.123.14.12
+  prod_ip: 10.123.14.12
+  groups:
+    - prod
+    - ios
+
+ph-mnl-vacc03:
+  hostname: 10.123.14.13
+  prod_ip: 10.123.14.13
+  groups:
+    - prod
+    - ios
+
+ph-vit-ar01:
+  hostname: 10.99.254.54
+  prod_ip: 10.99.254.54
+  groups:
+    - prod
+    - ios
+
+ph-vit-ar02:
+  hostname: 10.99.254.55
+  prod_ip: 10.99.254.55
+  groups:
+    - prod
+    - ios
+
+ph-vit-cs01:
+  hostname: 10.111.113.2
+  prod_ip: 10.123.206.2
+  groups:
+    - prod
+    - ios
+
+ph-vit-cs02:
+  hostname: 10.111.113.3
+  prod_ip: 10.123.206.3
+  groups:
+    - prod
+    - ios
+
+ph-vit-or01:
+  hostname: 10.111.113.11
+  prod_ip: 10.123.206.11
+  groups:
+    - oob
+    - spokes
+
+#SOF#
+bg-sof-ar01:
+  hostname: 10.99.254.34
+  prod_ip: 10.99.254.34
+  groups:
+    - prod
+    - ios
+
+bg-sof-ar02:
+  hostname: 10.99.254.35
+  prod_ip: 10.99.254.35
+  groups:
+    - prod
+    - ios
+
+bg-sof-as01:
+  hostname: 10.111.5.2
+  prod_ip: 10.53.99.2
+  groups:
+    - prod
+    - ios
+
+bg-sof-as02:
+  hostname: 10.111.5.3
+  prod_ip: 10.53.99.3
+  groups:
+    - prod
+    - ios
+
+bg-sof-cs01:
+  hostname: 10.111.5.1
+  prod_ip: 10.53.99.1
+  groups:
+    - prod
+    - ios
+
+bg-sof-es01:
+  hostname: 10.53.113.3
+  prod_ip: 10.53.113.3
+  groups:
+    - prod
+    - ios
+
+bg-sof-es02:
+  hostname: 10.53.113.4
+  prod_ip: 10.53.113.4
+  groups:
+    - prod
+    - ios
+
+bg-sof-fw01-pri:
+  hostname: 10.111.5.220
+  prod_ip: 10.53.99.220
+  groups:
+    - prod
+    - asa
+
+bg-sof-fw01-sec:
+  hostname: 10.111.5.221
+  prod_ip: 10.53.99.221
+  groups:
+    - prod
+    - asa
+
+#POPS#
+uk-sov-cr01:
+  hostname: 10.99.239.227
+  prod_ip: 10.99.239.227
+  groups:
+    - prod
+    - iosxr
+
+uk-sov-ms01:
+  hostname: 10.99.239.226
+  prod_ip: 10.99.239.226
+  groups:
+    - prod
+    - ios
+
+uk-sov-or01:
+  hostname: 10.92.39.253
+  prod_ip: 10.92.39.253
+  groups:
+    - oob
+    - spokes
+
+uk-man-cr01:
+  hostname: 10.99.253.41
+  prod_ip: 10.99.253.41
+  groups:
+    - prod
+    - ios
+
+uk-man-rr01:
+  hostname: 10.99.253.49
+  prod_ip: 10.99.253.49
+  groups:
+    - prod
+    - ios
+
+de-fr7-cr01:
+  hostname: 10.99.253.66
+  prod_ip: 10.99.253.66
+  groups:
+    - prod
+    - ios
+
+it-ml2-cr01:
+  hostname: 10.99.253.67
+  prod_ip: 10.99.253.67
+  groups:
+    - prod
+    - ios

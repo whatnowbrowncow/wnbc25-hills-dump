@@ -1,0 +1,67 @@
+uk-sov-or01:
+  hostname: 10.92.39.253
+  groups:
+    - spokes
+uk-man-or01:
+  hostname: 10.92.39.246
+  groups:
+    - spokes
+pl-krk-or01:
+ hostname: 10.92.39.68
+ groups:
+   - spokes
+bg-sof-or01:
+ hostname: 10.92.39.70
+ groups:
+   - spokes
+de-fr7-or01:
+ hostname: 10.92.39.10
+ groups:
+   - spokes
+it-ml2-or01:
+ hostname: 10.92.39.75
+ groups:
+   - spokes
+uk-sc1-or01:
+  hostname: 10.120.129.11
+  groups:
+    - spokes
+uk-ld6-or01:
+  hostname: 10.92.39.1
+  groups:
+    - hubs
+mt-slm-or01:
+  hostname: 10.92.39.72
+  groups:
+    - spokes
+  username: netsec
+  password: N54a!WyM
+  secret: N54a!WyM
+mt-msc-or01:
+  hostname: 10.92.39.6
+  groups:
+    - spokes
+uk-stj-or01:
+  hostname: 10.92.39.66
+  groups:
+    - spokes
+uk-brs-or01:
+  hostname: 10.92.39.3
+  groups:
+    - spokes
+uk-bfa-or01:
+  hostname: 10.92.39.67
+  groups:
+    - spokes
+gi-wpp-or01:
+  hostname: 10.92.39.69
+  groups:
+    - spokes
+gi-mpl-or01:
+  hostname: 10.92.39.4
+  groups:
+    - spokes
+ph-mnl-or01:
+  hostname: 10.92.39.5
+  groups:
+    - spokes

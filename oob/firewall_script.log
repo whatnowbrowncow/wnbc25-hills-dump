@@ -1,0 +1,11 @@
+2024-03-22 11:22:34,210 - INFO - Connecting to Firewall: uk-brs-pp-fw01 at 10.210.129.70
+2024-03-22 11:22:34,211 - ERROR - Error processing firewall uk-brs-pp-fw01: [Errno 2] No such file or directory: '/home/dbdev/decryption_keys'
+2024-03-22 11:22:34,211 - ERROR -   File "/gitnet/channels-team/handy-tools/route_lookup/wip/new_fw_processing/fw_data_gathering.py", line 420, in execute_commands_on_firewall_wrapper
+    connection = connect_to_firewall(fw, target="active")
+  File "/gitnet/do-shared-python-functions/pipeline/firewall_management.py", line 72, in connect_to_firewall
+    password = decrypt_password(encrypted_password)
+  File "/gitnet/do-shared-python-functions/pipeline/pipeline_password_encrypt.py", line 24, in decrypt_password
+    encryption_key = get_encryption_key()
+  File "/gitnet/do-shared-python-functions/pipeline/pipeline_password_encrypt.py", line 15, in get_encryption_key
+    with open(decryption_key_file, 'r') as read_key:
+

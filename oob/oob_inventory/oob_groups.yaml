@@ -1,0 +1,47 @@
+---
+hubs:
+  data:
+    role: hubs
+spokes:
+  platform: ios
+  data:
+    role: spokes
+oob:
+  platform: ios
+  data:
+    role: oob
+prod:
+  data:
+    role: prod
+core:
+  platform: ios
+  data:
+    role: core
+ios:
+  platform: ios
+  data:
+    role: ios
+iosxr:
+  platform: iosxr
+  data:
+    role: iosxr
+nxos:
+  platform: nxos
+  data:
+    role: nxos
+ras:
+  platform: cisco_asa_ssh
+  data:
+    role: ras
+asa:
+  platform: cisco_asa_ssh
+  data:
+    role: asa
+fp:
+  platform: cisco_asa_ssh
+  data:
+    role: fp
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 15

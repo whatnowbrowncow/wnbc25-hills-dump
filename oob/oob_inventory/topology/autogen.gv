@@ -1,0 +1,766 @@
+// DMVPN Map
+graph {
+	node [color=deepskyblue1 style=filled]
+	node [color=coral]
+	scc_hub
+	node [color=coral]
+	ld6_hub
+	node [color=deepskyblue]
+	birstall_router
+	node [color=deepskyblue]
+	"4gtest_router"
+	node [color=deepskyblue]
+	anlaby_router
+	node [color=deepskyblue]
+	bathstreet_router
+	node [color=deepskyblue]
+	boothferry_router
+	node [color=deepskyblue]
+	burrardstreet_router
+	node [color=deepskyblue]
+	"charingcross(akasandstreet)_router"
+	node [color=deepskyblue]
+	conwaystreet_router
+	node [color=deepskyblue]
+	"fiveoaks(akacrownstores)_router"
+	node [color=deepskyblue]
+	greenwood_router
+	node [color=deepskyblue]
+	holderness_router
+	node [color=deepskyblue]
+	hudsons_router
+	node [color=deepskyblue]
+	marfleet_router
+	node [color=deepskyblue]
+	mollison_router
+	node [color=deepskyblue]
+	newstreet_router
+	node [color=deepskyblue]
+	newlands_router
+	node [color=deepskyblue]
+	nightjar_router
+	node [color=deepskyblue]
+	orchard_router
+	node [color=deepskyblue]
+	paragon_router
+	node [color=deepskyblue]
+	"poonahroad(akahalkettplace)_router"
+	node [color=deepskyblue]
+	redhouses_router
+	node [color=deepskyblue]
+	samman_router
+	node [color=deepskyblue]
+	"shannonst(usedtobestillorganireland)_router"
+	node [color=deepskyblue]
+	springbank_router
+	node [color=deepskyblue]
+	staubin_router
+	node [color=deepskyblue]
+	statue_router
+	node [color=deepskyblue]
+	sutton_router
+	node [color=deepskyblue]
+	westhull_router
+	node [color=deepskyblue]
+	westpark_router
+	node [color=deepskyblue]
+	aintreeunit1aldanitibar_router
+	node [color=deepskyblue]
+	aintreeunit2irishbar_router
+	node [color=deepskyblue]
+	"aintreeequestriancentre1(main)_router"
+	node [color=deepskyblue]
+	"ayrmainstand(unit1)groundfloor_router"
+	node [color=deepskyblue]
+	"ayrmainstand(unit2)1stfloor_router"
+	node [color=deepskyblue]
+	beverley_router
+	node [color=deepskyblue]
+	carlisle_router
+	node [color=deepskyblue]
+	cartmel1_router
+	node [color=deepskyblue]
+	catterickbridge_router
+	node [color=deepskyblue]
+	cheltenhamunit1membersbar_router
+	node [color=deepskyblue]
+	cheltenhamunit2queenmotherstand_router
+	node [color=deepskyblue]
+	cheltenhamunit3suncentrecourse_router
+	node [color=deepskyblue]
+	cheltenhamunit4paddock_router
+	node [color=deepskyblue]
+	cheltenhamunit5lowerbettinghall_router
+	node [color=deepskyblue]
+	cheltenhamunit6grandstand_router
+	node [color=deepskyblue]
+	cheltenhamunit7_router
+	node [color=deepskyblue]
+	cardiffcityfc_router01
+	node [color=deepskyblue]
+	epsomdownsunit1grandstand_router
+	node [color=deepskyblue]
+	epsomdownsunit2qestand_router
+	node [color=deepskyblue]
+	exeter_router
+	node [color=deepskyblue]
+	goodwoodunit1lennox_router
+	node [color=deepskyblue]
+	goodwoodunit2_router
+	node [color=deepskyblue]
+	goodwoodunit3gordons_router
+	node [color=deepskyblue]
+	hamiltonpark_router
+	node [color=deepskyblue]
+	haydockmainbettingshop_router
+	node [color=deepskyblue]
+	haydocksportsbar_router
+	node [color=deepskyblue]
+	haydockbefriendly_router
+	node [color=deepskyblue]
+	huntingdon_router
+	node [color=deepskyblue]
+	kelso_router
+	node [color=deepskyblue]
+	kemptonparkunit1grandstand_router
+	node [color=deepskyblue]
+	kemptonparkunit2annex_router
+	node [color=deepskyblue]
+	kemptonparkunit3_router
+	node [color=deepskyblue]
+	leicester_router
+	node [color=deepskyblue]
+	marketrasen_router
+	node [color=deepskyblue]
+	musselburgh_router
+	node [color=deepskyblue]
+	newburyunit1berkshire_router
+	node [color=deepskyblue]
+	newburyunit2grandstand_router
+	node [color=deepskyblue]
+	newmarketunit1rowleykingcharlesstatue_router
+	node [color=deepskyblue]
+	newmarketunit2rowleygrandstand_router
+	node [color=deepskyblue]
+	newmarketunit3rowleygrandstand_router
+	node [color=deepskyblue]
+	newmarketunit4julysharpobar_router
+	node [color=deepskyblue]
+	newmarketunit5julypaddock_router
+	node [color=deepskyblue]
+	newmarketunit6julymarwellbar_router
+	node [color=deepskyblue]
+	newtonabbotunit2_router
+	node [color=deepskyblue]
+	nottingham_router
+	node [color=deepskyblue]
+	perth_router
+	node [color=deepskyblue]
+	plumpton_router
+	node [color=deepskyblue]
+	plumpton2_router
+	node [color=deepskyblue]
+	pontefractunit1_router
+	node [color=deepskyblue]
+	pontefractunit2_router
+	node [color=deepskyblue]
+	redcar_router
+	node [color=deepskyblue]
+	ripon1_router
+	node [color=deepskyblue]
+	ripon2_router
+	node [color=deepskyblue]
+	ripon4_router
+	node [color=deepskyblue]
+	salisbury_router
+	node [color=deepskyblue]
+	sandownparkunit1_router
+	node [color=deepskyblue]
+	sandownparkunit2_router
+	node [color=deepskyblue]
+	"stratford-on-avonunit1_router"
+	node [color=deepskyblue]
+	"stratford-on-avonunit2_router"
+	node [color=deepskyblue]
+	taunton_router
+	node [color=deepskyblue]
+	"thirskunit1(shrimp&stirrup)_router"
+	node [color=deepskyblue]
+	thirskunit2_router
+	node [color=deepskyblue]
+	warwick_router
+	node [color=deepskyblue]
+	wetherbyunit1bettingshop_router
+	node [color=deepskyblue]
+	wincanton_router
+	node [color=deepskyblue]
+	yorkunit1centrecourse_router
+	node [color=deepskyblue]
+	yorkunit2ebor_router
+	node [color=deepskyblue]
+	yorkunit3champagnelawn_router
+	node [color=deepskyblue]
+	yorkunit4members_router
+	node [color=deepskyblue]
+	yorkunit5mainhall_router
+	node [color=deepskyblue]
+	yorkunit6melrose_router
+	node [color=deepskyblue]
+	yorkunit7theakstonsbar_router
+	node [color=deepskyblue]
+	yorkunit8voltiguer_router
+	node [color=deepskyblue]
+	astonvillaparkunit1_router
+	node [color=deepskyblue]
+	astonvillaparkunit2_router
+	node [color=deepskyblue]
+	astonvillaparkunit3_router
+	node [color=deepskyblue]
+	astonvillaparkunit4_router
+	node [color=deepskyblue]
+	astonvillaparkunit5_router
+	node [color=deepskyblue]
+	astonvillaparkunit6_router
+	node [color=deepskyblue]
+	astonvillaparkunit7_router
+	node [color=deepskyblue]
+	astonvillaparkunit8_router
+	node [color=deepskyblue]
+	astonvillaparkunit9_router
+	node [color=deepskyblue]
+	astonvillaparkunit10_router
+	node [color=deepskyblue]
+	astonvillaparkunit11_router
+	node [color=deepskyblue]
+	astonvillaparkunit12_router
+	node [color=deepskyblue]
+	celticparkunit1_router
+	node [color=deepskyblue]
+	celticparkunit2_router
+	node [color=deepskyblue]
+	celticparkunit3_router
+	node [color=deepskyblue]
+	celticparkunit4_router
+	node [color=deepskyblue]
+	celticparkunit5_router
+	node [color=deepskyblue]
+	celticparkunit6_router
+	node [color=deepskyblue]
+	celticparkunit7_router
+	node [color=deepskyblue]
+	celticparkunit8_router
+	node [color=deepskyblue]
+	celticparkunit9_router
+	node [color=deepskyblue]
+	celticparkunit10_router
+	node [color=deepskyblue]
+	celticparkhospitalitybettingareaunit1_router
+	node [color=deepskyblue]
+	celticparkhospitalitybettingareaunit2_router
+	node [color=deepskyblue]
+	celticparkhospitalitybettingareaunit3_router
+	node [color=deepskyblue]
+	celticparkhospitalitybettingareaunit4_router
+	node [color=deepskyblue]
+	sheffieldwednesdayunit1_router
+	node [color=deepskyblue]
+	sheffieldwednesdayunit2_router
+	node [color=deepskyblue]
+	sheffieldwednesdayunit3_router
+	node [color=deepskyblue]
+	sheffieldwednesdayunit4_router
+	node [color=deepskyblue]
+	sheffieldwednesdayunit5_router
+	node [color=deepskyblue]
+	sheffieldwednesdayunit6_router
+	node [color=deepskyblue]
+	sheffieldwednesdayunit7_router
+	node [color=deepskyblue]
+	"scientificgames(oldham)_router"
+	edge [color=green3]
+	scc_hub -- aintreeunit1aldanitibar_router
+	edge [color=green3]
+	scc_hub -- aintreeunit2irishbar_router
+	edge [color=green3]
+	scc_hub -- "thirskunit1(shrimp&stirrup)_router"
+	edge [color=green3]
+	scc_hub -- thirskunit2_router
+	edge [color=green3]
+	scc_hub -- statue_router
+	edge [color=green3]
+	scc_hub -- hudsons_router
+	edge [color=green3]
+	scc_hub -- carlisle_router
+	edge [color=green3]
+	scc_hub -- greenwood_router
+	edge [color=green3]
+	scc_hub -- boothferry_router
+	edge [color=green3]
+	scc_hub -- springbank_router
+	edge [color=green3]
+	scc_hub -- westhull_router
+	edge [color=green3]
+	scc_hub -- nightjar_router
+	edge [color=green3]
+	scc_hub -- holderness_router
+	edge [color=green3]
+	scc_hub -- cartmel1_router
+	edge [color=green3]
+	scc_hub -- paragon_router
+	edge [color=green3]
+	scc_hub -- sutton_router
+	edge [color=green3]
+	scc_hub -- catterickbridge_router
+	edge [color=green3]
+	scc_hub -- "shannonst(usedtobestillorganireland)_router"
+	edge [color=green3]
+	scc_hub -- westpark_router
+	edge [color=green3]
+	scc_hub -- exeter_router
+	edge [color=green3]
+	scc_hub -- newlands_router
+	edge [color=green3]
+	scc_hub -- hamiltonpark_router
+	edge [color=green3]
+	scc_hub -- anlaby_router
+	edge [color=green3]
+	scc_hub -- "ayrmainstand(unit1)groundfloor_router"
+	edge [color=green3]
+	scc_hub -- "ayrmainstand(unit2)1stfloor_router"
+	edge [color=green3]
+	scc_hub -- marfleet_router
+	edge [color=green3]
+	scc_hub -- mollison_router
+	edge [color=green3]
+	scc_hub -- orchard_router
+	edge [color=green3]
+	scc_hub -- samman_router
+	edge [color=green3]
+	scc_hub -- bathstreet_router
+	edge [color=green3]
+	scc_hub -- burrardstreet_router
+	edge [color=green3]
+	scc_hub -- newstreet_router
+	edge [color=green3]
+	scc_hub -- "poonahroad(akahalkettplace)_router"
+	edge [color=green3]
+	scc_hub -- "charingcross(akasandstreet)_router"
+	edge [color=green3]
+	scc_hub -- "fiveoaks(akacrownstores)_router"
+	edge [color=green3]
+	scc_hub -- staubin_router
+	edge [color=green3]
+	scc_hub -- redhouses_router
+	edge [color=green3]
+	scc_hub -- ripon1_router
+	edge [color=green3]
+	scc_hub -- ripon2_router
+	edge [color=green3]
+	scc_hub -- ripon4_router
+	edge [color=green3]
+	scc_hub -- conwaystreet_router
+	edge [color=green3]
+	scc_hub -- goodwoodunit1lennox_router
+	edge [color=green3]
+	scc_hub -- goodwoodunit2_router
+	edge [color=green3]
+	scc_hub -- goodwoodunit3gordons_router
+	edge [color=green3]
+	scc_hub -- haydockmainbettingshop_router
+	edge [color=green3]
+	scc_hub -- haydocksportsbar_router
+	edge [color=green3]
+	scc_hub -- haydockbefriendly_router
+	edge [color=green3]
+	scc_hub -- huntingdon_router
+	edge [color=green3]
+	scc_hub -- kelso_router
+	edge [color=green3]
+	scc_hub -- sheffieldwednesdayunit1_router
+	edge [color=green3]
+	scc_hub -- sheffieldwednesdayunit2_router
+	edge [color=green3]
+	scc_hub -- sheffieldwednesdayunit3_router
+	edge [color=green3]
+	scc_hub -- sheffieldwednesdayunit4_router
+	edge [color=green3]
+	scc_hub -- sheffieldwednesdayunit5_router
+	edge [color=green3]
+	scc_hub -- kemptonparkunit1grandstand_router
+	edge [color=green3]
+	scc_hub -- kemptonparkunit2annex_router
+	edge [color=green3]
+	scc_hub -- kemptonparkunit3_router
+	edge [color=green3]
+	scc_hub -- "scientificgames(oldham)_router"
+	edge [color=green3]
+	scc_hub -- celticparkunit1_router
+	edge [color=green3]
+	scc_hub -- celticparkunit2_router
+	edge [color=green3]
+	scc_hub -- celticparkunit3_router
+	edge [color=green3]
+	scc_hub -- celticparkunit4_router
+	edge [color=green3]
+	scc_hub -- celticparkunit5_router
+	edge [color=green3]
+	scc_hub -- celticparkunit6_router
+	edge [color=green3]
+	scc_hub -- celticparkunit7_router
+	edge [color=green3]
+	scc_hub -- celticparkunit8_router
+	edge [color=green3]
+	scc_hub -- celticparkunit9_router
+	edge [color=green3]
+	scc_hub -- celticparkunit10_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit1_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit2_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit3_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit4_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit5_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit6_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit7_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit8_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit9_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit10_router
+	edge [color=green3]
+	scc_hub -- astonvillaparkunit11_router
+	edge [color=green3]
+	scc_hub -- celticparkhospitalitybettingareaunit1_router
+	edge [color=green3]
+	scc_hub -- celticparkhospitalitybettingareaunit2_router
+	edge [color=green3]
+	scc_hub -- celticparkhospitalitybettingareaunit3_router
+	edge [color=green3]
+	scc_hub -- celticparkhospitalitybettingareaunit4_router
+	edge [color=green3]
+	scc_hub -- leicester_router
+	edge [color=green3]
+	scc_hub -- marketrasen_router
+	edge [color=green3]
+	scc_hub -- musselburgh_router
+	edge [color=green3]
+	scc_hub -- newburyunit1berkshire_router
+	edge [color=green3]
+	scc_hub -- newburyunit2grandstand_router
+	edge [color=green3]
+	scc_hub -- cheltenhamunit1membersbar_router
+	edge [color=green3]
+	scc_hub -- cheltenhamunit2queenmotherstand_router
+	edge [color=green3]
+	scc_hub -- cheltenhamunit3suncentrecourse_router
+	edge [color=green3]
+	scc_hub -- cheltenhamunit4paddock_router
+	edge [color=green3]
+	scc_hub -- cheltenhamunit5lowerbettinghall_router
+	edge [color=green3]
+	scc_hub -- cheltenhamunit6grandstand_router
+	edge [color=green3]
+	scc_hub -- newmarketunit1rowleykingcharlesstatue_router
+	edge [color=green3]
+	scc_hub -- newmarketunit2rowleygrandstand_router
+	edge [color=green3]
+	scc_hub -- newmarketunit3rowleygrandstand_router
+	edge [color=green3]
+	scc_hub -- newmarketunit5julypaddock_router
+	edge [color=green3]
+	scc_hub -- newmarketunit6julymarwellbar_router
+	edge [color=green3]
+	scc_hub -- newtonabbotunit2_router
+	edge [color=green3]
+	scc_hub -- nottingham_router
+	edge [color=green3]
+	scc_hub -- perth_router
+	edge [color=green3]
+	scc_hub -- plumpton_router
+	edge [color=green3]
+	scc_hub -- pontefractunit1_router
+	edge [color=green3]
+	scc_hub -- pontefractunit2_router
+	edge [color=green3]
+	scc_hub -- redcar_router
+	edge [color=green3]
+	scc_hub -- salisbury_router
+	edge [color=green3]
+	scc_hub -- sandownparkunit1_router
+	edge [color=green3]
+	scc_hub -- sandownparkunit2_router
+	edge [color=green3]
+	scc_hub -- taunton_router
+	edge [color=green3]
+	scc_hub -- warwick_router
+	edge [color=green3]
+	scc_hub -- wincanton_router
+	edge [color=green3]
+	scc_hub -- yorkunit3champagnelawn_router
+	edge [color=green3]
+	scc_hub -- yorkunit6melrose_router
+	edge [color=green3]
+	scc_hub -- epsomdownsunit1grandstand_router
+	edge [color=green3]
+	scc_hub -- epsomdownsunit2qestand_router
+	edge [color=green3]
+	scc_hub -- sheffieldwednesdayunit6_router
+	edge [color=green3]
+	scc_hub -- sheffieldwednesdayunit7_router
+	edge [color=green3]
+	scc_hub -- plumpton2_router
+	edge [color=green3]
+	scc_hub -- cheltenhamunit7_router
+	edge [color=green3]
+	scc_hub -- cardiffcityfc_router01
+	edge [color=green3]
+	scc_hub -- birstall_router
+	edge [color=green3]
+	ld6_hub -- aintreeunit1aldanitibar_router
+	edge [color=green3]
+	ld6_hub -- aintreeunit2irishbar_router
+	edge [color=green3]
+	ld6_hub -- "thirskunit1(shrimp&stirrup)_router"
+	edge [color=green3]
+	ld6_hub -- thirskunit2_router
+	edge [color=green3]
+	ld6_hub -- statue_router
+	edge [color=green3]
+	ld6_hub -- hudsons_router
+	edge [color=green3]
+	ld6_hub -- carlisle_router
+	edge [color=green3]
+	ld6_hub -- greenwood_router
+	edge [color=green3]
+	ld6_hub -- boothferry_router
+	edge [color=green3]
+	ld6_hub -- springbank_router
+	edge [color=green3]
+	ld6_hub -- westhull_router
+	edge [color=green3]
+	ld6_hub -- nightjar_router
+	edge [color=green3]
+	ld6_hub -- holderness_router
+	edge [color=green3]
+	ld6_hub -- cartmel1_router
+	edge [color=green3]
+	ld6_hub -- paragon_router
+	edge [color=green3]
+	ld6_hub -- sutton_router
+	edge [color=green3]
+	ld6_hub -- catterickbridge_router
+	edge [color=green3]
+	ld6_hub -- "shannonst(usedtobestillorganireland)_router"
+	edge [color=green3]
+	ld6_hub -- westpark_router
+	edge [color=green3]
+	ld6_hub -- exeter_router
+	edge [color=green3]
+	ld6_hub -- newlands_router
+	edge [color=green3]
+	ld6_hub -- hamiltonpark_router
+	edge [color=green3]
+	ld6_hub -- anlaby_router
+	edge [color=green3]
+	ld6_hub -- "ayrmainstand(unit1)groundfloor_router"
+	edge [color=green3]
+	ld6_hub -- "ayrmainstand(unit2)1stfloor_router"
+	edge [color=green3]
+	ld6_hub -- marfleet_router
+	edge [color=green3]
+	ld6_hub -- mollison_router
+	edge [color=green3]
+	ld6_hub -- orchard_router
+	edge [color=green3]
+	ld6_hub -- samman_router
+	edge [color=green3]
+	ld6_hub -- bathstreet_router
+	edge [color=green3]
+	ld6_hub -- burrardstreet_router
+	edge [color=green3]
+	ld6_hub -- newstreet_router
+	edge [color=green3]
+	ld6_hub -- "poonahroad(akahalkettplace)_router"
+	edge [color=green3]
+	ld6_hub -- "charingcross(akasandstreet)_router"
+	edge [color=green3]
+	ld6_hub -- "fiveoaks(akacrownstores)_router"
+	edge [color=green3]
+	ld6_hub -- staubin_router
+	edge [color=green3]
+	ld6_hub -- redhouses_router
+	edge [color=green3]
+	ld6_hub -- ripon1_router
+	edge [color=green3]
+	ld6_hub -- ripon2_router
+	edge [color=green3]
+	ld6_hub -- ripon4_router
+	edge [color=green3]
+	ld6_hub -- conwaystreet_router
+	edge [color=green3]
+	ld6_hub -- goodwoodunit1lennox_router
+	edge [color=green3]
+	ld6_hub -- goodwoodunit2_router
+	edge [color=green3]
+	ld6_hub -- goodwoodunit3gordons_router
+	edge [color=green3]
+	ld6_hub -- haydockmainbettingshop_router
+	edge [color=green3]
+	ld6_hub -- haydocksportsbar_router
+	edge [color=green3]
+	ld6_hub -- haydockbefriendly_router
+	edge [color=green3]
+	ld6_hub -- huntingdon_router
+	edge [color=green3]
+	ld6_hub -- kelso_router
+	edge [color=green3]
+	ld6_hub -- sheffieldwednesdayunit1_router
+	edge [color=green3]
+	ld6_hub -- sheffieldwednesdayunit2_router
+	edge [color=green3]
+	ld6_hub -- sheffieldwednesdayunit3_router
+	edge [color=green3]
+	ld6_hub -- sheffieldwednesdayunit4_router
+	edge [color=green3]
+	ld6_hub -- sheffieldwednesdayunit5_router
+	edge [color=green3]
+	ld6_hub -- kemptonparkunit1grandstand_router
+	edge [color=green3]
+	ld6_hub -- kemptonparkunit2annex_router
+	edge [color=green3]
+	ld6_hub -- kemptonparkunit3_router
+	edge [color=green3]
+	ld6_hub -- "scientificgames(oldham)_router"
+	edge [color=green3]
+	ld6_hub -- celticparkunit1_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit2_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit3_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit4_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit5_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit6_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit7_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit8_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit9_router
+	edge [color=green3]
+	ld6_hub -- celticparkunit10_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit1_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit2_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit3_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit4_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit5_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit6_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit7_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit8_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit9_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit10_router
+	edge [color=green3]
+	ld6_hub -- astonvillaparkunit11_router
+	edge [color=green3]
+	ld6_hub -- celticparkhospitalitybettingareaunit1_router
+	edge [color=green3]
+	ld6_hub -- celticparkhospitalitybettingareaunit2_router
+	edge [color=green3]
+	ld6_hub -- celticparkhospitalitybettingareaunit3_router
+	edge [color=green3]
+	ld6_hub -- celticparkhospitalitybettingareaunit4_router
+	edge [color=green3]
+	ld6_hub -- leicester_router
+	edge [color=green3]
+	ld6_hub -- marketrasen_router
+	edge [color=green3]
+	ld6_hub -- musselburgh_router
+	edge [color=green3]
+	ld6_hub -- newburyunit1berkshire_router
+	edge [color=green3]
+	ld6_hub -- newburyunit2grandstand_router
+	edge [color=green3]
+	ld6_hub -- cheltenhamunit1membersbar_router
+	edge [color=green3]
+	ld6_hub -- cheltenhamunit2queenmotherstand_router
+	edge [color=green3]
+	ld6_hub -- cheltenhamunit3suncentrecourse_router
+	edge [color=green3]
+	ld6_hub -- cheltenhamunit4paddock_router
+	edge [color=green3]
+	ld6_hub -- cheltenhamunit5lowerbettinghall_router
+	edge [color=green3]
+	ld6_hub -- cheltenhamunit6grandstand_router
+	edge [color=green3]
+	ld6_hub -- newmarketunit1rowleykingcharlesstatue_router
+	edge [color=green3]
+	ld6_hub -- newmarketunit2rowleygrandstand_router
+	edge [color=green3]
+	ld6_hub -- newmarketunit3rowleygrandstand_router
+	edge [color=green3]
+	ld6_hub -- newmarketunit5julypaddock_router
+	edge [color=green3]
+	ld6_hub -- newmarketunit6julymarwellbar_router
+	edge [color=green3]
+	ld6_hub -- newtonabbotunit2_router
+	edge [color=green3]
+	ld6_hub -- nottingham_router
+	edge [color=green3]
+	ld6_hub -- perth_router
+	edge [color=green3]
+	ld6_hub -- plumpton_router
+	edge [color=green3]
+	ld6_hub -- pontefractunit1_router
+	edge [color=green3]
+	ld6_hub -- pontefractunit2_router
+	edge [color=green3]
+	ld6_hub -- redcar_router
+	edge [color=green3]
+	ld6_hub -- salisbury_router
+	edge [color=green3]
+	ld6_hub -- sandownparkunit1_router
+	edge [color=green3]
+	ld6_hub -- sandownparkunit2_router
+	edge [color=green3]
+	ld6_hub -- taunton_router
+	edge [color=green3]
+	ld6_hub -- warwick_router
+	edge [color=green3]
+	ld6_hub -- wincanton_router
+	edge [color=green3]
+	ld6_hub -- yorkunit3champagnelawn_router
+	edge [color=green3]
+	ld6_hub -- yorkunit6melrose_router
+	edge [color=green3]
+	ld6_hub -- epsomdownsunit1grandstand_router
+	edge [color=green3]
+	ld6_hub -- epsomdownsunit2qestand_router
+	edge [color=green3]
+	ld6_hub -- sheffieldwednesdayunit6_router
+	edge [color=green3]
+	ld6_hub -- sheffieldwednesdayunit7_router
+	edge [color=green3]
+	ld6_hub -- plumpton2_router
+	edge [color=green3]
+	ld6_hub -- cheltenhamunit7_router
+	edge [color=green3]
+	ld6_hub -- birstall_router
+}

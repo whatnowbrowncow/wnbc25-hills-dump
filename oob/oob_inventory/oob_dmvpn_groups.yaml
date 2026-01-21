@@ -1,0 +1,9 @@
+---
+hubs:
+  platform: ios
+  data:
+    role: hubs
+spokes:
+  platform: ios
+  data:
+    role: spokes

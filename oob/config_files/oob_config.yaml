@@ -1,0 +1,15 @@
+---
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/dbdev/oob/oob_inventory/oob_hosts.yaml"
+        group_file: "/dbdev/oob/oob_inventory/oob_groups.yaml"
+        defaults_file: "/dbdev/oob/oob_inventory/defaults.yaml"
+
+logging:
+    enabled: True
+
+runner:
+    plugin: threaded
+    options:
+        num_workers: 20
