@@ -1,0 +1,86 @@
+## EPG data for testing static binding
+epgs:
+
+  - name: poc_mig_test
+    tenant: ant-tenant
+    app_prof: migration_poc
+    encap_id: 2294
+
+
+  - name: poc_mig_wan_group-vrf
+    tenant: ant-tenant
+    app_prof: migration_poc
+    encap_id: 2296
+
+
+  - name: auto-demo_ext-web-10.65.208.0s23
+    tenant: auto-demo
+    app_prof: auto-demo
+    encap_id: 2789
+
+
+  - name: core-services-10.61.12.0s24
+    tenant: common
+    app_prof: cde-mgmt
+    encap_id: 2124
+
+
+  - name: jumphosts-10.61.15.0s24
+    tenant: common
+    app_prof: cde-mgmt
+    encap_id: 1109
+
+
+  - name: mano-10.61.13.0s24
+    tenant: common
+    app_prof: cde-mgmt
+    encap_id: 2123
+
+
+  - name: server-mgmt-10.61.10.0s23
+    tenant: common
+    app_prof: cde-mgmt
+    encap_id: 1106
+
+
+  - name: vsphere-10.61.8.0s23
+    tenant: common
+    app_prof: cde-mgmt
+    encap_id: 1105
+
+
+  - name: uk-ld6-fw05-ccl
+    tenant: common
+    app_prof: comm-fw
+    encap_id: 1600
+
+
+  - name: group-services-10.19.34.0s23
+    tenant: common
+    app_prof: group-services
+    encap_id: 2755
+
+
+  - name: build-10.61.209.0s24
+    tenant: common
+    app_prof: internal
+    encap_id: 34
+
+
+  - name: storage-replication-10.79.34.0s27
+    tenant: common
+    app_prof: storage-replication
+    encap_id: 1621
+
+
+  - name: JJ
+    tenant: jayjay-tenant
+    app_prof: cde-mgmt
+    encap_id: 1680
+
+
+  - name: corp_app-10.62.214.0s23
+    tenant: production
+    app_prof: corp
+    encap_id: 1644
+

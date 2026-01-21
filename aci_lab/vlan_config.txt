@@ -1,0 +1,44 @@
+## VLANs to be configured on the switches
+
+VLAN 2294
+name poc_mig_test
+
+VLAN 2296
+name poc_mig_wan_group-vrf
+
+VLAN 2789
+name auto-demo_ext-web-10.65.208.0s23
+
+VLAN 2124
+name core-services-10.61.12.0s24
+
+VLAN 1109
+name jumphosts-10.61.15.0s24
+
+VLAN 2123
+name mano-10.61.13.0s24
+
+VLAN 1106
+name server-mgmt-10.61.10.0s23
+
+VLAN 1105
+name vsphere-10.61.8.0s23
+
+VLAN 1600
+name uk-ld6-fw05-ccl
+
+VLAN 2755
+name group-services-10.19.34.0s23
+
+VLAN 34
+name build-10.61.209.0s24
+
+VLAN 1621
+name storage-replication-10.79.34.0s27
+
+VLAN 1680
+name JJ
+
+VLAN 1644
+name corp_app-10.62.214.0s23
+

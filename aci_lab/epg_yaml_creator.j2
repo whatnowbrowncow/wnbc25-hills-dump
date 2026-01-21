@@ -1,0 +1,18 @@
+## EPG data for testing static binding
+epgs:
+{% for tenant in data['Tenants'] %}
+{%   for ap in data['Tenants'][tenant]['Application_profiles'] %}
+{%     for epg in data['Tenants'][tenant]['Application_profiles'][ap]['EPGs'] %}
+
+{%       for endpoint,encap in data['Tenants'][tenant]['Application_profiles'][ap]['EPGs'][epg]['Endpoints']|items %}
+{%         if loop.first%}
+  - name: {{epg}}
+    tenant: {{tenant}}
+    app_prof: {{ap}}
+    encap_id: {{data['Tenants'][tenant]['Application_profiles'][ap]['EPGs'][epg]['FW_encap_vlan']}}
+
+{%         endif %}
+{%       endfor %}
+{%     endfor %}
+{%   endfor %}
+{% endfor %}

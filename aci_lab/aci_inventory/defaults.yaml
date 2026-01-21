@@ -1,0 +1,10 @@
+---
+  username: dburton-local
+  password: Daveyb115
+  data:
+    network_type: dmvpn
+  connection_options:
+    netmiko:
+      extras:
+        secret: Daveyb115
+        timeout: 20

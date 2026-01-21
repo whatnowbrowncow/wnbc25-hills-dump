@@ -1,0 +1,149 @@
+#uk-ld6-lab-apic1:
+#  hostname: 10.112.129.173
+#  groups:
+#    - apics
+
+uk-ld6-apic1:
+  hostname: 10.112.129.98
+  groups:
+    - apics
+
+uk-ld6-ls01:
+  hostname: 10.112.129.101
+  groups:
+    - leaf
+
+uk-ld6-ls02:
+  hostname: 10.112.129.102
+  groups:
+    - leaf
+
+uk-ld6-ls03:
+  hostname: 10.112.129.103
+  groups:
+    - leaf
+
+uk-ld6-ls04:
+  hostname: 10.112.129.104
+  groups:
+    - leaf
+
+uk-ld6-ls05:
+  hostname: 10.112.129.105
+  groups:
+    - leaf
+
+uk-ld6-ls06:
+  hostname: 10.112.129.106
+  groups:
+    - leaf
+
+uk-ld6-ls07:
+  hostname: 10.112.129.107
+  groups:
+    - leaf
+
+uk-ld6-ls08:
+  hostname: 10.112.129.108
+  groups:
+    - leaf
+
+uk-ld6-ls09:
+  hostname: 10.112.129.109
+  groups:
+    - leaf
+
+uk-ld6-ls10:
+  hostname: 10.112.129.110
+  groups:
+    - leaf
+
+uk-ld6-ls11:
+  hostname: 10.112.129.111
+  groups:
+    - leaf
+
+uk-ld6-ls12:
+  hostname: 10.112.129.112
+  groups:
+    - leaf
+
+uk-ld6-ls13:
+  hostname: 10.112.129.113
+  groups:
+    - leaf
+
+uk-ld6-ls14:
+  hostname: 10.112.129.114
+  groups:
+    - leaf
+
+uk-ld6-ls15:
+  hostname: 10.112.129.115
+  groups:
+    - leaf
+
+uk-ld6-ls16:
+  hostname: 10.112.129.116
+  groups:
+    - leaf
+
+uk-ld6-ls17:
+  hostname: 10.112.129.117
+  groups:
+    - leaf
+
+uk-ld6-ls18:
+  hostname: 10.112.129.118
+  groups:
+    - leaf
+
+uk-ld6-ls19:
+  hostname: 10.112.129.119
+  groups:
+    - leaf
+
+uk-ld6-ls20:
+  hostname: 10.112.129.120
+  groups:
+    - leaf
+
+uk-ld6-ls21:
+  hostname: 10.112.129.121
+  groups:
+    - leaf
+
+uk-ld6-ls22:
+  hostname: 10.112.129.122
+  groups:
+    - leaf
+
+uk-ld6-ls23:
+  hostname: 10.112.129.123
+  groups:
+    - leaf
+
+uk-ld6-ls24:
+  hostname: 10.112.129.124
+  groups:
+    - leaf
+
+uk-ld6-ls25:
+  hostname: 10.112.129.125
+  groups:
+    - leaf
+
+uk-ld6-ls26:
+  hostname: 10.112.129.126
+  groups:
+    - leaf
+
+uk-ld6-ls31:
+  hostname: 10.112.129.131
+  groups:
+    - leaf
+
+uk-ld6-ls32:
+  hostname: 10.112.129.132
+  groups:
+    - leaf

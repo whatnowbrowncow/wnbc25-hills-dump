@@ -1,0 +1,19 @@
+---
+apics:
+  platform: nxos
+  data:
+    role: apics
+  connection_options:
+    netmiko:
+      extras:
+        secret: Daveyb115
+        #read_timeout: 20
+leaf:
+  platform: nxos
+  data:
+    role: leaf
+  connection_options:
+    netmiko:
+      extras:
+        secret: Daveyb115
+        #read_timeout: 20

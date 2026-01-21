@@ -1,0 +1,15 @@
+---
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/dbdev/aci_lab/aci_inventory/hosts.yaml"
+        group_file: "/dbdev/aci_lab/aci_inventory/groups.yaml"
+        defaults_file: "/dbdev/aci_lab/aci_inventory/defaults.yaml"
+
+logging:
+    enabled: True
+
+runner:
+    plugin: threaded
+    options:
+        num_workers: 20

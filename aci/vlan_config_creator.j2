@@ -1,0 +1,11 @@
+## VLANs to be configured on the switches
+
+{% for tenant in data['Tenants'] %}
+{%   for ap in data['Tenants'][tenant]['Application_profiles'] %}
+{%     for epg in data['Tenants'][tenant]['Application_profiles'][ap]['EPGs'] %}
+VLAN {{data['Tenants'][tenant]['Application_profiles'][ap]['EPGs'][epg]['FW_encap_vlan']}}
+name {{epg}}
+
+{%     endfor %}
+{%   endfor %}
+{% endfor %}

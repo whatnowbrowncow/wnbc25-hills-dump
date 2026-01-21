@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 300px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15p x;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Network Request Form</h1>
+    <div class="form-container">
+        <form action="#" method="POST">
+            <label for="textBox1">Name:</label>
+            <input type="text" id="textBox1" name="textBox1" required>
+
+            <label for="textBox2">Department:</label>
+            <input type="text" id="textBox2" name="textBox2" required>
+
+            <label for="dropdown1">Site:</label>
+            <select id="dropdown1" name="dropdown1" required>
+                <option value="" disabled selected>Select an option</option>
+{%for site in ext_atr_data.Site[0].list_values%}
+                <option value="option1">{{site.value}}</option>
+{%endfor%}
+            </select>
+
+            <label for="dropdown2">Environment:</label>
+            <select id="dropdown2" name="dropdown2" required>
+                <option value="" disabled selected>Select an option</option>
+{%for env in ext_atr_data.Environment[0].list_values%}
+                <option value="option1">{{env.value}}</option>
+{%endfor%}
+            </select>
+
+            <label for="dropdown3">Card Data Environment (CDE):</label>
+            <select id="dropdown3" name="dropdown3" required>
+                <option value="" disabled selected>Select an option</option>
+{%for cde_value in ext_atr_data.CardData[0].list_values%}
+                <option value="option1">{{cde_value.value}}</option>
+{%endfor%}
+            </select>
+            
+            <label for="checkbox">I agree that the information entered here is correct to the best of my knowledge and have paid close attention questions around the Card Data Environment (CDE):</label>
+            <input type="checkbox" id="checkbox" name="checkbox" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>

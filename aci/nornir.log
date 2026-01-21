@@ -1,0 +1,1112 @@
+2023-05-10 15:29:11,993 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f7733c1ab50>} on 1 hosts
+2023-05-10 15:29:51,019 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f9e962eea00>} on 1 hosts
+2023-05-10 16:23:06,860 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5d10368fa0>} on 1 hosts
+2023-05-10 16:43:35,370 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f6353088670>} on 1 hosts
+2023-05-11 08:57:41,833 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7feec1561670>} on 1 hosts
+2023-05-11 09:03:13,798 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fde3adf66d0>} on 1 hosts
+2023-05-11 09:59:33,616 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fbac9d7b700>} on 1 hosts
+2023-05-11 09:59:57,663 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fe74262d700>} on 1 hosts
+2023-05-11 10:19:54,275 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5159df2850>} on 1 hosts
+2023-05-11 10:22:12,175 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5669c53850>} on 1 hosts
+2023-05-11 10:26:00,321 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fc217d376d0>} on 1 hosts
+2023-05-11 10:26:19,682 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5f696fd850>} on 1 hosts
+2023-05-11 10:27:50,909 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f03379de6d0>} on 1 hosts
+2023-05-11 10:28:02,080 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'uk\\-ld6\\-apic1\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2023-05-11 10:28:02,080 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 44, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-05-11 10:29:10,971 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f50bf79b7f0>} on 1 hosts
+2023-05-11 10:29:22,105 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'uk\\-ld6\\-apic1\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2023-05-11 10:29:22,108 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 44, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-05-11 10:30:39,074 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f99a1604670>} on 1 hosts
+2023-05-11 10:30:50,457 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'uk\\-ld6\\-apic1\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2023-05-11 10:30:50,458 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 44, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-05-11 10:31:14,432 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fa671b96640>} on 1 hosts
+2023-05-11 10:31:14,434 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'read_timeout'
+
+2023-05-11 10:31:14,434 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-lab-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 44, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-05-11 10:35:46,069 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff89afcb6a0>} on 1 hosts
+2023-05-11 10:57:47,034 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff5c6c22700>} on 1 hosts
+2023-05-11 10:58:54,624 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fde2301a700>} on 1 hosts
+2023-05-11 11:05:09,250 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f2cade3c730>} on 1 hosts
+2023-05-11 11:11:00,799 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f527448e820>} on 1 hosts
+2023-05-11 11:12:33,203 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff9a8155640>} on 1 hosts
+2023-05-11 11:21:17,321 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff8c709b7f0>} on 1 hosts
+2023-05-11 11:24:52,205 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f1377c4b910>} on 1 hosts
+2023-05-11 11:28:11,407 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5eea48e7f0>} on 1 hosts
+2023-05-11 11:31:03,406 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3b7aea57f0>} on 1 hosts
+2023-05-12 14:43:33,456 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f30032a3d90>} on 1 hosts
+2023-05-15 10:56:33,997 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f84cda18310>} on 1 hosts
+2023-05-15 10:58:49,129 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7faf875f7a30>} on 1 hosts
+2023-05-15 10:59:27,784 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f05aca10310>} on 1 hosts
+2023-05-15 11:00:02,915 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fefd42b1310>} on 1 hosts
+2023-05-15 11:00:42,163 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f74d0053910>} on 1 hosts
+2023-05-15 11:01:25,660 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f823a92f910>} on 1 hosts
+2023-05-15 11:01:48,877 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3672db9fa0>} on 1 hosts
+2023-05-15 11:02:11,993 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f4cbc1fe9d0>} on 1 hosts
+2023-05-15 11:02:36,188 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f134c9bb910>} on 1 hosts
+2023-05-15 11:03:01,500 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fee7d347310>} on 1 hosts
+2023-05-15 11:04:37,593 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f8f5fa9cfa0>} on 1 hosts
+2023-05-15 11:04:50,918 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ffb38851a30>} on 1 hosts
+2023-05-15 11:05:25,254 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f76676b0310>} on 1 hosts
+2023-05-15 11:05:47,651 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fd555373fa0>} on 1 hosts
+2023-05-15 11:08:24,064 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f00780effa0>} on 1 hosts
+2023-05-15 11:08:38,966 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7efd6308b310>} on 1 hosts
+2023-05-15 11:10:14,261 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f9cd7d17310>} on 1 hosts
+2023-05-15 11:17:05,626 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fec65404310>} on 1 hosts
+2023-05-15 11:17:38,801 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fb364801310>} on 1 hosts
+2023-05-15 11:17:58,810 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fc029d47b20>} on 1 hosts
+2023-05-15 11:18:59,675 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f67291799d0>} on 1 hosts
+2023-05-15 11:19:17,595 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f83de2b0910>} on 1 hosts
+2023-05-15 11:20:29,520 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f0ffe8eefa0>} on 1 hosts
+2023-05-15 11:20:57,575 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3f12fad310>} on 1 hosts
+2023-05-15 11:21:38,131 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f1e2b61a9d0>} on 1 hosts
+2023-05-15 11:22:00,971 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f0768fe4910>} on 1 hosts
+2023-05-16 16:02:10,524 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f1688fd16d0>} on 1 hosts
+2023-05-16 16:02:48,435 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ffba296b6d0>} on 1 hosts
+2023-05-16 16:03:01,819 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f59cfbe8700>} on 1 hosts
+2023-05-16 16:04:39,981 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f17f91e86d0>} on 1 hosts
+2023-05-16 16:08:57,514 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f42175e9940>} on 1 hosts
+2023-05-16 16:10:17,256 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f6a41253910>} on 1 hosts
+2023-05-16 16:11:15,718 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f286ee94700>} on 1 hosts
+2023-05-17 08:20:03,010 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fb1c479b700>} on 1 hosts
+2023-05-17 08:21:35,369 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fc76b9c5970>} on 1 hosts
+2023-05-17 08:23:03,733 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fadac0c2700>} on 1 hosts
+2023-05-17 08:27:12,971 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f61f9f67700>} on 1 hosts
+2023-05-17 08:53:41,091 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f8d8adf7700>} on 1 hosts
+2023-05-17 09:11:24,155 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f8d4c01d700>} on 1 hosts
+2023-05-17 09:53:33,183 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f1db3578700>} on 1 hosts
+2023-06-06 15:07:33,444 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7efe88ef9310>} on 1 hosts
+2023-06-06 15:08:02,688 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fbd50d4d910>} on 1 hosts
+2023-06-06 16:34:38,797 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fa05a01e730>} on 1 hosts
+2023-06-07 13:57:42,465 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f518f3c79d0>} on 1 hosts
+2023-06-07 14:00:34,769 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5542cbb9a0>} on 1 hosts
+2023-06-07 14:05:11,513 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff37fd899d0>} on 1 hosts
+2023-06-07 14:08:27,773 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f2467c239a0>} on 1 hosts
+2023-06-07 14:14:17,353 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fb7e46325e0>} on 1 hosts
+2023-06-07 14:22:26,712 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f05472bc9a0>} on 1 hosts
+2023-06-07 14:32:51,404 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fafcd5799a0>} on 1 hosts
+2023-06-08 10:16:12,868 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f4c1da5e970>} on 1 hosts
+2023-06-08 10:28:55,673 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fe44fd909d0>} on 1 hosts
+2023-06-14 14:17:47,806 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fb2a651d6d0>} on 1 hosts
+2023-06-14 14:22:13,791 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f796a1bc6d0>} on 1 hosts
+2023-06-19 15:22:15,351 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7efc8ba47310>} on 1 hosts
+2023-06-20 16:14:34,895 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f750246a9d0>} on 1 hosts
+2023-06-26 11:49:25,692 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fc0a223af10>} on 1 hosts
+2023-06-26 12:58:15,013 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f1912122f10>} on 1 hosts
+2023-06-27 16:45:24,395 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f56def86f10>} on 1 hosts
+2023-06-28 11:47:45,729 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5e0b2e9af0>} on 1 hosts
+2023-06-29 14:02:02,908 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f7391c03190>} on 1 hosts
+2023-07-03 11:35:39,638 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3826eaa220>} on 1 hosts
+2023-07-03 11:36:54,895 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f6dba78e6d0>} on 1 hosts
+2023-07-03 11:39:21,199 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f4fa51a8f40>} on 1 hosts
+2023-07-03 11:40:04,281 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fad78b97700>} on 1 hosts
+2023-07-03 11:59:47,917 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5792a45f40>} on 1 hosts
+2023-07-03 12:52:20,723 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fd5f08f1f40>} on 1 hosts
+2023-07-03 12:52:45,704 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fbb3f7b56d0>} on 1 hosts
+2023-07-03 16:15:43,188 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f6963bc7310>} on 1 hosts
+2023-07-04 15:46:11,226 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f5609906310>} on 1 hosts
+2023-07-05 15:04:20,483 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fbc3a6289d0>} on 1 hosts
+2023-07-05 15:05:25,745 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f644b206310>} on 1 hosts
+2023-07-05 15:23:30,233 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f9af7f61f40>} on 1 hosts
+2023-07-05 15:23:54,284 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fa0238796d0>} on 1 hosts
+2023-07-06 06:06:02,646 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f76bf9f8910>} on 1 hosts
+2023-07-06 06:07:25,118 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f10567406d0>} on 1 hosts
+2023-07-06 06:34:02,406 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fa854268b20>} on 1 hosts
+2023-07-06 06:42:54,689 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3991cd1af0>} on 1 hosts
+2023-07-06 06:45:04,964 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f0015b4cf40>} on 1 hosts
+2023-07-06 06:51:37,660 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fecde57eb20>} on 1 hosts
+2023-07-06 07:01:27,035 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f57d4f0df40>} on 1 hosts
+2023-07-06 08:14:41,572 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f918d2ee6d0>} on 1 hosts
+2023-07-06 10:32:48,059 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fc4aef51b20>} on 1 hosts
+2023-07-07 09:27:04,085 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f62869b69d0>} on 1 hosts
+2023-07-07 12:47:47,410 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ffb637d9730>} on 1 hosts
+2023-07-19 15:39:56,963 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f7ff9529310>} on 1 hosts
+2023-07-19 15:40:25,301 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'uk\\-ld6\\-apic1\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2023-07-19 15:40:25,302 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 45, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-07-19 15:47:41,995 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f6490caa700>} on 1 hosts
+2023-07-24 14:57:55,107 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fab3c8571f0>} on 1 hosts
+2023-07-24 14:58:05,146 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.98:22
+
+
+
+2023-07-24 14:58:05,147 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 45, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-07-24 14:58:52,195 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fbdb124af10>} on 1 hosts
+2023-07-24 14:59:02,211 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.98:22
+
+
+
+2023-07-24 14:59:02,212 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 45, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-07-24 15:00:00,551 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f07f93161f0>} on 1 hosts
+2023-07-24 15:46:52,437 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f6a12f67f10>} on 1 hosts
+2023-07-28 09:57:57,837 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f0ecbceaf10>} on 1 hosts
+2023-08-08 14:16:25,691 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fd242677a30>} on 1 hosts
+2023-08-09 15:30:33,020 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f9c2e9bd700>} on 1 hosts
+2023-08-10 10:14:53,660 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f671b6526d0>} on 1 hosts
+2023-08-10 13:15:10,952 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3c9183af70>} on 1 hosts
+2023-08-10 13:26:42,296 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f8753d38880>} on 32 hosts
+2023-08-10 13:26:57,140 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls28': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.128:22
+
+
+
+2023-08-10 13:26:57,140 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls27': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.127:22
+
+
+
+2023-08-10 13:26:57,141 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls28': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:26:57,141 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls27': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:26:57,147 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls29': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.129:22
+
+
+
+2023-08-10 13:26:57,147 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls29': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:26:57,150 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls30': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.130:22
+
+
+
+2023-08-10 13:26:57,150 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls30': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:28:28,913 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f4008de5eb0>} on 32 hosts
+2023-08-10 13:28:49,877 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls27': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.127:22
+
+
+
+2023-08-10 13:28:49,878 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls27': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:28:49,976 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls28': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.128:22
+
+
+
+2023-08-10 13:28:49,977 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls28': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:28:50,068 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls29': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.129:22
+
+
+
+2023-08-10 13:28:50,068 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls29': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:28:50,204 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls30': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.130:22
+
+
+
+2023-08-10 13:28:50,206 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls30': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:29:14,972 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f697a6347f0>} on 32 hosts
+2023-08-10 13:29:36,355 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls27': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.127:22
+
+
+
+2023-08-10 13:29:36,356 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls27': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:29:36,424 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls28': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.128:22
+
+
+
+2023-08-10 13:29:36,424 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls28': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:29:36,477 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls29': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.129:22
+
+
+
+2023-08-10 13:29:36,477 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls29': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:29:36,678 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls30': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1046, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/paramiko/client.py", line 358, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 365, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 439, in __init__
+    self._open()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 444, in _open
+    self.establish_connection()
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1068, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_nxos 10.112.129.130:22
+
+
+
+2023-08-10 13:29:36,678 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-ls30': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "leaf_endpoint_finder.py", line 46, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoint | grep {}".format(endpoint), use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-10 13:30:34,757 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff30f598ee0>} on 28 hosts
+2023-08-10 13:31:15,273 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fdd4afbdee0>} on 28 hosts
+2023-08-10 13:31:41,696 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f1face567f0>} on 28 hosts
+2023-08-10 13:32:13,129 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f6741ea2eb0>} on 28 hosts
+2023-08-10 13:35:05,905 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff28a1887f0>} on 28 hosts
+2023-08-10 13:35:50,987 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f391edd6eb0>} on 1 hosts
+2023-08-10 13:46:55,909 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f666b5e87f0>} on 28 hosts
+2023-08-14 10:41:16,570 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f7b1a53f550>} on 1 hosts
+2023-08-14 11:04:46,276 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f0aa0553550>} on 1 hosts
+2023-08-14 11:05:07,780 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'uk\\-ld6\\-apic1\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2023-08-14 11:05:07,781 - nornir.core.task -    ERROR -      start() - Host 'uk-ld6-apic1': task 'gatherfacts' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "apic_epg_parse.py", line 45, in gatherfacts
+    task.run(task=netmiko_send_command, command_string="show endpoints", use_genie=True, use_timing=False, read_timeout=20)
+  File "/home/dbdev/.pyenv/versions/python3.8.10/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2023-08-14 11:05:28,258 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3e50a364f0>} on 1 hosts
+2023-08-14 11:12:44,252 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f8b3b152550>} on 1 hosts
+2023-08-14 11:48:10,652 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff6a359f550>} on 1 hosts
+2023-08-14 11:52:30,279 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7feffa15d550>} on 1 hosts
+2023-08-14 12:06:28,642 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f3f2c606550>} on 1 hosts
+2023-08-14 13:01:46,655 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f63299ef550>} on 1 hosts
+2023-08-14 13:30:31,874 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fe2e0123550>} on 1 hosts
+2023-08-14 13:39:28,334 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f9e109254f0>} on 1 hosts
+2023-08-14 15:29:26,244 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f1f6e9bd730>} on 1 hosts
+2023-08-15 15:16:33,555 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f0868f40910>} on 1 hosts
+2023-08-17 10:37:49,515 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f28ea18f0a0>} on 1 hosts
+2023-08-17 12:20:36,316 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fe6f9e0bf40>} on 1 hosts
+2023-08-18 16:16:09,565 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fed1ce7bf40>} on 1 hosts
+2023-08-21 11:43:44,438 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f7b0acdd550>} on 1 hosts
+2023-08-23 09:11:09,559 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fd43090e700>} on 1 hosts
+2023-08-23 10:03:20,792 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f8ac268d700>} on 1 hosts
+2023-08-25 11:26:29,436 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7f77301a5b20>} on 1 hosts
+2023-10-11 11:17:28,599 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fde5911f580>} on 1 hosts
+2024-07-23 13:12:27,095 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7fc6022eafd0>} on 1 hosts
+2024-07-23 13:16:25,998 -  nornir.core -     INFO -        run() - Running task 'gatherfacts' with args {'netmiko_bar': <tqdm.std.tqdm object at 0x7ff287114fd0>} on 1 hosts

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 300px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15p x;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Network Request Form</h1>
+    <div class="form-container">
+        <form action="#" method="POST">
+            <label for="textBox1">Name:</label>
+            <input type="text" id="textBox1" name="textBox1" required>
+
+            <label for="textBox2">Department:</label>
+            <input type="text" id="textBox2" name="textBox2" required>
+
+            <label for="dropdown1">Site:</label>
+            <select id="dropdown1" name="dropdown1" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="option1">888 Corporate - Gibraltar</option>
+                <option value="option1">888 Corporate - Israel</option>
+                <option value="option1">888 Corporate - Romania</option>
+                <option value="option1">888 Dublin Spectate</option>
+                <option value="option1">888 Production - AWS-RM</option>
+                <option value="option1">888 Production - Delaware</option>
+                <option value="option1">888 Production - Dublin</option>
+                <option value="option1">888 Production - Kiev</option>
+                <option value="option1">888 Production - NJ-Holdings</option>
+                <option value="option1">888 Production - QA</option>
+                <option value="option1">888 Production - Telx Holdings</option>
+                <option value="option1">DE-FR7 - Germany Frankfurt FR7 (Equinix)</option>
+                <option value="option1">EU-WEST-1 (Dublin)</option>
+                <option value="option1">EU-WEST-2 (London)</option>
+                <option value="option1">GI-MPL - Mount Pleasant DC, Gib</option>
+                <option value="option1">IE-DB2 - Ireland Dublin DB2 (Equinix)</option>
+                <option value="option1">IE-DB3 - Ireland Dublin DB3 (Equinix)</option>
+                <option value="option1">IT-ML2 - Italy Milan ML2 (Equinix)</option>
+                <option value="option1">IT-ROM - Sogei Rome</option>
+                <option value="option1">MT-HAN - Mr Green - Handaq Malta</option>
+                <option value="option1">MT-MSC - Malta SmartCity</option>
+                <option value="option1">MT-MSC2 - Mr Green - Malta SmartCity</option>
+                <option value="option1">MT-SLM - Mr Green - Sliema Malta</option>
+                <option value="option1">Network Backbone</option>
+                <option value="option1">PH-MNL - Manila Aseana Office</option>
+                <option value="option1">PL-KRK - Krakow Office, Poland</option>
+                <option value="option1">Retail LBO</option>
+                <option value="option1">Third Party / Off Net</option>
+                <option value="option1">UK-BFA - Bedford Avenue, London</option>
+                <option value="option1">UK-BRS - Birstall DC, Wakefield</option>
+                <option value="option1">UK-LD6 - Equinix LD6, Slough</option>
+                <option value="option1">UK-LDS - West Village, Leeds</option>
+                <option value="option1">UK-MA3 - MA3 DC, Manchester</option>
+                <option value="option1">UK-MAN - Equinix MA3, Manchester</option>
+                <option value="option1">UK-MDC - Media City</option>
+                <option value="option1">UK-MTK - Milton Keynes</option>
+                <option value="option1">UK-SC1 - SCC DC, Birmingham</option>
+                <option value="option1">UK-SOV - Sovereign House, London</option>
+                <option value="option1">UK-STJ - St Johns, Leeds</option>
+                <option value="option1">VMC SDDC</option>
+                <option value="option1">VMC-RETAIL-PRD-SDDC-EU2</option>
+                <option value="option1">VMC-SCC-NON-WHC-PROD-SDDC-EU1</option>
+                <option value="option1">VMC-SCC-WHC-PROD-SDDC-EU1</option>
+                <option value="option1">888 Production - Azure</option>
+            </select>
+
+            <label for="dropdown2">Environment:</label>
+            <select id="dropdown2" name="dropdown2" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="option1">Common Services</option>
+                <option value="option1">Corporate</option>
+                <option value="option1">Development</option>
+                <option value="option1">Disaster Recovery</option>
+                <option value="option1">Fairness</option>
+                <option value="option1">Lab</option>
+                <option value="option1">Performance Test Offshore</option>
+                <option value="option1">Performance Test Onshore</option>
+                <option value="option1">Pre-Prod Shared</option>
+                <option value="option1">Pre-Prod1</option>
+                <option value="option1">Pre-Prod2</option>
+                <option value="option1">Pre-Prod3</option>
+                <option value="option1">Production</option>
+                <option value="option1">Retail Estate</option>
+                <option value="option1">Retail Test 1</option>
+                <option value="option1">Retail Test 2</option>
+                <option value="option1">Retail Test 3</option>
+                <option value="option1">Retail Test Shared</option>
+                <option value="option1">Staging</option>
+                <option value="option1">System Test</option>
+                <option value="option1">Test Shared</option>
+                <option value="option1">Transit</option>
+                <option value="option1">Non Production</option>
+                <option value="option1">spare</option>
+                <option value="option1">Certification</option>
+                <option value="option1">888 Production</option>
+                <option value="option1">888 QA</option>
+            </select>
+
+            <label for="dropdown3">Card Data Environment (CDE):</label>
+            <select id="dropdown3" name="dropdown3" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="option1">cde</option>
+                <option value="option1">ncde</option>
+                <option value="option1">access</option>
+            </select>
+            
+            <label for="checkbox">I agree that the information entered here is correct to the best of my knowledge and have paid close attention questions around the Card Data Environment (CDE):</label>
+            <input type="checkbox" id="checkbox" name="checkbox" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>

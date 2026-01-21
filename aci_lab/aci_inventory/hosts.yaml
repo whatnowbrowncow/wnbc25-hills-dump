@@ -1,0 +1,4 @@
+uk-ld6-lab-apic1:
+  hostname: 10.112.129.173
+  groups:
+    - apics
