@@ -1,0 +1,26 @@
+ip access-list extended 102
+ remark Allow ICMP
+ permit icmp any any
+ remark Remote Store Subnets
+ permit ip any any
+ip access-list extended 121
+ remark Allow ICMP
+ permit icmp any any
+ remark Allow Local 120 and 130 Subnets
+ permit ip 10.161.136.0 0.0.0.31 10.162.136.0 0.0.0.31
+ permit ip 10.162.136.0 0.0.0.31 10.161.136.0 0.0.0.31
+ remark Remote Store Subnets
+ permit ip any any
+ip access-list extended 141
+ remark Allow ICMP
+ permit icmp any any
+ remark Store to Store Voip Calls
+ permit udp any 10.163.0.0 0.0.255.255 range 16384 32767
+ remark Remote Store Subnets
+ permit ip any any
+interface GigabitEthernet0/0/0.10
+ip access-group 102 in
+interface GigabitEthernet0/0/0.120
+ip access-group 121 in
+interface GigabitEthernet0/0/0.130
+ip access-group 121 in

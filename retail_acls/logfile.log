@@ -1,0 +1,324 @@
+[34m##################[0m
+[34mStep [0m[1;34m1[0m[34m of [0m[1;34m5[0m[34m - Gathering device facts [0m[1;34m([0m[1;34m2[0m[34m devices[0m[1;34m)[0m[34m, this may take a while[0m
+[34m##################[0m
+Skip Checking hostnames
+[1;3;31mThe following devices have failed and will be removed from the final results:[0m
+[31muk-brs-lab-cr01[0m[1;31m:TCP connection to device failed.[0m
+[31muk-brs-lab-cr02[0m[1;31m:TCP connection to device failed.[0m
+[3;34m##################[0m
+[3;34mStep [0m[1;3;34m2[0m[3;34m of [0m[1;3;34m5[0m[3;34m - running ACL comparisons[0m
+[3;34m#################[0m
+[3;34m##################[0m
+[3;34mStep [0m[1;3;34m3[0m[3;34m of [0m[1;3;34m5[0m[3;34m - Processing unique ACLs[0m
+[3;34m###############[0m
+[3;34m##################[0m
+[3;34mStep [0m[1;3;34m4[0m[3;34m of [0m[1;3;34m5[0m[3;34m - generating config changes for each device[0m
+[3;34m#####################[0m
+[3;36m~~~~~~~~~~~~~Dynamic section of Access List [0m[1;3;36m121[0m[3;36m For illustrative/testing purposes~~~~~~~~~~~~~~~~~[0m
+[34m##################[0m
+[34mStep [0m[1;34m5[0m[34m of [0m[1;34m5[0m[34m - Processing unique configs[0m
+[34m##################[0m
+####################testing function#####################
+[1m[36mupdate_acl_config***************************************************************
+failed
+#########################################
+#################################
+[34m##################[0m
+[34mStep [0m[1;34m1[0m[34m of [0m[1;34m5[0m[34m - Gathering device facts [0m[1;34m([0m[1;34m2[0m[34m devices[0m[1;34m)[0m[34m, this may take a while[0m
+[34m##################[0m
+Skip Checking hostnames
+[1;3;32mGood news! There are no failed devices[0m
+[3;34m##################[0m
+[3;34mStep [0m[1;3;34m2[0m[3;34m of [0m[1;3;34m5[0m[3;34m - running ACL comparisons[0m
+[3;34m#################[0m
+[3;34muk-brs-lab-cr01[0m | [1;36m141[0m : [32mMATCH[0m | 
+[3;34muk-brs-lab-cr02[0m | [1;36m141[0m : [32mMATCH[0m | 
+[3;34m##################[0m
+[3;34mStep [0m[1;3;34m3[0m[3;34m of [0m[1;3;34m5[0m[3;34m - Processing unique ACLs[0m
+[3;34m###############[0m
+[3;34m##################[0m
+[3;34mStep [0m[1;3;34m4[0m[3;34m of [0m[1;3;34m5[0m[3;34m - generating config changes for each device[0m
+[3;34m#####################[0m
+[3;36m~~~~~~~~~~~~~Dynamic section of Access List [0m[1;3;36m121[0m[3;36m For illustrative/testing purposes~~~~~~~~~~~~~~~~~[0m
+[3;34muk-brs-lab-cr01[0m
+| access-list [1;36m121[0m permit ip [1;3;32m2.161.94.32[0m[3;32m [0m[1;3;32m0.0.0.31[0m [1;3;31m2.162.94.32[0m[3;31m [0m[1;3;31m0.0.0.31[0m
+| access-list [1;36m121[0m permit ip [1;3;31m2.162.94.32[0m[3;31m [0m[1;3;31m0.0.0.31[0m [1;3;32m2.161.94.32[0m[3;32m [0m[1;3;32m0.0.0.31[0m
+[3;34muk-brs-lab-cr02[0m
+| access-list [1;36m121[0m permit ip [1;3;32m1.161.94.32[0m[3;32m [0m[1;3;32m0.0.0.31[0m [1;3;31m1.162.94.32[0m[3;31m [0m[1;3;31m0.0.0.31[0m
+| access-list [1;36m121[0m permit ip [1;3;31m1.162.94.32[0m[3;31m [0m[1;3;31m0.0.0.31[0m [1;3;32m1.161.94.32[0m[3;32m [0m[1;3;32m0.0.0.31[0m
+[34m##################[0m
+[34mStep [0m[1;34m5[0m[34m of [0m[1;34m5[0m[34m - Processing unique configs[0m
+[34m##################[0m
+####################testing function#####################
+[1m[36mupdate_acl_config***************************************************************
+[1m[34m* uk-brs-lab-cr01 ** changed : True ********************************************
+[1m[32mvvvv update_acl_config ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+[1m[33m---- netmiko_send_config ** changed : True ------------------------------------- INFO
+here5
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+uk-brs-lab-lbo-cr01(config)#no access-list 102
+uk-brs-lab-lbo-cr01(config)#access-list 102 remark Allow ICMP
+uk-brs-lab-lbo-cr01(config)#access-list 102 permit icmp any any
+uk-brs-lab-lbo-cr01(config)#access-list 102 remark Remote Store Subnets
+uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.160.0.0 0.7.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.93.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.94.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.95.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.96.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 102 permit ip any any
+uk-brs-lab-lbo-cr01(config)#no access-list 121
+uk-brs-lab-lbo-cr01(config)#access-list 121 remark Allow ICMP
+uk-brs-lab-lbo-cr01(config)#access-list 121 permit icmp any any
+uk-brs-lab-lbo-cr01(config)#access-list 121 remark Allow Local 120 and 130 Subnets
+uk-brs-lab-lbo-cr01(config)#access-list 121 permit ip 2.161.94.32 0.0.0.31 2.162.94.32 0.0.0.31
+uk-brs-lab-lbo-cr01(config)#access-list 121 permit ip 2.162.94.32 0.0.0.31 2.161.94.32 0.0.0.31
+uk-brs-lab-lbo-cr01(config)#access-list 121 remark Remote Store Subnets
+uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.160.0.0 0.7.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.93.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.94.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.95.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.96.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 121 permit ip any any
+uk-brs-lab-lbo-cr01(config)#no access-list 141
+uk-brs-lab-lbo-cr01(config)#access-list 141 remark Allow ICMP
+uk-brs-lab-lbo-cr01(config)#access-list 141 permit icmp any any
+uk-brs-lab-lbo-cr01(config)#access-list 141 remark Store to Store Voip Calls
+uk-brs-lab-lbo-cr01(config)#access-list 141 permit udp any 10.163.0.0 0.0.255.255 range 16384 32767
+uk-brs-lab-lbo-cr01(config)#access-list 141 remark Remote Store Subnets
+uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.160.0.0 0.7.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.93.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.94.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.95.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.96.0.0 0.0.255.255
+uk-brs-lab-lbo-cr01(config)#access-list 141 permit ip any any
+uk-brs-lab-lbo-cr01(config)#interface GigabitEthernet0/1.10
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.110
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.120
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 121 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.130
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 121 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.140
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 141 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.150
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.160
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.170
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in
+uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.180
+uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in
+uk-brs-lab-lbo-cr01(config-subif)#end
+uk-brs-lab-lbo-cr01#
+[1m[33m---- netmiko_save_config ** changed : True ------------------------------------- INFO
+here5
+write mem
+Building configuration...
+
+  [OK]
+uk-brs-lab-lbo-cr01#
+[1m[32m^^^^ END update_acl_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1m[34m* uk-brs-lab-cr02 ** changed : True ********************************************
+[1m[32mvvvv update_acl_config ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO
+[1m[33m---- netmiko_send_config ** changed : True ------------------------------------- INFO
+here5
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+uk-brs-lab-rc-cr02(config)#no access-list 102
+uk-brs-lab-rc-cr02(config)#access-list 102 remark Allow ICMP
+uk-brs-lab-rc-cr02(config)#access-list 102 permit icmp any any
+uk-brs-lab-rc-cr02(config)#access-list 102 remark Remote Store Subnets
+uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.160.0.0 0.7.255.255
+uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.93.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.94.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.95.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.96.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 102 permit ip any any
+uk-brs-lab-rc-cr02(config)#no access-list 121
+uk-brs-lab-rc-cr02(config)#access-list 121 remark Allow ICMP
+uk-brs-lab-rc-cr02(config)#access-list 121 permit icmp any any
+uk-brs-lab-rc-cr02(config)#access-list 121 remark Allow Local 120 and 130 Subnets
+uk-brs-lab-rc-cr02(config)#access-list 121 permit ip 1.161.94.32 0.0.0.31 1.162.94.32 0.0.0.31
+uk-brs-lab-rc-cr02(config)#access-list 121 permit ip 1.162.94.32 0.0.0.31 1.161.94.32 0.0.0.31
+uk-brs-lab-rc-cr02(config)#access-list 121 remark Remote Store Subnets
+uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.160.0.0 0.7.255.255
+uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.93.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.94.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.95.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.96.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 121 permit ip any any
+uk-brs-lab-rc-cr02(config)#no access-list 141
+uk-brs-lab-rc-cr02(config)#access-list 141 remark Allow ICMP
+uk-brs-lab-rc-cr02(config)#access-list 141 permit icmp any any
+uk-brs-lab-rc-cr02(config)#access-list 141 remark Store to Store Voip Calls
+uk-brs-lab-rc-cr02(config)#access-list 141 permit udp any 10.163.0.0 0.0.255.255 range 16384 32767
+uk-brs-lab-rc-cr02(config)#access-list 141 remark Remote Store Subnets
+uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.160.0.0 0.7.255.255
+uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.93.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.94.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.95.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.96.0.0 0.0.255.255
+uk-brs-lab-rc-cr02(config)#access-list 141 permit ip any any
+uk-brs-lab-rc-cr02(config)#interface GigabitEthernet0/1.10
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.110
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.120
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 121 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.130
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 121 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.140
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 141 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.150
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.160
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.170
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in
+uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.180
+uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in
+uk-brs-lab-rc-cr02(config-subif)#end
+uk-brs-lab-rc-cr02#
+[1m[33m---- netmiko_save_config ** changed : True ------------------------------------- INFO
+here5
+write mem
+Building configuration...
+[OK]
+uk-brs-lab-rc-cr02#
+[1m[32m^^^^ END update_acl_config ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+failed
+#########################################
+#################################
+                      ╷                                                                                                     ╷          
+      uk-brs-lab-cr01 │ result                                                                                              │ changed  
+ ═════════════════════╪═════════════════════════════════════════════════════════════════════════════════════════════════════╪═════════ 
+  netmiko_send_config │ configure terminal                                                                                  │ True     
+                      │ Enter configuration commands, one per line.  End with CNTL/Z.                                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#no access-list 102                                                      │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 remark Allow ICMP                                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 permit icmp any any                                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 remark Remote Store Subnets                             │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.160.0.0 0.7.255.255                    │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.93.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.94.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.95.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 deny   ip any 10.96.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 102 permit ip any any                                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#no access-list 121                                                      │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 remark Allow ICMP                                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 permit icmp any any                                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 remark Allow Local 120 and 130 Subnets                  │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 permit ip 2.161.94.32 0.0.0.31 2.162.94.32 0.0.0.31     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 permit ip 2.162.94.32 0.0.0.31 2.161.94.32 0.0.0.31     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 remark Remote Store Subnets                             │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.160.0.0 0.7.255.255                      │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.93.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.94.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.95.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 deny ip any 10.96.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 121 permit ip any any                                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#no access-list 141                                                      │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 remark Allow ICMP                                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 permit icmp any any                                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 remark Store to Store Voip Calls                        │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 permit udp any 10.163.0.0 0.0.255.255 range 16384 32767 │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 remark Remote Store Subnets                             │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.160.0.0 0.7.255.255                    │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.93.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.94.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.95.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 deny   ip any 10.96.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-lbo-cr01(config)#access-list 141 permit ip any any                                       │          
+                      │ uk-brs-lab-lbo-cr01(config)#interface GigabitEthernet0/1.10                                         │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.110                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.120                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 121 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.130                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 121 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.140                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 141 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.150                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.160                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.170                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#interface GigabitEthernet0/1.180                                  │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-lbo-cr01(config-subif)#end                                                               │          
+                      │ uk-brs-lab-lbo-cr01#                                                                                │          
+  netmiko_save_config │ write mem                                                                                           │ True     
+                      │ Building configuration...                                                                           │          
+                      │                                                                                                     │          
+                      │   [OK]                                                                                              │          
+                      │ uk-brs-lab-lbo-cr01#                                                                                │          
+                      ╵                                                                                                     ╵          
+                      ╷                                                                                                    ╷          
+      uk-brs-lab-cr02 │ result                                                                                             │ changed  
+ ═════════════════════╪════════════════════════════════════════════════════════════════════════════════════════════════════╪═════════ 
+  netmiko_send_config │ configure terminal                                                                                 │ True     
+                      │ Enter configuration commands, one per line.  End with CNTL/Z.                                      │          
+                      │ uk-brs-lab-rc-cr02(config)#no access-list 102                                                      │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 remark Allow ICMP                                       │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 permit icmp any any                                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 remark Remote Store Subnets                             │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.160.0.0 0.7.255.255                    │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.93.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.94.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.95.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 deny   ip any 10.96.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 102 permit ip any any                                       │          
+                      │ uk-brs-lab-rc-cr02(config)#no access-list 121                                                      │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 remark Allow ICMP                                       │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 permit icmp any any                                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 remark Allow Local 120 and 130 Subnets                  │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 permit ip 1.161.94.32 0.0.0.31 1.162.94.32 0.0.0.31     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 permit ip 1.162.94.32 0.0.0.31 1.161.94.32 0.0.0.31     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 remark Remote Store Subnets                             │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.160.0.0 0.7.255.255                      │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.93.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.94.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.95.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 deny ip any 10.96.0.0 0.0.255.255                       │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 121 permit ip any any                                       │          
+                      │ uk-brs-lab-rc-cr02(config)#no access-list 141                                                      │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 remark Allow ICMP                                       │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 permit icmp any any                                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 remark Store to Store Voip Calls                        │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 permit udp any 10.163.0.0 0.0.255.255 range 16384 32767 │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 remark Remote Store Subnets                             │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.160.0.0 0.7.255.255                    │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.93.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.94.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.95.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 deny   ip any 10.96.0.0 0.0.255.255                     │          
+                      │ uk-brs-lab-rc-cr02(config)#access-list 141 permit ip any any                                       │          
+                      │ uk-brs-lab-rc-cr02(config)#interface GigabitEthernet0/1.10                                         │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.110                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.120                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 121 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.130                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 121 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.140                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 141 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.150                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.160                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.170                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#interface GigabitEthernet0/1.180                                  │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#ip access-group 102 in                                            │          
+                      │ uk-brs-lab-rc-cr02(config-subif)#end                                                               │          
+                      │ uk-brs-lab-rc-cr02#                                                                                │          
+  netmiko_save_config │ write mem                                                                                          │ True     
+                      │ Building configuration...                                                                          │          
+                      │ [OK]                                                                                               │          
+                      │ uk-brs-lab-rc-cr02#                                                                                │          
+                      ╵                                                                                                    ╵          

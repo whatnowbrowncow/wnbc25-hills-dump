@@ -1,0 +1,12 @@
+---
+username: dburton
+password: Daveyb129
+secret: Daveyb129
+## Add scrapli details
+connection_options:
+  scrapli:
+    port: 22
+    extras:
+      ssh_config_file: True
+      auth_strict_key: False
+...

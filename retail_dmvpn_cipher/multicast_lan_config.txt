@@ -1,0 +1,4 @@
+ip pim sparse-mode
+ip igmp version 3
+
+end

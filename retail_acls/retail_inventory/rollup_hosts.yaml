@@ -1,0 +1,49 @@
+#landells_router:
+#  hostname: 10.94.104.1
+#  lbo_number: 291161
+#  groups:
+#    - routers
+#    - bt_site
+#
+#rumford_router:
+#  hostname: 10.93.98.1
+#  lbo_number: 337706
+#  groups:
+#    - routers
+#    - bt_site
+#
+#buttarsloan_router:
+#  hostname: 10.94.213.97
+#  lbo_number: 423996
+#  groups:
+#    - routers
+#    - bt_site
+#
+#clarkston_router:
+#  hostname: 10.93.123.65
+#  lbo_number: 535514
+#  groups:
+#    - routers
+#    - bt_site
+#
+#fraserburgh_router:
+#  hostname: 10.93.115.33
+#  lbo_number: 381519
+#  groups:
+#    - routers
+#    - bt_site
+#
+#holbeck_router:
+#  hostname: 10.94.91.97
+#  lbo_number: 545945
+#  groups:
+#    - routers
+#    - bt_site
+#
+#outram_router:
+#  hostname: 10.93.17.65
+#  lbo_number: 310262
+#  groups:
+#    - routers
+#    - bt_site
+#

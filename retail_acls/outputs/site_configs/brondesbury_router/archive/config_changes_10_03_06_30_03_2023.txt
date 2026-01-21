@@ -1,0 +1,11 @@
+no access-list 102
+ip access-list extended 102
+ remark Allow ICMP
+ permit icmp any any
+ remark Remote Store Subnets
+ deny   ip any 10.160.0.0 0.7.255.255
+ deny   ip any 10.93.0.0 0.0.255.255
+ deny   ip any 10.94.0.0 0.0.255.255
+ deny   ip any 10.95.0.0 0.0.255.255
+ deny   ip any 10.96.0.0 0.0.255.255
+ permit ip any any

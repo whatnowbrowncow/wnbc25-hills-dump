@@ -1,0 +1,7 @@
+ip access-list extended 122
+ remark Allow ICMP
+ permit icmp any any
+ remark Allow Local 1 and 130 Subnets
+ permit ip 10.161.16.128 0.0.0.31 10.94.15.96 0.0.0.31
+ permit ip 10.161.16.128 0.0.0.31 10.162.16.128 0.0.0.31
+ remark Remote Store Subnets

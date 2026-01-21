@@ -1,0 +1,1 @@
+{"burrardstreet_router": {"netmiko_send_config": {"result": "passed", "log": "configure terminal\nEnter configuration commands, one per line.  End with CNTL/Z.\nwh-r_burrardst(config)#hostname wh-r_lbo-burrardstreet\nwh-r_lbo-burrardstre(config)#end\nwh-r_lbo-burrardstreet#", "changed": true}}}

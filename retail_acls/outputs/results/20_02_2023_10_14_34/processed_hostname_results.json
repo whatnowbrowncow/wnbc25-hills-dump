@@ -1,0 +1,1 @@
+{"marfleet_router": {"netmiko_send_config": {"result": "passed", "log": "configure terminal\nEnter configuration commands, one per line.  End with CNTL/Z.\nwh-r_marfleet(config)#hostname wh-r_lbo-marfleet\nwh-r_lbo-marfleet(config)#end\nwh-r_lbo-marfleet#", "changed": true}}}

@@ -1,0 +1,346 @@
+---
+balloon_router:
+  hostname: 10.94.247.97
+  groups:
+    - routers
+    - bt_site
+
+balsallcommon_router:
+  hostname: 10.94.212.129
+  groups:
+    - routers
+    - bt_site
+
+bamber_router:
+  hostname: 10.94.12.33
+  groups:
+    - routers
+    - bt_site
+
+bamford_router:
+  hostname: 10.94.12.65
+  groups:
+    - routers
+    - bt_site
+
+bandon_router:
+  hostname: 10.94.12.97
+  groups:
+    - routers
+    - bt_site
+
+Wetherby Unit 1 RC :
+  hostname: 10.96.129.8
+  groups:
+    - routers
+    - dmvpn_site
+Thirsk Unit 1 RC :
+  hostname: 10.96.129.10
+  groups:
+    - routers
+    - dmvpn_site
+Statue LBO :
+  hostname: 10.96.129.12
+  groups:
+    - routers
+    - dmvpn_site
+Hudsons LBO :
+  hostname: 10.96.129.13
+  groups:
+    - routers
+    - dmvpn_site
+#Chanterlands LBO :
+#  hostname: 10.96.129.15
+#  groups:
+#    - routers
+#    - dmvpn_site
+Greenwood LBO :
+  hostname: 10.96.129.16
+  groups:
+    - routers
+    - dmvpn_site
+Hessle Road LBO :
+  hostname: 10.96.129.17
+  groups:
+    - routers
+    - dmvpn_site
+Spring Bank LBO :
+  hostname: 10.96.129.18
+  groups:
+    - routers
+    - dmvpn_site
+West Hull LBO :
+  hostname: 10.96.129.19
+  groups:
+    - routers
+    - dmvpn_site
+Nightjar LBO :
+  hostname: 10.96.129.20
+  groups:
+    - routers
+    - dmvpn_site
+Holderness LBO :
+  hostname: 10.96.129.21
+  groups:
+    - routers
+    - dmvpn_site
+Paragon LBO :
+  hostname: 10.96.129.23
+  groups:
+    - routers
+    - dmvpn_site
+Sutton LBO :
+  hostname: 10.96.129.24
+  groups:
+    - routers
+    - dmvpn_site
+Shannon Street LBO :
+  hostname: 10.96.129.26
+  groups:
+    - routers
+    - dmvpn_site
+West Park LBO :
+  hostname: 10.96.129.27
+  groups:
+    - routers
+    - dmvpn_site
+Newlands LBO :
+  hostname: 10.96.129.29
+  groups:
+    - routers
+    - dmvpn_site
+Anlaby LBO :
+  hostname: 10.96.129.31
+  groups:
+    - routers
+    - dmvpn_site
+Marfleet LBO :
+  hostname: 10.96.129.34
+  groups:
+    - routers
+    - dmvpn_site
+Mollison LBO :
+  hostname: 10.96.129.35
+  groups:
+    - routers
+    - dmvpn_site
+Orchard LBO :
+  hostname: 10.96.129.36
+  groups:
+    - routers
+    - dmvpn_site
+Samman LBO :
+  hostname: 10.96.129.37
+  groups:
+    - routers
+    - dmvpn_site
+Bath Street LBO :
+  hostname: 10.96.129.38
+  groups:
+    - routers
+    - dmvpn_site
+Burrard Street LBO :
+  hostname: 10.96.129.39
+  groups:
+    - routers
+    - dmvpn_site
+New Street LBO :
+  hostname: 10.96.129.40
+  groups:
+    - routers
+    - dmvpn_site
+Poonah Road LBO :
+  hostname: 10.96.129.41
+  groups:
+    - routers
+    - dmvpn_site
+Charing Cross LBO :
+  hostname: 10.96.129.42
+  groups:
+    - routers
+    - dmvpn_site
+Five Oaks LBO :
+  hostname: 10.96.129.43
+  groups:
+    - routers
+    - dmvpn_site
+St Aubin LBO :
+  hostname: 10.96.129.44
+  groups:
+    - routers
+    - dmvpn_site
+Redhouses LBO :
+  hostname: 10.96.129.45
+  groups:
+    - routers
+    - dmvpn_site
+Ripon Unit 1 RC :
+  hostname: 10.96.129.48
+  groups:
+    - routers
+    - dmvpn_site
+Ripon Unit 4 RC :
+  hostname: 10.96.129.50
+  groups:
+    - routers
+    - dmvpn_site
+Conway Street LBO :
+  hostname: 10.96.129.51
+  groups:
+    - routers
+    - dmvpn_site
+Goodwood Unit 1 RC :
+  hostname: 10.96.129.52
+  groups:
+    - routers
+    - dmvpn_site
+Goodwood Unit 2 RC :
+  hostname: 10.96.129.53
+  groups:
+    - routers
+    - dmvpn_site
+Goodwood Unit 3 RC :
+  hostname: 10.96.129.54
+  groups:
+    - routers
+    - dmvpn_site
+Beverley RC :
+  hostname: 10.96.129.58
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 1 :
+  hostname: 10.96.129.73
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 2 :
+  hostname: 10.96.129.74
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 3 :
+  hostname: 10.96.129.75
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 4 :
+  hostname: 10.96.129.76
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 5 :
+  hostname: 10.96.129.77
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 6 :
+  hostname: 10.96.129.78
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 7 :
+  hostname: 10.96.129.79
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 8 :
+  hostname: 10.96.129.80
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 9 :
+  hostname: 10.96.129.81
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium Unit 10 :
+  hostname: 10.96.129.82
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 1 :
+  hostname: 10.96.129.83
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 2 :
+  hostname: 10.96.129.84
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 3 :
+  hostname: 10.96.129.85
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 4 :
+  hostname: 10.96.129.86
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 5 :
+  hostname: 10.96.129.87
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 6 :
+  hostname: 10.96.129.88
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 7 :
+  hostname: 10.96.129.89
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 8 :
+  hostname: 10.96.129.90
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 9 :
+  hostname: 10.96.129.91
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 10 :
+  hostname: 10.96.129.92
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 11 :
+  hostname: 10.96.129.93
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 12 :
+  hostname: 10.96.129.94
+  groups:
+    - routers
+    - dmvpn_site
+Aston Villa Football Stadium Unit 13 :
+  hostname: 10.96.129.95
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium 11:
+  hostname: 10.96.129.96
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium 12:
+  hostname: 10.96.129.97
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium 13:
+  hostname: 10.96.129.98
+  groups:
+    - routers
+    - dmvpn_site
+Celtic Football Stadium 14:
+  hostname: 10.96.129.99
+  groups:
+    - routers
+    - dmvpn_site

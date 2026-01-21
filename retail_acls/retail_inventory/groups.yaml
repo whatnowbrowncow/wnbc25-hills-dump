@@ -1,0 +1,31 @@
+---
+routers:
+  platform: ios
+  data:
+    role: routers
+
+switches:
+  platform: ios
+  data:
+    role: switches
+
+dmvpn_site:
+  username: dburton
+  password: Daveyb131
+  data:
+    network_type: dmvpn
+  connection_options:
+    netmiko:
+      extras:
+        secret: Daveyb131
+
+bt_site:
+  username: wh_dburton
+  password: horse2race
+  data:
+    network_type: bt
+  connection_options:
+    netmiko:
+      extras:
+        secret: horse2race
+        timeout: 15

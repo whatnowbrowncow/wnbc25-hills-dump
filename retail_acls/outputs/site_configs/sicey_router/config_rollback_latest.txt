@@ -1,0 +1,6 @@
+interface GigabitEthernet0/0.10
+ip access-group 102 in
+interface GigabitEthernet0/0.120
+ip access-group 121 in
+interface GigabitEthernet0/0.130
+ip access-group 121 in

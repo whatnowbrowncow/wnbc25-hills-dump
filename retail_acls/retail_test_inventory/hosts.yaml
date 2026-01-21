@@ -1,0 +1,39 @@
+model_shop_router:
+  hostname: 10.93.134.1
+  groups:
+    - routers
+    - bt_site
+
+liverpool_router:
+  hostname: 10.93.150.225
+  groups:
+    - routers
+    - bt_site
+
+sandbach_router:
+  hostname: 10.93.111.65
+  groups:
+    - routers
+    - bt_site
+
+hillside_router:
+  hostname: 10.94.235.97
+  groups:
+    - routers
+    - bt_site
+
+waltonvale_router:
+  hostname: 10.94.239.65
+  groups:
+    - routers
+    - bt_site
+
+statue_router:
+  hostname: 10.96.0.97
+  lbo_number: 436378
+  groups:
+    - routers
+    - dmvpn_site
+  data:
+    site_type: lbo
+    device_hostname: wh-r_lbo-statue

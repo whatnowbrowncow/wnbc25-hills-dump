@@ -1,0 +1,1 @@
+{"uk-brs-lab-cr02": {"netmiko_send_config": {"result": "passed", "log": "configure terminal\nEnter configuration commands, one per line.  End with CNTL/Z.\nuk-brs-lab-rc-cr02(config)#hostname uk-brs-lab--cr02\nuk-brs-lab--cr02(config)#end\nuk-brs-lab--cr02#", "changed": true}}}

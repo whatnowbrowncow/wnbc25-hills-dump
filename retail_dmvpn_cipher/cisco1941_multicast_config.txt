@@ -1,0 +1,11 @@
+ip multicast-routing
+ip access-list standard acl-retail-ssm
+10 permit 239.0.0.0 0.0.0.255
+
+ip pim ssm range acl-retail-ssm
+
+int tunnel 11
+ip pim sparse-mode
+
+int tunnel 12
+ip pim sparse-mode
