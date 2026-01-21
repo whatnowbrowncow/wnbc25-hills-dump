@@ -1,0 +1,6 @@
+no crypto isakmp key hj,hlisdgtwrewrwq21848aqewewqe address 141.138.128.105
+crypto isakmp key 69nnw55v2r7d4whmwh3u2bc6q5kfbr address 141.138.128.105
+interface Tunnel11
+ ip mtu 1390
+ tunnel protection ipsec profile pfl-retail-dmvpn shared
+end

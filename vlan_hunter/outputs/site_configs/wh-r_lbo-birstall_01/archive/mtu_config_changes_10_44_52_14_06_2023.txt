@@ -1,0 +1,4 @@
+
+interface Tunnel11
+ ip mtu 1400
+end

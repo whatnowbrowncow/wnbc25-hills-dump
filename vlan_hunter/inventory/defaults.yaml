@@ -1,0 +1,9 @@
+---
+  username: dburton
+  password: Daveyb134
+  data:
+    network_type: dmvpn
+  connection_options:
+    netmiko:
+      extras:
+        secret: Daveyb134

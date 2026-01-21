@@ -1,0 +1,25 @@
+---
+
+ld6_lab:
+  hostname: 10.112.129.180
+  groups:
+    - asa
+  data:
+    device_hostname: 10.112.129.180
+    location: birstall
+
+#uk-brs-lab-sw01:
+#  hostname: 10.210.49.14
+#  groups:
+#    - core_switch_ios
+#  data:
+#    device_hostname: 10.210.49.14
+#    location: birstall
+
+uk-brs-cs01:
+  hostname: 10.210.129.100
+  groups:
+    - core_switch_nxos
+  data:
+    device_hostname: 10.210.129.100
+    location: birstall

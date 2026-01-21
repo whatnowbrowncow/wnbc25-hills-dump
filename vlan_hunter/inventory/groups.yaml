@@ -1,0 +1,41 @@
+---
+
+asa:
+  platform: cisco_asa_ssh
+  data:
+    role: asa
+    
+hubs:
+  platform: ios
+  data:
+    role: hubs
+spokes:
+  platform: ios
+  data:
+    role: spokes
+
+routers:
+  platform: ios
+  data:
+    #role: routers
+
+core_switch_ios:
+  platform: ios
+  data:
+    role: core_switch_ios
+
+core_switch_nxos:
+  platform: nxos
+  data:
+    role: core_switch_nxos
+
+dmvpn_site:
+  username: dburton
+  password: Daveyb133
+  data:
+    network_type: dmvpn
+  connection_options:
+    netmiko:
+      extras:
+        secret: Daveyb133
+        timeout: 15
